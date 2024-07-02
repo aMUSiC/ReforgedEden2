@@ -1,0 +1,9 @@
+[GasCloud]
+-Mode=Opaque
+-Pos=8.118743,159.2723,3.997491
+-Rot=0,0,0
+-Size=1,1,1
+-Color=1,1,1,1
+-ColliderMode=NoCollision
+-Asset=@eden_decalmodels/Eden_DecalGas_Brown2
+
