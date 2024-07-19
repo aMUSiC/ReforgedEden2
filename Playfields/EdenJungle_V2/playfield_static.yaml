@@ -522,7 +522,7 @@ POIs:
           IsCommandCenter: True
           CountMinMax: [ 1, 1 ]
           # IsScalingCount: True
-          # AuxiliaryPOIs: [TalonFarm, Ruins, TalonDefense]
+          # AuxiliaryPOIs: [R2TalonFarm, Ruins, R2TalonDefense]
           Properties: 
             - Key: RegenAfter
               Value: 720
@@ -668,12 +668,12 @@ POIs:
        # ================================
         # POI amount scales with planet size 
         # Random tribal villages scattered around planet
-        - GroupName: TalonMain
+        - GroupName: R2TalonMain
           Faction: Talon
           # NoShieldReload: True  
           Biome: [ RainForest ]
           CountMinMax: [ 2, 3 ]
-          AuxiliaryPOIs: [TalonFarm, TalonDefense]
+          AuxiliaryPOIs: [R2TalonFarm, R2TalonDefense]
           Properties: 
             - Key: RegenAfter
               Value: 720
@@ -687,20 +687,20 @@ POIs:
           DronesMinMax: [ 1, 1 ]
           ReserveCount: 0
           TroopTransport: False
-          SpawnPOINear: [TalonMain]
+          SpawnPOINear: [R2TalonMain]
           SpawnPOINearRange: [75, 200]
           Properties:
             - Key: RegenAfter
               Value: 720
 
-        - GroupName: TalonMain
+        - GroupName: R2TalonMain
           Faction: Talon
           # NoShieldReload: True  
           Territory: False         
           Biome: [ Jungle, JungleOasis, JungleMountains ]
           CountMinMax: [ 2, 3 ]
           IsScalingCount: True
-          AuxiliaryPOIs: [TalonFarm, TalonDefense]
+          AuxiliaryPOIs: [R2TalonFarm, R2TalonDefense]
           Properties: 
             - Key: MapDistance
               Value: 0
@@ -709,7 +709,7 @@ POIs:
             - Key: RegenAfter
               Value: 720
 
-        - GroupName: TalonFarm
+        - GroupName: R2TalonFarm
           Faction: Talon
           # NoShieldReload: True
           Territory: False         
@@ -726,7 +726,7 @@ POIs:
             - Key: RegenAfter
               Value: 720  
 
-        - GroupName: TalonDefense
+        - GroupName: R2TalonDefense
           Faction: Talon
           # NoShieldReload: True  
           Territory: False         
@@ -743,7 +743,7 @@ POIs:
             - Key: RegenAfter
               Value: 720
 
-        - GroupName: TalonWoodRuin
+        - GroupName: R2TalonWoodRuin
           Faction: None
           Territory: False         
           BiomesExcluded: [ PolarSnow ] 
@@ -1001,7 +1001,7 @@ POIs:
               Value: 720
 
               # Random Tribal Ruins
-        - GroupName: TalonWoodRuin
+        - GroupName: R2TalonWoodRuin
           Faction: None  
           Biome: [ RainForest, JungleMountains, Swamp, SwampBeach, WaterSwamp, ShallowWater, Water]
           CountMinMax: [ 15, 20 ]
@@ -1242,7 +1242,7 @@ SpawnZones:
          Amount: 200
          Period: Always
          DelayMinMax: [-1, -1]
-   - SpawnAt: [TalonMain, Eden_JungleBrewery, Eden_TribalJungleDefenseT3]
+   - SpawnAt: [R2TalonMain, Eden_JungleBrewery, Eden_TribalJungleDefenseT3]
      BiomesExcluded: [ LowMountains, Mountains ]
      Radius: 1000
      RadiusRandom: 50

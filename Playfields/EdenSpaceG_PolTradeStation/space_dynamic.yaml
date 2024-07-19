@@ -245,7 +245,7 @@ POIs:
 
 # Main trading station
     - Type: BA_Alien
-      GroupName: TSOPolarisRG
+      GroupName: R2PolarisSpaceTrade
       Faction: Polaris
       # FactionTerritory: [Eden_PolarisTerritory]
       Mode: Survival
@@ -352,73 +352,6 @@ POIs:
         # - Key: RegenAfter
           # Value: 720
 
-#Smuggler's Outposts----------------------------------------------------------
-    - Type: BA_Alien   
-      # Name: [Eden_BAO_SmugOutpost1, Eden_BAO_SmugOutpost1b, Eden_BAO_SmugOutpost1c, Eden_BAO_SmugOutpost2, Eden_BAO_SmugOutpost2b, Eden_BAO_SmugOutpost3, Eden_BAO_SmugOutpost4,  Eden_BAO_SmugOutpost5]
-      GroupName: RE2_SmugglerSpaceT1
-      # DisplayName: Smuggler Outpost
-      Faction: Pirates
-      Mode: Survival
-      CountMinMax: [ 2, 4 ]
-      Probability: 0.65
-      SpaceDefenseOverrideDefaults: True
-      SpaceDefenseProbability: 0
-      InitPower: True
-      Position:
-         PosXZMinMax: [750, 7000]
-         PosYMax: 5000
-      Properties:
-        - Key: MapDistance
-          Value: 6000
-        - Key: HudDistance
-          Value: 6000
-        - Key: RegenAfter
-          Value: 720
-
-    - Type: BA_Alien
-      GroupName: Eden_SmugglerSpaceAuxT0
-      Faction: Pirates
-      Mode: Survival
-      CountMinMax: [ 1, 5 ]
-      Probability: 0.5
-      SpaceDefenseOverrideDefaults: True
-      SpaceDefenseProbability: 0
-      Position:
-         PosXZMinMax: [750, 7000]
-         PosYMax: 5000
-      InitPower: True
-      Properties:
-        - Key: MapDistance
-          Value: 3000
-        - Key: HudDistance
-          Value: 3000
-        - Key: RegenAfter
-          Value: 720
-
-# Abandoned Pallet. Typically contains specific ore. 50/50 chance of exploding.
-    - Type: BA_Alien
-      GroupName: Eden_SpaceJunkPalletT1
-      Faction: Eden_Wreck
-      FactionTerritory: [All]
-      Mode: Survival
-      CountMinMax: [ 1, 10 ]
-      Probability: 0.45
-      SpaceDefenseOverrideDefaults: True
-      SpaceDefenseProbability: 0
-      InitPower: True
-      Position:
-         PosXZMinMax: [750, 7000]
-         PosYMax: 5000
-      Properties:
-        - Key: MapDistance
-          Value: 3000
-        - Key: HudDistance
-          Value: 3000
-        - Key: MapMarker
-          Value: Neutral
-        - Key: RegenAfter
-          Value: 720
-
 # Smaller unguarded Pentaxid asteroids.
     - Type: AsteroidVoxel01Pentaxid
       # Name: [Eden_Asteroid_PentT1_1, Eden_Asteroid_PentT1_2, Eden_Asteroid_PentT1_3, Eden_Asteroid_PentT1_4]
@@ -467,7 +400,7 @@ DroneBaseSetup:
 # Polaris Freighters
           - Name: [Eden_OPVTraderTSO]
           # - Name: [Eden_OPV_TraderTSO1]
-            Faction: Civilian
+            Faction: Polaris
             CountMinMax: [4, 8]
             Probability: 1
             CanNotBeControlledByMasterAI: False

@@ -252,6 +252,7 @@
   Duration: 90
   Name: Fever
   Type: bodytemp
+  DebuffIf: varBodyTemp > 68
   OnExpired: "Dehydration"
   Description: igmFever
   Icon: TmpEff_FeverAttack 
@@ -631,8 +632,8 @@
   }
   { Child Modify1
     Stat: speedmodifier
-    SetValue: 1.75
-    Type: speedmodifier
+    ModifyMaxValue: 0.75
+    NumberOperationType: Factor
   }
 }
 # Max Health way up, Max Stamina down, Speed down
@@ -872,7 +873,7 @@
   { Child Modify0
     Stat: radiation
     Amount: 0.1
-    Rate: 12
+    Rate: 20
   }
   { Child Modify1
     Stat: health
@@ -900,7 +901,7 @@
   { Child Modify0
     Stat: radiation
     Amount: 0.1
-    Rate: 36
+    Rate: 40
   }
   { Child Modify1
     Stat: health
@@ -1207,8 +1208,8 @@
   }
   { Child Modify1
     Stat: speedmodifier
-    SetValue: 1.25    
-    Type: speedmodifier
+    ModifyMaxValue: 0.25
+    NumberOperationType: Factor
   }
 }
 
@@ -1232,8 +1233,8 @@
   }
   { Child Modify1
     Stat: speedmodifier
-    SetValue: 2   
-    Type: speedmodifier
+    ModifyMaxValue: 1.0
+    NumberOperationType: Factor
   }
   { Child Modify2
     Stat: food
@@ -1351,7 +1352,6 @@
 # ===========================================================
 
 
-
 # ============================================================================================================================================================================
 # ========================================================================================================================== Project Eden Custom Status Effects
 # ============================================================================================================================================================================
@@ -1429,7 +1429,8 @@
   Stack: extend
   Actions: "screen(frost)"
   Description: You are being drained of thermal energy.
-  Icon: TmpEff_Freezing
+  # Icon: TmpEff_Freezing
+  Icon: Eden_Cryoshock
 
   { Child Modify0
     Stat: speedmodifier
@@ -1452,7 +1453,8 @@
   Stack: discard
   Actions: "screen(frost)"
   Description: You are being drained of thermal energy.
-  Icon: TmpEff_BlackoutCold
+  # Icon: TmpEff_BlackoutCold
+  Icon: Eden_Cryoshock2
 
   { Child Modify0
     Stat: speedmodifier
@@ -1476,7 +1478,8 @@
   # Actions: "damage(100,1,0,0);attach(pfx_personalFire, @entity);attach(sfx_fire1, @entity);screen(heat)"
   Actions: "attach(pfx_personalFire, @entity);attach(sfx_fire1, @entity);screen(heat)"
   Description: You are on fire.
-  Icon: TmpEff_Fire
+  # Icon: TmpEff_Fire
+  Icon: Eden_OverseerFlame
 
   { Child Modify0
     Stat: health
@@ -1498,7 +1501,8 @@
   # OnExpiredSound: Player_Male/sigh
   Actions: "screen(radiation)"
   Description: You have been poisoned for a short duration.
-  Icon: TmpEff_PoisonBite
+  # Icon: TmpEff_PoisonBite
+  Icon: Eden_PoisonShort
 
   { Child Modify0
     Stat: health
@@ -1515,7 +1519,8 @@
   Stack: discard
   Actions: "screen(radiation);screen(heat)"
   Description: Eden_Decrepifyinfo #NewRequired
-  Icon: TmpEff_Stunned
+  # Icon: TmpEff_Stunned
+  Icon: Eden_DecrepifyMinor
 
   { Child Modify0
     Stat: speedmodifier
@@ -1542,7 +1547,8 @@
   Stack: discard
   Actions: "screen(radiation);screen(heat)"
   Description: Eden_Decrepifyinfo
-  Icon: TmpEff_Stunned
+  # Icon: TmpEff_Stunned
+  Icon: Eden_Decrepify
 
   { Child Modify0
     Stat: speedmodifier

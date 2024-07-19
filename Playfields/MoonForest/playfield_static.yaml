@@ -339,7 +339,7 @@ POIs:
 
 # =============================================== Faction Talon Main
 # ====================== Main Village
-        - GroupName: TalonMain
+        - GroupName: R2TalonMain
           Faction: Talon
           IsCommandCenter: True
           IsImportant: True
@@ -357,27 +357,27 @@ POIs:
             - Key: RegenAfter
               Value: 4320
 
-        - GroupName: TalonAux
+        - GroupName: R2TalonAux
           Faction: Talon
           CountMinMax: [ 3, 5 ]
           DroneProb: 0
           DronesMinMax: [ 1, 1 ]
           ReserveCount: 0
           TroopTransport: False
-          SpawnPOINear: [TalonMain]
+          SpawnPOINear: [R2TalonMain]
           SpawnPOINearRange: [75, 200]
           Properties:
             - Key: RegenAfter
               Value: 720
 
-        - GroupName: TalonFarm
+        - GroupName: R2TalonFarm
           Faction: Talon
           CountMinMax: [ 3, 5 ]
           DroneProb: 0
           DronesMinMax: [ 1, 1 ]
           ReserveCount: 0
           TroopTransport: False
-          SpawnPOINear: [TalonMain]
+          SpawnPOINear: [R2TalonMain]
           SpawnPOINearRange: [150, 300]
           Properties:
             - Key: RegenAfter
@@ -399,7 +399,7 @@ POIs:
           DronesMinMax: [ 2, 3 ]
           ReserveCount: 0
           TroopTransport: False
-          SpawnPOIAvoid: [TalonMain, TalonAux]
+          SpawnPOIAvoid: [R2TalonMain, R2TalonAux]
           SpawnPOIAvoidDistance: 20000  # Larger than the planet
           SpawnPOINear: [Eden_DummyTalon]
           SpawnPOINearRange: [200, 800]
@@ -534,7 +534,7 @@ POIs:
        # ================================
        # GraveDigger complex. Less than 50% chance
 
-        - GroupName: TalonWoodRuin
+        - GroupName: R2TalonWoodRuin
           Faction: None 
           Biome: [ TallTrees, Forest, DeepForest, LowMountains  ]
           CountMinMax: [ 0, 1 ]
@@ -548,7 +548,7 @@ POIs:
 
        # ================================
        # Just some ruins to walk to. 50% chance.
-        - GroupName: TalonWoodRuin
+        - GroupName: R2TalonWoodRuin
           Faction: None
           BiomesExcluded: [ Tundra ] 
           CountMinMax: [ 0, 1 ]
@@ -558,13 +558,13 @@ POIs:
             - Key: RegenAfter
               Value: 720
 
-        - GroupName: TalonWoodRuin
+        - GroupName: R2TalonWoodRuin
           Faction: None
           BiomesExcluded: [ Tundra ] 
           CountMinMax: [ 0, 1 ]
-          SpawnPOINear: [TalonWoodRuin]
+          SpawnPOINear: [R2TalonWoodRuin]
           SpawnPOINearRange: [1000, 3000]
-          SpawnPOIAvoid: [TalonWoodRuin] 
+          SpawnPOIAvoid: [R2TalonWoodRuin] 
           POIDistance: 1000
           Properties: 
             - Key: MapMarker
@@ -598,7 +598,7 @@ POIs:
             - Key: RegenAfter
               Value: 720
 
-        - GroupName: TalonWoodRuin
+        - GroupName: R2TalonWoodRuin
           Faction: None
           CountMinMax: [ 2, 4 ]
           Properties:

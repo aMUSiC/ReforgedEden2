@@ -627,7 +627,7 @@ SpawnZones:
          DelayMinMax: [36, 36]
 
      # Talon herders
-   - SpawnAt: [TribalBazarArid, TalonStoneMain]
+   - SpawnAt: [TribalBazarArid, R2TalonStoneMain]
      BiomesExcluded: [ LowMountains, Mountains ]
      Radius: 1200
      RadiusRandom: 50

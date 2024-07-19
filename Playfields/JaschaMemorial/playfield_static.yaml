@@ -363,7 +363,7 @@ DroneSpawning:
          # Period: Always
          # DelayMinMax: [-1, -1]
 # Talon villagers
-   # - SpawnAt: [TalonMain, TribalBazar, TribalBazarArid]
+   # - SpawnAt: [R2TalonMain, TribalBazar, TribalBazarArid]
      # BiomesExcluded: [ LowMountains, LowMountains_2, Mountains, MountainsForest ]
      # Radius: 500
      # RadiusRandom: 50

@@ -877,7 +877,7 @@ DroneBaseSetup:
           # - Name: [OPVZiraxRG]
           - Name: [R2OPVZiraxT2]
             Faction: Zirax
-            CountMinMax: [4, 5]
+            CountMinMax: [3, 3]
             Probability: 0.1
             CanNotBeControlledByMasterAI: False
             FixedMaxSpeed: [50, 50]

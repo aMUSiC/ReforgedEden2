@@ -295,8 +295,8 @@
   HeightContrast: "1"
   TerrainId: "81"
  }
- { Child 14 # CopperResource
-  Name: "CopperResource"
+ { Child 14 # CarbonResource
+  Name: "CarbonResource"
   Brightness: "1"
   Saturation: "1"
   RGB: "(1, 1, 1)"
@@ -311,7 +311,7 @@
   ResampleFac: "1"
   HeightOffset: "1"
   HeightContrast: "1"
-  TerrainId: "79"
+  TerrainId: "135"
  }
  { Child 15 # SiliconResource
   Name: "SiliconResource"

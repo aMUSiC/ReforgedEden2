@@ -572,7 +572,7 @@ POIs:
               Value: 720
 
               # Random Tribal Ruins
-        - GroupName: TalonWoodRuin
+        - GroupName: R2TalonWoodRuin
           Faction: None  
           Biome: [ RainForest, JungleMountains, Swamp, SwampBeach, WaterSwamp, ShallowWater, Water]
           CountMinMax: [ 12, 15 ]

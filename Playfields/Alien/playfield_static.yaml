@@ -304,7 +304,7 @@ RandomResources:
     - Name: ErestrumResource
       IsScalingCount: True
       CountMinMax: [ 5, 7 ]
-      SizeMinMax: [ 6, 8 ]
+      SizeMinMax: [ 7, 9 ]
       DepthMinMax: [ 6, 15 ]
       DroneProb: 1
       MaxDroneCount: 4
@@ -683,6 +683,20 @@ POIs:
             - Key: RegenAfter
               Value: 720
 
+# Radnom defense outposts
+        - GroupName: R2GhystDefenseT2
+          Faction: Ghyst
+          FactionTerritory: [Zirax]
+          CountMinMax: [ 2, 3 ]
+          IsScalingCount: True 
+          DroneProb: 0.3
+          DronesMinMax: [ 1, 1 ]
+          ReserveCount: 0
+          TroopTransport: False
+          Properties:
+            - Key: RegenAfter
+              Value: 720
+
         # Different POIs scattered around planet 
         - GroupName: CrashedShip          # Only use regeneration with burried POIs if LandClaimZone: Device is set in playfield.yaml
           Faction: None    
@@ -759,47 +773,156 @@ POIs:
 
 
 # Black cult POIs
-        - GroupName: Eden_NecroAuxT1
-          Faction: Alien
+# T2 compound
+        - GroupName: RE2_NecroAuxT2
+          Faction: Eden_Abandoned
           FactionTerritory: [Warlord, Xenu]
-          # NoShieldReload: True
+          AvoidFactionTerritory: True
+          NoShieldReload: True # Needed for Black Cult POIs
+          IsImportant: True
+          CountMinMax: [ 0, 1 ]
+          DroneProb: 1
+          DronesMinMax: [ 2, 3 ]
+          ReserveCount: 2
+          TroopTransport: False
+          SpawnPOIAvoid: [R2DroneBase, R2DroneBaseT5, R2XenuMain, R2XenuAuxT2, R2EpsilonMain, R2EpsilonAuxT2, R2RadosMainT3, R2RadosAuxT2, R2RadosMainT3Snow, R2RadosAuxT2Snow, R2RadosMainT3Desert, R2RadosAuxT2Desert, R2TradeTower, R2TraderMain, Eden_PolSwampMain, R2PolarisMain, R2PolarisAuxT2]
+          SpawnPOIAvoidDistance: 750
+          Properties:
+            - Key: RegenAfter
+              Value: 4320
+
+        - GroupName: RE2_NecroAuxT1
+          Faction: Eden_Abandoned
+          FactionTerritory: [Warlord, Xenu]
+          NoShieldReload: True # Needed for Black Cult POIs
+          CountMinMax: [ 1, 2 ]
+          DroneProb: 0
+          DronesMinMax: [ 1, 1 ]
+          ReserveCount: 0
+          TroopTransport: False
+          SpawnPOINear: [RE2_NecroAuxT2]
+          SpawnPOINearRange: [200, 375]
+          Properties: 
+            - Key: RegenAfter
+              Value: 720
+
+        - GroupName: RE2_NecroDefenseT1
+          Faction: Eden_Abandoned
+          FactionTerritory: [Warlord, Xenu]
+          NoShieldReload: True # Needed for Black Cult POIs
+          CountMinMax: [ 2, 3 ]
+          DroneProb: 0.5
+          DronesMinMax: [ 1, 1 ]
+          ReserveCount: 0
+          TroopTransport: False
+          SpawnPOINear: [RE2_NecroAuxT2]
+          SpawnPOINearRange: [400, 600]
+          SpawnPOIAvoid: [RE2_NecroDefenseT1]
+          SpawnPOIAvoidDistance: 250
+          Properties: 
+            - Key: RegenAfter
+              Value: 720
+
+# Main compound. Low chance, only appears if the AuxT2 compound doesn't spawn, or on larger planets.
+        - GroupName: RE2_NecroMain
+          Faction: Eden_Abandoned
+          FactionTerritory: [Warlord, Xenu]
+          AvoidFactionTerritory: True
+          NoShieldReload: True # Needed for Black Cult POIs
           IsImportant: True
           CountMinMax: [ 0, 1 ]
           DroneProb: 1
           DronesMinMax: [ 2, 4 ]
-          ReserveCount: 4
-          TroopTransport: True
-          Properties: 
-            - Key: RegenAfter
-              Value: 720
-
-        - GroupName: Eden_NecroAuxT1
-          Faction: Alien
-          FactionTerritory: [Warlord, Xenu]
-          # NoShieldReload: True
-          CountMinMax: [ 1, 2 ]
-          DroneProb: 0.8
-          DronesMinMax: [ 1, 2 ]
-          ReserveCount: 3
-          TroopTransport: True 
-          SpawnPOINear: [Eden_NecroAuxT1]
-          SpawnPOINearRange: [100, 250]
-          Properties: 
-            - Key: RegenAfter
-              Value: 720
-
-        - GroupName: Eden_NecroDefenseT1
-          Faction: Alien
-          FactionTerritory: [Warlord, Xenu]
-          # NoShieldReload: True
-          CountMinMax: [ 2, 3 ]
-          DroneProb: 0.8
-          DronesMinMax: [ 1, 2 ]
-          ReserveCount: 3
+          ReserveCount: 2
           TroopTransport: False
-          SpawnPOINear: [Eden_NecroAuxT1]
-          SpawnPOINearRange: [200, 350]
+          SpawnPOIAvoid: [Re2_NecroAuxT2]
+          SpawnPOIAvoidDistance: 20000
+          Properties:
+            - Key: RegenAfter
+              Value: 4320
+
+        - GroupName: RE2_NecroAuxT1
+          Faction: Eden_Abandoned
+          FactionTerritory: [Warlord, Xenu]
+          NoShieldReload: True # Needed for Black Cult POIs
+          CountMinMax: [ 1, 2 ]
+          DroneProb: 0
+          DronesMinMax: [ 1, 1 ]
+          ReserveCount: 0
+          TroopTransport: False
+          SpawnPOINear: [RE2_NecroMain]
+          SpawnPOINearRange: [200, 375]
           Properties: 
+            - Key: RegenAfter
+              Value: 720
+
+        - GroupName: RE2_NecroDefenseT1
+          Faction: Eden_Abandoned
+          FactionTerritory: [Warlord, Xenu]
+          NoShieldReload: True # Needed for Black Cult POIs
+          CountMinMax: [ 3, 4 ]
+          DroneProb: 0.5
+          DronesMinMax: [ 1, 1 ]
+          ReserveCount: 0
+          TroopTransport: False
+          SpawnPOINear: [RE2_NecroMain]
+          SpawnPOINearRange: [400, 600]
+          SpawnPOIAvoid: [RE2_NecroDefenseT1]
+          SpawnPOIAvoidDistance: 250
+          Properties:
+            - Key: RegenAfter
+              Value: 720
+
+# Random Black Cult POIs
+        - GroupName: RE2_NecroAuxT2
+          Faction: Eden_Abandoned
+          FactionTerritory: [Warlord, Xenu]
+          AvoidFactionTerritory: True
+          NoShieldReload: True # Needed for Black Cult POIs
+          CountMinMax: [ 0, 1 ]
+          IsScalingCount: True
+          DroneProb: 0.5
+          DronesMinMax: [ 1, 2 ]
+          ReserveCount: 1
+          TroopTransport: False
+          SpawnPOIAvoid: [RE2_NecroAuxT2, RE2_NecroMain]
+          SpawnPOIAvoidDistance: 3000
+          Properties:
+            - Key: RegenAfter
+              Value: 720
+
+        - GroupName: RE2_NecroAuxT1
+          Faction: Eden_Abandoned
+          FactionTerritory: [Warlord, Xenu]
+          AvoidFactionTerritory: True
+          NoShieldReload: True # Needed for Black Cult POIs
+          CountMinMax: [ 0, 2 ]
+          IsScalingCount: True
+          DroneProb: 0.5
+          DronesMinMax: [ 1, 2 ]
+          ReserveCount: 1
+          TroopTransport: False
+          SpawnPOIAvoid: [RE2_NecroAuxT2, RE2_NecroMain]
+          SpawnPOIAvoidDistance: 3000
+          Properties:
+            - Key: RegenAfter
+              Value: 720
+
+# Random Black Cult POIs in Zirax territory
+        - GroupName: RE2_NecroAuxT1
+          Faction: Eden_Abandoned
+          FactionTerritory: [Xenu]
+          AvoidFactionTerritory: True
+          NoShieldReload: True # Needed for Black Cult POIs
+          CountMinMax: [ 1, 2 ]
+          IsScalingCount: True
+          DroneProb: 0.5
+          DronesMinMax: [ 1, 2 ]
+          ReserveCount: 1
+          TroopTransport: False
+          SpawnPOIAvoid: [RE2_NecroAuxT2, RE2_NecroMain]
+          SpawnPOIAvoidDistance: 3000
+          Properties:
             - Key: RegenAfter
               Value: 720
 
@@ -1003,7 +1126,7 @@ DroneBaseSetup:
 # Guarding drone base
               - Name: R2PVZiraxT1
                 Faction: Zirax
-                CountMinMax: [2, 2]
+                CountMinMax: [1, 1]
                 LevelMod: 2
                 FixedMaxSpeed: 20
                 DelayBetweenRespawn: 600
@@ -1022,11 +1145,11 @@ DroneBaseSetup:
                     Type: FighterDrone
 
 # Patrolling whole planet.
-              - Name: R2PVZiraxT0
+              - Name: R2PVZiraxT1
                 Faction: Zirax
-                CountMinMax: [0, 2]
+                CountMinMax: [0, 1]
                 LevelMod: 2
-                FixedMaxSpeed: 20
+                FixedMaxSpeed: 10
                 DelayBetweenRespawn: 600
                 DelayBeforeSelfDestruction: 1800
                 IsRespawnAfterDestruction: False
@@ -1045,12 +1168,12 @@ DroneBaseSetup:
                     Amount: 0
                     Type: FighterDrone
 
-# Patrolling whole planet.
+# Patrolling whole planet. Only in Zirax territory.
               - Name: R2PVZiraxT1
-                Faction: Zirax
+                Faction: Xenu
                 CountMinMax: [0, 1]
                 LevelMod: 2
-                FixedMaxSpeed: 20
+                FixedMaxSpeed: 50
                 DelayBetweenRespawn: 600
                 DelayBeforeSelfDestruction: 1800
                 IsRespawnAfterDestruction: False
@@ -1068,9 +1191,6 @@ DroneBaseSetup:
                   - Name: DroneHoverZiraxLaser
                     Amount: 4
                     Type: FighterDrone
-
-
-
 
 # ==============================================================
 # ==============================================================

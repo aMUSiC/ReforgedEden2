@@ -2912,6 +2912,51 @@
   JumpHeight: 0
   StepHeight: 0.25
 }
+{ +Entity Name: ShieldRobot, Ref: AlienTemplate
+  Mesh: Enemies/Robots/TurretRobotNewPrefab
+  MeshDead: Enemies/Robots/TurretRobotNewDmgPrefab
+  HeadTransform: Head
+  
+  Faction: Zirax
+
+  /* General entity properties */
+  MaxHealth: 500
+  XpFactor: 1.5
+  ItemsOnEnterGame: ShieldRobotWeapon
+  RightHandJointName: Gunjoint
+  RotateToGround: true
+  Material: Mechanical
+
+  WanderSpeed: 0.25
+  ApproachSpeed: 0.25
+  NightWanderSpeed: 0.25
+  NightApproachSpeed: 0.25
+  PanicSpeed: 0.0
+
+  /* Determines particle effect  */
+  SurfaceCategory: metal
+  ParticleOnDeath: drone_explosion
+
+  SfxRandomTime: 50.0
+  SfxRandom: Enemies/ArmoredGolem/mechanical_001
+
+  SfxAlertTime: 25.0
+  SfxAlert: Enemies/ArmoredGolem/mechanical_004
+  # SfxSense: Enemies/ArmoredGolem/mechanical_004
+
+  SfxHurt: Enemies/ArmoredGolem/skratch13
+  SfxDeath: Enemies/ArmoredGolem/SwellsRushesAssortment_dead
+
+  LootListOnDeath: 15
+  FadingEnabled: false
+  
+  UpdateClusterInfo: true       
+  AllowUserInstantiate: true
+  AllowInSpawners: true
+  
+  JumpHeight: 0
+  StepHeight: 0.25
+}
 ## ================================================== 
 
 # delete
@@ -5203,6 +5248,29 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
   
   {	Child TargetSensor
     AttackableTypes: "Player,HV,SV,CV,BA,PlayerDrone"
+  }
+}
+
+{ +Entity Name: ZiraxFlamethrower, Ref: ZiraxMinigun
+  MaxHealth: 450
+  XpFactor: 3.5
+  LootListOnDeath: 55
+  Mesh: Enemies/Zirax/ZiraxBluePrefab
+  MeshDead: Enemies/Zirax/ZiraxBlueDeadPrefab
+  ItemsOnEnterGame: ZiraxFlamethrowerWeapon
+  ParticleOnDeath: drone_explosion
+
+  { Child VariableOverride
+    SpeedAlerted: 0.8
+	SpeedAttack: 1.0
+  }  
+  { Child Hints
+	AttackApproachTarget: 90
+	AttackOptimalDistance: 10
+	SearchAdvanceTime: 3.0
+	SearchWaitTime: 0.5
+	SearchRandomDistanceMult: 3.8
+	FireWeaponDurationMultiplier: 2.0	
   }
 }
 # ========= Elite Zirax Troops
@@ -8298,7 +8366,7 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
   
   /* General entity properties */  
   ViewAngle: 120
-  MaxHealth: 600
+  MaxHealth: 500
   XpFactor: 3.5
   RightHandJointName: Bip001 R Hand
   ItemsOnEnterGame: CyborgSniperWeapon
@@ -8398,10 +8466,10 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
   
   /* General entity properties */  
   ViewAngle: 120
-  MaxHealth: 800
+  MaxHealth: 700
   XpFactor: 5
   RightHandJointName: Bip001 R Hand
-  ItemsOnEnterGame: LaserRifle
+  ItemsOnEnterGame: KrielBurstWeapon
   RotateToGround: false
   RotateSpeed: 60
   RotateSpeedMovement: 180
@@ -8484,11 +8552,11 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
   Faction: Pirates
  /* General entity properties */  
   ViewAngle: 120
-  MaxHealth: 500
+  MaxHealth: 400
   XpFactor: 2.5
   LootListOnDeath: 84
   RightHandJointName: Bip001 R Hand
-  ItemsOnEnterGame: CyborgSniperWeapon
+  ItemsOnEnterGame: ZiraxRocketWeapon
   RotateToGround: false
   RotateSpeed: 60
   RotateSpeedMovement: 180
@@ -8498,10 +8566,10 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
   Faction: Alien
  /* General entity properties */  
   ViewAngle: 120
-  MaxHealth: 500
+  MaxHealth: 400
   XpFactor: 2.5
   RightHandJointName: Bip001 R Hand
-  ItemsOnEnterGame: CyborgSniperWeapon
+  ItemsOnEnterGame: ZiraxMinigunWeapon
   RotateToGround: false
   RotateSpeed: 60
   RotateSpeedMovement: 180
@@ -9892,7 +9960,7 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
   Mesh: Enemies/Zirax/ZiraxGreenInfectedPrefab
   MeshDead: Enemies/Zirax/ZiraxGreenInfectedDeadPrefab
   HeadTransform: Bip01_Head
-  ItemsOnEnterGame: ZiraxShotgunWeapon
+  ItemsOnEnterGame: KrielBurstWeapon
   Faction: TheLegacy
   SfxRandom: Misc/MuteSound
   SfxHurt: Enemies/TotalHorror/TotalHorror_SfxHurt
@@ -11077,6 +11145,217 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
     SpeedCalm: 0.1
     SpeedAlerted: 1.5
 	SpeedAttack: 1.5
+  }
+  {	Child VisionSensor
+	VisibleDistance: 130
+	ViewAngle: 120
+	VisibleTypes: "Player,HV,SV,CV,BA,PlayerBike,PlayerDrone"
+  }    
+  
+  {	Child TargetSensor
+    AttackableTypes: "Player,HV,SV,CV,BA,PlayerBike,PlayerDrone"
+  }
+}
+
+{ +Entity Name: ZiraxSentinelFlamethrower, Ref: ZiraxSentinel
+  MaxHealth: 450
+  XpFactor: 4.0
+  LootListOnDeath: 55
+  Mesh: Enemies/Zirax/ZiraxBluePrefab
+  MeshDead: Enemies/Zirax/ZiraxBlueDeadPrefab
+  ItemsOnEnterGame: ZiraxFlamethrowerWeapon
+  ParticleOnDeath: drone_explosion
+
+  { Child VariableOverride
+    SpeedCalm: 0.4
+    SpeedAlerted: 1.25
+	SpeedAttack: 1.25
+  }
+  
+  { Child Hints
+  	FireWeaponDurationMultiplier: 2.0
+	FireWeaponBlendInTime: 2.0
+	AttackOptimalDistance: 30
+  }
+  {	Child VisionSensor
+	VisibleDistance: 110
+  }
+
+}
+# ====== Mech Sentinels
+{ +Entity Name: AndroidSentinelRifle, Ref: AlienTemplateBAI
+  Mesh: Enemies/AssaultCyborg/AssaultCyborgPrefab
+  HeadTransform: Bip01_Head
+  
+  /* Class properties */
+  Faction: Polaris
+  ModelType: NoRagdoll
+  EntityType: Cyborg
+  Prefab: AlienHumanoid
+  Class: Enemy
+  Parent: Enemies
+  IsEnemy: true
+  AvatarController: Enemy
+  
+  /* Determines particle effect  */
+  SurfaceCategory: metal
+
+  /* AI properties */
+  AITask-1: ApproachAttack
+  AITask-2: ApproachSpot
+  AITask-3: ReturnHome
+  AITask-4: Wander, param1: true
+
+  AITarget-1: OnHurt, param1: Player
+  AITarget-2: Entity, param1: Player, param2: true  # param2: attack even if in a SV, CV, etc
+
+  /* General entity properties */
+  MaxHealth: 500
+  XpFactor: 3.15
+  RightHandJointName: Bip001 R Hand
+  ItemsOnEnterGame: ZiraxMinigunWeapon
+  RotateToGround: false
+  RotateSpeed: 180
+  RotateSpeedMovement: 180
+  Material: Mechanical
+  Weight: 100
+  MotionAnimationSpeedMultiplier: 1.25
+
+  /* Sound settings */
+  SfxRandomTime: 100.0
+  SfxRandom: Enemies/AssaultCyborg/AssaultCyborg_SfxRandom
+  SfxAlertTime: 50.0
+  SfxAlert: Enemies/AssaultCyborg/AssaultCyborg_SfxRandom
+  SfxHurt: Enemies/AssaultCyborg/AssaultCyborg_SfxHurt
+  SfxDeath: Enemies/AssaultCyborg/AssaultCyborg_SfxDeath
+
+  LootListOnDeath: 74
+  FadingEnabled: false
+  TimeStayAfterDeath: 120
+
+  JumpHeight: 0.5
+  StepHeight: 0.125
+
+  UpdateClusterInfo: true       
+  AllowUserInstantiate: true
+  AllowInSpawners: true
+
+  { Child VariableOverride
+    SpeedCalm: 0.25
+    SpeedAlerted: 0.5
+	SpeedAttack: 1.0
+  }
+  
+  { Child Hints
+	AttackApproachTarget: 10
+	AttackOptimalDistance: 80
+	SearchAdvanceTime: 2.0
+	SearchWaitTime: 3
+	SearchRandomDistanceMult: 2.0
+	FireWeaponBlendInTime: 0.5
+	FireWeaponDurationMultiplier: 2.0
+  }
+	
+  {	Child VisionSensor
+	VisibleDistance: 120
+	ViewAngle: 120
+	VisibleTypes: "Player,HV,SV,CV,BA,PlayerBike,PlayerDrone,NPCFighter,EnemyDrone"
+  }    
+  
+  {	Child TargetSensor
+    AttackableTypes: "Player,HV,SV,CV,BA,PlayerBike,PlayerDrone,NPCFighter,EnemyDrone,Animal"
+  }
+  
+  { Child StuckSensor
+	Use: 0
+  }
+  
+  {	Child AlertSensor
+	AlertLevel1: 10, param1: 0
+	AlertLevel2: 40, param1: 2
+	AlertLevel3: 60, param1: 50
+	AlertLevelDrop:5
+	AlertAddFromVisionMinNoMovement:10
+	AlertAddFromVisionMovement:200
+	AlertVisionMaxSpeed:2
+	AlertAddFromAutoAlert:30
+	MinDistanceToAutoAlert:20
+	NoiseMaxDistance:100
+	NoiseAlertMultiplier:1.25
+  }
+}
+# Mesh: Enemies/AssaultCyborg/CommandoCyborgPrefab
+# Mesh: Enemies/AssaultCyborg/DamagedAssaultCyborgPrefab
+# Mesh: Enemies/AssaultCyborg/DamagedCyborgPrefab
+# Mesh: Enemies/AssaultCyborg/EngineerCyborgPrefab
+# Mesh: Enemies/AssaultCyborg/MedicCyborgPrefab
+# Mesh: Enemies/AssaultCyborg/ServantCyborgPrefab
+{ +Entity Name: AndroidSentinellaser, Ref: AndroidSentinelRifle
+  MaxHealth: 550
+  XpFactor: 3.5
+  LootListOnDeath: 74
+  Mesh: Enemies/AssaultCyborg/AssaultCyborgPrefab
+  ItemsOnEnterGame: CyborgSniperWeapon
+  { Child Hints
+	AttackApproachTarget: 10
+	AttackOptimalDistance: 60
+  }
+  { Child VariableOverride
+    SpeedCalm: 0.25
+    SpeedAlerted: 0.5
+	SpeedAttack: 0.75
+  }
+  {	Child VisionSensor
+	VisibleDistance: 120
+	ViewAngle: 120
+	VisibleTypes: "Player,HV,SV,CV,BA,PlayerBike,PlayerDrone"
+  }    
+  
+  {	Child TargetSensor
+    AttackableTypes: "Player,HV,SV,CV,BA,PlayerBike,PlayerDrone"
+  }
+}
+{ +Entity Name: AndroidSentinelRocket, Ref: AndroidSentinelRifle
+  MaxHealth: 450
+  XpFactor: 3.25
+  LootListOnDeath: 74
+  # Mesh: Enemies/AssaultCyborg/EngineerCyborgPrefab
+  Mesh: Enemies/AssaultCyborg/DamagedAssaultCyborgPrefab
+  ItemsOnEnterGame: ZiraxRocketWeapon
+  { Child Hints
+	AttackApproachTarget: 40
+	AttackOptimalDistance: 110
+  }
+  { Child VariableOverride
+    SpeedCalm: 0.25
+    SpeedAlerted: 0.5
+	SpeedAttack: 0.75
+  }
+  {	Child VisionSensor
+	VisibleDistance: 130
+	ViewAngle: 120
+	VisibleTypes: "Player,HV,SV,CV,BA,PlayerBike,PlayerDrone"
+  }    
+  
+  {	Child TargetSensor
+    AttackableTypes: "Player,HV,SV,CV,BA,PlayerBike,PlayerDrone"
+  }
+}
+{ +Entity Name: AndroidSentinelShotgun, Ref: AndroidSentinelRifle
+  MaxHealth: 525
+  XpFactor: 3.5
+  LootListOnDeath: 74
+  Mesh: Enemies/AssaultCyborg/CommandoCyborgPrefab
+  ItemsOnEnterGame: KrielBurstWeapon
+  MotionAnimationSpeedMultiplier: 1.5
+  { Child Hints
+	AttackApproachTarget: 10
+	AttackOptimalDistance: 30
+  }
+  { Child VariableOverride
+    SpeedCalm: 0.25
+    SpeedAlerted: 0.5
+	SpeedAttack: 1.0
   }
   {	Child VisionSensor
 	VisibleDistance: 130
@@ -15019,26 +15298,26 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
   AllowUserInstantiate: true
 }
 
-{ +Entity Name: Eden_SpaceDroneBanditT1B, Ref: SpaceDronePlasma
-  Faction: Warlord
-  # Mesh: Enemies/Drones/SpaceDrone02LODPrefab
-  Mesh: Enemies/Drones/EnemyDroneBomberPrefab
-  MeshDead: Enemies/Drones/EnemyDroneBomberDmgPrefab
+# { +Entity Name: Eden_SpaceDroneBanditT1B, Ref: SpaceDronePlasma
+  # Faction: Warlord
+  # # Mesh: Enemies/Drones/SpaceDrone02LODPrefab
+  # Mesh: Enemies/Drones/EnemyDroneBomberPrefab
+  # MeshDead: Enemies/Drones/EnemyDroneBomberDmgPrefab
 
-  MaxHealth: 4000
-  # XpFactor: 2
-  XpFactor: 4
+  # MaxHealth: 4000
+  # # XpFactor: 2
+  # XpFactor: 4
 
-  DroneType: SpaceDroneHard
-  # HandItem: laserSpaceDrone
-  HandItem: Eden_SpaceDroneBanditT1_Weapon
-  # ItemsOnEnterGame: laserSpaceDrone
-  ItemsOnEnterGame: Eden_SpaceDroneBanditT1_Weapon
+  # DroneType: SpaceDroneHard
+  # # HandItem: laserSpaceDrone
+  # HandItem: Eden_SpaceDroneBanditT1_Weapon
+  # # ItemsOnEnterGame: laserSpaceDrone
+  # ItemsOnEnterGame: Eden_SpaceDroneBanditT1_Weapon
 
-  AllowUserInstantiate: true
-  TimeStayAfterDeath: 300
-  LootListOnDeath: 751
-}
+  # AllowUserInstantiate: true
+  # TimeStayAfterDeath: 300
+  # LootListOnDeath: 751
+# }
 
 
 
@@ -15135,520 +15414,520 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
 
 # ========================================================================================================================== Bounty Targets
 
-# Colonist Targets
-# Savanth Greenzald
-{ +Entity Name: Eden_NPCBountyColonists1, Ref: ZiraxMinigun
-  Faction: Warlord
-  MaxHealth: 1900
-  XpFactor: 15
-  RpFactor: 50
-  LootListOnDeath: 701
-  TimeStayAfterDeath: 1800
-}
+# # Colonist Targets
+# # Savanth Greenzald
+# { +Entity Name: Eden_NPCBountyColonists1, Ref: ZiraxMinigun
+  # Faction: Warlord
+  # MaxHealth: 1900
+  # XpFactor: 15
+  # RpFactor: 50
+  # LootListOnDeath: 701
+  # TimeStayAfterDeath: 1800
+# }
 
-# Marko Inero
-{ +Entity Name: Eden_NPCBountyColonists2, Ref: ZiraxShotgun
-  Faction: Pirates
-  MaxHealth: 1300
-  XpFactor: 15
-  RpFactor: 50
-  LootListOnDeath: 702
-  TimeStayAfterDeath: 1800
-}
+# # Marko Inero
+# { +Entity Name: Eden_NPCBountyColonists2, Ref: ZiraxShotgun
+  # Faction: Pirates
+  # MaxHealth: 1300
+  # XpFactor: 15
+  # RpFactor: 50
+  # LootListOnDeath: 702
+  # TimeStayAfterDeath: 1800
+# }
 
-# Small Tony
-{ +Entity Name: Eden_NPCBountyColonists3, Ref: Eden_SyndicateGoon
-  Faction: Warlord
-  Mesh: Enemies/Traders/AlienCivilian3FatPrefab
-  MaxHealth: 2500
-  XpFactor: 27
-  RpFactor: 50
-  LootListOnDeath: 703
-  TimeStayAfterDeath: 1800
-}
+# # Small Tony
+# { +Entity Name: Eden_NPCBountyColonists3, Ref: Eden_SyndicateGoon
+  # Faction: Warlord
+  # Mesh: Enemies/Traders/AlienCivilian3FatPrefab
+  # MaxHealth: 2500
+  # XpFactor: 27
+  # RpFactor: 50
+  # LootListOnDeath: 703
+  # TimeStayAfterDeath: 1800
+# }
 
-# Greeza Zeerzhi
-{ +Entity Name: Eden_NPCBountyColonists4, Ref: ZiraxCommander
-  Faction: Warlord
-  MaxHealth: 3500
-  XpFactor: 35
-  RpFactor: 50
-  LootListOnDeath: 704
-  TimeStayAfterDeath: 1800
-}
+# # Greeza Zeerzhi
+# { +Entity Name: Eden_NPCBountyColonists4, Ref: ZiraxCommander
+  # Faction: Warlord
+  # MaxHealth: 3500
+  # XpFactor: 35
+  # RpFactor: 50
+  # LootListOnDeath: 704
+  # TimeStayAfterDeath: 1800
+# }
 
-# Captain Pang
-{ +Entity Name: Eden_NPCBountyColonists6, Ref: SpaceDronePlasma
-  Faction: Warlord
+# # Captain Pang
+# { +Entity Name: Eden_NPCBountyColonists6, Ref: SpaceDronePlasma
+  # Faction: Warlord
+  # # Mesh: Enemies/Drones/SpaceDrone02LODPrefab
+  # Mesh: Enemies/Drones/EnemyDroneBomberPrefab
+
+  # MaxHealth: 15000
+  # XpFactor: 20
+  # RpFactor: 50
+  # DroneType: SpaceDroneHard
+  # HandItem: Eden_SpaceDronePirateGatling_Weapon
+  # ItemsOnEnterGame: Eden_SpaceDronePirateGatling_Weapon
+  # LootListOnDeath: 706
+  # TimeStayAfterDeath: 1800
+
+  # AllowUserInstantiate: true
+# }
+
+# # Yerzhu the Smuggler
+# { +Entity Name: Eden_NPCBountyColonists7, Ref: ZiraxMinigun
+  # Faction: Warlord
+  # MaxHealth: 1900
+  # XpFactor: 15
+  # RpFactor: 50
+  # LootListOnDeath: 707
+  # TimeStayAfterDeath: 1800
+# }
+
+# # Warlord Khrang
+# { +Entity Name: Eden_NPCBountyColonists8, Ref: ZiraxMinigun
+  # Faction: Warlord
+  # MaxHealth: 1900
+  # XpFactor: 15
+  # RpFactor: 50
+  # LootListOnDeath: 708
+  # TimeStayAfterDeath: 1800
+# }
+
+# # Kreenah Pitoli
+# { +Entity Name: Eden_NPCBountyColonists9, Ref: ZiraxMinigun
+  # Faction: Zirax
+  # MaxHealth: 1900
+  # XpFactor: 15
+  # RpFactor: 50
+  # LootListOnDeath: 709
+  # TimeStayAfterDeath: 1800
+# }
+
+# # Painbringer Xerxas
+# { +Entity Name: Eden_NPCBountyColonists10, Ref: ZiraxMinigun
+  # Faction: Pirates
+  # MaxHealth: 1900
+  # XpFactor: 15
+  # RpFactor: 50
+  # LootListOnDeath: 710
+  # TimeStayAfterDeath: 1800
+# }
+
+
+# # Zirax Targets
+# { +Entity Name: Eden_NPCBountyZirax1, Ref: ZiraxMinigun
+  # Faction: Warlord
+  # MaxHealth: 1900
+  # XpFactor: 15
+  # RpFactor: 50
+  # LootListOnDeath: 711
+  # TimeStayAfterDeath: 1800
+# }
+
+# { +Entity Name: Eden_NPCBountyZirax2, Ref: ZiraxMinigun
+  # Faction: Warlord
+  # MaxHealth: 1900
+  # XpFactor: 15
+  # RpFactor: 50
+  # LootListOnDeath: 712
+  # TimeStayAfterDeath: 1800
+# }
+
+# { +Entity Name: Eden_NPCBountyZirax3, Ref: ZiraxMinigun
+  # Faction: Warlord
+  # MaxHealth: 1900
+  # XpFactor: 15
+  # RpFactor: 50
+  # LootListOnDeath: 713
+  # TimeStayAfterDeath: 1800
+# }
+
+# { +Entity Name: Eden_NPCBountyZirax4, Ref: ZiraxMinigun
+  # Faction: Warlord
+  # MaxHealth: 1900
+  # XpFactor: 15
+  # RpFactor: 50
+  # LootListOnDeath: 714
+  # TimeStayAfterDeath: 1800
+# }
+
+# { +Entity Name: Eden_NPCBountyZirax5, Ref: ZiraxMinigun
+  # Faction: Warlord
+  # MaxHealth: 1900
+  # XpFactor: 15
+  # RpFactor: 50
+  # LootListOnDeath: 715
+  # TimeStayAfterDeath: 1800
+# }
+
+# { +Entity Name: Eden_NPCBountyZirax6, Ref: ZiraxMinigun
+  # Faction: Warlord
+  # MaxHealth: 1900
+  # XpFactor: 15
+  # RpFactor: 50
+  # LootListOnDeath: 716
+  # TimeStayAfterDeath: 1800
+# }
+
+# { +Entity Name: Eden_NPCBountyZirax7, Ref: ZiraxMinigun
+  # Faction: Warlord
+  # MaxHealth: 1900
+  # XpFactor: 15
+  # RpFactor: 50
+  # LootListOnDeath: 717
+  # TimeStayAfterDeath: 1800
+# }
+
+# { +Entity Name: Eden_NPCBountyZirax8, Ref: ZiraxMinigun
+  # Faction: Warlord
+  # MaxHealth: 1900
+  # XpFactor: 15
+  # RpFactor: 50
+  # LootListOnDeath: 718
+  # TimeStayAfterDeath: 1800
+# }
+
+# { +Entity Name: Eden_NPCBountyZirax9, Ref: ZiraxMinigun
+  # Faction: Warlord
+  # MaxHealth: 1900
+  # XpFactor: 15
+  # RpFactor: 50
+  # LootListOnDeath: 719
+  # TimeStayAfterDeath: 1800
+# }
+
+# { +Entity Name: Eden_NPCBountyZirax10, Ref: ZiraxMinigun
+  # Faction: Warlord
+  # MaxHealth: 1900
+  # XpFactor: 15
+  # RpFactor: 50
+  # LootListOnDeath: 720
+  # TimeStayAfterDeath: 1800
+# }
+
+# # Polaris Targets
+# # Groktan Klous
+# { +Entity Name: Eden_NPCBountyPolaris1, Ref: ZiraxMinigun
+  # Faction: Warlord
+  # MaxHealth: 1900
+  # XpFactor: 15
+  # RpFactor: 50
+  # LootListOnDeath: 721
+  # TimeStayAfterDeath: 1800
+# }
+
+# # Smuggler Gorn
+# { +Entity Name: Eden_NPCBountyPolaris2, Ref: ZiraxMinigun
+  # Faction: Pirates
+  # MaxHealth: 1900
+  # XpFactor: 15
+  # RpFactor: 50
+  # LootListOnDeath: 722
+  # TimeStayAfterDeath: 1800
+# }
+
+# { +Entity Name: Eden_NPCBountyPolaris3, Ref: ZiraxMinigun
+  # Faction: Warlord
+  # MaxHealth: 1900
+  # XpFactor: 15
+  # RpFactor: 50
+  # LootListOnDeath: 723
+  # TimeStayAfterDeath: 1800
+# }
+
+# # Director Crennek
+# { +Entity Name: Eden_NPCBountyPolaris4, Ref: ZiraxMinigun
+  # Faction: Zirax
+  # MaxHealth: 6000
+  # XpFactor: 15
+  # RpFactor: 50
+  # LootListOnDeath: 724
+  # TimeStayAfterDeath: 1800
+  # ItemsOnEnterGame: Eden_PlasmaRifleXCorp
+# }
+
+# { +Entity Name: Eden_NPCBountyPolaris5, Ref: ZiraxMinigun
+  # Faction: Warlord
+  # MaxHealth: 1900
+  # XpFactor: 15
+  # RpFactor: 50
+  # LootListOnDeath: 725
+  # TimeStayAfterDeath: 1800
+# }
+
+# { +Entity Name: Eden_NPCBountyPolaris6, Ref: ZiraxMinigun
+  # Faction: Warlord
+  # MaxHealth: 1900
+  # XpFactor: 15
+  # RpFactor: 50
+  # LootListOnDeath: 726
+  # TimeStayAfterDeath: 1800
+# }
+
+# { +Entity Name: Eden_NPCBountyPolaris7, Ref: ZiraxMinigun
+  # Faction: Warlord
+  # MaxHealth: 1900
+  # XpFactor: 15
+  # RpFactor: 50
+  # LootListOnDeath: 727
+  # TimeStayAfterDeath: 1800
+# }
+
+# { +Entity Name: Eden_NPCBountyPolaris8, Ref: ZiraxMinigun
+  # Faction: Warlord
+  # MaxHealth: 1900
+  # XpFactor: 15
+  # RpFactor: 50
+  # LootListOnDeath: 728
+  # TimeStayAfterDeath: 1800
+# }
+
+# { +Entity Name: Eden_NPCBountyPolaris9, Ref: ZiraxMinigun
+  # Faction: Warlord
+  # MaxHealth: 1900
+  # XpFactor: 15
+  # RpFactor: 50
+  # LootListOnDeath: 729
+  # TimeStayAfterDeath: 1800
+# }
+
+# { +Entity Name: Eden_NPCBountyPolaris10, Ref: ZiraxMinigun
+  # Faction: Warlord
+  # MaxHealth: 1900
+  # XpFactor: 15
+  # RpFactor: 50
+  # LootListOnDeath: 730
+  # TimeStayAfterDeath: 1800
+# }
+
+# # Trader Targets
+# # Faeru Leksha
+# { +Entity Name: Eden_NPCBountyTrader1, Ref: ZiraxMinigun
+  # Faction: Warlord
+  # MaxHealth: 1900
+  # XpFactor: 15
+  # RpFactor: 50
+  # LootListOnDeath: 731
+  # TimeStayAfterDeath: 1800
+# }
+
+# # Xor
+# { +Entity Name: Eden_NPCBountyTrader2, Ref: ZiraxMinigun
+  # Faction: Pirates
+  # MaxHealth: 1900
+  # XpFactor: 15
+  # RpFactor: 50
+  # LootListOnDeath: 732
+  # TimeStayAfterDeath: 1800
+# }
+
+# # 
+# { +Entity Name: Eden_NPCBountyTrader3, Ref: ZiraxMinigun
+  # Faction: Pirates
+  # MaxHealth: 1900
+  # XpFactor: 15
+  # RpFactor: 50
+  # LootListOnDeath: 732
+  # TimeStayAfterDeath: 1800
+# }
+
+# { +Entity Name: Eden_NPCBountyTrader4, Ref: ZiraxMinigun
+  # Faction: Warlord
+  # MaxHealth: 1900
+  # XpFactor: 15
+  # RpFactor: 50
+  # LootListOnDeath: 734
+  # TimeStayAfterDeath: 1800
+# }
+
+# # Sansa Kuvera
+# { +Entity Name: Eden_NPCBountyTrader5, Ref: ZiraxMinigun
+  # Faction: Warlord
+  # MaxHealth: 1900
+  # XpFactor: 15
+  # RpFactor: 50
+  # LootListOnDeath: 735
+  # TimeStayAfterDeath: 1800
+# }
+
+# # Captain Xorchek
+# { +Entity Name: Eden_NPCBountyTrader6Trigger, Ref: SpaceDronePlasma
   # Mesh: Enemies/Drones/SpaceDrone02LODPrefab
-  Mesh: Enemies/Drones/EnemyDroneBomberPrefab
 
-  MaxHealth: 15000
-  XpFactor: 20
-  RpFactor: 50
-  DroneType: SpaceDroneHard
-  HandItem: Eden_SpaceDronePirateGatling_Weapon
-  ItemsOnEnterGame: Eden_SpaceDronePirateGatling_Weapon
-  LootListOnDeath: 706
-  TimeStayAfterDeath: 1800
+  # MaxHealth: 10000
+  # # XpFactor: 2
+  # XpFactor: 3
+  # RpFactor: 5
+  # LootListOnDeath: 1
+  # TimeStayAfterDeath: 5
 
-  AllowUserInstantiate: true
-}
+  # DroneType: SpaceDroneHard
+  # HandItem: laserSpaceDrone
+  # ItemsOnEnterGame: laserSpaceDrone
 
-# Yerzhu the Smuggler
-{ +Entity Name: Eden_NPCBountyColonists7, Ref: ZiraxMinigun
-  Faction: Warlord
-  MaxHealth: 1900
-  XpFactor: 15
-  RpFactor: 50
-  LootListOnDeath: 707
-  TimeStayAfterDeath: 1800
-}
+  # AllowUserInstantiate: true
+# }
 
-# Warlord Khrang
-{ +Entity Name: Eden_NPCBountyColonists8, Ref: ZiraxMinigun
-  Faction: Warlord
-  MaxHealth: 1900
-  XpFactor: 15
-  RpFactor: 50
-  LootListOnDeath: 708
-  TimeStayAfterDeath: 1800
-}
+# { +Entity Name: Eden_NPCBountyTrader6, Ref: SpaceDronePlasma
+  # # Mesh: Enemies/Drones/SpaceDrone02LODPrefab
+  # Mesh: Enemies/Drones/EnemyDroneBomberPrefab
 
-# Kreenah Pitoli
-{ +Entity Name: Eden_NPCBountyColonists9, Ref: ZiraxMinigun
-  Faction: Zirax
-  MaxHealth: 1900
-  XpFactor: 15
-  RpFactor: 50
-  LootListOnDeath: 709
-  TimeStayAfterDeath: 1800
-}
+  # MaxHealth: 50000
+  # # XpFactor: 2
+  # XpFactor: 15
+  # RpFactor: 50
+  # LootListOnDeath: 736
+  # TimeStayAfterDeath: 1800
 
-# Painbringer Xerxas
-{ +Entity Name: Eden_NPCBountyColonists10, Ref: ZiraxMinigun
-  Faction: Pirates
-  MaxHealth: 1900
-  XpFactor: 15
-  RpFactor: 50
-  LootListOnDeath: 710
-  TimeStayAfterDeath: 1800
-}
+  # DroneType: SpaceDroneHard
+  # HandItem: Eden_SpaceDroneLaserGamma_Weapon
+  # ItemsOnEnterGame: Eden_SpaceDroneLaserGamma_Weapon
 
+  # AllowUserInstantiate: true
+# }
 
-# Zirax Targets
-{ +Entity Name: Eden_NPCBountyZirax1, Ref: ZiraxMinigun
-  Faction: Warlord
-  MaxHealth: 1900
-  XpFactor: 15
-  RpFactor: 50
-  LootListOnDeath: 711
-  TimeStayAfterDeath: 1800
-}
-
-{ +Entity Name: Eden_NPCBountyZirax2, Ref: ZiraxMinigun
-  Faction: Warlord
-  MaxHealth: 1900
-  XpFactor: 15
-  RpFactor: 50
-  LootListOnDeath: 712
-  TimeStayAfterDeath: 1800
-}
-
-{ +Entity Name: Eden_NPCBountyZirax3, Ref: ZiraxMinigun
-  Faction: Warlord
-  MaxHealth: 1900
-  XpFactor: 15
-  RpFactor: 50
-  LootListOnDeath: 713
-  TimeStayAfterDeath: 1800
-}
-
-{ +Entity Name: Eden_NPCBountyZirax4, Ref: ZiraxMinigun
-  Faction: Warlord
-  MaxHealth: 1900
-  XpFactor: 15
-  RpFactor: 50
-  LootListOnDeath: 714
-  TimeStayAfterDeath: 1800
-}
-
-{ +Entity Name: Eden_NPCBountyZirax5, Ref: ZiraxMinigun
-  Faction: Warlord
-  MaxHealth: 1900
-  XpFactor: 15
-  RpFactor: 50
-  LootListOnDeath: 715
-  TimeStayAfterDeath: 1800
-}
-
-{ +Entity Name: Eden_NPCBountyZirax6, Ref: ZiraxMinigun
-  Faction: Warlord
-  MaxHealth: 1900
-  XpFactor: 15
-  RpFactor: 50
-  LootListOnDeath: 716
-  TimeStayAfterDeath: 1800
-}
-
-{ +Entity Name: Eden_NPCBountyZirax7, Ref: ZiraxMinigun
-  Faction: Warlord
-  MaxHealth: 1900
-  XpFactor: 15
-  RpFactor: 50
-  LootListOnDeath: 717
-  TimeStayAfterDeath: 1800
-}
-
-{ +Entity Name: Eden_NPCBountyZirax8, Ref: ZiraxMinigun
-  Faction: Warlord
-  MaxHealth: 1900
-  XpFactor: 15
-  RpFactor: 50
-  LootListOnDeath: 718
-  TimeStayAfterDeath: 1800
-}
-
-{ +Entity Name: Eden_NPCBountyZirax9, Ref: ZiraxMinigun
-  Faction: Warlord
-  MaxHealth: 1900
-  XpFactor: 15
-  RpFactor: 50
-  LootListOnDeath: 719
-  TimeStayAfterDeath: 1800
-}
-
-{ +Entity Name: Eden_NPCBountyZirax10, Ref: ZiraxMinigun
-  Faction: Warlord
-  MaxHealth: 1900
-  XpFactor: 15
-  RpFactor: 50
-  LootListOnDeath: 720
-  TimeStayAfterDeath: 1800
-}
-
-# Polaris Targets
-# Groktan Klous
-{ +Entity Name: Eden_NPCBountyPolaris1, Ref: ZiraxMinigun
-  Faction: Warlord
-  MaxHealth: 1900
-  XpFactor: 15
-  RpFactor: 50
-  LootListOnDeath: 721
-  TimeStayAfterDeath: 1800
-}
-
-# Smuggler Gorn
-{ +Entity Name: Eden_NPCBountyPolaris2, Ref: ZiraxMinigun
-  Faction: Pirates
-  MaxHealth: 1900
-  XpFactor: 15
-  RpFactor: 50
-  LootListOnDeath: 722
-  TimeStayAfterDeath: 1800
-}
-
-{ +Entity Name: Eden_NPCBountyPolaris3, Ref: ZiraxMinigun
-  Faction: Warlord
-  MaxHealth: 1900
-  XpFactor: 15
-  RpFactor: 50
-  LootListOnDeath: 723
-  TimeStayAfterDeath: 1800
-}
-
-# Director Crennek
-{ +Entity Name: Eden_NPCBountyPolaris4, Ref: ZiraxMinigun
-  Faction: Zirax
-  MaxHealth: 6000
-  XpFactor: 15
-  RpFactor: 50
-  LootListOnDeath: 724
-  TimeStayAfterDeath: 1800
-  ItemsOnEnterGame: Eden_PlasmaRifleXCorp
-}
-
-{ +Entity Name: Eden_NPCBountyPolaris5, Ref: ZiraxMinigun
-  Faction: Warlord
-  MaxHealth: 1900
-  XpFactor: 15
-  RpFactor: 50
-  LootListOnDeath: 725
-  TimeStayAfterDeath: 1800
-}
-
-{ +Entity Name: Eden_NPCBountyPolaris6, Ref: ZiraxMinigun
-  Faction: Warlord
-  MaxHealth: 1900
-  XpFactor: 15
-  RpFactor: 50
-  LootListOnDeath: 726
-  TimeStayAfterDeath: 1800
-}
-
-{ +Entity Name: Eden_NPCBountyPolaris7, Ref: ZiraxMinigun
-  Faction: Warlord
-  MaxHealth: 1900
-  XpFactor: 15
-  RpFactor: 50
-  LootListOnDeath: 727
-  TimeStayAfterDeath: 1800
-}
-
-{ +Entity Name: Eden_NPCBountyPolaris8, Ref: ZiraxMinigun
-  Faction: Warlord
-  MaxHealth: 1900
-  XpFactor: 15
-  RpFactor: 50
-  LootListOnDeath: 728
-  TimeStayAfterDeath: 1800
-}
-
-{ +Entity Name: Eden_NPCBountyPolaris9, Ref: ZiraxMinigun
-  Faction: Warlord
-  MaxHealth: 1900
-  XpFactor: 15
-  RpFactor: 50
-  LootListOnDeath: 729
-  TimeStayAfterDeath: 1800
-}
-
-{ +Entity Name: Eden_NPCBountyPolaris10, Ref: ZiraxMinigun
-  Faction: Warlord
-  MaxHealth: 1900
-  XpFactor: 15
-  RpFactor: 50
-  LootListOnDeath: 730
-  TimeStayAfterDeath: 1800
-}
-
-# Trader Targets
-# Faeru Leksha
-{ +Entity Name: Eden_NPCBountyTrader1, Ref: ZiraxMinigun
-  Faction: Warlord
-  MaxHealth: 1900
-  XpFactor: 15
-  RpFactor: 50
-  LootListOnDeath: 731
-  TimeStayAfterDeath: 1800
-}
-
-# Xor
-{ +Entity Name: Eden_NPCBountyTrader2, Ref: ZiraxMinigun
-  Faction: Pirates
-  MaxHealth: 1900
-  XpFactor: 15
-  RpFactor: 50
-  LootListOnDeath: 732
-  TimeStayAfterDeath: 1800
-}
-
-# 
-{ +Entity Name: Eden_NPCBountyTrader3, Ref: ZiraxMinigun
-  Faction: Pirates
-  MaxHealth: 1900
-  XpFactor: 15
-  RpFactor: 50
-  LootListOnDeath: 732
-  TimeStayAfterDeath: 1800
-}
-
-{ +Entity Name: Eden_NPCBountyTrader4, Ref: ZiraxMinigun
-  Faction: Warlord
-  MaxHealth: 1900
-  XpFactor: 15
-  RpFactor: 50
-  LootListOnDeath: 734
-  TimeStayAfterDeath: 1800
-}
-
-# Sansa Kuvera
-{ +Entity Name: Eden_NPCBountyTrader5, Ref: ZiraxMinigun
-  Faction: Warlord
-  MaxHealth: 1900
-  XpFactor: 15
-  RpFactor: 50
-  LootListOnDeath: 735
-  TimeStayAfterDeath: 1800
-}
-
-# Captain Xorchek
-{ +Entity Name: Eden_NPCBountyTrader6Trigger, Ref: SpaceDronePlasma
-  Mesh: Enemies/Drones/SpaceDrone02LODPrefab
-
-  MaxHealth: 10000
-  # XpFactor: 2
-  XpFactor: 3
-  RpFactor: 5
-  LootListOnDeath: 1
-  TimeStayAfterDeath: 5
-
-  DroneType: SpaceDroneHard
-  HandItem: laserSpaceDrone
-  ItemsOnEnterGame: laserSpaceDrone
-
-  AllowUserInstantiate: true
-}
-
-{ +Entity Name: Eden_NPCBountyTrader6, Ref: SpaceDronePlasma
+# { +Entity Name: Eden_NPCBountyTrader6Guard, Ref: SpaceDronePlasma
   # Mesh: Enemies/Drones/SpaceDrone02LODPrefab
-  Mesh: Enemies/Drones/EnemyDroneBomberPrefab
 
-  MaxHealth: 50000
-  # XpFactor: 2
-  XpFactor: 15
-  RpFactor: 50
-  LootListOnDeath: 736
-  TimeStayAfterDeath: 1800
+  # MaxHealth: 15000
+  # # XpFactor: 2
+  # XpFactor: 5
+  # RpFactor: 10
 
-  DroneType: SpaceDroneHard
-  HandItem: Eden_SpaceDroneLaserGamma_Weapon
-  ItemsOnEnterGame: Eden_SpaceDroneLaserGamma_Weapon
+  # DroneType: SpaceDroneHard
+  # HandItem: Eden_SpaceDroneLaserIR_Weapon
+  # ItemsOnEnterGame: Eden_SpaceDroneLaserIR_Weapon
 
-  AllowUserInstantiate: true
-}
+  # AllowUserInstantiate: true
+# }
 
-{ +Entity Name: Eden_NPCBountyTrader6Guard, Ref: SpaceDronePlasma
-  Mesh: Enemies/Drones/SpaceDrone02LODPrefab
+# { +Entity Name: Eden_NPCBountyTrader7, Ref: ZiraxMinigun
+  # Faction: Warlord
+  # MaxHealth: 1900
+  # XpFactor: 15
+  # RpFactor: 50
+  # LootListOnDeath: 737
+  # TimeStayAfterDeath: 1800
+# }
 
-  MaxHealth: 15000
-  # XpFactor: 2
-  XpFactor: 5
-  RpFactor: 10
+# { +Entity Name: Eden_NPCBountyTrader8, Ref: ZiraxMinigun
+  # Faction: Warlord
+  # MaxHealth: 1900
+  # XpFactor: 15
+  # RpFactor: 50
+  # LootListOnDeath: 738
+  # TimeStayAfterDeath: 1800
+# }
 
-  DroneType: SpaceDroneHard
-  HandItem: Eden_SpaceDroneLaserIR_Weapon
-  ItemsOnEnterGame: Eden_SpaceDroneLaserIR_Weapon
+# { +Entity Name: Eden_NPCBountyTrader9, Ref: ZiraxMinigun
+  # Faction: Warlord
+  # MaxHealth: 1900
+  # XpFactor: 15
+  # RpFactor: 50
+  # LootListOnDeath: 739
+  # TimeStayAfterDeath: 1800
+# }
 
-  AllowUserInstantiate: true
-}
+# { +Entity Name: Eden_NPCBountyTrader10, Ref: ZiraxMinigun
+  # Faction: Warlord
+  # MaxHealth: 1900
+  # XpFactor: 15
+  # RpFactor: 50
+  # LootListOnDeath: 740
+  # TimeStayAfterDeath: 1800
+# }
 
-{ +Entity Name: Eden_NPCBountyTrader7, Ref: ZiraxMinigun
-  Faction: Warlord
-  MaxHealth: 1900
-  XpFactor: 15
-  RpFactor: 50
-  LootListOnDeath: 737
-  TimeStayAfterDeath: 1800
-}
+# # Pirates Targets
+# { +Entity Name: Eden_NPCBountyPirates1, Ref: ZiraxMinigun
+  # Faction: Warlord
+  # MaxHealth: 1900
+  # XpFactor: 15
+  # RpFactor: 50
+  # LootListOnDeath: 741
+  # TimeStayAfterDeath: 1800
+# }
 
-{ +Entity Name: Eden_NPCBountyTrader8, Ref: ZiraxMinigun
-  Faction: Warlord
-  MaxHealth: 1900
-  XpFactor: 15
-  RpFactor: 50
-  LootListOnDeath: 738
-  TimeStayAfterDeath: 1800
-}
+# { +Entity Name: Eden_NPCBountyPirates2, Ref: ZiraxMinigun
+  # Faction: Warlord
+  # MaxHealth: 1900
+  # XpFactor: 15
+  # RpFactor: 50
+  # LootListOnDeath: 742
+  # TimeStayAfterDeath: 1800
+# }
 
-{ +Entity Name: Eden_NPCBountyTrader9, Ref: ZiraxMinigun
-  Faction: Warlord
-  MaxHealth: 1900
-  XpFactor: 15
-  RpFactor: 50
-  LootListOnDeath: 739
-  TimeStayAfterDeath: 1800
-}
+# { +Entity Name: Eden_NPCBountyPirates3, Ref: ZiraxMinigun
+  # Faction: Warlord
+  # MaxHealth: 1900
+  # XpFactor: 15
+  # RpFactor: 50
+  # LootListOnDeath: 743
+  # TimeStayAfterDeath: 1800
+# }
 
-{ +Entity Name: Eden_NPCBountyTrader10, Ref: ZiraxMinigun
-  Faction: Warlord
-  MaxHealth: 1900
-  XpFactor: 15
-  RpFactor: 50
-  LootListOnDeath: 740
-  TimeStayAfterDeath: 1800
-}
+# { +Entity Name: Eden_NPCBountyPirates4, Ref: ZiraxMinigun
+  # Faction: Warlord
+  # MaxHealth: 1900
+  # XpFactor: 15
+  # RpFactor: 50
+  # LootListOnDeath: 744
+  # TimeStayAfterDeath: 1800
+# }
 
-# Pirates Targets
-{ +Entity Name: Eden_NPCBountyPirates1, Ref: ZiraxMinigun
-  Faction: Warlord
-  MaxHealth: 1900
-  XpFactor: 15
-  RpFactor: 50
-  LootListOnDeath: 741
-  TimeStayAfterDeath: 1800
-}
+# { +Entity Name: Eden_NPCBountyPirates5, Ref: ZiraxMinigun
+  # Faction: Warlord
+  # MaxHealth: 1900
+  # XpFactor: 15
+  # RpFactor: 50
+  # LootListOnDeath: 745
+  # TimeStayAfterDeath: 1800
+# }
 
-{ +Entity Name: Eden_NPCBountyPirates2, Ref: ZiraxMinigun
-  Faction: Warlord
-  MaxHealth: 1900
-  XpFactor: 15
-  RpFactor: 50
-  LootListOnDeath: 742
-  TimeStayAfterDeath: 1800
-}
+# { +Entity Name: Eden_NPCBountyPirates6, Ref: ZiraxMinigun
+  # Faction: Warlord
+  # MaxHealth: 1900
+  # XpFactor: 15
+  # RpFactor: 50
+  # LootListOnDeath: 746
+  # TimeStayAfterDeath: 1800
+# }
 
-{ +Entity Name: Eden_NPCBountyPirates3, Ref: ZiraxMinigun
-  Faction: Warlord
-  MaxHealth: 1900
-  XpFactor: 15
-  RpFactor: 50
-  LootListOnDeath: 743
-  TimeStayAfterDeath: 1800
-}
+# { +Entity Name: Eden_NPCBountyPirates7, Ref: ZiraxMinigun
+  # Faction: Warlord
+  # MaxHealth: 1900
+  # XpFactor: 15
+  # RpFactor: 50
+  # LootListOnDeath: 747
+  # TimeStayAfterDeath: 1800
+# }
 
-{ +Entity Name: Eden_NPCBountyPirates4, Ref: ZiraxMinigun
-  Faction: Warlord
-  MaxHealth: 1900
-  XpFactor: 15
-  RpFactor: 50
-  LootListOnDeath: 744
-  TimeStayAfterDeath: 1800
-}
+# { +Entity Name: Eden_NPCBountyPirates8, Ref: ZiraxMinigun
+  # Faction: Warlord
+  # MaxHealth: 1900
+  # XpFactor: 15
+  # RpFactor: 50
+  # LootListOnDeath: 748
+  # TimeStayAfterDeath: 1800
+# }
 
-{ +Entity Name: Eden_NPCBountyPirates5, Ref: ZiraxMinigun
-  Faction: Warlord
-  MaxHealth: 1900
-  XpFactor: 15
-  RpFactor: 50
-  LootListOnDeath: 745
-  TimeStayAfterDeath: 1800
-}
+# { +Entity Name: Eden_NPCBountyPirates9, Ref: ZiraxMinigun
+  # Faction: Warlord
+  # MaxHealth: 1900
+  # XpFactor: 15
+  # RpFactor: 50
+  # LootListOnDeath: 749
+  # TimeStayAfterDeath: 1800
+# }
 
-{ +Entity Name: Eden_NPCBountyPirates6, Ref: ZiraxMinigun
-  Faction: Warlord
-  MaxHealth: 1900
-  XpFactor: 15
-  RpFactor: 50
-  LootListOnDeath: 746
-  TimeStayAfterDeath: 1800
-}
-
-{ +Entity Name: Eden_NPCBountyPirates7, Ref: ZiraxMinigun
-  Faction: Warlord
-  MaxHealth: 1900
-  XpFactor: 15
-  RpFactor: 50
-  LootListOnDeath: 747
-  TimeStayAfterDeath: 1800
-}
-
-{ +Entity Name: Eden_NPCBountyPirates8, Ref: ZiraxMinigun
-  Faction: Warlord
-  MaxHealth: 1900
-  XpFactor: 15
-  RpFactor: 50
-  LootListOnDeath: 748
-  TimeStayAfterDeath: 1800
-}
-
-{ +Entity Name: Eden_NPCBountyPirates9, Ref: ZiraxMinigun
-  Faction: Warlord
-  MaxHealth: 1900
-  XpFactor: 15
-  RpFactor: 50
-  LootListOnDeath: 749
-  TimeStayAfterDeath: 1800
-}
-
-{ +Entity Name: Eden_NPCBountyPirates10, Ref: ZiraxMinigun
-  Faction: Warlord
-  MaxHealth: 1900
-  XpFactor: 15
-  RpFactor: 50
-  LootListOnDeath: 750
-  TimeStayAfterDeath: 1800
-}
+# { +Entity Name: Eden_NPCBountyPirates10, Ref: ZiraxMinigun
+  # Faction: Warlord
+  # MaxHealth: 1900
+  # XpFactor: 15
+  # RpFactor: 50
+  # LootListOnDeath: 750
+  # TimeStayAfterDeath: 1800
+# }
 
 
 
@@ -17470,18 +17749,96 @@ distance, he will get 0, at 0 distance, he will get the FearFromEnemy value per 
 
 
 
-# { +Entity Name: Eden_AsteroidFieldXL_TestRendering, Ref: Eden_NebulaTemplate
-  # Prefab: @eden_blockmodels/Eden_AsteroidFieldXL_TestRendering
-# }
+{ +Entity Name: Eden_TestNPC, Ref: ZiraxMinigun
+  Mesh: Enemies/Zirax/ZiraxBluePrefab
+  MeshDead: Enemies/Zirax/ZiraxBlueDeadPrefab
+  HeadTransform: Bip01_Head
+  
+  Prefab: AlienHumanoid
 
-# { +Entity Name: Eden_AsteroidFieldXL_TestRendering2, Ref: Eden_NebulaTemplate
-  # Prefab: @eden_blockmodels/Eden_AsteroidFieldXL_TestRendering2
-# }
+  /* Determines particle effect  */
+  SurfaceCategory: human
 
-# { +Entity Name: Eden_AsteroidFieldXL_TestRendering3, Ref: Eden_NebulaTemplate
-  # Prefab: @eden_blockmodels/Eden_AsteroidFieldXL_TestRendering3
-# }
+  /* General entity properties */
+  ViewAngle: 180
+  MaxHealth: 500
+  XpFactor: 3
+  RightHandJointName: Bip01_R_Hand
+  # ItemsOnEnterGame: ZiraxMinigunWeapon
+  ItemsOnEnterGame: Eden_TestWeaponZirax
+  RotateToGround: false
+  RotateSpeed: 720
+  RotateSpeedMovement: 220
+  Material: HumanSoft
 
-# { +Entity Name: Eden_AsteroidFieldXL_TestRendering4, Ref: Eden_NebulaTemplate
-  # Prefab: @eden_blockmodels/Eden_AsteroidFieldXL_TestRendering4
+  /* Sound settings */
+  SfxRandomTime: 50.0
+  SfxRandom: Enemies/Zirax/Zirax_SfxRandom
+  SfxAlertTime: 50.0
+  SfxAlert: Enemies/Zirax/Zirax_SfxRandom
+  SfxHurt:  Enemies/Zirax/Zirax_SfxHurt
+  SfxDeath: Enemies/Zirax/Zirax_SfxDeath
+
+  LootListOnDeath: 100
+  FadingEnabled: false              # disabled otherwise problems with switching to DeadMesh
+
+  JumpHeight: 0.75
+  StepHeight: 0.25
+
+  UpdateClusterInfo: true       
+  AllowUserInstantiate: true
+  AllowInSpawners: true
+  
+  { Child MainBehavior
+	BehaviorName: Behaviors/HiLevelTrees/ZiraxTroopCommands
+  }
+  
+
+  { Child VariableOverride
+    SpeedCalm: 0.25
+    SpeedAlerted: 1.2
+	SpeedAttack: 1.25
+  }
+  
+  { Child Hints
+	AttackApproachTarget: 40
+	AttackOptimalDistance: 40
+	SearchAdvanceTime: 2.0
+	SearchWaitTime: 6
+	SearchRandomDistanceMult: 2.75
+	FireWeaponBlendInTime: 0.5
+	FireWeaponDurationMultiplier: 3.5
+  }
+	
+  {	Child VisionSensor
+	VisibleDistance: 130
+	ViewAngle: 110
+	VisibleTypes: "Player,HV,SV,CV,BA,PlayerBike,PlayerDrone,NPCFighter,EnemyDrone"
+  }    
+  
+  {	Child TargetSensor
+    AttackableTypes: "Player,HV,SV,CV,BA,PlayerBike,PlayerDrone,NPCFighter,EnemyDrone,Animal"
+  }
+  
+  { Child StuckSensor
+	Use: 0
+  }
+  
+  {	Child AlertSensor
+	AlertLevel1: 10, param1: 0
+	AlertLevel2: 40, param1: 2
+	AlertLevel3: 60, param1: 50
+	AlertLevelDrop:5 /* slow alert drop */
+	AlertAddFromVisionMinNoMovement:10 /* no alert when not moving */
+	AlertAddFromVisionMovement:200
+	AlertVisionMaxSpeed:2
+	AlertAddFromAutoAlert:30
+	MinDistanceToAutoAlert:20
+	NoiseMaxDistance:130
+	NoiseAlertMultiplier:1.5
+  }       
+}
+
+# { +Entity Name: Eden_TestNPC2, Ref: Eden_TestNPC
+  # ItemsOnEnterGame: Eden_TestWeaponZirax2
 # }

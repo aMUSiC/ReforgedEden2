@@ -276,329 +276,329 @@
 # Barrel Upgrades - Common
 { Token Id: 20, Name: [c][3C00FF]Short Heavy Barrel[/c]
   CustomIcon: WeaponKitA
-  Description: A high-density alloy barrel compatible with most conventional Pistols that improves recoil but increases weight.\n[c][00FF00]Recoil -20%[-][/c]\n[c][FF0000]Accuracy -20%[-][/c]\n[c][FFBB00]Compatible with most Pistols and SMG[-][/c]
-  MarketPrice: 10000, display: true
+  Description: A high-density alloy barrel compatible with most conventional Pistols that improves recoil.\n[c][00FF00]Recoil -10%[-][/c]\n[c][FFBB00]Compatible with most Pistols and SMG[-][/c]
+  MarketPrice: 5000, display: true
 }
 { Token Id: 21, Name: [c][3C00FF]Medium Heavy Barrel[/c]
   CustomIcon: WeaponKitA
-  Description: A high-density alloy barrel compatible with most conventional Assault Rifles and Shotguns that improves recoil but increases weight.\n[c][00FF00]Recoil -20%[-][/c]\n[c][FF0000]Accuracy -20%[-][/c]\n[c][FFBB00]Compatible with most Assault Rifles and Shotguns[-][/c]
-  MarketPrice: 10000, display: true
+  Description: A high-density alloy barrel compatible with most conventional Assault Rifles and Shotguns that improves recoil.\n[c][00FF00]Recoil -10%[-][/c]\n[c][FFBB00]Compatible with most Assault Rifles and Shotguns[-][/c]
+  MarketPrice: 5000, display: true
 }
 { Token Id: 22, Name: [c][3C00FF]Long Heavy Barrel[/c]
   CustomIcon: WeaponKitA
-  Description: A high-density alloy barrel compatible with most conventional long-barreled firearms that improves recoil but increases weight.\n[c][00FF00]Recoil -20%[-][/c]\n[c][FF0000]Accuracy -20%[-][/c]\n[c][FFBB00]Compatible with most Sniper Rifles and Miniguns[-][/c]
-  MarketPrice: 10000, display: true
+  Description: A high-density alloy barrel compatible with most conventional long-barreled firearms that improves recoil.\n[c][00FF00]Recoil -10%[-][/c]\n[c][FFBB00]Compatible with most Sniper Rifles and Miniguns[-][/c]
+  MarketPrice: 5000, display: true
 }
 # Barrel Upgrades - Rare
 { Token Id: 23, Name: [c][11D100]Short Ultralight Barrel[/c]
   CustomIcon: WeaponKitB
-  Description: A lightweight alloy barrel compatible with most conventional Pistols thats easy to handle but lacks the mass necessary to counteract recoil.\n[c][00FF00]Accuracy +20%[-][/c]\n[c][FF0000]Recoil +20%[-][/c]\n[c][FFBB00]Compatible with most Pistols and SMG[-][/c]
-  MarketPrice: 15000, display: true
+  Description: A lightweight alloy barrel compatible with most conventional Pistols that's easier to handle than the default barrel.\n[c][00FF00]Accuracy +10%[-][/c]\n[c][FFBB00]Compatible with most Pistols and SMG[-][/c]
+  MarketPrice: 10000, display: true
 }
 { Token Id: 24, Name: [c][11D100]Medium Ultralight Barrel[/c]
   CustomIcon: WeaponKitB
-  Description: A lightweight alloy barrel compatible with most conventional Assault Rifles and Shotguns thats easy to handle but lacks the mass necessary to counteract recoil.\n[c][00FF00]Accuracy +20%[-][/c]\n[c][FF0000]Recoil +20%[-][/c]\n[c][FFBB00]Compatible with most Assault Rifles and Shotguns[-][/c]
-  MarketPrice: 15000, display: true
+  Description: A lightweight alloy barrel compatible with most conventional Assault Rifles and Shotguns that's easier to handle than the default barrel.\n[c][00FF00]Accuracy +10%[-][/c]\n[c][FFBB00]Compatible with most Assault Rifles and Shotguns[-][/c]
+  MarketPrice: 10000, display: true
 }
 { Token Id: 25, Name: [c][11D100]Long Ultralight Barrel[/c]
   CustomIcon: WeaponKitB
-  Description: A lightweight alloy barrel compatible with most conventional Sniper Rifles thats easy to handle but lacks the mass necessary to counteract recoil.\n[c][00FF00]Accuracy +20%[-][/c]\n[c][FF0000]Recoil +20%[-][/c]\n[c][FFBB00]Compatible with most Sniper Rifles and Miniguns[-][/c]
-  MarketPrice: 15000, display: true
+  Description: A lightweight alloy barrel compatible with most conventional Sniper Rifles thats easier to handle than the default barrel.\n[c][00FF00]Accuracy +10%[-][/c]\n[c][FFBB00]Compatible with most Sniper Rifles and Miniguns[-][/c]
+  MarketPrice: 10000, display: true
 }
 # Barrel Upgrades - Ultra
 { Token Id: 26, Name: [c][FF0000]Short High-Velocity Barrel[/c]
   CustomIcon: WeaponKitC
-  Description: An exotic alloy barrel compatible with most conventional Pistols that improves damage but increases recoil.\n[c][00FF00]Damage +20%[-][/c]\n[c][FF0000]Recoil +20%[-][/c]\n[c][FFBB00]Compatible with most Pistols and SMG[-][/c]
-  MarketPrice: 22500, display: true
+  Description: An exotic alloy barrel compatible with most conventional Pistols that improves damage but increases recoil.\n[c][00FF00]Damage +10%[-][/c]\n[c][FF0000]Recoil +5%[-][/c]\n[c][FFBB00]Compatible with most Pistols and SMG[-][/c]
+  MarketPrice: 20000, display: true
 }
 { Token Id: 27, Name: [c][FF0000]Medium High-Velocity Barrel[/c]
   CustomIcon: WeaponKitC
-  Description: An exotic alloy barrel compatible with most conventional Assault Rifles and Shotguns that improve damage but increases recoil.\n[c][00FF00]Damage +20%[-][/c]\n[c][FF0000]Recoil +20%[-][/c]\n[c][FFBB00]Compatible with most Assault Rifles and Shotguns[-][/c]
+  Description: An exotic alloy barrel compatible with most conventional Assault Rifles and Shotguns that improve damage but increases recoil.\n[c][00FF00]Damage +10%[-][/c]\n[c][FF0000]Recoil +5%[-][/c]\n[c][FFBB00]Compatible with most Assault Rifles and Shotguns[-][/c]
   MarketPrice: 22500, display: true
 }
 { Token Id: 28, Name: [c][FF0000]Long High-Velocity Barrel[/c]
   CustomIcon: WeaponKitC
-  Description: An exotic alloy barrel compatible with most conventional Sniper Rifles that improves damage but increases recoil.\n[c][00FF00]Damage +20%[-][/c]\n[c][FF0000]Recoil +20%[-][/c]\n[c][FFBB00]Compatible with most Sniper Rifles and Miniguns[-][/c]
-  MarketPrice: 22500, display: true
+  Description: An exotic alloy barrel compatible with most conventional Sniper Rifles that improves damage but increases recoil.\n[c][00FF00]Damage +10%[-][/c]\n[c][FF0000]Recoil +5%[-][/c]\n[c][FFBB00]Compatible with most Sniper Rifles and Miniguns[-][/c]
+  MarketPrice: 20000, display: true
 }
 # Laser Barrel Upgrades - Rare
 { Token Id: 29, Name: [c][11D100]Cascade Laser Array[/c]
   CustomIcon: WeaponKitB
-  Description: A barrel attachment for most laser weapons that produces a coherent laser beam using multiple emitters firing in synchroncity. Increases damage but due to overheating it increases reload time significantly.\n[c][00FF00]Damage +20%[-][/c]\n[c][FF0000]Reload -20%[-][/c]\n[c][FFBB00]Compatible with most Laser Weapons[-][/c]
-  MarketPrice: 15000, display: true
+  Description: A barrel attachment for most laser weapons that produces a coherent laser beam using multiple emitters firing in synchronicity. Increases damage but due to overheating it increases reload time.\n[c][00FF00]Damage +10%[-][/c]\n[c][FF0000]Reload Speed -10%[-][/c]\n[c][FFBB00]Compatible with most Laser Weapons[-][/c]
+  MarketPrice: 10000, display: true
 }
 # Laser Barrel Upgrades - Ultra
 { Token Id: 30, Name: [c][FF0000]Collimated Laser Array[/c]
   CustomIcon: WeaponKitC
   Description: A barrel attachment for most laser weapons that utilizes a Zascosium-doped lens to produce a condensed beam. Increases damage but produces recoil from the rapid expansion of gases in front of the muzzle.\n[c][00FF00]Damage +20%[-][/c]\n[c][FF0000]Recoil Up[-][/c]\n[c][FFBB00]Compatible with most Laser Weapons[-][/c]
-  MarketPrice: 22500, display: true
+  MarketPrice: 20000, display: true
 }
 # Plasma/Rocket Barrel Upgrades - Rare
 { Token Id: 31, Name: [c][11D100]Scram Rail[/c]
   CustomIcon: WeaponKitB
-  Description: A barrel attachment for some heavy weapons that utilizes electromagnetic rails to propel projectiles along the barrel faster improving reload speed by reducing heat build-up at the cost of heavier recoil.\n[c][00FF00]Reload +15%[-][/c]\n[c][FF0000]Recoil +25%[-][/c]\n[c][FFBB00]Compatible with most Heavy Weapons[-][/c]
-  MarketPrice: 15000, display: true
+  Description: A barrel attachment for some heavy weapons that utilizes electromagnetic rails to propel projectiles along the barrel faster improving reload speed by reducing heat build-up at the cost of heavier recoil.\n[c][00FF00]Reload +10%[-][/c]\n[c][FF0000]Recoil +10%[-][/c]\n[c][FFBB00]Compatible with most Heavy Weapons[-][/c]
+  MarketPrice: 10000, display: true
 }
 # Plasma/Rocket Barrel Upgrades - Ultra
 { Token Id: 32, Name: [c][FF0000]Hyper Rail[/c]
   CustomIcon: WeaponKitC
-  Description: A barrel attachment for some heavy weapons that utilizes superconducting rails to propel projectiles along the barrel at supersonic speeds smoothing recoil but stresses the auto-loader.\n[c][00FF00]Recoil -20%[-][/c]\n[c][FF0000]Reload -20%[-][/c]\n[c][FFBB00]Rocket Launchers and Plasma Cannons Only[-][/c]
-  MarketPrice: 22500, display: true
+  Description: A barrel attachment for some heavy weapons that utilizes superconducting rails to propel projectiles along the barrel at supersonic speeds smoothing recoil but stresses the auto-loader.\n[c][00FF00]Recoil -20%[-][/c]\n[c][FF0000]Reload Speed -10%[-][/c]\n[c][FFBB00]Rocket Launchers and Plasma Cannons Only[-][/c]
+  MarketPrice: 20000, display: true
 }
 #{ Token Id: 69, Name: [c][FF0000]Finned Heavy Barrel[/c]
 #  CustomIcon: WeaponKitC
 #  Description: A lightweight barrel replacement for plasma and rocket weapons that uses aluminium heat sinks to disperse barrel heat between shots.\n[c][00FF00]Reload +20%[-][/c]\n[c][FF0000]Recoil +20%[-][/c]\n[c][FFBB00]Compatible with most Rocket Launchers and Plasma Cannons[-][/c]
-#  MarketPrice: 22500, display: true
+#  MarketPrice: 20000, display: true
 #}
 # Crossbow Upgrades
 { Token Id: 33, Name: [c][3C00FF]Polymer Crossbow Limb[/c]
   CustomIcon: WeaponKitA
-  Description: An easy-draw synthetic polymer composite crossbow limb used on some novelty hunting crossbows and occasionally sold or traded to Tal'on hunters.\n[c][00FF00]Reload +30%[-][/c]\n[c][FFBB00]Crossbow Only[-][/c]
-  MarketPrice: 10000, display: true
+  Description: An easy-draw synthetic polymer composite crossbow limb used on some novelty hunting crossbows and occasionally sold or traded to Tal'on hunters.\n[c][00FF00]Reload Speed +30%[-][/c]\n[c][FFBB00]Crossbow Only[-][/c]
+  MarketPrice: 5000, display: true
 }
 { Token Id: 34, Name: [c][3C00FF]Carbon Fiber Crossbow Limb[/c]
   CustomIcon: WeaponKitA
-  Description: A high-performance carbon fiber crossbow limb used on some novelty hunting crossbows and occasionally sold or traded to Tal'on hunters.\n[c][00FF00]Damage +15%\nReload +15%[-][/c]\n[c][FFBB00]Crossbow Only[-][/c]
-  MarketPrice: 10000, display: true
+  Description: A high-performance carbon fiber crossbow limb used on some novelty hunting crossbows and occasionally sold or traded to Tal'on hunters.\n[c][00FF00]Damage +15%\nReload Speed +15%[-][/c]\n[c][FFBB00]Crossbow Only[-][/c]
+  MarketPrice: 5000, display: true
 }
 { Token Id: 35, Name: [c][11D100]Alloy Crossbow Limb[/c]
   CustomIcon: WeaponKitB
-  Description: A high-powered exotic alloy crossbow limb used on some big-game hunting crossbows and occasionally sold or traded to Tal'on hunters.\n[c][00FF00]Damage +50%[-][/c]\n[c][FF0000]Reload -50%[-][/c]\n[c][FFBB00]Crossbow Only[-][/c]
-  MarketPrice: 15000, display: true
+  Description: A high-powered exotic alloy crossbow limb used on some big-game hunting crossbows and occasionally sold or traded to Tal'on hunters.\n[c][00FF00]Damage +50%[-][/c]\n[c][FF0000]Reload Speed -25%[-][/c]\n[c][FFBB00]Crossbow Only[-][/c]
+  MarketPrice: 10000, display: true
 }
 # Grip/Stock Upgrades - Common
 { Token Id: 36, Name: [c][3C00FF]Polymer Grip[/c]
   CustomIcon: WeaponKitA
-  Description: A lightweight pistol grip compatible with most conventional firearms that cuts down on the weapon's mass making it easier to aim but slightly harder to control the recoil.\n[c][00FF00]Accuracy +15%[-][/c]\n[c][FF0000]Recoil +15%[-][/c]\n[c][FFBB00]Compatible with most Firearms[-][/c]
-  MarketPrice: 10000, display: true
+  Description: A lightweight pistol grip compatible with most conventional firearms that cuts down on the weapon's mass making it easier to aim but slightly harder to control the recoil.\n[c][00FF00]Accuracy +10%[-][/c]\n[c][FF0000]Recoil +5%[-][/c]\n[c][FFBB00]Compatible with most Firearms[-][/c]
+  MarketPrice: 5000, display: true
 }
 { Token Id: 37, Name: [c][3C00FF]Weighted Grip[/c]
   CustomIcon: WeaponKitA
-  Description: A dense Sathium grip compatible with most smaller conventional firearms that increases mass making it easier to control recoil but makes it heavier.\n[c][00FF00]Recoil -15%[-][/c]\n[c][FF0000]Accuracy -15%[-][/c]\n[c][FFBB00]Compatible with most Firearms[-][/c]
-  MarketPrice: 10000, display: true
+  Description: A dense Sathium grip compatible with most smaller conventional firearms that increases mass making it easier to control recoil but makes it heavier.\n[c][00FF00]Recoil -10%[-][/c]\n[c][FF0000]Accuracy -5%[-][/c]\n[c][FFBB00]Compatible with most Firearms[-][/c]
+  MarketPrice: 5000, display: true
 }
 { Token Id: 38, Name: [c][3C00FF]Powertool Grip[/c]
   CustomIcon: WeaponKitA
-  Description: A civilian tool grip typically used on industrial tools that need a constant supply of energy or fuel. Due to its civilian design it's not practical on most weapons though does make it easier to reload.\n[c][00FF00]Reload +25%[-][/c]\n[c][FF0000]Accuracy -20%\nRecoil +20%[-][/c]\n[c][FFBB00]Compatible with most pistols and Tools[-][/c]
-  MarketPrice: 10000, display: true
+  Description: A civilian tool grip typically used on industrial tools that need a constant supply of energy or fuel. Due to its civilian design it's not practical on most weapons though does make it easier to reload.\n[c][00FF00]Reload Speed +20%[-][/c]\n[c][FF0000]Accuracy -10%\nRecoil +10%[-][/c]\n[c][FFBB00]Compatible with most pistols and Tools[-][/c]
+  MarketPrice: 5000, display: true
 }
 { Token Id: 39, Name: [c][3C00FF]Wooden Stock[/c]
   CustomIcon: WeaponKitA
-  Description: Heavier than carbon or polymer... certainly classier. While nothing special it IS well balanced.\n[c][00FF00]Recoil -10%[-][/c]\n[c][FFBB00]Compatible with most Rifles and Shotguns[-][/c]
-  MarketPrice: 10000, display: true
+  Description: Heavier than carbon or polymer... certainly classier. While nothing special it IS well balanced.\n[c][00FF00]Recoil -5%[-][/c]\n[c][FFBB00]Compatible with most Rifles and Shotguns[-][/c]
+  MarketPrice: 7500, display: true
 }
 # Grip/Stock Upgrades - Rare
 { Token Id: 40, Name: [c][11D100]Folding Stock[/c]
   CustomIcon: WeaponKitB
-  Description: A lightweight alloy stock compatible with most rifles and shotguns that folds along the side of the receiver and barrel. A design flaw results in the stock obscuring the magazine release when folded.\n[c][00FF00]Accuracy +15%\nRecoil -10%[-][/c]\n[c][FF0000]Reload -15%[-][/c]\n[c][FFBB00]Compatible with most Rifles and Shotguns[-][/c]
-  MarketPrice: 15000, display: true
+  Description: A lightweight alloy stock compatible with most rifles and shotguns that folds along the side of the receiver and barrel. A design flaw results in the stock obscuring the magazine release when folded.\n[c][00FF00]Accuracy +10%\nRecoil -5%[-][/c]\n[c][FF0000]Reload Speed -10%[-][/c]\n[c][FFBB00]Compatible with most Rifles and Shotguns[-][/c]
+  MarketPrice: 10000, display: true
 }
 { Token Id: 41, Name: [c][11D100]Short Stock[/c]
   CustomIcon: WeaponKitB
-  Description: A shortened stock typically used to improve handling in close quarters.\n[c][00FF00]Accuracy +10%\nRecoil -5%[-][/c]\n[c][FFBB00]Compatible with most Rifles and Shotguns[-][/c]
-  MarketPrice: 15000, display: true
+  Description: A shortened stock typically used to improve handling in close quarters.\n[c][00FF00]Recoil -10%[-][/c]\n[c][FFBB00]Compatible with most Rifles and Shotguns[-][/c]
+  MarketPrice: 10000, display: true
 }
 { Token Id: 42, Name: [c][11D100]Full Stock[/c]
   CustomIcon: WeaponKitB
-  Description: A full-length rifle stock designed for sniping rather than close quarters. Improves accuracy and damage slightly when using a scope but takes longer to reload.\n[c][00FF00]Damage +10%\nAccuracy +10%[-][/c]\n[c][FF0000]Reload -20%[-][/c]\n[c][FFBB00]Compatible with most Rifles and Shotguns[-][/c]
-  MarketPrice: 15000, display: true
+  Description: A full-length rifle stock designed for sniping rather than close quarters. Improves accuracy and damage slightly when using a scope but takes longer to reload.\n[c][00FF00]Damage +10%\nAccuracy +10%[-][/c]\n[c][FF0000]Reload Speed -10%[-][/c]\n[c][FFBB00]Compatible with most Rifles and Shotguns[-][/c]
+  MarketPrice: 10000, display: true
 }
 { Token Id: 43, Name: [c][11D100]Tactical Pistol Grip[/c]
   CustomIcon: WeaponKitB
-  Description: A specialized pistol grip for close quarters combat designed for comfortable use and easy reloading.\n[c][00FF00]Recoil -15%\nReload +15%[-][/c]\n[c][FFBB00]Compatible with most Pistols and SMG[-][/c]
-  MarketPrice: 15000, display: true
+  Description: A specialized pistol grip for close quarters combat designed for comfortable use and easy reloading.\n[c][00FF00]Recoil -15%\nReload Speed +15%[-][/c]\n[c][FFBB00]Compatible with most Pistols and SMG[-][/c]
+  MarketPrice: 10000, display: true
 }
 { Token Id: 44, Name: [c][11D100]Capacitor Grip[/c]
   CustomIcon: WeaponKitB
-  Description: A complex pistol grip for energy weapons that provides redundant energy storage.\n[c][00FF00]Damage +10%[-][/c]\n[c][FF0000]Reload -10%[-][/c]\n[c][FFBB00]Compatible with most Laser Weapons[-][/c]
-  MarketPrice: 15000, display: true
+  Description: A complex pistol grip for energy weapons that provides redundant energy storage.\n[c][00FF00]Damage +10%[-][/c]\n[c][FF0000]Reload Speed -5%[-][/c]\n[c][FFBB00]Compatible with most Laser Weapons[-][/c]
+  MarketPrice: 10000, display: true
 }
 # Grip/Stock Upgrades - Ultra
 { Token Id: 45, Name: [c][FF0000]Sharpshooter's Pistol Grip[/c]
   CustomIcon: WeaponKitC
   Description: A mix of lightweight alloys and synthetic polymers. This specialized grip is designed for competition shooting.\n[c][00FF00]Recoil -20%\nAccuracy +20%[-][/c]\n[c][FFBB00]Compatible with most Pistols and SMG[-][/c]
-  MarketPrice: 22500, display: true
+  MarketPrice: 20000, display: true
 }
 { Token Id: 46, Name: [c][FF0000]Tactical Stock[/c]
   CustomIcon: WeaponKitC
-  Description: An adjustable polymer stock with pouches for additional ammunition for quicker reloading. Provides minor recoil absorption and improves reload speed.\n[c][00FF00]Recoil -20%\nReload +15%[-][/c]\n[c][FFBB00]Compatible with most Rifles and Shotguns[-][/c]
-  MarketPrice: 22500, display: true
+  Description: An adjustable polymer stock with pouches for additional ammunition for quicker reloading. Provides minor recoil absorption and improves reload speed.\n[c][00FF00]Recoil -20%\nReload Speed +15%[-][/c]\n[c][FFBB00]Compatible with most Rifles and Shotguns[-][/c]
+  MarketPrice: 20000, display: true
 }
 { Token Id: 47, Name: [c][FF0000]Marksman's Stock[/c]
   CustomIcon: WeaponKitC
-  Description: A dedicated long-range stock complete with adjustable buttplate and cheek riser. Provides superior performance but is difficult to reload through.\n[c][00FF00]Damage +15%\nAccuracy +10%\nRecoil -10%[-][/c]\n[c][FF0000]Reload -30%[-][/c]\n[c][FFBB00]Compatible with most Rifles[-][/c]
-  MarketPrice: 22500, display: true
+  Description: A dedicated long-range stock complete with adjustable buttplate and cheek riser. Provides superior performance but is difficult to reload through.\n[c][00FF00]Damage +10%\nAccuracy +10%\nRecoil -10%[-][/c]\n[c][FF0000]Reload Speed -10%[-][/c]\n[c][FFBB00]Compatible with most Rifles[-][/c]
+  MarketPrice: 20000, display: true
 }
 { Token Id: 48, Name: [c][FF0000]Recoil-Compensating Stock[/c]
   CustomIcon: WeaponKitC
-  Description: A complex stock that uses pneumatic buffers to reduce recoil providing a comfortable shooting experience no matter the caliber.\n[c][00FF00]Recoil -40%[-][/c]\n[c][FFBB00]Compatible with most Rifles and Shotguns[-][/c]
-  MarketPrice: 22500, display: true
+  Description: A complex stock that uses pneumatic buffers to reduce recoil providing a comfortable shooting experience no matter the caliber.\n[c][00FF00]Recoil -30%[-][/c]\n[c][FFBB00]Compatible with most Rifles and Shotguns[-][/c]
+  MarketPrice: 20000, display: true
 }
 { Token Id: 49, Name: [c][FF0000]Recoil-Compensating Grip[/c]
   CustomIcon: WeaponKitC
-  Description: A dynamic grip that uses pneumatic buffers to reduce the kick from high-caliber pistols and heavy weapons.\n[c][00FF00]Recoil -40%[-][/c]\n[c][FFBB00]Compatible with most Pistols SMGs and Miniguns[-][/c]
-  MarketPrice: 22500, display: true
+  Description: A dynamic grip that uses pneumatic buffers to reduce the kick from high-caliber pistols and heavy weapons.\n[c][00FF00]Recoil -30%[-][/c]\n[c][FFBB00]Compatible with most Pistols SMGs and Miniguns[-][/c]
+  MarketPrice: 20000, display: true
 }
 { Token Id: 50, Name: [c][FF0000]Superconductor Stock[/c]
   CustomIcon: WeaponKitC
-  Description: An insulated stock with a heavy superconductor array that supplies power from an energy weapon's power cell to the firing mechanism faster. Increases damage but reduces accuracy due to the added weight.\n[c][00FF00]Damage +20%[-][/c]\n[c][FF0000]Accuracy -30%[-][/c]\n[c][FFBB00]Compatible with Laser Rifles and some Plasma Weaponry[-][/c]
-  MarketPrice: 22500, display: true
+  Description: An insulated stock with a heavy superconductor array that supplies power from an energy weapon's power cell to the firing mechanism faster. Increases damage but reduces accuracy due to the added weight.\n[c][00FF00]Damage +20%[-][/c]\n[c][FF0000]Accuracy -20%[-][/c]\n[c][FFBB00]Compatible with Laser Rifles and some Plasma Weaponry[-][/c]
+  MarketPrice: 20000, display: true
 }
 { Token Id: 70, Name: [c][FF0000]Shielded Dual Grip[/c]
   CustomIcon: WeaponKitC
-  Description: A heavy weapons grip with an added blast shield to protect the wielder from explosive and radioactive backblast.\n[c][00FF00]Recoil -40%[-][/c]\n[c][FF0000]Reload -20%[-][/c]\n[c][FFBB00]Compatible with most Heavy Weapons[-][/c]
-  MarketPrice: 22500, display: true
+  Description: A heavy weapons grip with an added blast shield to protect the wielder from explosive and radioactive backblast.\n[c][00FF00]Recoil -30%[-][/c]\n[c][FF0000]Reload Speed -10%[-][/c]\n[c][FFBB00]Compatible with most Heavy Weapons[-][/c]
+  MarketPrice: 20000, display: true
 }
 # Frame/Receiver Upgrades - Common
 { Token Id: 51, Name: [c][3C00FF]Light Pistol Receiver[/c]
   CustomIcon: WeaponKitA
-  Description: A low-cost polymer frame for small arms with low weight making it easier to aim but the low weight does nothing to blunt the force of recoil.\n[c][00FF00]Accuracy +20%[-][/c]\n[c][FF0000]Recoil +20%[-][/c]\n[c][FFBB00]Compatible with most Pistols and SMG[-][/c]
-  MarketPrice: 10000, display: true
+  Description: A low-cost polymer frame for small arms with low weight making it easier to aim but the low weight does nothing to blunt the force of recoil.\n[c][00FF00]Accuracy +10%[-][/c]\n[c][FF0000]Recoil +5%[-][/c]\n[c][FFBB00]Compatible with most Pistols and SMG[-][/c]
+  MarketPrice: 5000, display: true
 }
 { Token Id: 52, Name: [c][3C00FF]Light Rifle Receiver[/c]
   CustomIcon: WeaponKitA
-  Description: A low-cost polymer frame for rifles with low weight making it easier to aim but the low weight does nothing to blunt the force of recoil.\n[c][00FF00]Accuracy +20%[-][/c]\n[c][FF0000]Recoil +20%[-][/c]\n[c][FFBB00]Compatible with most Rifles and Laser Rifles[-][/c]
-  MarketPrice: 10000, display: true
+  Description: A low-cost polymer frame for rifles with low weight making it easier to aim but the low weight does nothing to blunt the force of recoil.\n[c][00FF00]Accuracy +10%[-][/c]\n[c][FF0000]Recoil +5%[-][/c]\n[c][FFBB00]Compatible with most Rifles and Laser Rifles[-][/c]
+  MarketPrice: 5000, display: true
 }
 { Token Id: 53, Name: [c][3C00FF]Light Shotgun Receiver[/c]
   CustomIcon: WeaponKitA
-  Description: A low-cost polymer frame for shotguns with low weight making it easier to aim but the low weight does nothing to blunt the force of recoil.\n[c][00FF00]Accuracy +20%[-][/c]\n[c][FF0000]Recoil +20%[-][/c]\n[c][FFBB00]Compatible with most Shotguns[-][/c]
-  MarketPrice: 10000, display: true
+  Description: A low-cost polymer frame for shotguns with low weight making it easier to aim but the low weight does nothing to blunt the force of recoil.\n[c][00FF00]Accuracy +10%[-][/c]\n[c][FF0000]Recoil +5%[-][/c]\n[c][FFBB00]Compatible with most Shotguns[-][/c]
+  MarketPrice: 5000, display: true
 }
 { Token Id: 54, Name: [c][3C00FF]Light Cannon Frame[/c]
   CustomIcon: WeaponKitA
-  Description: A lightweight Aluminium frame for Heavy Weapons with low weight making it easier to aim but the low weight does nothing to blunt the force of recoil.\n[c][00FF00]Accuracy +20%[-][/c]\n[c][FF0000]Recoil +20%[-][/c]\n[c][FFBB00]Compatible with most Heavy Weapons[-][/c]
-  MarketPrice: 10000, display: true
+  Description: A lightweight Aluminium frame for Heavy Weapons with low weight making it easier to aim but the low weight does nothing to blunt the force of recoil.\n[c][00FF00]Accuracy +10%[-][/c]\n[c][FF0000]Recoil +5%[-][/c]\n[c][FFBB00]Compatible with most Heavy Weapons[-][/c]
+  MarketPrice: 5000, display: true
 }
 # Frame/Receiver Upgrades - Rare
 { Token Id: 55, Name: [c][11D100]Heavy Pistol Receiver[/c]
   CustomIcon: WeaponKitB
   Description: A denser receiver made from Sathium alloy that combats the force of recoil from large caliber handguns.\n[c][00FF00]Recoil -10%[-][/c]\n[c][FFBB00]Compatible with most Pistols and SMG[-][/c]
-  MarketPrice: 15000, display: true
+  MarketPrice: 10000, display: true
 }
 { Token Id: 56, Name: [c][11D100]Heavy Rifle Receiver[/c]
   CustomIcon: WeaponKitB
-  Description: A denser receiver made from Sathium alloy that combats the force of recoil from automatic fire but the additional weight makes it unwieldy.\n[c][00FF00]Recoil -15%[-][/c]\n[c][FF0000]Accuracy -10%[-][/c]\n[c][FFBB00]Compatible with most Rifles and Laser Rifles[-][/c]
-  MarketPrice: 15000, display: true
+  Description: A denser receiver made from Sathium alloy that combats the force of recoil from automatic fire.\n[c][00FF00]Recoil -10%[-][/c]\n[c][FFBB00]Compatible with most Rifles and Laser Rifles[-][/c]
+  MarketPrice: 10000, display: true
 }
 { Token Id: 57, Name: [c][11D100]Heavy Shotgun Receiver[/c]
   CustomIcon: WeaponKitB
-  Description: A denser receiver made from Sathium alloy that combats the impressive force of recoil from shotgun slugs but the additional weight makes it unwieldy.\n[c][00FF00]Recoil -15%[-][/c]\n[c][FF0000]Accuracy -10%[-][/c]\n[c][FFBB00]Compatible with most Shotguns[-][/c]
-  MarketPrice: 15000, display: true
+  Description: A denser receiver made from Sathium alloy that combats the impressive force of recoil from shotgun slugs.\n[c][00FF00]Recoil -10%[-][/c]\n[c][FFBB00]Compatible with most Shotguns[-][/c]
+  MarketPrice: 10000, display: true
 }
 { Token Id: 58, Name: [c][11D100]Heavy Cannon Frame[/c]
   CustomIcon: WeaponKitB
-  Description: A heavy frame made from Sathium alloy that makes automatic fire and high-recoil cannon shots more managable. Due to the extreme weight the weapon must be laid down to be reloaded.\n[c][00FF00]Recoil -20%[-][/c]\n[c][FF0000]Reload -20%[-][/c]\n[c][FFBB00]Compatible with most Heavy Weapons[-][/c]
-  MarketPrice: 15000, display: true
+  Description: A heavy frame made from Sathium alloy that makes automatic fire and high-recoil cannon shots more managable. Due to the extreme weight the weapon must be laid down to be reloaded.\n[c][00FF00]Recoil -20%[-][/c]\n[c][FF0000]Reload Speed -20%[-][/c]\n[c][FFBB00]Compatible with most Heavy Weapons[-][/c]
+  MarketPrice: 10000, display: true
 }
 { Token Id: 59, Name: [c][11D100]Heat Sink Frame[/c]
   CustomIcon: WeaponKitB
-  Description: An experimental energy frame for energy weapons that uses integrated heat sink cooling to prevent overheating from consecutive shots.\n[c][00FF00]Reload +15%[-][/c]\n[c][FF0000]Damage -5%[-][/c]\n[c][FFBB00]Compatible with most Energy Weapons[-][/c]
-  MarketPrice: 15000, display: true
+  Description: An experimental energy frame for energy weapons that uses integrated heat sink cooling to prevent overheating from consecutive shots.\n[c][00FF00]Reload Speed +15%[-][/c]\n[c][FFBB00]Compatible with most Energy Weapons[-][/c]
+  MarketPrice: 10000, display: true
 }
 { Token Id: 60, Name: [c][11D100]Overclocked Energy Frame[/c]
   CustomIcon: WeaponKitB
-  Description: An experimental energy frame for laser weapons that uses a thermocouple assembly to feed charge into the weapon's accumulators.\n[c][00FF00]Damage +10%[-][/c]\n[c][FF0000]Reload -20%[-][/c]\n[c][FFBB00]Compatible with most Laser Weapons[-][/c]
-  MarketPrice: 15000, display: true
+  Description: An experimental energy frame for laser weapons that uses a thermocouple assembly to feed charge into the weapon's accumulators.\n[c][00FF00]Damage +10%[-][/c]\n[c][FF0000]Reload Speed -10%[-][/c]\n[c][FFBB00]Compatible with most Laser Weapons[-][/c]
+  MarketPrice: 10000, display: true
 }
 # Frame/Receiver Upgrades - Ultra
 { Token Id: 61, Name: [c][FF0000]Electromagnetic Pistol Receiver[/c]
   CustomIcon: WeaponKitC
-  Description: Utilizes a magnetic hyper rail on either side of the barrel to achieve secondary acceleration that increases damage at the cost of increased recoil.\n[c][00FF00]Damage +20%[-][/c]\n[c][FF0000]Recoil +20%[-][/c]\n[c][FFBB00]Compatible with most Pistols and SMG[-][/c]
-  MarketPrice: 22500, display: true
+  Description: Utilizes a magnetic hyper rail on either side of the barrel to achieve secondary acceleration that increases damage at the cost of increased recoil.\n[c][00FF00]Damage +20%[-][/c]\n[c][FF0000]Recoil +10%[-][/c]\n[c][FFBB00]Compatible with most Pistols and SMG[-][/c]
+  MarketPrice: 20000, display: true
 }
 { Token Id: 62, Name: [c][FF0000]Calibrated Rifle Receiver[/c]
   CustomIcon: WeaponKitC
-  Description: A high-end frame for rifles that uses a floating bolt carrier to reduce recoil and drift while providing maximum pressure. Superior performance but sometimes causes the ammo feed to jam with the new configuration.\n[c][00FF00]Damage +10%\nAccuracy +10%\nRecoil -10%[-][/c]\n[c][FF0000]Reload -15%[-][/c]\n[c][FFBB00]Compatible with most Rifles[-][/c]
-  MarketPrice: 22500, display: true
+  Description: A high-end frame for rifles that uses a floating bolt carrier to reduce recoil and drift while providing maximum pressure. Superior performance but sometimes causes the ammo feed to jam with the new configuration.\n[c][00FF00]Damage +10%\nAccuracy +10%\nRecoil -10%[-][/c]\n[c][FF0000]Reload Speed -10%[-][/c]\n[c][FFBB00]Compatible with most Rifles[-][/c]
+  MarketPrice: 20000, display: true
 }
 { Token Id: 63, Name: [c][FF0000]Automatic Shotgun Receiver[/c]
   CustomIcon: WeaponKitC
-  Description: A military-specific shotgun receiver designed specifically for fast reloading in combat situations.\n[c][00FF00]Reload +20%[-][/c]\n[c][FFBB00]Compatible with most Shotguns[-][/c]
-  MarketPrice: 22500, display: true
+  Description: A military-specific shotgun receiver designed specifically for fast reloading in combat situations.\n[c][00FF00]Reload Speed +20%[-][/c]\n[c][FFBB00]Compatible with most Shotguns[-][/c]
+  MarketPrice: 20000, display: true
 }
 { Token Id: 64, Name: [c][FF0000]Gyro-Stabilized Frame[/c]
   CustomIcon: WeaponKitC
   Description: A prototype heavy weapon frame that attaches to the wielders armor to minimize recoil and assist in aiming.\n[c][00FF00]Accuracy +15%\nRecoil -15%[-][/c]\n[c][FFBB00]Compatible with most Heavy Weapons[-][/c]
-  MarketPrice: 22500, display: true
+  MarketPrice: 20000, display: true
 }
 { Token Id: 65, Name: [c][FF0000]Gamma-Wave Amplifier Frame[/c]
   CustomIcon: WeaponKitC
-  Description: A prototype energy frame for energy-based weaponry that collimates laser wavelengths into the gamma spectrum.\n[c][00FF00]Damage +20%[-][/c]\n[c][FF0000]Accuracy DOWN[-][/c]\n[c][FFBB00]Compatible with most Energy Weapons[-][/c]
-  MarketPrice: 22500, display: true
+  Description: A prototype energy frame for energy-based weaponry that collimates laser wavelengths into the gamma spectrum.\n[c][00FF00]Damage +20%[-][/c]\n[c][FF0000]Accuracy -20%[-][/c]\n[c][FFBB00]Compatible with most Energy Weapons[-][/c]
+  MarketPrice: 20000, display: true
 }
 { Token Id: 66, Name: [c][FF0000]Mk-00 Generator Frame[/c]
   CustomIcon: WeaponKitC
-  Description: No information exists on this piece of equipment. It appears to be a frame for laser weapons that uses external power cells to supply constant power to a weapon's accumulator.\n[c][00FF00]Reload +125%[-][/c]\n[c][FF0000]Damage -33%[-][/c]\n[c][FFBB00]Compatible with most Laser Weapons[-][/c]
-  MarketPrice: 22500, display: true
+  Description: No information exists on this piece of equipment. It appears to be a frame for laser weapons that uses external power cells to supply constant power to a weapon's accumulator.\n[c][00FF00]Reload Speed +125%[-][/c]\n[c][FF0000]Damage -20%[-][/c]\n[c][FFBB00]Compatible with most Laser Weapons[-][/c]
+  MarketPrice: 20000, display: true
 }
 # ======= Ammo Upgrades
 # Ultra Rare
 { Token Id: 67, Name: [c][FF0000]Gyro-Jet Attachment[/c]
   CustomIcon: WeaponKitC
   Description: An aftermarket attachment for Rocket Launchers that autocorrects the projectile for improved penetrative damage.\n[c][00FF00]Impact Damage +10%[-][/c]\n[c][FFBB00]Compatible with most 40mm Rockets[-][/c]
-  MarketPrice: 32500, display: true
+  MarketPrice: 30000, display: true
 }
 { Token Id: 68, Name: [c][FF0000]Phonon Maser Converter[/c]
   CustomIcon: WeaponKitC
   Description: An experimental attachment for the Plasma Cell Magazine that raises the number of supersonic oscillations to form a quantum heat ray on detonation. Converts a plasma cell's entire explosive damage into pure thermal impact damage.\n[c][00FF00]Impact Damage 100%[-][/c]\n[c][FF0000]Blast Damage 0%[-][/c]\n[c][FFBB00]Compatible with Plasma Cannon Magazines[-][/c]
-  MarketPrice: 32500, display: true
+  MarketPrice: 30000, display: true
 }
 { Token Id: 69, Name: [c][FF0000]Proximity Detonator[/c]
   CustomIcon: WeaponKitC
   Description: A sensor firmware update for Rockets that causes them to detonate prematurely with increased explosive damage. Increases Blast Damage but sacrifices penetration.\n[c][00FF00]Blast Damage +50%[-][/c]\n[c][FF0000]Impact Damage -75%[-][/c]\n[c][FFBB00]Compatible with most 40mm Rockets[-][/c]
-  MarketPrice: 32500, display: true
+  MarketPrice: 30000, display: true
 }
 { Token Id: 71, Name: [c][FF0000]Kinetic Penetrator[/c]
   CustomIcon: WeaponKitC
   Description: An ammunition refit for handheld rockets that replaces the fragmentation explosive head with a sathium-steel penetrator for increased kinetic damage. Increases impact damage but significantly reduces blast damage as only the fuel in the rocket will explode.\n[c][00FF00]Impact Damage +50%[-][/c]\n[c][FF0000]Blast Damage -50%[-][/c]\n[c][FFBB00]Compatible with most 40mm Rockets[-][/c]
-  MarketPrice: 32500, display: true
+  MarketPrice: 30000, display: true
 }
 # ======= Flamethrower/Tool Upgrades
 { Token Id: 72, Name: [c][11D100]High-Pressure Nozzle[/c]
   CustomIcon: WeaponKitB
   Description: An industrial-grade nozzle replacement for chemical sprayers used for hitting climbing weeds and vines.\n[c][00FF00]Impact Damage +50%[-][/c]\n[c][FFBB00]Compatible with Flamethrowers[-][/c]
-  MarketPrice: 15000, display: true
+  MarketPrice: 10000, display: true
 }
 { Token Id: 73, Name: [c][FF0000]Jet Nozzle[/c]
   CustomIcon: WeaponKitC
   Description: A high-pressure attachment for military flamethrowers that condenses the aerated fuel stream at a single target for a precise high-temperature burn.\n[c][00FF00]Impact Damage +300%[-][/c]\n[c][FF0000]Blast Damage -75%[-][/c]\n[c][FFBB00]Compatible with Flamethrowers[-][/c]
-  MarketPrice: 22500, display: true
+  MarketPrice: 20000, display: true
 }
 { Token Id: 74, Name: [c][11D100]Sprayer Nozzle[/c]
   CustomIcon: WeaponKitB
   Description: A low-pressure attachment for commercial chemical sprayers for spraying pesticides over a wider area with less force.\n[c][00FF00]Blast Damage +20%[-][/c]\n[c][FF0000]Impact Damage -100%[-][/c]\n[c][FFBB00]Compatible with Flamethrowers[-][/c]
-  MarketPrice: 15000, display: true
+  MarketPrice: 10000, display: true
 }
 { Token Id: 75, Name: [c][FF0000]Dynamic Nozzle[/c]
   CustomIcon: WeaponKitC
   Description: An adjustable attachment typically used on water cannons for riot control in prisons. It provides adjustable flow and strength using a second trigger on the forward grip.\n[c][00FF00]Blast Damage +25%[-][/c]\n[c][FFBB00]Compatible with Flamethrowers[-][/c]
-  MarketPrice: 22500, display: true
+  MarketPrice: 20000, display: true
 }
 { Token Id: 76, Name: [c][FF0000]Industrial Frame[/c]
   CustomIcon: WeaponKitC
   Description: A reinforced steel frame used on industrial tools subject to a lot of wear-and-tear that reduces warping from prolonged use.\n[c][00FF00]Reload Speed +25%[-][/c]\n[c][FFBB00]Compatible with most tools and flamethrowers[-][/c]
-  MarketPrice: 225000, display: true
+  MarketPrice: 200000, display: true
 }
 { Token Id: 77, Name: [c][11D100]Commercial Frame[/c]
   CustomIcon: WeaponKitB
   Description: A lightweight after-market frame for personal tools that eases the strain of reloading fluid tanks and powercells.\n[c][00FF00]Reload Speed +15%[-][/c]\n[c][FFBB00]Compatible with most tools and flamethrowers[-][/c]
-  MarketPrice: 15000, display: true
+  MarketPrice: 10000, display: true
 }
 { Token Id: 78, Name: [c][11D100]Titanium-Alloy Chain[/c]
   CustomIcon: WeaponKitB
   Description: A replacement chain for chainsaws comprised of a titanium alloy that's lighter weight and easier to reach higher RPM but prone to snagging.\n[c][00FF00]Damage +25%[-][/c]\n[c][FFBB00]Compatible with the Chainsaw[-][/c]
-  MarketPrice: 15000, display: true
+  MarketPrice: 10000, display: true
 }
 { Token Id: 79, Name: [c][FF0000]Sathium-Alloy Chain[/c]
   CustomIcon: WeaponKitC
   Description: A heavy chain replacement for chainsaws intended for sawing through metal bulkheads. While it wasn't able to surpass plasma cutters it proved an effective weapon in combat despite being a war crime.\n[c][00FF00]Damage +50%[-][/c]\n[c][FFBB00]Compatible with the Chainsaw[-][/c]
-  MarketPrice: 22500, display: true
+  MarketPrice: 20000, display: true
 }
 { Token Id: 80, Name: [c][FF0000]Phase-Shift Modulator[/c]
   CustomIcon: WeaponKitC
   Description: Induces phase-shift colloid across the surface of a metal surface protecting it from damage and increasing plasma conductivity.\n[c][00FF00]Unknown Effect[-][/c]\n[c][FFBB00]Unknown Use[-][/c]
-  MarketPrice: 32500, display: true
+  MarketPrice: 30000, display: true
 }
 # ==========================================================
 # ============= Trading Cards (weird, right?) ==============
@@ -709,9 +709,9 @@
   Description: A collectible Location trading card from the Empyrion Collection.\n[c][FFFFFF]A warm tropical ocean planet. Home to Tal'on exiles spread across raft towns and island villages covering the surface.[-][/c]
   MarketPrice: 400, display: true
 }
-{ Token Id: 141, Name: [c][0088FF]Trading Card[/c][-][b] - [c][AAFF00]Haginaa[/c][/b]
+{ Token Id: 141, Name: [c][0088FF]Trading Card[/c][-][b] - [c][AAFF00]Demyks[/c][/b]
   CustomIcon: TradingCard01
-  Description: A collectible Location trading card from the Empyrion Collection.\n[c][FFFFFF]Once the frontier of the Tallax Assembly. Haginaa was the first planet ever lost to The Legacy and still remains under their control. The active elements still resisting all attempts to cleanse them from the galaxy.[-][/c]
+  Description: A collectible Location trading card from the Empyrion Collection.\n[c][FFFFFF]Once the frontier of the Tallax Federation. Demyks was the first planet ever lost to The Legacy and still remains under their control. The active elements still resisting all attempts to cleanse them from the galaxy.[-][/c]
   MarketPrice: 5000, display: true
 }
 # ===== Structure Cards
@@ -946,6 +946,7 @@
   Description: A collectible Entity trading card from the Empyrion Collection.\n[c][FFFFFF]Common in deserts Sandworms travel in small packs where they filter their food from the shifting sands with their teeth. Watch out though. Those teeth are harder than steel and can puncture most light armors.[-][/c]
   MarketPrice: 100, display: true
 }
+
 
 
 # ======================================================================================================================================================================
@@ -1491,7 +1492,7 @@
 }
 
 # Syndicate Heavy Blaster
-{ Token Id: 6409, Name: "Schematic - [c][FFFFFF]Heavy Blaster Cannon[-][/c]"
+{ Token Id: 6409, Name: "Schematic - [c][FFFFFF]Medium Blaster Cannon[-][/c]"
   CustomIcon: Eden_BlasterCV_Recipe
   DropOnDeath: false
   Description: "Schematic category: [c][FFFF00]Pirate Technology[-][/c].\nCost: [c][00FFFF]100 Unlock Points[-][/c]\n\nSchematics can be turned in at Schematic Computers on UCH Research Vessels to unlock the listed crafting template or sold to traders."

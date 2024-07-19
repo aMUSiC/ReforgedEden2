@@ -486,7 +486,7 @@ POIs:
           Value: 0
 
     - Type: BA_Alien
-      GroupName: TSOPolarisRG
+      GroupName: R2PolarisSpaceTrade
       Faction: Polaris
       FactionTerritory: [Eden_PolarisTerritory]
       Mode: Survival

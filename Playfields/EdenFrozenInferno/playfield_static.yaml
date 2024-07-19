@@ -1460,7 +1460,7 @@ POIs:
 
 # =============================================== Faction Talon Main
 # ====================== Main Village. 50% chance. It's a harsh place.
-        - GroupName: TalonSnowMain
+        - GroupName: R2TalonSnowMain
           Faction: Talon
           Biome: [ Taiga, TaigaEdge, TaigaSnow, TaigaSnowEdge ]
           IsCommandCenter: True
@@ -1476,33 +1476,33 @@ POIs:
             - Key: RegenAfter
               Value: 4320
 
-        - GroupName: TalonSnow
+        - GroupName: R2TalonSnow
           Faction: Talon
           CountMinMax: [ 3, 5 ]
           DroneProb: 0
           DronesMinMax: [ 1, 1 ]
           ReserveCount: 0
           TroopTransport: False
-          SpawnPOINear: [TalonSnowMain]
+          SpawnPOINear: [R2TalonSnowMain]
           SpawnPOINearRange: [100, 200]
           Properties:
             - Key: RegenAfter
               Value: 720
 
-        - GroupName: TalonSnowFarm
+        - GroupName: R2TalonSnowFarm
           Faction: Talon
           CountMinMax: [ 3, 5 ]
           DroneProb: 0
           DronesMinMax: [ 1, 1 ]
           ReserveCount: 0
           TroopTransport: False
-          SpawnPOINear: [TalonSnowMain]
+          SpawnPOINear: [R2TalonSnowMain]
           SpawnPOINearRange: [150, 300]
           Properties:
             - Key: RegenAfter
               Value: 720
 
-        - GroupName: TalonDefenseSnow
+        - GroupName: R2TalonDefenseSnow
           Faction: Talon
           Territory: False
           CountMinMax: [ 3, 4 ]
@@ -1510,14 +1510,14 @@ POIs:
           DronesMinMax: [ 1, 1 ]
           ReserveCount: 0
           TroopTransport: False
-          SpawnPOINear: [TalonSnowMain]
+          SpawnPOINear: [R2TalonSnowMain]
           SpawnPOINearRange: [150, 300]
           Properties:
             - Key: RegenAfter
               Value: 720
 
 # Far reaching guard towers
-        - GroupName: TalonDefenseSnow
+        - GroupName: R2TalonDefenseSnow
           Faction: Talon
           Territory: False
           CountMinMax: [ 0, 4 ]
@@ -1525,9 +1525,9 @@ POIs:
           DronesMinMax: [ 1, 1 ]
           ReserveCount: 0
           TroopTransport: False
-          SpawnPOIAvoid: [TalonDefenseSnow]
+          SpawnPOIAvoid: [R2TalonDefenseSnow]
           SpawnPOIAvoidDistance: 500
-          SpawnPOINear: [TalonSnowMain]
+          SpawnPOINear: [R2TalonSnowMain]
           SpawnPOINearRange: [750, 1000]
           Properties:
             - Key: RegenAfter
@@ -1786,13 +1786,13 @@ POIs:
 
 # =============================================== Faction Talon Random
 # ====================== Random Farm Groups
-        - GroupName: TalonSnow
+        - GroupName: R2TalonSnow
           Faction: Talon
           Territory: False
           Biome: [ Taiga, TaigaEdge, TaigaSnow, TaigaSnowEdge ]
           CountMinMax: [ 0, 2 ]
           IsScalingCount: True
-          AuxiliaryPOIs: [TalonSnowFarm]
+          AuxiliaryPOIs: [R2TalonSnowFarm]
           DroneProb: 0
           DronesMinMax: [ 1, 1 ]
           ReserveCount: 0
@@ -1803,7 +1803,7 @@ POIs:
             - Key: RegenAfter
               Value: 720
 
-        - GroupName: TalonSnowFarm
+        - GroupName: R2TalonSnowFarm
           Faction: Talon
           Territory: False
           IsAuxPOI: True
@@ -1828,7 +1828,7 @@ POIs:
           DronesMinMax: [ 1, 2 ]
           ReserveCount: 2
           TroopTransport: False
-          SpawnPOIAvoid: [TalonMain, TalonAux, Eden_TalonStoneRuinBuried]
+          SpawnPOIAvoid: [R2TalonMain, R2TalonAux, Eden_TalonStoneRuinBuried]
           SpawnPOIAvoidDistance: 1500
           SpawnResource: ["TitanResource:0-1"]
           SpawnResourceRange: [150,600]
@@ -1840,7 +1840,7 @@ POIs:
             - Key: RegenAfter
               Value: 4320
 
-        - GroupName: TalonWoodRuin
+        - GroupName: R2TalonWoodRuin
           Faction: None
           CountMinMax: [ 8, 12 ]
           DroneProb: 0
@@ -2195,7 +2195,7 @@ SpawnZones:
 
 # ====================== Spawn Zones Talon
 # Main village spawns closer to the village.
-   - SpawnAt: [TalonMain, TalonSnowMain, TalonStoneMain]
+   - SpawnAt: [R2TalonMain, R2TalonSnowMain, R2TalonStoneMain]
      BiomesExcluded: [ LowMountains, Mountains, Radiated, RadiatedFog ]
      Radius: 500
      RadiusRandom: 50
@@ -2211,7 +2211,7 @@ SpawnZones:
          DelayMinMax: [200, 240]
 
 # Main village spawns further from the villages. Long distance hunters.
-   - SpawnAt: [TalonMain, TalonSnowMain, TalonStoneMain]
+   - SpawnAt: [R2TalonMain, R2TalonSnowMain, R2TalonStoneMain]
      BiomesExcluded: [ LowMountains, Mountains, Radiated, RadiatedFog ]
      Radius: 1500
      RadiusRandom: 50
@@ -2227,7 +2227,7 @@ SpawnZones:
          DelayMinMax: [200, 240]
 
 # Talon near aux POIs.
-   - SpawnAt: [TalonAux, TalonSnow, TalonAuxSand]
+   - SpawnAt: [R2TalonAux, R2TalonSnow, R2TalonAuxSand]
      BiomesExcluded: [ LowMountains, Mountains, Radiated, RadiatedFog ]
      Radius: 250
      RadiusRandom: 50
@@ -2248,7 +2248,7 @@ SpawnZones:
          DelayMinMax: [200, 240]
 
 # Talon farmers.
-   - SpawnAt: [TalonFarmhouse, TalonFarm, TalonSnowFarm, TalonStoneFarm]
+   - SpawnAt: [R2TalonFarmhouse, R2TalonFarm, R2TalonSnowFarm, R2TalonStoneFarm]
      BiomesExcluded: [ LowMountains, Mountains, Radiated, RadiatedFog ]
      Radius: 100
      RadiusRandom: 25

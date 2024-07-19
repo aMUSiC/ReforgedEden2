@@ -902,9 +902,7 @@ POIs:
 # # TEST
     # - Type: BA_Alien
       # # Name: [TSO_Variant1, TSO_Variant2, TSO_Variant3, TSO_Variant4, TSO_Variant5, TSO_Variant6, TSO_Variant7]
-      # # GroupName: TSOPolarisRG
-      # Name: [TSOPolarisRG]
-      # # DisplayName: Trading Station
+      # # GroupName: R2PolarisSpaceTrade
       # FactionTerritory: [All]
       # Faction: Polaris
       # Mode: Survival
@@ -960,7 +958,7 @@ POIs:
 # Trade Station 
     - Type: BA_Alien
       # Name: [TSO_Variant1, TSO_Variant2, TSO_Variant3, TSO_Variant4, TSO_Variant5, TSO_Variant6, TSO_Variant7]
-      GroupName: TSOPolarisRG
+      GroupName: R2PolarisSpaceTrade
       # DisplayName: Trading Station
       Faction: Polaris
       Mode: Survival

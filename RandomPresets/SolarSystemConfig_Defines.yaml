@@ -68,14 +68,14 @@ GenerationParams:
             - HabitableTemperate
             - HabitableCold
             - OuterSystem
-        MoonProb: '1:1'
+        MoonProb: '5:1'
         # MoonType: [EdenMoonBarren]
         MoonType: [TestMoon]
         OrbitType: [DefaultOrbit]
         Climate: Desert
         PlayfieldLevel: [4,7]
         Playfields:
-            - EdenAridWasteland_V2, 1
+
 # Mission planets
 
 # Gas Giant
@@ -1164,10 +1164,29 @@ GenerationParams:
 # These only show up in specific territories.
 # ------------------------------------------------------------------------------------------------- Zirax
 
-# Tovera class dreadnought
+# Pentaxid Mining Facility
+      - Name: ZiraxStationT3
+        Faction: [Zirax, None]
+        Color: [1, 0, 0]
+        Icon: Station
+        Placement:
+            - InnerSystem
+            - HabitableHot
+            - HabitableTemperate
+            - HabitableCold
+            - OuterSystem
+        MoonProb: '0:1'
+        MoonType: [DefaultMoon]
+        HasOrbit: false
+        HasTerrain: false
+        PlayfieldLevel: [5,8]
+        Playfields:
+            - EdenSpaceZirax_POI_PentaxidMine
+
+# Tovera class dreadnought only in Zirax territory
       - Name: POICombatT4Zirax
         Faction: [Zirax]
-        Color: [0.75, 0, 0]
+        Color: [1, 0, 0]
         Icon: Triangle
         Placement:
             - InnerSystem
@@ -1188,7 +1207,6 @@ GenerationParams:
 # ------------------------------------------------------------------------------------------------- Trader
 
 # ------------------------------------------------------------------------------------------------- Colonists
-
 # Colonists Scrapyard
       - Name: SectorPOIColonistsScrapyard
         Faction: [Colonists, None]
@@ -1209,6 +1227,22 @@ GenerationParams:
             - EdenSpaceK_POI_ColScrapyard
 
 # ------------------------------------------------------------------------------------------------- Pirates
+# Syndicate Casino
+      - Name: SyndicateCasino
+        Faction: [Pirates, None]
+        Color: [0.56, 0.73, 0.56]
+        Icon: Station
+        Placement:
+            - HabitableHot
+            - HabitableTemperate
+            - HabitableCold
+        MoonProb: '0:1'
+        MoonType: [DefaultMoon]
+        HasOrbit: false
+        HasTerrain: false
+        PlayfieldLevel: [5,8]
+        Playfields:
+            - EdenSpaceSyn_POI_Casino
 
 # ------------------------------------------------------------------------------------------------- Warlord
 
@@ -1288,7 +1322,6 @@ GenerationParams:
             - EdenSpaceG_AsteroidT1
 
       - Name: AsteroidFieldGT1
-        Faction: [Colonists, None]
         Color: [0.7, 0.7, 0.7]
         Icon: AsteroidFieldFew
         Placement:
@@ -1322,28 +1355,9 @@ GenerationParams:
         PlayfieldLevel: [4,7]
         Playfields:
             - EdenSpaceG_AsteroidCol, 0.5
-            - EdenSpaceG_AsteroidBandit, 0.5
-
-      - Name: AsteroidFieldD
-        Faction: [Colonists, None]
-        Color: [0.7, 0.7, 0.7]
-        Icon: AsteroidFieldFew
-        Placement:
-            - InnerSystem
-            - HabitableHot
-            - HabitableTemperate
-            - HabitableCold
-            - OuterSystem
-        MoonProb: '0:1'
-        MoonType: [DefaultMoon]
-        HasOrbit: false
-        HasTerrain: false
-        PlayfieldLevel: [6,10]
-        Playfields:
-            - EdenSpaceD_AsteroidT1
+            - EdenSpaceG_AsteroidBandit, 1
 
       - Name: AsteroidFieldDT1
-        Faction: [Colonists, None]
         Color: [0.7, 0.7, 0.7]
         Icon: AsteroidFieldFew
         Placement:
@@ -1360,46 +1374,9 @@ GenerationParams:
         Playfields:
             - EdenSpaceD_AsteroidT1
 
-      - Name: AsteroidFieldDT2
-        Faction: [Colonists, None]
-        Color: [0.7, 0.7, 0.7]
-        Icon: AsteroidField
-        Placement:
-            - InnerSystem
-            - HabitableHot
-            - HabitableTemperate
-            - HabitableCold
-            - OuterSystem
-        MoonProb: '0:1'
-        MoonType: [DefaultMoon]
-        HasOrbit: false
-        HasTerrain: false
-        PlayfieldLevel: [6,10]
-        Playfields:
-            - EdenSpaceD_AsteroidT1
-
-      - Name: AsteroidField_K
-        Faction: [Colonists, None]
-        Color: [0.7, 0.7, 0.7]
-        Icon: AsteroidField
-        Placement:
-            - InnerSystem
-            - HabitableHot
-            - HabitableTemperate
-            - HabitableCold
-            - OuterSystem
-        MoonProb: '0:1'
-        MoonType: [DefaultMoon]
-        HasOrbit: false
-        HasTerrain: false
-        PlayfieldLevel: [6,10]
-        Playfields:
-            - EdenSpaceK_AsteroidT1
-
       - Name: AsteroidFieldKT1
-        Faction: [Colonists, None]
         Color: [0.7, 0.7, 0.7]
-        Icon: AsteroidField
+        Icon: AsteroidFieldFew
         Placement:
             - InnerSystem
             - HabitableHot
@@ -1529,43 +1506,8 @@ GenerationParams:
             - EdenSpace_POI_AsteroidRichT1
 
 # =================================================================================================================================================== Pirates
-# --------------------------------------------------------------------------
-      - Name: AsteroidFieldPirate
-        Faction: [Pirates, None]
-        Color: [1, 1, 0]
-        Icon: AsteroidField
-        Placement:
-            - InnerSystem
-            - HabitableHot
-            - HabitableTemperate
-            - HabitableCold
-            - OuterSystem
-        MoonProb: '0:1'
-        MoonType: [DefaultMoon]
-        HasOrbit: false
-        HasTerrain: false
-        PlayfieldLevel: [4,7]
-        Playfields:
-            - EdenSpaceG_AsteroidT1
 
 # =================================================================================================================================================== Polaris
-      - Name: AsteroidFieldPolaris
-        Faction: [Polaris, None]
-        Color: [0.7, 0.5, 0.0]
-        Icon: AsteroidField
-        Placement:
-            - InnerSystem
-            - HabitableHot
-            - HabitableTemperate
-            - HabitableCold
-            - OuterSystem
-        MoonProb: '0:1'
-        MoonType: [DefaultMoon]
-        HasOrbit: false
-        HasTerrain: false
-        PlayfieldLevel: [4,7]
-        Playfields:
-            - EdenSpaceG_AsteroidT1
 
       - Name: AsteroidFieldPolarisDT1
         Faction: [Polaris, None]
@@ -1604,41 +1546,6 @@ GenerationParams:
         Playfields:
             - EdenSpaceG_AsteroidZirax
 
-      - Name: AsteroidFieldZiraxD
-        Faction: [Zirax, None]
-        Color: [1, 0, 0]
-        Icon: AsteroidFieldFew
-        Placement:
-            - InnerSystem
-            - HabitableHot
-            - HabitableTemperate
-            - HabitableCold
-            - OuterSystem
-        MoonProb: '0:1'
-        MoonType: [DefaultMoon]
-        HasOrbit: false
-        HasTerrain: false
-        PlayfieldLevel: [4,7]
-        Playfields:
-            - EdenSpaceG_AsteroidZirax
-
-      - Name: AsteroidFieldZirax
-        Faction: [Zirax, None]
-        Color: [1, 0, 0]
-        Icon: AsteroidField
-        Placement:
-            - InnerSystem
-            - HabitableHot
-            - HabitableTemperate
-            - HabitableCold
-            - OuterSystem
-        MoonProb: '0:1'
-        MoonType: [DefaultMoon]
-        HasOrbit: false
-        HasTerrain: false
-        PlayfieldLevel: [4,7]
-        Playfields:
-            - EdenSpaceG_AsteroidZirax
 # =================================================================================================================================================== The Legacy
 # -------------------------------------------------------------------------- AsteroidFieldLegacy
       - Name: AsteroidFieldLegacyT1
@@ -1754,13 +1661,8 @@ GenerationParams:
         HasTerrain: true
         PlayfieldLevel: [1,4]
         Playfields:
-            - MoonIce, 0.14
-            - MoonIce2, 0.17
-            - EdenMoonIce2, 0.2
-            - EdenMoonIceOuter, 0.25
-            - EdenMoonIceOuter2, 0.33
-            - EdenMoonIceOuter3, 0.5
-            - EdenMoonIceOuter4, 1
+            - EdenMoonBarren, 0.5
+            - EdenMoonBarren2_V2, 1
 # -------------------------------------------------------------------------- MoonStarterBarren
       - Name: MoonStarter
         Color: [0.5,0.5,0.5]
@@ -1829,11 +1731,12 @@ GenerationParams:
         PlayfieldLevel: [2,4]
         Playfields:
             - EdenMoonBarren, 0.2
+            - EdenMoonBarren2_V2, 0.17
             - EdenMoonBarrenSilicon, 0.2
-            - EdenMoonBarrenIron, 0.2
-            - EdenMoonBarrenCopper, 0.2
-            - EdenMoonBarrenCobalt, 0.2
-            - EdenMoonBarrenSath, 0.2
+            - EdenMoonBarrenIron, 0.25
+            - EdenMoonBarrenCopper, 0.33
+            - EdenMoonBarrenCobalt, 0.5
+            - EdenMoonBarrenSath, 1
 # -------------------------------------------------------------------------- EdenMoonBarrenGasOuter
       - Name: EdenMoonBarrenGasOuter
         Color: [0.5,0.5,0.5]
@@ -1842,13 +1745,14 @@ GenerationParams:
         HasTerrain: true
         PlayfieldLevel: [2,4]
         Playfields:
-            - EdenMoonBarrenGas, 0.2
             - EdenMoonBarren, 0.2
+            - EdenMoonBarren2_V2, 0.15
+            - EdenMoonBarrenGas, 0.18
             - EdenMoonBarrenSilicon, 0.2
-            - EdenMoonBarrenIron, 0.2
-            - EdenMoonBarrenCopper, 0.2
-            - EdenMoonBarrenCobalt, 0.2
-            - EdenMoonBarrenSath, 0.2
+            - EdenMoonBarrenIron, 0.25
+            - EdenMoonBarrenCopper, 0.34
+            - EdenMoonBarrenCobalt, 0.5
+            - EdenMoonBarrenSath, 1
 # -------------------------------------------------------------------------- EdenMoonBarrenHot
 # Disabled until it can be reworked.
       - Name: EdenMoonBarrenHot
@@ -1877,12 +1781,12 @@ GenerationParams:
         HasTerrain: true
         PlayfieldLevel: [2,6]
         Playfields:
-            - MoonIce, 0.2
+            - MoonIce, 0.16
             - EdenMoonIce2, 0.2
-            - EdenMoonIceOuter, 0.3
-            - EdenMoonIceOuter2, 0.3
-            - EdenMoonIceOuter3, 0.3
-            - EdenMoonIceOuter4, 0.3
+            - EdenMoonIceOuter, 0.24
+            - EdenMoonIceOuter2, 0.32
+            - EdenMoonIceOuter3, 0.5
+            - EdenMoonIceOuter4, 1
 # -------------------------------------------------------------------------- MoonLava
       - Name: MoonLava
         Color: [0.57, 0.09, 0.05]
@@ -1914,8 +1818,8 @@ GenerationParams:
         HasTerrain: true
         PlayfieldLevel: [4,7]
         Playfields:
-            - EdenMoonMethane, 0.6
-            - EdenMoonMethane2, 0.4
+            - EdenMoonMethane, 0.5
+            - EdenMoonMethane2, 1
 # -------------------------------------------------------------------------- EdenMoonVolcanic
       - Name: EdenMoonVolcanic
         Color: [0.9,0.3,0]
@@ -1925,7 +1829,7 @@ GenerationParams:
         PlayfieldLevel: [4,7]
         Playfields:
             - EdenMoonVolcanic, 0.5
-            - EdenMoonVolcanic2, 0.5
+            - EdenMoonVolcanic2, 1
 # -------------------------------------------------------------------------- EdenMoonEerie
 # Disabled until it can be reworked.
       - Name: EdenMoonEerie
@@ -1965,7 +1869,7 @@ GenerationParams:
         PlayfieldLevel: [6,10]
         Playfields:
             - EdenMoonCrystalProm_V2, 0.5
-            - EdenMoonCrystalPent_V2, 0.5
+            - EdenMoonCrystalPent_V2, 1
             # - EdenMoonCrystalProm, 0.5
             # - EdenMoonCrystalPent, 0.5
 # -------------------------------------------------------------------------- EdenMoonCrystalInner
@@ -1995,10 +1899,10 @@ GenerationParams:
         HasTerrain: true
         PlayfieldLevel: [3,6]
         Playfields:
-            - MoonForest, 0.5
-            - EdenMoonJungle, 0.5
+            - MoonForest, 0.25
+            - EdenMoonJungle, 0.33
             - EdenMoonTemperate, 0.5
-            - EdenMoonTemperate2, 0.5
+            - EdenMoonTemperate2, 1
 # -------------------------------------------------------------------------- EdenMoonSun
       - Name: EdenMoonSun
         Color: [1,0.8,0]

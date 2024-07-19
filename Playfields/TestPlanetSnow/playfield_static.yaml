@@ -828,7 +828,7 @@ POIs:
 
 # =============================================== Faction Talon
 # ---------------------- Main Village
-        - GroupName: TalonSnowMain
+        - GroupName: R2TalonSnowMain
           Faction: Talon
           IsImportant: True
           BiomesExcluded: [ PolarSnow, Radiated, RadiatedFog, Mountains, LowMountains ]
@@ -843,40 +843,40 @@ POIs:
             - Key: RegenAfter
               Value: 4320
 
-        - GroupName: TalonSnow
+        - GroupName: R2TalonSnow
           Faction: Talon
           CountMinMax: [ 3, 5 ]
           DroneProb: 0
           DronesMinMax: [ 1, 1 ]
           ReserveCount: 0
           TroopTransport: False
-          SpawnPOINear: [TalonSnowMain]
+          SpawnPOINear: [R2TalonSnowMain]
           SpawnPOINearRange: [75, 200]
           Properties:
             - Key: RegenAfter
               Value: 720
 
-        - GroupName: TalonSnowFarm
+        - GroupName: R2TalonSnowFarm
           Faction: Talon
           CountMinMax: [ 3, 5 ]
           DroneProb: 0
           DronesMinMax: [ 1, 1 ]
           ReserveCount: 0
           TroopTransport: False
-          SpawnPOINear: [TalonSnowMain]
+          SpawnPOINear: [R2TalonSnowMain]
           SpawnPOINearRange: [150, 300]
           Properties:
             - Key: RegenAfter
               Value: 720
 
-        - GroupName: TalonDefenseSnow
+        - GroupName: R2TalonDefenseSnow
           Faction: Talon
           CountMinMax: [ 3, 4 ]
           DroneProb: 0
           DronesMinMax: [ 1, 1 ]
           ReserveCount: 0
           TroopTransport: False
-          SpawnPOINear: [TalonSnowMain]
+          SpawnPOINear: [R2TalonSnowMain]
           SpawnPOINearRange: [250, 500]
           Properties:
             - Key: RegenAfter
@@ -894,7 +894,7 @@ POIs:
           DronesMinMax: [ 1, 2 ]
           ReserveCount: 2
           TroopTransport: True
-          SpawnPOIAvoid: [TalonSnowMain]
+          SpawnPOIAvoid: [R2TalonSnowMain]
           SpawnPOIAvoidDistance: 1000
           SpawnResource: ["PromethiumResource:0-1"]
           SpawnResourceRange: [150,600]
@@ -906,7 +906,7 @@ POIs:
             - Key: RegenAfter
               Value: 4320
 
-        - GroupName: TalonSnow
+        - GroupName: R2TalonSnow
           Faction: Talon
           CountMinMax: [ 1, 4 ]
           DroneProb: 0
@@ -919,7 +919,7 @@ POIs:
             - Key: RegenAfter
               Value: 720
 
-        - GroupName: TalonSnowFarm
+        - GroupName: R2TalonSnowFarm
           Faction: Talon
           CountMinMax: [ 3, 6 ]
           DroneProb: 0
@@ -932,7 +932,7 @@ POIs:
             - Key: RegenAfter
               Value: 720
 
-        - GroupName: TalonDefenseSnow
+        - GroupName: R2TalonDefenseSnow
           Faction: Talon
           CountMinMax: [ 2, 3 ]
           DroneProb: 0
@@ -957,7 +957,7 @@ POIs:
           DronesMinMax: [ 1, 2 ]
           ReserveCount: 2
           TroopTransport: True
-          SpawnPOIAvoid: [TalonSnowMain]
+          SpawnPOIAvoid: [R2TalonSnowMain]
           SpawnPOIAvoidDistance: 1000
           SpawnResource: ["PromethiumResource:0-1"]
           SpawnResourceRange: [150,600]
@@ -969,7 +969,7 @@ POIs:
             - Key: RegenAfter
               Value: 4320
 
-        - GroupName: TalonSnowMain
+        - GroupName: R2TalonSnowMain
           Faction: Talon
           Biome: [Mountains, LowMountains]
           IsImportant: True
@@ -986,7 +986,7 @@ POIs:
             - Key: RegenAfter
               Value: 4320
 
-        - GroupName: TalonSnow
+        - GroupName: R2TalonSnow
           Faction: Talon
           Biome: [Mountains, LowMountains]
           CountMinMax: [ 2, 4 ]
@@ -1000,7 +1000,7 @@ POIs:
             - Key: RegenAfter
               Value: 720
 
-        - GroupName: TalonSnowFarm
+        - GroupName: R2TalonSnowFarm
           Faction: Talon
           Biome: [Mountains, LowMountains]
           CountMinMax: [ 3, 5 ]
@@ -1014,7 +1014,7 @@ POIs:
             - Key: RegenAfter
               Value: 720
 
-        - GroupName: TalonDefenseSnow
+        - GroupName: R2TalonDefenseSnow
           Faction: Talon
           Biome: [Mountains, LowMountains]
           CountMinMax: [ 3, 4 ]
@@ -1029,18 +1029,18 @@ POIs:
               Value: 720
 
 # ---------------------- Random Farm Groups
-        - GroupName: TalonSnow
+        - GroupName: R2TalonSnow
           Faction: Talon
           Territory: False
           BiomesExcluded: [ PolarSnow, Radiated, RadiatedFog, Mountains, LowMountains ]
           CountMinMax: [ 1, 2 ]
           IsScalingCount: True
-          AuxiliaryPOIs: [TalonSnow, TalonDefenseSnow]
+          AuxiliaryPOIs: [R2TalonSnow, R2TalonDefenseSnow]
           DroneProb: 0
           DronesMinMax: [ 1, 1 ]
           ReserveCount: 0
           TroopTransport: False
-          SpawnPOIAvoid: [TalonSnowMain, Eden_DummyTalon1]
+          SpawnPOIAvoid: [R2TalonSnowMain, Eden_DummyTalon1]
           SpawnPOIAvoidDistance: 750
           Properties:
             - Key: RegenAfter
@@ -1060,7 +1060,7 @@ POIs:
             - Key: RegenAfter
               Value: 720
 
-        - GroupName: TalonDefenseSnow
+        - GroupName: R2TalonDefenseSnow
           Faction: Talon
           Territory: False
           IsAuxPOI: True
@@ -1075,7 +1075,7 @@ POIs:
               Value: 720
 
 # ---------------------- Random Watchtowers in mountains
-        - GroupName: TalonDefenseSnow
+        - GroupName: R2TalonDefenseSnow
           Faction: Talon
           Biome: [Mountains, LowMountains]
           Territory: False
@@ -1235,7 +1235,7 @@ SpawnZones:
          Amount: 200
          Period: Always
          DelayMinMax: [-1, -1]
-   - SpawnAt: [TalonSnowMain]
+   - SpawnAt: [R2TalonSnowMain]
      BiomesExcluded: [ LowMountains, Mountains ]
      Radius: 500
      RadiusRandom: 50

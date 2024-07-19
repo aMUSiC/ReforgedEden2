@@ -413,6 +413,8 @@ Chapters:
             Check: NearPoi
             Names:
               - R2TalonVillageStory
+              - R2TalonVillageStorySand
+              - R2TalonVillageStorySnow
             GuidingDistance: -1
             TriggerDistance: 300
         StartMessage: norm;20|pda_WK8aKaK
@@ -12370,66 +12372,6 @@ Chapters:
     PlayfieldTypes:
       - EdenSpace_POI_HackT3_1
     StartMessage: norm;0|eden_pda_8MqShLO
-  - ChapterTitle: eden_pda_OqKmie0
-    Category: SoloMission
-    NoSkip: true
-    Activatable: Always
-    Visibility: Never
-    PlayerLevel: 1
-    HideTasks: true
-    RepeatConditions:
-      NumRepeats: 0
-      DelayAdd: 0
-      DelaySeconds: 1
-      NoReminder: 'true'
-    ChapterActivation:
-      - Check: DialogOption
-        Names:
-          - Eden_HackLights_Reward
-        Value: 1
-        NotifyMessage: high;5|eden_pda_qa48caK
-    Tasks:
-      - TaskTitle: eden_pda_5awem0y
-        StartMessage: ''
-        CompletedMessage: ''
-        Actions:
-          - ActionTitle: eden_pda_OaCKaiS
-            Description: eden_pda_qqGm8W8
-            CompletedMessage: ''
-            Check: WaitAction
-            Amount: 20
-            IsOrdered: 'false'
-      - TaskTitle: eden_pda_a8qCOgZ
-        Actions:
-          - ActionTitle: eden_pda_q8L44GS
-            Description: eden_pda_W0KCKkW
-            CompletedMessage: ''
-            Check: NearPoi
-            Names:
-              - Eden_BAOExploreT3_2A
-            GuidingDistance: 1
-            TriggerDistance: 50000
-        StartMessage: ''
-        CompletedMessage: high;10|eden_pda_08OpiC4
-        OnCompletePlayfieldOps:
-          - >-
-            SpawnOPV:
-            Eden_Progenitor;Eden_OPVProgT0;1;true;AttackTarget;Player;500;1;true;10;false
-      - TaskTitle: eden_pda_iiaOW04
-        Actions:
-          - ActionTitle: eden_pda_00SOumC
-            Description: eden_pda_G0W4IW8
-            CompletedMessage: ''
-            Check: WaitAction
-            Amount: 10
-        StartMessage: ''
-        CompletedMessage: ''
-    CompletedMessage: ''
-    Group: eden_pda_G0OeuOS
-    Description: eden_pda_GGtSsGm
-    PlayfieldTypes:
-      - EdenSpace_POI_HackT3_1
-    StartMessage: high;20|eden_pda_C8Ou4mu
   - ChapterTitle: eden_pda_iuCuK0m
     Category: SoloMission
     NoSkip: true
@@ -13939,6 +13881,7 @@ Chapters:
         Amount: 1
         NoSkip: 'true'
         PopupActivatesChapter: 'true'
+    Group: eden_pda_GO8u0Oh
   - ChapterTitle: eden_pda_SGGGOae
     Category: SoloMission
     NoSkip: true
@@ -14011,7 +13954,7 @@ Chapters:
             Amount: 25
             IsOrdered: 'true'
     CompletedMessage: norm;10|eden_pda_CS4WmSm
-    Group: eden_pda_KKWW4uW
+    Group: eden_pda_GO8u0Oh
     Description: eden_pda_OWGS4ae
     PlayfieldTypes:
       - EdenSpace_POI_CombatT3_1
@@ -14555,7 +14498,7 @@ Chapters:
     Category: SoloMission
     NoSkip: true
     Activatable: Always
-    Visibility: Never
+    Visibility: Always
     PlayerLevel: 1
     HideTasks: true
     RepeatConditions:
@@ -14589,11 +14532,202 @@ Chapters:
             Amount: 25
             IsOrdered: 'true'
     CompletedMessage: norm;10|eden_pda_CS4WmSm
-    Group: eden_pda_euiqCK9
+    Group: eden_pda_GO8u0Oh
     Description: eden_pda_i4q4GeS
     PlayfieldTypes:
       - Drone Swarm Nursery
     StartMessage: norm;0|eden_pda_qqCSqGO
+  - ChapterTitle: eden_pda_OSW0Oq0
+    Category: SoloMission
+    NoSkip: true
+    Activatable: Always
+    Visibility: Never
+    PlayerLevel: 1
+    CompletedMessage: norm;15|eden_pda_qi8iYuS
+    Tasks:
+      - TaskTitle: eden_pda_dGI8Cum
+        StartMessage: ''
+        CompletedMessage: ''
+        Actions:
+          - ActionTitle: eden_pda_4uOhKuW
+            Description: eden_pda_Gel4KCq
+            CompletedMessage: ''
+            Check: WaitAction
+        OnCompletePlayfieldOps:
+          - 'SignalStructure: RE2_BAO_RadosPentaxid;Laser;false'
+    RepeatConditions:
+      NumRepeats: 0
+      DelaySeconds: 1
+      DelayAdd: 0
+      NoReminder: 'true'
+    PlayfieldTypes:
+      - Pentaxid Mining Facility
+    HideTasks: true
+    ChapterActivation:
+      - Check: DialogOption
+        Names:
+          - Eden_PentFacilityB_GreetLaser
+        Value: 1
+        NotifyMessage: norm;0|eden_pda_aOG88mi
+        NoSkip: 'true'
+        PopupActivatesChapter: 'true'
+    Group: eden_pda_GO8u0Oh
+  - ChapterTitle: eden_pda_qS80iSY
+    Category: SoloMission
+    NoSkip: true
+    Activatable: Always
+    Visibility: Never
+    PlayerLevel: 1
+    CompletedMessage: norm;15|eden_pda_e4a4OuS
+    Tasks:
+      - TaskTitle: eden_pda_SWq0Wqq
+        StartMessage: ''
+        CompletedMessage: ''
+        Actions:
+          - ActionTitle: eden_pda_WCmmCaq
+            Description: eden_pda_uKOu4WO
+            CompletedMessage: ''
+            Check: WaitAction
+        OnCompletePlayfieldOps:
+          - 'SignalStructure: RE2_BAO_RadosPentaxid;Rocket;false'
+    RepeatConditions:
+      NumRepeats: 0
+      DelaySeconds: 1
+      DelayAdd: 0
+      NoReminder: 'true'
+    PlayfieldTypes:
+      - Pentaxid Mining Facility
+    HideTasks: true
+    ChapterActivation:
+      - Check: DialogOption
+        Names:
+          - Eden_PentFacilityB_GreetRocket
+        Value: 1
+        NotifyMessage: norm;0|eden_pda_W8Ktmai
+        NoSkip: 'true'
+        PopupActivatesChapter: 'true'
+    Group: eden_pda_GO8u0Oh
+  - ChapterTitle: eden_pda_maqGSu4
+    Category: SoloMission
+    NoSkip: true
+    Activatable: Always
+    Visibility: Always
+    PlayerLevel: 1
+    HideTasks: true
+    RepeatConditions:
+      NumRepeats: 0
+      DelayAdd: 0
+      DelaySeconds: 1
+      NoReminder: 'true'
+    ChapterActivation:
+      - Check: PlayfieldTypeEntered
+        Names:
+          - Pentaxid Mining Facility
+        GuidingDistance: 1
+        TriggerDistance: 25000
+        NoSkip: 'true'
+        PopupActivatesChapter: 'true'
+        NotifyMessage: norm;0|eden_pda_uKWO4S4
+    Tasks:
+      - TaskTitle: eden_pda_0oCiqWi
+        StartMessage: ''
+        CompletedMessage: ''
+        Actions:
+          - ActionTitle: eden_pda_O448qCi
+            Description: eden_pda_G0WiUae
+            CompletedMessage: norm;25|eden_pda_8iISPii|eden_pda_Si4cWt1
+            Check: WaitAction
+            IsOrdered: 'true'
+          - ActionTitle: eden_pda_Gu4C4uO
+            Description: eden_pda_48UX2Ki
+            CompletedMessage: ''
+            Check: WaitAction
+            Amount: 25
+            IsOrdered: 'true'
+    CompletedMessage: norm;10|eden_pda_8ui44aK
+    Group: eden_pda_GO8u0Oh
+    Description: eden_pda_ZGxSKu0
+    PlayfieldTypes:
+      - Pentaxid Mining Facility
+    StartMessage: norm;0|eden_pda_uaWpSW8
+  - ChapterTitle: eden_pda_uaQu0i4
+    Category: SoloMission
+    NoSkip: true
+    Activatable: Always
+    Visibility: Never
+    PlayerLevel: 1
+    CompletedMessage: norm;15|eden_pda_cSS4nWK
+    Tasks:
+      - TaskTitle: eden_pda_eagwCOa
+        StartMessage: ''
+        CompletedMessage: ''
+        Actions:
+          - ActionTitle: eden_pda_umOSKqk
+            Description: eden_pda_wKGCaO8
+            CompletedMessage: ''
+            Check: WaitAction
+        OnCompletePlayfieldOps:
+          - 'SignalStructure: RE2_BAO_RadosPentaxid;Plasma;false'
+    RepeatConditions:
+      NumRepeats: 0
+      DelaySeconds: 1
+      DelayAdd: 0
+      NoReminder: 'true'
+    PlayfieldTypes:
+      - Pentaxid Mining Facility
+    HideTasks: true
+    ChapterActivation:
+      - Check: DialogOption
+        Names:
+          - Eden_PentFacilityB_GreetPlasma
+        Value: 1
+        NotifyMessage: norm;0|eden_pda_EuK0aW8
+        NoSkip: 'true'
+        PopupActivatesChapter: 'true'
+    Group: eden_pda_GO8u0Oh
+  - ChapterTitle: eden_pda_OeC0Sa8
+    Category: SoloMission
+    NoSkip: true
+    Activatable: Always
+    Visibility: Always
+    PlayerLevel: 1
+    HideTasks: true
+    RepeatConditions:
+      NumRepeats: 0
+      DelayAdd: 0
+      DelaySeconds: 1
+      NoReminder: 'true'
+    ChapterActivation:
+      - Check: PlayfieldTypeEntered
+        Names:
+          - Syndicate Casino
+        GuidingDistance: 1
+        TriggerDistance: 25000
+        NoSkip: 'true'
+        PopupActivatesChapter: 'true'
+        NotifyMessage: norm;0|eden_pda_OniG0aE
+    Tasks:
+      - TaskTitle: eden_pda_K4IeCmi
+        StartMessage: ''
+        CompletedMessage: ''
+        Actions:
+          - ActionTitle: eden_pda_q0WiCaW
+            Description: eden_pda_0aCS04K
+            CompletedMessage: norm;25|eden_pda_i8Km0k0|eden_pda_qeKiC0O
+            Check: WaitAction
+            IsOrdered: 'true'
+          - ActionTitle: eden_pda_iKOGmFW
+            Description: eden_pda_Ga0OuKW
+            CompletedMessage: ''
+            Check: WaitAction
+            Amount: 25
+            IsOrdered: 'true'
+    CompletedMessage: norm;10|eden_pda_SWKOemO
+    Group: eden_pda_uGGCmOe
+    Description: eden_pda_m8m8KaW
+    PlayfieldTypes:
+      - Syndicate Casino
+    StartMessage: norm;0|eden_pda_m0uKg8C
   - ChapterTitle: eden_pda_mKC8hie
     Category: SoloMission
     NoSkip: true
@@ -17356,7 +17490,7 @@ Chapters:
             Description: eden_pda_0lWqi00
             CompletedMessage: ''
             Check: WaitAction
-            Amount: 30
+            Amount: 40
         CompletedMessage: ''
         StartMessage: norm;30|eden_pda_uCeOWKK
         PictureFile: Eden_DronelandsPreview.jpg
@@ -17372,7 +17506,7 @@ Chapters:
         OnCompletePlayfieldOps:
           - >-
             SpawnOPV:
-            Eden_DroneHome;RE2_OPVRogueT1;4;true;AttackTarget;Player;1500;1;true;40;true
+            Eden_DroneHome;RE2_OPVRogueT1;3;true;AttackTarget;Player;1500;1;true;40;true
         PictureFile: Eden_DronelandsPreview.jpg
       - TaskTitle: eden_pda_u8808m4
         StartMessage: high;30|eden_pda_eOCWmKi
@@ -23313,6 +23447,31 @@ Chapters:
         NotifyMessage: norm;20|eden_pda_micqpOr
         NoSkip: 'true'
         PopupActivatesChapter: 'true'
+  - ChapterTitle: eden_pda_CcSqCiO
+    Category: Tutorial
+    NoSkip: false
+    Activatable: Always
+    Visibility: Always
+    PlayerLevel: 1
+    StartMessage: mbox;20|eden_pda_KqS8am0
+    CompletedMessage: dlg;Eden_Microjump_Init|
+    HideTasks: true
+    Tasks:
+      - TaskTitle: eden_pda_a88umiO
+        StartMessage: ''
+        CompletedMessage: ''
+        Actions:
+          - ActionTitle: eden_pda_meSCeK4
+            Description: eden_pda_OimHCWq
+            CompletedMessage: ''
+            Check: WaitAction
+            Amount: 10
+    RepeatConditions:
+      NumRepeats: 0
+      Delay: 2
+      DelayAdd: 0
+    Group: eden_pda_04iaKOe
+    Description: eden_pda_ZmS0q4a
   - ChapterTitle: eden_pda_CS8EZaq
     Category: Tutorial
     NoSkip: true

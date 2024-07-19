@@ -601,7 +601,7 @@ POIs:
             - Key: RegenAfter
               Value: 720
               
-        - GroupName: TalonStoneMain              # CommandCenter
+        - GroupName: R2TalonStoneMain              # CommandCenter
           Faction: Talon
           BiomesExcluded: [ IceSheet, Glacier, Rocks, PolarSnow ] 
           IsImportant: True
@@ -611,7 +611,7 @@ POIs:
           DronesMinMax: [ 2, 2 ]
           ReserveCount: 1
           TroopTransport: True
-          SpawnPOIAvoid: [R2PolarisTradePlanet, R2EpsilonMain, PlanetVesselBase, R2GhystMain, R2GhystAuxT2, TalonStoneMain]  
+          SpawnPOIAvoid: [R2PolarisTradePlanet, R2EpsilonMain, PlanetVesselBase, R2GhystMain, R2GhystAuxT2, R2TalonStoneMain]  
           POIDistance: 2000
           Properties: 
             - Key: MapMarker
@@ -749,7 +749,7 @@ POIs:
             - Key: RegenAfter
               Value: 720
 
-        - GroupName: TalonStoneMain            
+        - GroupName: R2TalonStoneMain            
           Faction: Talon
           IsImportant: True
           BiomesExcluded: [ LowMountains_1, LowMountains, Mountains, HighPalms, Hills, TropicalHills, DeepForest, HighForest, DustBowl, Glacier, IceSheet, PolarSnow ] 
@@ -780,7 +780,7 @@ POIs:
           TroopTransport: True
           SpawnResource: ["PromethiumResource:1-1","TitanResource:1-1"]
           SpawnResourceRange: [50,300]
-          SpawnPOIAvoid: [R2PolarisTradePlanet, R2EpsilonMain, R2GhystMain, R2GhystAuxT2, TalonStoneMain, TalonStoneMain]  
+          SpawnPOIAvoid: [R2PolarisTradePlanet, R2EpsilonMain, R2GhystMain, R2GhystAuxT2, R2TalonStoneMain, R2TalonStoneMain]  
           POIDistance: 2000
           Properties: 
        #     - Key: MapDistance
@@ -792,7 +792,7 @@ POIs:
 # ========= VillageStiltHuts & water POI
 
           # === Placing VillageStiltHuts 
-          # At TalonStoneMain
+          # At R2TalonStoneMain
         - GroupName: VillageStiltHut
           Faction: Talon
           IsImportant: True
@@ -803,7 +803,7 @@ POIs:
           DronesMinMax: [ 1 ]
           ReserveCount: 0
           TroopTransport: False 
-          SpawnPOINear: [TalonStoneMain]
+          SpawnPOINear: [R2TalonStoneMain]
           SpawnPOINearRange: [200, 250]
           Properties: 
             - Key: MapMarker
@@ -890,7 +890,7 @@ POIs:
 
           # == Opressed Talon ==
 
-        - GroupName: TalonStoneMain
+        - GroupName: R2TalonStoneMain
           Faction: Talon
           IsImportant: True
           BiomesExcluded: [ LowMountains_1, LowMountains, Mountains, HighPalms, Hills, TropicalHills, DeepForest, HighForest, DustBowl, Glacier, IceSheet, PolarSnow ] 
@@ -899,7 +899,7 @@ POIs:
           DronesMinMax: [ 1, 2 ] 
           ReserveCount: 2
           TroopTransport: True
-          SpawnPOINear: [TalonStoneMain]
+          SpawnPOINear: [R2TalonStoneMain]
           SpawnPOINearRange: [150, 400]
           Properties: 
             - Key: MapMarker
@@ -907,7 +907,7 @@ POIs:
             - Key: RegenAfter
               Value: 720
           
-        - GroupName: TalonAuxSand
+        - GroupName: R2TalonAuxSand
           IsImportant: True
           Faction: Talon
           Territory: False
@@ -917,7 +917,7 @@ POIs:
           DronesMinMax: [ 1, 2 ] 
           ReserveCount: 2
           TroopTransport: True
-          SpawnPOINear: [TalonStoneMain]
+          SpawnPOINear: [R2TalonStoneMain]
           SpawnPOINearRange: [150, 400]
           Properties: 
       #      - Key: MapDistance
@@ -927,14 +927,14 @@ POIs:
             - Key: RegenAfter
               Value: 720
 
-        - GroupName: TalonStoneFarm
+        - GroupName: R2TalonStoneFarm
           Faction: Talon
           CountMinMax: [ 1, 1 ]
           DroneProb: 0.2 
           DronesMinMax: [ 1, 1 ]
           ReserveCount: 0
           TroopTransport: True
-          SpawnPOINear: [TalonStoneMain]
+          SpawnPOINear: [R2TalonStoneMain]
           SpawnPOINearRange: [200, 300]
           Properties: 
             - Key: MapMarker
@@ -1159,15 +1159,15 @@ POIs:
 
 
 
-          # == Close to TalonStoneMain
-        - GroupName: TalonAuxSand
+          # == Close to R2TalonStoneMain
+        - GroupName: R2TalonAuxSand
           Faction: Talon
           CountMinMax: [ 3, 3 ]
           DroneProb: 0.0 
           DronesMinMax: [ 1, 1 ]
           ReserveCount: 0
           TroopTransport: False
-          SpawnPOINear: [TalonStoneMain]
+          SpawnPOINear: [R2TalonStoneMain]
           SpawnPOINearRange: [150, 400]
           Properties: 
        #     - Key: MapDistance
@@ -1180,7 +1180,7 @@ POIs:
         - GroupName: MineBasicTalonRG
           Faction: Talon  
           CountMinMax: [ 1, 1 ]
-          SpawnPOINear: [TalonStoneMain]
+          SpawnPOINear: [R2TalonStoneMain]
           SpawnPOINearRange: [100, 900] 
           Properties: 
             - Key: RegenAfter
@@ -1189,7 +1189,7 @@ POIs:
         - GroupName: R2FactoryTalon
           Faction: Talon
           CountMinMax: [ 1, 3 ]
-          SpawnPOINear: [TalonStoneMain]
+          SpawnPOINear: [R2TalonStoneMain]
           SpawnPOINearRange: [200, 600] 
           Properties: 
             - Key: RegenAfter
@@ -1235,15 +1235,15 @@ POIs:
             - Key: RegenAfter
               Value: 720
 
-          # Close to TalonStoneMain Cluster
-        - GroupName: TalonStoneMain
+          # Close to R2TalonStoneMain Cluster
+        - GroupName: R2TalonStoneMain
           Faction: Talon
           CountMinMax: [ 1, 1 ]
           DroneProb: 0.2 
           DronesMinMax: [ 1, 1 ]
           ReserveCount: 0
           TroopTransport: True
-          SpawnPOINear: [TalonStoneMain]
+          SpawnPOINear: [R2TalonStoneMain]
           SpawnPOINearRange: [120, 600]
           Properties: 
        #     - Key: MapDistance
@@ -1253,27 +1253,27 @@ POIs:
             - Key: RegenAfter
               Value: 720
 
-        - GroupName: TalonDefense
+        - GroupName: R2TalonDefense
           Faction: Talon
           CountMinMax: [ 2, 2 ]
           DroneProb: 0.2 
           DronesMinMax: [ 1, 1 ]
           ReserveCount: 0
           TroopTransport: True
-          SpawnPOINear: [TalonStoneMain]
+          SpawnPOINear: [R2TalonStoneMain]
           SpawnPOINearRange: [120, 500]
           Properties: 
             - Key: RegenAfter
               Value: 720
               
-        - GroupName: TalonAuxSand
+        - GroupName: R2TalonAuxSand
           Faction: Talon
           CountMinMax: [ 1, 1 ]
           DroneProb: 0.2 
           DronesMinMax: [ 1, 1 ]
           ReserveCount: 0
           TroopTransport: True
-          SpawnPOINear: [TalonStoneMain]
+          SpawnPOINear: [R2TalonStoneMain]
           SpawnPOINearRange: [120, 500]
           Properties: 
        #     - Key: MapDistance
@@ -1283,14 +1283,14 @@ POIs:
             - Key: RegenAfter
               Value: 720
               
-        - GroupName: TalonFarm
+        - GroupName: R2TalonFarm
           Faction: Talon
           CountMinMax: [ 2, 2 ]
           DroneProb: 0.2 
           DronesMinMax: [ 1, 1 ]
           ReserveCount: 0
           TroopTransport: True
-          SpawnPOINear: [TalonStoneMain]
+          SpawnPOINear: [R2TalonStoneMain]
           SpawnPOINearRange: [120, 500]
           Properties: 
        #     - Key: MapDistance
@@ -1367,7 +1367,7 @@ POIs:
           DronesMinMax: [ 1, 1 ]
           ReserveCount: 0
           TroopTransport: False
-          SpawnPOIAvoid: [R2GhystMain, R2GhystAuxT2, R2PolarisTradePlanet, R2EpsilonMain, R2PolarisAuxT1, R2PolarisAuxT1, CivilSettlementO2, TalonStoneMain, R2PirateAuxT1, R2GhystDefenseT1]  
+          SpawnPOIAvoid: [R2GhystMain, R2GhystAuxT2, R2PolarisTradePlanet, R2EpsilonMain, R2PolarisAuxT1, R2PolarisAuxT1, CivilSettlementO2, R2TalonStoneMain, R2PirateAuxT1, R2GhystDefenseT1]  
           POIDistance: 1000
           SpawnResource: ["TitanResource:1-1"]
           SpawnResourceRange: [150,200]
@@ -1386,7 +1386,7 @@ POIs:
           DronesMinMax: [ 1, 1 ]
           ReserveCount: 0
           TroopTransport: False
-          SpawnPOIAvoid: [R2GhystMain, R2GhystAuxT2, R2PolarisTradePlanet, R2EpsilonMain, R2PolarisAuxT1, R2PolarisAuxT1, CivilSettlementO2, TalonStoneMain, R2PirateAuxT1, R2GhystDefenseT1]  
+          SpawnPOIAvoid: [R2GhystMain, R2GhystAuxT2, R2PolarisTradePlanet, R2EpsilonMain, R2PolarisAuxT1, R2PolarisAuxT1, CivilSettlementO2, R2TalonStoneMain, R2PirateAuxT1, R2GhystDefenseT1]  
           POIDistance: 1000
           SpawnResource: ["TitanResource:1-1"]
           SpawnResourceRange: [150,200]
@@ -1488,23 +1488,6 @@ POIs:
 
 # ========= Filling up dead spots on the planet  =======
 
-# Talon Fishing Boat
-        - GroupName: Eden_TalFishingBoat
-          Faction: Talon
-          PlaceAt: OnWater
-          Biome: [Deepwater, Water, OpenSea]
-          # NoShieldReload: True
-          CountMinMax: [ 1, 1 ]
-          DroneProb: 0.0
-          DronesMinMax: [ 1, 1 ]
-          ReserveCount: 0
-          TroopTransport: False
-          Properties:
-            - Key: RegenAfter
-              Value: 720
-
-
-
         - GroupName: VillageStilt
           IsImportant: True
           Faction: Talon
@@ -1515,7 +1498,7 @@ POIs:
           DronesMinMax: [ 1 ]
           ReserveCount: 0
           TroopTransport: False 
-          SpawnPOIAvoid: [R2PolarisTradePlanet, TalonStoneMain, TalonStoneMain]  
+          SpawnPOIAvoid: [R2PolarisTradePlanet, R2TalonStoneMain, R2TalonStoneMain]  
           POIDistance: 1000
           Properties: 
             - Key: SI
@@ -1529,48 +1512,39 @@ POIs:
             - Key: RegenAfter
               Value: 720
 
-# Black cult POIs
-        - GroupName: Eden_NecroAuxT1
-          Faction: Alien
+# Random Black Cult POIs
+        - GroupName: RE2_NecroAuxT1
+          Faction: Eden_Abandoned
           FactionTerritory: [Warlord, Xenu]
-          # NoShieldReload: True
-          IsImportant: True
-          CountMinMax: [ 0, 1 ]
-          DroneProb: 1
-          DronesMinMax: [ 2, 4 ]
-          ReserveCount: 4
-          TroopTransport: True
-          Properties: 
-            - Key: RegenAfter
-              Value: 720
-
-        - GroupName: Eden_NecroAuxT1
-          Faction: Alien
-          FactionTerritory: [Warlord, Xenu]
-          # NoShieldReload: True
-          CountMinMax: [ 1, 2 ]
-          DroneProb: 0.8
+          AvoidFactionTerritory: True
+          NoShieldReload: True # Needed for Black Cult POIs
+          CountMinMax: [ 0, 2 ]
+          IsScalingCount: True
+          DroneProb: 0.5
           DronesMinMax: [ 1, 2 ]
-          ReserveCount: 3
-          TroopTransport: True 
-          SpawnPOINear: [Eden_NecroAuxT1]
-          SpawnPOINearRange: [100, 250]
-          Properties: 
-            - Key: RegenAfter
-              Value: 720
-
-        - GroupName: Eden_NecroDefenseT1
-          Faction: Alien
-          FactionTerritory: [Warlord, Xenu]
-          # NoShieldReload: True
-          CountMinMax: [ 2, 3 ]
-          DroneProb: 0.8
-          DronesMinMax: [ 1, 2 ]
-          ReserveCount: 3
+          ReserveCount: 1
           TroopTransport: False
-          SpawnPOINear: [Eden_NecroAuxT1]
-          SpawnPOINearRange: [200, 350]
-          Properties: 
+          SpawnPOIAvoid: [RE2_NecroAuxT2, RE2_NecroMain]
+          SpawnPOIAvoidDistance: 3000
+          Properties:
+            - Key: RegenAfter
+              Value: 720
+
+# Random Black Cult POIs in Zirax territory
+        - GroupName: RE2_NecroAuxT1
+          Faction: Eden_Abandoned
+          FactionTerritory: [Xenu]
+          AvoidFactionTerritory: True
+          NoShieldReload: True # Needed for Black Cult POIs
+          CountMinMax: [ 1, 2 ]
+          IsScalingCount: True
+          DroneProb: 0.5
+          DronesMinMax: [ 1, 2 ]
+          ReserveCount: 1
+          TroopTransport: False
+          SpawnPOIAvoid: [RE2_NecroAuxT2, RE2_NecroMain]
+          SpawnPOIAvoidDistance: 3000
+          Properties:
             - Key: RegenAfter
               Value: 720
 
@@ -1706,27 +1680,6 @@ DroneBaseSetup:
                     Amount: 4
                     Type: FighterDrone
 
-# Guarding drone base
-              - Name: R2PVZiraxT0
-                Faction: Zirax
-                CountMinMax: [0, 1]
-                LevelMod: 2
-                FixedMaxSpeed: 30
-                DelayBetweenRespawn: 600
-                DelayBeforeSelfDestruction: 1800
-                IsRespawnAfterDestruction: False
-                RangePatrolTask:
-                  POINameAsPositionRef: [R2DroneBase]
-                  Radius: 2000
-                  DistToGround: 200
-                Properties:
-                  - Key: Discovery
-                    Value: False
-                Stock:
-                  - Name: DroneHoverZiraxLaser
-                    Amount: 0
-                    Type: FighterDrone
-
 # Patrolling whole planet.
               - Name: R2PVZiraxT0
                 Faction: Zirax
@@ -1751,12 +1704,12 @@ DroneBaseSetup:
                     Amount: 0
                     Type: FighterDrone
 
-# Patrolling whole planet.
+# Patrolling whole planet. Only in Zirax territory.
               - Name: R2PVZiraxT1
-                Faction: Zirax
+                Faction: Xenu
                 CountMinMax: [0, 1]
                 LevelMod: 2
-                FixedMaxSpeed: 20
+                FixedMaxSpeed: 50
                 DelayBetweenRespawn: 600
                 DelayBeforeSelfDestruction: 1800
                 IsRespawnAfterDestruction: False
@@ -1808,7 +1761,7 @@ SpawnZones:
          DelayMinMax: [36, 36]
 
      # Talon herders
-   - SpawnAt: [TalonStoneMain, TalonStoneMain]
+   - SpawnAt: [R2TalonStoneMain, R2TalonStoneMain]
      BiomesExcluded: [ LowMountains, Mountains ]
      Radius: 1200
      RadiusRandom: 50
@@ -1829,7 +1782,7 @@ SpawnZones:
          DelayMinMax: [200, 240]
          
      # Talon oppressed by Zirax
-   - SpawnAt: [TalonStoneMain]
+   - SpawnAt: [R2TalonStoneMain]
      Radius: 1000
      RadiusRandom: 25
      RateMultiplyerCenter: 1.0

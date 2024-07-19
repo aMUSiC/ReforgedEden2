@@ -305,19 +305,20 @@
 
 { +LootGroup Name: WeaponsEpic
   Count: 1
-  Item_0: AssaultRifleEpic, param1: 1, param2: 0.5
-  Item_1: Sniper2Epic, param1: 1, param2: 0.5
-  Item_2: MinigunEpic, param1: 1, param2: 0.5
-  Item_3: Shotgun2Epic, param1: 1, param2: 0.5
-  Item_4: LaserRifleEpic, param1: 1, param2: 0.5
-  Item_5: PistolEpic, param1: 1, param2: 0.5
-  Item_6: ScifiCannonEpic, param1: 1, param2: 0.5
-  Item_7: RocketLauncherEpic, param1: 1, param2: 0.5
-  Item_8: SubmachineGunT3, param1: 1, param2: 0.5
-  Item_9: DrillEpic, param1: 1, param2: 0.5
-  Item_10: ArmorHeavyEpic, param1: 1, param2: 0.5
-  Item_11: ArmorMediumEpic, param1: 1, param2: 0.5
-  Item_12: ArmorLightEpic, param1: 1, param2: 0.5
+  Item_0: AssaultRifleEpic, param1: 1, param2: 0.25
+  Item_1: Sniper2Epic, param1: 1, param2: 0.25
+  Item_2: MinigunEpic, param1: 1, param2: 0.25
+  Item_3: Shotgun2Epic, param1: 1, param2: 0.25
+  Item_4: LaserRifleEpic, param1: 1, param2: 0.25
+  Item_5: PistolEpic, param1: 1, param2: 0.25
+  Item_6: ScifiCannonEpic, param1: 1, param2: 0.25
+  Item_7: RocketLauncherEpic, param1: 1, param2: 0.25
+  Item_8: SubmachineGunT3, param1: 1, param2: 0.25
+  Item_9: PlasmaCannonAlien, param1: 1, param2: 0.25
+  Item_10: DrillEpic, param1: 1, param2: 0.25
+  Item_11: ArmorHeavyEpic, param1: 1, param2: 0.25
+  Item_12: ArmorMediumEpic, param1: 1, param2: 0.25
+  Item_13: ArmorLightEpic, param1: 1, param2: 0.25
 }
 
 { +LootGroup Name: WeaponsEnemy
@@ -472,6 +473,24 @@
   Item_3: InsulationBoostEpic, param1: 1, param2: 0.1
   Item_4: CoolingBoostEpic, param1: 1, param2: 0.1
   Item_5: MobilityBoostEpic, param1: 1, param2: 0.1
+}
+
+{ +LootGroup Name: ArmorT1
+  Count: "1"
+  Item_0: ArmorLight, param1: 1, param2: 0.25
+  Item_1: ArmorMedium, param1: 1, param2: 0.20
+  Item_2: ArmorHeavy, param1: 1, param2: 0.175
+  Item_3: ArmorSpace, param1: 1, param2: 0.10
+}
+
+{ +LootGroup Name: ArmorT2
+  Count: "1"
+  Item_0: ArmorLightT2, param1: 1, param2: 0.15
+  Item_1: ArmorMediumT2, param1: 1, param2: 0.133
+  Item_2: ArmorHeavyT2, param1: 1, param2: 0.125
+  Item_3: ArmorSpace, param1: 1, param2: 0.10
+  Item_4: ArmorIndustrial, param1: 1, param2: 0.085
+  Item_5: ArmorCombat, param1: 1, param2: 0.075
 }
 # ====================================================================
 { +LootGroup Name: MissingCargo
@@ -706,6 +725,8 @@
 }
 
 
+
+
 # ============================================================================================================================================================================
 # ========================================================================================================================== Project Eden Custom Loot Groups
 # ============================================================================================================================================================================
@@ -873,7 +894,7 @@
 
 # ========================================================================================================================== Mining Site loot groups
 
-{ +LootGroup Name: Eden_MiningSiteT1
+{ +LootGroup Name: Eden_MiningSiteSpecialT1
   Count: "1,1"
   Item_0: Eden_WarpUpgrade, param1: 1, param2: 0.25
   Item_1: Eden_UnlockPoint, param1: 1, param2: 0.5

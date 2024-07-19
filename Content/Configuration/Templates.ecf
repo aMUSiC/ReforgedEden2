@@ -24,10 +24,10 @@
 { Template Name: Graphite
   BaseItem: true   # even though flag is set, it is not used for R2T repairing (NoRepairInputItem: true)
   CraftTime: 5
-  OutputCount: 1
+  OutputCount: 2
   Target: "SurvC,SmallC,HoverC,BaseC,LargeC,AdvC"
   { Child Inputs
-    RockDust: 20
+    RockDust: 25
   }
 }
 { +Template Name: IronOre
@@ -653,7 +653,7 @@
 
 { +Template Name: EnergyCellLarge
   OutputCount: 1
-  CraftTime: 7
+  CraftTime: 4
   DeconOverride: Stop
   Target: "SmallC,LargeC,AdvC"
   { Child Inputs
@@ -663,7 +663,7 @@
 
 { +Template Name: FusionCell
   OutputCount: 1
-  CraftTime: 9
+  CraftTime: 5
   DeconOverride: Stop
   Target: "SmallC,AdvC"
   { Child Inputs
@@ -2378,6 +2378,21 @@
     CapacitorComponent: 20
     EnergyMatrix: 16
     ZascosiumAlloy: 56
+  }
+}
+{ +Template Name: RepairBayCVT3
+  CraftTime: 15
+  Target: "SmallC"
+  { Child Inputs
+    SteelPlateArmored: 56
+    LargeOptronicBridge: 8
+    PowerCoil: 16
+    CapacitorComponent: 16
+    Oscillator: 48
+    ZascosiumAlloy: 64
+    AdvancedUpgradeKit: 4
+    Robotics: 4
+    QuantumProcessor: 4
   }
 }
 
@@ -7801,7 +7816,7 @@
 
 { +Template Name: Jerky
   DeconOverride: Stop
-  CraftTime: 200
+  CraftTime: 150
   Target: "FoodP,SurvC,SmallC,HoverC,BaseC"
   { Child Inputs
     Meat: 2
@@ -9323,6 +9338,7 @@
   }
 }
 
+
 # ============================================================================================================================================================================
 # ========================================================================================================================== Project Eden Custom Templates
 # ============================================================================================================================================================================
@@ -10019,27 +10035,27 @@
 }
 
 { +Template Name: Eden_TurretMissileCruiseCV_Ammo
-  OutputCount: 1
+  OutputCount: 2
   CraftTime: 3
   Target: "SmallC,AdvC"
   { Child Inputs
-    SteelPlateArmored: 8
-    PromethiumPellets: 8
-    MagnesiumPowder: 4
-    ErestrumGel: 2
-    Electronics: 2
+    SteelPlateArmored: 16
+    PromethiumPellets: 16
+    MagnesiumPowder: 8
+    ErestrumGel: 4
+    Electronics: 4
   }
 }
 
 { +Template Name: Eden_TurretMissileCruiseEMPCV_Ammo
-  OutputCount: 1
+  OutputCount: 2
   CraftTime: 3
   Target: "SmallC,AdvC"
   { Child Inputs
-    SteelPlate: 4
-    PromethiumPellets: 25
-    ErestrumGel: 2
-    Electronics: 4
+    SteelPlate: 8
+    PromethiumPellets: 50
+    ErestrumGel: 4
+    Electronics: 8
   }
 }
 
@@ -10578,13 +10594,15 @@
 
 { +Template Name: Eden_AutoMiningDeviceT4
   CraftTime: 60
-  Target: "SmallC,AdvC"
+  Target: "SmallC"
   { Child Inputs
     Eden_TungstenIngot: 300
     TitanPlates: 200
-    ZascosiumAlloy: 300
+    ZascosiumAlloy: 150
+    PowerCoil: 50
     Eden_ModularPulseLaserLensLarge: 1
-    AutoMinerCore: 5
+    AdvancedUpgradeKit: 4
+    AutoMinerCore: 9
   }
 }
 
@@ -11029,7 +11047,7 @@
   OutputCount: 2
   CraftTime: 15
   DeconOverride: Stop
-  Target: "LargeC,AdvC"
+  Target: "SmallC,LargeC,AdvC"
   { Child Inputs
     PromethiumPellets: 75
     HydrogenBottle: 15
@@ -11639,7 +11657,7 @@
   BaseItem: true
   OutputCount: 10
   CraftTime: 10
-  Target: "SmallC,BaseC,LargeC,AdvC"
+  Target: "SmallC,BaseC,LargeC,AdvC,Furn"
   { Child Inputs
     Eden_TungstenOre: 5
   }
@@ -11862,16 +11880,6 @@
     HerbalLeaves: 2
     FireMossScrapings: 2
     WaterBottle: 4
-  }
-}
-
-{ +Template Name: Eden_FishJerky
-  DeconOverride: Stop
-  CraftTime: 15
-  Target: FoodP
-  { Child Inputs
-    HWSFish: 1
-    Spice: 2
   }
 }
 

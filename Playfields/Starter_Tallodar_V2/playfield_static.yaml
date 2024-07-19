@@ -402,7 +402,7 @@ POIs:
               Value: 360
 
 # Talon
-        - GroupName: TalonMain
+        - GroupName: R2TalonMain
           IsImportant: True
           Faction: Talon
           IsCommandCenter: True
@@ -415,7 +415,7 @@ POIs:
               Value: 360
 
 # Aux POIs for village
-        - GroupName: TalonAux
+        - GroupName: R2TalonAux
           Faction: Talon
           Territory: False
           CountMinMax: [ 2, 3 ]
@@ -423,13 +423,13 @@ POIs:
           DronesMinMax: [ 1, 1 ]
           ReserveCount: 0
           TroopTransport: False
-          SpawnPOINear: [TalonMain]
+          SpawnPOINear: [R2TalonMain]
           SpawnPOINearRange: [75, 200]
           Properties:
             - Key: RegenAfter
               Value: 720
 
-        - GroupName: TalonFarm
+        - GroupName: R2TalonFarm
           Faction: Talon
           Territory: False
           CountMinMax: [ 2, 3 ]
@@ -437,7 +437,7 @@ POIs:
           DronesMinMax: [ 1, 1 ]
           ReserveCount: 0
           TroopTransport: False
-          SpawnPOINear: [TalonMain]
+          SpawnPOINear: [R2TalonMain]
           SpawnPOINearRange: [150, 300]
           Properties:
             - Key: RegenAfter
@@ -453,7 +453,7 @@ POIs:
           DronesMinMax: [ 1, 1 ]
           ReserveCount: 0
           TroopTransport: False
-          SpawnPOIAvoid: [TalonMain]
+          SpawnPOIAvoid: [R2TalonMain]
           SpawnPOIAvoidDistance: 2500
           Properties:
             - Key: RegenAfter
@@ -483,7 +483,7 @@ POIs:
           DronesMinMax: [ 1, 2 ]
           ReserveCount: 0
           TroopTransport: False
-          SpawnPOIAvoid: [R2PolarisTradePlanet, NullPOI, TalonMain]
+          SpawnPOIAvoid: [R2PolarisTradePlanet, NullPOI, R2TalonMain]
           SpawnPOIAvoidDistance: 2000
           Properties:
             - Key: RegenAfter
@@ -503,7 +503,7 @@ POIs:
           DroneProb: 1
           DronesMinMax: [ 2, 3 ]
           ReserveCount: 5
-          SpawnPOIAvoid: [NullPOI, TalonMain, R2PolarisTradePlanet]
+          SpawnPOIAvoid: [NullPOI, R2TalonMain, R2PolarisTradePlanet]
           SpawnPOIAvoidDistance: 3000
           Properties:
             - Key: Music
@@ -554,7 +554,7 @@ POIs:
           DronesMinMax: [ 1, 2 ]
           ReserveCount: 1
           TroopTransport: True
-          SpawnPOIAvoid: [NullPOI, R2DroneBaseStarter, TalonMain, R2PolarisTradePlanet]
+          SpawnPOIAvoid: [NullPOI, R2DroneBaseStarter, R2TalonMain, R2PolarisTradePlanet]
           SpawnPOIAvoidDistance: 3000
           SpawnResource: ["PromethiumResource:1-1"]
           SpawnResourceRange: [150,600]
@@ -586,21 +586,21 @@ POIs:
           DronesMinMax: [ 1, 1 ]
           ReserveCount: 0
           TroopTransport: False
-          SpawnPOIAvoid: [NullPOI, R2DroneBaseStarter, TalonMain, R2PolarisTradePlanet]
+          SpawnPOIAvoid: [NullPOI, R2DroneBaseStarter, R2TalonMain, R2PolarisTradePlanet]
           SpawnPOIAvoidDistance: 1500
           Properties:
             - Key: RegenAfter
               Value: 720
 
 # =============================================== Faction Talon
-        - GroupName: TalonAux
+        - GroupName: R2TalonAux
           Faction: Talon
           Territory: False
           AvoidFactionTerritory: True
           Biome: [ Plantation ]
           IsScalingCount: True
           CountMinMax: [ 4, 5 ]
-          AuxiliaryPOIs: [TalonFarm]
+          AuxiliaryPOIs: [R2TalonFarm]
           DroneProb: 0
           DronesMinMax: [ 1, 1 ]
           ReserveCount: 0
@@ -610,7 +610,7 @@ POIs:
               Value: 720
 
 # Aux POIs
-        - GroupName: TalonFarm
+        - GroupName: R2TalonFarm
           Faction: Talon
           Territory: False
           IsAuxPOI: True
@@ -804,7 +804,7 @@ POIs:
               Value: 720
 
 # Random Ruins in radiated zones
-        - GroupName: TalonWoodRuin
+        - GroupName: R2TalonWoodRuin
           Faction: None
           Biome: [ RadiatedFog, Radiated ]
           CountMinMax: [ 2, 4 ]
@@ -821,7 +821,7 @@ POIs:
 
 
 # Random Ruins
-        - GroupName: TalonWoodRuin
+        - GroupName: R2TalonWoodRuin
           Faction: None
           CountMinMax: [ 2, 4 ]
           IsScalingCount: True
@@ -1007,7 +1007,7 @@ SpawnRateZones:
      Color: "0.0, 1.0, 0.0, 0.7" 
 
      # 'Civilisation POI': Remove aggressive creatures nearby (already all killed or driven away there)
-   - SpawnAt: [TalonMain, R2PolarisTradePlanet]
+   - SpawnAt: [R2TalonMain, R2PolarisTradePlanet]
      Radius: 150
      RadiusRandom: 0
      RateMultiplyerCenter: 0
@@ -1016,7 +1016,7 @@ SpawnRateZones:
      Color: "0.0, 1.0, 0.0, 0.7" 
 
      # Story-critical POI: Remove neutral-aggressive creatures for player safety
-   - SpawnAt: [TalonMain]
+   - SpawnAt: [R2TalonMain]
      Radius: 100
      RadiusRandom: 0
      RateMultiplyerCenter: 0
@@ -1110,7 +1110,7 @@ SpawnZones:
 
 
      # TALON herders ====
-   - SpawnAt: [TalonMain]
+   - SpawnAt: [R2TalonMain]
      BiomesExcluded: [ Mountains, HighMountains, Glacier, GlacierSnow, Grove, Crashsite, Crashsite_1, Radiated, RadiatedFog ]
      Radius: 1200
      RadiusRandom: 50
@@ -1131,7 +1131,7 @@ SpawnZones:
          DelayMinMax: [200, 240]
 
      # TALON guards
-   - SpawnAt: [TalonMain]
+   - SpawnAt: [R2TalonMain]
      BiomesExcluded: [ HighMountains, Glacier, GlacierSnow, Radiated, RadiatedFog ]
      Radius: 250
      RadiusRandom: 0
@@ -1148,7 +1148,7 @@ SpawnZones:
 
 
      # TALON guards: Very high spawn chance 'at the gates'
-   - SpawnAt: [TalonMain]
+   - SpawnAt: [R2TalonMain]
      BiomesExcluded: [ HighMountains, Glacier, GlacierSnow, Radiated, RadiatedFog ]
      Radius: 75
      RadiusRandom: 0
@@ -1165,7 +1165,7 @@ SpawnZones:
 
 
      # TALON farmers
-   - SpawnAt: [TalonAux, TalonFarm]
+   - SpawnAt: [R2TalonAux, R2TalonFarm]
      Radius: 75
      RadiusRandom: 25
      RateMultiplyerCenter: 1.0

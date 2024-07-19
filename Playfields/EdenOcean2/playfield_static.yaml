@@ -539,7 +539,7 @@ POIs:
        # ================================
         # POI amount scales with planet size 
         # Random tribal villages scattered around planet
-        - GroupName: TalonMain
+        - GroupName: R2TalonMain
           Faction: Talon
           # NoShieldReload: True
           Biome: [ Forest, DeepForest, TropicalForest ]
@@ -552,21 +552,6 @@ POIs:
           Properties: 
             - Key: MapMarker
               Value: Neutral
-            - Key: RegenAfter
-              Value: 720
-
-# Talon Fishing Boat
-        - GroupName: Eden_TalFishingBoat
-          Faction: Talon
-          PlaceAt: OnWater
-          Biome: [Deepwater, Water, OpenSea]
-          # NoShieldReload: True
-          CountMinMax: [ 1, 1 ]
-          DroneProb: 0.0
-          DronesMinMax: [ 1, 1 ]
-          ReserveCount: 0
-          TroopTransport: False
-          Properties:
             - Key: RegenAfter
               Value: 720
 
@@ -667,6 +652,7 @@ POIs:
           Faction: Zirax
           # NoShieldReload: True
           CountMinMax: [ 2, 3 ]
+          IsScalingCount: True
           DroneProb: 0.8
           DronesMinMax: [ 1, 2 ]
           ReserveCount: 3
@@ -680,7 +666,7 @@ POIs:
         - GroupName: R2EpsilonAuxT2
           Faction: Zirax
           # NoShieldReload: True
-          CountMinMax: [ 5, 7 ]
+          CountMinMax: [ 3, 4 ]
           IsScalingCount: True
           DroneProb: 0.8
           DronesMinMax: [ 4, 6 ]
@@ -724,48 +710,56 @@ POIs:
             - Key: RegenAfter
               Value: 4320
 
-# Black cult POIs
-        - GroupName: Eden_NecroAuxT1
-          Faction: Alien
+# Random Black Cult POIs
+        - GroupName: RE2_NecroAuxT1
+          Faction: Eden_Abandoned
           FactionTerritory: [Warlord, Xenu]
-          # NoShieldReload: True
-          IsImportant: True
-          CountMinMax: [ 0, 1 ]
-          DroneProb: 1
-          DronesMinMax: [ 2, 4 ]
-          ReserveCount: 4
-          TroopTransport: True
-          Properties: 
-            - Key: RegenAfter
-              Value: 720
-
-        - GroupName: Eden_NecroAuxT1
-          Faction: Alien
-          FactionTerritory: [Warlord, Xenu]
-          # NoShieldReload: True
-          CountMinMax: [ 1, 2 ]
-          DroneProb: 0.8
+          AvoidFactionTerritory: True
+          NoShieldReload: True # Needed for Black Cult POIs
+          CountMinMax: [ 0, 2 ]
+          IsScalingCount: True
+          DroneProb: 0.5
           DronesMinMax: [ 1, 2 ]
-          ReserveCount: 3
-          TroopTransport: True 
-          SpawnPOINear: [Eden_NecroAuxT1]
-          SpawnPOINearRange: [100, 250]
-          Properties: 
-            - Key: RegenAfter
-              Value: 720
-
-        - GroupName: Eden_NecroDefenseT1
-          Faction: Alien
-          FactionTerritory: [Warlord, Xenu]
-          # NoShieldReload: True
-          CountMinMax: [ 2, 3 ]
-          DroneProb: 0.8
-          DronesMinMax: [ 1, 2 ]
-          ReserveCount: 3
+          ReserveCount: 1
           TroopTransport: False
-          SpawnPOINear: [Eden_NecroAuxT1]
-          SpawnPOINearRange: [200, 350]
-          Properties: 
+          SpawnPOIAvoid: [RE2_NecroAuxT2, RE2_NecroMain]
+          SpawnPOIAvoidDistance: 3000
+          Properties:
+            - Key: RegenAfter
+              Value: 720
+
+        - GroupName: RE2_NecroDefenseT1
+          Faction: Eden_Abandoned
+          FactionTerritory: [Warlord, Xenu]
+          NoShieldReload: True # Needed for Black Cult POIs
+          CountMinMax: [ 1, 2 ]
+          DroneProb: 0.5
+          DronesMinMax: [ 1, 1 ]
+          ReserveCount: 0
+          TroopTransport: False
+          SpawnPOINear: [RE2_NecroMain]
+          SpawnPOINearRange: [400, 600]
+          SpawnPOIAvoid: [RE2_NecroAuxT1]
+          SpawnPOIAvoidDistance: 250
+          Properties:
+            - Key: RegenAfter
+              Value: 720
+
+# Random Black Cult POIs in Zirax territory
+        - GroupName: RE2_NecroAuxT1
+          Faction: Eden_Abandoned
+          FactionTerritory: [Xenu]
+          AvoidFactionTerritory: True
+          NoShieldReload: True # Needed for Black Cult POIs
+          CountMinMax: [ 1, 2 ]
+          IsScalingCount: True
+          DroneProb: 0.5
+          DronesMinMax: [ 1, 2 ]
+          ReserveCount: 1
+          TroopTransport: False
+          SpawnPOIAvoid: [RE2_NecroAuxT2, RE2_NecroMain]
+          SpawnPOIAvoidDistance: 3000
+          Properties:
             - Key: RegenAfter
               Value: 720
 
@@ -921,29 +915,8 @@ DroneBaseSetup:
                     Amount: 4
                     Type: FighterDrone
 
-# Guarding drone base
-              - Name: R2PVZiraxT0
-                Faction: Zirax
-                CountMinMax: [0, 1]
-                LevelMod: 2
-                FixedMaxSpeed: 30
-                DelayBetweenRespawn: 600
-                DelayBeforeSelfDestruction: 1800
-                IsRespawnAfterDestruction: False
-                RangePatrolTask:
-                  POINameAsPositionRef: [R2DroneBase]
-                  Radius: 2000
-                  DistToGround: 200
-                Properties:
-                  - Key: Discovery
-                    Value: False
-                Stock:
-                  - Name: DroneHoverZiraxLaser
-                    Amount: 0
-                    Type: FighterDrone
-
 # Patrolling whole planet.
-              - Name: R2PVZiraxT0
+              - Name: R2PVZiraxT1
                 Faction: Zirax
                 CountMinMax: [0, 1]
                 LevelMod: 2
@@ -966,12 +939,12 @@ DroneBaseSetup:
                     Amount: 0
                     Type: FighterDrone
 
-# Patrolling whole planet.
+# Patrolling whole planet. Only in Zirax territory.
               - Name: R2PVZiraxT1
-                Faction: Zirax
+                Faction: Xenu
                 CountMinMax: [0, 1]
                 LevelMod: 2
-                FixedMaxSpeed: 20
+                FixedMaxSpeed: 50
                 DelayBetweenRespawn: 600
                 DelayBeforeSelfDestruction: 1800
                 IsRespawnAfterDestruction: False
@@ -1026,7 +999,7 @@ SpawnZones:
          Amount: 200
          Period: Always
          DelayMinMax: [-1, -1]
-   - SpawnAt: [TalonMain]
+   - SpawnAt: [R2TalonMain]
      BiomesExcluded: [ LowMountains, Mountains, DeepWater ]
      Radius: 500
      RadiusRandom: 50

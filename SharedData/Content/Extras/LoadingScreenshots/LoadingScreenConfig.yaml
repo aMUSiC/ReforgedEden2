@@ -5,19 +5,22 @@
 # ---------------------------------------------------------------------------------------
 
 # Overlay title
-Title: <b><#00ffff>Reforged Eden 2 Beta</color></b> <size=65%><#ffffff>(build 15)</color></size>
+Title: <b><#00ffff>Reforged Eden 2 Beta</color></b> <size=65%><#ffffff>(build 16)</color></size>
 
 # Overlay body (typically multi-line text)
 # If commented out, only the title will be displayed
 Body: |
-  <size=135%><#ffffff><b>June 25:</b></color></size>
-  <size=85%><b>Welcome to beta! The scenario should be stable enough for a proper survival play through or creative use in singleplayer and multiplayer.</b></size>
-  <size=85%>•<indent=3%>Updated Rados Foundry found on lava and hell class planets.</indent></size>
-  <size=85%>•<indent=3%>Added new decorative cables to ship deco blocks.</indent></size>
-  <size=85%>•<indent=3%>Added new trap blocks for POI use.</indent></size>
-  <size=85%>•<indent=3%>Misc fixes. See Change Notes on the Workshop for details.</indent></size>
+  <size=135%><#ffffff><b>July 17:</b></color></size>
+  <size=85%>•<indent=3%>Added new experimental feature: Micro-Jump Drive.</indent></size>
+  <size=85%>•<indent=3%>Added new effect projectors.</indent></size>
+  <size=85%>•<indent=3%>Updated Polaris orbital trading stations.</indent></size>
+  <size=85%>•<indent=3%>Added Syndicate Casino and Pentaxid Mining Facility to habitable star systems.</indent></size>
+  <size=85%>•<indent=3%>Added new weapon mod traders that can repair epic weapons and updated mod effects.</indent></size>
+  <size=85%>•<indent=3%>Added new weapon models Gauss Shotgun, Syndicate Uzi, and Light Scout Rifle and rebalanced stats.</indent></size>
+  <size=85%>•<indent=3%>Added new specialized armor sold at ServantCorp traders.</indent></size>
+  <size=85%>•<indent=3%>Updated POIs with new troops and blocks.</indent></size>
+  <size=85%>•<indent=3%>Many, many more updates and fixes. This is a large update.</indent></size>
   
-  <size=85%><#ffffff>REMINDER: You can adjust enemy difficulty in your difficulty settings to change NPC health and damage scaling.</size>
   <size=85%><#ffff00>Reforged Eden 2 is currently in Beta. You may encounter bugs and other problems while playing. Please leave feedback on the workshop and report any issues you encounter on GitHub.</size>
   
 # To show a certain image at the start of each loading image sequence, specify the respective file name

@@ -1059,75 +1059,11 @@ DroneBaseSetup:
               Type: FighterDrone
             Properties:
               - Key: MapDistance
-                Value: 3000
+                Value: 6000
               - Key: HudDistance
-                Value: 3000
+                Value: 6000
               - Key: AIManPatrolFactions
                 Value: "Warlord, Eden_Resource"
-              - Key: AIManMaxPursuitRange
-                Value: 7500
-
-# Tesch
-          - Name: [OPVTesch]
-            Faction: Tesch
-            CountMinMax: [1, 1]
-            Probability: 0.75
-            CanNotBeControlledByMasterAI: False
-            FixedMaxSpeed: [20, 30]
-            Mission: SpacePatrol
-            MissionDescription:
-              DelayBetweenRespawnMinMax: [3600, 3600]
-              DelayBeforeSelfDestructionMinMax: [3600, 3600]
-              IsRespawnAfterDestruction: True
-              RadiusMinMax: [750, 1500]
-              POINameAsPositionRef: [Eden_BA_DummyPOI]
-              Position:
-                PosXZMinMax: [1000, 2000]
-                PosYMax: 500
-            StockDescription:
-              Name: [SpaceDroneLaser, SpaceDronePlasma]
-              AmountMinMax: [2, 4]
-              ExtraMinMax: [0,0]
-              Type: FighterDrone
-            Properties:
-              - Key: MapDistance
-                Value: 3000
-              - Key: HudDistance
-                Value: 3000
-              - Key: AIManPatrolFactions
-                Value: "Eden_Resource"
-              - Key: AIManMaxPursuitRange
-                Value: 7500
-
-# Wastelanders
-          - Name: [OPVWST]
-            Faction: Wastelanders
-            CountMinMax: [1, 1]
-            Probability: 0.75
-            CanNotBeControlledByMasterAI: False
-            FixedMaxSpeed: [20, 30]
-            Mission: SpacePatrol
-            MissionDescription:
-              DelayBetweenRespawnMinMax: [3600, 3600]
-              DelayBeforeSelfDestructionMinMax: [3600, 3600]
-              IsRespawnAfterDestruction: True
-              RadiusMinMax: [750, 1500]
-              POINameAsPositionRef: [Eden_BA_DummyPOI]
-              Position:
-                PosXZMinMax: [1000, 2000]
-                PosYMax: 500
-            StockDescription:
-              Name: [SpaceDroneLaser, SpaceDronePlasma]
-              AmountMinMax: [2, 4]
-              ExtraMinMax: [0,0]
-              Type: FighterDrone
-            Properties:
-              - Key: MapDistance
-                Value: 3000
-              - Key: HudDistance
-                Value: 3000
-              - Key: AIManPatrolFactions
-                Value: "Eden_Resource"
               - Key: AIManMaxPursuitRange
                 Value: 7500
 
@@ -1155,9 +1091,9 @@ DroneBaseSetup:
               Type: FighterDrone
             Properties:
               - Key: MapDistance
-                Value: 3000
+                Value: 6000
               - Key: HudDistance
-                Value: 3000
+                Value: 6000
               - Key: AIManPatrolFactions
                 Value: "Zirax, Eden_Resource"
               - Key: AIManMaxPursuitRange
@@ -1185,6 +1121,10 @@ DroneBaseSetup:
               ExtraMinMax: [0,0]
               Type: FighterDrone
             Properties:
+              - Key: MapDistance
+                Value: 6000
+              - Key: HudDistance
+                Value: 6000
               - Key: AIManMaxPursuitRange
                 Value: 50000
 
@@ -1209,6 +1149,10 @@ DroneBaseSetup:
               ExtraMinMax: [0,0]
               Type: FighterDrone
             Properties:
+              - Key: MapDistance
+                Value: 6000
+              - Key: HudDistance
+                Value: 6000
               - Key: AIManMaxPursuitRange
                 Value: 50000
 
@@ -1234,6 +1178,10 @@ DroneBaseSetup:
               ExtraMinMax: [0,0]
               Type: FighterDrone
             Properties:
+              - Key: MapDistance
+                Value: 6000
+              - Key: HudDistance
+                Value: 6000
               - Key: AIManPatrolFactions
                 Value: "Eden_Resource"
               - Key: AIManMaxPursuitRange
@@ -1275,68 +1223,13 @@ DroneBaseSetup:
                 # Value: 3000
               # - Key: AIManPatrolGroups #which POI groups can the vessel patrol? Asteroids will be ignored
                 # Value: "Eden_BA_DummyPOI2"
+              - Key: MapDistance
+                Value: 6000
+              - Key: HudDistance
+                Value: 6000
               - Key: AIManPatrolFactions #POI's of which factions can be patrolled?
                 Value: "Eden_Resource"
               # - Key: AIManPatrolFactions #POI's of which factions can be patrolled?
                 # Value: "Pirates"
               - Key: AIManMaxPursuitRange
                 Value: 5000
-
-# Kriel
-          - Name: [Eden_OPVKrielBlockadeT1]
-            Faction: Kriel
-            CountMinMax: [2, 4]
-            Probability: 1
-            CanNotBeControlledByMasterAI: False
-            FixedMaxSpeed: [100, 100]
-            Mission: SpacePatrol
-            MissionDescription:
-              DelayBetweenRespawnMinMax: [3500, 4320]
-              DelayBeforeSelfDestructionMinMax: [3600, 3600]
-              IsRespawnAfterDestruction: False
-              RadiusMinMax: [500, 2500]
-              # POINameAsPositionRef: [Eden_GasCloudOrangeL]
-              POINameAsPositionRef: [Eden_BA_DummyPOI]
-              Position:
-                PosXZMinMax: [750, 2000]
-                PosYMax: 500
-            StockDescription:
-              Name: [SpaceDroneKrielLaser]
-              AmountMinMax: [12, 20]
-              ExtraMinMax: [0,0]
-              Type: FighterDrone
-            Properties:
-              # - Key: AIManPatrolGroups #which POI groups can the vessel patrol? Asteroids will be ignored
-                # Value: "Eden_BA_DummyPOI2"
-              - Key: AIManPatrolFactions
-                Value: "Eden_Resource, Kriel"
-              - Key: AIManMaxPursuitRange
-                Value: 10000
-
-# TheLegacy
-          - Name: [Eden_OPVLegacyMiner]
-            Faction: TheLegacy
-            CountMinMax: [1, 1]
-            Probability: 1
-            CanNotBeControlledByMasterAI: False
-            FixedMaxSpeed: [15, 20]
-            Mission: SpacePatrol
-            MissionDescription:
-              DelayBetweenRespawnMinMax: [3600, 3600]
-              DelayBeforeSelfDestructionMinMax: [3600, 3600]
-              IsRespawnAfterDestruction: False
-              RadiusMinMax: [1000, 1500]
-              POINameAsPositionRef: [Eden_BA_DummyPOI]
-              Position:
-                PosXZMinMax: [1000, 1500]
-                PosYMax: 500
-            StockDescription:
-              Name: [SpaceDroneLaser, SpaceDronePlasma]
-              AmountMinMax: [0, 0]
-              ExtraMinMax: [0,0]
-              Type: FighterDrone
-            Properties:
-              - Key: AIManPatrolFactions
-                Value: "Eden_Resource"
-              - Key: AIManMaxPursuitRange
-                Value: 7500

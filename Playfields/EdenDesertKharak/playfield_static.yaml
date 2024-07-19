@@ -1492,7 +1492,7 @@ POIs:
 
 # =============================================== Faction Talon Main
 # ====================== Main Village. 50% chance. It's a harsh place.
-        - GroupName: TalonStoneMain
+        - GroupName: R2TalonStoneMain
           Faction: Talon
           IsCommandCenter: True
           IsImportant: True
@@ -1507,33 +1507,33 @@ POIs:
             - Key: RegenAfter
               Value: 4320
 
-        - GroupName: TalonAuxSand
+        - GroupName: R2TalonAuxSand
           Faction: Talon
           CountMinMax: [ 3, 5 ]
           DroneProb: 0
           DronesMinMax: [ 1, 1 ]
           ReserveCount: 0
           TroopTransport: False
-          SpawnPOINear: [TalonStoneMain]
+          SpawnPOINear: [R2TalonStoneMain]
           SpawnPOINearRange: [100, 200]
           Properties:
             - Key: RegenAfter
               Value: 720
 
-        - GroupName: TalonStoneFarm
+        - GroupName: R2TalonStoneFarm
           Faction: Talon
           CountMinMax: [ 3, 5 ]
           DroneProb: 0
           DronesMinMax: [ 1, 1 ]
           ReserveCount: 0
           TroopTransport: False
-          SpawnPOINear: [TalonStoneMain]
+          SpawnPOINear: [R2TalonStoneMain]
           SpawnPOINearRange: [150, 300]
           Properties:
             - Key: RegenAfter
               Value: 720
 
-        - GroupName: TalonDefenseSand
+        - GroupName: R2TalonDefenseSand
           Faction: Talon
           Territory: False
           CountMinMax: [ 3, 4 ]
@@ -1541,14 +1541,14 @@ POIs:
           DronesMinMax: [ 1, 1 ]
           ReserveCount: 0
           TroopTransport: False
-          SpawnPOINear: [TalonStoneMain]
+          SpawnPOINear: [R2TalonStoneMain]
           SpawnPOINearRange: [150, 300]
           Properties:
             - Key: RegenAfter
               Value: 720
 
 # Far reaching guard towers
-        - GroupName: TalonDefenseSand
+        - GroupName: R2TalonDefenseSand
           Faction: Talon
           Territory: False
           CountMinMax: [ 0, 4 ]
@@ -1556,16 +1556,16 @@ POIs:
           DronesMinMax: [ 1, 1 ]
           ReserveCount: 0
           TroopTransport: False
-          SpawnPOIAvoid: [TalonDefenseSand]
+          SpawnPOIAvoid: [R2TalonDefenseSand]
           SpawnPOIAvoidDistance: 500
-          SpawnPOINear: [TalonStoneMain]
+          SpawnPOINear: [R2TalonStoneMain]
           SpawnPOINearRange: [750, 1000]
           Properties:
             - Key: RegenAfter
               Value: 720
 
 # ====================== Oasis Village. 50% chance.
-        - GroupName: TalonMain
+        - GroupName: R2TalonMain
           Faction: Talon
           Biome: [ Forest, DeepForest, Oasis ]
           IsCommandCenter: True
@@ -1579,20 +1579,20 @@ POIs:
             - Key: RegenAfter
               Value: 4320
 
-        - GroupName: TalonAux
+        - GroupName: R2TalonAux
           Faction: Talon
           CountMinMax: [ 2, 3 ]
           DroneProb: 0
           DronesMinMax: [ 1, 1 ]
           ReserveCount: 0
           TroopTransport: False
-          SpawnPOINear: [TalonMain]
+          SpawnPOINear: [R2TalonMain]
           SpawnPOINearRange: [100, 200]
           Properties:
             - Key: RegenAfter
               Value: 720
 
-        - GroupName: TalonFarmhouse
+        - GroupName: R2TalonFarmhouse
           Faction: Talon
           Biome: [ Forest, DeepForest, Oasis ]
           CountMinMax: [ 2, 3 ]
@@ -1600,13 +1600,13 @@ POIs:
           DronesMinMax: [ 1, 1 ]
           ReserveCount: 0
           TroopTransport: False
-          SpawnPOINear: [TalonMain]
+          SpawnPOINear: [R2TalonMain]
           SpawnPOINearRange: [150, 300]
           Properties:
             - Key: RegenAfter
               Value: 720
 
-        - GroupName: TalonFarm
+        - GroupName: R2TalonFarm
           Faction: Talon
           Biome: [ Forest, DeepForest, Oasis ]
           CountMinMax: [ 6, 8 ]
@@ -1614,7 +1614,7 @@ POIs:
           DronesMinMax: [ 1, 1 ]
           ReserveCount: 0
           TroopTransport: False
-          SpawnPOINear: [TalonMain]
+          SpawnPOINear: [R2TalonMain]
           SpawnPOINearRange: [150, 300]
           Properties:
             - Key: RegenAfter
@@ -1631,7 +1631,7 @@ POIs:
           TroopTransport: False
           SpawnPOIAvoid: [Eden_DummyRados, Eden_DummyPolaris]
           SpawnPOIAvoidDistance: 8000 # Won't show up if there's a Rados or Polaris mining operation on the planet
-          SpawnPOINear: [TalonStoneMain]
+          SpawnPOINear: [R2TalonStoneMain]
           SpawnPOINearRange: [1500, 100000]
           SpawnResource: ["CopperResource:1-2","CobaltResource:1-2","NeodymiumResource:1-2"]
           SpawnResourceRange: [100,450]
@@ -1639,7 +1639,7 @@ POIs:
             - Key: RegenAfter
               Value: 4320
 
-        - GroupName: TalonAuxSand
+        - GroupName: R2TalonAuxSand
           Faction: Talon
           CountMinMax: [ 2, 3 ]
           DroneProb: 0
@@ -1992,7 +1992,7 @@ POIs:
           DronesMinMax: [ 1, 2 ]
           ReserveCount: 2
           TroopTransport: False
-          SpawnPOIAvoid: [TalonMain, TalonAux]
+          SpawnPOIAvoid: [R2TalonMain, R2TalonAux]
           SpawnPOIAvoidDistance: 1500
           SpawnResource: ["NeodymiumResource:0-1"]
           SpawnResourceRange: [150,600]
@@ -2004,7 +2004,7 @@ POIs:
             - Key: RegenAfter
               Value: 4320
 
-        - GroupName: TalonStoneRuin
+        - GroupName: R2TalonStoneRuin
           Faction: None
           CountMinMax: [ 8, 12 ]
           DroneProb: 0
@@ -2031,7 +2031,7 @@ POIs:
           DronesMinMax: [ 1, 2 ]
           ReserveCount: 2
           TroopTransport: False
-          SpawnPOIAvoid: [TalonMain, TalonAux, Eden_TalonStoneRuinBuried]
+          SpawnPOIAvoid: [R2TalonMain, R2TalonAux, Eden_TalonStoneRuinBuried]
           SpawnPOIAvoidDistance: 1500
           SpawnResource: ["NeodymiumResource:0-1"]
           SpawnResourceRange: [150,600]
@@ -2043,7 +2043,7 @@ POIs:
             - Key: RegenAfter
               Value: 4320
 
-        - GroupName: TalonStoneRuin
+        - GroupName: R2TalonStoneRuin
           Faction: None
           CountMinMax: [ 8, 12 ]
           DroneProb: 0
@@ -2437,7 +2437,7 @@ SpawnZones:
 
 # ====================== Spawn Zones Talon
 # Main village spawns closer to the village.
-   - SpawnAt: [TalonMain, TalonStoneMain, TalonSnowMain]
+   - SpawnAt: [R2TalonMain, R2TalonStoneMain, R2TalonSnowMain]
      BiomesExcluded: [ LowMountains, Mountains, Radiated, RadiatedFog ]
      Radius: 500
      RadiusRandom: 50
@@ -2453,7 +2453,7 @@ SpawnZones:
          DelayMinMax: [200, 240]
 
 # Main village spawns further from the villages. Long distance hunters.
-   - SpawnAt: [TalonMain, TalonStoneMain, TalonSnowMain]
+   - SpawnAt: [R2TalonMain, R2TalonStoneMain, R2TalonSnowMain]
      BiomesExcluded: [ LowMountains, Mountains, Radiated, RadiatedFog ]
      Radius: 1500
      RadiusRandom: 50
@@ -2469,7 +2469,7 @@ SpawnZones:
          DelayMinMax: [200, 240]
 
 # Talon near aux POIs.
-   - SpawnAt: [TalonAux, TalonAuxSand, TalonSnow]
+   - SpawnAt: [R2TalonAux, R2TalonAuxSand, R2TalonSnow]
      BiomesExcluded: [ LowMountains, Mountains, Radiated, RadiatedFog ]
      Radius: 250
      RadiusRandom: 50
@@ -2490,7 +2490,7 @@ SpawnZones:
          DelayMinMax: [200, 240]
 
 # Talon farmers.
-   - SpawnAt: [TalonFarmhouse, TalonFarm, TalonStoneFarm, TalonSnowFarm]
+   - SpawnAt: [R2TalonFarmhouse, R2TalonFarm, R2TalonStoneFarm, R2TalonSnowFarm]
      BiomesExcluded: [ LowMountains, Mountains, Radiated, RadiatedFog ]
      Radius: 100
      RadiusRandom: 25

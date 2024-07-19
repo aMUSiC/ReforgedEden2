@@ -1668,7 +1668,7 @@ POIs:
 
 # =============================================== Faction Talon Main
 # ---------------------- Main Village
-        - GroupName: TalonMain
+        - GroupName: R2TalonMain
           Faction: Talon
           IsCommandCenter: True
           IsImportant: True
@@ -1693,13 +1693,13 @@ POIs:
           DronesMinMax: [ 1, 1 ]
           ReserveCount: 0
           TroopTransport: False
-          SpawnPOINear: [TalonMain]
+          SpawnPOINear: [R2TalonMain]
           SpawnPOINearRange: [75, 200]
           Properties:
             - Key: RegenAfter
               Value: 720
 
-        - GroupName: TalonAux
+        - GroupName: R2TalonAux
           Faction: Talon
           BiomesExcluded: [ PolarSnow, Radiated, RadiatedFog ]
           CountMinMax: [ 3, 5 ]
@@ -1707,13 +1707,13 @@ POIs:
           DronesMinMax: [ 1, 1 ]
           ReserveCount: 0
           TroopTransport: False
-          SpawnPOINear: [TalonMain]
+          SpawnPOINear: [R2TalonMain]
           SpawnPOINearRange: [75, 200]
           Properties:
             - Key: RegenAfter
               Value: 720
 
-        - GroupName: TalonFarm
+        - GroupName: R2TalonFarm
           Faction: Talon
           BiomesExcluded: [ PolarSnow, Radiated, RadiatedFog ]
           CountMinMax: [ 3, 5 ]
@@ -1721,13 +1721,13 @@ POIs:
           DronesMinMax: [ 1, 1 ]
           ReserveCount: 0
           TroopTransport: False
-          SpawnPOINear: [TalonMain]
+          SpawnPOINear: [R2TalonMain]
           SpawnPOINearRange: [150, 300]
           Properties:
             - Key: RegenAfter
               Value: 720
 
-        - GroupName: TalonDefense
+        - GroupName: R2TalonDefense
           Faction: Talon
           BiomesExcluded: [ PolarSnow, Radiated, RadiatedFog ]
           CountMinMax: [ 3, 4 ]
@@ -1735,7 +1735,7 @@ POIs:
           DronesMinMax: [ 1, 1 ]
           ReserveCount: 0
           TroopTransport: False
-          SpawnPOINear: [TalonMain]
+          SpawnPOINear: [R2TalonMain]
           SpawnPOINearRange: [250, 500]
           Properties:
             - Key: RegenAfter
@@ -1754,7 +1754,7 @@ POIs:
           DronesMinMax: [ 1, 2 ]
           ReserveCount: 2
           TroopTransport: False
-          SpawnPOIAvoid: [TalonMain]
+          SpawnPOIAvoid: [R2TalonMain]
           SpawnPOIAvoidDistance: 1000
           SpawnResource: ["PromethiumResource:0-1"]
           SpawnResourceRange: [150,600]
@@ -1780,7 +1780,7 @@ POIs:
             - Key: RegenAfter
               Value: 720
 
-        - GroupName: TalonAux
+        - GroupName: R2TalonAux
           Faction: Talon
           BiomesExcluded: [ PolarSnow, Radiated, RadiatedFog ]
           CountMinMax: [ 1, 2 ]
@@ -1794,7 +1794,7 @@ POIs:
             - Key: RegenAfter
               Value: 720
 
-        - GroupName: TalonFarmhouse
+        - GroupName: R2TalonFarmhouse
           Faction: Talon
           BiomesExcluded: [ PolarSnow, Radiated, RadiatedFog ]
           CountMinMax: [ 1, 2 ]
@@ -1808,7 +1808,7 @@ POIs:
             - Key: RegenAfter
               Value: 720
 
-        - GroupName: TalonFarm
+        - GroupName: R2TalonFarm
           Faction: Talon
           BiomesExcluded: [ PolarSnow, Radiated, RadiatedFog ]
           CountMinMax: [ 3, 6 ]
@@ -1822,7 +1822,7 @@ POIs:
             - Key: RegenAfter
               Value: 720
 
-        - GroupName: TalonDefense
+        - GroupName: R2TalonDefense
           Faction: Talon
           BiomesExcluded: [ PolarSnow, Radiated, RadiatedFog ]
           CountMinMax: [ 2, 3 ]
@@ -1857,61 +1857,156 @@ POIs:
               Value: 4320
 
 # Black cult POIs
-        - GroupName: Eden_NecroAuxT1
-          Faction: Alien
+# T2 compound
+        - GroupName: RE2_NecroAuxT2
+          Faction: Eden_Abandoned
           FactionTerritory: [Warlord, Xenu]
-          # NoShieldReload: True
+          AvoidFactionTerritory: True
+          NoShieldReload: True # Needed for Black Cult POIs
           IsImportant: True
           CountMinMax: [ 0, 1 ]
           DroneProb: 1
-          DronesMinMax: [ 2, 4 ]
-          ReserveCount: 4
-          TroopTransport: True
-          Properties: 
-            - Key: RegenAfter
-              Value: 720
-
-        - GroupName: Eden_NecroAuxT1
-          Faction: Alien
-          FactionTerritory: [Warlord, Xenu]
-          # NoShieldReload: True
-          CountMinMax: [ 1, 2 ]
-          DroneProb: 0.8
-          DronesMinMax: [ 1, 2 ]
-          ReserveCount: 3
-          TroopTransport: True 
-          SpawnPOINear: [Eden_NecroAuxT1]
-          SpawnPOINearRange: [100, 250]
-          Properties: 
-            - Key: RegenAfter
-              Value: 720
-
-        - GroupName: Eden_NecroDefenseT1
-          Faction: Alien
-          FactionTerritory: [Warlord, Xenu]
-          # NoShieldReload: True
-          CountMinMax: [ 2, 3 ]
-          DroneProb: 0.8
-          DronesMinMax: [ 1, 2 ]
-          ReserveCount: 3
+          DronesMinMax: [ 2, 3 ]
+          ReserveCount: 2
           TroopTransport: False
-          SpawnPOINear: [Eden_NecroAuxT1]
-          SpawnPOINearRange: [200, 350]
+          SpawnPOIAvoid: [R2DroneBase, R2DroneBaseT5, R2XenuMain, R2XenuAuxT2, R2EpsilonMain, R2EpsilonAuxT2, R2RadosMainT3, R2RadosAuxT2, R2RadosMainT3Snow, R2RadosAuxT2Snow, R2RadosMainT3Desert, R2RadosAuxT2Desert, R2TradeTower, R2TraderMain, Eden_PolSwampMain, R2PolarisMain, R2PolarisAuxT2]
+          SpawnPOIAvoidDistance: 750
+          Properties:
+            - Key: RegenAfter
+              Value: 4320
+
+        - GroupName: RE2_NecroAuxT1
+          Faction: Eden_Abandoned
+          FactionTerritory: [Warlord, Xenu]
+          NoShieldReload: True # Needed for Black Cult POIs
+          CountMinMax: [ 1, 2 ]
+          DroneProb: 0
+          DronesMinMax: [ 1, 1 ]
+          ReserveCount: 0
+          TroopTransport: False
+          SpawnPOINear: [RE2_NecroAuxT2]
+          SpawnPOINearRange: [200, 375]
           Properties: 
             - Key: RegenAfter
               Value: 720
 
-        - GroupName: Eden_NecroAuxT2
-          Faction: Alien
-          FactionTerritory: [Xenu]
-          # NoShieldReload: True
+        - GroupName: RE2_NecroDefenseT1
+          Faction: Eden_Abandoned
+          FactionTerritory: [Warlord, Xenu]
+          NoShieldReload: True # Needed for Black Cult POIs
+          CountMinMax: [ 2, 3 ]
+          DroneProb: 0.5
+          DronesMinMax: [ 1, 1 ]
+          ReserveCount: 0
+          TroopTransport: False
+          SpawnPOINear: [RE2_NecroAuxT2]
+          SpawnPOINearRange: [400, 600]
+          SpawnPOIAvoid: [RE2_NecroDefenseT1]
+          SpawnPOIAvoidDistance: 250
+          Properties: 
+            - Key: RegenAfter
+              Value: 720
+
+# Main compound. Low chance, only appears if the AuxT2 compound doesn't spawn, or on larger planets.
+        - GroupName: RE2_NecroMain
+          Faction: Eden_Abandoned
+          FactionTerritory: [Warlord, Xenu]
+          AvoidFactionTerritory: True
+          NoShieldReload: True # Needed for Black Cult POIs
           IsImportant: True
           CountMinMax: [ 0, 1 ]
           DroneProb: 1
           DronesMinMax: [ 2, 4 ]
-          ReserveCount: 4
-          TroopTransport: True
+          ReserveCount: 2
+          TroopTransport: False
+          SpawnPOIAvoid: [Re2_NecroAuxT2]
+          SpawnPOIAvoidDistance: 20000
+          Properties:
+            - Key: RegenAfter
+              Value: 4320
+
+        - GroupName: RE2_NecroAuxT1
+          Faction: Eden_Abandoned
+          FactionTerritory: [Warlord, Xenu]
+          NoShieldReload: True # Needed for Black Cult POIs
+          CountMinMax: [ 1, 2 ]
+          DroneProb: 0
+          DronesMinMax: [ 1, 1 ]
+          ReserveCount: 0
+          TroopTransport: False
+          SpawnPOINear: [RE2_NecroMain]
+          SpawnPOINearRange: [200, 375]
           Properties: 
+            - Key: RegenAfter
+              Value: 720
+
+        - GroupName: RE2_NecroDefenseT1
+          Faction: Eden_Abandoned
+          FactionTerritory: [Warlord, Xenu]
+          NoShieldReload: True # Needed for Black Cult POIs
+          CountMinMax: [ 3, 4 ]
+          DroneProb: 0.5
+          DronesMinMax: [ 1, 1 ]
+          ReserveCount: 0
+          TroopTransport: False
+          SpawnPOINear: [RE2_NecroMain]
+          SpawnPOINearRange: [400, 600]
+          SpawnPOIAvoid: [RE2_NecroDefenseT1]
+          SpawnPOIAvoidDistance: 250
+          Properties:
+            - Key: RegenAfter
+              Value: 720
+
+# Random Black Cult POIs
+        - GroupName: RE2_NecroAuxT2
+          Faction: Eden_Abandoned
+          FactionTerritory: [Warlord, Xenu]
+          AvoidFactionTerritory: True
+          NoShieldReload: True # Needed for Black Cult POIs
+          CountMinMax: [ 0, 1 ]
+          IsScalingCount: True
+          DroneProb: 0.5
+          DronesMinMax: [ 1, 2 ]
+          ReserveCount: 1
+          TroopTransport: False
+          SpawnPOIAvoid: [RE2_NecroAuxT2, RE2_NecroMain]
+          SpawnPOIAvoidDistance: 3000
+          Properties:
+            - Key: RegenAfter
+              Value: 720
+
+        - GroupName: RE2_NecroAuxT1
+          Faction: Eden_Abandoned
+          FactionTerritory: [Warlord, Xenu]
+          AvoidFactionTerritory: True
+          NoShieldReload: True # Needed for Black Cult POIs
+          CountMinMax: [ 0, 2 ]
+          IsScalingCount: True
+          DroneProb: 0.5
+          DronesMinMax: [ 1, 2 ]
+          ReserveCount: 1
+          TroopTransport: False
+          SpawnPOIAvoid: [RE2_NecroAuxT2, RE2_NecroMain]
+          SpawnPOIAvoidDistance: 3000
+          Properties:
+            - Key: RegenAfter
+              Value: 720
+
+# Random Black Cult POIs in Zirax territory
+        - GroupName: RE2_NecroAuxT1
+          Faction: Eden_Abandoned
+          FactionTerritory: [Xenu]
+          AvoidFactionTerritory: True
+          NoShieldReload: True # Needed for Black Cult POIs
+          CountMinMax: [ 1, 2 ]
+          IsScalingCount: True
+          DroneProb: 0.5
+          DronesMinMax: [ 1, 2 ]
+          ReserveCount: 1
+          TroopTransport: False
+          SpawnPOIAvoid: [RE2_NecroAuxT2, RE2_NecroMain]
+          SpawnPOIAvoidDistance: 3000
+          Properties:
             - Key: RegenAfter
               Value: 720
 
@@ -2175,24 +2270,24 @@ POIs:
 
 # =============================================== Faction Talon Random
 # ---------------------- Random Farm Groups
-        - GroupName: TalonFarmhouse
+        - GroupName: R2TalonFarmhouse
           Faction: Talon
           Territory: False
           BiomesExcluded: [ PolarSnow, Radiated, RadiatedFog ]
           CountMinMax: [ 2, 3 ]
           IsScalingCount: True
-          AuxiliaryPOIs: [TalonFarm]
+          AuxiliaryPOIs: [R2TalonFarm]
           DroneProb: 0
           DronesMinMax: [ 1, 1 ]
           ReserveCount: 0
           TroopTransport: False
-          SpawnPOIAvoid: [TalonMain, Eden_DummyTalon]
+          SpawnPOIAvoid: [R2TalonMain, Eden_DummyTalon]
           SpawnPOIAvoidDistance: 750
           Properties:
             - Key: RegenAfter
               Value: 720
 
-        - GroupName: TalonFarm
+        - GroupName: R2TalonFarm
           Faction: Talon
           Territory: False
           IsAuxPOI: True
@@ -2218,7 +2313,7 @@ POIs:
           DronesMinMax: [ 1, 2 ]
           ReserveCount: 2
           TroopTransport: False
-          SpawnPOIAvoid: [TalonMain, TalonAux]
+          SpawnPOIAvoid: [R2TalonMain, R2TalonAux]
           SpawnPOIAvoidDistance: 750
           SpawnResource: ["CobaltResource:0-1"]
           SpawnResourceRange: [150,600]
@@ -2230,7 +2325,7 @@ POIs:
             - Key: RegenAfter
               Value: 4320
 
-        - GroupName: TalonWoodRuin
+        - GroupName: R2TalonWoodRuin
           Faction: None
           CountMinMax: [ 4, 8 ]
           DroneProb: 0
@@ -2258,7 +2353,7 @@ POIs:
           DronesMinMax: [ 1, 2 ]
           ReserveCount: 2
           TroopTransport: False
-          SpawnPOIAvoid: [TalonMain, TalonAux]
+          SpawnPOIAvoid: [R2TalonMain, R2TalonAux]
           SpawnPOIAvoidDistance: 750
           Properties:
             - Key: MapDistance
@@ -2268,7 +2363,7 @@ POIs:
             - Key: RegenAfter
               Value: 4320
 
-        - GroupName: TalonWoodRuin
+        - GroupName: R2TalonWoodRuin
           Faction: None
           PlaceAt: UnderWater
           CountMinMax: [ 4, 8 ]
@@ -2306,7 +2401,7 @@ POIs:
               Value: 4320
 
 # ---------------------- Random Ruins
-        - GroupName: TalonWoodRuin
+        - GroupName: R2TalonWoodRuin
           Faction: None
           PlaceAt: UnderWater, Terrain
           CountMinMax: [ 0, 2 ]
@@ -3247,7 +3342,7 @@ SpawnZones:
 
 # ---------------------- Spawn Zones Talon
 # Main village spawns closer to the village.
-   - SpawnAt: [TalonMain, TalonStoneMain, TalonSnowMain]
+   - SpawnAt: [R2TalonMain, R2TalonStoneMain, R2TalonSnowMain]
      BiomesExcluded: [ LowMountains, Mountains, Radiated, RadiatedFog ]
      Radius: 500
      RadiusRandom: 50
@@ -3263,7 +3358,7 @@ SpawnZones:
          DelayMinMax: [200, 240]
 
 # Main village spawns further from the villages. Long distance hunters.
-   - SpawnAt: [TalonMain, TalonStoneMain, TalonSnowMain]
+   - SpawnAt: [R2TalonMain, R2TalonStoneMain, R2TalonSnowMain]
      BiomesExcluded: [ LowMountains, Mountains, Radiated, RadiatedFog ]
      Radius: 1500
      RadiusRandom: 50
@@ -3279,7 +3374,7 @@ SpawnZones:
          DelayMinMax: [200, 240]
 
 # Talon near aux POIs.
-   - SpawnAt: [TalonAux, TalonAuxSand, TalonSnow]
+   - SpawnAt: [R2TalonAux, R2TalonAuxSand, R2TalonSnow]
      BiomesExcluded: [ LowMountains, Mountains, Radiated, RadiatedFog ]
      Radius: 250
      RadiusRandom: 50
@@ -3300,7 +3395,7 @@ SpawnZones:
          DelayMinMax: [200, 240]
 
 # Talon farmers.
-   - SpawnAt: [TalonFarmhouse, TalonFarm, TalonStoneFarm, TalonSnowFarm]
+   - SpawnAt: [R2TalonFarmhouse, R2TalonFarm, R2TalonStoneFarm, R2TalonSnowFarm]
      BiomesExcluded: [ LowMountains, Mountains, Radiated, RadiatedFog ]
      Radius: 100
      RadiusRandom: 25

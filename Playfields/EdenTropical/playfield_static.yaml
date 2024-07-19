@@ -469,7 +469,7 @@ POIs:
             - Key: RegenAfter
               Value: 720
 
-        - GroupName: TalonFarm
+        - GroupName: R2TalonFarm
           Faction: Talon
           # NoShieldReload: True
           Territory: False
@@ -486,7 +486,7 @@ POIs:
             - Key: RegenAfter
               Value: 720  
  
-        - GroupName: TalonDefense
+        - GroupName: R2TalonDefense
           Faction: Talon
           # NoShieldReload: True  
           # Territory: False        
@@ -516,7 +516,7 @@ POIs:
             - Key: RegenAfter
               Value: 720
 
-        - GroupName: TalonStoneMain
+        - GroupName: R2TalonStoneMain
           Faction: Talon
           # NoShieldReload: True  
           IsImportant: True
@@ -533,11 +533,11 @@ POIs:
             - Key: RegenAfter
               Value: 720
  
-        - GroupName: TalonAuxSand
+        - GroupName: R2TalonAuxSand
           Faction: Talon
           # NoShieldReload: True  
           CountMinMax: [ 5, 8 ]
-          SpawnPOINear: [TalonStoneMain]
+          SpawnPOINear: [R2TalonStoneMain]
           SpawnPOINearRange: [100, 200] 
           Properties: 
             - Key: MapDistance
@@ -549,7 +549,7 @@ POIs:
             - Key: RegenAfter
               Value: 720
  
-        - GroupName: TalonDefenseSand
+        - GroupName: R2TalonDefenseSand
           Faction: Talon
           # NoShieldReload: True  
           CountMinMax: [ 5, 6 ]
@@ -605,21 +605,6 @@ POIs:
             - Key: RegenAfter
               Value: 720
 
-# Talon Fishing Boat
-        - GroupName: Eden_TalFishingBoat
-          Faction: Talon
-          PlaceAt: OnWater
-          Biome: [Deepwater, Water, OpenSea]
-          # NoShieldReload: True
-          CountMinMax: [ 1, 1 ]
-          DroneProb: 0.0
-          DronesMinMax: [ 1, 1 ]
-          ReserveCount: 0
-          TroopTransport: False
-          Properties:
-            - Key: RegenAfter
-              Value: 720
-
        # ================================
         # Random Akua resorts in the water
         - GroupName: Eden_AkuaAuxT2Water
@@ -651,18 +636,18 @@ POIs:
 
        # ================================
         # Random tribal villages scattered around planet
-        - GroupName: TalonMain
+        - GroupName: R2TalonMain
           Faction: Talon
           # NoShieldReload: True  
           Biome: [ Forest, DeepForest, CoconutForest, Grove ]
           CountMinMax: [ 3, 4 ]
           IsScalingCount: True
-          AuxiliaryPOIs: [TalonFarm, Ruins, TalonDefense]
+          AuxiliaryPOIs: [R2TalonFarm, Ruins, R2TalonDefense]
           Properties: 
             - Key: RegenAfter
               Value: 720
 
-        - GroupName: TalonFarm
+        - GroupName: R2TalonFarm
           Faction: Talon
           # NoShieldReload: True
           Territory: False         
@@ -696,7 +681,7 @@ POIs:
             - Key: RegenAfter
               Value: 720
  
-        - GroupName: TalonDefense
+        - GroupName: R2TalonDefense
           Faction: Talon
           # NoShieldReload: True
           IsAuxPOI: True
@@ -1129,7 +1114,7 @@ SpawnZones:
          DelayMinMax: [-1, -1]
 
 # Talon villagers
-   - SpawnAt: [TalonMain, TribalBazar, TribalBazarArid]
+   - SpawnAt: [R2TalonMain, TribalBazar, TribalBazarArid]
      BiomesExcluded: [ LowMountains, LowMountains_2, Mountains, MountainsForest ]
      Radius: 500
      RadiusRandom: 50

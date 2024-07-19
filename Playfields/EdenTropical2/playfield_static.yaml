@@ -362,7 +362,7 @@ POIs:
             # - Key: RegenAfter
               # Value: 720
 
-        # - GroupName: TalonFarm
+        # - GroupName: R2TalonFarm
           # Faction: Talon
           # # NoShieldReload: True
           # Territory: False
@@ -377,7 +377,7 @@ POIs:
             # - Key: RegenAfter
               # Value: 720  
  
-        # - GroupName: TalonDefense
+        # - GroupName: R2TalonDefense
           # Faction: Talon
           # # NoShieldReload: True  
           # # Territory: False        
@@ -403,7 +403,7 @@ POIs:
             - Key: RegenAfter
               Value: 720
 
-        - GroupName: TalonStoneMain
+        - GroupName: R2TalonStoneMain
           Faction: Talon
           # NoShieldReload: True  
           IsImportant: True
@@ -420,11 +420,11 @@ POIs:
             - Key: RegenAfter
               Value: 720
  
-        - GroupName: TalonAuxSand
+        - GroupName: R2TalonAuxSand
           Faction: Talon
           # NoShieldReload: True  
           CountMinMax: [ 5, 8 ]
-          SpawnPOINear: [TalonStoneMain]
+          SpawnPOINear: [R2TalonStoneMain]
           SpawnPOINearRange: [100, 200] 
           Properties: 
             - Key: MapDistance
@@ -436,7 +436,7 @@ POIs:
             - Key: RegenAfter
               Value: 720
  
-        - GroupName: TalonDefenseSand
+        - GroupName: R2TalonDefenseSand
           Faction: Talon
           # NoShieldReload: True  
           CountMinMax: [ 5, 6 ]
@@ -511,12 +511,12 @@ POIs:
           Biome: [ Forest, DeepForest, CoconutForest, Grove ]
           CountMinMax: [ 1, 1 ]
           IsScalingCount: True
-          # AuxiliaryPOIs: [TalonWoodRuin]
+          # AuxiliaryPOIs: [R2TalonWoodRuin]
           Properties: 
             - Key: RegenAfter
               Value: 720
 
-        - GroupName: TalonWoodRuin
+        - GroupName: R2TalonWoodRuin
           Faction: None
           CountMinMax: [ 2, 3 ]
           Properties:  
@@ -529,7 +529,7 @@ POIs:
             - Key: RegenAfter
               Value: 720
  
-        # - GroupName: TalonDefense
+        # - GroupName: R2TalonDefense
           # Faction: Talon
           # # NoShieldReload: True
           # IsAuxPOI: True
@@ -550,21 +550,6 @@ POIs:
           Properties: 
             - Key: RegenAfter
               Value: 720  
-
-# Talon Fishing Boat
-        - GroupName: Eden_TalFishingBoat
-          Faction: Talon
-          PlaceAt: OnWater
-          Biome: [Deepwater, Water, OpenSea]
-          # NoShieldReload: True
-          CountMinMax: [ 1, 1 ]
-          DroneProb: 0.0
-          DronesMinMax: [ 1, 1 ]
-          ReserveCount: 0
-          TroopTransport: False
-          Properties:
-            - Key: RegenAfter
-              Value: 720
 
         # Strange Flower Formations
         - GroupName: Eden_CircleBlue

@@ -690,7 +690,7 @@ POIs:
 
 # =============================================== Faction Talon
 # ---------------------- Main Village
-        - GroupName: TalonStoneMain
+        - GroupName: R2TalonStoneMain
           Faction: Talon
           IsImportant: True
           BiomesExcluded: [ Plains ]
@@ -705,40 +705,40 @@ POIs:
             - Key: RegenAfter
               Value: 4320
 
-        - GroupName: TalonAuxSand
+        - GroupName: R2TalonAuxSand
           Faction: Talon
           CountMinMax: [ 3, 5 ]
           DroneProb: 0
           DronesMinMax: [ 1, 1 ]
           ReserveCount: 0
           TroopTransport: False
-          SpawnPOINear: [TalonStoneMain]
+          SpawnPOINear: [R2TalonStoneMain]
           SpawnPOINearRange: [75, 200]
           Properties:
             - Key: RegenAfter
               Value: 720
 
-        - GroupName: TalonStoneFarm
+        - GroupName: R2TalonStoneFarm
           Faction: Talon
           CountMinMax: [ 3, 5 ]
           DroneProb: 0
           DronesMinMax: [ 1, 1 ]
           ReserveCount: 0
           TroopTransport: False
-          SpawnPOINear: [TalonStoneMain]
+          SpawnPOINear: [R2TalonStoneMain]
           SpawnPOINearRange: [150, 300]
           Properties:
             - Key: RegenAfter
               Value: 720
 
-        - GroupName: TalonDefenseSand
+        - GroupName: R2TalonDefenseSand
           Faction: Talon
           CountMinMax: [ 3, 4 ]
           DroneProb: 0
           DronesMinMax: [ 1, 1 ]
           ReserveCount: 0
           TroopTransport: False
-          SpawnPOINear: [TalonStoneMain]
+          SpawnPOINear: [R2TalonStoneMain]
           SpawnPOINearRange: [250, 500]
           Properties:
             - Key: RegenAfter
@@ -756,7 +756,7 @@ POIs:
           DronesMinMax: [ 1, 2 ]
           ReserveCount: 2
           TroopTransport: True
-          SpawnPOIAvoid: [TalonStoneMain]
+          SpawnPOIAvoid: [R2TalonStoneMain]
           SpawnPOIAvoidDistance: 1000
           SpawnResource: ["NeodymiumResource:0-1"]
           SpawnResourceRange: [150,600]
@@ -768,7 +768,7 @@ POIs:
             - Key: RegenAfter
               Value: 4320
 
-        - GroupName: TalonAuxSand
+        - GroupName: R2TalonAuxSand
           Faction: Talon
           CountMinMax: [ 1, 2 ]
           DroneProb: 0
@@ -781,7 +781,7 @@ POIs:
             - Key: RegenAfter
               Value: 720
 
-        - GroupName: TalonStoneFarm
+        - GroupName: R2TalonStoneFarm
           Faction: Talon
           CountMinMax: [ 3, 6 ]
           DroneProb: 0
@@ -794,7 +794,7 @@ POIs:
             - Key: RegenAfter
               Value: 720
 
-        - GroupName: TalonDefenseSand
+        - GroupName: R2TalonDefenseSand
           Faction: Talon
           CountMinMax: [ 2, 3 ]
           DroneProb: 0
@@ -808,7 +808,7 @@ POIs:
               Value: 720
 
 # ---------------------- Random Farms
-        - GroupName: TalonStoneFarm
+        - GroupName: R2TalonStoneFarm
           Faction: Talon
           Territory: False
           CountMinMax: [ 3, 4 ]
@@ -817,7 +817,7 @@ POIs:
           DronesMinMax: [ 1, 1 ]
           ReserveCount: 0
           TroopTransport: False
-          SpawnPOIAvoid: [TalonStoneMain, Eden_DummyTalon1]
+          SpawnPOIAvoid: [R2TalonStoneMain, Eden_DummyTalon1]
           SpawnPOIAvoidDistance: 750
           Properties:
             - Key: RegenAfter
@@ -836,7 +836,7 @@ POIs:
           DronesMinMax: [ 1, 2 ]
           ReserveCount: 2
           TroopTransport: True
-          SpawnPOIAvoid: [TalonStoneMain, TalonAuxSand]
+          SpawnPOIAvoid: [R2TalonStoneMain, R2TalonAuxSand]
           SpawnPOIAvoidDistance: 750
           SpawnResource: ["NeodymiumResource:0-1"]
           SpawnResourceRange: [150,600]
@@ -848,7 +848,7 @@ POIs:
             - Key: RegenAfter
               Value: 4320
 
-        - GroupName: TalonStoneRuin
+        - GroupName: R2TalonStoneRuin
           Faction: None
           CountMinMax: [ 4, 8 ]
           DroneProb: 0
@@ -864,7 +864,7 @@ POIs:
               Value: 720
 
 # ---------------------- Random Ruins
-        - GroupName: TalonStoneRuin
+        - GroupName: R2TalonStoneRuin
           Faction: None
           CountMinMax: [ 0, 2 ]
           IsScalingCount: True
@@ -1081,7 +1081,7 @@ SpawnZones:
          DelayMinMax: [-1, -1]
 
 # Talon Villages
-   - SpawnAt: [TalonStoneMain]
+   - SpawnAt: [R2TalonStoneMain]
      BiomesExcluded: [ LowMountains, LowMountains_1, Mountains ]
      Radius: 500
      RadiusRandom: 150
@@ -1096,7 +1096,7 @@ SpawnZones:
          Period: Always
          DelayMinMax: [-1, -1]
 
-   - SpawnAt: [TalonAuxSand]
+   - SpawnAt: [R2TalonAuxSand]
      BiomesExcluded: [ LowMountains, LowMountains_1, Mountains ]
      Radius: 300
      RadiusRandom: 100
@@ -1111,7 +1111,7 @@ SpawnZones:
          Period: Always
          DelayMinMax: [-1, -1]
 
-   - SpawnAt: [TalonStoneFarm]
+   - SpawnAt: [R2TalonStoneFarm]
      BiomesExcluded: [ LowMountains, LowMountains_1, Mountains ]
      Radius: 100
      RadiusRandom: 50

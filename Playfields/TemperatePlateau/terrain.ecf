@@ -1,7 +1,7 @@
-{ Material Name: TestPlanet4
+{ Material Name: TestPlanet2
   HeightMapMax: "490"
-  SplatMap_1: "TestPlanet4_splat1"
-  SplatMap_2: "TestPlanet4_splat2"
+  SplatMap_1: "TestPlanet2_splat1"
+  SplatMap_2: "TestPlanet2_splat2"
   ClusterScale: "20"
 
  { Child 0 # Grass05
@@ -303,8 +303,8 @@
   HeightContrast: "1"
   TerrainId: "79"
  }
- { Child 15 # SiliconResource
-  Name: "SiliconResource"
+ { Child 15 # CarbonResource
+  Name: "CarbonResource"
   Brightness: "0.97"
   Saturation: "1.08"
   RGB: "(1, 1, 1)"
@@ -319,7 +319,7 @@
   ResampleFac: "1"
   HeightOffset: "1"
   HeightContrast: "1"
-  TerrainId: "82"
+  TerrainId: "135"
  }
  { Child 16 # PromethiumResource
   Name: "PromethiumResource"

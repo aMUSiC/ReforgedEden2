@@ -770,7 +770,7 @@ POIs:
             - Key: RegenAfter
               Value: 720
 
-        - GroupName: TalonWoodRuin
+        - GroupName: R2TalonWoodRuin
           Faction: None
           BiomesExcluded: [ LowMountains_1, LowMountains, Mountains ] 
           CountMinMax: [ 0, 1 ]
@@ -820,7 +820,7 @@ POIs:
           TroopTransport: True
           SpawnPOINear: [R2PolarisTradePlanet]
           SpawnPOINearRange: [2000, 5000]
-          SpawnPOIAvoid: [ExcavationSite_Thing, R2XenuDefenseT1, TalonWoodRuin]
+          SpawnPOIAvoid: [ExcavationSite_Thing, R2XenuDefenseT1, R2TalonWoodRuin]
           POIDistance: 800
           Properties: 
             - Key: RegenAfter
@@ -832,7 +832,7 @@ POIs:
           # Tribal villages are spawn anchors for other POI!
 
           # === Main villages forced on plateaus
-        - GroupName: TalonMain
+        - GroupName: R2TalonMain
           Faction: Talon
           Biome: [ Plateau ] 
           IsImportant: True
@@ -842,7 +842,7 @@ POIs:
           DronesMinMax: [ 1, 1 ]
           ReserveCount: 1
           TroopTransport: True 
-          SpawnPOIAvoid: [TalonMain, R2DroneBase]  
+          SpawnPOIAvoid: [R2TalonMain, R2DroneBase]  
           POIDistance: 1000
           SpawnResource: ["IronResource:0-1","SiliconResource:0-1","CopperResource:0-1"]
           SpawnResourceRange: [150,400]
@@ -853,7 +853,7 @@ POIs:
               Value: 720
 
           # Secondary villages, some might fail
-        - GroupName: TalonMain
+        - GroupName: R2TalonMain
           Faction: Talon
           Biome: [ Hills, LowMountains_1, LowMountains_2, LowMountains ]
           IsScalingCount: True
@@ -862,7 +862,7 @@ POIs:
           DronesMinMax: [ 1, 1 ]
           ReserveCount: 1
           TroopTransport: True
-          SpawnPOIAvoid: [TalonMain, R2DroneBase]  
+          SpawnPOIAvoid: [R2TalonMain, R2DroneBase]  
           POIDistance: 1000
           SpawnResource: ["CopperResource:0-1"]
           SpawnResourceRange: [150,400]
@@ -884,7 +884,7 @@ POIs:
           DronesMinMax: [ 0, 0 ]
           ReserveCount: 0
           TroopTransport: False 
-          SpawnPOINear: [TalonMain]
+          SpawnPOINear: [R2TalonMain]
           SpawnPOINearRange: [2000, 8000]
           SpawnPOIAvoid: [ R2DroneBase ]  
           POIDistance: 1500
@@ -900,7 +900,7 @@ POIs:
               Value: 720
 
           # Huge Talon ruin to claim
-        - GroupName: TalonWoodRuin
+        - GroupName: R2TalonWoodRuin
           Faction: None
           Biome: [ Swamp, AlienSwamp, SwampUpper ]
           IsImportant: True
@@ -911,7 +911,7 @@ POIs:
           TroopTransport: True 
           SpawnResource: ["CopperResource:1-1"]
           SpawnResourceRange: [150,400]
-          SpawnPOIAvoid: [ R2DroneBase, TalonMain ]  
+          SpawnPOIAvoid: [ R2DroneBase, R2TalonMain ]  
           POIDistance: 2000
           Properties: 
             - Key: MapMarker
@@ -1061,7 +1061,7 @@ POIs:
           DronesMinMax: [ 2, 3 ]
           ReserveCount: 3
           TroopTransport: True
-          SpawnPOIAvoid: [R2PolarisTradePlanet, TalonMain, START, AlienTowerSmallStory]
+          SpawnPOIAvoid: [R2PolarisTradePlanet, R2TalonMain, START, AlienTowerSmallStory]
           POIDistance: 3000
           Properties: 
             - Key: RegenAfter
@@ -1208,7 +1208,7 @@ POIs:
           DronesMinMax: [ 1 ]
           ReserveCount: 0
           TroopTransport: False
-          SpawnPOIAvoid: [Eggs, TribalTalonTemple, TalonWoodRuin, R2PolarisTradePlanet]  
+          SpawnPOIAvoid: [Eggs, TribalTalonTemple, R2TalonWoodRuin, R2PolarisTradePlanet]  
           POIDistance: 1200
           SpawnPOINear: [SerduTierIRG]
           SpawnPOINearRange: [1000, 6000]
@@ -1229,8 +1229,8 @@ POIs:
           DronesMinMax: [ 1 ]
           ReserveCount: 0
           TroopTransport: False
-#          SpawnPOIAvoid: [Eggslarge, TalonMain, TribalTalonTemple, TalonWoodRuin, R2PolarisTradePlanet]
-          SpawnPOIAvoid: [Eggslarge, TribalTalonTemple, TalonWoodRuin]  
+#          SpawnPOIAvoid: [Eggslarge, R2TalonMain, TribalTalonTemple, R2TalonWoodRuin, R2PolarisTradePlanet]
+          SpawnPOIAvoid: [Eggslarge, TribalTalonTemple, R2TalonWoodRuin]  
           POIDistance: 800
           SpawnPOINear: [SerduTierIRG]
           SpawnPOINearRange: [800, 3000]
@@ -1273,7 +1273,7 @@ POIs:
           DronesMinMax: [ 1 ]
           ReserveCount: 0
           TroopTransport: False
-          SpawnPOIAvoid: [R2PolarisTradePlanet, TalonWoodRuin, TribalTalonTemple, TalonWoodRuin, R2RadosDefenseT1, XenuShrine, R2XenuAuxT1, PlanetVesselBase, CivilSettlementO2, R2DroneBase, SerduTierIRG]  
+          SpawnPOIAvoid: [R2PolarisTradePlanet, R2TalonWoodRuin, TribalTalonTemple, R2TalonWoodRuin, R2RadosDefenseT1, XenuShrine, R2XenuAuxT1, PlanetVesselBase, CivilSettlementO2, R2DroneBase, SerduTierIRG]  
           POIDistance: 2000  # To force it to a lonely spot
           Properties: 
             - Key: MapDistance
@@ -1379,7 +1379,7 @@ POIs:
           DronesMinMax: [ 1, 2 ]
           ReserveCount: 2
           TroopTransport: False
-          SpawnPOIAvoid: [R2PolarisTradePlanet, SerduTierIRG, TalonWoodRuin, START, AlienTowerSmallStory]
+          SpawnPOIAvoid: [R2PolarisTradePlanet, SerduTierIRG, R2TalonWoodRuin, START, AlienTowerSmallStory]
           POIDistance: 2000
           SpawnPOINear: [CrashedShip]
           SpawnPOINearRange: [1000, 5000]
@@ -1411,7 +1411,7 @@ POIs:
 # === Flavour: Ruins of new and old civilizations / Civ / Talon / Serdu  ====
 
          # clustered around ruined tower
-        - GroupName: TalonWoodRuin
+        - GroupName: R2TalonWoodRuin
           Faction: None
           Biome: [ Fungus, TallTrees, Heath, Swamp, AlienSwamp, SwampUpper, SwampEdge ]
           CountMinMax: [ 2, 3 ]
@@ -1419,7 +1419,7 @@ POIs:
           DronesMinMax: [ 0, 0 ]
           ReserveCount: 0
           TroopTransport: False 
-          SpawnPOINear: [TalonWoodRuin]
+          SpawnPOINear: [R2TalonWoodRuin]
           SpawnPOINearRange: [400, 3000]
           SpawnPOIAvoid: [R2PolarisTradePlanet, R2DroneBase, R2XenuAuxT1, R2XenuMain, RunisTribal] 
           POIDistance: 1000  
@@ -1432,7 +1432,7 @@ POIs:
               Value: 720
 
           # == Randomly distributed over whole planet
-        - GroupName: TalonWoodRuin
+        - GroupName: R2TalonWoodRuin
           Faction: None
           IsImportant: True
           Biome: [ ShallowWater, Waterm SwampEdge, Swamp, AlienSwamp, SwampUpper, Fungus, TallTrees, Heath ]
@@ -1451,7 +1451,7 @@ POIs:
             - Key: RegenAfter
               Value: 720
 
-        - GroupName: TalonWoodRuin
+        - GroupName: R2TalonWoodRuin
           Faction: None
           IsImportant: True
           Biome: [ ShallowWater, Waterm SwampEdge, Swamp, AlienSwamp, SwampUpper, Fungus, TallTrees, Heath ]
@@ -1501,7 +1501,7 @@ POIs:
           DronesMinMax: [ 1, 1 ]
           ReserveCount: 0
           TroopTransport: False 
-          SpawnPOIAvoid: [Artifacts, SmugglerBargeLootT1, TalonMain, R2PolarisTradePlanet, TalonWoodRuin, TalonWoodRuin, R2RadosDefenseT1, XenuShrine, R2XenuAuxT1, PlanetVesselBase, CivilSettlementO2, R2DroneBase]  
+          SpawnPOIAvoid: [Artifacts, SmugglerBargeLootT1, R2TalonMain, R2PolarisTradePlanet, R2TalonWoodRuin, R2TalonWoodRuin, R2RadosDefenseT1, XenuShrine, R2XenuAuxT1, PlanetVesselBase, CivilSettlementO2, R2DroneBase]  
           POIDistance: 1500  # To force spawning close to pole Plains.
           Properties: 
             - Key: RegenAfter
@@ -1660,7 +1660,7 @@ SpawnRateZones:
      AffectEnemies: true
      Color: "0.0, 1.0, 0.0, 0.7"
 
-   - SpawnAt: [TalonWoodRuin]
+   - SpawnAt: [R2TalonWoodRuin]
      Radius: 400
      RadiusRandom: 100
      RateMultiplyerCenter: 0.0
@@ -1760,7 +1760,7 @@ SpawnZones:
          DelayMinMax: [15, 25]
 
      # Ruined monument Slime colony
-   - SpawnAt: [ TalonWoodRuin ]
+   - SpawnAt: [ R2TalonWoodRuin ]
      BiomesExcluded: [ Heath ]  
      Radius: 150
      RadiusRandom: 10
@@ -1850,7 +1850,7 @@ SpawnZones:
 
 
     # Talon Villages ====
-   - SpawnAt: [ TalonMain ]
+   - SpawnAt: [ R2TalonMain ]
      BiomesExcluded: [ Fungus, Marsh, Mountains, Swamp, AlienSwamp, SwampEdge, SwampUpper, Morass, Morass_1 ]  
      Radius: 400
      RadiusRandom: 50
@@ -1877,7 +1877,7 @@ SpawnZones:
          Color: "0.7, 1, 0.8"
 
      # Long distance Talon hunting parties
-   - SpawnAt: [ TalonMain ]
+   - SpawnAt: [ R2TalonMain ]
      BiomesExcluded: [ Fungus, Marsh, Mountains, Swamp, AlienSwamp, SwampEdge, SwampUpper, Morass, Morass_1 ]  
      Radius: 1500
      RadiusRandom: 2100

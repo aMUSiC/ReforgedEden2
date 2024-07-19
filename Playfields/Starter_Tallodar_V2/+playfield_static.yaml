@@ -439,7 +439,7 @@ POIs:
             - Key: RegenAfter
               Value: 720
               
-        - GroupName: TalonWoodRuin                    # Main Building
+        - GroupName: R2TalonWoodRuin                    # Main Building
           Faction: Talon  
           Biome: [ DeepForest, Forest, Marsh, Swamp ]
           IsImportant: True
@@ -453,11 +453,11 @@ POIs:
             - Key: RegenAfter
               Value: 720
 
-        - GroupName: TalonMain 
+        - GroupName: R2TalonMain 
           Faction: Talon  
           BiomesExcluded: [ PolarSnow, Radiated, RadiatedFog ] 
           CountMinMax: [ 3, 4 ]
-          SpawnPOINear: [TalonWoodRuin]
+          SpawnPOINear: [R2TalonWoodRuin]
           SpawnPOINearRange: [100, 400]
           Properties: 
             - Key: MapDistance
@@ -472,7 +472,7 @@ POIs:
           BiomesExcluded: [ PolarSnow, Radiated, RadiatedFog ] 
           IsImportant: True
           CountMinMax: [ 1, 1 ]
-          SpawnPOINear: [TalonWoodRuin]
+          SpawnPOINear: [R2TalonWoodRuin]
           SpawnPOINearRange: [50, 100]
           Properties: 
             - Key: MapDistance
@@ -480,12 +480,12 @@ POIs:
             - Key: RegenAfter
               Value: 720
 
-        - GroupName: TalonFarm
+        - GroupName: R2TalonFarm
           Faction: Talon
           Territory: False         
           BiomesExcluded: [ PolarSnow, Radiated, RadiatedFog ] 
           CountMinMax: [ 5, 6 ]
-          SpawnPOINear: [TalonWoodRuin]
+          SpawnPOINear: [R2TalonWoodRuin]
           SpawnPOINearRange: [30, 100]
           Properties: 
             - Key: MapDistance
@@ -495,12 +495,12 @@ POIs:
             - Key: RegenAfter
               Value: 720  
 
-        - GroupName: TalonWoodRuin
+        - GroupName: R2TalonWoodRuin
           Faction: Talon  
           # Territory: False         
           BiomesExcluded: [ PolarSnow, Radiated, RadiatedFog ] 
           CountMinMax: [ 3, 4 ]
-          SpawnPOINear: [TalonWoodRuin]
+          SpawnPOINear: [R2TalonWoodRuin]
           SpawnPOINearRange: [200, 500]
           Properties:
             - Key: MapDistance
@@ -510,12 +510,12 @@ POIs:
             - Key: RegenAfter
               Value: 720
  
-        - GroupName: TalonDefense
+        - GroupName: R2TalonDefense
           Faction: Talon  
           # Territory: False        
           BiomesExcluded: [ PolarSnow, Radiated, RadiatedFog ] 
           CountMinMax: [ 4, 5 ]
-          SpawnPOINear: [TalonWoodRuin]
+          SpawnPOINear: [R2TalonWoodRuin]
           SpawnPOINearRange: [300, 400] 
           Properties: 
             # - Key: MapDistance
@@ -531,7 +531,7 @@ POIs:
           BiomesExcluded: [ PolarSnow, Radiated, RadiatedFog ]
           IsImportant: True
           CountMinMax: [ 1, 1 ]
-          SpawnPOINear: [TalonWoodRuin]
+          SpawnPOINear: [R2TalonWoodRuin]
           SpawnPOINearRange: [1500, 3000]
           SpawnPOIAvoid: [START]
           SpawnPOIAvoidDistance: 2500
@@ -858,7 +858,7 @@ POIs:
             # - Key: RegenAfter
               # Value: 720
 
-        - GroupName: TalonFarm
+        - GroupName: R2TalonFarm
           Faction: Talon
           Territory: False         
           BiomesExcluded: [ PolarSnow, Radiated, RadiatedFog ] 
@@ -873,7 +873,7 @@ POIs:
             - Key: RegenAfter
               Value: 720  
  
-        - GroupName: TalonDefense
+        - GroupName: R2TalonDefense
           Faction: Talon  
           # Territory: False        
           BiomesExcluded: [ PolarSnow, Radiated, RadiatedFog ] 
@@ -1064,7 +1064,7 @@ POIs:
             - Key: RegenAfter
               Value: 720
 
-        - GroupName: TalonWoodRuin
+        - GroupName: R2TalonWoodRuin
           Faction: None  
           Biome: [ DeepForest, Marsh, Swamp, Forest ]
           CountMinMax: [ 3, 5 ]
@@ -1428,7 +1428,7 @@ SpawnZones:
          Amount: 180
          Period: Always
          DelayMinMax: [-1, -1]
-   - SpawnAt: [TalonWoodRuin, TribalBazar ]
+   - SpawnAt: [R2TalonWoodRuin, TribalBazar ]
      BiomesExcluded: [ LowMountains, Mountains ]
      Radius: 1200
      RadiusRandom: 50

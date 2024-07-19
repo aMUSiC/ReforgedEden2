@@ -1118,65 +1118,6 @@ POIs:
             - Key: RegenAfter
               Value: 4320
 
-# Black cult POIs
-        - GroupName: Eden_NecroAuxT1
-          Faction: Alien
-          FactionTerritory: [Warlord, Xenu]
-          # NoShieldReload: True
-          IsImportant: True
-          CountMinMax: [ 0, 1 ]
-          DroneProb: 1
-          DronesMinMax: [ 2, 4 ]
-          ReserveCount: 4
-          TroopTransport: True
-          Properties: 
-            - Key: RegenAfter
-              Value: 720
-
-        - GroupName: Eden_NecroAuxT1
-          Faction: Alien
-          FactionTerritory: [Warlord, Xenu]
-          # NoShieldReload: True
-          CountMinMax: [ 1, 2 ]
-          DroneProb: 0.8
-          DronesMinMax: [ 1, 2 ]
-          ReserveCount: 3
-          TroopTransport: True 
-          SpawnPOINear: [Eden_NecroAuxT1]
-          SpawnPOINearRange: [100, 250]
-          Properties: 
-            - Key: RegenAfter
-              Value: 720
-
-        - GroupName: Eden_NecroDefenseT1
-          Faction: Alien
-          FactionTerritory: [Warlord, Xenu]
-          # NoShieldReload: True
-          CountMinMax: [ 2, 3 ]
-          DroneProb: 0.8
-          DronesMinMax: [ 1, 2 ]
-          ReserveCount: 3
-          TroopTransport: False
-          SpawnPOINear: [Eden_NecroAuxT1]
-          SpawnPOINearRange: [200, 350]
-          Properties: 
-            - Key: RegenAfter
-              Value: 720
-
-        - GroupName: Eden_NecroAuxT2
-          Faction: Alien
-          FactionTerritory: [Xenu]
-          # NoShieldReload: True
-          IsImportant: True
-          CountMinMax: [ 0, 1 ]
-          DroneProb: 1
-          DronesMinMax: [ 2, 4 ]
-          ReserveCount: 4
-          TroopTransport: True
-          Properties: 
-            - Key: RegenAfter
-              Value: 720
-
 # Cultist POIs
         - GroupName: Eden_CultVillage
           Faction: Alien
@@ -1944,7 +1885,7 @@ SpawnZones:
 
 # ---------------------- Spawn Zones Talon
 # Main village spawns closer to the village.
-   - SpawnAt: [TalonMain, TalonStoneMain, TalonSnowMain]
+   - SpawnAt: [R2TalonMain, R2TalonStoneMain, R2TalonSnowMain]
      BiomesExcluded: [ LowMountains, Mountains, Radiated, RadiatedFog ]
      Radius: 500
      RadiusRandom: 50
@@ -1960,7 +1901,7 @@ SpawnZones:
          DelayMinMax: [200, 240]
 
 # Main village spawns further from the villages. Long distance hunters.
-   - SpawnAt: [TalonMain, TalonStoneMain, TalonSnowMain]
+   - SpawnAt: [R2TalonMain, R2TalonStoneMain, R2TalonSnowMain]
      BiomesExcluded: [ LowMountains, Mountains, Radiated, RadiatedFog ]
      Radius: 1500
      RadiusRandom: 50
@@ -1976,7 +1917,7 @@ SpawnZones:
          DelayMinMax: [200, 240]
 
 # Talon near aux POIs.
-   - SpawnAt: [TalonAux, TalonAuxSand, TalonSnow]
+   - SpawnAt: [R2TalonAux, R2TalonAuxSand, R2TalonSnow]
      BiomesExcluded: [ LowMountains, Mountains, Radiated, RadiatedFog ]
      Radius: 250
      RadiusRandom: 50
@@ -1997,7 +1938,7 @@ SpawnZones:
          DelayMinMax: [200, 240]
 
 # Talon farmers.
-   - SpawnAt: [TalonFarmhouse, TalonFarm, TalonStoneFarm, TalonSnowFarm]
+   - SpawnAt: [R2TalonFarmhouse, R2TalonFarm, R2TalonStoneFarm, R2TalonSnowFarm]
      BiomesExcluded: [ LowMountains, Mountains, Radiated, RadiatedFog ]
      Radius: 100
      RadiusRandom: 25

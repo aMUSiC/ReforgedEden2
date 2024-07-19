@@ -1,15 +1,15 @@
 ManifestFileVersion: 0
-CRC: 296740736
+CRC: 3007282906
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 6ba8bae0dc623854ce9661987d3a89ff
+    Hash: a9161f3ad967979144c336a63d3f2476
   TypeTreeHash:
     serializedVersion: 2
     Hash: edfdcecd2946f8dc219650c42e3ffcc6
   IncrementalBuildHash:
     serializedVersion: 2
-    Hash: 6ba8bae0dc623854ce9661987d3a89ff
+    Hash: a9161f3ad967979144c336a63d3f2476
 HashAppended: 0
 ClassTypes:
 - Class: 1
@@ -119,6 +119,7 @@ Assets:
 - Assets/rg_projectiles/BlastEffectsShield/ShieldEffectsNew/RG_ShieldNewOrange.prefab
 - Assets/rg_projectiles/Beams/BeamsUnique/RG_ProjectileBeamModulatedGamma.prefab
 - Assets/rg_projectiles/Beams/RG_ProjectileBeamGreenM.prefab
+- Assets/rg_projectiles/Test/RG_ProjectileBeamTest.prefab
 - Assets/rg_projectiles/Bullets/RG_ProjectileVulcanWhiteNewx3.prefab
 - Assets/rg_projectiles/Beams/BeamsUnique/RG_ProjectileBeamDrillHandGreen.prefab
 - Assets/rg_projectiles/Beams/BeamsUnique/RG_ProjectileBeamDrillIce2.prefab
@@ -353,6 +354,7 @@ Assets:
 - Assets/rg_projectiles/Lasers/RG_ProjectileLaserGreenDualS.prefab
 - Assets/rg_projectiles/BlastEffectsShield/RG_ShieldImpactGreenM.prefab
 - Assets/rg_projectiles/Beams/BeamsUnique/RG_ProjectileBeamDrillIceTurretTest3.prefab
+- Assets/rg_projectiles/Test/RG_ShieldWallBlue.prefab
 - Assets/rg_projectiles/BlastEffects/RG_BlastWarpJumpTest.prefab
 - Assets/rg_projectiles/Railgun/RG_ProjectileRailgunSVNew2.prefab
 - Assets/rg_projectiles/Beams/BeamsUnique/RG_ProjectileBeamTaser.prefab
@@ -425,6 +427,7 @@ Assets:
 - Assets/rg_projectiles/BlastEffects/RG_BlastFlakMultiS2.prefab
 - Assets/rg_projectiles/Beams/BeamsUnique/RG_ProjectileBeamDrillHandRed.prefab
 - Assets/rg_projectiles/Beams/RG_ProjectileBeamBlueXL2x2.prefab
+- Assets/rg_projectiles/Test/RG_ShieldSphereBlue.prefab
 - Assets/rg_projectiles/BlastEffectsShield/ShieldEffectsNew/RG_ShieldNewRedHex.prefab
 - Assets/rg_projectiles/BlastEffectsShield/RG_TestShield.prefab
 - Assets/rg_projectiles/Lasers/RG_ProjectileLaserBlueDual.prefab

@@ -423,7 +423,7 @@ POIs:
           TroopTransport: True
       #    SpawnPOINear: [R2PolarisTradePlanet]
        #   SpawnPOINearRange: [2000, 5000]
-      #    SpawnPOIAvoid: [ExcavationSite_Thing, R2XenuDefenseT1, TalonWoodRuin]
+      #    SpawnPOIAvoid: [ExcavationSite_Thing, R2XenuDefenseT1, R2TalonWoodRuin]
       #    POIDistance: 800
           Properties: 
             - Key: RegenAfter
@@ -457,7 +457,7 @@ POIs:
           DronesMinMax: [ 2, 3 ]
           ReserveCount: 3
           TroopTransport: True
-          SpawnPOIAvoid: [R2PolarisTradePlanet, TalonMain]
+          SpawnPOIAvoid: [R2PolarisTradePlanet, R2TalonMain]
           POIDistance: 3000
           Properties: 
             - Key: RegenAfter
@@ -644,7 +644,7 @@ POIs:
           DronesMinMax: [ 1, 2 ]
           ReserveCount: 2
           TroopTransport: False
-          SpawnPOIAvoid: [R2PolarisTradePlanet, SerduTierIRG, TalonWoodRuin]
+          SpawnPOIAvoid: [R2PolarisTradePlanet, SerduTierIRG, R2TalonWoodRuin]
           POIDistance: 2000
           SpawnPOINear: [CrashedShip]
           SpawnPOINearRange: [1000, 5000]
@@ -792,7 +792,7 @@ SpawnRateZones:
      AffectEnemies: true
      Color: "0.0, 1.0, 0.0, 0.7"
 
-   - SpawnAt: [TalonWoodRuin]
+   - SpawnAt: [R2TalonWoodRuin]
      Radius: 400
      RadiusRandom: 100
      RateMultiplyerCenter: 0.0
@@ -874,7 +874,7 @@ SpawnZones:
          DelayMinMax: [15, 25]
 
      # Ruined monument Slime colony
-   - SpawnAt: [ TalonWoodRuin ]
+   - SpawnAt: [ R2TalonWoodRuin ]
      BiomesExcluded: [ Heath ]  
      Radius: 150
      RadiusRandom: 10
@@ -966,7 +966,7 @@ SpawnZones:
 
 
     # Talon Villages ====
-   - SpawnAt: [ TalonMain ]
+   - SpawnAt: [ R2TalonMain ]
      BiomesExcluded: [ Fungus, Marsh, Mountains, Swamp, AlienSwamp, SwampEdge, SwampUpper, Morass, Morass_1 ]  
      Radius: 400
      RadiusRandom: 50
@@ -994,7 +994,7 @@ SpawnZones:
          Color: "0.7, 1, 0.8"
 
      # Long distance Talon hunting parties
-   - SpawnAt: [ TalonMain ]
+   - SpawnAt: [ R2TalonMain ]
      BiomesExcluded: [ Fungus, Marsh, Mountains, Swamp, AlienSwamp, SwampEdge, SwampUpper, Morass, Morass_1 ]  
      Radius: 1500
      RadiusRandom: 2100

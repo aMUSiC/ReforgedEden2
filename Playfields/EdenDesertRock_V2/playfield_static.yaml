@@ -192,11 +192,6 @@ RandomResources:
       DepthMinMax: [ 1, 3 ] 
       DroneProb: 1
       MaxDroneCount: 5
-      DistTypeWorm:
-        FreqDirChange: 0.2
-        DirChangeMagnitude: 0.2
-        MaxLength: 75
-        DeepnessType: 1 #Depth Style 0=Undefined, 1=Free, 2=Shallow
 
     - Name: PromethiumResource
       Biome: [ Mountains, LowMountains, LowMountains_1 ]
@@ -205,17 +200,6 @@ RandomResources:
       SizeMinMax: [ 3, 5 ]
       DroneProb: 0.8
       DepthMinMax: [ 0, 1 ]
-      #DistTypeCylinder:
-        #MaxRadius: 13
-        #YVariance: 10
-
-    - Name: GoldResource
-      Biome: [ Null ]
-      CountMinMax: [ 1, 1 ]
-      # IsScalingCount: True
-      SizeMinMax: [ 5, 6 ]
-      DroneProb: 1
-      DepthMinMax: [ 15, 20 ]
       #DistTypeCylinder:
         #MaxRadius: 13
         #YVariance: 10

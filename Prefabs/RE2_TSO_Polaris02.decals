@@ -1,0 +1,16 @@
+[Fireflies]
+-Mode=Opaque
+-Pos=2.49312,154.0024,-12.01692
+-Rot=90,268.1105,0
+-Size=0.1667718,0.1667718,0.1667718
+-Color=1,1,1,1
+-Asset=@eden_decalmodels/Eden_DecoFirefliesGreen
+
+[Fireflies]
+-Mode=Opaque
+-Pos=-1.490003,154.0024,-11.99232
+-Rot=90,1.29549,0
+-Size=0.1667718,0.1667718,0.1667718
+-Color=1,1,1,1
+-Asset=@eden_decalmodels/Eden_DecoFirefliesGreen
+

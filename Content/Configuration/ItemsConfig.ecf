@@ -88,8 +88,8 @@
 # Durability: max is 5000 for all handheld weapons and tools 
 # AutoReload: true > per default it is set to "true"
 
-# Free IDs: 12, 13, 47*, 59*, 71-77, 95-99, 147-149, 179-195, 196*, 286*, 287*, 288*, 289*, 331*, 504, 606-619 (armor), 630-649 (boosters)
-# Free IDs: 659-699 (boosters), 709-799, 805*, 849, 854-855+862-863+878 (drone weapon), *921-965* (upgrade weapons/ammo), 975-982* (T2CV weapons)
+# Free IDs: 12, 13, 47*, 59*, 71-77, 95-99, 147-149, 179-195, 196*, 286*, 287*, 288*, 289*, 331*, 504*, 606-619 (armor), 630-649 (boosters)
+# Free IDs: 659-699 (boosters), 709-799, 805*, 849, 855+862-863+878 (drone weapon), *921-965* (upgrade weapons/ammo), 975-982* (T2CV weapons)
 # Reclaimed IDs: 53, 79, 82, 83, 84, 312*, 322*, 336*, 353*, 358, [medical 366*, 388*, 390*, 393*, 392*, 378*]
 # RGFREEFLAG
 # * = Used
@@ -821,7 +821,8 @@
   Durability: 500, display: false
   DegradationProb: 0.2, type: float, display: false
   RepairDisabled: true, display: true
-  DurabilityBreaksAfter: true
+  RepairCount: 0, type: int, display: false
+  # DurabilityBreaksAfter: true
   SfxJammed: Weapons/Player/Reload/WeaponJammedSingleShot  
   Crosshair: @RG_crosshairs/LaserPistol
   { Child 0
@@ -994,7 +995,7 @@
     CameraShake: 3
     Automatic: false
     BulletsPerShot: 8
-    BulletSpread: 0.6, display: true
+    BulletSpread: 0.55, display: true
     #RaySpread: 0.1
     Recoil: 3.0, display: true
     Damage: 53, display: true
@@ -1066,7 +1067,7 @@
     CameraShake: 3  
     Automatic: false
     BulletsPerShot: 8
-    BulletSpread: 0.55, display: true
+    BulletSpread: 0.5, display: true
     #RaySpread: 0.1
     Recoil: 2.68, display: true
     Damage: 66, display: true
@@ -1135,10 +1136,10 @@
     Range: 95, display: true
     NoiseStrength: 120, display: false
     BulletsPerShot: 8
-    BulletSpread: 0.5, display: true
+    BulletSpread: 0.45, display: true
     #RaySpread: 0.1
     Recoil: 1.68, display: true
-    Damage: 79, display: true
+    Damage: 80, display: true
     AmmoCapacity: 12, display: true    
     ReloadDelay: 4.5, display: true
     SfxBegin: Weapons/Player/Shotgun/Resistance-ShotGun-01-Single_Shot-05
@@ -1207,7 +1208,7 @@
     CameraShake: 4  
     Automatic: true
     BulletsPerShot: 8
-    BulletSpread: 0.6, display: true
+    BulletSpread: 0.55, display: true
     #RaySpread: 0.10
     Recoil: 2.68, display: true
     Damage: 78, display: true
@@ -1348,7 +1349,7 @@
     CameraShake: 3
     Automatic: false
     BulletsPerShot: 8
-    BulletSpread: 0.55, display: true
+    BulletSpread: 0.5, display: true
     #RaySpread: 0.1
     Recoil: 2.75, display: true
     Damage: 64, display: true
@@ -1389,6 +1390,80 @@
   UnlockLevel: 1, display: true
   TechTreeParent: " "
   TechTreeNames: Hidden    #do not show in TT
+}
+# Gauss Shotgun
+# Shotgun with more effective range than an epic shotgun. Available through special loot.
+{ +Item Id: 3119, Name: Eden_ShotgunGauss, Ref: Shotgun2
+  CustomIcon: Eden_ShotgunGauss
+  #Meshfile: Entities/Items/Weapons/Shotguns/ScifiShotgun2EpicPrefab
+  Meshfile: @reforgeditems/GaussShotgunRG
+  DropMeshfile: Entities/Items/Weapons/Rifles/ScifiRifle2DebugPrefab
+  MarketPrice: 100000, display: true
+  PickupToToolbar: true
+  Info: Eden_ShotgunGaussinfo, display: true
+  OverrideTradingConstraints: true # even if other constraints exist allow trading this item
+  Durability: 500, display: true
+  DegradationProb: 0.52, type: float, display: false
+  RepairDisabled: true, display: true
+  SfxJammed: Weapons/Player/Reload/WeaponJammedSingleShot  
+  { Child 0
+    Class: Ranged
+    ROF: 1.0, type: float, display: true, formatter: ROF
+    Automatic: false, display: true
+    Range: 103, display: true
+    IgnoreAtmo: true, display: true
+    NoiseStrength: 100, display: false
+    BulletsPerShot: 8
+    BulletSpread: 0.28, display: true
+    Recoil: 1.28, display: true
+    Damage: 84, display: true
+    AmmoCapacity: 8, display: true    
+    ReloadDelay: 4.5, display: true
+    SfxBegin: Weapons/Player/Sniper/weapon_sniper_004
+    SfxNoAmmo: Weapons/Misc/PumpgunDryFire
+    SfxReload: Weapons/Player/Reload/RifleReloadSlow
+    # PfxMuzzle: SniperMuzzleLaserBlue
+    # PfxMuzzle: PlasmaMuzzleFlashPrefab
+    # PfxMuzzle: PlasmaMuzzleFlashMediumPrefab
+    PfxMuzzle: PlasmaMuzzleFlashPrefab
+    Tracer: @rg_projectiles/RG_ProjectileShotgunGauss
+    TracerPerBullet: 1
+    TracerSpeed: 130
+
+    DamageMultiplier_Group: ShotgunGauss
+    DamageMultiplier_4: 2.0, param1: head, display: DmgMultiplierHead
+
+	Mod.Damage: "Damage + ((Player.Skills['ShotgunGaussBarrelDamageUp'] + Player.Skills['ShotgunGaussGripDamageUp'] + Player.Skills['ShotgunGaussFrameDamageUp'] + Player.Skills['ShotgunSkillDamage']) - (Player.Skills['ShotgunGaussBarrelDamageDown'] + Player.Skills['ShotgunGaussGripDamageDown'] + Player.Skills['ShotgunGaussFrameDamageDown']))"
+	Mod.BulletSpread: "Math.Max(0.01, BulletSpread - (Player.Skills['ShotgunGaussBarrelSpreadUp']/1000 + Player.Skills['ShotgunGaussGripSpreadUp']/1000 + Player.Skills['ShotgunGaussFrameSpreadUp']/1000 + Player.Skills['ShotgunSkillSpread']/1000) + (Player.Skills['ShotgunGaussBarrelSpreadDown']/1000 + Player.Skills['ShotgunGaussGripSpreadDown']/1000 + Player.Skills['ShotgunGaussFrameSpreadDown']/1000))"
+	Mod.ReloadDelay: "Math.Max(0.01, ReloadDelay - (Player.Skills['ShotgunGaussBarrelReloadUp']/100 + Player.Skills['ShotgunGaussGripReloadUp']/100 + Player.Skills['ShotgunGaussFrameReloadUp']/100 + Player.Skills['ShotgunSkillReload']/100) + (Player.Skills['ShotgunGaussBarrelReloadDown']/100 + Player.Skills['ShotgunGaussGripReloadDown']/100 + Player.Skills['ShotgunGaussFrameReloadDown']/100))"
+	Mod.Recoil: "Math.Max(0.01, Recoil - (Player.Skills['ShotgunGaussBarrelRecoilUp']/100 + Player.Skills['ShotgunGaussGripRecoilUp']/100 + Player.Skills['ShotgunGaussFrameRecoilUp']/100 + Player.Skills['ShotgunSkillRecoil']/100) + (Player.Skills['ShotgunGaussBarrelRecoilDown']/100 + Player.Skills['ShotgunGaussGripRecoilDown']/100 + Player.Skills['ShotgunGaussFrameRecoilDown']/100))"
+  }
+  { Child 1
+    Class: Zoom
+    ZoomOut: 40
+    ZoomIn: 20
+    RedDot: true
+  }
+  { Child 6
+    Class: Movements
+    StandingLocation: "0.382, 0.034, 0.09"
+    StandingRotation: "-2.4, -2.0, -4.5"
+    AimingLocation: "0.38, 0.0, 0.0"
+    AimingRotation: "0.0, 0.0, 0.0"
+    RunningLocation: "0.16, 0.075, 0.45"
+    RunningRotation: "-11, -55, 4.0"
+    CrouchingLocation: "0.387, 0.037, 0.1"
+    CrouchingRotation: "-2.4, -2.0, -4.11"
+    RecoilLocation: "0.21, 0.024, -0.02"
+    RecoilRotation: "-0.001, 0.0, -0.98"
+    WalkMovement: "0.05"
+    RunMovement: "0.18"
+  }
+
+  UnlockCost: 0
+  UnlockLevel: 25
+  TechTreeParent: ""
+  TechTreeNames: Hidden
 }
 { +Item Id: 889, Name: ArkenianShotgun
   Meshfile: Entities/Items/Weapons/Enemies/Protofactor_SciFiShotgunPrefab
@@ -2219,6 +2294,83 @@
   TechTreeParent: ""
   TechTreeNames: Hidden
 }
+# Has a longer range and better control than the epic assault rife. Found as rare loot.
+{ +Item Id: 3121, Name: Eden_ScoutRifle
+  Meshfile: @reforgeditems/ScoutRifleRG
+  DropMeshfile: Entities/Items/Weapons/Rifles/AssaultRifle1Prefab
+  PickupToToolbar: true
+  Info: Eden_ScoutRifleinfo, display: true
+  Material: Device
+  MarketPrice: 25000, display: true
+  HoldType: 15
+  StackSize: 1
+  Category: Weapons/Items
+  # Info: bkiWeaponHandheld, display: true
+  Mass: 10, type: float, display: true, formatter: Kilogram
+  Volume: 12, type: float, display: true, formatter: Liter
+  Durability: 500, display: true
+  DegradationProb: 0.06, type: float, display: false
+  RepairDisabled: true, display: true
+  SfxJammed: Weapons/Player/Reload/WeaponJammedSingleShot
+  Crosshair: @RG_crosshairs/AssaultRifle
+  { Child 0
+    Class: Ranged
+    AllowRemote: false
+    ROF: 0.25, type: float, display: true, formatter: ROF
+    Range: 225, display: false
+    NoiseStrength: 5, display: false    
+    CameraShake: 1
+    Automatic: true
+    BulletSpread: 0.08, display: true
+    Recoil: 0.42, display: true
+    Damage: 120, display: true
+    AmmoCapacity: 20, display: true
+    AmmoType: 5.56mmBullet, display: true
+    ReloadDelay: 3.25, display: true
+    SfxBegin: Weapons/Player/Pistol/AWDS_AR_ Heavy Single
+    SfxNoAmmo: Weapons/Misc/AK47DryFire01
+    SfxReload: Weapons/Player/Reload/RifleReloadNormal
+    # SfxReload: Weapons/Player/Rifle/M16ChargingHandle01_V2
+    PfxMuzzle: MuzzleFlash7
+    Tracer: Weapons/Projectiles/TracerOrange1
+    TracerPerBullet: 1
+    
+    DamageMultiplier_Group: SniperRifleT1
+    DamageMultiplier_4: 4.0, param1: head, display: DmgMultiplierHead
+    
+	Mod.Damage: "Damage + ((Player.Skills['ScoutRifleBarrelDamageUp'] + Player.Skills['ScoutRifleGripDamageUp'] + Player.Skills['ScoutRifleFrameDamageUp'] + Player.Skills['AssaultRifleSkillDamage']) - (Player.Skills['ScoutRifleBarrelDamageDown'] + Player.Skills['ScoutRifleGripDamageDown'] + Player.Skills['ScoutRifleFrameDamageDown']))"
+	Mod.BulletSpread: "Math.Max(0.01, BulletSpread - (Player.Skills['ScoutRifleBarrelSpreadUp']/1000 + Player.Skills['ScoutRifleGripSpreadUp']/1000 + Player.Skills['ScoutRifleFrameSpreadUp']/1000 + Player.Skills['AssaultRifleSkillSpread']/1000) + (Player.Skills['ScoutRifleBarrelSpreadDown']/1000 + Player.Skills['ScoutRifleGripSpreadDown']/1000 + Player.Skills['ScoutRifleFrameSpreadDown']/1000))"
+	Mod.ReloadDelay: "Math.Max(0.01, ReloadDelay - (Player.Skills['ScoutRifleBarrelReloadUp']/100 + Player.Skills['ScoutRifleGripReloadUp']/100 + Player.Skills['ScoutRifleFrameReloadUp']/100 + Player.Skills['AssaultRifleSkillReload']/100) + (Player.Skills['ScoutRifleBarrelReloadDown']/100 + Player.Skills['ScoutRifleGripReloadDown']/100 + Player.Skills['ScoutRifleFrameReloadDown']/100))"
+	Mod.Recoil: "Math.Max(0.01, Recoil - (Player.Skills['ScoutRifleBarrelRecoilUp']/100 + Player.Skills['ScoutRifleGripRecoilUp']/100 + Player.Skills['ScoutRifleFrameRecoilUp']/100 + Player.Skills['AssaultRifleSkillRecoil']/100) + (Player.Skills['ScoutRifleBarrelRecoilDown']/100 + Player.Skills['ScoutRifleGripRecoilDown']/100 + Player.Skills['ScoutRifleFrameRecoilDown']/100))"
+  }
+  { Child 1
+    Class: Zoom
+    ZoomOverlay: Entities/Items/Weapons/SniperScopes/ScopeNew
+    ZoomOut: 40
+    ZoomIn: 5
+    RedDot: true
+  }
+  { Child 6
+    Class: Movements
+    StandingLocation: "0.382, 0.034, 0.09"
+    StandingRotation: "-2.4, -2.0, -4.5"
+    AimingLocation: "0.38, 0.0, 0.0"
+    AimingRotation: "0.0, 0.0, 0.0"
+    RunningLocation: "0.16, 0.075, 0.45"
+    RunningRotation: "-11, -55, 4.0"
+    CrouchingLocation: "0.387, 0.037, 0.1"
+    CrouchingRotation: "-2.4, -2.0, -4.11"
+    RecoilLocation: "0.15, 0.024, -0.02"
+    RecoilRotation: "-0.001, 0.0, -0.8"
+    WalkMovement: "0.03"
+    RunMovement: "0.12"
+  }
+
+  UnlockCost: 0
+  UnlockLevel: 25
+  TechTreeParent: ""
+  TechTreeNames: Hidden
+}
 { +Item Id: 803, Name: TalonCrossbowTribalPlayer
   Meshfile: Entities/Items/Weapons/Crossbow/TalonCrossbowPlayerPrefab
   CustomIcon: TalonCrossbowWeaponCharged 
@@ -2625,6 +2777,7 @@
   Durability: 500, display: false
   DegradationProb: 0.1, type: float, display: false
   RepairDisabled: true, display: true
+  RepairCount: 0, type: int, display: false
   SfxJammed: Weapons/Player/Reload/WeaponJammedSingleShot 
   OverrideTradingConstraints: true
   Crosshair: @RG_crosshairs/LaserRifle
@@ -2902,6 +3055,81 @@
     RecoilLocation: "0.15, 0.0, 0.0"
     RecoilRotation: "-30, 0.0, 0.0"
     WalkMovement: "0.035"
+    RunMovement: "0.1"
+  }
+
+  UnlockCost: 0
+  UnlockLevel: 25
+  TechTreeParent: ""
+  TechTreeNames: Hidden
+}
+{ +Item Id: 3129, Name: Eden_Uzi
+  #Meshfile: Entities/Items/Weapons/Pistols/SMGPrefab
+  Meshfile: @reforgeditems/SyndicateUziRG
+  DropMeshfile: Entities/Items/Weapons/Pistols/SMGPrefab
+  MarketPrice: 3870, display: true
+  Info: Eden_Uziinfo, display: true
+  CustomIcon: Eden_Uzi
+  HoldType: 14
+  StackSize: 1
+  Material: Device
+  Category: Weapons/Items
+  Mass: 1.85, type: float, display: true, formatter: Kilogram
+  Volume: 2.4, type: float, display: true, formatter: Liter
+  Durability: 500, display: false
+  DegradationProb: 0.25, type: float, display: false
+  RepairCount: 3, type: int, display: false
+  SfxJammed: Weapons/Player/Reload/WeaponJammedSingleShot  
+  Crosshair: @RG_crosshairs/SMG
+  { Child 0
+    Class: Ranged
+    AllowRemote: false   
+    AllowAt: "UnderWater,Space,Planet"
+    ROF: 0.05, type: float, display: true, formatter: ROF
+    Range: 85, display: true
+    NoiseStrength: 50, display: false   
+    CameraShake: 1  
+    Automatic: true
+    BulletSpread: 0.55, display: true
+    Recoil: 0.7, display: true
+    Damage: 65, display: true
+    AmmoCapacity: 32, display: true
+    AmmoType: 9mmBullet, display: true
+    ReloadDelay: 2.35, display: true
+    ParticleTransform: Muzzle/Particle0
+    SfxBegin: Weapons/Player/Misc/Single/g3_fire
+    SfxNoAmmo: Weapons/Misc/MagnumDryFire
+    SfxReload: Weapons/Player/Reload/PistolReloadNormal
+    PfxMuzzle: MuzzleFlash8
+    Tracer: Weapons/Projectiles/TracerOrange1
+    TracerPerBullet: 2
+
+    DamageMultiplier_Group: SMGT1
+    DamageMultiplier_4: 2.0, param1: head, display: DmgMultiplierHead
+
+	Mod.Damage: "Damage + ((Player.Skills['EdenUziBarrelDamageUp'] + Player.Skills['EdenUziGripDamageUp'] + Player.Skills['EdenUziFrameDamageUp'] + Player.Skills['SMGSkillDamage']) - (Player.Skills['EdenUziBarrelDamageDown'] + Player.Skills['EdenUziGripDamageDown'] + Player.Skills['EdenUziFrameDamageDown']))"
+	Mod.BulletSpread: "Math.Max(0.01, BulletSpread - (Player.Skills['EdenUziBarrelSpreadUp']/1000 + Player.Skills['EdenUziGripSpreadUp']/1000 + Player.Skills['EdenUziFrameSpreadUp']/1000 + Player.Skills['SMGSkillSpread']/1000) + (Player.Skills['EdenUziBarrelSpreadDown']/1000 + Player.Skills['EdenUziGripSpreadDown']/1000 + Player.Skills['EdenUziFrameSpreadDown']/1000))"
+	Mod.ReloadDelay: "Math.Max(0.01, ReloadDelay - (Player.Skills['EdenUziBarrelReloadUp']/100 + Player.Skills['EdenUziGripReloadUp']/100 + Player.Skills['EdenUziFrameReloadUp']/100 + Player.Skills['SMGSkillReload']/100) + (Player.Skills['EdenUziBarrelReloadDown']/100 + Player.Skills['EdenUziGripReloadDown']/100 + Player.Skills['EdenUziFrameReloadDown']/100))"
+	Mod.Recoil: "Math.Max(0.01, Recoil - (Player.Skills['EdenUziBarrelRecoilUp']/100 + Player.Skills['EdenUziGripRecoilUp']/100 + Player.Skills['EdenUziFrameRecoilUp']/100 + Player.Skills['SMGSkillRecoil']/100) + (Player.Skills['EdenUziBarrelRecoilDown']/100 + Player.Skills['EdenUziGripRecoilDown']/100 + Player.Skills['EdenUziFrameRecoilDown']/100))"
+  }
+  { Child 1
+    Class: Zoom
+    ZoomOut: 40
+    ZoomIn: 40
+  }
+  { Child 6
+    Class: Movements
+    StandingLocation: "0.123, 0.06, 0.091"
+    StandingRotation: "-2.4, -2.8, 0.5"
+    AimingLocation: "0.0, 0.0, 0.0"
+    AimingRotation: "0.0, 0.0, 0.0"
+    RunningLocation: "0.06, -0.06, -0.022"
+    RunningRotation: "-9, -45, 7"
+    CrouchingLocation: "0.07, 0.04, 0.067"
+    CrouchingRotation: "-2.4, -2.8, -0.5"
+    RecoilLocation: "0.14, 0.1, 0.081"
+    RecoilRotation: "-0.1, 0.0, -1.08"
+    WalkMovement: "0.033"
     RunMovement: "0.1"
   }
 
@@ -3400,7 +3628,9 @@
   Volume: 26, type: float, display: true, formatter: Liter
   Durability: 500, display: false
   DegradationProb: 0.25, type: float, display: false
-  RepairCount: 1, type: int, display: false
+  OverrideTradingConstraints: true
+  RepairDisabled: true, display: true
+  RepairCount: 0, type: int, display: false
   SfxJammed: Weapons/Player/Reload/WeaponJammedSingleShot
   Crosshair: @RG_crosshairs/PlasmaCannon
   { Child 0
@@ -6175,7 +6405,7 @@
 }
 { Item Id: 59, Name: BioFuelT2, Ref: 9mmBullet
   StackSize: 2000
-  Meshfile: Entities/Misc/DummyPrefab
+  Meshfile: @reforged2/FlamethrowerProjectileBlueRG
   Info: bkiBioFuelT2, display: true
   AutoFill: false
   Category: Components
@@ -6185,18 +6415,21 @@
   MarketPrice: 165, display: true
   { Child 0
     Class: Projectile
-    Damage: 35
+    Damage: 10
     BlastParticleIndex: 0
-    BlastParticleName: @rg_projectiles/RG_BlastPlasmaRedM2
-    BlastRadius: 2
-    BlastDamage: 40
+    BlastParticleName: @reforged2/FlamethrowerBlastBlueRG
+    BlastRadius: 3
+    BlastDamage: 50
     Speed: 30
-    Range: 18
-    RangeSpace: 10
+    Range: 30
+    IgnoreAtmo: true
+    RangeSpace: 50
     NoiseStrength: 80, display: false   
-    Ballistic: false
+    Ballistic: true
+    Buff: "Fire"
+    Buff_chance: 1.0
 
-    DamageMultiplier_Group: FlamethrowerT1
+    DamageMultiplier_Group: EnemyLaserWeapon
   }
 
   UnlockCost: 3
@@ -8983,7 +9216,7 @@
     ROF: 0.25, type: float, display: true, formatter: ROF
     AllowAt: "Planet,Space"
     Range: 750, display: false
-    RangeSpace: 1750, display: false
+    RangeSpace: 1450, display: false
     AmmoCapacity: 50, display: true
     AmmoType: TurretLegacyDisruptorCharge, display: true
     AutoReload: true
@@ -9291,7 +9524,7 @@
     IsShootThroughCrosshair: true
     AllowAt: "Space,Planet"
     ROF: 0.25, type: float, display: true, formatter: ROF
-    Range: 550, display: false
+    Range: 600, display: false
     RangeSpace: 900, display: false
     BulletSpread: 0.125, display: true
     Damage: 150, display: true
@@ -9419,7 +9652,7 @@
   { Child 0
     Class: LauncherSS
     ROF: 1.5, type: float, display: true, formatter: ROF
-    Range: 525, display: false
+    Range: 600, display: false
     RangeSpace: 875, display: false
     AmmoCapacity: 15, display: false
     AmmoType: PlasmaChargePlanetT1, display: true
@@ -9521,7 +9754,7 @@
     Class: LauncherSS
     AllowAt: "Space,Planet"
     ROF: 1.0, type: float, display: true, formatter: ROF
-    Range: 450, display: false
+    Range: 500, display: false
     RangeSpace: 850, display: false
     AmmoCapacity: 40, display: true
     AmmoType: FlakShellPlanetT1, display: true
@@ -9549,7 +9782,7 @@
     Class: LauncherSS
     AllowAt: "Space,Planet"
     ROF: 0.5, type: float, display: true, formatter: ROF
-    Range: 450, display: false
+    Range: 500, display: false
     RangeSpace: 850, display: false
     AmmoCapacity: 40, display: true
     AmmoType: FlakShellPlanetT1, display: true
@@ -10630,7 +10863,7 @@
 	
 #    RadialText: rdlResourceMiningSpace
 #    RadialDesc: rdlResourceMiningSpaceTxt 
-3    RadialIcon: Radial_StoneRemoval
+#    RadialIcon: Radial_StoneRemoval
 #  }
 }
 { +Item Id: 131, Name: TurretGVDrillWeapon
@@ -10769,6 +11002,48 @@
   RadialMenu: true
   { Child 0
     Class: Driller
+	DrillMode: 0
+    DecoMode: true
+    InfoPopup: true
+    TerrainMode: true
+    HarvestSupport: true
+    AllowAt: "Space,Planet"
+    ForceMuzzleAiming: true 
+    ROF: 0.5, type: float
+    Damage: 500
+    Radius: 2.5
+    Range: 50, display: false
+    RangeSpace: 20, display: false
+    IgnoreAtmo: true
+    Automatic: true
+    NoiseStrength: 30, display: false   
+    CameraShake: 0  
+    AmmoCapacity: 0, display: false
+    AmmoType: AmmoInfinite, display: true
+    AmmoUnlimited: true
+    ReloadDelay: 3.0, display: false
+    Particles: diggerplasma              # particle effect shown at impact
+    # ParticleTransform: Mesh/TurretMSDrillBody/LaserTurretBarrelAnimated1/LaserTurretBarrelAnimated2/Muzzle/Particle1 
+    # SfxBegin: Weapons/Player/Tools/WeaponLightning02_start
+    # SfxLoop: Weapons/Player/Tools/WeaponLightning02_loop
+    # SfxStop: Weapons/Player/Drill/Mute 
+    # SfxBegin: Weapons/Player/Drill/weapon_flame_005_start
+    # SfxLoop: Weapons/Player/Drill/weapon_flame_005_loop
+    SfxBegin: Weapons/Player/Drill/THRUSTERFlangerShiftingBurningAirHot_start
+    SfxLoop: Weapons/Player/Drill/THRUSTERFlangerShiftingBurningAirHot_loop
+    SfxReload: Weapons/Player/Drill/WaltherP99MagInQuick01
+	Tracer: @rg_projectiles/RG_ProjectileBeamDrillHandBlue
+    TracerPerBullet: 1
+	TracerIsBeam: true
+
+    DamageMultiplier_Group: DrillHVT1
+	
+    RadialText: rdlResourceMining
+    RadialDesc: rdlResourceMiningManualTxt 
+    RadialIcon: Radial_ResourceMining
+  }
+  { Child 1
+    Class: Driller
     AllowAt: "Space,Planet"
     ROF: 0.5, type: float, display: false, formatter: ROF
     Range: 50
@@ -10786,15 +11061,15 @@
     NoiseStrength: 30, display: false    
     CameraShake: 0    
     ReloadDelay: 3.0, display: false
-    # ParticleTransform: Mesh/TurretMSToolBody/SubGyro/LaserTurretBarrelAnimated1/LaserTurretBarrelAnimated2/Muzzle/Particle1  
+    ParticleTransform: Mesh/TurretMSToolBody/SubGyro/LaserTurretBarrelAnimated1/LaserTurretBarrelAnimated2/Muzzle/Particle1  
     SfxBegin: Weapons/Player/Tools/WeaponLightning02_start
     SfxLoop: Weapons/Player/Tools/WeaponLightning02_loop
     SfxReload: Weapons/Player/Reload/RifleReloadNormal
     # SfxReload: Weapons/Player/Drill/WaltherP99MagInQuick01
-    ParticleTransform: ""
-	Tracer: @rg_projectiles/RG_ProjectileBeamDrillHandBlue
-    TracerPerBullet: 1
-	TracerIsBeam: true
+    # ParticleTransform: ""
+	# Tracer: @rg_projectiles/RG_ProjectileBeamDrillHandBlue
+    # TracerPerBullet: 1
+	# TracerIsBeam: true
 
     DamageMultiplier_1: 0, param1: dirt|stone|tree|rock|shield|head|body
     DamageMultiplier_2: 1, param1: steellarge|concrete|wood            # 10000 damage
@@ -10809,7 +11084,7 @@
     RadialDesc: rdlDisassembleTxt
     RadialIcon: Radial_Disassemble
   }
-  { Child 1
+  { Child 2
     Class: Repair
     AllowAt: "Planet"
     Range: 50
@@ -10827,23 +11102,23 @@
     CameraShake: 0    
     ReloadDelay: 3.0, display: false       # no need to display since unlimited ammo
     Particles: diggerplasma              # particle effect shown at impact
-    # ParticleTransform: Mesh/TurretMSToolBody/SubGyro/LaserTurretBarrelAnimated1/LaserTurretBarrelAnimated2/Muzzle/Particle2  
+    ParticleTransform: Mesh/TurretMSToolBody/SubGyro/LaserTurretBarrelAnimated1/LaserTurretBarrelAnimated2/Muzzle/Particle2  
     SfxBegin: Weapons/Player/Tools/WeaponLightning02_start
     SfxLoop: Weapons/Player/Tools/WeaponLightning02_loop
     SfxReload: Weapons/Player/Reload/RifleReloadNormal
     SfxUpgrade: UseActions/UpgradeBlock2
     SfxUpgradeErr: UseActions/UpgradeBlockError
     AllowUpgrade: false
-    ParticleTransform: ""
-	Tracer: @rg_projectiles/RG_ProjectileBeamRepairHandGreen
-    TracerPerBullet: 1
-	TracerIsBeam: true
+    # ParticleTransform: ""
+	# Tracer: @rg_projectiles/RG_ProjectileBeamRepairHandGreen
+    # TracerPerBullet: 1
+	# TracerIsBeam: true
 	
     RadialText: rdlRepair
     RadialDesc: rdlRepairTxt
     RadialIcon: Radial_Repair
   }
-  { Child 2
+  { Child 3
     Class: Driller
     AllowAt: "Planet"
     Range: 50
@@ -10863,14 +11138,14 @@
     NoiseStrength: 30, display: false  
     CameraShake: 0      
     ReloadDelay: 3.0, display: false       # no need to display since unlimited ammo
-    # ParticleTransform: Mesh/TurretMSToolBody/SubGyro/LaserTurretBarrelAnimated1/LaserTurretBarrelAnimated2/Muzzle/Particle3  
+    ParticleTransform: Mesh/TurretMSToolBody/SubGyro/LaserTurretBarrelAnimated1/LaserTurretBarrelAnimated2/Muzzle/Particle3  
     SfxBegin: Weapons/Player/Tools/WeaponLightning02_start
     SfxLoop: Weapons/Player/Tools/WeaponLightning02_loop
     SfxReload: Weapons/Player/Reload/RifleReloadNormal
-    ParticleTransform: ""
-	Tracer: @rg_projectiles/RG_ProjectileBeamDrillHandRed
-    TracerPerBullet: 1
-	TracerIsBeam: true
+    # ParticleTransform: ""
+	# Tracer: @rg_projectiles/RG_ProjectileBeamDrillHandRed
+    # TracerPerBullet: 1
+	# TracerIsBeam: true
 
     DamageMultiplier_1: 0, param1: dirt|stone|tree|rock|shield|head|body
     DamageMultiplier_2: 1, param1: steellarge|concrete|wood            # 6000 damage
@@ -10889,7 +11164,7 @@
 { +Item Id: 135, Name: TurretMSToolWeapon
   Meshfile: Entities/Misc/DummyPrefab
   DropMeshfile: Entities/Misc/BagSmallNewPrefab
-  ShowUser: NoButCSV  # reported by HWS
+  ShowUser: NoButCSV
   Canhold: false
   HoldType: 0
   StackSize: 500
@@ -10898,6 +11173,38 @@
   Category: Weapons/Items
   RadialMenu: true
   { Child 0
+    Class: Driller
+	DrillMode: 0
+    TerrainMode: true
+    AllowAt: "Space"
+    HarvestSupport: true
+    ForceMuzzleAiming: true 
+    ROF: 0.5, type: float
+    Damage: 500
+    Radius: 4
+    Range: 150, display: false
+    IgnoreAtmo: true
+    Automatic: true
+    NoiseStrength: 30, display: false    
+    CameraShake: 0    
+    AmmoCapacity: 0, display: false
+    AmmoType: AmmoInfinite, display: true
+    AmmoUnlimited: true
+    ReloadDelay: 2.7, display: false
+    Particles: diggerplasma              # particle effect shown at impact
+    # ParticleTransform: Mesh/TurretMSDrillBody/LaserTurretBarrelAnimated1/LaserTurretBarrelAnimated2/Muzzle/Particle1     # particle effect shown at muzzle
+    # SfxBegin: Weapons/Player/Tools/WeaponLightning02_start
+    # SfxLoop: Weapons/Player/Tools/WeaponLightning02_loop
+    SfxBegin: Weapons/Player/Drill/THRUSTERFlangerShiftingBurningAirHot_start
+    SfxLoop: Weapons/Player/Drill/THRUSTERFlangerShiftingBurningAirHot_loop
+    SfxStop: Weapons/Player/Drill/Mute
+	Tracer: @rg_projectiles/RG_ProjectileBeamYellowMSteady
+    TracerPerBullet: 1
+	TracerIsBeam: true
+
+    DamageMultiplier_Group: DrillCVTurret
+  }
+  { Child 1
     Class: Driller
     AllowAt: "Space"
     ROF: 0.5, type: float, display: false, formatter: ROF
@@ -10916,14 +11223,14 @@
     NoiseStrength: 30, display: false  
     CameraShake: 0      
     ReloadDelay: 3.0, display: false
-    # ParticleTransform: Mesh/TurretMSToolBody/SubGyro/LaserTurretBarrelAnimated1/LaserTurretBarrelAnimated2/Muzzle/Particle1   
+    ParticleTransform: Mesh/TurretMSToolBody/SubGyro/LaserTurretBarrelAnimated1/LaserTurretBarrelAnimated2/Muzzle/Particle1   
     SfxBegin: Weapons/Player/Tools/WeaponLightning02_start
     SfxLoop: Weapons/Player/Tools/WeaponLightning02_loop
     SfxReload: Weapons/Player/Reload/RifleReloadNormal
-    ParticleTransform: ""
-	Tracer: @rg_projectiles/RG_ProjectileBeamDrillHandBlue
-    TracerPerBullet: 1
-	TracerIsBeam: true
+    # ParticleTransform: ""
+	# Tracer: @rg_projectiles/RG_ProjectileBeamDrillHandBlue
+    # TracerPerBullet: 1
+	# TracerIsBeam: true
 	
     DamageMultiplier_1: 0, param1: dirt|stone|tree|rock|shield|head|body
     DamageMultiplier_2: 1, param1: steellarge|concrete|wood            # 15000 damage
@@ -10938,7 +11245,7 @@
     RadialDesc: rdlDisassembleTxt
     RadialIcon: Radial_Disassemble
   }
-  { Child 1
+  { Child 2
     Class: Repair
     AllowAt: "Space"
     Range: 120, display: true
@@ -10956,23 +11263,23 @@
     CameraShake: 0     
     ReloadDelay: 3.0, display: false       # no need to display since unlimited ammo
     Particles: diggerplasma              # particle effect shown at impact
-    # ParticleTransform: Mesh/TurretMSToolBody/SubGyro/LaserTurretBarrelAnimated1/LaserTurretBarrelAnimated2/Muzzle/Particle2      
+    ParticleTransform: Mesh/TurretMSToolBody/SubGyro/LaserTurretBarrelAnimated1/LaserTurretBarrelAnimated2/Muzzle/Particle2      
     SfxBegin: Weapons/Player/Tools/WeaponLightning02_start
     SfxLoop: Weapons/Player/Tools/WeaponLightning02_loop
     SfxReload: Weapons/Player/Reload/RifleReloadNormal
     SfxUpgrade: UseActions/UpgradeBlock2
     SfxUpgradeErr: UseActions/UpgradeBlockError
     AllowUpgrade: false
-    ParticleTransform: ""
-	Tracer: @rg_projectiles/RG_ProjectileBeamRepairHandGreen
-    TracerPerBullet: 1
-	TracerIsBeam: true
+    # ParticleTransform: ""
+	# Tracer: @rg_projectiles/RG_ProjectileBeamRepairHandGreen
+    # TracerPerBullet: 1
+	# TracerIsBeam: true
 	
     RadialText: rdlRepair
     RadialDesc: rdlRepairTxt
     RadialIcon: Radial_Repair
   }
-  { Child 2
+  { Child 3
     Class: Driller
     AllowAt: "Space"
     Range: 120
@@ -10992,14 +11299,14 @@
     NoiseStrength: 30, display: false    
     CameraShake: 0    
     ReloadDelay: 3.0, display: false        # no need to display since unlimited ammo
-    # ParticleTransform: Mesh/TurretMSToolBody/SubGyro/LaserTurretBarrelAnimated1/LaserTurretBarrelAnimated2/Muzzle/Particle3   
+    ParticleTransform: Mesh/TurretMSToolBody/SubGyro/LaserTurretBarrelAnimated1/LaserTurretBarrelAnimated2/Muzzle/Particle3   
     SfxBegin: Weapons/Player/Tools/WeaponLightning02_start
     SfxLoop: Weapons/Player/Tools/WeaponLightning02_loop
     SfxReload: Weapons/Player/Reload/RifleReloadNormal
-    ParticleTransform: ""
-	Tracer: @rg_projectiles/RG_ProjectileBeamDrillHandRed
-    TracerPerBullet: 1
-	TracerIsBeam: true
+    # ParticleTransform: ""
+	# Tracer: @rg_projectiles/RG_ProjectileBeamDrillHandRed
+    # TracerPerBullet: 1
+	# TracerIsBeam: true
 	
     DamageMultiplier_1: 0, param1: dirt|stone|tree|rock|shield|head|body
     DamageMultiplier_2: 1, param1: steellarge|concrete|wood            # 17000 damage
@@ -11641,7 +11948,7 @@
     SpeedSpace: 150
     RangeSpace: 825
     Ballistic: false
-	ShieldDamagePenFac: 0.25, display: false
+	ShieldDamagePenFac: 0.25, display: true
 	
     DamageMultiplier_Group: SVRocketT1
   }
@@ -11702,7 +12009,7 @@
     RangeSpace: 800 
     HomingSpeed: 3.0 
     Ballistic: false
-	ShieldDamagePenFac: 0.25, display: false
+	ShieldDamagePenFac: 0.25, display: true
 	
     DamageMultiplier_Group: SVRocketHomingT1
   }
@@ -11769,7 +12076,7 @@
     SpeedSpace: 350
     RangeSpace: 875
     Ballistic: false
-	ShieldDamagePenFac: 0.25, display: false
+	ShieldDamagePenFac: 0.25, display: true
 	
     DamageMultiplier_Group: SVRocketT2
   }
@@ -11796,7 +12103,7 @@
     RangeSpace: 875 
     HomingSpeed: 3.5 
     Ballistic: false
-	ShieldDamagePenFac: 0.25, display: false
+	ShieldDamagePenFac: 0.25, display: true
 	
     DamageMultiplier_Group: SVRocketHomingT2
   }
@@ -11831,7 +12138,7 @@
     RangeSpace: 1000
     Ballistic: true	
     BlastShieldDamage: 1, display: false
-    BlastShieldDamagePenFac: 0.1
+    BlastShieldDamagePenFac: 0.1, display: true
 
     DamageMultiplier_Group: SVBombT2
   }
@@ -12108,9 +12415,9 @@
     SpeedSpace: 900
     RangeSpace: 855
     Ballistic: false
-	ShieldDamagePenFac: 0.1, display: false
+	ShieldDamagePenFac: 0.1, display: true
     BlastShieldDamage: 1, display: false
-    BlastShieldDamagePenFac: 0.167
+    BlastShieldDamagePenFac: 0.167, display: true
 
     DamageMultiplier_Group: SVGatlingGunT3
   }
@@ -12148,7 +12455,7 @@
     Ballistic: true
     HomingSpeed: 0.15
     BlastShieldDamage: 0.1, display: false
-    BlastShieldDamagePenFac: 0.020
+    BlastShieldDamagePenFac: 0.020, display: true
 
     DamageMultiplier_Group: SVTorpedoT3
   }
@@ -12256,7 +12563,7 @@
     SpeedSpace: 975
     RangeSpace: 950
     Ballistic: false
-	ShieldDamagePenFac: 0.1, display: false
+	ShieldDamagePenFac: 0.1, display: true
     BlastShieldDamage: 1, display: false
     BlastShieldDamagePenFac: 0.025
 
@@ -12291,7 +12598,7 @@
     SpeedSpace: 350
     RangeSpace: 925
     Ballistic: false
-	ShieldDamagePenFac: 0.25, display: false
+	ShieldDamagePenFac: 0.25, display: true
 	
     DamageMultiplier_Group: SVRocketT3
   }
@@ -12327,7 +12634,7 @@
     RangeSpace: 1010 
     Ballistic: true
     BlastShieldDamage: 0.025, display: false
-    BlastShieldDamagePenFac: 0.0625
+    BlastShieldDamagePenFac: 0.1, display: true
 
     DamageMultiplier_Group: CVPlasmaArtilleryT2 
   }
@@ -12399,7 +12706,7 @@
     SpeedSpace: 800
     RangeSpace: 950
     Ballistic: true
-	ShieldDamagePenFac: 0.045, display: false
+	ShieldDamagePenFac: 0.05, display: true
 
     DamageMultiplier_Group: HVCannonT3
   }
@@ -12428,7 +12735,7 @@
     RangeSpace: 825
     Ballistic: false
     HomingSpeed: 1.75
-	ShieldDamagePenFac: 0.25, display: false
+	ShieldDamagePenFac: 0.25, display: true
 	
     DamageMultiplier_Group: HVRocketTurretT1
   }
@@ -12453,7 +12760,7 @@
     RangeSpace: 825
     Ballistic: false
     HomingSpeed: 1.25
-	ShieldDamagePenFac: 0.25, display: false
+	ShieldDamagePenFac: 0.25, display: true
 	
     DamageMultiplier_Group: HVRocketTurretT2
   }
@@ -12576,13 +12883,13 @@
     Damage: 415, display: true
     BlastParticleIndex: 4
     BlastRadius: 3, display: true
-    BlastDamage: 205, display: true
+    BlastDamage: 275, display: true
     Speed: 300
     Range: 440
     SpeedSpace: 650
     RangeSpace: 900 
     Ballistic: true
-	ShieldDamagePenFac: 0.0802, display: false
+	ShieldDamagePenFac: 0.1, display: true
 
     DamageMultiplier_Group: CVCannonT1
   }
@@ -12609,13 +12916,13 @@
     Damage: 1084, display: true
     BlastParticleIndex: 8
     BlastRadius: 4, display: true
-    BlastDamage: 525, display: true
+    BlastDamage: 675, display: true
     Speed: 350
     Range: 470
     SpeedSpace: 700
     RangeSpace: 940 
     Ballistic: true
-	ShieldDamagePenFac: 0.108, display: false
+	ShieldDamagePenFac: 0.10, display: true
 
     DamageMultiplier_Group: CVCannonT2
   }
@@ -12649,7 +12956,7 @@
     SpeedSpace: 750
     RangeSpace: 1000 
     Ballistic: true
-	ShieldDamagePenFac: 0.1, display: false
+	ShieldDamagePenFac: 0.1, display: true
 
     DamageMultiplier_Group: CVCannonT3
   }
@@ -12684,7 +12991,7 @@
     RangeSpace: 940
     HomingSpeed: 1.0
     Ballistic: false
-	ShieldDamagePenFac: 0.2, display: false
+	ShieldDamagePenFac: 0.25, display: true
 
     DamageMultiplier_Group: CVRocketT2
   }
@@ -12719,7 +13026,7 @@
     RangeSpace: 925
     HomingSpeed: 0.5
     Ballistic: false
-	ShieldDamagePenFac: 0.10, display: false
+	ShieldDamagePenFac: 0.25, display: true
 
     DamageMultiplier_Group: CVRocketT3
   }
@@ -12921,7 +13228,7 @@
     SpeedSpace: 800
     RangeSpace: 1000
     Ballistic: false
-	ShieldDamagePenFac: 0.05, display: false
+	ShieldDamagePenFac: 0.1, display: true
     BlastShieldDamage: 0.01, display: false
     BlastShieldDamagePenFac: 0.034
 
@@ -13062,7 +13369,7 @@
     RangeSpace: 1000
     HomingSpeed: 1.0
     Ballistic: false
-	ShieldDamagePenFac: 0.25, display: false
+	ShieldDamagePenFac: 0.25, display: true
     BlastShieldDamage: 1, display: false
 	
     DamageMultiplier_Group: CVRocketTurretT1
@@ -13129,9 +13436,9 @@
     SpeedSpace: 850
     RangeSpace: 835
     Ballistic: false
-	ShieldDamagePenFac: 0.5, display: false
+	ShieldDamagePenFac: 0.0, display: false
     BlastShieldDamage: 1, display: false
-    BlastShieldDamagePenFac: 0.25
+    BlastShieldDamagePenFac: 0.25, display: true
 
     DamageMultiplier_Group: CVFlakTurretT1
   }
@@ -13165,7 +13472,7 @@
     SpeedSpace: 450
     RangeSpace: 1010 
     Ballistic: true
-	ShieldDamagePenFac: 0.20, display: false
+	ShieldDamagePenFac: 0.20, display: true
     BlastShieldDamage: 1, display: false
     #BlastShieldDamagePenFac: 0.01
 
@@ -13232,7 +13539,7 @@
     RangeSpace: 1000
     HomingSpeed: 1.0
     Ballistic: false
-	ShieldDamagePenFac: 0.25, display: false
+	ShieldDamagePenFac: 0.25, display: true
     BlastShieldDamage: 1, display: false
 	
     DamageMultiplier_Group: CVRocketTurretT2
@@ -13299,9 +13606,9 @@
     SpeedSpace: 900
     RangeSpace: 875
     Ballistic: false
-	ShieldDamagePenFac: 0.5, display: false
+	ShieldDamagePenFac: 0.25, display: true
     BlastShieldDamage: 1, display: false
-    BlastShieldDamagePenFac: 0.25
+    BlastShieldDamagePenFac: 0.25, display: true
 
     DamageMultiplier_Group: CVFlakTurretT2
   }
@@ -13333,7 +13640,7 @@
     SpeedSpace: 450
     RangeSpace: 1200
     Ballistic: true
-	ShieldDamagePenFac: 0.2, display: false
+	ShieldDamagePenFac: 0.20, display: true
     BlastShieldDamage: 0.01, display: false
     #BlastShieldDamagePenFac: 0.025
 
@@ -13358,9 +13665,9 @@
     SpeedSpace: 850
     RangeSpace: 950
     Ballistic: false
-	ShieldDamagePenFac: 0.5, display: false
+	ShieldDamagePenFac: 0.0, display: true
     BlastShieldDamage: 1, display: false
-    BlastShieldDamagePenFac: 0.25
+    BlastShieldDamagePenFac: 0.25, display: true
 
     DamageMultiplier_Group: BAFlakTurretT1
   }
@@ -13401,7 +13708,7 @@
     RangeSpace: 1100
     HomingSpeed: 1.25
     Ballistic: false
-	ShieldDamagePenFac: 0.25, display: false
+	ShieldDamagePenFac: 0.25, display: true
     BlastShieldDamage: 1, display: false
 
     DamageMultiplier_Group: BARocketTurretT1
@@ -13485,7 +13792,7 @@
     RangeSpace: 1200
     HomingSpeed: 1.25
     Ballistic: false
-	ShieldDamagePenFac: 0.25, display: false
+	ShieldDamagePenFac: 0.25, display: true
     BlastShieldDamage: 1, display: false
 	
     DamageMultiplier_Group: BARocketTurretT2
@@ -13552,9 +13859,9 @@
     SpeedSpace: 900
     RangeSpace: 1000
     Ballistic: false
-	ShieldDamagePenFac: 0.5, display: false
+	ShieldDamagePenFac: 0.25, display: true
     BlastShieldDamage: 1, display: false
-    BlastShieldDamagePenFac: 0.25
+    BlastShieldDamagePenFac: 0.25, display: true
 
     DamageMultiplier_Group: BAFlakTurretT2
   }
@@ -13589,7 +13896,7 @@
     RangeSpace: 1010 
     Ballistic: true
     BlastShieldDamage: 0.025, display: false
-    BlastShieldDamagePenFac: 0.0625
+    BlastShieldDamagePenFac: 0.1, display: true
 
     DamageMultiplier_Group: BAPlasmaArtilleryT2 
   }
@@ -13625,7 +13932,7 @@
     Ballistic: false
 	ShieldDamagePenFac: 0.25, display: false
     BlastShieldDamage: 1, display: false
-    BlastShieldDamagePenFac: 0.125
+    BlastShieldDamagePenFac: 0.125, display: true
 
     DamageMultiplier_Group: BAPlasmaTurretT3
   }
@@ -13875,7 +14182,7 @@
     SpeedSpace: 850
     RangeSpace: 850
     Ballistic: false
-	ShieldDamagePenFac: 0.5, display: false
+	ShieldDamagePenFac: 0.0, display: false
     BlastShieldDamage: 1, display: false
     BlastShieldDamagePenFac: 0.25
 
@@ -13907,9 +14214,9 @@
     SpeedSpace: 600
     RangeSpace: 1250 
     Ballistic: true
-	ShieldDamagePenFac: 0.333, display: false
+	ShieldDamagePenFac: 0.20, display: false
     BlastShieldDamage: 1, display: false
-    BlastShieldDamagePenFac: 0.25
+    BlastShieldDamagePenFac: 0.05
 
     DamageMultiplier_Group: POICannonTurretT1
   }
@@ -13940,9 +14247,9 @@
     SpeedSpace: 750
     RangeSpace: 1500 
     Ballistic: true
-	ShieldDamagePenFac: 0.25, display: false
+	ShieldDamagePenFac: 0.20, display: false
     BlastShieldDamage: 1, display: false
-    BlastShieldDamagePenFac: 0.166
+    BlastShieldDamagePenFac: 0.05
 
     DamageMultiplier_Group: POICannonTurretT2
   }
@@ -14243,7 +14550,6 @@
     SpeedSpace: 750
     RangeSpace: 950
     Ballistic: false
-	#ShieldDamagePenFac: 0.15, display: false
 	
     DamageMultiplier_Group: PlanetLaserTurretT1
   }
@@ -14275,7 +14581,6 @@
     SpeedSpace: 900
     RangeSpace: 1100
     Ballistic: false
-	#ShieldDamagePenFac: 0.15, display: false
 	
     DamageMultiplier_Group: PlanetLaserTurretT2
   }
@@ -14306,7 +14611,7 @@
     BlastRadius: 4, display: true
     BlastDamage: 330, display: true
     Speed: 400
-    Range: 525
+    Range: 600
     SpeedSpace: 650
     RangeSpace: 900
     Ballistic: false
@@ -14444,11 +14749,11 @@
     BlastRadius: 4, display: true
     BlastDamage: 240, display: true
     Speed: 650
-    Range: 475
+    Range: 505
     SpeedSpace: 850
     RangeSpace: 850
     Ballistic: false
-	ShieldDamagePenFac: 0.5, display: false
+	ShieldDamagePenFac: 0.0, display: false
     BlastShieldDamage: 1, display: false
     BlastShieldDamagePenFac: 0.25
 
@@ -14479,9 +14784,9 @@
     SpeedSpace: 450
     RangeSpace: 1250 
     Ballistic: true
-	ShieldDamagePenFac: 0.25, display: false
+	ShieldDamagePenFac: 0.20, display: false
     BlastShieldDamage: 1, display: false
-    BlastShieldDamagePenFac: 0.1
+    BlastShieldDamagePenFac: 0.05
 
     DamageMultiplier_Group: PlanetCannonTurretT1
   }
@@ -14511,9 +14816,9 @@
     SpeedSpace: 450
     RangeSpace: 1250 
     Ballistic: true
-	ShieldDamagePenFac: 0.25, display: false
+	ShieldDamagePenFac: 0.20, display: false
     BlastShieldDamage: 1, display: false
-    BlastShieldDamagePenFac: 0.1
+    BlastShieldDamagePenFac: 0.05
 
     DamageMultiplier_Group: PlanetCannonTurretT2
   }
@@ -17111,7 +17416,7 @@
     ROF: 0.75, type: float
     Range: 3.5
     Damage: 120
-    Sphere: 2.0
+    Sphere: 2.5
     Buff: "Stunned,BrokenBone"
     Buff_chance: "0.25,0.1"
     SfxBegin: Enemies/RockGolem/MONSTERGrowlDeep08aShort
@@ -17204,7 +17509,7 @@
     ROF: 2, type: float
     Range: 4
     Damage: 120
-    Sphere: 1.5
+    Sphere: 2.25
     SfxBegin: Enemies/GolemDesert/GolemDesert_SfxAttack
     Buff: "Stunned,BrokenBone"
     Buff_chance: "0.25,0.16"
@@ -18791,6 +19096,37 @@
     DamageMultiplier_Group: EnemyKineticWeapon
   }
 }
+# Produces a shield when fired
+{ Item Id: 854, Name: ShieldRobotWeapon
+  Meshfile: Entities/Items/Weapons/Enemies/minigunTurretRobotPrefab
+  HoldType: 15
+  StackSize: 1
+  Material: Device
+  Category: Weapons/Items
+  ShowUser: No
+  { Child 0
+    Class: Ranged
+    ROF: 5.0, type: float
+    Range: 75, display: false
+    IgnoreAtmo: true
+    Automatic: true
+    Damage: 1
+    AmmoCapacity: 100
+    AmmoUnlimited: true
+    AmmoType: 9mmBullet, display: true
+    BulletSpread: 0.1, display: true
+    ReloadDelay: 4.0
+    SfxBegin: Enemies/Drone/ROBOTICTransformationSweep01Down
+    SfxNoAmmo: Weapons/DryFireFromManuallyCockedHammer
+    SfxReload: Weapons/weapon_reload_standard
+    PfxMuzzle: PlasmaMuzzleFlashLargePrefab
+    Tracer: @rg_projectiles/RG_ShieldSphereBlue
+    TracerPerBullet: 1
+    TracerSpeed: 0
+	
+    DamageMultiplier_Group: EnemyLaserWeapon
+  }
+}
 { +Item Id: 568, Name: ZiraxMinigunWeapon
   Meshfile: Entities/Items/Weapons/Enemies/ZiraxMinigunPrefab
   HoldType: 15
@@ -18938,6 +19274,36 @@
     PfxMuzzle: SniperMuzzleFire
     ParticleTransform:     # Particle1 contains the destroy blocks effect
     # MaxFireAngle: 20  #(default is 5) 
+  }
+}
+{ +Item Id: 504, Name: ZiraxFlamethrowerWeapon
+  # Meshfile: Entities/Items/Weapons/Flamethrower/SciFiFlamethrowerPrefab
+  Meshfile: Entities/Items/Weapons/Enemies/ZiraxMinigunPrefab
+  HoldType: 15
+  StackSize: 1
+  Material: Device
+  Category: Weapons/Items
+  ShowUser: No
+  Mass: 25, type: float, display: false, formatter: Kilogram
+  { Child 0
+    Class: LauncherSS
+    AllowRemote: false  
+    ROF: 0.5, type: float, display: true, formatter: ROF
+    Range: 40, display: false
+    IgnoreAtmo: true
+    AmmoCapacity: 30, display: true
+    AmmoUnlimited: true
+    AmmoType: BioFuelT2, display: true
+    UseSingleMagazine: true
+    BulletSpread: 0.2, display: true
+    ReloadDelay: 5.0, display: true
+    SfxBegin: Weapons/Player/FlameThrower/Flamethrower_Start 
+    SfxLoop: Weapons/Player/FlameThrower/Flamerthrower_Firing
+    SfxNoAmmo: Weapons/DryFireFromManuallyCockedHammer
+    SfxReload: Weapons/Player/Reload/RifleReloadSlow
+    PfxMuzzle: SniperMuzzleFire
+    ParticleTransform:     # Particle1 contains the destroy blocks effect
+    # MaxFireAngle: 20
   }
 }
 { +Item Id: 578, Name: TraderWeapon, Ref: ZiraxLaserWeapon
@@ -19132,7 +19498,7 @@
     SfxNoAmmo: Weapons/Misc/weapon_outofammo_005
     SfxReload: Weapons/Player/FlameThrower/Flamethrower_Reload
     PfxMuzzle: PlasmaMuzzleFlashPrefab
-    Tracer: @rg_projectiles/RG_ProjectilePlasmaBlue
+    Tracer: @rg_projectiles/RG_ProjectileVulcanCyanNew
     TracerPerBullet: 1
 	TracerSpeed: 80
     ParticleTransform:     # Particle1 contains the destroy blocks effect
@@ -19593,6 +19959,128 @@
   TechTreeNames: Hidden
   TechTreeParent: # null
   ShowUser: Yes
+}
+# ============ Unique Armors ============
+# Trade Federation Spacesuit
+# Protection from space, strong jetpack and high O2 capacity. Poor performance in combat.
+{ +Item Id: 610, Name: ArmorSpace
+  Class: Armor
+  RecipeName: LightArmor
+  MarketPrice: 21300, display: true
+  Meshfile: Entities/Misc/DummyPrefab
+  DropMeshfile: Entities/Misc/BagSmallNewPrefab
+  Mass: 35, type: float, display: false, formatter: Kilogram
+  Volume: 32, type: float, display: true, formatter: Liter
+  VolumeCapacity: 100, type: float, display: true, formatter: Liter     
+  HoldType: 0
+  StackSize: 1
+  Canhold: false
+  Material: Device
+  Category: Weapons/Items
+  Info: itmSpacesuit, display: true
+    
+  Durability: 750, display: true
+  DegradationFac: 0.05, type: float, display: false
+  RepairCount: 3, type: int, display: false
+  Oxygen: 1500, type: int, display: true
+  Armor: 50, type: int, display: true # 100 armor = 50% damage
+  Heat: 10, type: int, display: true
+  Cold: 300, type: int, display: true
+  Radiation: 5, type: int, display: true
+  FallDamageFac: 1.25, type: float, display: false
+  PowerFac: 0.30, type: float, display: true # Acceleration
+  SpeedFac: 0.9, type: float, display: true # Maximum Speed
+  JumpFac: 0.75, type: float, display: false  
+  JetpackFac: 0.75, type: float, display: true
+  FoodFac: 1.0, type: float, display: true
+  StaminaFac: 1.25, type: float, display: true
+  NrSlots: 1, type: int, display: true
+  SlotItems: "InsulationBoost, ArmorBoost, JetpackBoost, MultiBoost, OxygenBoost, MobilityBoost, RadiationBoost, CoolingBoost, TransportationBoost, CoolingBoostEpic, InsulationBoostEpic, RadiationBoostEpic, ArmorBoostEpic, MobilityBoostEpic, MultiBoostEpic", display: false
+  
+  UnlockLevel: 1
+  TechTreeNames: Hidden
+  TechTreeParent: # null
+  IsEquippableWithoutLocker: true
+}
+# Polaris Industrial Suit
+# Protection from extreme heat, good radiation protection, high cargo capacity. Weak jetpack.
+{ +Item Id: 611, Name: ArmorIndustrial
+  Class: Armor
+  RecipeName: LightArmor
+  MarketPrice: 28400, display: true
+  Meshfile: Entities/Misc/DummyPrefab
+  DropMeshfile: Entities/Misc/BagSmallNewPrefab
+  Mass: 62, type: float, display: false, formatter: Kilogram
+  Volume: 56, type: float, display: true, formatter: Liter
+  VolumeCapacity: 1500, type: float, display: true, formatter: Liter     
+  HoldType: 0
+  StackSize: 1
+  Canhold: false
+  Material: Device
+  Category: Weapons/Items
+  Info: itmHeatsuit, display: true
+    
+  Durability: 1250, display: true
+  DegradationFac: 0.05, type: float, display: false
+  RepairCount: 3, type: int, display: false
+  Oxygen: 350, type: int, display: true
+  Armor: 100, type: int, display: true # 100 armor = 50% damage
+  Heat: 1250, type: int, display: true
+  Cold: 10, type: int, display: true
+  Radiation: 12, type: int, display: true
+  FallDamageFac: 3.0, type: float, display: false
+  PowerFac: 0.35, type: float, display: true # Acceleration
+  SpeedFac: 0.70, type: float, display: true # Maximum Speed
+  JumpFac: 0.5, type: float, display: false  
+  JetpackFac: 1.75, type: float, display: true
+  FoodFac: 1.5, type: float, display: true
+  StaminaFac: 1.25, type: float, display: true
+  NrSlots: 1, type: int, display: true
+  SlotItems: "InsulationBoost, ArmorBoost, JetpackBoost, MultiBoost, OxygenBoost, MobilityBoost, RadiationBoost, CoolingBoost, TransportationBoost, CoolingBoostEpic, InsulationBoostEpic, RadiationBoostEpic, ArmorBoostEpic, MobilityBoostEpic, MultiBoostEpic", display: false
+  
+  UnlockLevel: 1
+  TechTreeNames: Hidden
+  TechTreeParent: # null
+}
+# Titan Combat Armor
+# Massive armor protection and durability, no life support.
+{ +Item Id: 612, Name: ArmorCombat
+  Class: Armor
+  RecipeName: HeavyArmor
+  MarketPrice: 72520, display: true
+  Meshfile: Entities/Misc/DummyPrefab
+  DropMeshfile: Entities/Misc/BagSmallNewPrefab
+  Mass: 159, type: float, display: false, formatter: Kilogram
+  Volume: 102, type: float, display: true, formatter: Liter
+  VolumeCapacity: 0, type: float, display: true, formatter: Liter     
+  HoldType: 0
+  StackSize: 1
+  Canhold: false
+  Material: Device
+  Category: Weapons/Items
+  Info: itmCombatsuit, display: true
+    
+  Durability: 2000, display: true
+  DegradationFac: 0.05, type: float, display: false
+  RepairCount: 3, type: int, display: false
+  Oxygen: 0, type: int, display: true
+  Armor: 500, type: int, display: true # 100 armor = 50% damage
+  Heat: 10, type: int, display: true
+  Cold: 10, type: int, display: true
+  Radiation: 2, type: int, display: true
+  FallDamageFac: 0.5, type: float, display: false
+  PowerFac: 0.075, type: float, display: true # Acceleration
+  SpeedFac: 0.85, type: float, display: true # Maximum Speed
+  JumpFac: 0.25, type: float, display: false  
+  JetpackFac: 0.0, type: float, display: true
+  FoodFac: 2.0, type: float, display: true
+  StaminaFac: 2.5, type: float, display: true
+  NrSlots: 1, type: int, display: true
+  SlotItems: "InsulationBoost, ArmorBoost, JetpackBoost, MultiBoost, OxygenBoost, MobilityBoost, RadiationBoost, CoolingBoost, TransportationBoost, CoolingBoostEpic, InsulationBoostEpic, RadiationBoostEpic, ArmorBoostEpic, MobilityBoostEpic, MultiBoostEpic", display: false
+  
+  UnlockLevel: 1
+  TechTreeNames: Hidden
+  TechTreeParent: # null
 }
 #  CATEGORY: ARMOR BOOSTS id 620 - 699  
 # ===============================
@@ -24032,14 +24520,14 @@
   Volume: 20, type: float, display: true, formatter: Liter
   BlastRadius: 6, display: true
   BlastDamage: 75, display: true
-  Durability: 200, display: false
+  Durability: 500, display: false
   RepairDisabled: true, display: true
-  DegradationProb: 0.1, type: float, display: false
+  DegradationProb: 0.2, type: float, display: false
   SfxJammed: Weapons/Player/Reload/WeaponJammedAutoFire
 
   { Child 0
     Class: LauncherSS
-    AllowRemote: false  
+    AllowRemote: false
     ROF: 0.1, type: float, display: true, formatter: ROF
     Range: 40, display: false
     NoiseStrength: 240, display: false 
@@ -24087,10 +24575,10 @@
   Volume: 0.1, type: float, display: true, formatter: Liter
   { Child 0
     Class: Projectile
-    Damage: 200
+    Damage: 175
     BlastParticleIndex: 8
     BlastRadius: 6, display: true
-    BlastDamage: 75, display: true
+    BlastDamage: 100, display: true
     Speed: 45
     Range: 50
     Ballistic: True
@@ -24199,63 +24687,65 @@
   TechTreeNames: Hidden
 }
 
-# Gauss Shotgun
-# Shotgun with more effective range than an epic shotgun. Available through special loot.
-{ +Item Id: 3119, Name: Eden_ShotgunGauss, Ref: Shotgun2
-  CustomIcon: Shotgun2Epic
-  Meshfile: Entities/Items/Weapons/Shotguns/ScifiShotgun2EpicPrefab
-  PickupToToolbar: true
-  Info: Eden_ShotgunGaussinfo, display: true
-  OverrideTradingConstraints: true # even if other constraints exist allow trading this item
-  Durability: 500, display: true
-  DegradationProb: 0.305, type: float, display: false
-  RepairDisabled: true, display: true
-  SfxJammed: Weapons/Player/Reload/WeaponJammedSingleShot  
-  { Child 0
-    Class: Ranged
-    ROF: 0.7, type: float, display: true, formatter: ROF
-    Automatic: false, display: true
-    Range: 103, display: false
-    NoiseStrength: 100, display: false
-    BulletsPerShot: 8
-    BulletSpread: 0
-    RaySpread: 0.35, display: true
-    Recoil: 0.75, display: true
-    Damage: 110, display: true
-    AmmoCapacity: 6, display: true    
-    ReloadDelay: 2.5, display: true
-    SfxBegin: Weapons/Player/Sniper/weapon_sniper_004
-    SfxNoAmmo: Weapons/Misc/PumpgunDryFire
-    SfxReload: Weapons/Player/Reload/RifleReloadSlow
-    # PfxMuzzle: SniperMuzzleLaserBlue
+# ID 3119 reserved by RG
+
+# # Gauss Shotgun
+# # Shotgun with more effective range than an epic shotgun. Available through special loot.
+# { +Item Id: 3119, Name: Eden_ShotgunGauss, Ref: Shotgun2
+  # CustomIcon: Shotgun2Epic
+  # Meshfile: Entities/Items/Weapons/Shotguns/ScifiShotgun2EpicPrefab
+  # PickupToToolbar: true
+  # Info: Eden_ShotgunGaussinfo, display: true
+  # OverrideTradingConstraints: true # even if other constraints exist allow trading this item
+  # Durability: 500, display: true
+  # DegradationProb: 0.305, type: float, display: false
+  # RepairDisabled: true, display: true
+  # SfxJammed: Weapons/Player/Reload/WeaponJammedSingleShot  
+  # { Child 0
+    # Class: Ranged
+    # ROF: 0.7, type: float, display: true, formatter: ROF
+    # Automatic: false, display: true
+    # Range: 103, display: false
+    # NoiseStrength: 100, display: false
+    # BulletsPerShot: 8
+    # BulletSpread: 0
+    # RaySpread: 0.35, display: true
+    # Recoil: 0.75, display: true
+    # Damage: 110, display: true
+    # AmmoCapacity: 6, display: true    
+    # ReloadDelay: 3, display: true
+    # SfxBegin: Weapons/Player/Sniper/weapon_sniper_004
+    # SfxNoAmmo: Weapons/Misc/PumpgunDryFire
+    # SfxReload: Weapons/Player/Reload/RifleReloadSlow
+    # # PfxMuzzle: SniperMuzzleLaserBlue
+    # # PfxMuzzle: PlasmaMuzzleFlashPrefab
+    # # PfxMuzzle: PlasmaMuzzleFlashMediumPrefab
     # PfxMuzzle: PlasmaMuzzleFlashPrefab
-    # PfxMuzzle: PlasmaMuzzleFlashMediumPrefab
-    PfxMuzzle: PlasmaMuzzleFlashPrefab
-    Tracer: @rg_projectiles/RG_ProjectileShotgunGauss
-    TracerPerBullet: 1
-    TracerSpeed: 150
+    # Tracer: @rg_projectiles/RG_ProjectileShotgunGauss
+    # TracerPerBullet: 1
+    # TracerSpeed: 150
 
-    # DamageMultiplier_1: 2, param1: head, display: DmgMultiplierHead
-    # DamageMultiplier_2: 0.015, param1: wood       # able to destroy trees 
-    # DamageMultiplier_3: 0, param1: dirt|stone|rock|hullarmored|hullcombat, display: DmgMultiplierArmor
-    # DamageMultiplier_4: 0.4, param1: metal, display: DmgMultiplierDevice
-    # DamageMultiplier_5: 0.05, param1: metalhard, display: DmgMultiplierDevice
-    # DamageMultiplier_6: 0, param1: shield, display: DmgMultiplierShield
-    DamageMultiplier_Group: ShotgunT2
-    DamageMultiplier_4: 2.0, param1: head, display: DmgMultiplierHead
-  }
-  { Child 1
-    Class: Zoom
-    ZoomOut: 40
-    ZoomIn: 20
-    RedDot: true
-  }
+    # # DamageMultiplier_1: 2, param1: head, display: DmgMultiplierHead
+    # # DamageMultiplier_2: 0.015, param1: wood       # able to destroy trees 
+    # # DamageMultiplier_3: 0, param1: dirt|stone|rock|hullarmored|hullcombat, display: DmgMultiplierArmor
+    # # DamageMultiplier_4: 0.4, param1: metal, display: DmgMultiplierDevice
+    # # DamageMultiplier_5: 0.05, param1: metalhard, display: DmgMultiplierDevice
+    # # DamageMultiplier_6: 0, param1: shield, display: DmgMultiplierShield
+    # DamageMultiplier_Group: ShotgunT2
+    # DamageMultiplier_4: 2.0, param1: head, display: DmgMultiplierHead
+  # }
+  # { Child 1
+    # Class: Zoom
+    # ZoomOut: 40
+    # ZoomIn: 20
+    # RedDot: true
+  # }
 
-  UnlockCost: 0
-  UnlockLevel: 25
-  TechTreeParent: ""
-  TechTreeNames: Hidden
-}
+  # UnlockCost: 0
+  # UnlockLevel: 25
+  # TechTreeParent: ""
+  # TechTreeNames: Hidden
+# }
 
 # Double Barreled Shotgun
 # Fires two quick bursts for extremely high damage at point blank. Found from special loot.
@@ -24340,83 +24830,85 @@
   TechTreeNames: Hidden
 }
 
-# ========================================================================================================================== Light Scout Rifle
-# Has a longer range and better control than the epic assault rife. Found as rare loot.
-{ +Item Id: 3121, Name: Eden_ScoutRifle
-  CustomIcon: Sniper2
-  Meshfile: Entities/Items/Weapons/Snipers/ScifiSniper3Prefab
-  PickupToToolbar: true
-  Info: Eden_ScoutRifleinfo, display: true
-  Material: Device
-  MarketPrice: 100000, display: true
-  HoldType: 15
-  StackSize: 1
-  Category: Weapons/Items
-  # Info: bkiWeaponHandheld, display: true
-  Mass: 10, type: float, display: true, formatter: Kilogram
-  Volume: 12, type: float, display: true, formatter: Liter
-  Durability: 500, display: true
-  DegradationProb: 0.06, type: float, display: false
-  RepairDisabled: true, display: true
-  SfxJammed: Weapons/Player/Reload/WeaponJammedSingleShot  
-  { Child 0
-    Class: Ranged
-    AllowRemote: false
-    ROF: 0.15, type: float, display: true, formatter: ROF
-    Range: 225, display: false
-    NoiseStrength: 5, display: false    
-    CameraShake: 1
-    Automatic: true
-    BulletSpread: 0.03, display: true
-    Recoil: 0.10, display: true
-    Damage: 80, display: true
-    AmmoCapacity: 20, display: true
-    AmmoType: 5.56mmBullet, display: true
-    ReloadDelay: 2.945, display: true
-    SfxBegin: Weapons/Player/Pistol/AWDS_AR_ Heavy Single
-    SfxNoAmmo: Weapons/Misc/AK47DryFire01
-    SfxReload: Weapons/Player/Reload/RifleReloadNormal
-    # SfxReload: Weapons/Player/Rifle/M16ChargingHandle01_V2
-    PfxMuzzle: MuzzleFlash7
-    Tracer: Weapons/Projectiles/TracerOrange1
-    TracerPerBullet: 1
-    
-    DamageMultiplier_Group: SniperRifleT1
-    DamageMultiplier_4: 4.0, param1: head, display: DmgMultiplierHead
-    
-	Mod.Damage: "Damage + ((Player.Skills['AssaultRifleT2BarrelDamageUp'] + Player.Skills['AssaultRifleT2GripDamageUp'] + Player.Skills['AssaultRifleT2FrameDamageUp'] + Player.Skills['AssaultRifleSkillDamage']) - (Player.Skills['AssaultRifleT2BarrelDamageDown'] + Player.Skills['AssaultRifleT2GripDamageDown'] + Player.Skills['AssaultRifleT2FrameDamageDown']))"
-	Mod.BulletSpread: "Math.Max(0.01, BulletSpread - (Player.Skills['AssaultRifleT2BarrelSpreadUp']/1000 + Player.Skills['AssaultRifleT2GripSpreadUp']/1000 + Player.Skills['AssaultRifleT2FrameSpreadUp']/1000 + Player.Skills['AssaultRifleSkillSpread']/1000) + (Player.Skills['AssaultRifleT2BarrelSpreadDown']/1000 + Player.Skills['AssaultRifleT2GripSpreadDown']/1000 + Player.Skills['AssaultRifleT2FrameSpreadDown']/1000))"
-	Mod.ReloadDelay: "Math.Max(0.01, ReloadDelay - (Player.Skills['AssaultRifleT2BarrelReloadUp']/100 + Player.Skills['AssaultRifleT2GripReloadUp']/100 + Player.Skills['AssaultRifleT2FrameReloadUp']/100 + Player.Skills['AssaultRifleSkillReload']/100) + (Player.Skills['AssaultRifleT2BarrelReloadDown']/100 + Player.Skills['AssaultRifleT2GripReloadDown']/100 + Player.Skills['AssaultRifleT2FrameReloadDown']/100))"
-	Mod.Recoil: "Math.Max(0.01, Recoil - (Player.Skills['AssaultRifleT2BarrelRecoilUp']/100 + Player.Skills['AssaultRifleT2GripRecoilUp']/100 + Player.Skills['AssaultRifleT2FrameRecoilUp']/100 + Player.Skills['AssaultRifleSkillRecoil']/100) + (Player.Skills['AssaultRifleT2BarrelRecoilDown']/100 + Player.Skills['AssaultRifleT2GripRecoilDown']/100 + Player.Skills['AssaultRifleT2FrameRecoilDown']/100))"
-  }
-  { Child 1
-    Class: Zoom
-    ZoomOverlay: Entities/Items/Weapons/SniperScopes/ScopeNew
-    ZoomOut: 40
-    ZoomIn: 5
-    RedDot: true
-  }
-  { Child 6
-    Class: Movements
-    StandingLocation: "0.025, 0.043, -0.012"
-    StandingRotation: "2.8, -0.5, -2.8"
-    AimingLocation: "0.2, 0.0, 0.0"
-    AimingRotation: "2.3, -5, -1.5"
-    RunningLocation: "0.03, 0.03, 0.11"
-    RunningRotation: "-18, -48, 3"
-    CrouchingLocation: "0.09, 0.043, -0.012"
-    CrouchingRotation: "2.8, -0.5, -2.8"
-    RecoilLocation: "1, 0.09, -0.018"
-    RecoilRotation: "2.3, 0.0, -40"
-    WalkMovement: "0.04"
-    RunMovement: "0.1"
-  }
+# ID 3121 reserved by RG
 
-  UnlockCost: 0
-  UnlockLevel: 25
-  TechTreeParent: ""
-  TechTreeNames: Hidden
-}
+# # Light Scout Rifle
+# # Has a longer range and better control than the epic assault rife. Found as rare loot.
+# { +Item Id: 3121, Name: Eden_ScoutRifle
+  # CustomIcon: Sniper2
+  # Meshfile: Entities/Items/Weapons/Snipers/ScifiSniper3Prefab
+  # PickupToToolbar: true
+  # Info: Eden_ScoutRifleinfo, display: true
+  # Material: Device
+  # MarketPrice: 100000, display: true
+  # HoldType: 15
+  # StackSize: 1
+  # Category: Weapons/Items
+  # # Info: bkiWeaponHandheld, display: true
+  # Mass: 10, type: float, display: true, formatter: Kilogram
+  # Volume: 12, type: float, display: true, formatter: Liter
+  # Durability: 500, display: true
+  # DegradationProb: 0.06, type: float, display: false
+  # RepairDisabled: true, display: true
+  # SfxJammed: Weapons/Player/Reload/WeaponJammedSingleShot  
+  # { Child 0
+    # Class: Ranged
+    # AllowRemote: false
+    # ROF: 0.15, type: float, display: true, formatter: ROF
+    # Range: 225, display: false
+    # NoiseStrength: 5, display: false    
+    # CameraShake: 1
+    # Automatic: true
+    # BulletSpread: 0.03, display: true
+    # Recoil: 0.10, display: true
+    # Damage: 80, display: true
+    # AmmoCapacity: 20, display: true
+    # AmmoType: 5.56mmBullet, display: true
+    # ReloadDelay: 2.945, display: true
+    # SfxBegin: Weapons/Player/Pistol/AWDS_AR_ Heavy Single
+    # SfxNoAmmo: Weapons/Misc/AK47DryFire01
+    # SfxReload: Weapons/Player/Reload/RifleReloadNormal
+    # # SfxReload: Weapons/Player/Rifle/M16ChargingHandle01_V2
+    # PfxMuzzle: MuzzleFlash7
+    # Tracer: Weapons/Projectiles/TracerOrange1
+    # TracerPerBullet: 1
+    
+    # DamageMultiplier_Group: SniperRifleT1
+    # DamageMultiplier_4: 4.0, param1: head, display: DmgMultiplierHead
+    
+	# Mod.Damage: "Damage + ((Player.Skills['AssaultRifleT2BarrelDamageUp'] + Player.Skills['AssaultRifleT2GripDamageUp'] + Player.Skills['AssaultRifleT2FrameDamageUp'] + Player.Skills['AssaultRifleSkillDamage']) - (Player.Skills['AssaultRifleT2BarrelDamageDown'] + Player.Skills['AssaultRifleT2GripDamageDown'] + Player.Skills['AssaultRifleT2FrameDamageDown']))"
+	# Mod.BulletSpread: "Math.Max(0.01, BulletSpread - (Player.Skills['AssaultRifleT2BarrelSpreadUp']/1000 + Player.Skills['AssaultRifleT2GripSpreadUp']/1000 + Player.Skills['AssaultRifleT2FrameSpreadUp']/1000 + Player.Skills['AssaultRifleSkillSpread']/1000) + (Player.Skills['AssaultRifleT2BarrelSpreadDown']/1000 + Player.Skills['AssaultRifleT2GripSpreadDown']/1000 + Player.Skills['AssaultRifleT2FrameSpreadDown']/1000))"
+	# Mod.ReloadDelay: "Math.Max(0.01, ReloadDelay - (Player.Skills['AssaultRifleT2BarrelReloadUp']/100 + Player.Skills['AssaultRifleT2GripReloadUp']/100 + Player.Skills['AssaultRifleT2FrameReloadUp']/100 + Player.Skills['AssaultRifleSkillReload']/100) + (Player.Skills['AssaultRifleT2BarrelReloadDown']/100 + Player.Skills['AssaultRifleT2GripReloadDown']/100 + Player.Skills['AssaultRifleT2FrameReloadDown']/100))"
+	# Mod.Recoil: "Math.Max(0.01, Recoil - (Player.Skills['AssaultRifleT2BarrelRecoilUp']/100 + Player.Skills['AssaultRifleT2GripRecoilUp']/100 + Player.Skills['AssaultRifleT2FrameRecoilUp']/100 + Player.Skills['AssaultRifleSkillRecoil']/100) + (Player.Skills['AssaultRifleT2BarrelRecoilDown']/100 + Player.Skills['AssaultRifleT2GripRecoilDown']/100 + Player.Skills['AssaultRifleT2FrameRecoilDown']/100))"
+  # }
+  # { Child 1
+    # Class: Zoom
+    # ZoomOverlay: Entities/Items/Weapons/SniperScopes/ScopeNew
+    # ZoomOut: 40
+    # ZoomIn: 5
+    # RedDot: true
+  # }
+  # { Child 6
+    # Class: Movements
+    # StandingLocation: "0.025, 0.043, -0.012"
+    # StandingRotation: "2.8, -0.5, -2.8"
+    # AimingLocation: "0.2, 0.0, 0.0"
+    # AimingRotation: "2.3, -5, -1.5"
+    # RunningLocation: "0.03, 0.03, 0.11"
+    # RunningRotation: "-18, -48, 3"
+    # CrouchingLocation: "0.09, 0.043, -0.012"
+    # CrouchingRotation: "2.8, -0.5, -2.8"
+    # RecoilLocation: "1, 0.09, -0.018"
+    # RecoilRotation: "2.3, 0.0, -40"
+    # WalkMovement: "0.04"
+    # RunMovement: "0.1"
+  # }
+
+  # UnlockCost: 0
+  # UnlockLevel: 25
+  # TechTreeParent: ""
+  # TechTreeNames: Hidden
+# }
 
 # ========================================================================================================================== Abyssal Cryotorch
 { +Item Id: 3122, Name: Eden_Cryotorch
@@ -24488,72 +24980,74 @@
 
 # Unused ID 3128
 
-{ +Item Id: 3129, Name: Eden_Uzi, Ref: Eden_SyndicateGoon_Weapon
-  CustomIcon: PistolEpic
-  Meshfile: Entities/Items/Tools/TextureToolV2Prefab
-  # Meshfile: Entities/Items/Weapons/Enemies/TraderGunPrefab
-  Material: Device
-  HoldType: 14
-  StackSize: 1
-  Info: Eden_Uziinfo, display: true
-  Category: Weapons/Items
-  ShowUser: Yes
-  Durability: 500, display: true
-  DegradationProb: 0.5, type: float, display: false
-  RepairDisabled: true, display: true
-  { Child 0
-    ROF: 0.1, type: float, display: true, formatter: ROF
-    Range: 85, display: false
-    BulletSpread: 1.5, display: true
-    Recoil: 0.7, display: true
-    Damage: 42, display: true
-    NoiseStrength: 50, display: false   
-    CameraShake: 1  
-    AmmoCapacity: 32, display: true
-    AmmoType: 9mmBullet, display: true
-    ReloadDelay: 2.2, display: true
-    
-    DamageMultiplier_Group: SMGT1
-    DamageMultiplier_4: 2.0, param1: head, display: DmgMultiplierHead
-    
-	Mod.Damage: "Damage + ((Player.Skills['SMGT2BarrelDamageUp'] + Player.Skills['SMGT2GripDamageUp'] + Player.Skills['SMGT2FrameDamageUp'] + Player.Skills['SMGSkillDamage']) - (Player.Skills['SMGT2BarrelDamageDown'] + Player.Skills['SMGT2GripDamageDown'] + Player.Skills['SMGT2FrameDamageDown']))"
-	Mod.BulletSpread: "Math.Max(0.01, BulletSpread - (Player.Skills['SMGT2BarrelSpreadUp']/1000 + Player.Skills['SMGT2GripSpreadUp']/1000 + Player.Skills['SMGT2FrameSpreadUp']/1000 + Player.Skills['SMGSkillSpread']/1000) + (Player.Skills['SMGT2BarrelSpreadDown']/1000 + Player.Skills['SMGT2GripSpreadDown']/1000 + Player.Skills['SMGT2FrameSpreadDown']/1000))"
-	Mod.ReloadDelay: "Math.Max(0.01, ReloadDelay - (Player.Skills['SMGT2BarrelReloadUp']/100 + Player.Skills['SMGT2GripReloadUp']/100 + Player.Skills['SMGT2FrameReloadUp']/100 + Player.Skills['SMGSkillReload']/100) + (Player.Skills['SMGT2BarrelReloadDown']/100 + Player.Skills['SMGT2GripReloadDown']/100 + Player.Skills['SMGT2FrameReloadDown']/100))"
-	Mod.Recoil: "Math.Max(0.01, Recoil - (Player.Skills['SMGT2BarrelRecoilUp']/100 + Player.Skills['SMGT2GripRecoilUp']/100 + Player.Skills['SMGT2FrameRecoilUp']/100 + Player.Skills['SMGSkillRecoil']/100) + (Player.Skills['SMGT2BarrelRecoilDown']/100 + Player.Skills['SMGT2GripRecoilDown']/100 + Player.Skills['SMGT2FrameRecoilDown']/100))"
-  }
-  { Child 1
-    Class: Ranged
-    AllowRemote: false
-    ROF: 0.1, type: float, display: true, formatter: ROF
-    Range: 85, display: false
-    Automatic: true, display: true
-    AutoReload: false
-    BulletSpread: 2.5, display: true
-    Recoil: 0.7, display: true
-    Damage: 42, display: true
-    NoiseStrength: 50, display: false 
-    CameraShake: 1
-    AmmoCapacity: 32, display: true
-    AmmoType: 9mmBullet, display: true
-    ReloadDelay: 2.2, display: true
-    # SfxBegin: Weapons/Player/AssaultRifle/M41APulseRifle-03_start
-    SfxBegin: Weapons/Player/Shotgun/Stakeout
-    # SfxLoop: Weapons/Player/AssaultRifle/M41APulseRifle-03_loop
-    SfxNoAmmo: Weapons/Misc/G36DryFire
-    SfxReload: Weapons/Player/Reload/RifleReloadNormal
-    # PfxMuzzle: MuzzleFlash3
-    PfxMuzzle: SMGAutoMuzzleFire
-    Tracer: Weapons/Projectiles/TracerOrange1
-    TracerPerBullet: 1
+# ID 3129 reserved by RG
 
-    DamageMultiplier_Group: SMGT1
+# { +Item Id: 3129, Name: Eden_Uzi, Ref: Eden_SyndicateGoon_Weapon
+  # CustomIcon: PistolEpic
+  # Meshfile: Entities/Items/Tools/TextureToolV2Prefab
+  # # Meshfile: Entities/Items/Weapons/Enemies/TraderGunPrefab
+  # Material: Device
+  # HoldType: 14
+  # StackSize: 1
+  # Info: Eden_Uziinfo, display: true
+  # Category: Weapons/Items
+  # ShowUser: Yes
+  # Durability: 500, display: true
+  # DegradationProb: 0.5, type: float, display: false
+  # RepairDisabled: true, display: true
+  # { Child 0
+    # ROF: 0.1, type: float, display: true, formatter: ROF
+    # Range: 85, display: false
+    # BulletSpread: 1.5, display: true
+    # Recoil: 0.7, display: true
+    # Damage: 42, display: true
+    # NoiseStrength: 50, display: false   
+    # CameraShake: 1  
+    # AmmoCapacity: 32, display: true
+    # AmmoType: 9mmBullet, display: true
+    # ReloadDelay: 2.2, display: true
+    
+    # DamageMultiplier_Group: SMGT1
+    # DamageMultiplier_4: 2.0, param1: head, display: DmgMultiplierHead
     
 	# Mod.Damage: "Damage + ((Player.Skills['SMGT2BarrelDamageUp'] + Player.Skills['SMGT2GripDamageUp'] + Player.Skills['SMGT2FrameDamageUp'] + Player.Skills['SMGSkillDamage']) - (Player.Skills['SMGT2BarrelDamageDown'] + Player.Skills['SMGT2GripDamageDown'] + Player.Skills['SMGT2FrameDamageDown']))"
 	# Mod.BulletSpread: "Math.Max(0.01, BulletSpread - (Player.Skills['SMGT2BarrelSpreadUp']/1000 + Player.Skills['SMGT2GripSpreadUp']/1000 + Player.Skills['SMGT2FrameSpreadUp']/1000 + Player.Skills['SMGSkillSpread']/1000) + (Player.Skills['SMGT2BarrelSpreadDown']/1000 + Player.Skills['SMGT2GripSpreadDown']/1000 + Player.Skills['SMGT2FrameSpreadDown']/1000))"
 	# Mod.ReloadDelay: "Math.Max(0.01, ReloadDelay - (Player.Skills['SMGT2BarrelReloadUp']/100 + Player.Skills['SMGT2GripReloadUp']/100 + Player.Skills['SMGT2FrameReloadUp']/100 + Player.Skills['SMGSkillReload']/100) + (Player.Skills['SMGT2BarrelReloadDown']/100 + Player.Skills['SMGT2GripReloadDown']/100 + Player.Skills['SMGT2FrameReloadDown']/100))"
 	# Mod.Recoil: "Math.Max(0.01, Recoil - (Player.Skills['SMGT2BarrelRecoilUp']/100 + Player.Skills['SMGT2GripRecoilUp']/100 + Player.Skills['SMGT2FrameRecoilUp']/100 + Player.Skills['SMGSkillRecoil']/100) + (Player.Skills['SMGT2BarrelRecoilDown']/100 + Player.Skills['SMGT2GripRecoilDown']/100 + Player.Skills['SMGT2FrameRecoilDown']/100))"
-  }
-}
+  # }
+  # { Child 1
+    # Class: Ranged
+    # AllowRemote: false
+    # ROF: 0.1, type: float, display: true, formatter: ROF
+    # Range: 85, display: false
+    # Automatic: true, display: true
+    # AutoReload: false
+    # BulletSpread: 2.5, display: true
+    # Recoil: 0.7, display: true
+    # Damage: 42, display: true
+    # NoiseStrength: 50, display: false 
+    # CameraShake: 1
+    # AmmoCapacity: 32, display: true
+    # AmmoType: 9mmBullet, display: true
+    # ReloadDelay: 2.2, display: true
+    # # SfxBegin: Weapons/Player/AssaultRifle/M41APulseRifle-03_start
+    # SfxBegin: Weapons/Player/Shotgun/Stakeout
+    # # SfxLoop: Weapons/Player/AssaultRifle/M41APulseRifle-03_loop
+    # SfxNoAmmo: Weapons/Misc/G36DryFire
+    # SfxReload: Weapons/Player/Reload/RifleReloadNormal
+    # # PfxMuzzle: MuzzleFlash3
+    # PfxMuzzle: SMGAutoMuzzleFire
+    # Tracer: Weapons/Projectiles/TracerOrange1
+    # TracerPerBullet: 1
+
+    # DamageMultiplier_Group: SMGT1
+    
+	# # Mod.Damage: "Damage + ((Player.Skills['SMGT2BarrelDamageUp'] + Player.Skills['SMGT2GripDamageUp'] + Player.Skills['SMGT2FrameDamageUp'] + Player.Skills['SMGSkillDamage']) - (Player.Skills['SMGT2BarrelDamageDown'] + Player.Skills['SMGT2GripDamageDown'] + Player.Skills['SMGT2FrameDamageDown']))"
+	# # Mod.BulletSpread: "Math.Max(0.01, BulletSpread - (Player.Skills['SMGT2BarrelSpreadUp']/1000 + Player.Skills['SMGT2GripSpreadUp']/1000 + Player.Skills['SMGT2FrameSpreadUp']/1000 + Player.Skills['SMGSkillSpread']/1000) + (Player.Skills['SMGT2BarrelSpreadDown']/1000 + Player.Skills['SMGT2GripSpreadDown']/1000 + Player.Skills['SMGT2FrameSpreadDown']/1000))"
+	# # Mod.ReloadDelay: "Math.Max(0.01, ReloadDelay - (Player.Skills['SMGT2BarrelReloadUp']/100 + Player.Skills['SMGT2GripReloadUp']/100 + Player.Skills['SMGT2FrameReloadUp']/100 + Player.Skills['SMGSkillReload']/100) + (Player.Skills['SMGT2BarrelReloadDown']/100 + Player.Skills['SMGT2GripReloadDown']/100 + Player.Skills['SMGT2FrameReloadDown']/100))"
+	# # Mod.Recoil: "Math.Max(0.01, Recoil - (Player.Skills['SMGT2BarrelRecoilUp']/100 + Player.Skills['SMGT2GripRecoilUp']/100 + Player.Skills['SMGT2FrameRecoilUp']/100 + Player.Skills['SMGSkillRecoil']/100) + (Player.Skills['SMGT2BarrelRecoilDown']/100 + Player.Skills['SMGT2GripRecoilDown']/100 + Player.Skills['SMGT2FrameRecoilDown']/100))"
+  # }
+# }
 
 { +Item Id: 3130, Name: Eden_LightRailgunRifle
   # CustomIcon: LaserRifleEpic
@@ -27902,62 +28396,27 @@
   CustomIcon: Optronics
 }
 
-# Fishing Rod
-{ +Item Id: 3278, Name: HWSFishRod, Ref: ComponentsTemplate
-  Info: HWSFishRodinfo, display: true
-  Mass: 4, type: float, display: true, formatter: Kilogram
-  Volume: 10, type: float, display: true, formatter: Liter
-  MarketPrice: 10000, display: true
-  ShowUser: Yes
+# Unused ID 3278
+# HWS fishing items. Remove this later in build 17. Kept in build 16 to not break save games.
+{ +Item Id: 3278, Name: Eden_InvalidItem1, Ref: ComponentsTemplate
+  Info: Eden_Oldinfoitem, display: true
+  Mass: 0, type: float, display: true, formatter: Kilogram
+  Volume: 0, type: float, display: true, formatter: Liter
+  MarketPrice: 1, display: true
+  CustomIcon: Eden_Deprecated
+  ShowUser: NoButCSV
+  LifetimeOnDrop: 0
+  FoodDecayTime: 0, display: true, type: int
+  FoodDecayedItem: PlasticMaterial
 }
-
-# Fishing Bait
-{ +Item Id: 3279, Name: HWSFishBait, Ref: ComponentsTemplate
-  Info: HWSFishBaitinfo, display: true
-  Mass: 0.3, type: float, display: true, formatter: Kilogram
-  Volume: 0.1, type: float, display: true, formatter: Liter
-  MarketPrice: 1000, display: true
-  ShowUser: Yes
+# Unused ID 3279
+{ +Item Id: 3279, Name: Eden_InvalidItem2, Ref: Eden_InvalidItem1
 }
-
-{ +Item Id: 3280, Name: HWSFish, Ref: FoodTemplate
-  Info: HWSFishinfo, display: true
-  Category: Food
-  MarketPrice: 1500, display: true
-  FoodDecayTime: 35, display: true, type: int
-  FoodDecayedItem: RottenFood
-  ShowUser: Yes
-  { Child 0
-    Class: Eat
-    ROF: 1, type: float
-    AddHealth: 15, display: HealthValue
-    AddStamina: 3, display: StaminaValue
-    AddFood: 24, display: FoodValue
-    AddOxygen: 0
-    # Buff: "Indigestion,PoisonFood"
-    # Buff_chance: "0.9,0.3"
-    SfxBegin: UseActions/playerEatingSoft
-  }
+# Unused ID 3280
+{ +Item Id: 3280, Name: Eden_InvalidItem3, Ref: Eden_InvalidItem1
 }
-
-{ +Item Id: 3281, Name: Eden_FishJerky, Ref: FoodTemplate
-  Info: Eden_FishJerkyinfo, display: true
-  # CustomIcon: HWSFish
-  Category: Food
-  MarketPrice: 350, display: true
-  # FoodDecayTime: 500, display: true, type: int
-  FoodDecayedItem: RottenFood
-  ShowUser: Yes
-  { Child 0
-    Class: Eat
-    ROF: 1, type: float
-    AddHealth: 25, display: HealthValue
-    AddStamina: 6, display: StaminaValue
-    AddFood: 50, display: FoodValue
-    AddOxygen: 0
-    AddTemperature: 1, display: TemperatureValue
-    SfxBegin: UseActions/playerEatingSoft
-  }
+# Unused ID 3281
+{ +Item Id: 3281, Name: Eden_InvalidItem4, Ref: Eden_InvalidItem1
 }
 
 
@@ -28263,7 +28722,7 @@
 
 { +Item Id: 3356, Name: Eden_RegenKitT2, Ref: Eden_RegenKit
   CustomIcon: Eden_RegenKit
-  Info: Eden_RegenKit2info, display: true
+  Info: Eden_RegenKitT2info, display: true
   StackSize: 1000
   ShowUser: Yes
   { Child 0
@@ -28918,3 +29377,305 @@
   LifetimeOnDrop: 0
   MarketPrice: 500, display: true
 }
+
+
+
+
+# { +Item Id: 3996, Name: Eden_TestWeaponZirax2
+  # Meshfile: Entities/Items/Weapons/Enemies/ZiraxMinigunPrefab
+  # HoldType: 15
+  # StackSize: 1
+  # Material: Device
+  # Category: Weapons/Items
+  # ShowUser: No
+  # Mass: 12, type: float, display: false, formatter: Kilogram
+  # { Child 0
+    # Class: Ranged
+    # ROF: 6, type: float
+    # Range: 90, display: false
+    # IgnoreAtmo: true
+    # Automatic: true
+    # Damage: 0, display: true
+    # AmmoCapacity: 20, display: true
+    # AmmoUnlimited: true
+    # AmmoType: 7.62mmBullet, display: true
+    # BulletSpread: 0.75, display: true
+    # ReloadDelay: 6.3, display: true
+    # # SfxBegin: Weapons/Player/AssaultRifle/AWDS_AR_HK416_start
+    # # SfxLoop: Weapons/Player/AssaultRifle/AWDS_AR_HK416_loop
+    # # SfxStop: Weapons/Player/AssaultRifle/AWDS_AR_HK416_end      
+    # # SfxBegin: Weapons/Enemies/Zirax/AWDS_AK47Krinkov_Begin
+    # # SfxLoop: Weapons/Enemies/Zirax/AWDS_AK47Krinkov_Loop
+    # # SfxStop: Weapons/Enemies/Zirax/AWDS_AK47Krinkov_Stop
+    # # SfxBegin: Weapons/ProjectileWeapons/Automatic/M14_Heavy_start
+    # SfxBegin: Enemies/Drone/MAGICSPELLPassingTunnelSci-FiFastRapidEcho
+    # # SfxLoop: Weapons/ProjectileWeapons/Automatic/M14_Heavy_loop
+    # SfxStop: Weapons/ProjectileWeapons/Automatic/M14_Heavy_end
+    # SfxNoAmmo: Weapons/Misc/P90DryFire
+    # SfxReload: Weapons/Player/Misc/Reload/RifleBoltActionCock04_reload
+    # PfxMuzzle: SniperMuzzleLaserBlue
+    # ParticleTransform:     # Particle1 contains the destroy blocks effect
+    # Tracer: @rg_projectiles/RG_ShieldWallBlue
+    # TracerPerBullet: 1
+    # TracerSpeed: 0
+    # MaxFireAngle: 720  #(default is 5) 
+	
+    # DamageMultiplier_Group: EnemyKineticWeapon
+  # }
+# }
+
+
+
+{ +Item Id: 3997, Name: Eden_TestWeaponZirax
+  Meshfile: Entities/Items/Weapons/Enemies/ZiraxMinigunPrefab
+  HoldType: 15
+  StackSize: 1
+  Material: Device
+  Category: Weapons/Items
+  ShowUser: No
+  Mass: 12, type: float, display: false, formatter: Kilogram
+  { Child 0
+    Class: Ranged
+    ROF: 6, type: float
+    Range: 90, display: false
+    IgnoreAtmo: true
+    Automatic: true
+    Damage: 0, display: true
+    AmmoCapacity: 20, display: true
+    AmmoUnlimited: true
+    AmmoType: 7.62mmBullet, display: true
+    BulletSpread: 0.75, display: true
+    ReloadDelay: 6.3, display: true
+    # SfxBegin: Weapons/Player/AssaultRifle/AWDS_AR_HK416_start
+    # SfxLoop: Weapons/Player/AssaultRifle/AWDS_AR_HK416_loop
+    # SfxStop: Weapons/Player/AssaultRifle/AWDS_AR_HK416_end      
+    # SfxBegin: Weapons/Enemies/Zirax/AWDS_AK47Krinkov_Begin
+    # SfxLoop: Weapons/Enemies/Zirax/AWDS_AK47Krinkov_Loop
+    # SfxStop: Weapons/Enemies/Zirax/AWDS_AK47Krinkov_Stop
+    # SfxBegin: Weapons/ProjectileWeapons/Automatic/M14_Heavy_start
+    SfxBegin: Enemies/Drone/MAGICSPELLPassingTunnelSci-FiFastRapidEcho
+    # SfxLoop: Weapons/ProjectileWeapons/Automatic/M14_Heavy_loop
+    SfxStop: Weapons/ProjectileWeapons/Automatic/M14_Heavy_end
+    SfxNoAmmo: Weapons/Misc/P90DryFire
+    SfxReload: Weapons/Player/Misc/Reload/RifleBoltActionCock04_reload
+    PfxMuzzle: SniperMuzzleLaserBlue
+    ParticleTransform:     # Particle1 contains the destroy blocks effect
+    Tracer: @rg_projectiles/RG_ShieldSphereBlue
+    TracerPerBullet: 1
+    TracerSpeed: 0
+    MaxFireAngle: 720  #(default is 5) 
+	
+    DamageMultiplier_Group: EnemyKineticWeapon
+  }
+}
+
+
+# { +Item Id: 3998, Name: Eden_TestWeapon2
+  # # Meshfile: Entities/Items/Weapons/Rifles/AssaultRifle1Prefab
+  # # Meshfile: Entities/Items/Weapons/Rifles/AssaultRiflePrefab
+  # # Meshfile: Entities/Items/Weapons/Rifles/ScifiRifle2BlackT2Prefab
+  # Meshfile: @reforgeditems/AssaultRifleT1RG
+  # DropMeshfile: Entities/Items/Weapons/Rifles/ScifiRifle2BlackT1Prefab
+  # PickupToToolbar: true
+  # MarketPrice: 97, display: true
+  # HoldType: 15
+  # StackSize: 1
+  # Material: Device
+  # Category: Weapons/Items
+  # CustomIcon: AssaultRifleT1
+  # Info: itmAssaultRifleT1, display: true
+  # Mass: 3.850, type: float, display: true, formatter: Kilogram
+  # Volume: 4.45, type: float, display: true, formatter: Liter
+  # Durability: 500, display: false
+  # DegradationProb: 0.4, type: float, display: false
+  # RepairCount: 3, type: int, display: false
+  # SfxJammed: Weapons/Player/Reload/WeaponJammedAutoFire
+  # Crosshair: @RG_crosshairs/AssaultRifle
+  # { Child 0
+    # Class: Ranged
+    # AllowRemote: false
+    # ROF: 1, type: float, display: true, formatter: ROF
+    # Range: 170, display: true
+    # NoiseStrength: 100, display: false 
+    # CameraShake: 1  
+    # Automatic: true, display: true 
+    # BulletSpread: 0.16, display: true
+    # Recoil: 0.64, display: true
+    # Damage: 0, display: true
+    # AmmoCapacity: 30, display: true
+    # AmmoType: 5.56mmBullet, display: true
+    # ReloadDelay: 3.25, display: true
+    # #SfxBegin: Weapons/ProjectileWeapons/Automatic/HK416_Modern_start
+    # #SfxLoop: Weapons/ProjectileWeapons/Automatic/HK416_Modern_loop
+    # #SfxStop: Weapons/ProjectileWeapons/Automatic/HK416_Modern_end
+    # # SfxBegin: Weapons/ProjectileWeapons/Automatic/HK416_Heavy_start
+    # # SfxLoop: Weapons/ProjectileWeapons/Automatic/HK416_Heavy_loop
+    # # SfxStop: Weapons/ProjectileWeapons/Automatic/HK416_Heavy_end
+    # SfxBegin: Weapons/ProjectileWeapons/Automatic/FAL_50-42_Modern_start
+    # SfxLoop: Weapons/ProjectileWeapons/Automatic/FAL_50-42_Modern_loop
+    # SfxStop: Weapons/ProjectileWeapons/Automatic/FAL_50-42_Modern_end
+    # SfxNoAmmo: Weapons/Misc/AK47DryFire01
+    # SfxReload: Weapons/Player/Reload/RifleReloadNormal
+    # PfxMuzzle: MuzzleFlash1
+    # # Tracer: @rg_projectiles/RG_ProjectileBeamTest
+    # # Tracer: @rg_projectiles/RG_ShieldWallBlue
+    # Tracer: @rg_projectiles/RG_ShieldSphereBlue
+    # TracerPerBullet: 1
+    # TracerSpeed: 0
+	
+    # DamageMultiplier_Group: AssaultRifleT1
+    # DamageMultiplier_4: 2.0, param1: head, display: DmgMultiplierHead
+
+	# Mod.Damage: "Damage + ((Player.Skills['AssaultRifleT1BarrelDamageUp'] + Player.Skills['AssaultRifleT1GripDamageUp'] + Player.Skills['AssaultRifleT1FrameDamageUp'] + Player.Skills['AssaultRifleSkillDamage']) - (Player.Skills['AssaultRifleT1BarrelDamageDown'] + Player.Skills['AssaultRifleT1GripDamageDown'] + Player.Skills['AssaultRifleT1FrameDamageDown']))"
+	# Mod.BulletSpread: "Math.Max(0.01, BulletSpread - (Player.Skills['AssaultRifleT1BarrelSpreadUp']/1000 + Player.Skills['AssaultRifleT1GripSpreadUp']/1000 + Player.Skills['AssaultRifleT1FrameSpreadUp']/1000 + Player.Skills['AssaultRifleSkillSpread']/1000) + (Player.Skills['AssaultRifleT1BarrelSpreadDown']/1000 + Player.Skills['AssaultRifleT1GripSpreadDown']/1000 + Player.Skills['AssaultRifleT1FrameSpreadDown']/1000))"
+	# Mod.ReloadDelay: "Math.Max(0.01, ReloadDelay - (Player.Skills['AssaultRifleT1BarrelReloadUp']/100 + Player.Skills['AssaultRifleT1GripReloadUp']/100 + Player.Skills['AssaultRifleT1FrameReloadUp']/100 + Player.Skills['AssaultRifleSkillReload']/100) + (Player.Skills['AssaultRifleT1BarrelReloadDown']/100 + Player.Skills['AssaultRifleT1GripReloadDown']/100 + Player.Skills['AssaultRifleT1FrameReloadDown']/100))"
+	# Mod.Recoil: "Math.Max(0.01, Recoil - (Player.Skills['AssaultRifleT1BarrelRecoilUp']/100 + Player.Skills['AssaultRifleT1GripRecoilUp']/100 + Player.Skills['AssaultRifleT1FrameRecoilUp']/100 + Player.Skills['AssaultRifleSkillRecoil']/100) + (Player.Skills['AssaultRifleT1BarrelRecoilDown']/100 + Player.Skills['AssaultRifleT1GripRecoilDown']/100 + Player.Skills['AssaultRifleT1FrameRecoilDown']/100))"
+  # }
+  # { Child 1
+    # Class: Zoom
+    # # ZoomOverlay: Entities/Items/Weapons/SniperScopes/ScopeNew
+    # ZoomOut: 45
+    # ZoomIn: 45
+  # }
+  # { Child 6
+    # Class: Movements
+    # StandingLocation: "0.382, 0.034, 0.09"
+    # StandingRotation: "-2.4, -2.0, -4.5"
+    # AimingLocation: "0.38, 0.0, 0.0"
+    # AimingRotation: "0.0, 0.0, 0.0"
+    # RunningLocation: "0.16, 0.075, 0.45"
+    # RunningRotation: "-11, -55, 4.0"
+    # CrouchingLocation: "0.387, 0.037, 0.1"
+    # CrouchingRotation: "-2.4, -2.0, -4.11"
+    # RecoilLocation: "0.15, 0.024, -0.02"
+    # RecoilRotation: "-0.001, 0.0, -0.8"
+    # WalkMovement: "0.03"
+    # RunMovement: "0.12"
+  # }
+# #  { Child 6
+# #    Class: Movements
+# #    StandingLocation: "-0.002, 0.051, -0.009"
+# #    StandingRotation: "0.8, 0.0, -2"
+# #    AimingLocation: "0.2, 0.04, 0.0"
+# #    AimingRotation: "0.0, 0.0, 0.0"
+# #    RunningLocation: "-0.03, 0.0, 0.05"
+# #    RunningRotation: "-15, -53, 0.0"
+# #    CrouchingLocation: "0.04, 0.051, -0.009"
+# #    CrouchingRotation: "0.8, 0.0, -2"
+# #    RecoilLocation: "0.3, 0.010, 0.0"
+# #    RecoilRotation: "-0.6, 0.0, -5"
+# #    WalkMovement: "0.03"
+# #    RunMovement: "0.1"
+# #  }
+
+  # UnlockCost: 9, display: true
+  # UnlockLevel: 5, display: true
+  # TechTreeNames: Weapons
+# }
+
+
+# # Weapon for testing
+# { +Item Id: 3999, Name: Eden_TestWeapon
+  # Meshfile: Entities/Items/Weapons/ScifiCannon/ScifiCannonPrefab
+  # PickupToToolbar: true
+  # Material: Device
+  # MarketPrice: 4235, display: true
+  # HoldType: 15
+  # StackSize: 1
+  # Category: Weapons/Items
+  # ShowUser: NoButCSV
+  # Info: Eden_RifleLightninginfo, display: true
+  # Mass: 200, type: float, display: true, formatter: Kilogram
+  # Volume: 100, type: float, display: true, formatter: Liter
+  # Durability: 2000, display: false
+  # DegradationProb: 0.025, type: float, display: false
+  # RepairDisabled: true, display: true
+  # SfxJammed: Weapons/Player/Reload/WeaponJammedSingleShot  
+  # Crosshair: @RG_crosshairs/PlasmaCannon
+  # { Child 0
+    # Class: Ranged
+    # AllowRemote: false
+    # ROF: 0.1, type: float, display: true, formatter: ROF
+    # Range: 10, display: false
+    # NoiseStrength: 80, display: false 
+    # CameraShake: 0
+    # BulletSpread: 0, display: true
+    # Recoil: 0, display: true
+    # IgnoreAtmo: true, display: true
+    # Automatic: true, display: true 
+    # Damage: 175, display: true
+    # AmmoCapacity: 100, display: true
+    # AmmoType: EnergyCellLarge, display: true
+    # UseSingleMagazine: true
+    # ReloadDelay: 2.5, display: true
+    # ParticleTransform: Muzzle/Particle1
+    # SfxBegin: Weapons/Player/Tools/WeaponLightning_start
+    # SfxLoop: Weapons/Player/Tools/WeaponLightning_loop
+    # SfxNoAmmo: Weapons/Misc/G36DryFire
+    # SfxReload: Weapons/Player/Reload/RifleReloadNormal
+    # PfxMuzzle: SniperMuzzleLaserBlue
+    # # Tracer: @rg_projectiles/RG_ProjectileLightningBolt
+    # Tracer: @rg_projectiles/RG_ProjectileBeamTest
+    # TracerPerBullet: 1
+    # TracerIsBeam: true
+    # # TracerSpeed: 60
+
+    # # DamageMultiplier_1: 0, param1: dirt|stone|rock|wood||metalhard|hullarmored|hullcombat
+    # # DamageMultiplier_2: 0.03, param1: shield
+    
+    # DamageMultiplier_Group: Eden_IonRifle
+    # DamageMultiplier_6: 1.5, param1: head, display: DmgMultiplierHead
+  # }
+  # { Child 1
+    # Class: Ranged
+    # ROF: 12, type: float, display: true, formatter: ROF
+    # Automatic: false, display: true
+    # AutoReload: false
+    # Range: 3, display: false
+    # NoiseStrength: 100, display: false
+    # BulletsPerShot: 24
+    # BulletSpread: 0
+    # RaySpread: 5, display: true
+    # Recoil: 0.75, display: true
+    # Damage: 300, display: true
+    # AmmoCapacity: 100, display: true
+    # AmmoType: EnergyCellLarge, display: true
+    # UseSingleMagazine: true
+    # ReloadDelay: 2.5, display: true
+    # SfxBegin: Weapons/Player/Tools/WeaponLightning_start
+    # SfxNoAmmo: Weapons/Misc/PumpgunDryFire
+    # SfxReload: Weapons/Player/Reload/RifleReloadSlow
+    # PfxMuzzle: SniperMuzzleLaserBlue
+    # Tracer: @rg_projectiles/RG_BlastEMPM2
+    # TracerPerBullet: 1
+    # TracerSpeed: 1
+    # # Buff: "Stunned"
+    # # Buff_chance: "1"
+
+    # # DamageMultiplier_1: 0, param1: dirt|stone|rock|wood||metalhard|hullarmored|hullcombat
+    # # DamageMultiplier_2: 0.01, param1: shield
+    
+    # DamageMultiplier_Group: Eden_IonRifle
+  # }
+  # { Child 6
+    # Class: Movements
+    # StandingLocation: "0.06, 0.115, -0.06"
+    # StandingRotation: "-4, -6, 1.1"
+    # AimingLocation: "0.0, 0.0, 0.0"
+    # AimingRotation: "0.0, 0.0, 0.0"
+    # RunningLocation: "0.12, 0.0, 0.0"
+    # RunningRotation: "-8, -55, 8"
+    # CrouchingLocation: "0.12, 0.115, -0.06"
+    # CrouchingRotation: "-4, -6, 1.1"
+    # # RecoilLocation: "2.12, 0.115, -0.073"
+    # RecoilLocation: "0, 0, 0"
+    # # RecoilRotation: "-55, -5.4, 8"
+    # RecoilRotation: "0, 0, 0"
+    # WalkMovement: "0.05"
+    # RunMovement: "0.1"
+  # }
+  # UnlockCost: 0
+  # UnlockLevel: 25
+  # TechTreeParent: ""
+  # TechTreeNames: Hidden
+# }

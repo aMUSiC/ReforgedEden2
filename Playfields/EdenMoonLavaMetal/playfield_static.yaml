@@ -7,9 +7,9 @@ Description: "Difficulty: [c][ffff00]Medium[-][/c]
 [c][ffff00]High Gravity Warning[-][/c]
 
 
-A dense iron core covered by an impenetrable layer of solidified metal. Hotspots of molten gold allow access to the softer mantle, providing a way of mining the gold deposits trapped beneath the crust.
+A dense iron core covered by an impenetrable layer of solidified metal. Hotspots of molten gold allow access to the softer mantle, providing a way of mining the deposits trapped beneath the hardened crust.
 
-Sensors detect Iron deposits that can be indefinitely mined via autominer without depleting. Platinum deposits can be mined the same way but will deplete."
+Sensors detect Iron deposits that can be indefinitely mined via autominer."
 
 PlanetType: Metallic Moon
 PlayfieldType: Moon
@@ -93,9 +93,6 @@ RandomResources:
       DepthMinMax: [ 50, 60 ]
       DroneProb: 0
       MaxDroneCount: 1
-      # #DistTypeCylinder:
-        # #MaxRadius: 13
-        # #YVariance: 8
 
     - Name: GoldResource
       Biome: [ Metal ]
@@ -105,20 +102,15 @@ RandomResources:
       DepthMinMax: [ 10, 15 ]
       DroneProb: 0
       MaxDroneCount: 1
-      # #DistTypeCylinder:
-        # #MaxRadius: 13
-        # #YVariance: 3
 
     - Name: PlatinResource
-      # IsScalingCount: True 
-      CountMinMax: [ 1, 3 ] 
-      SizeMinMax: [ 7, 8 ] 
-      DepthMinMax: [ 50, 60 ]
+      Biome: [ Metal ]
+      CountMinMax: [ 1, 3 ]
+      SizeMinMax: [ 6, 7 ]
+      # DepthMinMax: [ 50, 60 ]
+      DepthMinMax: [ 10, 15 ]
       DroneProb: 0
       MaxDroneCount: 1
-      #DistTypeCylinder:
-        #MaxRadius: 3
-        #YVariance: 3
 
     - Name: PromethiumResource
       Biome: [ Metal ]
@@ -128,15 +120,9 @@ RandomResources:
       DroneProb: 0
       MaxDroneCount: 1
       DepthMinMax: [ 15, 20 ]
-      #DistTypeCylinder:
-        #MaxRadius: 13
-        #YVariance: 10
-      
+
 ### Resource Asteroids
 AsteroidResources:
-     - Name: GoldResource
-       Threshold: 0.2
-       Amount: 0.1
      - Name: PromethiumResource
        Threshold: 0.2
        Amount: 0.1

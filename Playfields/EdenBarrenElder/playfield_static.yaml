@@ -676,11 +676,12 @@ SpawnZones:
       DelayMinMax: [-1, -1]
 -  SpawnAt: [R2DroneBase, R2XenuMainT3]
    BiomesExcluded: [LowMountains, Mountains]
-   Radius: 1000
+   Radius: 900
    RadiusRandom: 100
    RateMultiplyerCenter: 1
    RateMultiplyerEdge: 0.40000000000000002
    Color: 1.0, 1.0, 1.0, 1.0
+   SpawnOnlyIfPoiIsAlien: true
    Entities:
    -  Names: [ZiraxMinigunPatrol, ZiraxRocketPatrol, ZiraxShotgunPatrol, ZiraxMechanoidPatrol, ZiraxRipperDogPatrol, ZiraxOverseerPatrol]
       Biomes: [Any]
@@ -694,6 +695,7 @@ SpawnZones:
    RateMultiplyerCenter: 1
    RateMultiplyerEdge: 0.59999999999999998
    Color: 1.0, 1.0, 1.0, 1.0
+   SpawnOnlyIfPoiIsAlien: true
    Entities:
    -  Names: [ZiraxMinigunPatrol, ZiraxRocketPatrol, ZiraxShotgunPatrol, ZiraxMechanoidPatrol, ZiraxRipperDogPatrol, ZiraxOverseerPatrol]
       Biomes: [Any]
@@ -707,10 +709,6 @@ CreatureSpawning:
       Period: Always
       Amount: 30
       DelayMinMax: [10, 20]
-   -  Name: ZiraxRocketPatrol
-      Period: Always
-      Amount: 10
-      DelayMinMax: [0, 0]
 -  Biomes: [Plains, PlainsEdge, Flats]
    Entities:
    -  Name: WormDesertLargeHerd

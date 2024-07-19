@@ -435,7 +435,7 @@ POIs:
               Value: 360
 
 # Stage 3
-        - GroupName: R2TalonVillageStory
+        - GroupName: R2TalonVillageStorySnow
           IsImportant: True
           Faction: Talon
           IsCommandCenter: True
@@ -455,7 +455,7 @@ POIs:
           AvoidFactionTerritory: False
           IsImportant: True
           CountMinMax: [ 1, 1 ]
-          SpawnPOINear: [R2TalonVillageStory]
+          SpawnPOINear: [R2TalonVillageStorySnow]
           SpawnPOINearRange: [150, 450]
           Properties:
             - Key: MapMarker
@@ -464,7 +464,7 @@ POIs:
               Value: 360
 
 # Aux POIs for village
-        - GroupName: TalonSnow
+        - GroupName: R2TalonSnow
           Faction: Talon
           Territory: False
           CountMinMax: [ 2, 3 ]
@@ -472,13 +472,13 @@ POIs:
           DronesMinMax: [ 1, 1 ]
           ReserveCount: 0
           TroopTransport: False
-          SpawnPOINear: [R2TalonVillageStory]
+          SpawnPOINear: [R2TalonVillageStorySnow]
           SpawnPOINearRange: [75, 200]
           Properties:
             - Key: RegenAfter
               Value: 720
 
-        - GroupName: TalonSnowFarm
+        - GroupName: R2TalonSnowFarm
           Faction: Talon
           Territory: False
           CountMinMax: [ 2, 3 ]
@@ -486,7 +486,7 @@ POIs:
           DronesMinMax: [ 1, 1 ]
           ReserveCount: 0
           TroopTransport: False
-          SpawnPOINear: [R2TalonVillageStory]
+          SpawnPOINear: [R2TalonVillageStorySnow]
           SpawnPOINearRange: [150, 300]
           Properties:
             - Key: RegenAfter
@@ -499,7 +499,7 @@ POIs:
           CountMinMax: [ 1, 1 ]
           SpawnPOIAvoid: [NullPOI, R2HeidelbergStory]
           SpawnPOIAvoidDistance: 1000
-          SpawnPOINear: [R2TalonVillageStory]
+          SpawnPOINear: [R2TalonVillageStorySnow]
           SpawnPOINearRange: [800, 1500]
           Properties:
             - Key: MapMarker
@@ -517,7 +517,7 @@ POIs:
           DronesMinMax: [ 1, 1 ]
           ReserveCount: 0
           TroopTransport: False
-          SpawnPOIAvoid: [R2TalonVillageStory]
+          SpawnPOIAvoid: [R2TalonVillageStorySnow]
           SpawnPOIAvoidDistance: 1000
           SpawnPOINear: [R2HeidelbergStory]
           SpawnPOINearRange: [2500, 3500]
@@ -570,7 +570,7 @@ POIs:
           DroneProb: 1
           DronesMinMax: [ 2, 3 ]
           ReserveCount: 5
-          SpawnPOIAvoid: [NullPOI, R2HeidelbergStory, R2TalonVillageStory, R2TradeStory, R2FreighterStory]
+          SpawnPOIAvoid: [NullPOI, R2HeidelbergStory, R2TalonVillageStorySnow, R2TradeStory, R2FreighterStory]
           SpawnPOIAvoidDistance: 3000
           Properties:
             - Key: Music
@@ -621,7 +621,7 @@ POIs:
           DronesMinMax: [ 1, 2 ]
           ReserveCount: 1
           TroopTransport: True
-          SpawnPOIAvoid: [NullPOI, R2DroneBaseStarter, R2HeidelbergStory, R2TalonVillageStory, R2TradeStory, R2FreighterStory]
+          SpawnPOIAvoid: [NullPOI, R2DroneBaseStarter, R2HeidelbergStory, R2TalonVillageStorySnow, R2TradeStory, R2FreighterStory]
           SpawnPOIAvoidDistance: 3000
           SpawnResource: ["PromethiumResource:1-1"]
           SpawnResourceRange: [150,600]
@@ -653,21 +653,21 @@ POIs:
           DronesMinMax: [ 1, 1 ]
           ReserveCount: 0
           TroopTransport: False
-          SpawnPOIAvoid: [NullPOI, R2DroneBaseStarter, R2HeidelbergStory, R2TalonVillageStory, R2TradeStory, R2FreighterStory]
+          SpawnPOIAvoid: [NullPOI, R2DroneBaseStarter, R2HeidelbergStory, R2TalonVillageStorySnow, R2TradeStory, R2FreighterStory]
           SpawnPOIAvoidDistance: 1500
           Properties:
             - Key: RegenAfter
               Value: 720
 
 # =============================================== Faction Talon
-        - GroupName: TalonSnow
+        - GroupName: R2TalonSnow
           Faction: Talon
           Territory: False
           AvoidFactionTerritory: True
           Biome: [ Plantation ]
           IsScalingCount: True
           CountMinMax: [ 4, 5 ]
-          AuxiliaryPOIs: [TalonSnowFarm]
+          AuxiliaryPOIs: [R2TalonSnowFarm]
           DroneProb: 0
           DronesMinMax: [ 1, 1 ]
           ReserveCount: 0
@@ -677,7 +677,7 @@ POIs:
               Value: 720
 
 # Aux POIs
-        - GroupName: TalonSnowFarm
+        - GroupName: R2TalonSnowFarm
           Faction: Talon
           Territory: False
           IsAuxPOI: True
@@ -741,7 +741,7 @@ POIs:
           DronesMinMax: [ 1, 1 ]
           ReserveCount: 0
           TroopTransport: False
-          SpawnPOIAvoid: [NullPOI, R2HeidelbergStory, R2DroneBaseStarter, R2FreighterStory, R2TalonVillageStory, R2TradeStory]
+          SpawnPOIAvoid: [NullPOI, R2HeidelbergStory, R2DroneBaseStarter, R2FreighterStory, R2TalonVillageStorySnow, R2TradeStory]
           SpawnPOIAvoidDistance: 1500
           Properties:
             - Key: MapMarker
@@ -758,7 +758,7 @@ POIs:
           DronesMinMax: [ 1, 1 ]
           ReserveCount: 0
           TroopTransport: False
-          SpawnPOIAvoid: [NullPOI, R2HeidelbergStory, R2DroneBaseStarter, R2FreighterStory, R2TalonVillageStory, R2TradeStory]
+          SpawnPOIAvoid: [NullPOI, R2HeidelbergStory, R2DroneBaseStarter, R2FreighterStory, R2TalonVillageStorySnow, R2TradeStory]
           SpawnPOIAvoidDistance: 2500
           Properties:
             - Key: MapMarker
@@ -767,7 +767,7 @@ POIs:
               Value: 720
 
 # Random Ruins
-        - GroupName: TalonWoodRuin
+        - GroupName: R2TalonWoodRuin
           Faction: None
           CountMinMax: [ 2, 4 ]
           IsScalingCount: True
@@ -961,7 +961,7 @@ SpawnRateZones:
 
 
      # 'Civilisation POI': Remove aggressive creatures nearby (already all killed or driven away there)
-   - SpawnAt: [R2TalonVillageStory, R2TradeStory, R2FreighterStory]
+   - SpawnAt: [R2TalonVillageStorySnow, R2TradeStory, R2FreighterStory]
      Radius: 150
      RadiusRandom: 0
      RateMultiplyerCenter: 0
@@ -970,7 +970,7 @@ SpawnRateZones:
      Color: "0.0, 1.0, 0.0, 0.7" 
 
      # Story-critical POI: Remove neutral-aggressive creatures for player safety
-   - SpawnAt: [R2TalonVillageStory]
+   - SpawnAt: [R2TalonVillageStorySnow]
      Radius: 100
      RadiusRandom: 0
      RateMultiplyerCenter: 0
@@ -1035,7 +1035,7 @@ SpawnZones:
          DelayMinMax: [-1, -1]
 
      # TALON herders ====
-   - SpawnAt: [R2TalonVillageStory]
+   - SpawnAt: [R2TalonVillageStorySnow]
      BiomesExcluded: [ Mountains, HighMountains, Glacier, GlacierSnow, Grove, Crashsite, Crashsite_1, Radiated, RadiatedFog ]
      Radius: 1200
      RadiusRandom: 50
@@ -1056,7 +1056,7 @@ SpawnZones:
          DelayMinMax: [200, 240]
 
      # TALON guards
-   - SpawnAt: [R2TalonVillageStory]
+   - SpawnAt: [R2TalonVillageStorySnow]
      BiomesExcluded: [ HighMountains, Glacier, GlacierSnow, Radiated, RadiatedFog ]
      Radius: 250
      RadiusRandom: 0
@@ -1073,7 +1073,7 @@ SpawnZones:
 
 
      # TALON guards: Very high spawn chance 'at the gates'
-   - SpawnAt: [R2TalonVillageStory]
+   - SpawnAt: [R2TalonVillageStorySnow]
      BiomesExcluded: [ HighMountains, Glacier, GlacierSnow, Radiated, RadiatedFog ]
      Radius: 75
      RadiusRandom: 0
@@ -1090,7 +1090,7 @@ SpawnZones:
 
 
      # TALON farmers
-   - SpawnAt: [TalonAux, TalonFarm]
+   - SpawnAt: [R2TalonAux, R2TalonFarm]
      Radius: 75
      RadiusRandom: 25
      RateMultiplyerCenter: 1.0

@@ -275,7 +275,7 @@
   SfxClose: UseActions/body_close
 
   { Child Items
-    Group_0: empty
+    Group_0: empty, param1: 1
   }
 }
 { +Container Id: 78     #Spider 1,2,3 SMALL
@@ -553,15 +553,19 @@
 
   { Child Items
     Name_0: BioFuel, param1: 0.9, param2: "1"
-    Name_1: MoneyCard, param1: 0.5, param2: "20,55"
+    Name_1: MoneyCard, param1: 0.5, param2: "40,75"
     Name_2: WaterBottle, param1: 0.2, param2: 1
-    Name_3: FlameThrowerCanister, param1: 0.1, param2: 1
-    Name_4: AntibioticOintment, param1: 0.075, param2: 1
-    Name_5: Bandages, param1: 0.075, param2: 1
-    Name_6: HeavyWeaponKit, param1: 0.07, param2: "1"
+    Name_3: OxygenBottleSmall, param1: 0.08, param2: 1
+    Name_4: FlameThrowerCanister, param1: 0.1, param2: 1
+    Name_5: AntibioticOintment, param1: 0.075, param2: 1
+    Name_6: Bandages, param1: 0.075, param2: 1
+    Name_7: HeavyWeaponKit, param1: 0.07, param2: "1"
+    Name_8: FlameThrower, param1: 0.01, param2: "1"
 	
-    Group_0: TroopersFood, param1: 0.6
-    Group_1: WeaponUpgradesRare, param1: 0.08
+    Group_0: TradingCardRare, param1: 0.03
+    Group_1: TradingCardCommon, param1: 0.06
+    Group_2: TroopersFood, param1: 0.6
+    Group_3: WeaponUpgradesRare, param1: 0.08
   }
 }
 ## Zirax Elite Soldier
@@ -789,8 +793,8 @@
   SfxClose: UseActions/BarrelClose
 
   { Child Items
-    Name_0: ArmorLightT2, param1: 0.08, param2: 1
-    Name_1: ArmorMediumT2, param1: 0.08, param2: 1
+    Name_0: ArmorLightT2, param1: 0.05, param2: 1
+    Name_1: ArmorMediumT2, param1: 0.05, param2: 1
     Name_2: LargeUpgradeKit, param1: 0.08, param2: "1"
     Name_3: GoldIngot, param1: 0.10, param2: "5,10"
     Name_4: SathiumIngot, param1: 0.12, param2: "50,100"
@@ -839,26 +843,24 @@
     Name_7: LargeUpgradeKit, param1: 0.18, param2: 1
     Name_8: SmallUpgradeKit, param1: 0.24, param2: 1
     Name_9: AdvancedUpgradeKit, param1: 0.24, param2: 1
-    Name_10: PlasmaConverter, param1: 0.25, param2: "2,5"
-    Name_11: ArmorHeavyT2, param1: 0.25, param2: 1
-    Name_12: ArmorLightT2, param1: 0.25, param2: 1
-    Name_13: ArmorMediumT2, param1: 0.25, param2: 1
-    Name_14: GoldIngot, param1: 0.4, param2: "50,100"
-    Name_15: MoneyCard, param1: 0.5, param2: "10000,25000"
-    Name_16: PentaxidCrystal, param1: 0.5, param2: "50,120"
-    Name_17: FusionCell, param1: 0.6, param2: "5,20"
-    Name_18: ZascosiumIngot, param1: 0.7, param2: "80,160"
-    Name_19: ErestrumIngot, param1: 0.8, param2: "100,200"
-    Name_20: SathiumIngot, param1: 0.8, param2: "125,250"
+    Name_10: PlasmaConverter, param1: 0.25, param2: "3,7"
+    Name_11: GoldIngot, param1: 0.4, param2: "50,100"
+    Name_12: MoneyCard, param1: 0.5, param2: "10000,25000"
+    Name_13: PentaxidCrystal, param1: 0.5, param2: "50,120"
+    Name_14: FusionCell, param1: 0.6, param2: "5,20"
+    Name_15: ZascosiumIngot, param1: 0.7, param2: "80,160"
+    Name_16: ErestrumIngot, param1: 0.8, param2: "100,200"
+    Name_17: SathiumIngot, param1: 0.8, param2: "125,250"
 
     Group_0: WeaponUpgradesUltra, param1: 0.05
     Group_1: Keycards, param1: 0.075
     Group_2: SuitBoosterT2, param1: 0.1
     Group_3: Hacking, param1: 0.125
-    Group_4: WeaponUpgradesRare, param1: 0.15
-    Group_5: SuitBooster, param1: 0.175
-    Group_6: Eden_VeryRare, param1: 0.15
-    Group_7: Eden_WeaponsVeryRare, param1: 0.1
+    Group_4: ArmorT2, param1: 0.140
+    Group_5: WeaponUpgradesRare, param1: 0.15
+    Group_6: SuitBooster, param1: 0.175
+    Group_7: Eden_VeryRare, param1: 0.15
+    Group_8: Eden_WeaponsVeryRare, param1: 0.1
   }
 }
 
@@ -871,19 +873,18 @@
 
   { Child Items
     Name_0: RTG, param1: 0.01, param2: 1
-    Name_1: PlasmaCannonAlien, param1: 0.1, param2: "1,1"
-    Name_2: SmallUpgradeKit, param1: 0.18, param2: 1
-    Name_3: AdvancedUpgradeKit, param1: 0.20, param2: 1
-    Name_4: AntimatterConverter, param1: 0.20, param2: "1,4"
-    Name_5: LargeUpgradeKit, param1: 0.25, param2: 1
-    Name_6: AutoMinerCore, param1: 0.25, param2: "1,3"
-    Name_7: LargeOptronicMatrix, param1: 0.30, param2: "5,8"
-    Name_8: LargeOptronicBridge, param1: 0.37, param2: "4,10"
-    Name_9: SmallOptronicMatrix, param1: 0.39, param2: "4,9"
-    Name_10: SmallOptronicBridge, param1: 0.5, param2: "4,12"
+    Name_1: SmallUpgradeKit, param1: 0.125, param2: 1
+    Name_2: AdvancedUpgradeKit, param1: 0.15, param2: 1
+    Name_3: AntimatterConverter, param1: 0.175, param2: "3,5"
+    Name_4: LargeUpgradeKit, param1: 0.20, param2: 1
+    Name_5: AutoMinerCore, param1: 0.20, param2: "1,3"
+    Name_6: LargeOptronicMatrix, param1: 0.20, param2: "5,8"
+    Name_7: LargeOptronicBridge, param1: 0.233, param2: "4,10"
+    Name_8: SmallOptronicMatrix, param1: 0.275, param2: "4,9"
+    Name_9: SmallOptronicBridge, param1: 0.33, param2: "4,12"
 
     Group_0: WeaponUpgradesUltra, param1: 0.2
-    Group_1: SuitBoosterT2, param1: 0.3
+    Group_1: SuitBoosterT2, param1: 0.25
     Group_2: WeaponsEpic, param1: 0.5
     Group_3: Eden_UltraRare, param1: 0.2
     Group_4: Eden_WeaponsEpic, param1: 0.15
@@ -1793,6 +1794,7 @@
     Name_17: MultiTool, param1: 0.1, param2: 1
     Name_18: ArmorMedium, param1: 0.075, param2: 1
     Name_19: ArmorLightT2, param1: 0.075, param2: 1
+    Name_20: ArmorSpace, param1: 0.05, param2: 1
 	
     Group_0: WeaponsBasic, param1: 0.24
     Group_1: WeaponsBasicKit, param1: 0.15
@@ -2065,7 +2067,7 @@
     Name_1: Bandages, param1: 0.5, param2: "1,2"
     Name_2: PulseLaserChargePistol, param1: 0.5, param2: "1,2"
     Name_3: Drill, param1: 0.3, param2: 1
-    Name_4: MultiTool, param1: 0.3, param2: 
+    Name_4: MultiTool, param1: 0.3, param2: 1
     Name_5: GoldCoins, param1: 0.3, param2: 1
     Name_6: MoneyCard, param1: 0.2, param2: "10,40"
     Name_7: 9mmBullet, param1: 0.18, param2: "12,32"
@@ -2076,7 +2078,9 @@
     Name_12: NightVision, param1: 0.1, param2: 1
     Name_13: TransportationBoost, param1: 0.05, param2: 1
     Name_14: ArmorMedium, param1: 0.05, param2: 1
-    Name_15: ArmorMediumT2, param1: 0.01, param2: 1
+    Name_15: ArmorSpace, param1: 0.025, param2: 1
+    Name_16: ArmorIndustrial, param1: 0.015, param2: 1
+    Name_18: ArmorMediumT2, param1: 0.01, param2: 1
 
     Group_0: WeaponsBasic, param1: 0.35
     Group_1: WeaponsBasicKit, param1: 0.15
@@ -2316,7 +2320,7 @@
   SfxClose: UseActions/KEYUnlockingMetalDoor(mono)
 
   { Child Items
-    Group_0: empty
+    Group_0: empty, param1: 1
   }
 }
 
@@ -2357,7 +2361,7 @@
   SfxClose: UseActions/electric
 
   { Child Items
-    Group_0: empty
+    Group_0: empty, param1: 1
   }
 }
 
@@ -2372,7 +2376,7 @@
   DestroyOnClose: False
 
   { Child Items
-    Group_0: empty
+    Group_0: empty, param1: 1
   }
 }
 
@@ -2384,7 +2388,7 @@
   SfxClose: UseActions/KEYUnlockingMetalDoor(mono)
 
   { Child Items
-    Group_0: empty
+    Group_0: empty, param1: 1
   }
 }
 
@@ -2397,7 +2401,7 @@
   SfxClose: UseActions/electric
 
   { Child Items
-    Group_0: empty
+    Group_0: empty, param1: 1
   }
 }
 
@@ -2409,7 +2413,7 @@
   SfxClose: UseActions/KEYUnlockingMetalDoor(mono)
 
   { Child Items
-    Group_0: empty
+    Group_0: empty, param1: 1
   }
 }
 
@@ -2421,7 +2425,7 @@
   SfxClose: UseActions/KEYUnlockingMetalDoor(mono)
 
   { Child Items
-    Group_0: empty
+    Group_0: empty, param1: 1
   }
 }
 
@@ -2433,7 +2437,7 @@
   SfxClose: UseActions/oxygen_tank_open
 
   { Child Items
-    Group_0: empty
+    Group_0: empty, param1: 1
   }
 }
 
@@ -2445,7 +2449,7 @@
   SfxClose: UseActions/oxygen_tank_open
 
   { Child Items
-    Group_0: empty
+    Group_0: empty, param1: 1
   }
 }
 
@@ -2457,7 +2461,7 @@
   SfxClose: UseActions/KEYUnlockingMetalDoor(mono)
 
   { Child Items
-    Group_0: empty
+    Group_0: empty, param1: 1
   }
 }
 ## ESCAPE POD - new start  
@@ -2468,7 +2472,8 @@
   SfxClose: UseActions/KEYUnlockingMetalDoor(mono)
 
   { Child Items
-    Group_0: StartingEquipment_NewStart
+    Group_0: empty, param1: 1
+    # Group_0: StartingEquipment_NewStart
   }
 }
 
@@ -2492,7 +2497,7 @@
   SfxClose: UseActions/KEYUnlockingMetalDoor(mono)
 
   { Child Items
-    Group_0: empty     # former: EscapePodEasy
+    Group_0: empty, param1: 1     # former: EscapePodEasy
   }
 }
 
@@ -2504,7 +2509,7 @@
   SfxClose: UseActions/KEYUnlockingMetalDoor(mono)
 
   { Child Items
-    Group_0: empty     #former: EscapePodMedium
+    Group_0: empty, param1: 1     #former: EscapePodMedium
   }
 }
 
@@ -2516,7 +2521,7 @@
   SfxClose: UseActions/KEYUnlockingMetalDoor(mono)
 
   { Child Items
-    Group_0: empty    #former: EscapePodHard
+    Group_0: empty, param1: 1    #former: EscapePodHard
   }
 }
 ## DropContainer - needs to be able to store content from largest containers
@@ -2528,7 +2533,7 @@
   DestroyOnClose: False
 
   { Child Items
-    Group_0: empty
+    Group_0: empty, param1: 1
   }
 }
 
@@ -2551,7 +2556,7 @@
   SfxClose: UseActions/KEYUnlockingMetalDoor(mono)
 
   { Child Items
-    Group_0: empty
+    Group_0: empty, param1: 1
   }
 }
 ## Random Dedicated Crew (Specified by dialog)
@@ -2572,7 +2577,6 @@
     Name_7: CrewPilot01, param1: 0.1, param2: "1"
   }
 }
-
 
 
 # ============================================================================================================================================================================
@@ -3500,70 +3504,76 @@
   }
 }
 
-# Bandit Loot
-{ +Container Id: 644
-  Count: "1,3"
-  Size: "8,8"
-  SfxOpen: UseActions/ContainerOpen
-  SfxClose: UseActions/ContainerClose
+# Free ID 644
 
-  { Child Items
-    Name_0: EnergyMatrix, param1: 0.2, param2: "20,40"
-    Name_1: OpticalFiber, param1: 0.2, param2: "50,100"
-    Name_2: MechanicalComponents, param1: 0.2, param2: "50,100"
-    Name_3: CapacitorComponent, param1: 0.1, param2: "20,40"
-    Name_4: Computer, param1: 0.2, param2: "15,30"
-    Name_5: SteelPlate, param1: 0.2, param2: "250,500"
-    Name_6: TitanPlates, param1: 0.2, param2: "125,250"
-    Name_7: PentaxidCrystal, param1: 0.3, param2: "15,45"
-    Name_8: EnergyCellLarge, param1: 0.15, param2: "5,15"
-    Group_0: Eden_SalvageUniqueT0, param1: 0.25
-  }
-}
+# # Bandit Loot
+# { +Container Id: 644
+  # Count: "1,3"
+  # Size: "8,8"
+  # SfxOpen: UseActions/ContainerOpen
+  # SfxClose: UseActions/ContainerClose
 
-# Raider Loot
-{ +Container Id: 645
-  Count: "1,3"
-  Size: "8,8"
-  SfxOpen: UseActions/ContainerOpen
-  SfxClose: UseActions/ContainerClose
+  # { Child Items
+    # Name_0: EnergyMatrix, param1: 0.2, param2: "20,40"
+    # Name_1: OpticalFiber, param1: 0.2, param2: "50,100"
+    # Name_2: MechanicalComponents, param1: 0.2, param2: "50,100"
+    # Name_3: CapacitorComponent, param1: 0.1, param2: "20,40"
+    # Name_4: Computer, param1: 0.2, param2: "15,30"
+    # Name_5: SteelPlate, param1: 0.2, param2: "250,500"
+    # Name_6: TitanPlates, param1: 0.2, param2: "125,250"
+    # Name_7: PentaxidCrystal, param1: 0.3, param2: "15,45"
+    # Name_8: EnergyCellLarge, param1: 0.15, param2: "5,15"
+    # Group_0: Eden_SalvageUniqueT0, param1: 0.25
+  # }
+# }
 
-  { Child Items
-    Name_0: EnergyMatrix, param1: 0.2, param2: "20,40"
-    Name_1: OpticalFiber, param1: 0.2, param2: "50,100"
-    Name_2: MechanicalComponents, param1: 0.2, param2: "50,100"
-    Name_3: CapacitorComponent, param1: 0.1, param2: "20,40"
-    Name_4: Computer, param1: 0.2, param2: "15,30"
-    Name_5: SteelPlate, param1: 0.2, param2: "250,500"
-    Name_6: TitanPlates, param1: 0.2, param2: "125,250"
-    Name_7: PentaxidCrystal, param1: 0.3, param2: "15,45"
-    Name_8: EnergyCellLarge, param1: 0.15, param2: "5,15"
-    Group_0: Eden_SalvageUniqueT0, param1: 0.25
-    Group_1: Eden_RecipesAll, param1: 0.1
-  }
-}
+# Free ID 645
 
-# Syndicate Loot
-{ +Container Id: 646
-  Count: "1,3"
-  Size: "8,8"
-  SfxOpen: UseActions/ContainerOpen
-  SfxClose: UseActions/ContainerClose
+# # Raider Loot
+# { +Container Id: 645
+  # Count: "1,3"
+  # Size: "8,8"
+  # SfxOpen: UseActions/ContainerOpen
+  # SfxClose: UseActions/ContainerClose
 
-  { Child Items
-    Name_0: EnergyMatrix, param1: 0.2, param2: "20,40"
-    Name_1: OpticalFiber, param1: 0.2, param2: "50,100"
-    Name_2: MechanicalComponents, param1: 0.2, param2: "50,100"
-    Name_3: CapacitorComponent, param1: 0.1, param2: "20,40"
-    Name_4: Computer, param1: 0.2, param2: "15,30"
-    Name_5: SteelPlate, param1: 0.2, param2: "250,500"
-    Name_6: TitanPlates, param1: 0.2, param2: "125,250"
-    Name_7: PentaxidCrystal, param1: 0.3, param2: "15,45"
-    Name_8: EnergyCellLarge, param1: 0.15, param2: "5,15"
-    Group_0: Eden_SalvageUniqueT0, param1: 0.25
-    Group_1: Eden_RecipesAll, param1: 0.05
-  }
-}
+  # { Child Items
+    # Name_0: EnergyMatrix, param1: 0.2, param2: "20,40"
+    # Name_1: OpticalFiber, param1: 0.2, param2: "50,100"
+    # Name_2: MechanicalComponents, param1: 0.2, param2: "50,100"
+    # Name_3: CapacitorComponent, param1: 0.1, param2: "20,40"
+    # Name_4: Computer, param1: 0.2, param2: "15,30"
+    # Name_5: SteelPlate, param1: 0.2, param2: "250,500"
+    # Name_6: TitanPlates, param1: 0.2, param2: "125,250"
+    # Name_7: PentaxidCrystal, param1: 0.3, param2: "15,45"
+    # Name_8: EnergyCellLarge, param1: 0.15, param2: "5,15"
+    # Group_0: Eden_SalvageUniqueT0, param1: 0.25
+    # Group_1: Eden_RecipesAll, param1: 0.1
+  # }
+# }
+
+# Free ID 646
+
+# # Syndicate Loot
+# { +Container Id: 646
+  # Count: "1,3"
+  # Size: "8,8"
+  # SfxOpen: UseActions/ContainerOpen
+  # SfxClose: UseActions/ContainerClose
+
+  # { Child Items
+    # Name_0: EnergyMatrix, param1: 0.2, param2: "20,40"
+    # Name_1: OpticalFiber, param1: 0.2, param2: "50,100"
+    # Name_2: MechanicalComponents, param1: 0.2, param2: "50,100"
+    # Name_3: CapacitorComponent, param1: 0.1, param2: "20,40"
+    # Name_4: Computer, param1: 0.2, param2: "15,30"
+    # Name_5: SteelPlate, param1: 0.2, param2: "250,500"
+    # Name_6: TitanPlates, param1: 0.2, param2: "125,250"
+    # Name_7: PentaxidCrystal, param1: 0.3, param2: "15,45"
+    # Name_8: EnergyCellLarge, param1: 0.15, param2: "5,15"
+    # Group_0: Eden_SalvageUniqueT0, param1: 0.25
+    # Group_1: Eden_RecipesAll, param1: 0.05
+  # }
+# }
 
 # UCH Reward Vessel reward T1
 { +Container Id: 647
@@ -3702,7 +3712,7 @@
   { Child Items
     Name_0: GoldCoins, param1: 0.75, param2: "25,50"
     Name_1: GoldIngot, param1: 0.2, param2: "1,3"
-    Name_2: LuxuryGoods, param1: 0.1, param2: "1,2"
+    Name_2: Jewellery, param1: 0.1, param2: "1,2"
     Name_3: RawDiamond, param1: 0.05, param2: "1,1"
     Name_4: Eden_PalladiumIngot, param1: 0.05, param2: "1,1"
     Name_5: GoldOre, param1: 0.05, param2: "5,10"
@@ -3719,7 +3729,7 @@
   { Child Items
     Name_0: GoldCoins, param1: 0.4, param2: "75,150"
     Name_1: GoldIngot, param1: 0.2, param2: "5,10"
-    Name_2: LuxuryGoods, param1: 0.1, param2: "5,10"
+    Name_2: Jewellery, param1: 0.1, param2: "5,10"
     Name_3: RawDiamond, param1: 0.1, param2: "7,15"
     Name_4: Eden_PalladiumIngot, param1: 0.1, param2: "3,5"
     Name_5: GoldOre, param1: 0.1, param2: "20,50"
@@ -3741,22 +3751,24 @@
   }
 }
 
-# Bulk Munitions
-{ +Container Id: 658
-  Count: "1,2"
-  Size: "8,8"
-  SfxOpen: UseActions/ContainerOpen
-  SfxClose: UseActions/ContainerClose
-  { Child Items
-    Name_0: Eden_ShipmentMilitary, param1: 0.1
-    Group_0: Eden_AmmoSmallBulkT1, param1: 0.35
-    Group_1: Eden_AmmoLargeBulkT1, param1: 0.35
-    Group_2: Eden_AmmoSmallBulkT2, param1: 0.5
-    Group_3: Eden_AmmoLargeBulkT2, param1: 0.5
-  }
-}
+# Free ID 658
 
-# Test
+# # Bulk Munitions
+# { +Container Id: 658
+  # Count: "1,2"
+  # Size: "8,8"
+  # SfxOpen: UseActions/ContainerOpen
+  # SfxClose: UseActions/ContainerClose
+  # { Child Items
+    # Name_0: Eden_ShipmentMilitary, param1: 0.1, param2: "1,1"
+    # Group_0: Eden_AmmoSmallBulkT1, param1: 0.35
+    # Group_1: Eden_AmmoLargeBulkT1, param1: 0.35
+    # Group_2: Eden_AmmoSmallBulkT2, param1: 0.5
+    # Group_3: Eden_AmmoLargeBulkT2, param1: 0.5
+  # }
+# }
+
+# # Test
 # { +Container Id: 649
   # Count: 1
   # Size: "1,1"
@@ -3851,7 +3863,7 @@
   SfxOpen: UseActions/ContainerOpen
   SfxClose: UseActions/ContainerClose
   { Child Items
-    Group_0: Eden_MiningSiteT1, param1: 0.05
+    Group_0: Eden_MiningSiteSpecialT1, param1: 0.05
     Group_1: Eden_OresUncommonL, param1: 0.25
     Group_2: Eden_OresCommonL, param1: 1
   }
@@ -3864,7 +3876,7 @@
   SfxOpen: UseActions/ContainerOpen
   SfxClose: UseActions/ContainerClose
   { Child Items
-    Group_0: Eden_MiningSiteT1, param1: 0.05
+    Group_0: Eden_MiningSiteSpecialT1, param1: 0.05
     Group_1: Eden_OresExotic, param1: 0.1
     Group_2: Eden_OresRareL, param1: 0.25
     Group_3: Eden_OresUncommonL, param1: 0.5
@@ -3880,7 +3892,7 @@
   SfxOpen: UseActions/ContainerOpen
   SfxClose: UseActions/ContainerClose
   { Child Items
-    Group_0: Eden_MiningSiteT1, param1: 0.05
+    Group_0: Eden_MiningSiteSpecialT1, param1: 0.05
     Group_1: Eden_OresExoticL, param1: 0.5
     Group_2: Eden_OresRareL, param1: 0.5
     Group_3: Eden_OresUncommonL, param1: 0.5
@@ -3897,7 +3909,7 @@
   SfxOpen: UseActions/ContainerOpen
   SfxClose: UseActions/ContainerClose
   { Child Items
-    Group_0: Eden_MiningSiteT1, param1: 0.05
+    Group_0: Eden_MiningSiteSpecialT1, param1: 0.05
     Group_1: Eden_OresExoticL, param1: 0.5
     Group_2: Eden_OresRareL, param1: 0.5
     Group_3: Eden_OresRareXL, param1: 0.25
@@ -3913,7 +3925,7 @@
   SfxOpen: UseActions/ContainerOpen
   SfxClose: UseActions/ContainerClose
   { Child Items
-    Group_0: Eden_MiningSiteT1, param1: 0.1
+    Group_0: Eden_MiningSiteSpecialT1, param1: 0.1
     Group_1: Eden_OresExoticL, param1: 0.5
     Group_2: Eden_OresExoticXL, param1: 0.35
     Group_3: Eden_OresRareXL, param1: 1
@@ -3927,7 +3939,7 @@
   SfxOpen: UseActions/ContainerOpen
   SfxClose: UseActions/ContainerClose
   { Child Items
-    Group_0: Eden_MiningSiteT1, param1: 0.1
+    Group_0: Eden_MiningSiteSpecialT1, param1: 0.1
     Group_1: Eden_OresUncommonXL, param1: 0.25
     Group_2: Eden_OresCommonXL, param1: 0.25
     Group_3: Eden_OresExoticXL, param1: 0.75
@@ -4168,595 +4180,595 @@
   # }
 # }
 
-# Bandit - OLD
-{ +Container Id: 698
-  Count: "1,1"
-  Size: "8,8"
-  SfxOpen: UseActions/drone_open
-  SfxClose: UseActions/drone_close
-
-  { Child Items
-    Name_0: Token, param1: 1, param2: "meta=6506"
-  }
-}
-
-# Raider - OLD
-{ +Container Id: 699
-  Count: "1,1"
-  Size: "8,8"
-  SfxOpen: UseActions/drone_open
-  SfxClose: UseActions/drone_close
-
-  { Child Items
-    Name_0: Token, param1: 1, param2: "meta=6505"
-  }
-}
-
-# Death's Hand - OLD
-{ +Container Id: 700
-  Count: "1,1"
-  Size: "8,8"
-  SfxOpen: UseActions/drone_open
-  SfxClose: UseActions/drone_close
-
-  { Child Items
-    Name_0: Token, param1: 1, param2: "meta=6507"
-  }
-}
-
-# Bounty containers
-{ +Container Id: 701
-  Count: "1,1"
-  Size: "8,1"
-  SfxOpen: UseActions/drone_open
-  SfxClose: UseActions/drone_close
-
-  { Child Items
-    Name_0: Token, param1: 1, param2: "meta=6601"
-  }
-}
-
-{ +Container Id: 702
-  Count: "1,1"
-  Size: "8,1"
-  SfxOpen: UseActions/drone_open
-  SfxClose: UseActions/drone_close
-
-  { Child Items
-    Name_0: Token, param1: 1, param2: "meta=6602"
-  }
-}
-
-{ +Container Id: 703
-  Count: "1,1"
-  Size: "8,1"
-  SfxOpen: UseActions/drone_open
-  SfxClose: UseActions/drone_close
-
-  { Child Items
-    Name_0: Token, param1: 1, param2: "meta=6603"
-  }
-}
-
-{ +Container Id: 704
-  Count: "1,1"
-  Size: "8,1"
-  SfxOpen: UseActions/drone_open
-  SfxClose: UseActions/drone_close
-
-  { Child Items
-    Name_0: Token, param1: 1, param2: "meta=6604"
-  }
-}
-
-{ +Container Id: 705
-  Count: "1,1"
-  Size: "8,1"
-  SfxOpen: UseActions/drone_open
-  SfxClose: UseActions/drone_close
-
-  { Child Items
-    Name_0: Token, param1: 1, param2: "meta=6605"
-  }
-}
-
-{ +Container Id: 706
-  Count: "1,1"
-  Size: "8,1"
-  SfxOpen: UseActions/drone_open
-  SfxClose: UseActions/drone_close
-
-  { Child Items
-    Name_0: Token, param1: 1, param2: "meta=6606"
-  }
-}
-
-{ +Container Id: 707
-  Count: "1,1"
-  Size: "8,1"
-  SfxOpen: UseActions/drone_open
-  SfxClose: UseActions/drone_close
-
-  { Child Items
-    Name_0: Token, param1: 1, param2: "meta=6607"
-  }
-}
-
-{ +Container Id: 708
-  Count: "1,1"
-  Size: "8,1"
-  SfxOpen: UseActions/drone_open
-  SfxClose: UseActions/drone_close
-
-  { Child Items
-    Name_0: Token, param1: 1, param2: "meta=6608"
-  }
-}
-
-{ +Container Id: 709
-  Count: "1,1"
-  Size: "8,1"
-  SfxOpen: UseActions/drone_open
-  SfxClose: UseActions/drone_close
-
-  { Child Items
-    Name_0: Token, param1: 1, param2: "meta=6609"
-  }
-}
-
-{ +Container Id: 710
-  Count: "1,1"
-  Size: "8,1"
-  SfxOpen: UseActions/drone_open
-  SfxClose: UseActions/drone_close
-
-  { Child Items
-    Name_0: Token, param1: 1, param2: "meta=6610"
-  }
-}
-
-{ +Container Id: 711
-  Count: "1,1"
-  Size: "8,1"
-  SfxOpen: UseActions/drone_open
-  SfxClose: UseActions/drone_close
-
-  { Child Items
-    Name_0: Token, param1: 1, param2: "meta=6611"
-  }
-}
-
-{ +Container Id: 712
-  Count: "1,1"
-  Size: "8,1"
-  SfxOpen: UseActions/drone_open
-  SfxClose: UseActions/drone_close
-
-  { Child Items
-    Name_0: Token, param1: 1, param2: "meta=6612"
-  }
-}
-
-{ +Container Id: 713
-  Count: "1,1"
-  Size: "8,1"
-  SfxOpen: UseActions/drone_open
-  SfxClose: UseActions/drone_close
-
-  { Child Items
-    Name_0: Token, param1: 1, param2: "meta=6613"
-  }
-}
-
-{ +Container Id: 714
-  Count: "1,1"
-  Size: "8,1"
-  SfxOpen: UseActions/drone_open
-  SfxClose: UseActions/drone_close
-
-  { Child Items
-    Name_0: Token, param1: 1, param2: "meta=6614"
-  }
-}
-
-{ +Container Id: 715
-  Count: "1,1"
-  Size: "8,1"
-  SfxOpen: UseActions/drone_open
-  SfxClose: UseActions/drone_close
-
-  { Child Items
-    Name_0: Token, param1: 1, param2: "meta=6615"
-  }
-}
-
-{ +Container Id: 716
-  Count: "1,1"
-  Size: "8,1"
-  SfxOpen: UseActions/drone_open
-  SfxClose: UseActions/drone_close
-
-  { Child Items
-    Name_0: Token, param1: 1, param2: "meta=6616"
-  }
-}
-
-{ +Container Id: 717
-  Count: "1,1"
-  Size: "8,1"
-  SfxOpen: UseActions/drone_open
-  SfxClose: UseActions/drone_close
-
-  { Child Items
-    Name_0: Token, param1: 1, param2: "meta=6617"
-  }
-}
-
-{ +Container Id: 718
-  Count: "1,1"
-  Size: "8,1"
-  SfxOpen: UseActions/drone_open
-  SfxClose: UseActions/drone_close
-
-  { Child Items
-    Name_0: Token, param1: 1, param2: "meta=6618"
-  }
-}
-
-{ +Container Id: 719
-  Count: "1,1"
-  Size: "8,1"
-  SfxOpen: UseActions/drone_open
-  SfxClose: UseActions/drone_close
-
-  { Child Items
-    Name_0: Token, param1: 1, param2: "meta=6619"
-  }
-}
-
-{ +Container Id: 720
-  Count: "1,1"
-  Size: "8,1"
-  SfxOpen: UseActions/drone_open
-  SfxClose: UseActions/drone_close
-
-  { Child Items
-    Name_0: Token, param1: 1, param2: "meta=6620"
-  }
-}
-
-{ +Container Id: 721
-  Count: "1,1"
-  Size: "8,1"
-  SfxOpen: UseActions/drone_open
-  SfxClose: UseActions/drone_close
-
-  { Child Items
-    Name_0: Token, param1: 1, param2: "meta=6621"
-  }
-}
-
-{ +Container Id: 722
-  Count: "1,1"
-  Size: "8,1"
-  SfxOpen: UseActions/drone_open
-  SfxClose: UseActions/drone_close
-
-  { Child Items
-    Name_0: Token, param1: 1, param2: "meta=6622"
-  }
-}
-
-{ +Container Id: 723
-  Count: "1,1"
-  Size: "8,1"
-  SfxOpen: UseActions/drone_open
-  SfxClose: UseActions/drone_close
-
-  { Child Items
-    Name_0: Token, param1: 1, param2: "meta=6623"
-  }
-}
-
-{ +Container Id: 724
-  Count: "1,1"
-  Size: "8,1"
-  SfxOpen: UseActions/drone_open
-  SfxClose: UseActions/drone_close
-
-  { Child Items
-    Name_0: Token, param1: 1, param2: "meta=6624"
-  }
-}
-
-{ +Container Id: 725
-  Count: "1,1"
-  Size: "8,1"
-  SfxOpen: UseActions/drone_open
-  SfxClose: UseActions/drone_close
-
-  { Child Items
-    Name_0: Token, param1: 1, param2: "meta=6625"
-  }
-}
-
-{ +Container Id: 726
-  Count: "1,1"
-  Size: "8,1"
-  SfxOpen: UseActions/drone_open
-  SfxClose: UseActions/drone_close
-
-  { Child Items
-    Name_0: Token, param1: 1, param2: "meta=6626"
-  }
-}
-
-{ +Container Id: 727
-  Count: "1,1"
-  Size: "8,1"
-  SfxOpen: UseActions/drone_open
-  SfxClose: UseActions/drone_close
-
-  { Child Items
-    Name_0: Token, param1: 1, param2: "meta=6627"
-  }
-}
-
-{ +Container Id: 728
-  Count: "1,1"
-  Size: "8,1"
-  SfxOpen: UseActions/drone_open
-  SfxClose: UseActions/drone_close
-
-  { Child Items
-    Name_0: Token, param1: 1, param2: "meta=6628"
-  }
-}
-
-{ +Container Id: 729
-  Count: "1,1"
-  Size: "8,1"
-  SfxOpen: UseActions/drone_open
-  SfxClose: UseActions/drone_close
-
-  { Child Items
-    Name_0: Token, param1: 1, param2: "meta=6629"
-  }
-}
-
-{ +Container Id: 730
-  Count: "1,1"
-  Size: "8,1"
-  SfxOpen: UseActions/drone_open
-  SfxClose: UseActions/drone_close
-
-  { Child Items
-    Name_0: Token, param1: 1, param2: "meta=6630"
-  }
-}
-
-
-{ +Container Id: 731
-  Count: "1,1"
-  Size: "8,1"
-  SfxOpen: UseActions/drone_open
-  SfxClose: UseActions/drone_close
-
-  { Child Items
-    Name_0: Token, param1: 1, param2: "meta=6631"
-  }
-}
-
-{ +Container Id: 732
-  Count: "1,1"
-  Size: "8,1"
-  SfxOpen: UseActions/drone_open
-  SfxClose: UseActions/drone_close
-
-  { Child Items
-    Name_0: Token, param1: 1, param2: "meta=6632"
-  }
-}
-
-{ +Container Id: 733
-  Count: "1,1"
-  Size: "8,1"
-  SfxOpen: UseActions/drone_open
-  SfxClose: UseActions/drone_close
-
-  { Child Items
-    Name_0: Token, param1: 1, param2: "meta=6633"
-  }
-}
-
-{ +Container Id: 734
-  Count: "1,1"
-  Size: "8,1"
-  SfxOpen: UseActions/drone_open
-  SfxClose: UseActions/drone_close
-
-  { Child Items
-    Name_0: Token, param1: 1, param2: "meta=6634"
-  }
-}
-
-{ +Container Id: 735
-  Count: "1,1"
-  Size: "8,1"
-  SfxOpen: UseActions/drone_open
-  SfxClose: UseActions/drone_close
-
-  { Child Items
-    Name_0: Token, param1: 1, param2: "meta=6635"
-  }
-}
-
-{ +Container Id: 736
-  Count: "3,3"
-  Size: "8,1"
-  SfxOpen: UseActions/drone_open
-  SfxClose: UseActions/drone_close
-
-  { Child Items
-    Name_0: Token, param1: 1, param2: "meta=6636"
-    Name_1: Eden_ModularLaserBlocksSV, param1: 1, param2: "2,2"
-    Name_2: Eden_ModularPulseLaserSVIR_Ammo, param1: 1, param2: "40,60"
-  }
-}
-
-{ +Container Id: 737
-  Count: "1,1"
-  Size: "8,1"
-  SfxOpen: UseActions/drone_open
-  SfxClose: UseActions/drone_close
-
-  { Child Items
-    Name_0: Token, param1: 1, param2: "meta=6637"
-  }
-}
-
-{ +Container Id: 738
-  Count: "1,1"
-  Size: "8,1"
-  SfxOpen: UseActions/drone_open
-  SfxClose: UseActions/drone_close
-
-  { Child Items
-    Name_0: Token, param1: 1, param2: "meta=6638"
-  }
-}
-
-{ +Container Id: 739
-  Count: "1,1"
-  Size: "8,1"
-  SfxOpen: UseActions/drone_open
-  SfxClose: UseActions/drone_close
-
-  { Child Items
-    Name_0: Token, param1: 1, param2: "meta=6639"
-  }
-}
-
-{ +Container Id: 740
-  Count: "1,1"
-  Size: "8,1"
-  SfxOpen: UseActions/drone_open
-  SfxClose: UseActions/drone_close
-
-  { Child Items
-    Name_0: Token, param1: 1, param2: "meta=6640"
-  }
-}
-
-{ +Container Id: 741
-  Count: "1,1"
-  Size: "8,1"
-  SfxOpen: UseActions/drone_open
-  SfxClose: UseActions/drone_close
-
-  { Child Items
-    Name_0: Token, param1: 1, param2: "meta=6641"
-  }
-}
-
-{ +Container Id: 742
-  Count: "1,1"
-  Size: "8,1"
-  SfxOpen: UseActions/drone_open
-  SfxClose: UseActions/drone_close
-
-  { Child Items
-    Name_0: Token, param1: 1, param2: "meta=6642"
-  }
-}
-
-{ +Container Id: 743
-  Count: "1,1"
-  Size: "8,1"
-  SfxOpen: UseActions/drone_open
-  SfxClose: UseActions/drone_close
-
-  { Child Items
-    Name_0: Token, param1: 1, param2: "meta=6643"
-  }
-}
-
-{ +Container Id: 744
-  Count: "1,1"
-  Size: "8,1"
-  SfxOpen: UseActions/drone_open
-  SfxClose: UseActions/drone_close
-
-  { Child Items
-    Name_0: Token, param1: 1, param2: "meta=6644"
-  }
-}
-
-{ +Container Id: 745
-  Count: "1,1"
-  Size: "8,1"
-  SfxOpen: UseActions/drone_open
-  SfxClose: UseActions/drone_close
-
-  { Child Items
-    Name_0: Token, param1: 1, param2: "meta=6645"
-  }
-}
-
-{ +Container Id: 746
-  Count: "1,1"
-  Size: "8,1"
-  SfxOpen: UseActions/drone_open
-  SfxClose: UseActions/drone_close
-
-  { Child Items
-    Name_0: Token, param1: 1, param2: "meta=6646"
-  }
-}
-
-{ +Container Id: 747
-  Count: "1,1"
-  Size: "8,1"
-  SfxOpen: UseActions/drone_open
-  SfxClose: UseActions/drone_close
-
-  { Child Items
-    Name_0: Token, param1: 1, param2: "meta=6647"
-  }
-}
-
-{ +Container Id: 748
-  Count: "1,1"
-  Size: "8,1"
-  SfxOpen: UseActions/drone_open
-  SfxClose: UseActions/drone_close
-
-  { Child Items
-    Name_0: Token, param1: 1, param2: "meta=6648"
-  }
-}
-
-{ +Container Id: 749
-  Count: "1,1"
-  Size: "8,1"
-  SfxOpen: UseActions/drone_open
-  SfxClose: UseActions/drone_close
-
-  { Child Items
-    Name_0: Token, param1: 1, param2: "meta=6649"
-  }
-}
-
-{ +Container Id: 750
-  Count: "1,1"
-  Size: "8,1"
-  SfxOpen: UseActions/drone_open
-  SfxClose: UseActions/drone_close
-
-  { Child Items
-    Name_0: Token, param1: 1, param2: "meta=6650"
-  }
-}
+# # Bandit - OLD
+# { +Container Id: 698
+  # Count: "1,1"
+  # Size: "8,8"
+  # SfxOpen: UseActions/drone_open
+  # SfxClose: UseActions/drone_close
+
+  # { Child Items
+    # Name_0: Token, param1: 1, param2: "meta=6506"
+  # }
+# }
+
+# # Raider - OLD
+# { +Container Id: 699
+  # Count: "1,1"
+  # Size: "8,8"
+  # SfxOpen: UseActions/drone_open
+  # SfxClose: UseActions/drone_close
+
+  # { Child Items
+    # Name_0: Token, param1: 1, param2: "meta=6505"
+  # }
+# }
+
+# # Death's Hand - OLD
+# { +Container Id: 700
+  # Count: "1,1"
+  # Size: "8,8"
+  # SfxOpen: UseActions/drone_open
+  # SfxClose: UseActions/drone_close
+
+  # { Child Items
+    # Name_0: Token, param1: 1, param2: "meta=6507"
+  # }
+# }
+
+# # Bounty containers
+# { +Container Id: 701
+  # Count: "1,1"
+  # Size: "8,1"
+  # SfxOpen: UseActions/drone_open
+  # SfxClose: UseActions/drone_close
+
+  # { Child Items
+    # Name_0: Token, param1: 1, param2: "meta=6601"
+  # }
+# }
+
+# { +Container Id: 702
+  # Count: "1,1"
+  # Size: "8,1"
+  # SfxOpen: UseActions/drone_open
+  # SfxClose: UseActions/drone_close
+
+  # { Child Items
+    # Name_0: Token, param1: 1, param2: "meta=6602"
+  # }
+# }
+
+# { +Container Id: 703
+  # Count: "1,1"
+  # Size: "8,1"
+  # SfxOpen: UseActions/drone_open
+  # SfxClose: UseActions/drone_close
+
+  # { Child Items
+    # Name_0: Token, param1: 1, param2: "meta=6603"
+  # }
+# }
+
+# { +Container Id: 704
+  # Count: "1,1"
+  # Size: "8,1"
+  # SfxOpen: UseActions/drone_open
+  # SfxClose: UseActions/drone_close
+
+  # { Child Items
+    # Name_0: Token, param1: 1, param2: "meta=6604"
+  # }
+# }
+
+# { +Container Id: 705
+  # Count: "1,1"
+  # Size: "8,1"
+  # SfxOpen: UseActions/drone_open
+  # SfxClose: UseActions/drone_close
+
+  # { Child Items
+    # Name_0: Token, param1: 1, param2: "meta=6605"
+  # }
+# }
+
+# { +Container Id: 706
+  # Count: "1,1"
+  # Size: "8,1"
+  # SfxOpen: UseActions/drone_open
+  # SfxClose: UseActions/drone_close
+
+  # { Child Items
+    # Name_0: Token, param1: 1, param2: "meta=6606"
+  # }
+# }
+
+# { +Container Id: 707
+  # Count: "1,1"
+  # Size: "8,1"
+  # SfxOpen: UseActions/drone_open
+  # SfxClose: UseActions/drone_close
+
+  # { Child Items
+    # Name_0: Token, param1: 1, param2: "meta=6607"
+  # }
+# }
+
+# { +Container Id: 708
+  # Count: "1,1"
+  # Size: "8,1"
+  # SfxOpen: UseActions/drone_open
+  # SfxClose: UseActions/drone_close
+
+  # { Child Items
+    # Name_0: Token, param1: 1, param2: "meta=6608"
+  # }
+# }
+
+# { +Container Id: 709
+  # Count: "1,1"
+  # Size: "8,1"
+  # SfxOpen: UseActions/drone_open
+  # SfxClose: UseActions/drone_close
+
+  # { Child Items
+    # Name_0: Token, param1: 1, param2: "meta=6609"
+  # }
+# }
+
+# { +Container Id: 710
+  # Count: "1,1"
+  # Size: "8,1"
+  # SfxOpen: UseActions/drone_open
+  # SfxClose: UseActions/drone_close
+
+  # { Child Items
+    # Name_0: Token, param1: 1, param2: "meta=6610"
+  # }
+# }
+
+# { +Container Id: 711
+  # Count: "1,1"
+  # Size: "8,1"
+  # SfxOpen: UseActions/drone_open
+  # SfxClose: UseActions/drone_close
+
+  # { Child Items
+    # Name_0: Token, param1: 1, param2: "meta=6611"
+  # }
+# }
+
+# { +Container Id: 712
+  # Count: "1,1"
+  # Size: "8,1"
+  # SfxOpen: UseActions/drone_open
+  # SfxClose: UseActions/drone_close
+
+  # { Child Items
+    # Name_0: Token, param1: 1, param2: "meta=6612"
+  # }
+# }
+
+# { +Container Id: 713
+  # Count: "1,1"
+  # Size: "8,1"
+  # SfxOpen: UseActions/drone_open
+  # SfxClose: UseActions/drone_close
+
+  # { Child Items
+    # Name_0: Token, param1: 1, param2: "meta=6613"
+  # }
+# }
+
+# { +Container Id: 714
+  # Count: "1,1"
+  # Size: "8,1"
+  # SfxOpen: UseActions/drone_open
+  # SfxClose: UseActions/drone_close
+
+  # { Child Items
+    # Name_0: Token, param1: 1, param2: "meta=6614"
+  # }
+# }
+
+# { +Container Id: 715
+  # Count: "1,1"
+  # Size: "8,1"
+  # SfxOpen: UseActions/drone_open
+  # SfxClose: UseActions/drone_close
+
+  # { Child Items
+    # Name_0: Token, param1: 1, param2: "meta=6615"
+  # }
+# }
+
+# { +Container Id: 716
+  # Count: "1,1"
+  # Size: "8,1"
+  # SfxOpen: UseActions/drone_open
+  # SfxClose: UseActions/drone_close
+
+  # { Child Items
+    # Name_0: Token, param1: 1, param2: "meta=6616"
+  # }
+# }
+
+# { +Container Id: 717
+  # Count: "1,1"
+  # Size: "8,1"
+  # SfxOpen: UseActions/drone_open
+  # SfxClose: UseActions/drone_close
+
+  # { Child Items
+    # Name_0: Token, param1: 1, param2: "meta=6617"
+  # }
+# }
+
+# { +Container Id: 718
+  # Count: "1,1"
+  # Size: "8,1"
+  # SfxOpen: UseActions/drone_open
+  # SfxClose: UseActions/drone_close
+
+  # { Child Items
+    # Name_0: Token, param1: 1, param2: "meta=6618"
+  # }
+# }
+
+# { +Container Id: 719
+  # Count: "1,1"
+  # Size: "8,1"
+  # SfxOpen: UseActions/drone_open
+  # SfxClose: UseActions/drone_close
+
+  # { Child Items
+    # Name_0: Token, param1: 1, param2: "meta=6619"
+  # }
+# }
+
+# { +Container Id: 720
+  # Count: "1,1"
+  # Size: "8,1"
+  # SfxOpen: UseActions/drone_open
+  # SfxClose: UseActions/drone_close
+
+  # { Child Items
+    # Name_0: Token, param1: 1, param2: "meta=6620"
+  # }
+# }
+
+# { +Container Id: 721
+  # Count: "1,1"
+  # Size: "8,1"
+  # SfxOpen: UseActions/drone_open
+  # SfxClose: UseActions/drone_close
+
+  # { Child Items
+    # Name_0: Token, param1: 1, param2: "meta=6621"
+  # }
+# }
+
+# { +Container Id: 722
+  # Count: "1,1"
+  # Size: "8,1"
+  # SfxOpen: UseActions/drone_open
+  # SfxClose: UseActions/drone_close
+
+  # { Child Items
+    # Name_0: Token, param1: 1, param2: "meta=6622"
+  # }
+# }
+
+# { +Container Id: 723
+  # Count: "1,1"
+  # Size: "8,1"
+  # SfxOpen: UseActions/drone_open
+  # SfxClose: UseActions/drone_close
+
+  # { Child Items
+    # Name_0: Token, param1: 1, param2: "meta=6623"
+  # }
+# }
+
+# { +Container Id: 724
+  # Count: "1,1"
+  # Size: "8,1"
+  # SfxOpen: UseActions/drone_open
+  # SfxClose: UseActions/drone_close
+
+  # { Child Items
+    # Name_0: Token, param1: 1, param2: "meta=6624"
+  # }
+# }
+
+# { +Container Id: 725
+  # Count: "1,1"
+  # Size: "8,1"
+  # SfxOpen: UseActions/drone_open
+  # SfxClose: UseActions/drone_close
+
+  # { Child Items
+    # Name_0: Token, param1: 1, param2: "meta=6625"
+  # }
+# }
+
+# { +Container Id: 726
+  # Count: "1,1"
+  # Size: "8,1"
+  # SfxOpen: UseActions/drone_open
+  # SfxClose: UseActions/drone_close
+
+  # { Child Items
+    # Name_0: Token, param1: 1, param2: "meta=6626"
+  # }
+# }
+
+# { +Container Id: 727
+  # Count: "1,1"
+  # Size: "8,1"
+  # SfxOpen: UseActions/drone_open
+  # SfxClose: UseActions/drone_close
+
+  # { Child Items
+    # Name_0: Token, param1: 1, param2: "meta=6627"
+  # }
+# }
+
+# { +Container Id: 728
+  # Count: "1,1"
+  # Size: "8,1"
+  # SfxOpen: UseActions/drone_open
+  # SfxClose: UseActions/drone_close
+
+  # { Child Items
+    # Name_0: Token, param1: 1, param2: "meta=6628"
+  # }
+# }
+
+# { +Container Id: 729
+  # Count: "1,1"
+  # Size: "8,1"
+  # SfxOpen: UseActions/drone_open
+  # SfxClose: UseActions/drone_close
+
+  # { Child Items
+    # Name_0: Token, param1: 1, param2: "meta=6629"
+  # }
+# }
+
+# { +Container Id: 730
+  # Count: "1,1"
+  # Size: "8,1"
+  # SfxOpen: UseActions/drone_open
+  # SfxClose: UseActions/drone_close
+
+  # { Child Items
+    # Name_0: Token, param1: 1, param2: "meta=6630"
+  # }
+# }
+
+
+# { +Container Id: 731
+  # Count: "1,1"
+  # Size: "8,1"
+  # SfxOpen: UseActions/drone_open
+  # SfxClose: UseActions/drone_close
+
+  # { Child Items
+    # Name_0: Token, param1: 1, param2: "meta=6631"
+  # }
+# }
+
+# { +Container Id: 732
+  # Count: "1,1"
+  # Size: "8,1"
+  # SfxOpen: UseActions/drone_open
+  # SfxClose: UseActions/drone_close
+
+  # { Child Items
+    # Name_0: Token, param1: 1, param2: "meta=6632"
+  # }
+# }
+
+# { +Container Id: 733
+  # Count: "1,1"
+  # Size: "8,1"
+  # SfxOpen: UseActions/drone_open
+  # SfxClose: UseActions/drone_close
+
+  # { Child Items
+    # Name_0: Token, param1: 1, param2: "meta=6633"
+  # }
+# }
+
+# { +Container Id: 734
+  # Count: "1,1"
+  # Size: "8,1"
+  # SfxOpen: UseActions/drone_open
+  # SfxClose: UseActions/drone_close
+
+  # { Child Items
+    # Name_0: Token, param1: 1, param2: "meta=6634"
+  # }
+# }
+
+# { +Container Id: 735
+  # Count: "1,1"
+  # Size: "8,1"
+  # SfxOpen: UseActions/drone_open
+  # SfxClose: UseActions/drone_close
+
+  # { Child Items
+    # Name_0: Token, param1: 1, param2: "meta=6635"
+  # }
+# }
+
+# { +Container Id: 736
+  # Count: "3,3"
+  # Size: "8,1"
+  # SfxOpen: UseActions/drone_open
+  # SfxClose: UseActions/drone_close
+
+  # { Child Items
+    # Name_0: Token, param1: 1, param2: "meta=6636"
+    # Name_1: Eden_ModularLaserBlocksSV, param1: 1, param2: "2,2"
+    # Name_2: Eden_ModularPulseLaserSVIR_Ammo, param1: 1, param2: "40,60"
+  # }
+# }
+
+# { +Container Id: 737
+  # Count: "1,1"
+  # Size: "8,1"
+  # SfxOpen: UseActions/drone_open
+  # SfxClose: UseActions/drone_close
+
+  # { Child Items
+    # Name_0: Token, param1: 1, param2: "meta=6637"
+  # }
+# }
+
+# { +Container Id: 738
+  # Count: "1,1"
+  # Size: "8,1"
+  # SfxOpen: UseActions/drone_open
+  # SfxClose: UseActions/drone_close
+
+  # { Child Items
+    # Name_0: Token, param1: 1, param2: "meta=6638"
+  # }
+# }
+
+# { +Container Id: 739
+  # Count: "1,1"
+  # Size: "8,1"
+  # SfxOpen: UseActions/drone_open
+  # SfxClose: UseActions/drone_close
+
+  # { Child Items
+    # Name_0: Token, param1: 1, param2: "meta=6639"
+  # }
+# }
+
+# { +Container Id: 740
+  # Count: "1,1"
+  # Size: "8,1"
+  # SfxOpen: UseActions/drone_open
+  # SfxClose: UseActions/drone_close
+
+  # { Child Items
+    # Name_0: Token, param1: 1, param2: "meta=6640"
+  # }
+# }
+
+# { +Container Id: 741
+  # Count: "1,1"
+  # Size: "8,1"
+  # SfxOpen: UseActions/drone_open
+  # SfxClose: UseActions/drone_close
+
+  # { Child Items
+    # Name_0: Token, param1: 1, param2: "meta=6641"
+  # }
+# }
+
+# { +Container Id: 742
+  # Count: "1,1"
+  # Size: "8,1"
+  # SfxOpen: UseActions/drone_open
+  # SfxClose: UseActions/drone_close
+
+  # { Child Items
+    # Name_0: Token, param1: 1, param2: "meta=6642"
+  # }
+# }
+
+# { +Container Id: 743
+  # Count: "1,1"
+  # Size: "8,1"
+  # SfxOpen: UseActions/drone_open
+  # SfxClose: UseActions/drone_close
+
+  # { Child Items
+    # Name_0: Token, param1: 1, param2: "meta=6643"
+  # }
+# }
+
+# { +Container Id: 744
+  # Count: "1,1"
+  # Size: "8,1"
+  # SfxOpen: UseActions/drone_open
+  # SfxClose: UseActions/drone_close
+
+  # { Child Items
+    # Name_0: Token, param1: 1, param2: "meta=6644"
+  # }
+# }
+
+# { +Container Id: 745
+  # Count: "1,1"
+  # Size: "8,1"
+  # SfxOpen: UseActions/drone_open
+  # SfxClose: UseActions/drone_close
+
+  # { Child Items
+    # Name_0: Token, param1: 1, param2: "meta=6645"
+  # }
+# }
+
+# { +Container Id: 746
+  # Count: "1,1"
+  # Size: "8,1"
+  # SfxOpen: UseActions/drone_open
+  # SfxClose: UseActions/drone_close
+
+  # { Child Items
+    # Name_0: Token, param1: 1, param2: "meta=6646"
+  # }
+# }
+
+# { +Container Id: 747
+  # Count: "1,1"
+  # Size: "8,1"
+  # SfxOpen: UseActions/drone_open
+  # SfxClose: UseActions/drone_close
+
+  # { Child Items
+    # Name_0: Token, param1: 1, param2: "meta=6647"
+  # }
+# }
+
+# { +Container Id: 748
+  # Count: "1,1"
+  # Size: "8,1"
+  # SfxOpen: UseActions/drone_open
+  # SfxClose: UseActions/drone_close
+
+  # { Child Items
+    # Name_0: Token, param1: 1, param2: "meta=6648"
+  # }
+# }
+
+# { +Container Id: 749
+  # Count: "1,1"
+  # Size: "8,1"
+  # SfxOpen: UseActions/drone_open
+  # SfxClose: UseActions/drone_close
+
+  # { Child Items
+    # Name_0: Token, param1: 1, param2: "meta=6649"
+  # }
+# }
+
+# { +Container Id: 750
+  # Count: "1,1"
+  # Size: "8,1"
+  # SfxOpen: UseActions/drone_open
+  # SfxClose: UseActions/drone_close
+
+  # { Child Items
+    # Name_0: Token, param1: 1, param2: "meta=6650"
+  # }
+# }
 
 # Bandit insignias
 # Bandit

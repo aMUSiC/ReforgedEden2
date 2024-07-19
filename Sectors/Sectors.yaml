@@ -1200,10 +1200,10 @@ SolarSystems:
 # # -------------------------------------------------------------------------------------------------------------------------------------------------------- Test Planets
 
 # # ------------------------------------------------------------------------------------------------- Planets
-      - Coordinates: [-25, -5, -100]
+      - Coordinates: [-25, -5, -95]
         Color: '0.2,0,0.2 : 0.3,0,0 : 0.3,0,0 : 0.3,0,0'
         Playfields:
-          - ['0, 0, 0', TestPlanet, Lava,'', '', '', '']
+          - ['0, 0, 0', TestPlanet, Temperate_V2,'', '', '', '']
           # - ['1427, 14929, 246', TestPlanet Moon 1, EdenMoonCrystalErestrum]
           # - ['1427, -14929, 246', TestPlanet Moon 2, EdenMoonCrystalErestrum]
           # - ['10000, -14929, 246', TestPlanet Moon 3, EdenStart_MoonIce_V2Outer2]
@@ -1211,32 +1211,29 @@ SolarSystems:
           # - ['10000, 14929, 246', TestPlanet Moon 5, EdenStart_MoonIce_V2Outer4]
           - ['0,0,0', TestPlanet Sector, Start_OrbitEasy, '']
 
-      # - Coordinates: [-25, -5, -100]
-        # Color: '0.50,0.32,0.04'
-        # Playfields:
-          # - ['0, 0, 0', Desert1, TestPlanetDesert,'', '', '', '']
-          # # - ['10000, 14929, 246', Desert Moon 1, TestMoonBarren]
-          # # - ['10000, -14929, 246', Desert Moon 2, TestMoonBarren]
-          # # - ['-10000, 14929, 246', Desert Moon 3, TestMoonBarren]
-          # - ['0,0,0', Desert1 Sector, TestOrbitDesert, '']
+      - Coordinates: [-25, -5, -100]
+        Color: '0.50,0.32,0.04'
+        Playfields:
+          - ['0, 0, 0', TestPlanet2, TemperatePlateau,'', '', '', '']
+          - ['0,0,0', TestPlanet2 Sector, TestOrbitDesert, '']
 
-      # - Coordinates: [-25, -5, -110]
-        # Color: '0.50,0.32,0.04'
-        # Playfields:
-          # - ['0, 0, 0', Desert2, TestPlanetDesert,'', '', '', '']
-          # - ['0,0,0', Desert2 Sector, TestOrbitDesert, '']
+      - Coordinates: [-25, -5, -110]
+        Color: '0.50,0.32,0.04'
+        Playfields:
+          - ['0, 0, 0', TestPlanet3, EdenTemperateBrooding,'', '', '', '']
+          - ['0,0,0', TestPlanet3 Sector, TestOrbitDesert, '']
 
-      # - Coordinates: [-25, -5, -120]
-        # Color: '0.50,0.32,0.04'
-        # Playfields:
-          # - ['0, 0, 0', Desert3, TestPlanetDesert,'', '', '', '']
-          # - ['0,0,0', Desert3 Sector, TestOrbitDesert, '']
+      - Coordinates: [-25, -5, -120]
+        Color: '0.50,0.32,0.04'
+        Playfields:
+          - ['0, 0, 0', TestPlanet4, EdenTemperateRainforest,'', '', '', '']
+          - ['0,0,0', TestPlanet4 Sector, TestOrbitDesert, '']
 
-      # - Coordinates: [-25, -5, -130]
-        # Color: '0.04, 0.5, 0.1'
-        # Playfields:
-          # - ['0, 0, 0', Temperate1, TestPlanetTemperate,'', '', '', '']
-          # - ['0,0,0', Temperate1 Sector, TestOrbitTemperate, '']
+      - Coordinates: [-25, -5, -130]
+        Color: '0.04, 0.5, 0.1'
+        Playfields:
+          - ['0, 0, 0', TestPlanet5, EdenTemperateStrange,'', '', '', '']
+          - ['0,0,0', TestPlanet5 Sector, TestOrbitTemperate, '']
 
       # - Coordinates: [-25, -5, -140]
         # Color: '0.04, 0.5, 0.1'
@@ -1286,21 +1283,21 @@ SolarSystems:
         Color: '1, 0, 1'
         SectorMapType: Triangle
         Playfields:
-          - ['0, 0, 0', TestSpace1, EdenSpace_POI_HackT1_1,'', '', '', '']
+          - ['0, 0, 0', TestSpace1, EdenSpaceZirax_POI_PentaxidMine,'', '', '', '']
 
 # Space Test 2
       - Coordinates: [60, 0, 0]
         Color: '1, 0, 1'
         SectorMapType: Triangle
         Playfields:
-          - ['0, 0, 0', TestSpace2, EdenSpace_POI_HackT1_1,'', '', '', '']
+          - ['0, 0, 0', TestSpace2, EdenSpaceZirax_POI_PentaxidMine,'', '', '', '']
 
 # Space Test 3
       - Coordinates: [70, 0, 0]
         Color: '1, 0, 1'
         SectorMapType: Triangle
         Playfields:
-          - ['0, 0, 0', TestSpace3, EdenSpace_POI_ExploreT2_1,'', '', '', '']
+          - ['0, 0, 0', TestSpace3, EdenSpaceZirax_POI_PentaxidMine,'', '', '', '']
 
 # # Space Test 4
       # - Coordinates: [80, 0, -40]
@@ -1460,41 +1457,41 @@ SolarSystems:
 
 # ------------------------------------------------------------------------------------------------- Security Checkpoints.
 
-# Checkpoint 1
-      - Coordinates: [25, 0, 25]
-        Color: '0.9,0.1,0'
-        SectorMapType: Triangle
-        Playfields:
-          - ['0, 0, 0', Zirax Checkpoint, EdenSpaceZirax_Checkpoint1,'', '', '', '']
-        Deny: [Xanthos Sector, The 5th Imperial Fleet]
+# # Checkpoint 1
+      # - Coordinates: [25, 0, 25]
+        # Color: '0.9,0.1,0'
+        # SectorMapType: Triangle
+        # Playfields:
+          # - ['0, 0, 0', Zirax Checkpoint, EdenSpaceZirax_Checkpoint1,'', '', '', '']
+        # Deny: [Xanthos Sector, The 5th Imperial Fleet]
 
-# Checkpoint 2
-      - Coordinates: [40, -1, 80]
-        Color: '0.9,0.1,0'
-        SectorMapType: Triangle
-        Playfields:
-          - ['0, 0, 0', Zirax Perimeter Defense, EdenSpaceZirax_Checkpoint2,'', '', '', '']
-        Deny: [Xanthos Sector]
+# # Checkpoint 2
+      # - Coordinates: [40, -1, 80]
+        # Color: '0.9,0.1,0'
+        # SectorMapType: Triangle
+        # Playfields:
+          # - ['0, 0, 0', Zirax Perimeter Defense, EdenSpaceZirax_Checkpoint2,'', '', '', '']
+        # Deny: [Xanthos Sector]
 
-# Checkpoint 3
-      - Coordinates: [0, -5, 80]
-        Color: '0.9,0.1,0'
-        SectorMapType: Triangle
-        Playfields:
-          - ['0, 0, 0', The 5th Imperial Fleet, EdenSpaceZirax_Checkpoint3,'', '', '', '']
-        Deny: [Zirax Checkpoint]
+# # Checkpoint 3
+      # - Coordinates: [0, -5, 80]
+        # Color: '0.9,0.1,0'
+        # SectorMapType: Triangle
+        # Playfields:
+          # - ['0, 0, 0', The 5th Imperial Fleet, EdenSpaceZirax_Checkpoint3,'', '', '', '']
+        # Deny: [Zirax Checkpoint]
 
 
-# Zirax Empire Home Planet
-      # - Coordinates: [75, -5, -50]
-      # - Coordinates: [-50, -5, 50]
-      - Coordinates: [0, -5, 60]
-        Color: '0.50,0.32,0.04'
-        Playfields:
-          - ['0, 0, 0', Xanthos, Eden_Homeworld_Zirax,'', '', '', '']
-          - ['-8279, -7524, -9994', Xanthos Moon, HomeworldZiraxMoon]
-          - ['0,0,0', Xanthos Sector, EdenSpaceZirax_OrbitHome, '']
-        Deny: [Zirax Checkpoint, Zirax Perimeter Defense]
+# # Zirax Empire Home Planet
+      # # - Coordinates: [75, -5, -50]
+      # # - Coordinates: [-50, -5, 50]
+      # - Coordinates: [0, -5, 60]
+        # Color: '0.50,0.32,0.04'
+        # Playfields:
+          # - ['0, 0, 0', Xanthos, Eden_Homeworld_Zirax,'', '', '', '']
+          # - ['-8279, -7524, -9994', Xanthos Moon, HomeworldZiraxMoon]
+          # - ['0,0,0', Xanthos Sector, EdenSpaceZirax_OrbitHome, '']
+        # Deny: [Zirax Checkpoint, Zirax Perimeter Defense]
 
 # ======================================================================================================================================================== Brotherhood of Farr
   - Name: Farr

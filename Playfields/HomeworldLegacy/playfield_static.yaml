@@ -1248,7 +1248,7 @@ POIs:
 
 
           # Ruins of fromer civilization. Some stranded Zirax camp out here, and hope for extraction
-        - GroupName: TalonWoodRuin
+        - GroupName: R2TalonWoodRuin
           Faction: None
           AvoidFactionTerritory: True
           Territory: False
@@ -1264,7 +1264,7 @@ POIs:
             - Key: RegenAfter
               Value: 720
 
-        - GroupName: TalonWoodRuin
+        - GroupName: R2TalonWoodRuin
           Faction: None
           AvoidFactionTerritory: True
           Territory: False
@@ -1272,9 +1272,9 @@ POIs:
           CountMinMax: [ 5, 5 ]
           DroneProb: 1.0
           DronesMinMax: [ 0, 2 ]
-          SpawnPOIAvoid: [TalonWoodRuin]
+          SpawnPOIAvoid: [R2TalonWoodRuin]
           SpawnPOIAvoidDistance: 1000
-          SpawnPOINear: [TalonWoodRuin]
+          SpawnPOINear: [R2TalonWoodRuin]
           SpawnPOINearRange: [1000, 2000]
           Properties: 
             - Key: MapMarker
@@ -1290,7 +1290,7 @@ POIs:
           # DroneProb: 1
           # DronesMinMax: [ 1, 2 ]
           # ReserveCount: 0
-          # SpawnPOINear: [TalonWoodRuin]
+          # SpawnPOINear: [R2TalonWoodRuin]
           # SpawnPOINearRange: [100, 250]
           # Properties: 
             # - Key: RegenAfter
@@ -1304,7 +1304,7 @@ POIs:
           CountMinMax: [ 1, 1 ]
           SpawnPOIAvoid: [R2XenuMainT3, R2GhystAuxT2, R2EpsilonAuxT2, R2DroneBaseT5, R2GhystMain]
           SpawnPOIAvoidDistance: 800
-          # SpawnPOINear: [TalonWoodRuin]
+          # SpawnPOINear: [R2TalonWoodRuin]
           # SpawnPOINearRange: [1000, 2000]
           Properties: 
             - Key: RegenAfter
@@ -1461,7 +1461,7 @@ SpawnRateZones:
 
 
      # Zones in which Zirax already shot anything that moves (or that are 'safe', for whatever reason)
-   - SpawnAt: [ R2GhystMain, R2XenuMainT3, R2DroneBaseT5, R2DroneBase, EpsilonRadarMain, TalonAuxSand]
+   - SpawnAt: [ R2GhystMain, R2XenuMainT3, R2DroneBaseT5, R2DroneBase, EpsilonRadarMain, R2TalonAuxSand]
      Radius: 400
      RadiusRandom: 0
      RateMultiplyerCenter: 0
@@ -1469,7 +1469,7 @@ SpawnRateZones:
      AffectEnemies: true
      Color: "0.0, 1.0, 0.0, 1"
 
-   - SpawnAt: [ R2GhystMain, R2DroneBaseT5, R2DroneBase, EpsilonRadarMain, TalonAuxSand]
+   - SpawnAt: [ R2GhystMain, R2DroneBaseT5, R2DroneBase, EpsilonRadarMain, R2TalonAuxSand]
      Radius: 400
      RadiusRandom: 0
      RateMultiplyerCenter: 0
@@ -1774,7 +1774,7 @@ SpawnZones:
          Period: Always
          DelayMinMax: [-1, -1]
 
-   - SpawnAt: [PVF_XenuPatrolVessel1, TalonWoodRuin ]   # Ground crew checking the terrain / stranded Zirax waiting for extraction
+   - SpawnAt: [PVF_XenuPatrolVessel1, R2TalonWoodRuin ]   # Ground crew checking the terrain / stranded Zirax waiting for extraction
      BiomesExcluded: [ Organized, Proximity, Active ]
      Radius: 200
      RadiusRandom: 0
@@ -1790,7 +1790,7 @@ SpawnZones:
          DelayMinMax: [-1, -1]
 
 
-   - SpawnAt: [TalonWoodRuin ]   # Ground crew checking the terrain / stranded Zirax waiting for extraction
+   - SpawnAt: [R2TalonWoodRuin ]   # Ground crew checking the terrain / stranded Zirax waiting for extraction
      BiomesExcluded: [ Organized, Proximity, Active ]
      Radius: 150
      RadiusRandom: 0

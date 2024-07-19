@@ -579,7 +579,7 @@ POIs:
               Value: 4320
 
           # Ruins and ZIRAX (Ghyst) base investigating it
-        - GroupName: TalonWoodRuin #  Ruins of civilization... This planet may be 'young', but only in geological timescales!
+        - GroupName: R2TalonWoodRuin #  Ruins of civilization... This planet may be 'young', but only in geological timescales!
           Faction: None
           Biome: [ LowMountains, LowMountains_1, Mountains ]
           IsImportant: True
@@ -1030,7 +1030,7 @@ POIs:
             - Key: RegenAfter
               Value: 720
 
-         # Close to TalonWoodRuin
+         # Close to R2TalonWoodRuin
 
         - GroupName: R2GhystAuxT1
           Faction: Ghyst
@@ -1042,7 +1042,7 @@ POIs:
           DroneProb: 1.0
           DronesMinMax: [ 5, 6 ]
           ReserveCount: 2
-          SpawnPOINear: [TalonWoodRuin]
+          SpawnPOINear: [R2TalonWoodRuin]
           SpawnPOINearRange: [100, 150] 
           Properties: 
             - Key: Music

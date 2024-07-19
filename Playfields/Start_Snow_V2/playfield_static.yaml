@@ -650,7 +650,7 @@ POIs:
 
 # =============================================== Faction Talon
 # ---------------------- Main Village
-        - GroupName: TalonSnowMain
+        - GroupName: R2TalonSnowMain
           Faction: Talon
           IsImportant: True
           BiomesExcluded: [ Plains ]
@@ -663,40 +663,40 @@ POIs:
             - Key: RegenAfter
               Value: 4320
 
-        - GroupName: TalonSnow
+        - GroupName: R2TalonSnow
           Faction: Talon
           CountMinMax: [ 3, 5 ]
           DroneProb: 0
           DronesMinMax: [ 1, 1 ]
           ReserveCount: 0
           TroopTransport: False
-          SpawnPOINear: [TalonSnowMain]
+          SpawnPOINear: [R2TalonSnowMain]
           SpawnPOINearRange: [75, 200]
           Properties:
             - Key: RegenAfter
               Value: 720
 
-        - GroupName: TalonSnowFarm
+        - GroupName: R2TalonSnowFarm
           Faction: Talon
           CountMinMax: [ 3, 5 ]
           DroneProb: 0
           DronesMinMax: [ 1, 1 ]
           ReserveCount: 0
           TroopTransport: False
-          SpawnPOINear: [TalonSnowMain]
+          SpawnPOINear: [R2TalonSnowMain]
           SpawnPOINearRange: [150, 300]
           Properties:
             - Key: RegenAfter
               Value: 720
 
-        - GroupName: TalonDefenseSnow
+        - GroupName: R2TalonDefenseSnow
           Faction: Talon
           CountMinMax: [ 3, 4 ]
           DroneProb: 0
           DronesMinMax: [ 1, 1 ]
           ReserveCount: 0
           TroopTransport: False
-          SpawnPOINear: [TalonSnowMain]
+          SpawnPOINear: [R2TalonSnowMain]
           SpawnPOINearRange: [250, 500]
           Properties:
             - Key: RegenAfter
@@ -714,7 +714,7 @@ POIs:
           DronesMinMax: [ 1, 2 ]
           ReserveCount: 2
           TroopTransport: True
-          SpawnPOIAvoid: [TalonSnowMain]
+          SpawnPOIAvoid: [R2TalonSnowMain]
           SpawnPOIAvoidDistance: 1000
           Properties:
             - Key: MapDistance
@@ -724,7 +724,7 @@ POIs:
             - Key: RegenAfter
               Value: 4320
 
-        - GroupName: TalonSnow
+        - GroupName: R2TalonSnow
           Faction: Talon
           CountMinMax: [ 1, 2 ]
           DroneProb: 0
@@ -737,7 +737,7 @@ POIs:
             - Key: RegenAfter
               Value: 720
 
-        - GroupName: TalonSnowFarm
+        - GroupName: R2TalonSnowFarm
           Faction: Talon
           CountMinMax: [ 3, 6 ]
           DroneProb: 0
@@ -750,7 +750,7 @@ POIs:
             - Key: RegenAfter
               Value: 720
 
-        - GroupName: TalonDefenseSnow
+        - GroupName: R2TalonDefenseSnow
           Faction: Talon
           CountMinMax: [ 2, 3 ]
           DroneProb: 0
@@ -822,7 +822,7 @@ POIs:
 # =============================================== Faction Talon
 
 # ---------------------- Random Farms
-        - GroupName: TalonSnowFarm
+        - GroupName: R2TalonSnowFarm
           Faction: Talon
           Territory: False
           CountMinMax: [ 3, 4 ]
@@ -831,7 +831,7 @@ POIs:
           DronesMinMax: [ 1, 1 ]
           ReserveCount: 0
           TroopTransport: False
-          SpawnPOIAvoid: [TalonSnowMain, Eden_DummyTalon1]
+          SpawnPOIAvoid: [R2TalonSnowMain, Eden_DummyTalon1]
           SpawnPOIAvoidDistance: 750
           Properties:
             - Key: RegenAfter
@@ -850,7 +850,7 @@ POIs:
           DronesMinMax: [ 1, 2 ]
           ReserveCount: 2
           TroopTransport: True
-          SpawnPOIAvoid: [TalonSnowMain, TalonSnow]
+          SpawnPOIAvoid: [R2TalonSnowMain, R2TalonSnow]
           SpawnPOIAvoidDistance: 750
           Properties:
             - Key: MapDistance
@@ -860,7 +860,7 @@ POIs:
             - Key: RegenAfter
               Value: 4320
 
-        - GroupName: TalonStoneRuin
+        - GroupName: R2TalonStoneRuin
           Faction: None
           CountMinMax: [ 4, 8 ]
           DroneProb: 0
@@ -876,7 +876,7 @@ POIs:
               Value: 720
 
 # ---------------------- Random Ruins
-        - GroupName: TalonStoneRuin
+        - GroupName: R2TalonStoneRuin
           Faction: None
           CountMinMax: [ 0, 2 ]
           IsScalingCount: True

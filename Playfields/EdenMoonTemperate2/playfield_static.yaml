@@ -151,7 +151,7 @@ POIs:
       # ReserveCount: 3
       # # NoShieldReload: True
       # TroopTransport: True
-      # SpawnPOIAvoid: [R2PolarisTradePlanet, TalonMain, START, AlienTowerSmallStory]
+      # SpawnPOIAvoid: [R2PolarisTradePlanet, R2TalonMain, START, AlienTowerSmallStory]
       # POIDistance: 3000
       # Properties:
       # -  Key: RegenAfter

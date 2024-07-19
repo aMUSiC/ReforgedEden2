@@ -2019,7 +2019,7 @@ SpawnZones:
 
 # ====================== Spawn Zones Talon
 # Main village spawns closer to the village.
-   - SpawnAt: [TalonMain, TalonSnowMain, TalonStoneMain]
+   - SpawnAt: [R2TalonMain, R2TalonSnowMain, R2TalonStoneMain]
      BiomesExcluded: [ LowMountains, Mountains, Radiated, RadiatedFog ]
      Radius: 500
      RadiusRandom: 50
@@ -2035,7 +2035,7 @@ SpawnZones:
          DelayMinMax: [200, 240]
 
 # Main village spawns further from the villages. Long distance hunters.
-   - SpawnAt: [TalonMain, TalonSnowMain, TalonStoneMain]
+   - SpawnAt: [R2TalonMain, R2TalonSnowMain, R2TalonStoneMain]
      BiomesExcluded: [ LowMountains, Mountains, Radiated, RadiatedFog ]
      Radius: 1500
      RadiusRandom: 50
@@ -2051,7 +2051,7 @@ SpawnZones:
          DelayMinMax: [200, 240]
 
 # Talon near aux POIs.
-   - SpawnAt: [TalonAux, TalonSnow, TalonAuxSand]
+   - SpawnAt: [R2TalonAux, R2TalonSnow, R2TalonAuxSand]
      BiomesExcluded: [ LowMountains, Mountains, Radiated, RadiatedFog ]
      Radius: 250
      RadiusRandom: 50
@@ -2072,7 +2072,7 @@ SpawnZones:
          DelayMinMax: [200, 240]
 
 # Talon farmers.
-   - SpawnAt: [TalonFarmhouse, TalonFarm, TalonSnowFarm, TalonStoneFarm]
+   - SpawnAt: [R2TalonFarmhouse, R2TalonFarm, R2TalonSnowFarm, R2TalonStoneFarm]
      BiomesExcluded: [ LowMountains, Mountains, Radiated, RadiatedFog ]
      Radius: 100
      RadiusRandom: 25

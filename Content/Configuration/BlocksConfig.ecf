@@ -1417,7 +1417,7 @@
   { Child DropOnDestroy
     Item: PentaxidOre
     Count: "1,2"
-    Prob: 0.5
+    Prob: 0.66
   }
 }
 # double. delete when save game break 
@@ -1660,13 +1660,13 @@
   Shape: Terrain
   Mesh: terrain
   Texture: 219
-  AutoMinerFactor: 0.75
+  AutoMinerFactor: 1.00
   XpFactor: 1.75
   ShowUser: No
   Group: resource
   { Child DropOnDestroy
     Item: Graphite
-    Count: "1,5"
+    Count: "2,7"
     Prob: 0.66
   }
 }
@@ -2500,7 +2500,9 @@
   Mass: 10000, type: float, display: true, formatter: Kilogram
   Volume: 6150, type: float, display: true, formatter: Liter     # for all retractable turrets
   StackSize: 500
-  BlastParticleIndex: 8
+  BlastParticleName: @reforged2/TurretExplosionLargeRG
+  BlastParticleIndex: 0
+  # BlastParticleIndex: 8
   BlastRadius: 4
   BlastDamage: 850
   EnergyIn: 150, type: int, display: true, formatter: Watt
@@ -2531,6 +2533,7 @@
   PickupTarget: TurretMSProjectileBlocks
   TemplateRoot: TurretMSProjectileBlocks
   UpgradeTo: TurretMSMinigunRetractT2, display: true
+  BlastParticleName: @reforged2/TurretExplosionLargeRG
 }
 { +Block Id: 284, Name: TurretMSRocketRetract, Ref: TurretTemplate
   Model: @models/Blocks/Turrets/TurretMSRocketRetractPrefab
@@ -2549,7 +2552,7 @@
   SoundRotate: Weapons/Turret/TurretRotateVeryFast
   CPUIn: 10000, type: int, display: true
   HitPoints: 30000, type: int, display: true
-  BlastParticleIndex: 1
+  # BlastParticleIndex: 1
   BlastRadius: 5
   BlastDamage: 2500
   MaxCount: 24, type: int, display: true
@@ -2557,6 +2560,8 @@
   PickupTarget: TurretMSRocketBlocks
   TemplateRoot: TurretMSRocketBlocks
   UpgradeTo: TurretMSRocketRetractT2, display: true
+  BlastParticleName: @reforged2/TurretExplosionLargeRocketRG
+  ShieldDamagePenFac: 0.25, display: true
 }
 
 # Obsolete but dont delete
@@ -3072,7 +3077,9 @@
   BlockColor: "110,110,110"
   StackSize: 500
   MaxCount: 4, type: int, display: true
-  BlastParticleIndex: 8
+  BlastParticleName: @reforged2/TurretExplosionLargeLaserRG
+  BlastParticleIndex: 0
+  # BlastParticleIndex: 8
   BlastRadius: 4
   BlastDamage: 750
   EnergyDynamicGroup: DrillTurret
@@ -3103,7 +3110,7 @@
   HitPoints: 25000, type: int, display: true
   CPUIn: 20000, type: int, display: true
   Volume: 5114, type: float, display: true, formatter: Liter
-  EnergyIn: 15000, type: int, display: true, formatter: Watt  
+  EnergyIn: 15000, type: int, display: true, formatter: Watt
   EnergyInIdle: 100, type: int, display: true, formatter: Watt
   Place: Free
   MaxCount: 12, type: int, display: true
@@ -3151,7 +3158,8 @@
   Mass: 15000, type: float, display: true, formatter: Kilogram
   Volume: 6825, type: float, display: true, formatter: Liter
   EnergyIn: 250, type: int, display: true, formatter: Watt
-  BlastParticleName: @rg_projectiles/RG_BlastPlasmaBlueL3
+  # BlastParticleName: @rg_projectiles/RG_BlastPlasmaBlueL3
+  BlastParticleName: @reforged2/TurretExplosionLargeLaserRG
   BlastParticleIndex: 0
   BlastRadius: 4
   BlastDamage: 1150
@@ -3178,7 +3186,8 @@
   Mass: 17500, type: float, display: true, formatter: Kilogram
   Volume: 6825, type: float, display: true, formatter: Liter
   EnergyIn: 250, type: int, display: true, formatter: Watt
-  BlastParticleName: @rg_projectiles/RG_BlastPlasmaBlueL2
+  # BlastParticleName: @rg_projectiles/RG_BlastPlasmaBlueL2
+  BlastParticleName: @reforged2/TurretExplosionLargePlasmaRG
   BlastParticleIndex: 0
   BlastRadius: 5
   BlastDamage: 2500
@@ -3203,7 +3212,8 @@
   Mass: 12500, type: float, display: true, formatter: Kilogram
   Volume: 6250, type: float, display: true, formatter: Liter
   EnergyIn: 150, type: int, display: true, formatter: Watt
-  BlastParticleIndex: 8
+  # BlastParticleIndex: 8
+  BlastParticleName: @reforged2/TurretExplosionLargeRocketRG
   BlastRadius: 6
   BlastDamage: 1500
   MaxCount: 24, type: int, display: true
@@ -3228,7 +3238,8 @@
   HitPoints: 30000, type: int, display: true
   Mass: 12500, type: float, display: true, formatter: Kilogram
   Volume: 6250, type: float, display: true, formatter: Liter
-  BlastParticleIndex: 8
+  # BlastParticleIndex: 8
+  BlastParticleName: @reforged2/TurretExplosionLargeRG
   EnergyIn: 150, type: int, display: true, formatter: Watt
   MaxCount: 24, type: int, display: true
   ForceMaxCount: true
@@ -3256,12 +3267,14 @@
   RotSpeed: 45, type: int, display: true
   CPUIn: 20000, type: int, display: true
   SoundRotate: Weapons/Turret/TurretRotateSlow
-  BlastParticleName: @rg_projectiles/RG_BlastCruise
+  # BlastParticleName: @rg_projectiles/RG_BlastCruise
+  BlastParticleName: @reforged2/TurretExplosionLargeRocketT2RG
   BlastParticleIndex: 0
   BlastRadius: 6
   BlastDamage: 10000
   MaxCount: 12, type: int, display: true
   ForceMaxCount: true
+  ShieldDamagePenFac: 0.20, display: true
   PickupTarget: TurretMSArtilleryBlocks
   TemplateRoot: TurretMSArtilleryBlocks
 }
@@ -3731,7 +3744,8 @@
   MaxCount: 8, type: int, display: true
   ForceMaxCount: true
   AboveTerrainCheck: true
-  BlastParticleName: @rg_projectiles/RG_BlastPlasmaBlueM1
+  # BlastParticleName: @rg_projectiles/RG_BlastPlasmaBlueM1
+  BlastParticleName: @reforged2/TurretExplosionLargeLaserRG
   BlastParticleIndex: 0
   BlastRadius: 5
   BlastDamage: 600
@@ -4806,7 +4820,7 @@
   ShowUser: No
   { Child DropOnDestroy_1
     Item: Graphite
-    Count: "8,19"
+    Count: "8,24"
     Prob: 1
   }
 }
@@ -5263,6 +5277,7 @@
   CPUIn: 1000, type: int, display: true
   HitPoints: 4000, type: int, display: true
   OccupySizeInBlocks: true
+  ShieldDamagePenFac: 0.1, display: true
 
   UnlockCost: 25, display: true
   UnlockLevel: 10, display: true
@@ -5447,6 +5462,7 @@
   SoundClose: UseActions/WeaponOpenClose
   IsActivateable: true
   #IsRetractable: true, display: true
+  ShieldDamagePenFac: 0.25, display: true
   
   Place: WeaponDir
   AllowPlacingAt: SS, display: true
@@ -6576,7 +6592,8 @@
   Mass: 17000, type: float, display: true, formatter: Kilogram
   StackSize: 250
   Category: Weapons/Items
-  BlastParticleName: @rg_projectiles/RG_BlastPlasmaGreenL2
+  # BlastParticleName: @rg_projectiles/RG_BlastPlasmaGreenL2
+  BlastParticleName: @reforged2/TurretExplosionLargePlasmaGreenRG
   BlastParticleIndex: 0
   BlastRadius: 4
   BlastDamage: 4500
@@ -6602,7 +6619,8 @@
   RotSpeed: 90, type: int, display: true
   CPUIn: 10000, type: int, display: true
   AboveTerrainCheck: false
-  BlastParticleName: @rg_projectiles/RG_BlastPlasmaRedL3
+  # BlastParticleName: @rg_projectiles/RG_BlastPlasmaRedL3
+  BlastParticleName: @reforged2/TurretExplosionLargeLaserRedRG
   BlastParticleIndex: 0
 }
 
@@ -7615,7 +7633,8 @@
   IsActivateableInCP: true
   StackSize: 500
   # MaxCount: 4, type: int, display: true
-  BlastParticleName: @rg_projectiles/RG_BlastPlasmaRedL3
+  # BlastParticleName: @rg_projectiles/RG_BlastPlasmaRedL3
+  BlastParticleName: @reforged2/TurretExplosionLargeLaserRedRG
   BlastParticleIndex: 0
   BlastRadius: 5
   BlastDamage: 1500
@@ -7661,7 +7680,7 @@
   StackSize: 500
   # MaxCount: 4, type: int, display: true
   #BlastParticleName: @rg_projectiles/RG_BlastPlasmaRedL1
-  BlastParticleName: @reforged2/PlasmaBlastHeavyRedRG
+  BlastParticleName: @reforged2/TurretExplosionLargePlasmaRedRG
   BlastParticleIndex: 0
   BlastRadius: 6
   BlastDamage: 2500
@@ -7706,7 +7725,8 @@
   Texture: 50    
   WeaponItem: TurretPOIRocketWeaponT2
   Homing: true, display: true
-  BlastParticleIndex: 1
+  BlastParticleName: @reforged2/TurretExplosionLargeRocketRG
+  BlastParticleIndex: 0
   BlastRadius: 7
   BlastDamage: 3000
   Mass: 21554, type: float, display: true, formatter: Kilogram
@@ -7716,6 +7736,7 @@
   OccupySizeInBlocks: true
   RepairToTemplate: false, display: true
   RepFac: 20 # RepFacTurret
+  ShieldDamagePenFac: 0.25, display: true
   
   RotSpeed: 70, type: int, display: true  
   Zoom: 5, type: float
@@ -7822,7 +7843,8 @@
   StackSize: 1000
   IsActivateable: true
   Category: Weapons/Items
-  BlastParticleName: @rg_projectiles/RG_BlastPlasmaRedL3
+  # BlastParticleName: @rg_projectiles/RG_BlastPlasmaRedL3
+  BlastParticleName: @reforged2/TurretExplosionLargePlasmaRedRG
   BlastParticleIndex: 0
   BlastRadius: 6
   BlastDamage: 3000
@@ -9908,12 +9930,15 @@
   StackSize: 500
   MaxCount: 24, type: int, display: true
   ForceMaxCount: true
-  BlastParticleIndex: 1
+  BlastParticleName: @reforged2/TurretExplosionLargeRG
+  BlastParticleIndex: 0
+  #BlastParticleIndex: 1
   BlastRadius: 5
   BlastDamage: 5000
   EnergyIn: 200, type: int, display: true, formatter: Watt
   CPUIn: 10000, type: int, display: true
   HitPoints: 20000, type: int, display: true
+  ShieldDamagePenFac: 0.1, display: true
 
   UnlockCost: 20, display: true
   UnlockLevel: 15, display: true
@@ -9958,7 +9983,8 @@
   StackSize: 500
   MaxCount: 24, type: int, display: true
   ForceMaxCount: true
-  BlastParticleName: @rg_projectiles/RG_BlastPlasmaBlueL1
+  #BlastParticleName: @rg_projectiles/RG_BlastPlasmaBlueL1
+  BlastParticleName: @reforged2/TurretExplosionLargeLaserRG
   BlastParticleIndex: 0
   BlastRadius: 4
   BlastDamage: 1500
@@ -10045,6 +10071,7 @@
   RotSpeed: 90, type: int, display: true
   Zoom: 5, type: float
   RepFac: 20 # RepFacTurret
+  ShieldDamagePenFac: 0.25, display: true
   UpgradeTo: TurretGVRocketT2, display: true
 }
 { +Block Id: 650, Name: TurretGVPlasma     #TurretPlayer HV Plasma
@@ -10073,7 +10100,8 @@
   ForceMaxCount: true
   PickupTarget: TurretGVPlasmaBlocks
   TemplateRoot: TurretGVPlasmaBlocks
-  BlastParticleName: @rg_projectiles/RG_BlastPlasmaBlueL2
+  # BlastParticleName: @rg_projectiles/RG_BlastPlasmaBlueL2
+  BlastParticleName: @reforged2/TurretExplosionLargePlasmaRG
   BlastParticleIndex: 0
   BlastRadius: 4
   BlastDamage: 450
@@ -10533,7 +10561,8 @@
   SoundOpen: UseActions/WeaponOpenClose
   SoundClose: UseActions/WeaponOpenClose
   IsActivateable: true
-  IsRetractable: true, display: true  
+  IsRetractable: true, display: true
+  TurretTargetIgnore: true
   BlockColor: "110,110,110"
   Place: WeaponDir
   SizeInBlocks: "1,6,1", display: true
@@ -10575,10 +10604,12 @@
   EnergyIn: 1500, type: int, display: true, formatter: Watt  
   EnergyInIdle: 50, type: int, display: true, formatter: Watt
   HitPoints: 5000, type: int, display: true
-  BlastParticleName: @rg_projectiles/RG_BlastEMPM2
+  # BlastParticleName: @rg_projectiles/RG_BlastEMPM2
+  BlastParticleName: @reforged2/TurretExplosionLargeLaserRG
   BlastParticleIndex: 0
   BlastRadius: 5
   BlastDamage: 500
+  ShowUser: No
 }
 
 { +Block Id: 685, Name: TurretMSDrill, Ref: TurretDrillTemplate    #TurretPlayer CV Drill
@@ -10592,7 +10623,8 @@
   EnergyInIdle: 100, type: int, display: true, formatter: Watt
   CPUIn: 20000, type: int, display: true 
   StackSize: 250
-  BlastParticleName: @rg_projectiles/RG_BlastEMPM2
+  # BlastParticleName: @rg_projectiles/RG_BlastEMPM2
+  BlastParticleName: @reforged2/TurretExplosionLargePlasmaRG
   BlastParticleIndex: 0
   BlastRadius: 5
   BlastDamage: 1000
@@ -10881,7 +10913,9 @@
   ForceMaxCount: true
   PickupTarget: TurretBaseRocketBlocks
   TemplateRoot: TurretBaseRocketBlocks
-  BlastParticleIndex: 8
+  BlastParticleName: @reforged2/TurretExplosionLargeRocketRG
+  BlastParticleIndex: 0
+  # BlastParticleIndex: 8
   BlastRadius: 6
   BlastDamage: 1000
   EnergyIn: 150, type: int, display: true, formatter: Watt
@@ -10891,6 +10925,7 @@
   RotSpeed: 90, type: int, display: true
   Zoom: 5, type: float
   RepFac: 20 # RepFacTurret
+  BlastShieldDamagePenFac: 0.25, display: true
   UpgradeTo: TurretBAFlakT2, display: true
 }
 # Plasma Turret
@@ -10923,7 +10958,8 @@
   ForceMaxCount: true
   PickupTarget: TurretBaseLaserBlocks
   TemplateRoot: TurretBaseLaserBlocks
-  BlastParticleName: @rg_projectiles/RG_BlastPlasmaBlueL1
+  # BlastParticleName: @rg_projectiles/RG_BlastPlasmaBlueL1
+  BlastParticleName: @reforged2/TurretExplosionLargePlasmaRG
   BlastParticleIndex: 0
   BlastRadius: 4
   BlastDamage: 1850
@@ -10964,7 +11000,8 @@
   ForceMaxCount: true
   PickupTarget: TurretMSLaserBlocks
   TemplateRoot: TurretMSLaserBlocks
-  BlastParticleName: @rg_projectiles/RG_BlastPlasmaBlueL1
+  # BlastParticleName: @rg_projectiles/RG_BlastPlasmaBlueL1
+  BlastParticleName: @reforged2/TurretExplosionLargePlasmaRG
   BlastParticleIndex: 0
   BlastRadius: 4
   BlastDamage: 1850
@@ -11374,12 +11411,15 @@
   PickupTarget: TurretGVArtilleryBlocks
   TemplateRoot: TurretGVArtilleryBlocks
   
-  BlastParticleIndex: 1
+  BlastParticleName: @reforged2/TurretExplosionLargeRocketRG
+  BlastParticleIndex: 0
+  # BlastParticleIndex: 1
   BlastRadius: 6
   BlastDamage: 1200
   EnergyIn: 300, type: int, display: true, formatter: Watt
   CPUIn: 3000, type: int, display: true
   HitPoints: 10000, type: int, display: true
+  ShieldDamagePenFac: 0.05, display: true
 
   RotSpeed: 60, type: int, display: true
   Zoom: 5, type: float
@@ -12632,6 +12672,8 @@
   SizeInBlocks: "1,1,1", display: false
   IsAccessible: false, type: bool
   IsTerrainDecoration: true
+  TemplateRoot: SensorTriggerBlocks
+  PickupTarget: SensorTriggerBlocks
   Mass: 7, type: float, display: true, formatter: Kilogram
   Hardness: 1, type: float, display: false, formatter: Hardness
   HitPoints: 10, type: int, display: true
@@ -13311,7 +13353,8 @@
   SoundOpen: UseActions/WeaponOpenClose
   SoundClose: UseActions/WeaponOpenClose
   IsActivateable: true
-  IsRetractable: true, display: true  
+  IsRetractable: true, display: true
+  TurretTargetIgnore: true
   BlockColor: "110,110,110"
   Place: WeaponDir
   SizeInBlocks: "1,6,1", display: true
@@ -17609,7 +17652,8 @@
   ForceMaxCount: true
   PickupTarget: TurretMSLaserBlocks
   TemplateRoot: TurretMSLaserBlocks
-  BlastParticleName: @rg_projectiles/RG_BlastPlasmaBlueL3
+  # BlastParticleName: @rg_projectiles/RG_BlastPlasmaBlueL3
+  BlastParticleName: @reforged2/TurretExplosionLargeLaserRG
   BlastParticleIndex: 0
   BlastRadius: 4
   BlastDamage: 850
@@ -17652,7 +17696,8 @@
   ForceMaxCount: true
   PickupTarget: TurretBaseProjectileBlocks
   TemplateRoot: TurretBaseProjectileBlocks
-  BlastParticleName: @rg_projectiles/RG_BlastFlakMulti
+  # BlastParticleName: @rg_projectiles/RG_BlastFlakMulti
+  BlastParticleName: @reforged2/TurretExplosionLargeRG
   BlastParticleIndex: 0
   BlastRadius: 4
   BlastDamage: 650
@@ -17694,7 +17739,9 @@
   ForceMaxCount: true
   PickupTarget: TurretBaseRocketBlocks
   TemplateRoot: TurretBaseRocketBlocks
-  BlastParticleIndex: 1
+  BlastParticleName: @reforged2/TurretExplosionLargeRocketRG
+  BlastParticleIndex: 0
+  # BlastParticleIndex: 1
   BlastRadius: 5
   BlastDamage: 4000
   EnergyIn: 150, type: int, display: true, formatter: Watt
@@ -17706,6 +17753,7 @@
   RotSpeed: 70, type: int, display: true
   Zoom: 5, type: float
   RepFac: 20 # RepFacTurret
+  ShieldDamagePenFac: 0.25, display: true
   UpgradeTo: TurretBARocketT2, display: true
 }
 
@@ -17734,7 +17782,8 @@
   ForceMaxCount: true
   PickupTarget: TurretMSProjectileBlocks
   TemplateRoot: TurretMSProjectileBlocks
-  BlastParticleName: @rg_projectiles/RG_BlastFlakMulti
+  # BlastParticleName: @rg_projectiles/RG_BlastFlakMulti
+  BlastParticleName: @reforged2/TurretExplosionLargeRG
   BlastParticleIndex: 0
   BlastRadius: 4
   BlastDamage: 650
@@ -17773,7 +17822,9 @@
   ForceMaxCount: true
   PickupTarget: TurretMSRocketBlocks
   TemplateRoot: TurretMSRocketBlocks
-  BlastParticleIndex: 8
+  BlastParticleName: @reforged2/TurretExplosionLargeRocketRG
+  BlastParticleIndex: 0
+  # BlastParticleIndex: 8
   BlastRadius: 5
   BlastDamage: 800
   EnergyIn: 150, type: int, display: true, formatter: Watt
@@ -17784,6 +17835,7 @@
   RotSpeed: 90, type: int, display: true
   Zoom: 5, type: float
   RepFac: 20 # RepFacTurret
+  BlastShieldDamagePenFac: 0.25, display: true
   UpgradeTo: TurretMSFlakT2, display: true
 }
 { +Block Id: 1147, Name: TurretBaseMinigun         #TurretPlayer BA Minigun
@@ -17813,7 +17865,8 @@
   ForceMaxCount: true
   PickupTarget: TurretBaseProjectileBlocks
   TemplateRoot: TurretBaseProjectileBlocks
-  BlastParticleName: @rg_projectiles/RG_BlastFlakMulti
+  # BlastParticleName: @rg_projectiles/RG_BlastFlakMulti
+  BlastParticleName: @reforged2/TurretExplosionLargeRG
   BlastParticleIndex: 0
   BlastRadius: 4
   BlastDamage: 650
@@ -17854,7 +17907,8 @@
   ForceMaxCount: true
   PickupTarget: TurretBaseLaserBlocks
   TemplateRoot: TurretBaseLaserBlocks
-  BlastParticleName: @rg_projectiles/RG_BlastPlasmaBlueL3
+  # BlastParticleName: @rg_projectiles/RG_BlastPlasmaBlueL3
+  BlastParticleName: @reforged2/TurretExplosionLargeLaserRG
   BlastParticleIndex: 0
   BlastRadius: 4
   BlastDamage: 750
@@ -17896,7 +17950,8 @@
   ForceMaxCount: true
   PickupTarget: TurretBaseArtilleryBlocks
   TemplateRoot: TurretBaseArtilleryBlocks
-  BlastParticleName: @rg_projectiles/RG_BlastCruise
+  # BlastParticleName: @rg_projectiles/RG_BlastCruise
+  BlastParticleName: @reforged2/TurretExplosionLargeRocketT2RG
   BlastParticleIndex: 0
   BlastRadius: 6
   BlastDamage: 6000
@@ -17908,6 +17963,7 @@
   RotSpeed: 60, type: int, display: true
   Zoom: 5, type: float
   RepFac: 20 # RepFacTurret
+  ShieldDamagePenFac: 0.20, display: true
 }
 { +Block Id: 1150, Name: Wing12x9b, Ref: Wing6x9a
   Model: Wings/Wing12x9b
@@ -20393,6 +20449,7 @@
   StackSize: 1000
   Mass: 1000, type: float, display: true, formatter: Kilogram
   Volume: 500000, type: float, display: true, formatter: Liter
+  HitPoints: 5000, type: int, display: true
   EnergyIn: 1, type: int, display: true, formatter: Watt
   BlastParticleName: @reforged2/CoreBlastRed
   BlastParticleIndex: 0
@@ -20833,6 +20890,7 @@
 }
 { +Block Id: 1400, Name: LCDProjector, Ref: LCDNoFrame1x1
   Model: @models/Blocks/Misc/LCDProjectorPrefab
+  Collide: "bullet,rocket"
 }
 
 { +Block Id: 1401, Name: CoreNPCcpu, Ref: CoreNPC
@@ -20882,6 +20940,7 @@
   Volume: 80, type: float, display: true, formatter: Liter
   StackSize: 1000
   Temperature: 900
+  CPUIn: 0, type: int, display: false
   AllowPlacingAt: "Base,MS", display: true
   ShowUser: Yes
   HitPoints: 2000, type: int, display: true
@@ -20912,6 +20971,7 @@
   Mesh: water
   TemplateRoot: WaterBlock
   Texture: 107
+  CPUIn: 0, type: int, display: false
   Place: Free
   Mass: 7250, type: float, display: true, formatter: Kilogram
   Volume: 80, type: float, display: true, formatter: Liter
@@ -20952,7 +21012,7 @@
   HitPoints: 250, type: int, display: true
   Mass: 20, type: float, display: true, formatter: Kilogram 
   Volume: 16, type: float, display: true, formatter: Liter
-  EnergyIn: 2, type: int, display: true, formatter: Watt
+  EnergyIn: 3, type: int, display: true, formatter: Watt
   CPUIn: 0, type: int, display: false
   Category: Devices
   AllowWander: true
@@ -22224,7 +22284,7 @@
   HitPoints: 100, type: int, display: false
   Mass: 10, type: float, display: true, formatter: Kilogram 
   Volume: 20, type: float, display: true, formatter: Liter
-  EnergyIn: 2, type: int, display: true, formatter: Watt
+  EnergyIn: 3, type: int, display: true, formatter: Watt
 }
 
 { +Block Id: 1510, Name: SolarPanelSlope2, Ref: SolarPanelSlope
@@ -22327,7 +22387,10 @@
   RotSpeed: 60, type: int, display: true
   CPUIn: 10000, type: int, display: true
   AboveTerrainCheck: false
-  BlastParticleIndex: 1
+  # BlastParticleIndex: 1
+  BlastParticleName: @reforged2/TurretExplosionLargeRocketRG
+  BlastParticleIndex: 0
+  ShieldDamagePenFac: 0.25, display: true
 }
 { +Block Id: 1518, Name: TurretEnemyArtillery, Ref: TurretIONCannon
   Model: @models/Blocks/Turrets/TurretsEnemy/TurretEnemyLaserPrefab
@@ -22344,7 +22407,10 @@
   CPUIn: 20000, type: int, display: true
   HitPoints: 25000, type: int, display: true
   AboveTerrainCheck: false
-  BlastParticleIndex: 1
+  # BlastParticleIndex: 1
+  BlastParticleName: @reforged2/TurretExplosionLargeRocketRG
+  BlastParticleIndex: 0
+  ShieldDamagePenFac: 0.20, display: true
 }
 
 { +Block Id: 1519, Name: CommandingOfficerMale, Ref: NPCHumanTemplate
@@ -23043,7 +23109,8 @@
   SoundOpen: UseActions/WeaponOpenClose
   SoundClose: UseActions/WeaponOpenClose
   IsActivateable: true
-  IsRetractable: true, display: true  
+  IsRetractable: true, display: true
+  TurretTargetIgnore: true
   BlockColor: "110,110,110"
   Place: WeaponDir
   IsActivateableInCP: true
@@ -23805,7 +23872,7 @@
   DropMeshfile: Entities/Misc/DropContainerNewPrefab
   BlockColor: "110,110,110"
   Category: Weapons/Items
-  ChildBlocks: "TurretMSTool, TurretMSToolRetract, TurretMSDrill, TurretMSDrillRetract"
+  ChildBlocks: "TurretMSTool, TurretMSToolRetract" # TurretMSDrill, TurretMSDrillRetract merged into tool turret
   MaxCount: 12, type: int, display: true
   ForceMaxCount: true
   StackSize: 500
@@ -23882,7 +23949,7 @@
   IsAccessible: true, type: bool
   ShowBlockName: true
   Model: @models2/Entities/Decorations/DecoNPC/TalonChiefDecoPrefab
-  RpFactor: 2
+  RPFactor: 2
   ShowUser: Yes
   HitPoints: 500, type: int, display: true
 }
@@ -23895,7 +23962,7 @@
   IsAccessible: true, type: bool
   ShowBlockName: true
   Model: @models2/Entities/Decorations/DecoNPC/ZiraxCommanderDecoPrefab
-  # RpFactor: 2
+  # RPFactor: 2
   ShowUser: Yes
   TemplateRoot: ZiraxNPCBlocks
   HitPoints: 500, type: int, display: true
@@ -24281,7 +24348,7 @@
   DropMeshfile: Entities/Misc/DropContainerNewPrefab
   BlockColor: "110,110,110"
   Category: Weapons/Items
-  ChildBlocks: "TurretGVTool, TurretGVToolRetract, TurretGVDrill, TurretGVDrillRetract"
+  ChildBlocks: "TurretGVTool, TurretGVToolRetract" # TurretGVDrill, TurretGVDrillRetract merged into tool turret
   MaxCount: 4, type: int, display: true
   ForceMaxCount: true
   StackSize: 1000
@@ -24522,7 +24589,7 @@
   IsOxygenTight: false, display: true
   Category: Devices
   EnergyIn: 1, type: int, display: true, formatter: Watt
-  HitPoints: 500, type: int, display: true
+  HitPoints: 1000, type: int, display: true
   BlastParticleIndex: 5
   BlastRadius: 0
   BlastDamage: 0
@@ -24537,7 +24604,7 @@
   
   Volume: 72, type: float, display: true, formatter: Liter
   VolumeCapacity: 16000, type: float, display: true, formatter: Liter  
-  HitPoints: 1000, type: int, display: true
+  HitPoints: 2000, type: int, display: true
   IsOxygenTight: false, display: true    
   CPUIn: 10, type: int, display: true
 }
@@ -24581,7 +24648,8 @@
   Mass: 8500, type: float, display: true, formatter: Kilogram
   StackSize: 250
   Category: Weapons/Items
-  BlastParticleName: @rg_projectiles/RG_BlastPlasmaGreenL1
+  # BlastParticleName: @rg_projectiles/RG_BlastPlasmaGreenL1
+  BlastParticleName: @reforged2/TurretExplosionLargePlasmaGreenRG
   BlastParticleIndex: 0
   BlastRadius: 4
   BlastDamage: 2500
@@ -24592,6 +24660,7 @@
   CPUIn: 25000, type: int, display: true
   XpFactor: 2
   RepFac: 20 # RepFacTurret
+  ShieldDamagePenFac: 0.50, display: true
   AboveTerrainCheck: false
   MarketPrice: 25000, display: false
   # ShowUser: No
@@ -24609,7 +24678,8 @@
   RotSpeed: 70, type: int, display: true    
   CPUIn: 10000, type: int, display: true
   AboveTerrainCheck: false
-  BlastParticleName: @rg_projectiles/RG_BlastPlasmaBlueL1
+  # BlastParticleName: @rg_projectiles/RG_BlastPlasmaBlueL1
+  BlastParticleName: @reforged2/TurretExplosionLargeLaserRG
   BlastParticleIndex: 0
 }
 
@@ -25790,6 +25860,7 @@
   HitPoints: 15000, type: int, display: true
   TemplateRoot: DecoTribalBlocks
   PickupTarget: DecoTribalBlocks
+  ShieldDamagePenFac: 0.10, display: true
   
   BlastParticleIndex: 13
   BlastRadius: 3
@@ -27106,7 +27177,7 @@
   Info: bkiVentilator, display: true
   Mass: 50, type: float, display: true, formatter: Kilogram
   Volume: 8, type: float, display: true, formatter: Liter
-  EnergyIn: 2, type: int, display: true, formatter: Watt
+  EnergyIn: 3, type: int, display: true, formatter: Watt
   Category: Devices
   ChildBlocks: "Ventilator, VentilatorCubeHalf, VentilatorThin, VentilatorRampC, VentilatorCubeQuarter, VentilatorCylinder, VentilatorCylinderThin, VentilatorEdgeRoundLowHalf, VentilatorEdgeRoundMediumHalf, VentilatorEdgeRound, VentilatorRampD"
 
@@ -27119,13 +27190,13 @@
   Model: @models/Blocks/Mothership/VentilatorCubeHalfPrefab
   HitPoints: 150, type: int, display: false
   Mass: 10, type: float, display: true, formatter: Kilogram 
-  EnergyIn: 5, type: int, display: true, formatter: Watt
+  EnergyIn: 3, type: int, display: true, formatter: Watt
 }
 { +Block Id: 1958, Name: VentilatorRampC, Ref: Ventilator
   Model: @models/Blocks/Mothership/VentilatorRampCPrefab
   HitPoints: 150, type: int, display: false
   Mass: 5, type: float, display: true, formatter: Kilogram 
-  EnergyIn: 5, type: int, display: true, formatter: Watt
+  EnergyIn: 3, type: int, display: true, formatter: Watt
   SymType: 4
 }
 
@@ -27139,47 +27210,47 @@
   Model: @models/Blocks/Mothership/VentilatorCubeQuarterPrefab
   HitPoints: 150, type: int, display: false
   Mass: 10, type: float, display: true, formatter: Kilogram 
-  EnergyIn: 5, type: int, display: true, formatter: Watt
+  EnergyIn: 3, type: int, display: true, formatter: Watt
   SymType: 4
 }
 { +Block Id: 1961, Name: VentilatorCylinder, Ref: Ventilator
   Model: @models/Blocks/Mothership/VentilatorCylinderPrefab
   HitPoints: 150, type: int, display: false
   Mass: 15, type: float, display: true, formatter: Kilogram 
-  EnergyIn: 5, type: int, display: true, formatter: Watt
+  EnergyIn: 3, type: int, display: true, formatter: Watt
 }
 { +Block Id: 1962, Name: VentilatorCylinderThin, Ref: Ventilator
   Model: @models/Blocks/Mothership/VentilatorCylinderThinPrefab
   HitPoints: 150, type: int, display: false
   Mass: 10, type: float, display: true, formatter: Kilogram 
-  EnergyIn: 5, type: int, display: true, formatter: Watt
+  EnergyIn: 3, type: int, display: true, formatter: Watt
 }
 { +Block Id: 1963, Name: VentilatorEdgeRoundLowHalf, Ref: Ventilator
   Model: @models/Blocks/Mothership/VentilatorEdgeRoundLowHalfPrefab
   HitPoints: 150, type: int, display: false
   Mass: 12, type: float, display: true, formatter: Kilogram 
-  EnergyIn: 5, type: int, display: true, formatter: Watt
+  EnergyIn: 3, type: int, display: true, formatter: Watt
   SymType: 4
 }
 { +Block Id: 1964, Name: VentilatorEdgeRoundMediumHalf, Ref: Ventilator
   Model: @models/Blocks/Mothership/VentilatorEdgeRoundMediumHalfPrefab
   HitPoints: 150, type: int, display: false
   Mass: 10, type: float, display: true, formatter: Kilogram 
-  EnergyIn: 5, type: int, display: true, formatter: Watt
+  EnergyIn: 3, type: int, display: true, formatter: Watt
   SymType: 4
 }
 { +Block Id: 1965, Name: VentilatorEdgeRound, Ref: Ventilator
   Model: @models/Blocks/Mothership/VentilatorEdgeRoundPrefab
   HitPoints: 150, type: int, display: false
   Mass: 5, type: float, display: true, formatter: Kilogram 
-  EnergyIn: 5, type: int, display: true, formatter: Watt
+  EnergyIn: 3, type: int, display: true, formatter: Watt
   SymType: 4
 }
 { +Block Id: 1966, Name: VentilatorRampD, Ref: Ventilator
   Model: @models/Blocks/Mothership/VentilatorRampDPrefab
   HitPoints: 150, type: int, display: false
   Mass: 10, type: float, display: true, formatter: Kilogram 
-  EnergyIn: 5, type: int, display: true, formatter: Watt
+  EnergyIn: 3, type: int, display: true, formatter: Watt
   SymType: 4
 }
 
@@ -28548,7 +28619,7 @@
 { Block Name: CrystalsPyramidBlueStage1
   Class: PlantGrowing
   AllowedInBlueprint: false, display: true 
-  Marketprice: 2560, display: true
+  MarketPrice: 2560, display: true
   IndexName: Plant
   Material: Concrete
   Shape: ModelEntity
@@ -28739,6 +28810,7 @@
   Class: CropsGrown
   AllowedInBlueprint: false, display: true 
   IndexName: Plant  
+  CropYield: 3, display: true
   { Child DropOnHarvest
     Item: PentaxidOre
     Count: 3
@@ -28812,6 +28884,7 @@
   Class: CropsGrown
   AllowedInBlueprint: false, display: true 
   IndexName: Plant  
+  CropYield: 4, display: true
   { Child DropOnHarvest
     Item: PentaxidOre
     Count: 4
@@ -35477,6 +35550,7 @@
   HitPoints: 4000, type: int, display: true
   OccupySizeInBlocks: true
   Voxelize: false
+  ShieldDamagePenFac: 0.25, display: true
 }
 
 # =========================================
@@ -35575,6 +35649,7 @@
   OccupySizeInBlocks: true
   AboveTerrainCheck: true
   Voxelize: false
+  ShieldDamagePenFac: 0.25, display: true
 
   UnlockCost: 10, display: true
   UnlockLevel: 15, display: true
@@ -35621,6 +35696,7 @@
   OccupySizeInBlocks: true
   Voxelize: false
   AboveTerrainCheck: true
+  ShieldDamagePenFac: 0.25, display: true
 
   UnlockCost: 17, display: true
   UnlockLevel: 15, display: true
@@ -35668,6 +35744,7 @@
   HitPoints: 4000, type: int, display: true
   OccupySizeInBlocks: true
   Voxelize: false
+  BlastShieldDamagePenFac: 0.1, display: true
 }
 { Block Name: WeaponSVBombLauncherEMPT2
   Class: Weapon
@@ -35857,6 +35934,7 @@
   HitPoints: 6000, type: int, display: true
   OccupySizeInBlocks: true
   Voxelize: false
+  ShieldDamagePenFac: 0.1, display: true
 
   UnlockCost: 25, display: true
   UnlockLevel: 15, display: true
@@ -35906,6 +35984,7 @@
   HitPoints: 6000, type: int, display: true
   OccupySizeInBlocks: true
   Voxelize: false
+  ShieldDamagePenFac: 0.1, display: true
 
   UnlockCost: 15, display: true
   UnlockLevel: 15, display: true
@@ -36008,6 +36087,7 @@
   HitPoints: 8000, type: int, display: true
   OccupySizeInBlocks: true
   Voxelize: false
+  ShieldDamagePenFac: 0.1, display: true
 
   UnlockCost: 15, display: true
   UnlockLevel: 25, display: true
@@ -36207,6 +36287,7 @@
   HitPoints: 8000, type: int, display: true
   OccupySizeInBlocks: true
   Voxelize: false
+  ShieldDamagePenFac: 0.1, display: true
 
   UnlockCost: 25, display: true
   UnlockLevel: 25, display: true
@@ -36257,6 +36338,7 @@
   OccupySizeInBlocks: true
   AboveTerrainCheck: true
   Voxelize: false
+  ShieldDamagePenFac: 0.25, display: true
 
   UnlockCost: 20, display: true
   UnlockLevel: 25, display: true
@@ -36306,6 +36388,7 @@
   HitPoints: 8000, type: int, display: true
   OccupySizeInBlocks: true
   Voxelize: false
+  ShieldDamagePenFac: 0.05, display: true
 
   UnlockCost: 15, display: true
   UnlockLevel: 25, display: true
@@ -36566,6 +36649,7 @@
   RotSpeed: 90, type: int, display: true
   Zoom: 5, type: float
   RepFac: 20 # RepFacTurret
+  ShieldDamagePenFac: 0.25, display: true
 }
 { Block Name: TurretGVRocketT2Retract, Ref: TurretGVRocketT2
   Model: @models/Blocks/Turrets/TurretMSRocketRetractPrefab
@@ -36883,7 +36967,8 @@
   Category: Weapons/Items
   BlockColor: "187,135,90"
   StackSize: 500
-  BlastParticleName: @rg_projectiles/RG_BlastFlakMulti
+  # BlastParticleName: @rg_projectiles/RG_BlastFlakMulti
+  BlastParticleName: @reforged2/TurretExplosionLargeRG
   BlastParticleIndex: 0
   BlastRadius: 4
   BlastDamage: 1000
@@ -36944,7 +37029,8 @@
   ForceMaxCount: true
   PickupTarget: TurretMSProjectileBlocksT2
   TemplateRoot: TurretMSProjectileBlocksT2
-  BlastParticleName: @rg_projectiles/RG_BlastFlakMulti
+  # BlastParticleName: @rg_projectiles/RG_BlastFlakMulti
+  BlastParticleName: @reforged2/TurretExplosionLargeRG
   BlastParticleIndex: 0
   BlastRadius: 4
   BlastDamage: 1000
@@ -37001,7 +37087,8 @@
   ForceMaxCount: true
   PickupTarget: TurretMSLaserBlocksT2
   TemplateRoot: TurretMSLaserBlocksT2
-  BlastParticleName: @rg_projectiles/RG_BlastPlasmaBlueL3
+  # BlastParticleName: @rg_projectiles/RG_BlastPlasmaBlueL3
+  BlastParticleName: @reforged2/TurretExplosionLargeLaserRG
   BlastParticleIndex: 0
   BlastRadius: 4
   BlastDamage: 1150
@@ -37054,7 +37141,8 @@
   Category: Weapons/Items
   BlockColor: "187,135,90"
   StackSize: 500
-  BlastParticleName: @rg_projectiles/RG_BlastPlasmaBlueL1
+  # BlastParticleName: @rg_projectiles/RG_BlastPlasmaBlueL1
+  BlastParticleName: @reforged2/TurretExplosionLargePlasmaRG
   BlastParticleIndex: 0
   BlastRadius: 5
   BlastDamage: 2750
@@ -37116,7 +37204,8 @@
   ForceMaxCount: true
   PickupTarget: TurretMSRocketBlocksT2
   TemplateRoot: TurretMSRocketBlocksT2
-  BlastParticleIndex: 1
+  BlastParticleName: @reforged2/TurretExplosionLargeRocketRG
+  BlastParticleIndex: 0
   BlastRadius: 5
   BlastDamage: 6000
   EnergyIn: 300, type: int, display: true, formatter: Watt
@@ -37128,6 +37217,7 @@
   RotSpeed: 70, type: int, display: true
   Zoom: 5, type: float
   RepFac: 20 # RepFacTurret
+  ShieldDamagePenFac: 0.25, display: true
 }
 { Block Name: TurretMSRocketRetractT2, Ref: TurretMSRocketT2
   Model: @models/Blocks/Turrets/TurretMSRocketRetractPrefab
@@ -37170,7 +37260,8 @@
   ForceMaxCount: true
   PickupTarget: TurretMSRocketBlocksT2
   TemplateRoot: TurretMSRocketBlocksT2
-  BlastParticleIndex: 8
+  BlastParticleName: @reforged2/TurretExplosionLargeRocketRG
+  BlastParticleIndex: 0
   BlastRadius: 5
   BlastDamage: 1200
   EnergyIn: 300, type: int, display: true, formatter: Watt
@@ -37181,6 +37272,8 @@
   RotSpeed: 90, type: int, display: true
   Zoom: 5, type: float
   RepFac: 20 # RepFacTurret
+  ShieldDamagePenFac: 0.25, display: true
+  BlastShieldDamagePenFac: 0.25, display: true
 }
 { Block Name: TurretMSFlakRetractT2, Ref: TurretMSFlakT2
   Model: @models/Blocks/Turrets/TurretMSFlakRetractPrefab
@@ -37224,7 +37317,8 @@
   ForceMaxCount: true
   PickupTarget: TurretMSArtilleryBlocks
   TemplateRoot: TurretMSArtilleryBlocks
-  BlastParticleName: @rg_projectiles/RG_BlastCruise
+  # BlastParticleName: @rg_projectiles/RG_BlastCruise
+  BlastParticleName: @reforged2/TurretExplosionLargePlasmaT2RG
   BlastParticleIndex: 0
   BlastRadius: 6
   BlastDamage: 10000
@@ -37236,6 +37330,7 @@
   RotSpeed: 45, type: int, display: true
   Zoom: 5, type: float
   RepFac: 20 # RepFacTurret
+  BlastShieldDamagePenFac: 0.10, display: true
 }
 { Block Name: TurretMSPlasmaArtilleryRetract, Ref: TurretMSPlasmaArtillery
   Model: @models/Blocks/Turrets/TurretMSArtilleryRetractPrefab
@@ -37280,7 +37375,8 @@
   ForceMaxCount: true
   PickupTarget: TurretBaseArtilleryBlocks
   TemplateRoot: TurretBaseArtilleryBlocks
-  BlastParticleName: @rg_projectiles/RG_BlastCruise
+  # BlastParticleName: @rg_projectiles/RG_BlastCruise
+  BlastParticleName: @reforged2/TurretExplosionLargePlasmaT2RG
   BlastParticleIndex: 0
   BlastRadius: 6
   BlastDamage: 10000
@@ -37292,6 +37388,7 @@
   RotSpeed: 45, type: int, display: true
   Zoom: 5, type: float
   RepFac: 20 # RepFacTurret
+  BlastShieldDamagePenFac: 0.10, display: true
 }
 { Block Name: TurretBAPlasmaArtilleryRetract, Ref: TurretBAPlasmaArtillery
   Model: @models/Blocks/Turrets/TurretMSArtilleryRetractPrefab
@@ -37429,7 +37526,8 @@
   ForceMaxCount: true
   PickupTarget: TurretBAProjectileBlocksT2
   TemplateRoot: TurretBAProjectileBlocksT2
-  BlastParticleName: @rg_projectiles/RG_BlastFlakMulti
+  # BlastParticleName: @rg_projectiles/RG_BlastFlakMulti
+  BlastParticleName: @reforged2/TurretExplosionLargeRG
   BlastParticleIndex: 0
   BlastRadius: 4
   BlastDamage: 1000
@@ -37486,7 +37584,8 @@
   ForceMaxCount: true
   PickupTarget: TurretBAProjectileBlocksT2
   TemplateRoot: TurretBAProjectileBlocksT2
-  BlastParticleName: @rg_projectiles/RG_BlastFlakMulti
+  # BlastParticleName: @rg_projectiles/RG_BlastFlakMulti
+  BlastParticleName: @reforged2/TurretExplosionLargeRG
   BlastParticleIndex: 0
   BlastRadius: 4
   BlastDamage: 1000
@@ -37542,7 +37641,8 @@
   ForceMaxCount: true
   PickupTarget: TurretBALaserBlocksT2
   TemplateRoot: TurretBALaserBlocksT2
-  BlastParticleName: @rg_projectiles/RG_BlastPlasmaBlueL3
+  # BlastParticleName: @rg_projectiles/RG_BlastPlasmaBlueL3
+  BlastParticleName: @reforged2/TurretExplosionLargeLaserRG
   BlastParticleIndex: 0
   BlastRadius: 4
   BlastDamage: 1150
@@ -37599,7 +37699,8 @@
   ForceMaxCount: true
   PickupTarget: TurretBALaserBlocksT2
   TemplateRoot: TurretBALaserBlocksT2
-  BlastParticleName: @rg_projectiles/RG_BlastPlasmaBlueL1
+  # BlastParticleName: @rg_projectiles/RG_BlastPlasmaBlueL1
+  BlastParticleName: @reforged2/TurretExplosionLargePlasmaRG
   BlastParticleIndex: 0
   BlastRadius: 5
   BlastDamage: 2750
@@ -37657,7 +37758,8 @@
   ForceMaxCount: true
   PickupTarget: TurretBARocketBlocksT2
   TemplateRoot: TurretBARocketBlocksT2
-  BlastParticleIndex: 1
+  BlastParticleName: @reforged2/TurretExplosionLargeRocketRG
+  BlastParticleIndex: 0
   BlastRadius: 5
   BlastDamage: 6000
   EnergyIn: 300, type: int, display: true, formatter: Watt
@@ -37669,6 +37771,7 @@
   RotSpeed: 70, type: int, display: true
   Zoom: 5, type: float
   RepFac: 20 # RepFacTurret
+  ShieldDamagePenFac: 0.25, display: true
 }
 { Block Name: TurretBARocketRetractT2, Ref: TurretBARocketT2
   Model: @models/Blocks/Turrets/TurretMSRocketRetractPrefab
@@ -37711,7 +37814,8 @@
   ForceMaxCount: true
   PickupTarget: TurretBARocketBlocksT2
   TemplateRoot: TurretBARocketBlocksT2
-  BlastParticleIndex: 8
+  BlastParticleName: @reforged2/TurretExplosionLargeRocketRG
+  BlastParticleIndex: 0
   BlastRadius: 6
   BlastDamage: 1200
   EnergyIn: 300, type: int, display: true, formatter: Watt
@@ -37722,6 +37826,8 @@
   RotSpeed: 90, type: int, display: true
   Zoom: 5, type: float
   RepFac: 20 # RepFacTurret
+  ShieldDamagePenFac: 0.25, display: true
+  BlastShieldDamagePenFac: 0.25, display: true
 }
 { Block Name: TurretBAFlakRetractT2, Ref: TurretBAFlakT2
   Model: @models/Blocks/Turrets/TurretMSFlakRetractPrefab
@@ -37872,6 +37978,7 @@
   RotSpeed: 60, type: int, display: true
   Zoom: 5, type: float
   RepFac: 20 # RepFacTurret
+  ShieldDamagePenFac: 0.25, display: true
 }
 { Block Name: TurretBAPlasmaT3, Ref: TurretBAPositronT3
   Model: @models/Blocks/Turrets/TurretsEnemy/turretIONcannonPrefab
@@ -37883,6 +37990,8 @@
   BlastParticleName: @rg_projectiles/RG_BlastNuke
   BlastRadius: 8
   BlastDamage: 10000
+  ShieldDamagePenFac: 0.0, display: false
+  BlastShieldDamagePenFac: 0.10, display: true
 }
 { Block Name: TurretBAHeavyBlocks
   Class: TurretManual
@@ -39425,6 +39534,7 @@
   HitPoints: 7000, type: int, display: true
   ThrusterForce: 1000, type: int, display: true, formatter: Newton
   EnergyIn: 800, type: int, display: true, formatter: Watt
+  ThrusterBoosterFactor: 1.5, type: float, display: true
   CPUIn: 400, type: int, display: true
   CustomIcon: ThrusterJetRound2x5x2
 
@@ -39453,6 +39563,7 @@
   IsOxygenTight: true, display: true
   HitPoints: 16000, type: int, display: true
   ThrusterForce: 4200, type: int, display: true, formatter: Newton
+  ThrusterBoosterFactor: 2.15, type: float, display: true
   EnergyIn: 2400, type: int, display: true, formatter: Watt
   CPUIn: 1200, type: int, display: true
   CustomIcon: ThrusterJetRound3x10x3
@@ -39482,6 +39593,7 @@
   IsOxygenTight: true, display: true
   HitPoints: 20000, type: int, display: true
   ThrusterForce: 6000, type: int, display: true, formatter: Newton
+  ThrusterBoosterFactor: 2.5, type: float, display: true
   EnergyIn: 3200, type: int, display: true, formatter: Watt
   CPUIn: 1600, type: int, display: true
   CustomIcon: ThrusterJetRound3x13x3
@@ -40019,7 +40131,8 @@
   StackSize: 500
   MaxCount: 24, type: int, display: true
   ForceMaxCount: true
-  BlastParticleName: @rg_projectiles/RG_BlastPlasmaBlueL3
+  # BlastParticleName: @rg_projectiles/RG_BlastPlasmaBlueL3
+  BlastParticleName: @reforged2/TurretExplosionLargePlasmaRG
   BlastParticleIndex: 0
   BlastRadius: 6
   BlastDamage: 2500
@@ -40067,13 +40180,15 @@
   StackSize: 500
   MaxCount: 24, type: int, display: true
   ForceMaxCount: true
-  BlastParticleName: @rg_projectiles/RG_BlastPlasmaBlueL2
+  # BlastParticleName: @rg_projectiles/RG_BlastPlasmaBlueL2
+  BlastParticleName: @reforged2/TurretExplosionLargeLaserRG
   BlastParticleIndex: 0
   BlastRadius: 5
   BlastDamage: 2500
   EnergyIn: 400, type: int, display: true, formatter: Watt
   CPUIn: 10000, type: int, display: true
   HitPoints: 20000, type: int, display: true
+  ShieldDamagePenFac: 0.10, display: true
 
   UnlockCost: 20, display: true
   UnlockLevel: 15, display: true
@@ -40120,13 +40235,15 @@
   ForceMaxCount: true
   PickupTarget: WeaponCVHeavyCannonT2Blocks
   TemplateRoot: WeaponCVHeavyCannonT2Blocks
-  BlastParticleName: @rg_projectiles/RG_BlastCruise
+  # BlastParticleName: @rg_projectiles/RG_BlastCruise
+  BlastParticleName: @reforged2/TurretExplosionLargeT2RG
   BlastParticleIndex: 0
   BlastRadius: 6
   BlastDamage: 8000
   EnergyIn: 400, type: int, display: true, formatter: Watt
   CPUIn: 20000, type: int, display: true
   HitPoints: 40000, type: int, display: true
+  ShieldDamagePenFac: 0.1, display: true
 }
 { Block Name: WeaponCVHeavyCannonT2V2
   Class: Weapon
@@ -40165,13 +40282,15 @@
   ForceMaxCount: true
   PickupTarget: WeaponCVHeavyCannonT2Blocks
   TemplateRoot: WeaponCVHeavyCannonT2Blocks
-  BlastParticleName: @rg_projectiles/RG_BlastCruise
+  # BlastParticleName: @rg_projectiles/RG_BlastCruise
+  BlastParticleName: @reforged2/TurretExplosionLargeT2RG
   BlastParticleIndex: 0
   BlastRadius: 6
   BlastDamage: 8000
   EnergyIn: 400, type: int, display: true, formatter: Watt
   CPUIn: 20000, type: int, display: true
   HitPoints: 30000, type: int, display: true
+  ShieldDamagePenFac: 0.1, display: true
 }
 { Block Name: WeaponCVLaserCannonT2
   Class: Weapon
@@ -40210,7 +40329,8 @@
   ForceMaxCount: true
   PickupTarget: WeaponCVLaserCannonT2Blocks
   TemplateRoot: WeaponCVLaserCannonT2Blocks
-  BlastParticleName: @rg_projectiles/RG_BlastPlasmaBlueL1
+  # BlastParticleName: @rg_projectiles/RG_BlastPlasmaBlueL1
+  BlastParticleName: @reforged2/TurretExplosionLargeLaserT2RG
   BlastParticleIndex: 0
   BlastRadius: 4
   BlastDamage: 2500
@@ -40255,7 +40375,8 @@
   ForceMaxCount: true
   PickupTarget: WeaponCVLaserCannonT2Blocks
   TemplateRoot: WeaponCVLaserCannonT2Blocks
-  BlastParticleName: @rg_projectiles/RG_BlastPlasmaBlueL1
+  # BlastParticleName: @rg_projectiles/RG_BlastPlasmaBlueL1
+  BlastParticleName: @reforged2/TurretExplosionLargeLaserT2RG
   BlastParticleIndex: 0
   BlastRadius: 4
   BlastDamage: 4000
@@ -40300,7 +40421,8 @@
   ForceMaxCount: true
   PickupTarget: WeaponCVPlasmaT2Blocks
   TemplateRoot: WeaponCVPlasmaT2Blocks
-  BlastParticleName: @rg_projectiles/RG_BlastPlasmaCloud
+  # BlastParticleName: @rg_projectiles/RG_BlastPlasmaCloud
+  BlastParticleName: @reforged2/TurretExplosionLargePlasmaT2RG
   BlastParticleIndex: 0
   BlastRadius: 6
   BlastDamage: 4000
@@ -40345,7 +40467,8 @@
   ForceMaxCount: true
   PickupTarget: WeaponCVPlasmaT2Blocks
   TemplateRoot: WeaponCVPlasmaT2Blocks
-  BlastParticleName: @rg_projectiles/RG_BlastPlasmaCloud
+  # BlastParticleName: @rg_projectiles/RG_BlastPlasmaCloud
+  BlastParticleName: @reforged2/TurretExplosionLargePlasmaT2RG
   BlastParticleIndex: 0
   BlastRadius: 6
   BlastDamage: 4000
@@ -40390,13 +40513,15 @@
   ForceMaxCount: true
   PickupTarget: WeaponCVRailgunT2Blocks
   TemplateRoot: WeaponCVRailgunT2Blocks
-  BlastParticleName: @rg_projectiles/RG_BlastPlasmaCloud
+  # BlastParticleName: @rg_projectiles/RG_BlastPlasmaCloud
+  BlastParticleName: @reforged2/TurretExplosionLargeLaserT2RG
   BlastParticleIndex: 0
   BlastRadius: 5
   BlastDamage: 4000
   EnergyIn: 800, type: int, display: true, formatter: Watt
   CPUIn: 20000, type: int, display: true
   HitPoints: 40000, type: int, display: true
+  ShieldDamagePenFac: 0.1, display: true
 }
 { Block Name: WeaponCVRailgunT2V2
   Class: Weapon
@@ -40435,13 +40560,15 @@
   ForceMaxCount: true
   PickupTarget: WeaponCVRailgunT2Blocks
   TemplateRoot: WeaponCVRailgunT2Blocks
-  BlastParticleName: @rg_projectiles/RG_BlastPlasmaCloud
+  #BlastParticleName: @rg_projectiles/RG_BlastPlasmaCloud
+  BlastParticleName: @reforged2/TurretExplosionLargeLaserT2RG
   BlastParticleIndex: 0
   BlastRadius: 5
   BlastDamage: 4000
   EnergyIn: 800, type: int, display: true, formatter: Watt
   CPUIn: 20000, type: int, display: true
   HitPoints: 30000, type: int, display: true
+  ShieldDamagePenFac: 0.1, display: true
 }
 { Block Name: WeaponCVRocketLauncherT2
   Class: Weapon
@@ -40478,13 +40605,15 @@
   StackSize: 500
   MaxCount: 12, type: int, display: true
   ForceMaxCount: true
-  BlastParticleName: @rg_projectiles/RG_BlastCruise
+  #BlastParticleName: @rg_projectiles/RG_BlastCruise
+  BlastParticleName: @reforged2/TurretExplosionLargeRocketT2RG
   BlastParticleIndex: 0
   BlastRadius: 6
   BlastDamage: 8000
   EnergyIn: 400, type: int, display: true, formatter: Watt
   CPUIn: 20000, type: int, display: true
   HitPoints: 40000, type: int, display: true
+  ShieldDamagePenFac: 0.25, display: true
 
   UnlockCost: 20, display: true
   UnlockLevel: 20, display: true
@@ -40538,6 +40667,7 @@
   EnergyIn: 800, type: int, display: true, formatter: Watt
   CPUIn: 40000, type: int, display: true
   HitPoints: 60000, type: int, display: true
+  ShieldDamagePenFac: 0.1, display: true
 }
 { Block Name: WeaponCVHeavyCannonT3V2
   Class: Weapon
@@ -40584,6 +40714,7 @@
   EnergyIn: 800, type: int, display: true, formatter: Watt
   CPUIn: 40000, type: int, display: true
   HitPoints: 45000, type: int, display: true
+  ShieldDamagePenFac: 0.1, display: true
 }
 { Block Name: WeaponCVLaserCannonT3
   Class: Weapon
@@ -40622,7 +40753,8 @@
   ForceMaxCount: true
   PickupTarget: WeaponCVLaserCannonT3Blocks
   TemplateRoot: WeaponCVLaserCannonT3Blocks
-  BlastParticleName: @rg_projectiles/RG_BlastAdvThruster
+  #BlastParticleName: @rg_projectiles/RG_BlastAdvThruster
+  BlastParticleName: @reforged2/TurretExplosionLargeLaserT2RG
   BlastParticleIndex: 0
   BlastRadius: 5
   BlastDamage: 2500
@@ -40668,7 +40800,8 @@
   ForceMaxCount: true
   PickupTarget: WeaponCVLaserCannonT3Blocks
   TemplateRoot: WeaponCVLaserCannonT3Blocks
-  BlastParticleName: @rg_projectiles/RG_BlastAdvThruster
+  #BlastParticleName: @rg_projectiles/RG_BlastAdvThruster
+  BlastParticleName: @reforged2/TurretExplosionLargeLaserT2RG
   BlastParticleIndex: 0
   BlastRadius: 5
   BlastDamage: 2500
@@ -40713,13 +40846,15 @@
   ForceMaxCount: true
   PickupTarget: WeaponCVRailgunT3Blocks
   TemplateRoot: WeaponCVRailgunT3Blocks
-  BlastParticleName: @rg_projectiles/RG_BlastAdvThruster
+  #BlastParticleName: @rg_projectiles/RG_BlastAdvThruster
+  BlastParticleName: @reforged2/TurretExplosionLargeLaserT2RG
   BlastParticleIndex: 0
   BlastRadius: 6
   BlastDamage: 6000
   EnergyIn: 1600, type: int, display: true, formatter: Watt
   CPUIn: 40000, type: int, display: true
   HitPoints: 60000, type: int, display: true
+  ShieldDamagePenFac: 0.1, display: true
 }
 { Block Name: WeaponCVRailgunT3V2
   Class: Weapon
@@ -40759,13 +40894,15 @@
   ForceMaxCount: true
   PickupTarget: WeaponCVRailgunT3Blocks
   TemplateRoot: WeaponCVRailgunT3Blocks
-  BlastParticleName: @rg_projectiles/RG_BlastAdvThruster
+  #BlastParticleName: @rg_projectiles/RG_BlastAdvThruster
+  BlastParticleName: @reforged2/TurretExplosionLargeLaserT2RG
   BlastParticleIndex: 0
   BlastRadius: 6
   BlastDamage: 6000
   EnergyIn: 1600, type: int, display: true, formatter: Watt
   CPUIn: 40000, type: int, display: true
   HitPoints: 45000, type: int, display: true
+  ShieldDamagePenFac: 0.1, display: true
 }
 { Block Name: WeaponCVPlasmaT3
   Class: Weapon
@@ -40804,7 +40941,8 @@
   ForceMaxCount: true
   PickupTarget: WeaponCVPlasmaT3Blocks
   TemplateRoot: WeaponCVPlasmaT3Blocks
-  BlastParticleName: @rg_projectiles/RG_BlastAdvThruster
+  #BlastParticleName: @rg_projectiles/RG_BlastAdvThruster
+  BlastParticleName: @reforged2/TurretExplosionLargePlasmaT2RG
   BlastParticleIndex: 0
   BlastRadius: 8
   BlastDamage: 6000
@@ -40850,7 +40988,8 @@
   ForceMaxCount: true
   PickupTarget: WeaponCVPlasmaT3Blocks
   TemplateRoot: WeaponCVPlasmaT3Blocks
-  BlastParticleName: @rg_projectiles/RG_BlastAdvThruster
+  #BlastParticleName: @rg_projectiles/RG_BlastAdvThruster
+  BlastParticleName: @reforged2/TurretExplosionLargePlasmaT2RG
   BlastParticleIndex: 0
   BlastRadius: 8
   BlastDamage: 6000
@@ -40893,13 +41032,15 @@
   StackSize: 500
   MaxCount: 6, type: int, display: true
   ForceMaxCount: true
-  BlastParticleName: @rg_projectiles/RG_BlastNuke
+  #BlastParticleName: @rg_projectiles/RG_BlastNuke
+  BlastParticleName: @reforged2/TurretExplosionLargeRocketT2RG
   BlastParticleIndex: 0
   BlastRadius: 7
   BlastDamage: 12000
   EnergyIn: 800, type: int, display: true, formatter: Watt
   CPUIn: 40000, type: int, display: true
   HitPoints: 50000, type: int, display: true
+  ShieldDamagePenFac: 0.25, display: true
 
   UnlockCost: 30, display: true
   UnlockLevel: 25, display: true
@@ -40949,6 +41090,7 @@
   EnergyIn: 1600, type: int, display: true, formatter: Watt
   CPUIn: 40000, type: int, display: true
   HitPoints: 45000, type: int, display: true
+  ShieldDamagePenFac: 0.25, display: true
 
   UnlockCost: 30, display: true
   UnlockLevel: 25, display: true
@@ -40981,7 +41123,8 @@
   Mass: 35000, type: float, display: true, formatter: Kilogram
   Volume: 2880, type: float, display: true, formatter: Liter
   CPUIn: 20000, type: int, display: true
-  BlastDamage: 800, display: true
+  Damage: 134, display: true
+  BlastDamage: 875, display: true
   AmmoCapacity: 15, display: true
   AmmoType: PlasmaCellCVT2, display: true
   ROF: 1.5, type: float, display: true, formatter: ROF
@@ -40999,11 +41142,12 @@
   Info: bkiWeaponCVRailgunT2, display: true
   Mass: 35000, type: float, display: true, formatter: Kilogram
   ROF: 1.25, type: float, display: true, formatter: ROF
-  Damage: 1725, display: true
+  Damage: 2155, display: true
   BlastDamage: 0, display: false
   AmmoType: RailgunSlugCVT2, display: true
   AmmoCapacity: 30, display: true
   ReloadDelay: 7.5, display: true
+  ShieldDamagePenFac: 0.1, display: true
 
   UnlockCost: 20, display: true
   UnlockLevel: 20, display: true
@@ -41017,11 +41161,12 @@
   Info: bkiWeaponCVCannonT2, display: true
   Mass: 35000, type: float, display: true, formatter: Kilogram
   ROF: 1.2, type: float, display: true, formatter: ROF
-  Damage: 790, display: true
-  BlastDamage: 395, display: true
+  Damage: 1084, display: true
+  BlastDamage: 525, display: true
   AmmoType: CannonShellCVT2, display: true
   AmmoCapacity: 20, display: true
   ReloadDelay: 7.5, display: true
+  ShieldDamagePenFac: 0.1, display: true
 
   UnlockCost: 20, display: true
   UnlockLevel: 20, display: true
@@ -41035,7 +41180,7 @@
   Info: bkiWeaponCVLaserT2, display: true
   Mass: 35000, type: float, display: true, formatter: Kilogram
   ROF: 0.75, type: float, display: true, formatter: ROF
-  Damage: 1000, display: true
+  Damage: 1333, display: true
   BlastDamage: 0, display: false
   AmmoType: LaserChargeCVT2, display: true
   AmmoCapacity: 30, display: true
@@ -41071,7 +41216,8 @@
   Volume: 5760, type: float, display: true, formatter: Liter
   CPUIn: 40000, type: int, display: true
   ROF: 2.0, type: float, display: true, formatter: ROF
-  BlastDamage: 2400, display: true
+  Damage: 400, display: true
+  BlastDamage: 1750, display: true
   AmmoType: PlasmaCellCVT3, display: true
   AmmoCapacity: 10, display: true
   ReloadDelay: 10, display: true
@@ -41089,10 +41235,11 @@
   Mass: 80000, type: float, display: true, formatter: Kilogram
   ROF: 2.0, type: float, display: true, formatter: ROF
   Damage: 6000, display: true
-  BlastDamage: 0, display: false
+  BlastDamage: 1250, display: true
   AmmoCapacity: 10, display: true
   AmmoType: RailgunSlugCVT3, display: true
   ReloadDelay: 10, display: true
+  ShieldDamagePenFac: 0.1, display: true
 
   UnlockCost: 30, display: true
   UnlockLevel: 25, display: true
@@ -41106,11 +41253,12 @@
   Info: bkiWeaponCVCannonT3, display: true
   Mass: 80000, type: float, display: true, formatter: Kilogram
   ROF: 2.0, type: float, display: true, formatter: ROF
-  Damage: 3000, display: true
-  BlastDamage: 1500, display: true
+  Damage: 5000, display: true
+  BlastDamage: 1875, display: true
   AmmoType: CannonShellCVT3, display: true
   AmmoCapacity: 10, display: true
   ReloadDelay: 10, display: true
+  ShieldDamagePenFac: 0.1, display: true
 
   UnlockCost: 30, display: true
   UnlockLevel: 25, display: true
@@ -41124,7 +41272,7 @@
   Info: bkiWeaponCVLaserT3, display: true
   Mass: 80000, type: float, display: true, formatter: Kilogram
   ROF: 1.65, type: float, display: true, formatter: ROF
-  Damage: 1075, display: true
+  Damage: 5735, display: true
   BlastDamage: 0, display: false
   AmmoType: LaserChargeCVT3, display: true
   AmmoCapacity: 20, display: true
@@ -41165,6 +41313,7 @@
   AmmoCapacity: 3, display: true
   AmmoType: FastRocket, display: true
   ReloadDelay: 10, display: true
+  ShieldDamagePenFac: 0.25, display: true
 
   UnlockCost: 10, display: true
   UnlockLevel: 5, display: true
@@ -41195,6 +41344,7 @@
   Mass: 910, type: float, display: true, formatter: Kilogram
   Volume: 62.5, type: float, display: true, formatter: Liter
   CPUIn: 2000, type: int, display: true
+  BlastShieldDamagePenFac: 0.1, display: true
 
   UnlockCost: 10, display: true
   UnlockLevel: 15, display: true
@@ -41924,6 +42074,7 @@
   BlockColor: "10,10,10"
   Shape: ModelEntity
   ShowBlockName: true
+  RepairToTemplate: false, display: true
   Model: @models/Blocks/Misc/CPUExtenderSmallT2Prefab
   DropMeshfile: Entities/Misc/DropContainerPrefab
   DropInventoryEntity: LootContainer
@@ -41933,14 +42084,16 @@
   AllowPlacingAt: "Base,MS", display: true
   SizeInBlocks: "1,1,1", display: true
   SizeInBlocksLocked: "Base,MS"    
-  Volume: 800, type: float, display: true, formatter: Liter
+  Volume: 1000000, type: float, display: true, formatter: Liter
   Mass: 250, type: float, display: true, formatter: Kilogram
-  HitPoints: 3500, type: int, display: true
+  HitPoints: 12500, type: int, display: true
+  ExplosionHardness: 2
   IsAccessible: false, type: bool
   IsLockable: true
   Category: Devices
-  VolumeCapacity: 800, type: float, display: true, formatter: Liter      
-  CPUIn: 10, type: int, display: true
+  VolumeCapacity: 800, type: float, display: true, formatter: Liter
+  CPUOut: 100000, type: int, display: true
+  CPUIn: 0, type: int, display: false
   EnergyIn: 1, type: int, display: true, formatter: Watt
   BlastParticleName: @rg_projectiles/RG_BlastLightningGreenHand
   BlastParticleIndex: 0
@@ -42246,7 +42399,8 @@
   Model: @models/Blocks/WeaponsShip/DrillAttachmentLargePrefab
   MarketPrice: 11618, display: true
   CustomIcon: DrillAttachmentLarge
-  IsRetractable: false, display: true  
+  IsRetractable: false, display: true
+  TurretTargetIgnore: true
   WeaponItem: DrillAttachmentLargeCVWeapon
   SizeInBlocks: "3,8,3", display: true
   AllowPlacingAt: "MS", display: true
@@ -42285,7 +42439,8 @@
   SoundOpen: UseActions/WeaponOpenClose
   SoundClose: UseActions/WeaponOpenClose
   IsActivateable: true
-  IsRetractable: true, display: true  
+  IsRetractable: true, display: true
+  TurretTargetIgnore: true
   BlockColor: "110,110,110"
   Place: WeaponDir
   SizeInBlocks: "1,6,1", display: true
@@ -42364,7 +42519,8 @@
   SoundOpen: UseActions/WeaponOpenClose
   SoundClose: UseActions/WeaponOpenClose
   IsActivateable: true
-  IsRetractable: true, display: true  
+  IsRetractable: true, display: true
+  TurretTargetIgnore: true
   BlockColor: "110,110,110"
   Place: WeaponDir
   SizeInBlocks: "1,6,1", display: true
@@ -42891,6 +43047,28 @@
   
   TechTreeNames: Hidden
 }
+{ +Block Name: RepairBayCVT3, Ref: RepairBayCVT2
+  Model: @reforged2/RepairPlatformRG
+  SizeInBlocks: "5,1,5", display: true
+  MarketPrice: 654560, display: true
+  
+  Mass: 70550, type: float, display: true, formatter: Kilogram
+  Volume: 800, type: float, display: true, formatter: Liter
+  EnergyIn: 114500, type: int, display: true, formatter: Watt
+  HitPoints: 12500, type: int, display: true
+  IsRepairToBlueprint: true
+  Info: bkiRepairBayT3, display: true
+  RepairPerSecond: 5000, display: true
+  UnlockCost: 30, display: true
+  UnlockLevel: 25, display: true
+  TechTreeParent: RepairBayCVT2
+  TechTreeNames: Capital Vessel
+  UpgradeTo: null, display: false
+  CPUIn: 40000, type: int, display: true
+  Repairs: "MS,SS,GV", display: true
+  IsOxygenTight: false, display: true
+  RepairToTemplate: false, display: true
+}
 # ===================================================================
 # Drone Bay T2 (Space)
 { Block Name: DroneBaySpace, Ref: AIDroneBay
@@ -43142,7 +43320,8 @@
   ShieldHitCooldown: 17, type: int, display: false
   ShieldPerCrystal: 1000, type: int, display: true
   ShieldMultiplier: ShieldPlanet
-  BlastParticleName: @rg_projectiles/RG_BlastTorpedoL
+  # BlastParticleName: @rg_projectiles/RG_BlastTorpedoL
+  BlastParticleName: @reforged2/TurretExplosionLargePlasmaRedRG
   BlastParticleIndex: 0
   BlastRadius: 5
   BlastDamage: 3000
@@ -43200,7 +43379,8 @@
   ShieldHitCooldown: 15, type: int, display: false
   ShieldPerCrystal: 1000, type: int, display: true
   ShieldMultiplier: ShieldPlanet
-  BlastParticleName: @rg_projectiles/RG_BlastAdvThruster
+  # BlastParticleName: @rg_projectiles/RG_BlastAdvThruster
+  BlastParticleName: @reforged2/TurretExplosionLargePlasmaT2RG
   BlastParticleIndex: 0
   BlastRadius: 5
   BlastDamage: 3000
@@ -43258,7 +43438,8 @@
   ShieldHitCooldown: 12, type: int, display: false
   ShieldPerCrystal: 1000, type: int, display: true
   ShieldMultiplier: ShieldPlanet
-  BlastParticleName: @rg_projectiles/RG_BlastAdvThruster
+  # BlastParticleName: @rg_projectiles/RG_BlastAdvThruster
+  BlastParticleName: @reforged2/TurretExplosionLargePlasmaGreenRG
   BlastParticleIndex: 0
   BlastRadius: 5
   BlastDamage: 5000
@@ -43309,7 +43490,8 @@
   ShieldHitCooldown: 10, type: int, display: false
   ShieldPerCrystal: 500, type: int, display: true
   ShieldMultiplier: ShieldLarge
-  BlastParticleName: @rg_projectiles/RG_BlastTorpedoL
+  # BlastParticleName: @rg_projectiles/RG_BlastTorpedoL
+  BlastParticleName: @reforged2/TurretExplosionLargePlasmaRedRG
   BlastParticleIndex: 0
   BlastRadius: 5
   BlastDamage: 3000
@@ -43333,6 +43515,7 @@
   ShieldHitCooldown: 10, type: int, display: false
   ShieldMultiplier: ShieldLarge
   ParticleName: @rg_projectiles/RG_ShieldNewGreenHex
+  BlastParticleName: @reforged2/TurretExplosionLargePlasmaGreenRG
   UpgradeTo: null
   
   UnlockCost: 0
@@ -43382,7 +43565,8 @@
   ShieldHitCooldown: 20, type: int, display: false
   ShieldPerCrystal: 1500, type: int, display: true
   ShieldMultiplier: ShieldLarge
-  BlastParticleName: @rg_projectiles/RG_BlastAdvThruster
+  # BlastParticleName: @rg_projectiles/RG_BlastAdvThruster
+  BlastParticleName: @reforged2/TurretExplosionLargePlasmaT2RG
   BlastParticleIndex: 0
   BlastRadius: 5
   BlastDamage: 3000
@@ -43837,7 +44021,7 @@
   Volume: 320, type: float, display: true, formatter: Liter
   EnergyIn: 250, type: int, display: true, formatter: Watt
   CPUIn: 600, type: int, display: true  
-  EnergyInIdle: 50, type: int, display: true, formatter: Watt
+  EnergyInIdle: 25, type: int, display: true, formatter: Watt
   ShieldCapacityBonus: 3200, type: int, display: true
   ShieldRechargeBonus: -300, type: int, display: true
   MaxCount: 4, type: int, display: true
@@ -43960,7 +44144,7 @@
   Volume: 320, type: float, display: true, formatter: Liter
   EnergyIn: 250, type: int, display: true, formatter: Watt
   CPUIn: 600, type: int, display: true  
-  EnergyInIdle: 5, type: int, display: true, formatter: Watt
+  EnergyInIdle: 25, type: int, display: true, formatter: Watt
   ShieldCapacityBonus: -1600, type: int, display: true
   ShieldRechargeBonus: 600, type: int, display: true
   MaxCount: 4, type: int, display: true
@@ -44141,7 +44325,8 @@
   Mass: 17000, type: float, display: true, formatter: Kilogram
   StackSize: 250
   Category: Weapons/Items
-  BlastParticleName: @rg_projectiles/RG_BlastFlakMulti
+  # BlastParticleName: @rg_projectiles/RG_BlastFlakMulti
+  BlastParticleName: @reforged2/TurretExplosionLargeRG
   BlastParticleIndex: 0
   BlastRadius: 4
   BlastDamage: 650
@@ -44171,9 +44356,11 @@
   BlockColor: "110,110,110"
   WeaponItem: TurretPOIFlakWeaponT1
   RotSpeed: 90, type: int, display: true
-  BlastParticleName: @rg_projectiles/RG_BlastFlakMultiL
+  # BlastParticleName: @rg_projectiles/RG_BlastFlakMultiL
+  BlastParticleName: @reforged2/TurretExplosionLargeRocketRG
   BlastRadius: 7
   BlastDamage: 1750
+  BlastShieldDamagePenFac: 0.25, display: true
 }
 { Block Name: TurretPOIFlakT2, Ref: TurretPOIGatlingT1
   Model: @models/Blocks/Turrets/TurretZiraxSpherical_LaserPrefab
@@ -44187,9 +44374,11 @@
   RotSpeed: 135, type: int, display: true
   CPUIn: 20000, type: int, display: true
   HitPoints: 50000, type: int, display: true
-  BlastParticleName: @rg_projectiles/RG_BlastFlakMultiL
+  # BlastParticleName: @rg_projectiles/RG_BlastFlakMultiL
+  BlastParticleName: @reforged2/TurretExplosionLargeRocketRG
   BlastRadius: 7
   BlastDamage: 3000
+  BlastShieldDamagePenFac: 0.25, display: true
 }
 { Block Name: TurretPOIArtilleryT2, Ref: TurretPOIGatlingT1
   Model: @models/Blocks/Turrets/TurretZiraxSpherical_PlasmaPrefab
@@ -44203,9 +44392,11 @@
   RotSpeed: 90, type: int, display: true
   CPUIn: 20000, type: int, display: true
   HitPoints: 50000, type: int, display: true
-  BlastParticleName: @rg_projectiles/RG_BlastTorpedoL
+  # BlastParticleName: @rg_projectiles/RG_BlastTorpedoL
+  BlastParticleName: @reforged2/TurretExplosionLargeRocketT2RG
   BlastRadius: 7
   BlastDamage: 7500
+  ShieldDamagePenFac: 0.20, display: true
 }
 { Block Name: TurretPOIEMPT2, Ref: TurretPOIGatlingT1
   Model: @models/Blocks/Turrets/TurretZiraxSpherical_PlasmaPrefab
@@ -44219,7 +44410,8 @@
   RotSpeed: 180, type: int, display: true
   CPUIn: 20000, type: int, display: true
   HitPoints: 50000, type: int, display: true
-  BlastParticleName: @rg_projectiles/RG_BlastEMP2
+  # BlastParticleName: @rg_projectiles/RG_BlastEMP2
+  BlastParticleName: @reforged2/TurretExplosionLargeLaserRG
   BlastRadius: 5
   BlastDamage: 1500
 }
@@ -44250,7 +44442,8 @@
   Mass: 8500, type: float, display: true, formatter: Kilogram
   StackSize: 250
   Category: Weapons/Items
-  BlastParticleName: @rg_projectiles/RG_BlastPlasmaGreenL1
+  # BlastParticleName: @rg_projectiles/RG_BlastPlasmaGreenL1
+  BlastParticleName: @reforged2/TurretExplosionLargeLaserRedRG
   BlastParticleIndex: 0
   BlastRadius: 4
   BlastDamage: 2500
@@ -44299,7 +44492,8 @@
   Mass: 17000, type: float, display: true, formatter: Kilogram
   StackSize: 250
   Category: Weapons/Items
-  BlastParticleName: @rg_projectiles/RG_BlastFlakMulti
+  # BlastParticleName: @rg_projectiles/RG_BlastFlakMulti
+  BlastParticleName: @reforged2/TurretExplosionLargeRG
   BlastParticleIndex: 0
   BlastRadius: 4
   BlastDamage: 650
@@ -44329,9 +44523,11 @@
   BlockColor: "110,110,110"
   WeaponItem: TurretPlanetFlakWeaponT1
   RotSpeed: 90, type: int, display: true
-  BlastParticleName: @rg_projectiles/RG_BlastFlakMultiL
+  # BlastParticleName: @rg_projectiles/RG_BlastFlakMultiL
+  BlastParticleName: @reforged2/TurretExplosionLargeRocketRG
   BlastRadius: 6
   BlastDamage: 1750
+  BlastShieldDamagePenFac: 0.25, display: true
 }
 { Block Name: TurretPlanetFlakT2, Ref: TurretPlanetGatlingT1
   Model: @models/Blocks/Turrets/TurretZiraxSpherical_LaserPrefab
@@ -44345,17 +44541,20 @@
   RotSpeed: 135, type: int, display: true
   CPUIn: 20000, type: int, display: true
   HitPoints: 50000, type: int, display: true
-  BlastParticleName: @rg_projectiles/RG_BlastFlakMultiL
+  # BlastParticleName: @rg_projectiles/RG_BlastFlakMultiL
+  BlastParticleName: @reforged2/TurretExplosionLargeRocketRG
   BlastRadius: 7
   BlastDamage: 3000
+  BlastShieldDamagePenFac: 0.25, display: true
 }
 { Block Name: TurretPlanetArtilleryT1, Ref: TurretPlanetGatlingT1
   BlockColor: "110,110,110"
   WeaponItem: TurretPlanetArtilleryWeaponT1
   RotSpeed: 60, type: int, display: true
-  BlastParticleIndex: 1
+  BlastParticleName: @reforged2/TurretExplosionLargeRocketRG
   BlastRadius: 7
   BlastDamage: 3500
+  ShieldDamagePenFac: 0.20, display: true
 }
 { Block Name: TurretPlanetArtilleryT2, Ref: TurretPlanetGatlingT1
   Model: @models/Blocks/Turrets/TurretZiraxSpherical_PlasmaPrefab
@@ -44369,15 +44568,18 @@
   RotSpeed: 90, type: int, display: true
   CPUIn: 20000, type: int, display: true
   HitPoints: 50000, type: int, display: true
-  BlastParticleName: @rg_projectiles/RG_BlastTorpedoL
+  # BlastParticleName: @rg_projectiles/RG_BlastTorpedoL
+  BlastParticleName: @reforged2/TurretExplosionLargeRocketT2RG
   BlastRadius: 7
   BlastDamage: 7500
+  ShieldDamagePenFac: 0.20, display: true
 }
 { Block Name: TurretPlanetLaserT1, Ref: TurretPlanetGatlingT1
   BlockColor: "110,110,110"
   WeaponItem: TurretPlanetLaserWeaponT1
   RotSpeed: 90, type: int, display: true
-  BlastParticleName: @rg_projectiles/RG_BlastPlasmaRedL2
+  # BlastParticleName: @rg_projectiles/RG_BlastPlasmaRedL2
+  BlastParticleName: @reforged2/TurretExplosionLargeLaserRedRG
   BlastRadius: 4
   BlastDamage: 1500
 }
@@ -44393,7 +44595,8 @@
   RotSpeed: 135, type: int, display: true
   CPUIn: 20000, type: int, display: true
   HitPoints: 50000, type: int, display: true
-  BlastParticleName: @rg_projectiles/RG_BlastPlasmaRedL3
+  # BlastParticleName: @rg_projectiles/RG_BlastPlasmaRedL3
+  BlastParticleName: @reforged2/TurretExplosionLargeLaserRedRG
   BlastRadius: 5
   BlastDamage: 2000
 }
@@ -44401,7 +44604,8 @@
   BlockColor: "110,110,110"
   WeaponItem: TurretPlanetPlasmaWeaponT1
   RotSpeed: 90, type: int, display: true
-  BlastParticleName: @rg_projectiles/RG_BlastPlasmaGreenL2
+  # BlastParticleName: @rg_projectiles/RG_BlastPlasmaGreenL2
+  BlastParticleName: @reforged2/TurretExplosionLargePlasmaGreenRG
   BlastRadius: 6
   BlastDamage: 2250
 }
@@ -44417,7 +44621,8 @@
   RotSpeed: 135, type: int, display: true
   CPUIn: 20000, type: int, display: true
   HitPoints: 50000, type: int, display: true
-  BlastParticleName: @reforged2/PlasmaBlastHeavyRedRG
+  # BlastParticleName: @reforged2/PlasmaBlastHeavyRedRG
+  BlastParticleName: @reforged2/TurretExplosionLargePlasmaRedRG
   BlastRadius: 7
   BlastDamage: 3500
 }
@@ -44425,9 +44630,11 @@
   BlockColor: "110,110,110"
   WeaponItem: TurretPlanetRocketWeaponT1
   RotSpeed: 90, type: int, display: true
-  BlastParticleName: @rg_projectiles/RG_BlastCruise
+  # BlastParticleName: @rg_projectiles/RG_BlastCruise
+  BlastParticleName: @reforged2/TurretExplosionLargeRocketRG
   BlastRadius: 6
   BlastDamage: 3000
+  ShieldDamagePenFac: 0.25, display: true
 }
 { Block Name: TurretPlanetRocketT2, Ref: TurretPlanetGatlingT1
   Model: @models/Blocks/Turrets/TurretZiraxSpherical_RocketPrefab
@@ -44441,9 +44648,11 @@
   RotSpeed: 90, type: int, display: true
   CPUIn: 20000, type: int, display: true
   HitPoints: 50000, type: int, display: true
-  BlastParticleName: @rg_projectiles/RG_BlastCruise2
+  # BlastParticleName: @rg_projectiles/RG_BlastCruise2
+  BlastParticleName: @reforged2/TurretExplosionLargeRocketRG
   BlastRadius: 7
   BlastDamage: 6000
+  ShieldDamagePenFac: 0.25, display: true
 }
 # =================================================================
 # ======================== Broken Turrets =========================
@@ -45720,7 +45929,7 @@
   BlastDamage: 250
   ExplosionHardness: 2
   HitPoints: 10000, type: int, display: true
-  CPUIn: 750, type: int, display: false
+  CPUIn: 750, type: int, display: true
   MarketPrice: 2490, display: true
 
   UnlockCost: 8, display: true
@@ -46181,7 +46390,7 @@
   BlastRadius: 3
   BlastDamage: 0
   EnergyIn: 1, type: int, display: false, formatter: Watt
-  ChildBlocks: "Eden_WarningLight, Eden_WarningLightSilent, Eden_ButtonPanel, Eden_ControlPanel, Eden_ConsoleWallBlueThin, Eden_ConsoleWallBlue1x1, Eden_ConsoleWallBlue1x1Double, Eden_ConsoleWallBlue1x1Quad, Eden_ConsoleWallOrangeSmall, Eden_ConsoleHoloBlue1x1"
+  ChildBlocks: "Eden_WarningLight, Eden_WarningLightSilent, Eden_ButtonPanel, Eden_ControlPanel, Eden_ConsoleWallBlueThin, Eden_ConsoleWallBlue1x1, Eden_ConsoleWallOrangeSmall, Eden_ConsoleHoloBlue1x1, Eden_ConsoleWallBlue1x1Double, Eden_ConsoleWallBlue1x1Quad"
 
   UnlockCost: 0
   UnlockLevel: 1 
@@ -46301,16 +46510,6 @@
   Model: @eden_blockmodels/Eden_ConsoleWallBlue1x1
 }
 
-# Inset Wall Console (Blue 1x1 Double)
-{ +Block Name: Eden_ConsoleWallBlue1x1Double, Ref: Eden_ConsoleWallBlueThin
-  Model: @eden_blockmodels/Eden_ConsoleWallBlue1x1Double
-}
-
-# Inset Wall Console (Blue 1x1 Quad)
-{ +Block Name: Eden_ConsoleWallBlue1x1Quad, Ref: Eden_ConsoleWallBlueThin
-  Model: @eden_blockmodels/Eden_ConsoleWallBlue1x1Quad
-}
-
 # Inset Wall Console (Orange Small)
 { +Block Name: Eden_ConsoleWallOrangeSmall, Ref: Eden_ConsoleWallBlueThin
   Model: @eden_blockmodels/Eden_ConsoleWallOrangeSmall
@@ -46319,6 +46518,16 @@
 # Holographic Display (1x1)
 { +Block Name: Eden_ConsoleHoloBlue1x1, Ref: Eden_ConsoleWallBlueThin
   Model: @eden_blockmodels/Eden_ConsoleHoloBlue1x1
+}
+
+# Inset Wall Console (Blue 1x1 Double)
+{ +Block Name: Eden_ConsoleWallBlue1x1Double, Ref: Eden_ConsoleWallBlueThin
+  Model: @eden_blockmodels/Eden_ConsoleWallBlue1x1Double
+}
+
+# Inset Wall Console (Blue 1x1 Quad)
+{ +Block Name: Eden_ConsoleWallBlue1x1Quad, Ref: Eden_ConsoleWallBlueThin
+  Model: @eden_blockmodels/Eden_ConsoleWallBlue1x1Quad
 }
 # ----------------------------------------- Block group for Effect Projectors
 # Effect Projectors
@@ -46344,7 +46553,7 @@
   BlastDamage: 0
   EnergyIn: 1, type: int, display: false, formatter: Watt
   CPUIn: 0, type: int, display: false
-  ChildBlocks: "Eden_EffectsBlocksFire, Eden_EffectsBlocksFireDiag, Eden_EffectsBlocksFireTrail, Eden_EffectsBlocksFireTrailCorn, Eden_EffectsBlocksFireBlue, Eden_EffectsBlocksFireFlare, Eden_EffectsBlocksFireFlareDiag, Eden_EffectsBlocksFireFlareBlue, Eden_EffectsBlocksSmoke, Eden_EffectsBlocksSmokeDiag, Eden_EffectsBlocksSmokeTrail, Eden_EffectsBlocksSmokeTrailCorn, Eden_EffectsBlocksSmoke2, Eden_EffectsBlocksSmoke2Diag, Eden_EffectsBlocksSmoke2Trail, Eden_EffectsBlocksSteam, Eden_EffectsBlocksSteamDiag, Eden_EffectsBlocksTrailBlue, Eden_EffectsBlocksTrailRed, Eden_EffectsBlocksLightning, Eden_EffectsBlocksFireflies, Eden_EffectsBlocksDockRing, Eden_EffectsBlocksDockGuideBlue, Eden_EffectsBlocksDockGuideOrange, Eden_EffectsBlock_DockGuideCyan2, Eden_EffectsBlock_DockGuideYellow2, Eden_EffectsBlock_ConeWhiteDiag, Eden_EffectsBlock_ConeBlueDiag, Eden_EffectsBlock_ConeOrangeDiag"
+  ChildBlocks: "Eden_EffectsBlocksFire, Eden_EffectsBlocksFireDiag, Eden_EffectsBlocksFireTrail, Eden_EffectsBlocksFireTrailCorn, Eden_EffectsBlocksFireBlue, Eden_EffectsBlocksFireFlare, Eden_EffectsBlocksFireFlareDiag, Eden_EffectsBlocksFireFlareBlue, Eden_EffectsBlocksSmoke, Eden_EffectsBlocksSmokeDiag, Eden_EffectsBlocksSmokeTrail, Eden_EffectsBlocksSmokeTrailCorn, Eden_EffectsBlocksSmoke2, Eden_EffectsBlocksSmoke2Diag, Eden_EffectsBlocksSmoke2Trail, Eden_EffectsBlocksSteam, Eden_EffectsBlocksSteamDiag, Eden_EffectsBlock_SparksOrange, Eden_EffectsBlock_SparksYellow, Eden_EffectsBlocksTrailBlue, Eden_EffectsBlocksTrailRed, Eden_EffectsBlocksLightning, Eden_EffectsBlocksLightningLong, Eden_EffectsBlocksFireflies, Eden_EffectsBlocksDockRing, Eden_EffectsBlocksDockGuideBlue, Eden_EffectsBlocksDockGuideOrange, Eden_EffectsBlock_DockGuideCyan2, Eden_EffectsBlock_DockGuideYellow2, Eden_EffectsBlock_ConeWhiteDiag, Eden_EffectsBlock_ConeBlueDiag, Eden_EffectsBlock_ConeOrangeDiag, Eden_EffectsBlock_HoloCyborg, Eden_EffectsBlock_HoloCyborgL, Eden_EffectsBlock_HoloSphere"
 
   UnlockCost: 0
   UnlockLevel: 1 
@@ -46477,6 +46686,18 @@
   Model: @eden_blockmodels/Eden_EffectsBlock_SteamDiag
 }
 
+# Effect Projector (Sparks Orange)
+{ +Block Name: Eden_EffectsBlock_SparksOrange, Ref: Eden_EffectsBlocksFire
+  Info: Eden_EffectsBlock_SparksOrangeinfo, display: true
+  Model: @eden_blockmodels/Eden_EffectsBlock_SparksOrange
+}
+
+# Effect Projector (Sparks Yellow)
+{ +Block Name: Eden_EffectsBlock_SparksYellow, Ref: Eden_EffectsBlocksFire
+  Info: Eden_EffectsBlock_SparksOrangeinfo, display: true
+  Model: @eden_blockmodels/Eden_EffectsBlock_SparksYellow
+}
+
 # Effect Projector (Blue Engine Trail)
 { +Block Name: Eden_EffectsBlocksTrailBlue, Ref: Eden_EffectsBlocksFire
   Info: Eden_EffectsBlocksTrailBlueinfo, display: true
@@ -46493,6 +46714,12 @@
 { +Block Name: Eden_EffectsBlocksLightning, Ref: Eden_EffectsBlocksFire
   Info: Eden_EffectsBlocksLightninginfo, display: true
   Model: @eden_blockmodels/Eden_EffectsBlock_LightningBlue
+}
+
+# Effect Projector (Lightning Long)
+{ +Block Name: Eden_EffectsBlocksLightningLong, Ref: Eden_EffectsBlocksFire
+  Info: Eden_EffectsBlocksLightninginfo, display: true
+  Model: @eden_blockmodels/Eden_EffectsBlock_LightningBlueLong
 }
 
 # Effect Projector (Fireflies)
@@ -46545,6 +46772,24 @@
 # Effect Projector (Orange Cone Diag)
 { +Block Name: Eden_EffectsBlock_ConeOrangeDiag, Ref: Eden_EffectsBlocksFire
   Model: @eden_blockmodels/Eden_EffectsBlock_ConeOrangeDiag
+}
+
+# Effect Projector (Holo Cyborg)
+{ +Block Name: Eden_EffectsBlock_HoloCyborg, Ref: Eden_EffectsBlocksFire
+  Info: Eden_EffectsBlock_HoloCyborginfo, display: true
+  Model: @eden_blockmodels/Eden_EffectsBlock_HoloCyborg
+}
+
+# Effect Projector (Holo Cyborg Large)
+{ +Block Name: Eden_EffectsBlock_HoloCyborgL, Ref: Eden_EffectsBlocksFire
+  Info: Eden_EffectsBlock_HoloCyborginfo, display: true
+  Model: @eden_blockmodels/Eden_EffectsBlock_HoloCyborgL
+}
+
+# Effect Projector (Holo Sphere)
+{ +Block Name: Eden_EffectsBlock_HoloSphere, Ref: Eden_EffectsBlocksFire
+  Info: Eden_EffectsBlock_HoloCyborginfo, display: true
+  Model: @eden_blockmodels/Eden_EffectsBlock_HoloSphere
 }
 
 # Corporation Advertisment (1x1)
@@ -46665,7 +46910,7 @@
   BlastDamage: 0
   EnergyIn: 1, type: int, display: false, formatter: Watt
   CPUIn: 0, type: int, display: false
-  ChildBlocks: "Eden_LaserFence1x1, Eden_LaserFence3x1, Eden_PoisonGasCloud, Eden_FrozenGasCloud, ExplosiveBarrelFuel, ExplosiveBarrelCoolant"
+  ChildBlocks: "Eden_LaserFence1x1, Eden_LaserFence3x1, Eden_LaserFence3x1Half, Eden_PoisonGasCloud, Eden_FrozenGasCloud, ExplosiveBarrelFuel, ExplosiveBarrelCoolant, ScifiMine1"
 
   UnlockCost: 0
   UnlockLevel: 1 
@@ -46677,9 +46922,10 @@
   Material: Foundation
   # ExecuteOnCollide: InsertKillDialogueHere
   Class: Damage
-  Damage: 5000
+  Damage: 225
   Shape: ModelEntity
   Place: Free
+  Group: cpgEffects
   Collide: "movement"
   Model: @eden_blockmodels/Eden_LaserFence
   DropMeshfile: Entities/Misc/BagSmallPrefab
@@ -46702,6 +46948,13 @@
 # Laser Fence (3x1)
 { +Block Name: Eden_LaserFence3x1, Ref: Eden_LaserFence1x1
   Model: @eden_blockmodels/Eden_LaserFence3x1
+  Damage: 200
+}
+
+# Laser Fence (3x1 Half)
+{ +Block Name: Eden_LaserFence3x1Half, Ref: Eden_LaserFence1x1
+  Model: @eden_blockmodels/Eden_LaserFence3x1Half
+  Damage: 200
 }
 
 # Poison Gas Cloud
@@ -46868,7 +47121,7 @@
   IsAccessible: true, type: bool
   Category: Devices
   EnergyIn: 1, type: int, display: true, formatter: Watt
-  CPUIn: 10000, type: int, display: true
+  CPUIn: 1000, type: int, display: true
   HitPoints: 500, type: int, display: true
   BlastParticleIndex: 4
 }
@@ -46909,7 +47162,7 @@
   IsAccessible: true, type: bool
   Category: Devices
   EnergyIn: 1, type: int, display: true, formatter: Watt
-  CPUIn: 10000, type: int, display: true
+  CPUIn: 2500, type: int, display: true
 
   MaxCount: 1, type: int, display: true
   ForceMaxCount: true
@@ -47137,7 +47390,7 @@
   Class: AutoMiner
   Material: Device
   Shape: ModelEntity
-  MarketPrice: 226109, display: true
+  MarketPrice: 611749, display: true
   # Model: @models/Blocks/Terrain/AutoMiningDeviceT1Prefab
   Model: @eden_blockmodels/Eden_ModelAutominerT4
   DropMeshfile: Entities/Misc/DropContainerNewPrefab
@@ -49066,6 +49319,7 @@
   BlastRadius: 5
   BlastDamage: 2000
   RepairToTemplate: false, display: true
+  TurretTargetIgnore: true
 
   UnlockCost: -1
   UnlockLevel: 1
@@ -49112,6 +49366,7 @@
   BlastRadius: 5
   BlastDamage: 2000
   RepairToTemplate: false, display: true
+  TurretTargetIgnore: true
 
   UnlockCost: -1
   UnlockLevel: 1
@@ -49159,6 +49414,7 @@
   Volume: 2880, type: float, display: true, formatter: Liter
   RepairToTemplate: false, display: true
   RepFac: 20 # RepFacTurret
+  TurretTargetIgnore: true
 
   RotSpeed: 100, type: int, display: true
   Zoom: 3, type: float
@@ -49208,6 +49464,7 @@
   Volume: 2880, type: float, display: true, formatter: Liter
   RepairToTemplate: false, display: true
   RepFac: 20 # RepFacTurret
+  TurretTargetIgnore: true
 
   RotSpeed: 100, type: int, display: true
   Zoom: 3, type: float
@@ -49257,6 +49514,7 @@
   Volume: 11520, type: float, display: true, formatter: Liter
   RepairToTemplate: false, display: true
   RepFac: 20 # RepFacTurret
+  TurretTargetIgnore: true
 
   RotSpeed: 50, type: int, display: true
   Zoom: 3, type: float
@@ -49385,7 +49643,7 @@
   IsActivateable: true
   IsActivateableInCP: true
   Info: Eden_TurretBolterCVinfo, display: true
-  Showuser: Yes
+  ShowUser: Yes
   Category: Weapons/Items
   BlockColor: "110,110,110"
   StackSize: 500
@@ -49633,7 +49891,7 @@
   IsActivateableInCP: true
   IsLockable: true
   Info: Eden_TurretBolterBAinfo, display: true
-  Showuser: Yes
+  ShowUser: Yes
   Category: Weapons/Items
   BlockColor: "110,110,110"
   StackSize: 500
@@ -51851,7 +52109,7 @@
   Mesh-Damage-3: Mesh/D2
   Mesh-Damage-4: Mesh/D3
   Class: TurretAuto
-  Group: cpgAlien
+  Group: cpgTurret
   IndexName: Turret
   Material: WeaponLarge
   Shape: Turret
@@ -55360,4 +55618,47 @@
   # Model: @eden_blockmodels/Eden_GasCold
   # Damage: 0
   # Temperature: -300, display: true
+# }
+
+
+
+
+# # Small Plasma Turret (POI)
+# { +Block Name: Eden_TurretShieldSphere
+  # CustomIcon: TurretZiraxMSPlasma
+  # Model: @models/Blocks/Turrets/TurretEnemyBluePrefab
+  # AllowedInBlueprint: false, display: true
+  # Info: A powerful anti personel turret for indoor or outdoor use in POIs. Can deal some shield damage but is not effective versus hull or devices. \n[c][A9A9A9][i]Requires Project Eden.[/i][-][/c], display: true
+  # Class: TurretAuto
+  # Group: cpgAlien
+  # IndexName: Turret
+  # Material: Device
+  # Shape: Turret
+  # PickupTarget: TurretBaseLaserBlocks
+  # TemplateRoot: TurretBaseLaserBlocks
+  # Place: Face
+  # DropMeshfile: Entities/Misc/BagSmallPrefab
+  # SoundOnEnter: UseActions/DOOROpen02
+  # WeaponItem: Eden_TestWeaponTurret
+  # IsActivateable: true
+  # BlockColor: "110,110,110"
+  # AllowPlacingAt: "Base,MS", display: true
+  # SizeInBlocks: "1,1,1", display: true
+  # SizeInBlocksLocked: "Base,MS"
+  # Volume: 1500000, type: float, display: true, formatter: Liter
+  # Mass: 8500, type: float, display: true, formatter: Kilogram
+  # StackSize: 250
+  # Category: Weapons/Items
+  # BlastParticleIndex: 5
+  # BlastRadius: 3
+  # BlastDamage: 175
+  # HitPoints: 1500, type: int, display: true
+  # RotSpeed: 160, type: int, display: true
+  # EnergyIn: 5, type: int, display: true, formatter: Watt
+  # CPUIn: 90000, type: int, display: true
+  # XpFactor: 10
+  # TurretTargetIgnore: true
+  # AboveTerrainCheck: false
+  # MarketPrice: 10000, display: true
+  # RepFac: 20 # RepFacTurret
 # }

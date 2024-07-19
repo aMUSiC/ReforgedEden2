@@ -1,7 +1,7 @@
-{ Material Name: TemperateStarter
+{ Material Name: Akua
   HeightMapMax: "490"
-  SplatMap_1: "TemperateStarter_splat1"
-  SplatMap_2: "TemperateStarter_splat2"
+  SplatMap_1: "Akua_splat1"
+  SplatMap_2: "Akua_splat2"
   ClusterScale: "60"
 
  { Child 0 # Grass05
@@ -23,7 +23,6 @@
   HeightContrast: "1"
   TerrainId: "30"
   TerrainId2: "125"
-  UnderTerrainId: "66"
  }
  { Child 1 # SandBeach
   Name: "SandBeach"
@@ -43,7 +42,6 @@
   HeightOffset: "0.99"
   HeightContrast: "0.81"
   TerrainId: "33"
-  UnderTerrainId: "63"
  }
  { Child 2 # SandBrown03
   Name: "SandBrown03"
@@ -64,7 +62,6 @@
   HeightContrast: "1.6"
   TerrainId: "37"
   TerrainId2: "11"
-  UnderTerrainId: "66"
  }
  { Child 3 # Grass02
   Name: "Grass02"
@@ -85,7 +82,6 @@
   HeightContrast: "0.92"
   TerrainId: "28"
   TerrainId2: "65"
-  UnderTerrainId: "66"
  }
  { Child 4 # GrassDirt
   Name: "GrassDirt"
@@ -107,7 +103,6 @@
   HeightContrast: "0.97"
   TerrainId: "49"
   TerrainId2: "125"
-  UnderTerrainId: "66"
  }
  { Child 5 # Snow04
   Name: "Snow04"
@@ -130,7 +125,6 @@
   HeightContrast: "1.41"
   TerrainId: "24"
   TerrainId2: "130"
-  UnderTerrainId: "63"
  }
  { Child 6 # Grass02
   Name: "Grass02"
@@ -154,7 +148,6 @@
   HeightContrast: "1.63"
   TerrainId: "28"
   TerrainId2: "52"
-  UnderTerrainId: "66"
  }
  { Child 7 # Grass08
   Name: "Grass08"
@@ -179,7 +172,6 @@
   TerrainId: "32"
   TerrainId2: "37"
   TCOwnCol: "True"
-  UnderTerrainId: "63"
  }
  { Child 8 # GrassBrown
   Name: "GrassBrown"
@@ -200,7 +192,6 @@
   HeightContrast: "1.29"
   TerrainId: "45"
   TerrainId2: "6"
-  UnderTerrainId: "63"
  }
  { Child 9 # GoodDirt
   Name: "GoodDirt"
@@ -224,7 +215,6 @@
   HeightContrast: "0.75"
   TerrainId: "66"
   TerrainId2: "72"
-  UnderTerrainId: "63"
  }
  { Child 10 # SandYellow04
   Name: "SandYellow04"
@@ -248,7 +238,6 @@
   TerrainId: "63"
   TerrainId2: "43"
   TCOwnCol: "True"
-  UnderTerrainId: "33"
  }
  { Child 11 # Cliff4
   Name: "Cliff4"
@@ -273,7 +262,6 @@
   TerrainId: "126"
   TerrainId2: "121"
   DominantLayer: "True"
-  UnderTerrainId: "33"
  }
  { Child 12 # SandPebbles
   Name: "SandPebbles"
@@ -292,7 +280,7 @@
   HeightOffset: "0.8"
   HeightContrast: "0.9"
   TerrainId: "73"
-  UnderTerrainId: "4"
+  UnderTerrainId: "30"
  }
  { Child 13 # IronResource
   Name: "IronResource"
@@ -368,8 +356,8 @@
   HeightContrast: "1"
   TerrainId: "80"
  }
- { Child 17 # GoldResource
-  Name: "GoldResource"
+ { Child 17 # CarbonResource
+  Name: "CarbonResource"
   Brightness: "1"
   Saturation: "1"
   RGB: "(1, 1, 1)"
@@ -384,8 +372,7 @@
   ResampleFac: "1"
   HeightOffset: "1"
   HeightContrast: "1"
-  TerrainId: "95"
-  UnderTerrainId: "80"
+  TerrainId: "135"
  }
  { Child 18 # Dirt
   Name: "Dirt"
@@ -409,7 +396,6 @@
   HeightContrast: "1.62"
   TerrainId: "4"
   TerrainId2: "73"
-  UnderTerrainId: "80"
  }
  { Child 19 # Cliff4
   Name: "Cliff4"
@@ -433,6 +419,5 @@
   HeightContrast: "0.93"
   TerrainId: "126"
   TerrainId2: "1"
-  UnderTerrainId: "80"
  }
 }

@@ -299,9 +299,10 @@
     Shape: Sphere 
     Position: "360, 50, -1150"
     RadiusMinMax: "0, 4"
-    TotalSpawnCount: 1
+    TotalSpawnCount: 0
     UseDefaultStarDef: false
-    StarClass_1: LegacyNexusHub, param1: ""
+    # StarClass_1: LegacyNexusHub, param1: ""
+    StarClass_1: S-S-Legacy, param1: ""
     # NebulaSpawnCount: 5
     # NebulaColorIndex: 13
   }

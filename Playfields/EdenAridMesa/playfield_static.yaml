@@ -495,7 +495,7 @@ POIs:
               Value: 720
  
        # ======================= TALON  SETTLEMENT ======================= 
-        - GroupName: TalonStoneMain
+        - GroupName: R2TalonStoneMain
           Faction: Talon
           IsCommandCenter: True
           IsImportant: True
@@ -508,10 +508,10 @@ POIs:
             - Key: RegenAfter
               Value: 4320
 
-        - GroupName: TalonAuxSand
+        - GroupName: R2TalonAuxSand
           Faction: Talon
           CountMinMax: [ 5, 8 ]
-          SpawnPOINear: [TalonStoneMain]
+          SpawnPOINear: [R2TalonStoneMain]
           SpawnPOINearRange: [100, 200] 
           Properties: 
             - Key: MapDistance
@@ -521,10 +521,10 @@ POIs:
             - Key: RegenAfter
               Value: 720
  
-        - GroupName: TalonDefenseSand
+        - GroupName: R2TalonDefenseSand
           Faction: Talon
           CountMinMax: [ 5, 6 ]
-          SpawnPOINear: [TalonStoneMain]
+          SpawnPOINear: [R2TalonStoneMain]
           SpawnPOINearRange: [300, 400] 
           Properties: 
             - Key: RegenAfter
@@ -1235,7 +1235,7 @@ SpawnZones:
          Period: Always
          DelayMinMax: [-1, -1]
 
-   - SpawnAt: [TalonStoneMain]
+   - SpawnAt: [R2TalonStoneMain]
      BiomesExcluded: [ LowMountains, Mountains ]
      Radius: 1200
      RadiusRandom: 50

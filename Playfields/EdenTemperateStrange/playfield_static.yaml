@@ -247,6 +247,14 @@ SpecialEffectsGlobal:
 
 ### Resource Deposits
 RandomResources:
+    - Name: CarbonResource
+      IsImportant: True
+      CountMinMax: [ 1, 2 ]
+      IsScalingCount: True
+      SizeMinMax: [ 4, 5 ]
+      DepthMinMax: [ 30, 60 ]
+      DroneProb: 0
+
     - Name: IronResource
       IsScalingCount: True
       CountMinMax: [ 3, 4 ]
@@ -303,6 +311,9 @@ RandomResources:
 
 ### Resource Asteroids
 AsteroidResources:
+    - Name: CarbonResource
+      Threshold: 0.2
+      Amount: 0.1
     - Name: IronResource
       Threshold: 0.2
       Amount: 0.1
@@ -1540,7 +1551,7 @@ POIs:
 
 # =============================================== Faction Talon Main
 # ---------------------- Main Village
-        - GroupName: TalonMain
+        - GroupName: R2TalonMain
           Faction: Talon
           IsCommandCenter: True
           IsImportant: True
@@ -1565,13 +1576,13 @@ POIs:
           DronesMinMax: [ 1, 1 ]
           ReserveCount: 0
           TroopTransport: False
-          SpawnPOINear: [TalonMain]
+          SpawnPOINear: [R2TalonMain]
           SpawnPOINearRange: [75, 200]
           Properties:
             - Key: RegenAfter
               Value: 720
 
-        - GroupName: TalonAux
+        - GroupName: R2TalonAux
           Faction: Talon
           BiomesExcluded: [ PolarSnow, Radiated, RadiatedFog ]
           CountMinMax: [ 3, 5 ]
@@ -1579,13 +1590,13 @@ POIs:
           DronesMinMax: [ 1, 1 ]
           ReserveCount: 0
           TroopTransport: False
-          SpawnPOINear: [TalonMain]
+          SpawnPOINear: [R2TalonMain]
           SpawnPOINearRange: [75, 200]
           Properties:
             - Key: RegenAfter
               Value: 720
 
-        - GroupName: TalonFarm
+        - GroupName: R2TalonFarm
           Faction: Talon
           BiomesExcluded: [ PolarSnow, Radiated, RadiatedFog ]
           CountMinMax: [ 3, 5 ]
@@ -1593,13 +1604,13 @@ POIs:
           DronesMinMax: [ 1, 1 ]
           ReserveCount: 0
           TroopTransport: False
-          SpawnPOINear: [TalonMain]
+          SpawnPOINear: [R2TalonMain]
           SpawnPOINearRange: [150, 300]
           Properties:
             - Key: RegenAfter
               Value: 720
 
-        - GroupName: TalonDefense
+        - GroupName: R2TalonDefense
           Faction: Talon
           BiomesExcluded: [ PolarSnow, Radiated, RadiatedFog ]
           CountMinMax: [ 3, 4 ]
@@ -1607,7 +1618,7 @@ POIs:
           DronesMinMax: [ 1, 1 ]
           ReserveCount: 0
           TroopTransport: False
-          SpawnPOINear: [TalonMain]
+          SpawnPOINear: [R2TalonMain]
           SpawnPOINearRange: [250, 500]
           Properties:
             - Key: RegenAfter
@@ -1626,7 +1637,7 @@ POIs:
           DronesMinMax: [ 1, 2 ]
           ReserveCount: 2
           TroopTransport: False
-          SpawnPOIAvoid: [TalonMain]
+          SpawnPOIAvoid: [R2TalonMain]
           SpawnPOIAvoidDistance: 1000
           SpawnResource: ["PromethiumResource:0-1"]
           SpawnResourceRange: [150,600]
@@ -1653,7 +1664,7 @@ POIs:
             - Key: RegenAfter
               Value: 720
 
-        - GroupName: TalonAux
+        - GroupName: R2TalonAux
           Faction: Talon
           BiomesExcluded: [ PolarSnow, Radiated, RadiatedFog ]
           CountMinMax: [ 1, 2 ]
@@ -1667,7 +1678,7 @@ POIs:
             - Key: RegenAfter
               Value: 720
 
-        - GroupName: TalonFarmhouse
+        - GroupName: R2TalonFarmhouse
           Faction: Talon
           BiomesExcluded: [ PolarSnow, Radiated, RadiatedFog ]
           CountMinMax: [ 1, 2 ]
@@ -1681,7 +1692,7 @@ POIs:
             - Key: RegenAfter
               Value: 720
 
-        - GroupName: TalonFarm
+        - GroupName: R2TalonFarm
           Faction: Talon
           BiomesExcluded: [ PolarSnow, Radiated, RadiatedFog ]
           CountMinMax: [ 3, 6 ]
@@ -1695,7 +1706,7 @@ POIs:
             - Key: RegenAfter
               Value: 720
 
-        - GroupName: TalonDefense
+        - GroupName: R2TalonDefense
           Faction: Talon
           BiomesExcluded: [ PolarSnow, Radiated, RadiatedFog ]
           CountMinMax: [ 2, 3 ]
@@ -1969,24 +1980,24 @@ POIs:
 
 # =============================================== Faction Talon Random
 # ---------------------- Random Farm Groups
-        - GroupName: TalonFarmhouse
+        - GroupName: R2TalonFarmhouse
           Faction: Talon
           Territory: False
           BiomesExcluded: [ PolarSnow, Radiated, RadiatedFog ]
           CountMinMax: [ 2, 3 ]
           IsScalingCount: True
-          AuxiliaryPOIs: [TalonFarm]
+          AuxiliaryPOIs: [R2TalonFarm]
           DroneProb: 0
           DronesMinMax: [ 1, 1 ]
           ReserveCount: 0
           TroopTransport: False
-          SpawnPOIAvoid: [TalonMain, Eden_DummyTalon]
+          SpawnPOIAvoid: [R2TalonMain, Eden_DummyTalon]
           SpawnPOIAvoidDistance: 750
           Properties:
             - Key: RegenAfter
               Value: 720
 
-        - GroupName: TalonFarm
+        - GroupName: R2TalonFarm
           Faction: Talon
           Territory: False
           IsAuxPOI: True
@@ -2012,7 +2023,7 @@ POIs:
           DronesMinMax: [ 1, 2 ]
           ReserveCount: 2
           TroopTransport: False
-          SpawnPOIAvoid: [TalonMain, TalonAux]
+          SpawnPOIAvoid: [R2TalonMain, R2TalonAux]
           SpawnPOIAvoidDistance: 750
           SpawnResource: ["CobaltResource:0-1"]
           SpawnResourceRange: [150,600]
@@ -2024,7 +2035,7 @@ POIs:
             - Key: RegenAfter
               Value: 4320
 
-        - GroupName: TalonWoodRuin
+        - GroupName: R2TalonWoodRuin
           Faction: None
           CountMinMax: [ 4, 8 ]
           DroneProb: 0
@@ -2040,7 +2051,7 @@ POIs:
               Value: 720
 
 # ---------------------- Random Ruins
-        - GroupName: TalonWoodRuin
+        - GroupName: R2TalonWoodRuin
           Faction: None
           CountMinMax: [ 0, 2 ]
           IsScalingCount: True
@@ -2392,7 +2403,7 @@ SpawnZones:
 
 # ---------------------- Spawn Zones Talon
 # Main village spawns closer to the village.
-   - SpawnAt: [TalonMain, TalonStoneMain, TalonSnowMain]
+   - SpawnAt: [R2TalonMain, R2TalonStoneMain, R2TalonSnowMain]
      BiomesExcluded: [ LowMountains, Mountains, Radiated, RadiatedFog ]
      Radius: 500
      RadiusRandom: 50
@@ -2408,7 +2419,7 @@ SpawnZones:
          DelayMinMax: [200, 240]
 
 # Main village spawns further from the villages. Long distance hunters.
-   - SpawnAt: [TalonMain, TalonStoneMain, TalonSnowMain]
+   - SpawnAt: [R2TalonMain, R2TalonStoneMain, R2TalonSnowMain]
      BiomesExcluded: [ LowMountains, Mountains, Radiated, RadiatedFog ]
      Radius: 1500
      RadiusRandom: 50
@@ -2424,7 +2435,7 @@ SpawnZones:
          DelayMinMax: [200, 240]
 
 # Talon near aux POIs.
-   - SpawnAt: [TalonAux, TalonAuxSand, TalonSnow]
+   - SpawnAt: [R2TalonAux, R2TalonAuxSand, R2TalonSnow]
      BiomesExcluded: [ LowMountains, Mountains, Radiated, RadiatedFog ]
      Radius: 250
      RadiusRandom: 50
@@ -2445,7 +2456,7 @@ SpawnZones:
          DelayMinMax: [200, 240]
 
 # Talon farmers.
-   - SpawnAt: [TalonFarmhouse, TalonFarm, TalonStoneFarm, TalonSnowFarm]
+   - SpawnAt: [R2TalonFarmhouse, R2TalonFarm, R2TalonStoneFarm, R2TalonSnowFarm]
      BiomesExcluded: [ LowMountains, Mountains, Radiated, RadiatedFog ]
      Radius: 100
      RadiusRandom: 25

@@ -634,7 +634,7 @@ POIs:
 # =========== Placing the main POI spawn anchors ===========
 
         # TALON main anchor (Story). Spawns a settlement.
-        - GroupName: TalonWoodRuin
+        - GroupName: R2TalonWoodRuin
           Faction: Talon
           # NoShieldReload: True  
           BiomesExcluded: [ IceSheet, PolarSnow, Rocks, Glacier, Tundra, ColdPlains ]
@@ -821,57 +821,57 @@ POIs:
 
 # =========== Clusters of important POI ===========
 
-        - GroupName: TalonMain 
+        - GroupName: R2TalonMain 
           Faction: Talon
           # NoShieldReload: True
           IsImportant: True
           CountMinMax: [ 1, 1 ]
-          SpawnPOINear: [TalonWoodRuin]
+          SpawnPOINear: [R2TalonWoodRuin]
           SpawnPOINearRange: [100, 400]
           Properties: 
             - Key: RegenAfter
               Value: 720
 
           # More spawns as 'security' in distance, if island is too small
-        - GroupName: TalonMain 
+        - GroupName: R2TalonMain 
           Faction: Talon
           # NoShieldReload: True  
           IsImportant: True
           CountMinMax: [ 1, 1 ]
-          SpawnPOINear: [TalonWoodRuin]
+          SpawnPOINear: [R2TalonWoodRuin]
           SpawnPOINearRange: [400, 1000]
           Properties: 
             - Key: RegenAfter
               Value: 720
               
-        - GroupName: TalonAux
+        - GroupName: R2TalonAux
           Faction: Talon
           # NoShieldReload: True
           Territory: False         
           CountMinMax: [ 5, 6 ]
-          SpawnPOINear: [TalonWoodRuin]
+          SpawnPOINear: [R2TalonWoodRuin]
           SpawnPOINearRange: [30, 120]
           Properties: 
             - Key: RegenAfter
               Value: 720  
 
-        - GroupName: TalonDefense
+        - GroupName: R2TalonDefense
           Faction: Talon
           # NoShieldReload: True  
           IsImportant: True
           CountMinMax: [ 4, 5 ]
-          SpawnPOIAvoid: [TalonWoodRuin, TalonDefense]  
+          SpawnPOIAvoid: [R2TalonWoodRuin, R2TalonDefense]  
           POIDistance: 100
-          SpawnPOINear: [TalonWoodRuin]
+          SpawnPOINear: [R2TalonWoodRuin]
           SpawnPOINearRange: [100, 400] 
           Properties: 
             - Key: RegenAfter
               Value: 720
 
-        - GroupName: TalonWoodRuin
+        - GroupName: R2TalonWoodRuin
           Faction: None      
           CountMinMax: [ 3, 4 ]
-          SpawnPOINear: [TalonWoodRuin]
+          SpawnPOINear: [R2TalonWoodRuin]
           SpawnPOINearRange: [50, 500]
           Properties:
             - Key: MapMarker 
@@ -960,7 +960,7 @@ POIs:
           DronesMinMax: [ 2, 2 ]
           ReserveCount: 6
           TroopTransport: True
-          SpawnPOIAvoid: [PlayerSpawnerWater, R2PolarisTradePlanet, R2EpsilonMain, PlanetVesselBase, R2GhystMain, R2GhystAuxT2, TalonStoneMain, TribalBazarArid]  
+          SpawnPOIAvoid: [PlayerSpawnerWater, R2PolarisTradePlanet, R2EpsilonMain, PlanetVesselBase, R2GhystMain, R2GhystAuxT2, R2TalonStoneMain, TribalBazarArid]  
           POIDistance: 2000
           Properties: 
             - Key: RegenAfter
@@ -968,7 +968,7 @@ POIs:
 
 
           # Secondary Talon cluster anchor
-        - GroupName: TalonStoneMain
+        - GroupName: R2TalonStoneMain
           Faction: Talon
           # NoShieldReload: True
           IsImportant: True
@@ -986,7 +986,7 @@ POIs:
 
 
           # Secondary Talon cluster anchor, under Zirax opression
-        - GroupName: TalonStoneMain
+        - GroupName: R2TalonStoneMain
           Faction: Talon
           # NoShieldReload: True
           BiomesExcluded: [ IceSheet, Glacier, Rocks, PolarSnow ] 
@@ -997,7 +997,7 @@ POIs:
           DronesMinMax: [ 2, 2 ]
           ReserveCount: 1
           TroopTransport: True
-          SpawnPOIAvoid: [PlayerSpawnerWater, R2PolarisTradePlanet, R2EpsilonMain, PlanetVesselBase, R2GhystMain, R2GhystAuxT2, TalonStoneMain]  
+          SpawnPOIAvoid: [PlayerSpawnerWater, R2PolarisTradePlanet, R2EpsilonMain, PlanetVesselBase, R2GhystMain, R2GhystAuxT2, R2TalonStoneMain]  
           POIDistance: 2000
           Properties: 
             - Key: Music
@@ -1118,7 +1118,7 @@ POIs:
               
           # Filling clusters: RUINS
           # == Cluster to TribalBurialChamberRG ==
-        - GroupName: TalonWoodRuin
+        - GroupName: R2TalonWoodRuin
           Faction: None
           IsImportant: True
           Biome: [ PalmBeach, SandBeach_1, Dunes, Savanna, ForestClearing, PalmForest, HighPalms, LowMountains_1, LowMountains, Rocks ] 
@@ -1127,7 +1127,7 @@ POIs:
           DronesMinMax: [ 1, 1 ]
           ReserveCount: 0
           TroopTransport: False
-          SpawnPOIAvoid: [PlayerSpawnerWater, TalonWoodRuin]  
+          SpawnPOIAvoid: [PlayerSpawnerWater, R2TalonWoodRuin]  
           POIDistance: 500
           SpawnPOINear: [TribalBurialChamberRG]
           SpawnPOINearRange: [100, 800]
@@ -1139,8 +1139,8 @@ POIs:
 
     
           # Filling clusters: TALON
-          # == Cluster to TalonStoneMain anchor ==
-        - GroupName: TalonStoneMain
+          # == Cluster to R2TalonStoneMain anchor ==
+        - GroupName: R2TalonStoneMain
           Faction: Talon
           # NoShieldReload: True
           IsImportant: True
@@ -1150,13 +1150,13 @@ POIs:
           DronesMinMax: [ 1, 2 ] 
           ReserveCount: 2
           TroopTransport: True
-          SpawnPOINear: [TalonStoneMain]
+          SpawnPOINear: [R2TalonStoneMain]
           SpawnPOINearRange: [150, 400]
           Properties: 
             - Key: RegenAfter
               Value: 720
           
-        - GroupName: TalonAuxSand
+        - GroupName: R2TalonAuxSand
           IsImportant: True
           Faction: Talon
           # NoShieldReload: True
@@ -1167,7 +1167,7 @@ POIs:
           DronesMinMax: [ 1, 2 ] 
           ReserveCount: 2
           TroopTransport: True
-          SpawnPOINear: [TalonStoneMain]
+          SpawnPOINear: [R2TalonStoneMain]
           SpawnPOINearRange: [150, 400]
           Properties: 
             - Key: MapDistance
@@ -1177,7 +1177,7 @@ POIs:
             - Key: RegenAfter
               Value: 720
 
-        - GroupName: TalonStoneMain
+        - GroupName: R2TalonStoneMain
           Faction: Talon
           # NoShieldReload: True
           CountMinMax: [ 1, 1 ]
@@ -1185,7 +1185,7 @@ POIs:
           DronesMinMax: [ 1, 1 ]
           ReserveCount: 0
           TroopTransport: True
-          SpawnPOINear: [TalonStoneMain]
+          SpawnPOINear: [R2TalonStoneMain]
           SpawnPOINearRange: [200, 300]
           Properties: 
             - Key: MapDistance
@@ -1195,8 +1195,8 @@ POIs:
             - Key: RegenAfter
               Value: 720
 
-          # == Cluster to TalonStoneMain
-        - GroupName: TalonAuxSand
+          # == Cluster to R2TalonStoneMain
+        - GroupName: R2TalonAuxSand
           Faction: Talon
           # NoShieldReload: True
           CountMinMax: [ 3, 3 ]
@@ -1204,7 +1204,7 @@ POIs:
           DronesMinMax: [ 1, 1 ]
           ReserveCount: 0
           TroopTransport: False
-          SpawnPOINear: [TalonStoneMain]
+          SpawnPOINear: [R2TalonStoneMain]
           SpawnPOINearRange: [150, 400]
           Properties: 
             - Key: MapDistance
@@ -1214,7 +1214,7 @@ POIs:
             - Key: RegenAfter
               Value: 720
 
-        - GroupName: TalonAux
+        - GroupName: R2TalonAux
           Faction: Talon
           # NoShieldReload: True
           CountMinMax: [ 1, 2 ]
@@ -1223,7 +1223,7 @@ POIs:
           DronesMinMax: [ 1, 1 ]
           ReserveCount: 0
           TroopTransport: True
-          SpawnPOINear: [TalonStoneMain]
+          SpawnPOINear: [R2TalonStoneMain]
           SpawnPOINearRange: [80, 500]
           Properties: 
             - Key: MapDistance
@@ -1233,8 +1233,8 @@ POIs:
             - Key: RegenAfter
               Value: 720
 
-          # == Cluster to TalonStoneMain anchor ==
-        - GroupName: TalonStoneMain
+          # == Cluster to R2TalonStoneMain anchor ==
+        - GroupName: R2TalonStoneMain
           Faction: Talon
           # NoShieldReload: True
           CountMinMax: [ 1, 1 ]
@@ -1242,7 +1242,7 @@ POIs:
           DronesMinMax: [ 1, 1 ]
           ReserveCount: 0
           TroopTransport: True
-          SpawnPOINear: [TalonStoneMain]
+          SpawnPOINear: [R2TalonStoneMain]
           SpawnPOINearRange: [120, 600]
           Properties: 
             - Key: MapDistance
@@ -1252,7 +1252,7 @@ POIs:
             - Key: RegenAfter
               Value: 720
 
-        - GroupName: TalonDefense
+        - GroupName: R2TalonDefense
           Faction: Talon
           # NoShieldReload: True
           CountMinMax: [ 2, 2 ]
@@ -1260,13 +1260,13 @@ POIs:
           DronesMinMax: [ 1, 1 ]
           ReserveCount: 0
           TroopTransport: True
-          SpawnPOINear: [TalonStoneMain]
+          SpawnPOINear: [R2TalonStoneMain]
           SpawnPOINearRange: [120, 500]
           Properties: 
             - Key: RegenAfter
               Value: 720
               
-        - GroupName: TalonAuxSand
+        - GroupName: R2TalonAuxSand
           Faction: Talon
           # NoShieldReload: True
           CountMinMax: [ 1, 1 ]
@@ -1274,7 +1274,7 @@ POIs:
           DronesMinMax: [ 1, 1 ]
           ReserveCount: 0
           TroopTransport: True
-          SpawnPOINear: [TalonStoneMain]
+          SpawnPOINear: [R2TalonStoneMain]
           SpawnPOINearRange: [120, 500]
           Properties: 
             - Key: MapDistance
@@ -1284,7 +1284,7 @@ POIs:
             - Key: RegenAfter
               Value: 720
               
-        - GroupName: TalonAux
+        - GroupName: R2TalonAux
           Faction: Talon
           # NoShieldReload: True
           CountMinMax: [ 2, 2 ]
@@ -1293,7 +1293,7 @@ POIs:
           DronesMinMax: [ 1, 1 ]
           ReserveCount: 0
           TroopTransport: True
-          SpawnPOINear: [TalonStoneMain]
+          SpawnPOINear: [R2TalonStoneMain]
           SpawnPOINearRange: [80, 500]
           Properties: 
             - Key: MapDistance
@@ -1554,7 +1554,7 @@ POIs:
           DronesMinMax: [ 1, 1 ]
           ReserveCount: 0
           TroopTransport: False
-          SpawnPOIAvoid: [START, PlayerSpawnerWater, R2DroneBase, R2EpsilonAuxT2, R2EpsilonAuxT2, R2PolarisTradePlanet, R2EpsilonMain, R2PolarisAuxT1, CivilSettlementO2, TalonStoneMain, R2GhystMain, R2GhystAuxT2, GhystPVHQ]  
+          SpawnPOIAvoid: [START, PlayerSpawnerWater, R2DroneBase, R2EpsilonAuxT2, R2EpsilonAuxT2, R2PolarisTradePlanet, R2EpsilonMain, R2PolarisAuxT1, CivilSettlementO2, R2TalonStoneMain, R2GhystMain, R2GhystAuxT2, GhystPVHQ]  
           POIDistance: 1500
           Properties: 
             - Key: MapMarker
@@ -1738,7 +1738,7 @@ POIs:
           DronesMinMax: [ 1, 1 ]
           ReserveCount: 0
           TroopTransport: False
-          SpawnPOIAvoid: [R2GhystMain, R2GhystAuxT2, GhystPVHQ, R2GhystDefenseT1, R2PolarisTradePlanet, R2PolarisAuxT1, CivilSettlementO2, TalonStoneMain]  
+          SpawnPOIAvoid: [R2GhystMain, R2GhystAuxT2, GhystPVHQ, R2GhystDefenseT1, R2PolarisTradePlanet, R2PolarisAuxT1, CivilSettlementO2, R2TalonStoneMain]  
           POIDistance: 1000
           SpawnResource: ["SathiumResource:0-1"]
           SpawnResourceRange: [150,200]
@@ -1757,7 +1757,7 @@ POIs:
           DronesMinMax: [ 1, 1 ]
           ReserveCount: 0
           TroopTransport: False
-          SpawnPOIAvoid: [R2GhystMain, R2GhystAuxT2, R2PolarisTradePlanet, R2EpsilonMain, R2PolarisAuxT1, CivilSettlementO2, TalonStoneMain, GhystPVHQ, R2GhystDefenseT1]  
+          SpawnPOIAvoid: [R2GhystMain, R2GhystAuxT2, R2PolarisTradePlanet, R2EpsilonMain, R2PolarisAuxT1, CivilSettlementO2, R2TalonStoneMain, GhystPVHQ, R2GhystDefenseT1]  
           POIDistance: 500
           SpawnResource: ["SathiumResource:0-1"]
           SpawnResourceRange: [150,200]
@@ -1778,7 +1778,7 @@ POIs:
           DronesMinMax: [ 1, 1 ]
           ReserveCount: 0
           TroopTransport: False
-          SpawnPOIAvoid: [START, R2AbandonedPOI, R2PolarisTradePlanet, TalonStoneMain, R2EpsilonAuxT2, TalonStoneMain] 
+          SpawnPOIAvoid: [START, R2AbandonedPOI, R2PolarisTradePlanet, R2TalonStoneMain, R2EpsilonAuxT2, R2TalonStoneMain] 
           SpawnPOIAvoidDistance: 1000
           Properties: 
             - Key: Music
@@ -2046,7 +2046,7 @@ SpawnZones:
          
      # TALON ====
      # Talon Explorers
-   - SpawnAt: [TalonStoneMain, TalonStoneMain, TalonWoodRuin]
+   - SpawnAt: [R2TalonStoneMain, R2TalonStoneMain, R2TalonWoodRuin]
      BiomesExcluded: [ Mountains, IceSheet, IceShelf, Glacier, Pole  ]
      Radius: 1200
      RadiusRandom: 50
@@ -2061,7 +2061,7 @@ SpawnZones:
          Period: Always
          DelayMinMax: [200, 240]
      # Talon Herders
-   - SpawnAt: [TalonStoneMain, TalonStoneMain, TalonWoodRuin]
+   - SpawnAt: [R2TalonStoneMain, R2TalonStoneMain, R2TalonWoodRuin]
      BiomesExcluded: [ LowMountains, Mountains, IceSheet, IceShelf, Glacier, Pole  ]
      Radius: 400
      RadiusRandom: 50
@@ -2082,7 +2082,7 @@ SpawnZones:
          DelayMinMax: [200, 240]
 
      # Talon oppressed by Zirax
-   - SpawnAt: [TalonStoneMain]
+   - SpawnAt: [R2TalonStoneMain]
      BiomesExcluded: [ Mountains, IceSheet, IceShelf, Glacier, Pole ]
      Radius: 1000
      RadiusRandom: 25
