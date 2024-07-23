@@ -36700,6 +36700,7 @@
   OptionNext_1: End
 }
 { +Dialogue Name: Eden_Gavlactica_Guard1_Init
+  Execute: "OpenHtmlWindow('','%SHARED_DATA%/Content/Images/Portraits_Eden/Sandurz.jpg',0.09f,-0.011f,0.1162f,0.272f,_bShowNavButtons:false,_bBlockBG:false,_bgColor: new Color(0.0f,0.0f,0.0f,0.75f));<nl>SetNPCName('Colonel Sandurz')"
   Execute: "talk_greek = 0; talk_pussy = 0;"
   NPCName: dialogue_OKkSeq8
   Output: dialogue_0m0w8uD
