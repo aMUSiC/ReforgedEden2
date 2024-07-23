@@ -173,10 +173,12 @@ POIs:
         DistanceMinMax: [1000, 4500]
         Rotate: false
       Properties:
-        - Key: MapDistance
-          Value: 0
         - Key: HudDistance
           Value: 0
+        - Key: Discovery
+          Value: False
+        - Key: MapMarker
+          Value: Neutral
         - Key: RegenAfter
           Value: 720
 
@@ -219,7 +221,7 @@ POIs:
       SpaceDefenseProbability: 0.25
       SpaceDefensePriceMinMax: [ 15, 30 ]
       InitPower: True
-      Pos: [0, 0, 0]
+      Pos: [0, 250, 0]
       Rot: [0, 0, 0]
       Compound:
         CountMinMax: [2, 4]
@@ -369,10 +371,12 @@ POIs:
         DistanceMinMax: [1000, 4500]
         Rotate: false
       Properties:
-        - Key: MapDistance
-          Value: 0
         - Key: HudDistance
           Value: 0
+        - Key: Discovery
+          Value: False
+        - Key: MapMarker
+          Value: Neutral
         - Key: RegenAfter
           Value: 720
 
@@ -466,10 +470,12 @@ POIs:
         DistanceMinMax: [1000, 4500]
         Rotate: false
       Properties:
-        - Key: MapDistance
-          Value: 0
         - Key: HudDistance
           Value: 0
+        - Key: Discovery
+          Value: False
+        - Key: MapMarker
+          Value: Neutral
         - Key: RegenAfter
           Value: 720
 

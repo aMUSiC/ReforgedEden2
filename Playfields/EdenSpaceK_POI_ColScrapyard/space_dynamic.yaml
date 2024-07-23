@@ -75,7 +75,7 @@ POIs:
 # Main salvage yard
     - Type: BA_Alien
       Name: [Scrapyard]
-      GroupName: Eden_ColSpaceScrapyard
+      GroupName: RE2_ColSpaceScrapyard
       Faction: Colonists
       Mode: Survival
       CountMinMax: [ 1, 1]

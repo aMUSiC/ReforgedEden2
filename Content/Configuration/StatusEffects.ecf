@@ -252,7 +252,7 @@
   Duration: 90
   Name: Fever
   Type: bodytemp
-  DebuffIf: varBodyTemp > 68
+  DebuffIf: varBodyTemp > 63
   OnExpired: "Dehydration"
   Description: igmFever
   Icon: TmpEff_FeverAttack 
@@ -899,16 +899,11 @@
   Icon: TmpEff_RadiationPoisoning
   
   { Child Modify0
-    Stat: radiation
-    Amount: 0.1
-    Rate: 40
-  }
-  { Child Modify1
     Stat: health
     Amount: -1
     Rate: 3
   }
-  { Child Modify2
+  { Child Modify1
     Stat: health
     ModifyMaxValue: -150
     NumberOperationType: Flat
@@ -1350,6 +1345,7 @@
   Icon: TmpEff_ReduceRadiation  
 }
 # ===========================================================
+
 
 
 # ============================================================================================================================================================================

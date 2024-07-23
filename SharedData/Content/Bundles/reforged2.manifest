@@ -1,15 +1,15 @@
 ManifestFileVersion: 0
-CRC: 3696605321
+CRC: 136167197
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 8b42f9b41d2e121329a34456b480fbc6
+    Hash: e1fa96fe1777379609842190288491c7
   TypeTreeHash:
     serializedVersion: 2
-    Hash: 2a2d6b2cd505ce5a854c7860e0abd038
+    Hash: 5d9d832f8b508c1329b6dbe455fdd745
   IncrementalBuildHash:
     serializedVersion: 2
-    Hash: 8b42f9b41d2e121329a34456b480fbc6
+    Hash: e1fa96fe1777379609842190288491c7
 HashAppended: 0
 ClassTypes:
 - Class: 1
@@ -50,6 +50,8 @@ ClassTypes:
   Script: {fileID: 11500000, guid: f9b3dcbe4c5cab840a4a714cb35d0d24, type: 3}
 - Class: 115
   Script: {instanceID: 0}
+- Class: 135
+  Script: {instanceID: 0}
 - Class: 136
   Script: {instanceID: 0}
 - Class: 198
@@ -71,12 +73,14 @@ Assets:
 - Assets/_Reforged_BlockModels/Impacts/TurretExplosionLargePlasmaGreenRG.prefab
 - Assets/_Reforged_BlockModels/Reforged Galaxy 2/LightGatlingSmall.prefab
 - Assets/_Reforged_BlockModels/Reforged Galaxy 2/MediumCannonCVT2V3.prefab
+- Assets/_Reforged_BlockModels/Impacts/ChaffFire.prefab
 - Assets/_Reforged_BlockModels/Reforged Galaxy 2/LightRocketHomingProjectileRG2.prefab
 - Assets/_Reforged_BlockModels/Reforged Galaxy 2/DetectorDeco9x9.prefab
 - Assets/_Reforged_BlockModels/Reforged Galaxy 2/CVMediumRocket.prefab
 - Assets/_Reforged_BlockModels/Impacts/FlamethrowerBlast2RG.prefab
 - Assets/_Reforged_BlockModels/Reforged Galaxy 2/ConstructorT3V2.prefab
 - Assets/_Reforged_BlockModels/Reforged Galaxy 2/MediumRocketSmall.prefab
+- Assets/_Reforged_BlockModels/Reforged Galaxy 2/JumpPadVertical.prefab
 - Assets/_Reforged_BlockModels/Impacts/PlasmaBlastLargeRedRG.prefab
 - Assets/_Reforged_BlockModels/Reforged Galaxy 2/HeavyRocketPodSmall.prefab
 - Assets/_Reforged_BlockModels/Impacts/CoreBlastRed.prefab
@@ -104,6 +108,7 @@ Assets:
 - Assets/_Reforged_BlockModels/Reforged Galaxy 2/CPUExtenderLargeQuantum.prefab
 - Assets/_Reforged_BlockModels/Impacts/FlamethrowerBlastRG.prefab
 - Assets/_Reforged_BlockModels/Reforged Galaxy 2/RepairPlatformRG.prefab
+- Assets/_Reforged_BlockModels/Reforged Galaxy 2/HeavyGatlingSmallV2.prefab
 - Assets/_Reforged_BlockModels/Reforged Galaxy 2/DroneSpawnerRG.prefab
 - Assets/_Reforged_BlockModels/Reforged Galaxy 2/CPUExtenderLargeT5.prefab
 - Assets/_Reforged_BlockModels/Reforged Galaxy 2/HeavyHomingRocketSmall.prefab
@@ -113,14 +118,14 @@ Assets:
 - Assets/_Reforged_BlockModels/Reforged Galaxy 2/R2ShieldGeneratorPOIV5.prefab
 - Assets/_Reforged_BlockModels/Reforged Galaxy 2/HeavyPositronCVT3.prefab
 - Assets/_Reforged_BlockModels/Reforged Galaxy 2/CPUExtenderLargeT4.prefab
-- Assets/_Reforged_BlockModels/Reforged Galaxy 2/MediumRailgunCVT2.prefab
 - Assets/_Reforged_BlockModels/Reforged Galaxy 2/CPUExtenderSmallQuantum.prefab
+- Assets/_Reforged_BlockModels/Impacts/FlamethrowerProjectileRG.prefab
+- Assets/_Reforged_BlockModels/Reforged Galaxy 2/MediumRailgunCVT2.prefab
 - Assets/_Reforged_BlockModels/Reforged Galaxy 2/HeavyCannonCVT3V3.prefab
-- Assets/_Reforged_BlockModels/Reforged Galaxy 2/HeavyRocketProjectileMk3RG.prefab
 - Assets/_Reforged_BlockModels/Impacts/EMPBurst.prefab
 - Assets/_Reforged_BlockModels/Reforged Galaxy 2/DetectorT3.prefab
 - Assets/_Reforged_BlockModels/Reforged Galaxy 2/ShieldCapacitorSmallT3.prefab
-- Assets/_Reforged_BlockModels/Impacts/FlamethrowerProjectileRG.prefab
+- Assets/_Reforged_BlockModels/Reforged Galaxy 2/HeavyRocketProjectileMk3RG.prefab
 - Assets/_Reforged_BlockModels/Reforged Galaxy 2/LightRocketSmallV2.prefab
 - Assets/_Reforged_BlockModels/Impacts/HeavyRailLargeRG.prefab
 - Assets/_Reforged_BlockModels/Reforged Galaxy 2/R2ShieldGeneratorPOIV3.prefab
@@ -145,6 +150,7 @@ Assets:
 - Assets/_Reforged_BlockModels/Reforged Galaxy 2/ExplosiveBarrel01RG.prefab
 - Assets/_Reforged_BlockModels/Reforged Galaxy 2/MediumPlasmaCVT2V3.prefab
 - Assets/_Reforged_BlockModels/Reforged Galaxy 2/HeavyFlamethrowerSmall.prefab
+- Assets/_Reforged_BlockModels/Reforged Galaxy 2/ChaffLauncherSVT1.prefab
 - Assets/_Reforged_BlockModels/Impacts/TurretExplosionLargeLaserRG.prefab
 - Assets/_Reforged_BlockModels/Impacts/PlasmaBlastSmallRG.prefab
 - Assets/_Reforged_BlockModels/Reforged Galaxy 2/ShieldGeneratorCVT0.prefab
@@ -162,6 +168,7 @@ Assets:
 - Assets/_Reforged_BlockModels/Reforged Galaxy 2/CableBlock3x1.prefab
 - Assets/_Reforged_BlockModels/Reforged Galaxy 2/CableBlock5x1.prefab
 - Assets/_Reforged_BlockModels/Impacts/CoreBlastBlue.prefab
+- Assets/_Reforged_BlockModels/Reforged Galaxy 2/MediumGatlingSmallV2.prefab
 - Assets/_Reforged_BlockModels/Reforged Galaxy 2/LightRocketProjectileRG2.prefab
 - Assets/_Reforged_BlockModels/Reforged Galaxy 2/HeavyRailgunCVT3V2.prefab
 - Assets/_Reforged_BlockModels/Reforged Galaxy 2/LightRailgunSmall.prefab
@@ -176,19 +183,21 @@ Assets:
 - Assets/_Reforged_BlockModels/Reforged Galaxy 2/MediumLaserCVT2.prefab
 - Assets/_Reforged_BlockModels/Impacts/HeavyRailSmallRG.prefab
 - Assets/_Reforged_BlockModels/Impacts/BarrelExplosionFire.prefab
+- Assets/_Reforged_BlockModels/Reforged Galaxy 2/LightGatlingSmallV2.prefab
 - Assets/_Reforged_BlockModels/Reforged Galaxy 2/LightLaserSmall.prefab
 - Assets/_Reforged_BlockModels/Reforged Galaxy 2/HeavyCannonCVT3V2.prefab
 - Assets/_Reforged_BlockModels/Reforged Galaxy 2/HeavyLaserCVT3V3.prefab
 - Assets/_Reforged_BlockModels/Reforged Galaxy 2/MediumPlasmaSmall.prefab
 - Assets/_Reforged_BlockModels/Reforged Galaxy 2/MediumGatlingSmall.prefab
 - Assets/_Reforged_BlockModels/Reforged Galaxy 2/PlasmaTurbineSmall.prefab
-- Assets/_Reforged_BlockModels/Reforged Galaxy 2/BombProjectileRG.prefab
 - Assets/_Reforged_BlockModels/Reforged Galaxy 2/LightRailgunCVT1.prefab
+- Assets/_Reforged_BlockModels/Reforged Galaxy 2/BombProjectileRG.prefab
 - Assets/_Reforged_BlockModels/Reforged Galaxy 2/DetectorDeco5x5V2.prefab
 - Assets/_Reforged_BlockModels/Impacts/TurretExplosionLargeT2RG.prefab
 - Assets/_Reforged_BlockModels/Impacts/PlasmaBlastHeavyRedRG.prefab
 - Assets/_Reforged_BlockModels/Reforged Galaxy 2/CPUExtenderSmallT5.prefab
 - Assets/_Reforged_BlockModels/Reforged Galaxy 2/TorpedoProjectileRG.prefab
+- Assets/_Reforged_BlockModels/Reforged Galaxy 2/RepairPlatformRGV2.prefab
 - Assets/_Reforged_BlockModels/Impacts/TurretExplosionLargePlasmaRG.prefab
 Dependencies:
 - C:/Users/User/OneDrive/Desktop/Vermillion/UnityPackage/RGMk2/Bundles/reforged/reforgedcontent

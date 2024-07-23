@@ -1043,7 +1043,7 @@ POIs:
 
 # Refinery
     # - Type: BA_Alien
-      # GroupName: Eden_TSOPolRefinery
+      # GroupName: RE2_TSOPolRefinery
       # Faction: Polaris
       # Mode: Survival
       # CountMinMax: [ 1, 1 ]
@@ -1181,9 +1181,9 @@ POIs:
       InitPower: True
       Properties:
         - Key: HudDistance
-          Value: 2500
+          Value: 3000
         - Key: MapDistance
-          Value: 2500
+          Value: 3000
         - Key: RegenAfter
           Value: 720
 
@@ -1201,15 +1201,15 @@ POIs:
       InitPower: True
       Properties:
         - Key: HudDistance
-          Value: 2500
+          Value: 3000
         - Key: MapDistance
-          Value: 2500
+          Value: 3000
         - Key: RegenAfter
           Value: 720
 
 # ================================================================================================================================================================================= Trader
     - Type: BA_Alien
-      GroupName: TSOTraderRG
+      GroupName: R2TraderSpaceTrade
       # DisplayName: Trading Station
       Faction: Trader
       Mode: Survival
@@ -1774,9 +1774,9 @@ POIs:
       InitPower: True
       Properties:
         - Key: HudDistance
-          Value: 2500
+          Value: 3000
         - Key: MapDistance
-          Value: 2500
+          Value: 3000
         - Key: RegenAfter
           Value: 720
 
@@ -1855,9 +1855,9 @@ POIs:
       InitPower: True
       Properties:
         - Key: HudDistance
-          Value: 2500
+          Value: 3000
         - Key: MapDistance
-          Value: 2500
+          Value: 3000
         - Key: RegenAfter
           Value: 720
 
@@ -2151,9 +2151,9 @@ POIs:
       InitPower: True
       Properties:
         - Key: HudDistance
-          Value: 2500
+          Value: 3000
         - Key: MapDistance
-          Value: 2500
+          Value: 3000
         - Key: RegenAfter
           Value: 720
 
@@ -4784,6 +4784,33 @@ DroneBaseSetup:
             StockDescription:
               Name: [SpaceDroneLaser, SpaceDronePlasma]
               AmountMinMax: [2, 4]
+              ExtraMinMax: [0,0]
+              Type: FighterDrone
+            Properties:
+              # - Key: SelfDestructionWithNoCore
+                # Value: True
+              - Key: AIManMaxPursuitRange
+                Value: 7500
+
+# Patrol vessels tier 3
+          - Name: [R2OPVZiraxT3]
+            Faction: Xenu
+            CountMinMax: [1, 1]
+            Probability: 0.25
+            CanNotBeControlledByMasterAI: False
+            FixedMaxSpeed: [30, 40]
+            Mission: SpacePatrol
+            MissionDescription:
+              DelayBetweenRespawnMinMax: [3600, 3600]
+              DelayBeforeSelfDestructionMinMax: [3600, 3600]
+              IsRespawnAfterDestruction: False
+              RadiusMinMax: [2000, 7500]
+              Position:
+                PosXZMinMax: [1000, 5000]
+                PosYMax: 3500
+            StockDescription:
+              Name: [SpaceDroneLaser, SpaceDronePlasma]
+              AmountMinMax: [0, 0]
               ExtraMinMax: [0,0]
               Type: FighterDrone
             Properties:

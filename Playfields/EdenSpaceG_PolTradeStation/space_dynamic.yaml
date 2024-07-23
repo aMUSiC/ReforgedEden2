@@ -302,7 +302,7 @@ POIs:
 
 # Refinery
     - Type: BA_Alien
-      GroupName: Eden_TSOPolRefinery
+      GroupName: RE2_TSOPolRefinery
       Faction: Polaris
       # NoShieldReload: True
       Mode: Survival

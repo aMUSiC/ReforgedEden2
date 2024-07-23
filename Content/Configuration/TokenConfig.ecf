@@ -321,6 +321,11 @@
   Description: An exotic alloy barrel compatible with most conventional Sniper Rifles that improves damage but increases recoil.\n[c][00FF00]Damage +10%[-][/c]\n[c][FF0000]Recoil +5%[-][/c]\n[c][FFBB00]Compatible with most Sniper Rifles and Miniguns[-][/c]
   MarketPrice: 20000, display: true
 }
+{ Token Id: 81, Name: [c][FF0000]Adjustable Choke Barrel[/c]
+  CustomIcon: WeaponKitC
+  Description: A lightweight alloy barrel for conventional Shotguns with a choke that can be tightened to greatly reduce the spread of pellets at the cost of added recoil.\n[c][00FF00]Accuracy +25%[-][/c]\n[c][FF0000]Recoil +10%[-][/c]\n[c][FFBB00]Compatible with most Shotguns[-][/c]
+  MarketPrice: 20000, display: true
+}
 # Laser Barrel Upgrades - Rare
 { Token Id: 29, Name: [c][11D100]Cascade Laser Array[/c]
   CustomIcon: WeaponKitB
@@ -345,11 +350,6 @@
   Description: A barrel attachment for some heavy weapons that utilizes superconducting rails to propel projectiles along the barrel at supersonic speeds smoothing recoil but stresses the auto-loader.\n[c][00FF00]Recoil -20%[-][/c]\n[c][FF0000]Reload Speed -10%[-][/c]\n[c][FFBB00]Rocket Launchers and Plasma Cannons Only[-][/c]
   MarketPrice: 20000, display: true
 }
-#{ Token Id: 69, Name: [c][FF0000]Finned Heavy Barrel[/c]
-#  CustomIcon: WeaponKitC
-#  Description: A lightweight barrel replacement for plasma and rocket weapons that uses aluminium heat sinks to disperse barrel heat between shots.\n[c][00FF00]Reload +20%[-][/c]\n[c][FF0000]Recoil +20%[-][/c]\n[c][FFBB00]Compatible with most Rocket Launchers and Plasma Cannons[-][/c]
-#  MarketPrice: 20000, display: true
-#}
 # Crossbow Upgrades
 { Token Id: 33, Name: [c][3C00FF]Polymer Crossbow Limb[/c]
   CustomIcon: WeaponKitA
@@ -530,6 +530,11 @@
 { Token Id: 66, Name: [c][FF0000]Mk-00 Generator Frame[/c]
   CustomIcon: WeaponKitC
   Description: No information exists on this piece of equipment. It appears to be a frame for laser weapons that uses external power cells to supply constant power to a weapon's accumulator.\n[c][00FF00]Reload Speed +125%[-][/c]\n[c][FF0000]Damage -20%[-][/c]\n[c][FFBB00]Compatible with most Laser Weapons[-][/c]
+  MarketPrice: 20000, display: true
+}
+{ Token Id: 82, Name: [c][FF0000]Mechanized Autoloader[/c]
+  CustomIcon: WeaponKitC
+  Description: A heavy mechanical autoloader for heavy weapons to automatically load new rounds as they're fired. Improper loading causes misfires during normal operation however.\n[c][00FF00]Reload Speed +100%[-][/c]\n[c][FF0000]Damage -20%[-][/c]\n[c][FFBB00]Compatible with most Heavy Weapons[-][/c]
   MarketPrice: 20000, display: true
 }
 # ======= Ammo Upgrades
@@ -946,7 +951,6 @@
   Description: A collectible Entity trading card from the Empyrion Collection.\n[c][FFFFFF]Common in deserts Sandworms travel in small packs where they filter their food from the shifting sands with their teeth. Watch out though. Those teeth are harder than steel and can puncture most light armors.[-][/c]
   MarketPrice: 100, display: true
 }
-
 
 
 # ======================================================================================================================================================================

@@ -1304,7 +1304,7 @@ POIs:
 
 # ================================================================================================================================================================================= Trader
     - Type: BA_Alien
-      GroupName: TSOTraderRG
+      GroupName: R2TraderSpaceTrade
       # DisplayName: Trading Station
       Faction: Trader
       Mode: Survival

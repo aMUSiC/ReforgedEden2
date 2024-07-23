@@ -1,15 +1,15 @@
 ManifestFileVersion: 0
-CRC: 2106510639
+CRC: 2257980668
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 48f57fb34b5720bae68551aeb3922f15
+    Hash: 28dc8e55765e964297d6516a3bc1f078
   TypeTreeHash:
     serializedVersion: 2
-    Hash: 06930b471c7686002e81c55f7d36f760
+    Hash: 2a7995426fed3313ada8a3cc4cb5f926
   IncrementalBuildHash:
     serializedVersion: 2
-    Hash: 48f57fb34b5720bae68551aeb3922f15
+    Hash: 28dc8e55765e964297d6516a3bc1f078
 HashAppended: 0
 ClassTypes:
 - Class: 1
@@ -65,8 +65,6 @@ ClassTypes:
 - Class: 199
   Script: {instanceID: 0}
 - Class: 205
-  Script: {instanceID: 0}
-- Class: 212
   Script: {instanceID: 0}
 - Class: 213
   Script: {instanceID: 0}
@@ -126,9 +124,9 @@ Assets:
 - Assets/eden_blockmodels/Environmental/Planetary Nebula/Asteroid Fields/Eden_SectorNebulaIceFieldXLTest.prefab
 - Assets/eden_blockmodels/Environmental/Planetary Nebula/Playfield Nebula/New playfield
   nebula/Ion Storms/Eden_IonStormNew_GreenL2.prefab
-- Assets/eden_blockmodels/Environmental/Planetary Nebula/New/Storms/Eden_SectorNebulaNewBlueStormBright.prefab
 - Assets/eden_blockmodels/Placeables/Eden_ModelAutominerT4.prefab
 - Assets/eden_blockmodels/Environmental/Anomalies/Geodes/Eden_AnomalyGeodeBrown.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/New/Storms/Eden_SectorNebulaNewBlueStormBright.prefab
 - Assets/eden_blockmodels/Environmental/Planetary Nebula/Playfield Nebula/New playfield
   nebula/Eden_NebulaL_RandomGray.prefab
 - Assets/eden_blockmodels/Environmental/Planetary Nebula/Asteroid Fields/New Asteroid
@@ -140,6 +138,7 @@ Assets:
 - Assets/eden_blockmodels/Environmental/Planetary Nebula/Playfield Nebula/Eden_PFNebulaLightning.prefab
 - Assets/eden_blockmodels/Environmental/Planetary Nebula/Playfield Nebula/New playfield
   nebula/Eden_NebulaL_RandomBrown4.prefab
+- Assets/eden_blockmodels/Consoles/Eden_ConsoleNews1x2.prefab
 - Assets/eden_blockmodels/Environmental/Planetary Nebula/Playfield Nebula/New playfield
   nebula/Eden_NebulaL_RandomYellow.prefab
 - Assets/eden_blockmodels/Environmental/Planetary Nebula/Asteroid Fields/New Asteroid
@@ -184,7 +183,6 @@ Assets:
 - Assets/eden_blockmodels/Environmental/Anomalies/Geodes/Eden_AnomalyGeodeXLGray.prefab
 - Assets/eden_blockmodels/Hydroponics New/Eden_Hydroponics2Sweetener.prefab
 - Assets/eden_blockmodels/Eden_ModelScienceStation.prefab
-- Assets/eden_blockmodels/Posters/Old/Eden_PosterSpanjContest.prefab
 - Assets/eden_blockmodels/Environmental/Planetary Nebula/Asteroid Fields/Eden_SectorNebulaIceFieldTest.prefab
 - Assets/eden_blockmodels/Environmental/Planetary Nebula/Asteroid Fields/New Asteroid
   Fields/Eden_AsteroidFieldXL_GrayTemplate.prefab
@@ -260,7 +258,6 @@ Assets:
 - Assets/eden_blockmodels/Crystals/Eden_ModelCrystalMetalXenoL.prefab
 - Assets/eden_blockmodels/Effects Block/Radio/Eden_ModelSoundPirate.prefab
 - Assets/eden_blockmodels/Environmental/Sector Lights/Eden_SectorTSOColonists.prefab
-- Assets/eden_blockmodels/Posters/Old/Eden_ModelPosterEdenSpanj.prefab
 - Assets/eden_blockmodels/Environmental/Planetary Nebula/Asteroid Fields/Eden_SectorNebulaIceFieldXL.prefab
 - Assets/eden_blockmodels/Environmental/Planetary Nebula/Asteroid Fields/New Asteroid
   Fields/Eden_AsteroidFieldXL_DarkGreen4.prefab
@@ -386,12 +383,13 @@ Assets:
 - Assets/eden_blockmodels/Consoles/Templates/Orange/Eden_ConsoleOrangeSymbol1Anim.prefab
 - Assets/eden_blockmodels/Hydroponics New/Eden_Hydroponics2Berries.prefab
 - Assets/eden_blockmodels/Environmental/Ambient Space Audio/Radio Chatter/Eden_SectorAudio_Kriel.prefab
-- Assets/eden_blockmodels/Environmental/Planetary Nebula/Asteroid Fields/New Asteroid
-  Fields/Eden_AsteroidFieldPL_Blue.prefab
+- Assets/eden_blockmodels/Posters/Holographic Posters/Eden_PosterCorp6x2.prefab
 - Assets/eden_blockmodels/Environmental/Planetary Nebula/Eden_SectorStormRedXL.prefab
 - Assets/eden_blockmodels/Environmental/Eden_CometSectorGreen.prefab
 - Assets/eden_blockmodels/Traps/Eden_LaserFence5x1.prefab
 - Assets/eden_blockmodels/Environmental/Planetary Nebula/Eden_TestSkybox.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Asteroid Fields/New Asteroid
+  Fields/Eden_AsteroidFieldPL_Blue.prefab
 - Assets/eden_blockmodels/Effects Block/Eden_EffectsBlock_BaseBackup.prefab
 - Assets/eden_blockmodels/Environmental/Planetary Nebula/Eden_SectorNebulaGreenL.prefab
 - Assets/eden_blockmodels/Environmental/Planetary Nebula/Playfield Nebula/New playfield
@@ -492,14 +490,12 @@ Assets:
   nebula/Eden_NebulaL_RandomPurpleStorm.prefab
 - Assets/eden_blockmodels/Environmental/Planetary Nebula/Presets/Eden_SectorNebulaLightningPresetStorm.prefab
 - Assets/eden_blockmodels/Eden_ModelMiningLaserBlue.prefab
-- Assets/eden_blockmodels/Posters/Old/Eden_ModelPosterPolaris.prefab
 - Assets/eden_blockmodels/Geothermal/Eden_GeothermalGeneratorOff.prefab
 - Assets/eden_blockmodels/Environmental/Anomalies/Eden_SpacialFractureRed.prefab
 - Assets/eden_blockmodels/Environmental/Planetary Nebula/Playfield Nebula/New playfield
   nebula/Eden_NebulaM_RandomGray2.prefab
 - Assets/eden_blockmodels/Environmental/Planetary Nebula/Eden_SectorNebulaLDustCircleTest.prefab
 - Assets/eden_blockmodels/Environmental/Planetary Nebula/Eden_SectorNebulaXLBlueDim.prefab
-- Assets/eden_blockmodels/Posters/Old/Eden_ModelPosterEdenMisc2.prefab
 - Assets/eden_blockmodels/Consoles/Templates/Blue/Eden_ConsoleBlueBackground2.prefab
 - Assets/eden_blockmodels/Traps/Eden_LaserFence3x1Half.prefab
 - Assets/eden_blockmodels/Environmental/Sector Lights/Eden_SectorZiraxRadosLogo.prefab
@@ -551,10 +547,9 @@ Assets:
 - Assets/eden_blockmodels/Environmental/Planetary Nebula/Asteroid Fields/New Asteroid
   Fields/Eden_AsteroidFieldL_Brown2.prefab
 - Assets/eden_blockmodels/Eden_ModelMiningLaserYellow2.prefab
-- Assets/eden_blockmodels/Posters/Old/Eden_ModelPosterZirax.prefab
-- Assets/eden_blockmodels/Effects Block/Eden_EffectsBlock_HoloCyborg.prefab
 - Assets/eden_blockmodels/Environmental/Planetary Nebula/Asteroid Fields/New Ice
   Fields/Eden_AsteroidFieldIceL_Orange.prefab
+- Assets/eden_blockmodels/Effects Block/Eden_EffectsBlock_HoloCyborg.prefab
 - Assets/eden_blockmodels/Asteroids/Eden_ModelAsteroidMagmacite2.prefab
 - Assets/eden_blockmodels/Environmental/Eden_AuroraGreenTest.prefab
 - Assets/eden_blockmodels/Environmental/Planetary Nebula/Asteroid Fields/New Asteroid
@@ -572,7 +567,6 @@ Assets:
 - Assets/eden_blockmodels/Asteroids/Eden_ModelAsteroidIceOld2.prefab
 - Assets/eden_blockmodels/Environmental/Planetary Nebula/Playfield Nebula/New playfield
   nebula/Eden_NebulaL_RandomOrangeDim2.prefab
-- Assets/eden_blockmodels/Posters/Old/Eden_ModelPosterEdenMining.prefab
 - Assets/eden_blockmodels/Environmental/Anomalies/Eden_SpacialFractureRed3.prefab
 - Assets/eden_blockmodels/Environmental/Planetary Nebula/Eden_SectorNebulaXLOrangeDim.prefab
 - Assets/eden_blockmodels/Environmental/Planetary Nebula/Asteroid Fields/New Asteroid
@@ -633,7 +627,6 @@ Assets:
 - Assets/eden_blockmodels/Environmental/Planetary Nebula/New/Fog/Eden_SectorNebulaNewRedFog3.prefab
 - Assets/eden_blockmodels/Effects Block/Eden_EffectsBlock_LightningBlueBackup.prefab
 - Assets/eden_blockmodels/Effects Block/Eden_EffectsBlock_LightningBlueLong.prefab
-- Assets/eden_blockmodels/Posters/Old/Eden_ModelPosterUCH.prefab
 - Assets/eden_blockmodels/Environmental/Planetary Nebula/Asteroid Fields/New Ice
   Fields/Eden_AsteroidFieldIceXL_Template.prefab
 - Assets/eden_blockmodels/Environmental/Planetary Nebula/Playfield Nebula/New playfield
@@ -730,9 +723,8 @@ Assets:
 - Assets/eden_blockmodels/Environmental/Planetary Nebula/Asteroid Fields/New Asteroid
   Fields/Eden_AsteroidFieldXL_Test4.prefab
 - Assets/eden_blockmodels/Effects Block/Eden_EffectsBlock_DockGuideBlue.prefab
-- Assets/eden_blockmodels/Posters/Old/Eden_ModelPosterEdenMisc3.prefab
-- Assets/eden_blockmodels/Environmental/Planetary Nebula/Unique Nebula/Eden_PFNebulaLegacyHomeworld.prefab
 - Assets/eden_blockmodels/Traps/Eden_LaserFence3x1.prefab
+- Assets/eden_blockmodels/Environmental/Planetary Nebula/Unique Nebula/Eden_PFNebulaLegacyHomeworld.prefab
 - Assets/eden_blockmodels/Environmental/Planetary Nebula/Asteroid Fields/New Ice
   Fields/Eden_AsteroidFieldIceS_White.prefab
 - Assets/eden_blockmodels/Hydroponics New/Eden_Hydroponics2Herbal.prefab
@@ -861,6 +853,7 @@ Assets:
   nebula/Eden_NebulaM_RandomBrown.prefab
 - Assets/eden_blockmodels/Environmental/Planetary Nebula/Playfield Nebula/New playfield
   nebula/Eden_NebulaL_RandomGrayDim2.prefab
+- Assets/eden_blockmodels/Posters/Holographic Posters/Eden_HoloAdTemplate.prefab
 - Assets/eden_blockmodels/Environmental/Anomalies/Eden_WormholeRedDead.prefab
 - Assets/eden_blockmodels/Environmental/Planetary Nebula/Playfield Nebula/New playfield
   nebula/Eden_NebulaL_RandomRedDim.prefab
@@ -884,7 +877,6 @@ Assets:
 - Assets/eden_blockmodels/Wind/Eden_WindmillBase.prefab
 - Assets/eden_blockmodels/Asteroids/Eden_ModelAsteroidIceOld.prefab
 - Assets/eden_blockmodels/Environmental/Planetary Nebula/Unique Nebula/Eden_SectorNebulaFarrDustRing.prefab
-- Assets/eden_blockmodels/Posters/Old/Eden_ModelPosterEdenMisc1.prefab
 - Assets/eden_blockmodels/Environmental/Planetary Nebula/Playfield Nebula/New playfield
   nebula/Eden_NebulaM_RandomTemplate.prefab
 - Assets/eden_blockmodels/Eden_ModelWarningLightSilent.prefab
@@ -899,7 +891,6 @@ Assets:
   Fields/Eden_AsteroidFieldIceS_Template.prefab
 - Assets/eden_blockmodels/Environmental/Planetary Nebula/Playfield Nebula/New playfield
   nebula/Eden_NebulaM_RandomPink.prefab
-- Assets/eden_blockmodels/Posters/Old/Eden_PosterMultiSpace.prefab
 - Assets/eden_blockmodels/Environmental/Planetary Nebula/Eden_SectorNebulaXLYellow.prefab
 - Assets/eden_blockmodels/Posters/Holographic Posters/Eden_PosterMarket1x2.prefab
 - Assets/eden_blockmodels/Environmental/Planetary Nebula/Asteroid Fields/New Ice
@@ -931,7 +922,6 @@ Assets:
 - Assets/eden_blockmodels/Hydroponics New/Eden_Hydroponics2GrassGrown.prefab
 - Assets/eden_blockmodels/Environmental/Planetary Nebula/Playfield Nebula/New playfield
   nebula/Eden_NebulaL_RandomYellow2.prefab
-- Assets/eden_blockmodels/Posters/Old/Eden_PosterMultiSpace2.prefab
 - Assets/eden_blockmodels/prefaboriginals/Cube.359.prefab
 - Assets/eden_blockmodels/Environmental/Planetary Nebula/Asteroid Fields/New Asteroid
   Fields/Eden_AsteroidFieldS_Gray.prefab
@@ -954,6 +944,7 @@ Assets:
   Fields/Eden_AsteroidFieldL_LavaThick.prefab
 - Assets/eden_blockmodels/Environmental/Planetary Nebula/Asteroid Fields/New Asteroid
   Fields/Eden_AsteroidFieldPL_Gray.prefab
+- Assets/eden_blockmodels/Posters/Holographic Posters/Eden_PosterCorp9x3.prefab
 - Assets/eden_blockmodels/Hydroponics New/Eden_Hydroponics2StimulantGrown.prefab
 - Assets/eden_blockmodels/Environmental/Planetary Nebula/Asteroid Fields/New Asteroid
   Fields/Eden_AsteroidFieldL_Lava2.prefab
@@ -1097,7 +1088,6 @@ Assets:
 - Assets/eden_blockmodels/Environmental/Planetary Nebula/New/Storms/Eden_SectorNebulaNewBlackStormRed.prefab
 - Assets/eden_blockmodels/Environmental/Planetary Nebula/Playfield Nebula/New playfield
   nebula/Eden_NebulaL_RandomGreen2.prefab
-- Assets/eden_blockmodels/Posters/Old/Eden_ModelPosterFarr.prefab
 - Assets/eden_blockmodels/Environmental/Anomalies/Eden_AnomalyPink1.prefab
 - Assets/eden_blockmodels/Wind/Eden_WindmillBaseBackup.prefab
 - Assets/eden_blockmodels/Traps/Eden_GasCold.prefab

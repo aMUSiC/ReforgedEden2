@@ -271,26 +271,26 @@ POIs:
             - Key: RegenAfter
               Value: 4320
 
-          # Safe place to respawn after being shot down by turrets
-        - GroupName: TS_Metal_Waypoint
-          IsImportant: True
-          Faction: Polaris
-          # NoShieldReload: True
-          BiomesExcluded: [ PoleEdge ] 
-          CountMinMax: [ 1, 1 ]
-          DroneProb: 0
-          DronesMinMax: [ 1 ]
-          ReserveCount: 0
-          TroopTransport: False 
-          SpawnResource: ["ErestrumResource:1-1"]
-          SpawnResourceRange: [100, 250]
-          SpawnPOIAvoid: [R2DroneBaseT5, START]
-          SpawnPOIAvoidDistance: 1000
-          Properties: 
-            - Key: MapMarker
-              Value: Neutral
-            - Key: RegenAfter
-              Value: 720
+          # # Safe place to respawn after being shot down by turrets
+        # - GroupName: TS_Metal_Waypoint
+          # IsImportant: True
+          # Faction: Polaris
+          # # NoShieldReload: True
+          # BiomesExcluded: [ PoleEdge ] 
+          # CountMinMax: [ 1, 1 ]
+          # DroneProb: 0
+          # DronesMinMax: [ 1 ]
+          # ReserveCount: 0
+          # TroopTransport: False 
+          # SpawnResource: ["ErestrumResource:1-1"]
+          # SpawnResourceRange: [100, 250]
+          # SpawnPOIAvoid: [R2DroneBaseT5, START]
+          # SpawnPOIAvoidDistance: 1000
+          # Properties: 
+            # - Key: MapMarker
+              # Value: Neutral
+            # - Key: RegenAfter
+              # Value: 720
 
 # Kriel
 

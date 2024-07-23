@@ -605,9 +605,9 @@ POIs:
           # PlayerArmor: ["ArmorLight, ArmorLight, ArmorLight, #FreshStart:ArmorLight"]     
           Status: [ "Food: 500, Health: 500", "Food: 500, Health: 500", "Food: 500, Health: 500", "#FreshStart:Food: 250, Health: 250" ]  
           Items: [ 
-          "Token:1:6999, Token:1:6998, SurvivalTool, RadarSuitT1, WaterBottle:2, PowerBar:2, Bandages:2, Flashlight", 
-          "Token:1:6999, Token:1:6998, SurvivalTool, RadarSuitT1, WaterBottle:1, Bandages:1", 
-          "Token:1:6999, Token:1:6998, SurvivalTool, RadarSuitT1", 
+          "Token:1:6999, Token:1:6998, CombatKnife, SurvivalTool, RadarSuitT1, Flashlight, WaterBottle:2, PowerBar:2, Bandages:2", 
+          "Token:1:6999, Token:1:6998, CombatKnife, SurvivalTool, RadarSuitT1, Flashlight, WaterBottle:1, Bandages:1", 
+          "Token:1:6999, Token:1:6998, CombatKnife, SurvivalTool, RadarSuitT1, Flashlight", 
           "#FreshStart: Token:1:6999, Token:1:6998, SurvivalTool, RadarSuitT1, WaterBottle:1" ]
 
 ### Drones

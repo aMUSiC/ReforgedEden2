@@ -86,7 +86,7 @@ POIs:
       SpaceDefenseOverrideDefaults: True
       SpaceDefenseProbability: 0
       InitPower: True
-      Pos: [0, 0, 0]
+      Pos: [0, 250, 0]
       Rot: [0, 0, 0]
       Compound:
         CountMinMax: [3, 4]
@@ -95,10 +95,12 @@ POIs:
         DistanceMinMax: [1000, 4500]
         Rotate: false
       Properties:
-        - Key: MapDistance
-          Value: 0
         - Key: HudDistance
           Value: 0
+        - Key: Discovery
+          Value: False
+        - Key: MapMarker
+          Value: Neutral
         - Key: RegenAfter
           Value: 720
 
@@ -223,7 +225,7 @@ POIs:
       SpaceDefenseOverrideDefaults: True
       SpaceDefenseProbability: 0
       InitPower: True
-      Pos: [10000, 0, 0]
+      Pos: [10000, 250, 0]
       Rot: [0, 0, 0]
       Compound:
         CountMinMax: [2, 3]
@@ -232,10 +234,12 @@ POIs:
         DistanceMinMax: [1000, 4500]
         Rotate: false
       Properties:
-        - Key: MapDistance
-          Value: 0
         - Key: HudDistance
           Value: 0
+        - Key: Discovery
+          Value: False
+        - Key: MapMarker
+          Value: Neutral
         - Key: RegenAfter
           Value: 720
 
@@ -288,7 +292,7 @@ POIs:
       SpaceDefenseOverrideDefaults: True
       SpaceDefenseProbability: 0
       InitPower: True
-      Pos: [-7000, 2500, 8500]
+      Pos: [-7000, 2750, 8500]
       Rot: [0, 0, 0]
       Compound:
         CountMinMax: [2, 3]
@@ -297,10 +301,12 @@ POIs:
         DistanceMinMax: [1000, 4500]
         Rotate: false
       Properties:
-        - Key: MapDistance
-          Value: 0
         - Key: HudDistance
           Value: 0
+        - Key: Discovery
+          Value: False
+        - Key: MapMarker
+          Value: Neutral
         - Key: RegenAfter
           Value: 720
 

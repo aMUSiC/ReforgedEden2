@@ -1246,24 +1246,24 @@ GenerationParams:
 
 # ------------------------------------------------------------------------------------------------- Warlord
 
-# Voidium Mining Site Class 5
-      - Name: VoidiumMiningT5
-        Faction: [None]
-        Color: [0.62, 0.32, 0.17]
-        Icon: Triangle
-        Placement:
-            - InnerSystem
-            - HabitableHot
-            - HabitableTemperate
-            - HabitableCold
-            - OuterSystem
-        MoonProb: '0:1'
-        MoonType: [DefaultMoon]
-        HasOrbit: false
-        HasTerrain: false
-        PlayfieldLevel: [15,20]
-        Playfields:
-            - EdenSpace_POI_MiningVoidiumT5_1
+# # Voidium Mining Site Class 5
+      # - Name: VoidiumMiningT5
+        # Faction: [None]
+        # Color: [0.62, 0.32, 0.17]
+        # Icon: Triangle
+        # Placement:
+            # - InnerSystem
+            # - HabitableHot
+            # - HabitableTemperate
+            # - HabitableCold
+            # - OuterSystem
+        # MoonProb: '0:1'
+        # MoonType: [DefaultMoon]
+        # HasOrbit: false
+        # HasTerrain: false
+        # PlayfieldLevel: [15,20]
+        # Playfields:
+            # - EdenSpace_POI_MiningVoidiumT5_1
 
 # ------------------------------------------------------------------------------------------------- Alien
 

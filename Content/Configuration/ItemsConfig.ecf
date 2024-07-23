@@ -88,7 +88,7 @@
 # Durability: max is 5000 for all handheld weapons and tools 
 # AutoReload: true > per default it is set to "true"
 
-# Free IDs: 12, 13, 47*, 59*, 71-77, 95-99, 147-149, 179-195, 196*, 286*, 287*, 288*, 289*, 331*, 504*, 606-619 (armor), 630-649 (boosters)
+# Free IDs: 12, 13, 47*, 59*, 71-77, 95-99, 148*, 149, 179-195, 196*, 286*, 287*, 288*, 289*, 331*, 504*, 606-619 (armor), 630-649 (boosters)
 # Free IDs: 659-699 (boosters), 709-799, 805*, 849, 855+862-863+878 (drone weapon), *921-965* (upgrade weapons/ammo), 975-982* (T2CV weapons)
 # Reclaimed IDs: 53, 79, 82, 83, 84, 312*, 322*, 336*, 353*, 358, [medical 366*, 388*, 390*, 393*, 392*, 378*]
 # RGFREEFLAG
@@ -1340,6 +1340,7 @@
   DegradationProb: 0.65, type: float, display: false
   SfxJammed: Weapons/Player/Reload/WeaponJammedSingleShot  
   RepairCount: 3, type: int, display: false
+  Crosshair: @RG_crosshairs/Shotgun
   { Child 0
     Class: Ranged
     AllowRemote: false   
@@ -1405,7 +1406,8 @@
   Durability: 500, display: true
   DegradationProb: 0.52, type: float, display: false
   RepairDisabled: true, display: true
-  SfxJammed: Weapons/Player/Reload/WeaponJammedSingleShot  
+  SfxJammed: Weapons/Player/Reload/WeaponJammedSingleShot
+  Crosshair: @RG_crosshairs/Shotgun
   { Child 0
     Class: Ranged
     ROF: 1.0, type: float, display: true, formatter: ROF
@@ -1446,8 +1448,8 @@
   }
   { Child 6
     Class: Movements
-    StandingLocation: "0.382, 0.034, 0.09"
-    StandingRotation: "-2.4, -2.0, -4.5"
+    StandingLocation: "0.3282, 0.1194, 0.090"
+    StandingRotation: "-0.24, -0.05, -0.0"
     AimingLocation: "0.38, 0.0, 0.0"
     AimingRotation: "0.0, 0.0, 0.0"
     RunningLocation: "0.16, 0.075, 0.45"
@@ -1986,7 +1988,8 @@
   Durability: 500, display: false
   DegradationProb: 0.25, type: float, display: false
   RepairCount: 3, type: int, display: false
-  SfxJammed: Weapons/Player/Reload/WeaponJammedAutoFire 
+  SfxJammed: Weapons/Player/Reload/WeaponJammedAutoFire
+  Crosshair: @RG_crosshairs/AssaultRifle
   { Child 0
     Class: Ranged
     AllowRemote: false
@@ -2352,8 +2355,8 @@
   }
   { Child 6
     Class: Movements
-    StandingLocation: "0.382, 0.034, 0.09"
-    StandingRotation: "-2.4, -2.0, -4.5"
+    StandingLocation: "0.382, 0.084, 0.101"
+    StandingRotation: "-0.4, -0.0, -2.5"
     AimingLocation: "0.38, 0.0, 0.0"
     AimingRotation: "0.0, 0.0, 0.0"
     RunningLocation: "0.16, 0.075, 0.45"
@@ -2388,6 +2391,7 @@
   RepairCount: 3, type: int, display: false
   SfxJammed: Weapons/Player/Reload/WeaponJammedSingleShot 
   RepairDisabled: true, display: true
+  Crosshair: @RG_crosshairs/PulseRifle
   { Child 0
     Class: Ranged
     AllowRemote: false   
@@ -6267,7 +6271,7 @@
 
     DamageMultiplier_Group: RocketT1
 
-	Mod.Damage: "Damage + Player.Skills['RocketT1AmmoDamage'] + Player.Skills['RocketSkillDamage']"
+	Mod.Damage: "Damage + ((Player.Skills['RocketT1AmmoDamage'] + Player.Skills['RocketSkillDamage']) - (Player.Skills['RocketT1AmmoDamageDown']))"
 	Mod.BlastDamage: "BlastDamage + Player.Skills['RocketT1AmmoBlastDamage'] + Player.Skills['RocketSkillBlastDamage']"
   }
 
@@ -6463,7 +6467,7 @@
 	
     DamageMultiplier_Group: PlasmaCannonT1
 
-	Mod.Damage: "Damage + Player.Skills['PlasmaT1AmmoDamage'] + Player.Skills['PlasmaSkillDamage']"
+	Mod.Damage: "Damage + ((Player.Skills['PlasmaT1AmmoDamage'] + Player.Skills['PlasmaSkillDamage']) - (Player.Skills['PlasmaT1AmmoDamageDown']))"
 	Mod.BlastDamage: "BlastDamage + Player.Skills['PlasmaT1AmmoBlastDamage'] + Player.Skills['PlasmaSkillBlastDamage']"
   }
 
@@ -6488,7 +6492,7 @@
     Range: 350
     Ballistic: false
 
-	Mod.Damage: "Damage + Player.Skills['RocketT2AmmoDamage'] + Player.Skills['RocketSkillDamage']"
+	Mod.Damage: "Damage + ((Player.Skills['RocketT2AmmoDamage'] + Player.Skills['RocketSkillDamage']) - (Player.Skills['RocketT2AmmoDamageDown']))"
 	Mod.BlastDamage: "BlastDamage + Player.Skills['RocketT2AmmoBlastDamage'] + Player.Skills['RocketSkillBlastDamage']"
   }
 
@@ -6559,7 +6563,7 @@
 
     DamageMultiplier_Group: FlamethrowerT1
 
-	Mod.Damage: "Damage + Player.Skills['FlamethrowerT1AmmoDamage'] + Player.Skills['FlamethrowerSkillDamage']"
+	Mod.Damage: "Damage + ((Player.Skills['FlamethrowerT1AmmoDamage'] + Player.Skills['FlamethrowerSkillDamage']) - (Player.Skills['FlamethrowerT1AmmoDamageDown']))"
 	Mod.BlastDamage: "BlastDamage + Player.Skills['FlamethrowerT1AmmoBlastDamage'] + Player.Skills['FlamethrowerSkillBlastDamage']"
   }
 
@@ -7806,6 +7810,46 @@
     PfxMuzzle: SniperMuzzleFireLarge
   }
 }
+# Chaff Launcher - Launches flares/chaff backwards that block incoming fire for 3-4 seconds
+{ +Item Id: 147, Name: ChaffSVWeapon
+  Meshfile: @models/Blocks/WeaponsShip/WeaponSSMinigunPrefab
+  DropMeshfile: Entities/Misc/BagSmallNewPrefab
+  CustomIcon: WeaponSVChaff
+  ShowUser: NoButCSV
+  Canhold: false
+  HoldType: 0
+  StackSize: 500
+  Material: Device
+  Mass: 200, type: float, display: false, formatter: Kilogram
+  Category: Weapons/Items
+  Crosshair: @RG_crosshairs/ShipArtillery
+  { Child 0
+    Class: Ranged
+    IsShootThroughCrosshair: false
+    ROF: 0.333, type: float, display: true, formatter: ROF
+    Range: 100, display: false
+    RangeSpace: 100, display: false
+    Automatic: true    
+    Damage: 5, display: true
+    AmmoCapacity: 6, display: true
+    AmmoType: ChaffCartridgeSV, display: true
+    NoiseStrength: 10, display: false
+    BulletSpread: 0.0, display: false
+    AutoReload: true
+    CheckObstructed: false
+    ReloadDelay: 15, display: true
+    SfxBegin: Weapons/Player/RocketLauncher/FLYBYMissile02Slow
+    SfxNoAmmo: Weapons/Misc/weapon_outofammo_003
+    SfxReload: Weapons/Player/Misc/Reload/RifleBoltActionCock04_reload
+    # PfxMuzzle: SideAutoMuzzleFire
+	PfxMuzzle: ""
+    Tracer: @reforged2/ChaffFire
+	TracerSpeed: 0
+    TracerPerBullet: 1
+	
+    DamageMultiplier_Group: SVGatlingGunT1
+  }
+}
 # ==============================
 # ====== CV Weapons SMW02 ======
 # ==============================
@@ -7917,6 +7961,7 @@
   Material: Device
   Mass: 2715, type: float, display: false, formatter: Kilogram
   Category: Weapons/Items
+  Crosshair: @RG_crosshairs/ShipGeneric
   { Child 0
     Class: LauncherSS
     AllowAt: Space
@@ -7949,6 +7994,7 @@
   Material: Device
   Mass: 5430, type: float, display: false, formatter: Kilogram
   Category: Weapons/Items
+  Crosshair: @RG_crosshairs/ShipGeneric
   { Child 0
     Class: LauncherSS
     AllowAt: Space
@@ -7981,6 +8027,7 @@
   Material: Device
   Mass: 10860, type: float, display: false, formatter: Kilogram
   Category: Weapons/Items
+  Crosshair: @RG_crosshairs/ShipGeneric
   { Child 0
     Class: Ranged
     AllowAt: Space
@@ -8083,6 +8130,7 @@
   Material: Device
   Mass: 2715, type: float, display: false, formatter: Kilogram
   Category: Weapons/Items
+  Crosshair: @RG_crosshairs/ShipPlasma
   { Child 0
     Class: LauncherSS
     AllowAt: Space
@@ -8113,6 +8161,7 @@
   Material: Device
   Mass: 5430, type: float, display: false, formatter: Kilogram
   Category: Weapons/Items
+  Crosshair: @RG_crosshairs/ShipPlasma
   { Child 0
     Class: LauncherSS
     AllowAt: Space
@@ -8143,6 +8192,7 @@
   Material: Device
   Mass: 10860, type: float, display: false, formatter: Kilogram
   Category: Weapons/Items
+  Crosshair: @RG_crosshairs/ShipPlasma
   { Child 0
     Class: LauncherSS
     AllowAt: Space
@@ -8173,6 +8223,7 @@
   Material: Device
   Mass: 2715, type: float, display: false, formatter: Kilogram
   Category: Weapons/Items
+  Crosshair: @RG_crosshairs/ShipGatling
   { Child 0
     Class: Ranged
     AllowAt: Space
@@ -8212,6 +8263,7 @@
   Material: Device
   Mass: 5430, type: float, display: false, formatter: Kilogram
   Category: Weapons/Items
+  Crosshair: @RG_crosshairs/ShipGatling
   { Child 0
     Class: Ranged
     AllowAt: Space
@@ -8251,6 +8303,7 @@
   Material: Device
   Mass: 10860, type: float, display: false, formatter: Kilogram
   Category: Weapons/Items
+  Crosshair: @RG_crosshairs/ShipGatling
   { Child 0
     Class: LauncherSS
     AllowAt: Space
@@ -8281,6 +8334,7 @@
   Material: Device
   Mass: 10860, type: float, display: false, formatter: Kilogram
   Category: Weapons/Items
+  Crosshair: @RG_crosshairs/ShipPlasma
   { Child 0
     Class: Ranged
     AllowAt: Space
@@ -8427,7 +8481,7 @@
   Material: Device
   Mass: 6150, type: float, display: false, formatter: Kilogram
   Category: Weapons/Items
-  Crosshair: @RG_crosshairs/ShipRocket
+  Crosshair: @RG_crosshairs/ShipArtillery
   { Child 0
     Class: LauncherSS
     IsShootThroughCrosshair: true
@@ -8630,7 +8684,7 @@
   Material: Device
   Mass: 6150, type: float, display: false, formatter: Kilogram
   Category: Weapons/Items
-  Crosshair: @RG_crosshairs/ShipRocket
+  Crosshair: @RG_crosshairs/ShipArtillery
   { Child 0
     Class: LauncherSS
     IsShootThroughCrosshair: true
@@ -10899,7 +10953,7 @@
     AmmoUnlimited: true
     ReloadDelay: 3.0, display: false
     Particles: diggerplasma              # particle effect shown at impact
-    # ParticleTransform: Mesh/TurretMSDrillBody/LaserTurretBarrelAnimated1/LaserTurretBarrelAnimated2/Muzzle/Particle1 
+    ParticleTransform: Mesh/TurretMSDrillBody/LaserTurretBarrelAnimated1/LaserTurretBarrelAnimated2/Muzzle/Particle1 
     # SfxBegin: Weapons/Player/Tools/WeaponLightning02_start
     # SfxLoop: Weapons/Player/Tools/WeaponLightning02_loop
     # SfxStop: Weapons/Player/Drill/Mute 
@@ -10908,9 +10962,9 @@
     SfxBegin: Weapons/Player/Drill/THRUSTERFlangerShiftingBurningAirHot_start
     SfxLoop: Weapons/Player/Drill/THRUSTERFlangerShiftingBurningAirHot_loop
     SfxReload: Weapons/Player/Drill/WaltherP99MagInQuick01
-	Tracer: @rg_projectiles/RG_ProjectileBeamDrillHandBlue
-    TracerPerBullet: 1
-	TracerIsBeam: true
+	# Tracer: @rg_projectiles/RG_ProjectileBeamDrillHandBlue
+    # TracerPerBullet: 1
+	# TracerIsBeam: true
 
     DamageMultiplier_Group: DrillHVT1
 	
@@ -10950,15 +11004,15 @@
     AmmoUnlimited: true
     ReloadDelay: 2.7, display: false
     Particles: diggerplasma              # particle effect shown at impact
-    # ParticleTransform: Mesh/TurretMSDrillBody/LaserTurretBarrelAnimated1/LaserTurretBarrelAnimated2/Muzzle/Particle1     # particle effect shown at muzzle
+    ParticleTransform: Mesh/TurretMSDrillBody/LaserTurretBarrelAnimated1/LaserTurretBarrelAnimated2/Muzzle/Particle1     # particle effect shown at muzzle
     # SfxBegin: Weapons/Player/Tools/WeaponLightning02_start
     # SfxLoop: Weapons/Player/Tools/WeaponLightning02_loop
     SfxBegin: Weapons/Player/Drill/THRUSTERFlangerShiftingBurningAirHot_start
     SfxLoop: Weapons/Player/Drill/THRUSTERFlangerShiftingBurningAirHot_loop
     SfxStop: Weapons/Player/Drill/Mute
-	Tracer: @rg_projectiles/RG_ProjectileBeamYellowMSteady
-    TracerPerBullet: 1
-	TracerIsBeam: true
+	# Tracer: @rg_projectiles/RG_ProjectileBeamYellowMSteady
+    # TracerPerBullet: 1
+	# TracerIsBeam: true
 
     DamageMultiplier_Group: DrillCVTurret
   }
@@ -11002,48 +11056,6 @@
   RadialMenu: true
   { Child 0
     Class: Driller
-	DrillMode: 0
-    DecoMode: true
-    InfoPopup: true
-    TerrainMode: true
-    HarvestSupport: true
-    AllowAt: "Space,Planet"
-    ForceMuzzleAiming: true 
-    ROF: 0.5, type: float
-    Damage: 500
-    Radius: 2.5
-    Range: 50, display: false
-    RangeSpace: 20, display: false
-    IgnoreAtmo: true
-    Automatic: true
-    NoiseStrength: 30, display: false   
-    CameraShake: 0  
-    AmmoCapacity: 0, display: false
-    AmmoType: AmmoInfinite, display: true
-    AmmoUnlimited: true
-    ReloadDelay: 3.0, display: false
-    Particles: diggerplasma              # particle effect shown at impact
-    # ParticleTransform: Mesh/TurretMSDrillBody/LaserTurretBarrelAnimated1/LaserTurretBarrelAnimated2/Muzzle/Particle1 
-    # SfxBegin: Weapons/Player/Tools/WeaponLightning02_start
-    # SfxLoop: Weapons/Player/Tools/WeaponLightning02_loop
-    # SfxStop: Weapons/Player/Drill/Mute 
-    # SfxBegin: Weapons/Player/Drill/weapon_flame_005_start
-    # SfxLoop: Weapons/Player/Drill/weapon_flame_005_loop
-    SfxBegin: Weapons/Player/Drill/THRUSTERFlangerShiftingBurningAirHot_start
-    SfxLoop: Weapons/Player/Drill/THRUSTERFlangerShiftingBurningAirHot_loop
-    SfxReload: Weapons/Player/Drill/WaltherP99MagInQuick01
-	Tracer: @rg_projectiles/RG_ProjectileBeamDrillHandBlue
-    TracerPerBullet: 1
-	TracerIsBeam: true
-
-    DamageMultiplier_Group: DrillHVT1
-	
-    RadialText: rdlResourceMining
-    RadialDesc: rdlResourceMiningManualTxt 
-    RadialIcon: Radial_ResourceMining
-  }
-  { Child 1
-    Class: Driller
     AllowAt: "Space,Planet"
     ROF: 0.5, type: float, display: false, formatter: ROF
     Range: 50
@@ -11084,7 +11096,7 @@
     RadialDesc: rdlDisassembleTxt
     RadialIcon: Radial_Disassemble
   }
-  { Child 2
+  { Child 1
     Class: Repair
     AllowAt: "Planet"
     Range: 50
@@ -11118,7 +11130,7 @@
     RadialDesc: rdlRepairTxt
     RadialIcon: Radial_Repair
   }
-  { Child 3
+  { Child 2
     Class: Driller
     AllowAt: "Planet"
     Range: 50
@@ -11174,7 +11186,7 @@
   RadialMenu: true
   { Child 0
     Class: Driller
-	DrillMode: 0
+    DrillMode: 0
     TerrainMode: true
     AllowAt: "Space"
     HarvestSupport: true
@@ -11193,17 +11205,22 @@
     ReloadDelay: 2.7, display: false
     Particles: diggerplasma              # particle effect shown at impact
     # ParticleTransform: Mesh/TurretMSDrillBody/LaserTurretBarrelAnimated1/LaserTurretBarrelAnimated2/Muzzle/Particle1     # particle effect shown at muzzle
+    ParticleTransform: Mesh/TurretMSToolBody/SubGyro/LaserTurretBarrelAnimated1/LaserTurretBarrelAnimated2/Muzzle/Particle1
     # SfxBegin: Weapons/Player/Tools/WeaponLightning02_start
     # SfxLoop: Weapons/Player/Tools/WeaponLightning02_loop
     SfxBegin: Weapons/Player/Drill/THRUSTERFlangerShiftingBurningAirHot_start
     SfxLoop: Weapons/Player/Drill/THRUSTERFlangerShiftingBurningAirHot_loop
     SfxStop: Weapons/Player/Drill/Mute
-	Tracer: @rg_projectiles/RG_ProjectileBeamYellowMSteady
-    TracerPerBullet: 1
-	TracerIsBeam: true
+    # Tracer: @rg_projectiles/RG_ProjectileBeamYellowMSteady
+    # TracerPerBullet: 1
+    # TracerIsBeam: true
 
     DamageMultiplier_Group: DrillCVTurret
-  }
+    
+    RadialText: rdlResourceMining
+    RadialDesc: rdlResourceMiningSpaceTxt
+    RadialIcon: Radial_ResourceMining
+  } 
   { Child 1
     Class: Driller
     AllowAt: "Space"
@@ -12642,6 +12659,40 @@
   UnlockLevel: 1
   TechTreeNames: Hidden
 }
+{ Item Id: 148, Name: ChaffCartridgeSV
+  Meshfile: @rg_projectiles/RG_ProjectilePlasmaBlueL
+  DropMeshfile: Entities/Misc/BagSmallNewPrefab
+  AllowPlacingAt: "SS,GV", display: false
+  HoldType: 0
+  StackSize: 2000
+  Material: Device
+  Canhold: false
+  Mass: 2.5, type: float, display: true, formatter: Kilogram
+  Volume: 2.0, type: float, display: true, formatter: Liter
+  Info: itmSVChaffCartridge, display: true
+  Category: Weapons/Items
+  MarketPrice: 102, display: true
+  { Child 0
+    Class: Projectile
+    Damage: 10
+    NoiseStrength: 100, display: false
+	#BlastParticleName: @rg_projectiles/RG_BlastPlasmaBlueL2
+	BlastParticleName: @reforged2/ChaffFire
+    BlastParticleIndex: 0
+    BlastRadius: 3, display: true
+    BlastDamage: 10, display: true
+    Speed: 100
+    Range: 100
+    SpeedSpace: 100
+    RangeSpace: 100
+    Ballistic: false
+
+    DamageMultiplier_Group: SVGatlingGunT1 
+  }
+
+  UnlockLevel: 1
+  TechTreeNames: Hidden
+}
 # ===========================================
 # ======= HV/SV Turret Weapons SSWA02 =======
 # ===========================================
@@ -13431,7 +13482,7 @@
     BlastParticleIndex: 0
     BlastRadius: 4, display: true
     BlastDamage: 225, display: true
-    Speed: 650
+    Speed: 3000
     Range: 585
     SpeedSpace: 850
     RangeSpace: 835
@@ -14177,9 +14228,9 @@
     BlastParticleIndex: 0
     BlastRadius: 5, display: true
     BlastDamage: 240, display: true
-    Speed: 650
+    Speed: 500
     Range: 475
-    SpeedSpace: 850
+    SpeedSpace: 750
     RangeSpace: 850
     Ballistic: false
 	ShieldDamagePenFac: 0.0, display: false
@@ -14748,9 +14799,9 @@
     BlastParticleIndex: 0
     BlastRadius: 4, display: true
     BlastDamage: 240, display: true
-    Speed: 650
+    Speed: 500
     Range: 505
-    SpeedSpace: 850
+    SpeedSpace: 750
     RangeSpace: 850
     Ballistic: false
 	ShieldDamagePenFac: 0.0, display: false
@@ -15240,14 +15291,14 @@
   ShowUser: Yes
   Mass: 28, type: float, display: true, formatter: Kilogram
   Volume: 8, type: float, display: true, formatter: Liter
-  MarketPrice: 10000, display: true
+  MarketPrice: 5000, display: true
   Info: itmPlasmaConverter, display: true
 }
 { Item Id: 322, Name: AntimatterConverter, Ref: ComponentsTemplate
   ShowUser: Yes
   Mass: 42, type: float, display: true, formatter: Kilogram
   Volume: 10, type: float, display: true, formatter: Liter
-  MarketPrice: 25000, display: true
+  MarketPrice: 12500, display: true
   Info: itmAntimatterConverter, display: true
 }
 # ==================================
@@ -17079,7 +17130,7 @@
     AddStamina: 0
     AddFood: 0
     AddOxygen: 0
-    AddRadiation: -6, display: RadiationValue
+    AddRadiation: -5, display: RadiationValue
     # Buff: MedikitSmallApplied
     Debuff: "RadiationBurn,RadiationPoisoning,Necrosis", display: EffectiveAgainst
     # SfxBegin: UseActions/exhale
@@ -17241,7 +17292,7 @@
     AddStamina: 0
     AddFood: -50, display: FoodValue
     AddOxygen: 0
-    AddRadiation: 0
+    AddRadiation: -1, display: RadiationValue
     Debuff: "RadiationPoisoning", display: EffectiveAgainst
     SfxBegin: UseActions/exhale
   }
@@ -19424,7 +19475,7 @@
     PfxMuzzle: MuzzleFlash6
     Tracer: @rg_projectiles/RG_ProjectileBulletHand
     TracerPerBullet: 1	
-    BulletSpread: 0.175, display: true
+    BulletSpread: 0.333, display: true
     TracerSpeed: 325
     # MaxFireAngle: 20  #(default is 5) 
     Buff: "OpenWound"
@@ -19727,15 +19778,15 @@
   Category: Weapons/Items
   Info: itmLightArmorT1, display: true
     
-  Durability: 1000, display: true
-  DegradationFac: 0.075, type: float, display: false
+  Durability: 10000, display: true
+  DegradationFac: -10.0, type: float, display: false #0.075
   RepairCount: 5, type: int, display: false
   Oxygen: 450, type: int, display: true    # OxygenConsumptionPerMinute = 12.5f;  => consume 500 units of oxygen in 40 min
   Armor: 100, type: int, display: true # 100 armor = 50% damage
   Heat: 15, type: int, display: true
   Cold: 15, type: int, display: true
   Radiation: 2, type: int, display: true
-  FallDamageFac: 0.8, type: float, display: false
+  FallDamageFac: 0.1, type: float, display: false
   PowerFac: 0.40, type: float, display: true # Acceleration
   SpeedFac: 0.9, type: float, display: true # Maximum Speed
   JumpFac: 0.75, type: float, display: false  
@@ -19768,15 +19819,15 @@
   Category: Weapons/Items  
   Info: itmMediumArmorT1, display: true
   
-  Durability: 1000, display: true
-  DegradationFac: 0.075, type: float, display: false
+  Durability: 10000, display: true
+  DegradationFac: -10.0, type: float, display: false #0.075
   RepairCount: 5, type: int, display: false
   Oxygen: 375, type: int, display: true
   Armor: 175, type: int, display: true # 150 armor = 40% damage
   Heat: 15, type: int, display: true
   Cold: 15, type: int, display: true
   Radiation: 4, type: int, display: true
-  FallDamageFac: 0.9, type: float, display: false
+  FallDamageFac: 0.175, type: float, display: false
   PowerFac: 0.35, type: float, display: true
   SpeedFac: 0.70, type: float, display: true
   JumpFac: 0.625, type: float, display: false
@@ -19808,15 +19859,15 @@
   Category: Weapons/Items  
   Info: itmHeavyArmorT1, display: true
      
-  Durability: 1000, display: true
-  DegradationFac: 0.075, type: float, display: false
+  Durability: 10000, display: true
+  DegradationFac: -10.0, type: float, display: false #0.075
   RepairCount: 5, type: int, display: false
   Oxygen: 300, type: int, display: true
   Armor: 250, type: int, display: true
   Heat: 15, type: int, display: true
   Cold: 15, type: int, display: true
   Radiation: 6, type: int, display: true
-  FallDamageFac: 1.00, type: float, display: false
+  FallDamageFac: 0.25, type: float, display: false
   PowerFac: 0.30, type: float, display: true
   SpeedFac: 0.50, type: float, display: true
   JumpFac: 0.50, type: float, display: false
@@ -19842,8 +19893,8 @@
   Volume: 24, type: float, display: true, formatter: Liter
   VolumeCapacity: 250, type: float, display: true, formatter: Liter
     
-  Durability: 1500, display: true
-  DegradationFac: 0.075, type: float, display: false
+  Durability: 15000, display: true
+  DegradationFac: -10.0, type: float, display: false
   RepairCount: 3, type: int, display: false
   NrSlots: 4, type: int, display: true
   
@@ -19859,7 +19910,7 @@
   MarketPrice: 129800, display: true
   Info: itmMediumArmorT3, display: true
   VolumeCapacity: 250, type: float, display: true, formatter: Liter
-  Durability: 1500, display: true
+  Durability: 15000, display: true
   RepairCount: 3, type: int, display: false
   NrSlots: 4, type: int, display: true
   
@@ -19879,7 +19930,7 @@
   Info: itmHeavyArmorT3, display: true
   VolumeCapacity: 250, type: float, display: true, formatter: Liter
   
-  Durability: 1500, display: true
+  Durability: 15000, display: true
   RepairCount: 3, type: int, display: false
   NrSlots: 4, type: int, display: true
   
@@ -19901,7 +19952,7 @@
   VolumeCapacity: 200, type: float, display: true, formatter: Liter
   RepairCount: 4, type: int, display: false
     
-  Durability: 1250, display: true
+  Durability: 12500, display: true
   NrSlots: 3, type: int, display: true
   
   UnlockLevel: 1
@@ -19918,7 +19969,7 @@
   VolumeCapacity: 200, type: float, display: true, formatter: Liter
   RepairCount: 4, type: int, display: false
     
-  Durability: 1250, display: true
+  Durability: 12500, display: true
   NrSlots: 3, type: int, display: true
   
   UnlockLevel: 1
@@ -19935,7 +19986,7 @@
   VolumeCapacity: 200, type: float, display: true, formatter: Liter
   RepairCount: 4, type: int, display: false
     
-  Durability: 1250, display: true
+  Durability: 12500, display: true
   NrSlots: 3, type: int, display: true
   
   UnlockLevel: 1
@@ -19950,7 +20001,7 @@
   MarketPrice: 10000, display: false
   Info: itmLightArmorIDA, display: true
   Mass: 34, type: float, display: false, formatter: Kilogram
-  Durability: 1500, display: true
+  Durability: 15000, display: true
   Cold: 15, type: int, display: true
   Radiation: 3, type: int, display: true
   DropOnDeath: false
@@ -19979,15 +20030,15 @@
   Category: Weapons/Items
   Info: itmSpacesuit, display: true
     
-  Durability: 750, display: true
+  Durability: 7500, display: true
   DegradationFac: 0.05, type: float, display: false
   RepairCount: 3, type: int, display: false
-  Oxygen: 1500, type: int, display: true
+  Oxygen: 1000, type: int, display: true
   Armor: 50, type: int, display: true # 100 armor = 50% damage
   Heat: 10, type: int, display: true
   Cold: 300, type: int, display: true
   Radiation: 5, type: int, display: true
-  FallDamageFac: 1.25, type: float, display: false
+  FallDamageFac: 0.0, type: float, display: false
   PowerFac: 0.30, type: float, display: true # Acceleration
   SpeedFac: 0.9, type: float, display: true # Maximum Speed
   JumpFac: 0.75, type: float, display: false  
@@ -20020,7 +20071,7 @@
   Category: Weapons/Items
   Info: itmHeatsuit, display: true
     
-  Durability: 1250, display: true
+  Durability: 12500, display: true
   DegradationFac: 0.05, type: float, display: false
   RepairCount: 3, type: int, display: false
   Oxygen: 350, type: int, display: true
@@ -20028,7 +20079,7 @@
   Heat: 1250, type: int, display: true
   Cold: 10, type: int, display: true
   Radiation: 12, type: int, display: true
-  FallDamageFac: 3.0, type: float, display: false
+  FallDamageFac: -0.5, type: float, display: false
   PowerFac: 0.35, type: float, display: true # Acceleration
   SpeedFac: 0.70, type: float, display: true # Maximum Speed
   JumpFac: 0.5, type: float, display: false  
@@ -20060,19 +20111,19 @@
   Category: Weapons/Items
   Info: itmCombatsuit, display: true
     
-  Durability: 2000, display: true
-  DegradationFac: 0.05, type: float, display: false
+  Durability: 15000, display: true
+  DegradationFac: -10.0, type: float, display: false
   RepairCount: 3, type: int, display: false
   Oxygen: 0, type: int, display: true
   Armor: 500, type: int, display: true # 100 armor = 50% damage
   Heat: 10, type: int, display: true
   Cold: 10, type: int, display: true
   Radiation: 2, type: int, display: true
-  FallDamageFac: 0.5, type: float, display: false
+  FallDamageFac: 0.33, type: float, display: false
   PowerFac: 0.075, type: float, display: true # Acceleration
   SpeedFac: 0.85, type: float, display: true # Maximum Speed
   JumpFac: 0.25, type: float, display: false  
-  JetpackFac: 0.0, type: float, display: true
+  JetpackFac: 100.0, type: float, display: true
   FoodFac: 2.0, type: float, display: true
   StaminaFac: 2.5, type: float, display: true
   NrSlots: 1, type: int, display: true

@@ -5529,6 +5529,17 @@
     PowerCoil: 2
   }
 }
+# T1 SV Flare Launcher - Uses ChaffCartridgeSV
+{ +Template Name: WeaponSVChaff
+  CraftTime: 8
+  Target: "SmallC,HoverC,BaseC,LargeC,AdvC"
+  { Child Inputs
+	SteelPlate: 8
+    MechanicalComponents: 24
+    Electronics: 6
+    Motor: 6
+  }
+}
 # =========== T2 HV/SV Weapons ============
 # T2 HV/SV Gatling Gun - Uses 20mmBullet
 { +Template Name: WeaponSVGatlingT2
@@ -6688,7 +6699,7 @@
 # Used by HV/SV T3 Gatling Cannon #1020
 { +Template Name: 30mmHEBullet
   OutputCount: 100
-  CraftTime: 10
+  CraftTime: 5
   Target: "SmallC,AdvC"
   { Child Inputs
     SteelPlateArmored: 20
@@ -6722,7 +6733,7 @@
 # Used by HV T3 Cannons/HV T3 Artillery Turret #1340
 { +Template Name: 120mmShell
   OutputCount: 6
-  CraftTime: 10
+  CraftTime: 5
   Target: "SmallC,AdvC"
   { Child Inputs
     SteelPlateArmored: 6
@@ -6786,7 +6797,7 @@
 # Used by SV T3 Rocket Launcher #2560
 { +Template Name: FastRocketSVT3
   OutputCount: 40
-  CraftTime: 10
+  CraftTime: 5
   Target: "SmallC,AdvC"
   { Child Inputs
     TitanPlates: 20
@@ -6846,7 +6857,7 @@
 # Used by HV/SV T3 Railgun #2450
 { +Template Name: RailgunSlugT3
   OutputCount: 20
-  CraftTime: 10
+  CraftTime: 5
   Target: "SmallC,LargeC,AdvC"
   { Child Inputs
     ZascosiumAlloy: 8
@@ -6895,7 +6906,7 @@
 { +Template Name: LaserCannonChargeSVT3
   OutputCount: 2
   DeconOverride: Continue 
-  CraftTime: 10
+  CraftTime: 3
   Target: "SmallC"
   { Child Inputs
     PentaxidElement: 30
@@ -6941,7 +6952,7 @@
 # Used by HV/SV T3 Plasma Cannons #2120
 { +Template Name: PlasmaCannonChargeSVT3
   OutputCount: 20
-  CraftTime: 10
+  CraftTime: 3
   Target: "SmallC"
   { Child Inputs
     ErestrumGel: 20
@@ -6978,7 +6989,7 @@
 # Used by SV T3 Torpedo Launcher #5655
 { +Template Name: TorpedoSV
   OutputCount: 1
-  CraftTime: 15
+  CraftTime: 8
   Target: "SmallC"
   { Child Inputs
 	PlatinOunce: 4
@@ -6999,6 +7010,18 @@
 	HydrogenBottle: 5
     AluminiumPowder: 8
     MagnesiumPowder: 8
+  }
+}
+# Used by ChaffSVWeapon #610
+{ +Template Name: ChaffCartridgeSV
+  OutputCount: 6
+  CraftTime: 2
+  Target: "SmallC,LargeC,AdvC,BaseC,HoverC"
+  { Child Inputs
+    SteelPlate: 1
+    AluminiumPowder: 3
+    MagnesiumPowder: 3
+    Sulfur: 3
   }
 }
 # ===============================
@@ -7077,7 +7100,7 @@
 # Used by CV T3 Missile Launcher #3497
 { +Template Name: FixedRocketCVT3
   OutputCount: 40
-  CraftTime: 10
+  CraftTime: 3
   Target: "SmallC"
   { Child Inputs
     TitanPlates: 15
@@ -7161,7 +7184,7 @@
 # Used by CV T3 Railgun #4950
 { +Template Name: RailgunSlugCVT3
   OutputCount: 20
-  CraftTime: 10
+  CraftTime: 5
   Target: "SmallC,AdvC"
   { Child Inputs
     PlatinBar: 18
@@ -7185,7 +7208,7 @@
 { +Template Name: CannonShellCVT2
   OutputCount: 20
   CraftTime: 8
-  Target: "SmallC,AdvC,LargeC"
+  Target: "SmallC,AdvC"
   { Child Inputs
     SteelPlateArmored: 10
 	SteelPlate: 10
@@ -7197,8 +7220,8 @@
 # Used by CV T3 Cannon #1995
 { +Template Name: CannonShellCVT3
   OutputCount: 10
-  CraftTime: 10
-  Target: "SmallC,AdvC,LargeC"
+  CraftTime: 3
+  Target: "SmallC"
   { Child Inputs
     SteelPlateArmored: 10
 	TitanPlates: 10
@@ -7262,7 +7285,7 @@
 { +Template Name: LaserChargeCVT3
   OutputCount: 1
   DeconOverride: Continue
-  CraftTime: 10
+  CraftTime: 3
   Target: "SmallC"
   { Child Inputs
     PentaxidElement: 30
@@ -7321,7 +7344,7 @@
 # Used by CV T3 Plasma Cannons #3940
 { +Template Name: PlasmaCellCVT3
   OutputCount: 20
-  CraftTime: 10
+  CraftTime: 3
   Target: "SmallC"
   { Child Inputs
     ErestrumGel: 40
@@ -7380,7 +7403,7 @@
 # Used by BA T3 Plasma Turret #3264
 { +Template Name: TurretBAPlasmaChargeT3
   OutputCount: 12
-  CraftTime: 10
+  CraftTime: 3
   Target: "SmallC"
   { Child Inputs
     ErestrumGel: 24
@@ -7420,7 +7443,7 @@
 # Used by CV T2 Plasma Artillery Turrets #2010
 { +Template Name: PlasmaArtilleryShellCV
   OutputCount: 6
-  CraftTime: 10
+  CraftTime: 8
   Target: "SmallC,AdvC"
   { Child Inputs
     SteelPlateArmored: 6
@@ -7434,7 +7457,7 @@
 # Used by BA T2 Plasma Artillery Turrets #2010
 { +Template Name: PlasmaArtilleryShellBA
   OutputCount: 6
-  CraftTime: 10
+  CraftTime: 8
   Target: "SmallC,AdvC"
   { Child Inputs
     SteelPlateArmored: 6
@@ -7449,7 +7472,7 @@
 { +Template Name: PositronAccumulatorCVT3
   OutputCount: 4
   DeconOverride: Continue
-  CraftTime: 10
+  CraftTime: 3
   Target: "SmallC"
   { Child Inputs
     FusionCell: 1
@@ -9189,6 +9212,30 @@
   }
 }
 
+{ +Template Name: Eden_PosterCorp6x2
+  BaseItem: true
+  DeconOverride: Stop
+  CraftTime: 1
+  Target: ""
+  { Child Inputs
+    SteelPlate: 2
+    GlassPlate: 1
+    OpticalFiber: 2
+  }
+}
+
+{ +Template Name: Eden_PosterCorp9x3
+  BaseItem: true
+  DeconOverride: Stop
+  CraftTime: 1
+  Target: ""
+  { Child Inputs
+    SteelPlate: 2
+    GlassPlate: 1
+    OpticalFiber: 2
+  }
+}
+
 # Salvage Dead Plants in crop plots for fiber
 { Template Name: PlantDead
   DeconOverride: Continue
@@ -9263,8 +9310,8 @@
     FluxCoil: 3
 	CapacitorComponent: 8
     Superconductor: 2
-    Coolant: 8
-    XenonBottle: 4
+    Coolant: 4
+    XenonBottle: 2
   }
 }
 # Broken Turret (Dome Model) retrieved from T2 POI Turrets
@@ -9274,14 +9321,14 @@
   { Child Inputs
 	PlatinOunce: 24
     Computer: 16
-    SpareParts: 3
+    SpareParts: 2
 	EnergyMatrix: 20
     Oscillator: 32
     ZascosiumAlloy: 32
     PowerCoil: 6
 	CapacitorComponent: 12
-    Superconductor: 5
-    RadiationShielding: 6
+    Superconductor: 4
+    RadiationShielding: 4
     LargeUpgradeKit: 1
   }
 }
@@ -9290,17 +9337,16 @@
   CraftTime: 30
   Target: ""
   { Child Inputs
-	PlatinOunce: 24
-    XenoSubstrate: 40
-    HeatExchanger: 12
-	GoldIngot: 20
-    Oscillator: 32
+	PlatinOunce: 20
+    XenoSubstrate: 60
+    HeatExchanger: 2
+	GoldIngot: 12
+    Oscillator: 24
     ZascosiumAlloy: 32
-    PowerCoil: 10
+    PowerCoil: 8
 	CapacitorComponent: 16
-    Superconductor: 8
-    RadiationShielding: 8
-    SmallUpgradeKit: 1
+    Superconductor: 2
+    RadiationShielding: 2
     AdvancedUpgradeKit: 1
   }
 }

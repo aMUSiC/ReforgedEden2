@@ -671,26 +671,6 @@ DroneBaseSetup:
                 Amount: 250
                 Extra: 3
 
-          PlanetVesselBase:
-              Name: PlanetVesselBaseSetup
-              Position3D: [ 0, 102, 0]
-              BaseType: PlanetVesselBase
-              KeyId: 0
-              PlanetVessel:
-                - Name: Patrol-S-Hard
-                  Mission: PlanetPatrol
-                  FixedMaxSpeed: 10
-                  RespawnDelay: 12
-                  InitialDelay: 48
-
-                  RangePatrolTask:
-                    Position3D: [ -1000, 80, 0 ]
-                    Radius: 800
-                    DistToGround: 80
-
-                  AttackCVCircleAround:
-                    DistToTarget: 190
-
 DroneSpawning:
     Random:
         - DronesMinMax: [ 5, 10 ]

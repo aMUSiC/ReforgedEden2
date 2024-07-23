@@ -636,7 +636,7 @@ POIs:
 
 # Refinery
     - Type: BA_Alien
-      GroupName: Eden_TSOPolRefinery
+      GroupName: RE2_TSOPolRefinery
       Faction: Polaris
       Mode: Survival
       CountMinMax: [ 1, 1 ]

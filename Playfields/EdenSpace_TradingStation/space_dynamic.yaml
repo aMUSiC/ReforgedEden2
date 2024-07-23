@@ -569,7 +569,7 @@ POIs:
 
 # Refinery
     - Type: BA_Alien
-      GroupName: Eden_TSOPolRefinery
+      GroupName: RE2_TSOPolRefinery
       Faction: Polaris
       FactionTerritory: [Eden_PolarisTerritory]
       # NoShieldReload: True
@@ -953,7 +953,7 @@ POIs:
           Value: 0
 
     - Type: BA_Alien
-      GroupName: TSOTraderRG
+      GroupName: R2TraderSpaceTrade
       Faction: Trader
       FactionTerritory: [Eden_TraderTerritory]
       Mode: Survival

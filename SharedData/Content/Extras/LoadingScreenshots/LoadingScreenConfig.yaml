@@ -5,22 +5,22 @@
 # ---------------------------------------------------------------------------------------
 
 # Overlay title
-Title: <b><#00ffff>Reforged Eden 2 Beta</color></b> <size=65%><#ffffff>(build 16)</color></size>
+Title: <b><#00ffff>Reforged Eden 2 Beta</color></b> <size=65%><#ffffff>(build 18)</color></size>
 
 # Overlay body (typically multi-line text)
 # If commented out, only the title will be displayed
 Body: |
-  <size=135%><#ffffff><b>July 17:</b></color></size>
-  <size=85%>•<indent=3%>Added new experimental feature: Micro-Jump Drive.</indent></size>
-  <size=85%>•<indent=3%>Added new effect projectors.</indent></size>
-  <size=85%>•<indent=3%>Updated Polaris orbital trading stations.</indent></size>
-  <size=85%>•<indent=3%>Added Syndicate Casino and Pentaxid Mining Facility to habitable star systems.</indent></size>
-  <size=85%>•<indent=3%>Added new weapon mod traders that can repair epic weapons and updated mod effects.</indent></size>
-  <size=85%>•<indent=3%>Added new weapon models Gauss Shotgun, Syndicate Uzi, and Light Scout Rifle and rebalanced stats.</indent></size>
-  <size=85%>•<indent=3%>Added new specialized armor sold at ServantCorp traders.</indent></size>
-  <size=85%>•<indent=3%>Updated POIs with new troops and blocks.</indent></size>
-  <size=85%>•<indent=3%>Many, many more updates and fixes. This is a large update.</indent></size>
-  
+  <size=135%><#ffffff><b>July 22:</b></color></size>
+  <size=85%>•<indent=3%>Multitool turrets have a built in drill mode now, combining the function of both the multitool and drill turret into one.</indent></size>
+  <size=85%>•<indent=3%>Adjusted CPU scaling for medium and heavy weapons.</indent></size>
+  <size=85%>•<indent=3%>Greatly increased durability of player armor to help offset protection being reduced by durability damage.</indent></size>
+  <size=85%>•<indent=3%>Added SV Flare Launcher (Experimental). They launch flares behind your ship that will block rockets and interfere with turret tracking for a few seconds.</indent></size>
+  <size=85%>•<indent=3%>Added consoles to abandoned POIs that give info on the POI itself and recommended equipment.</indent></size>
+  <size=85%>•<indent=3%>Added markers to asteroid fields to more easily find resource asteroids.</indent></size>
+  <size=85%>•<indent=3%>Updated Trade Federation space Trading Station Olivine.</indent></size>
+  <size=85%>•<indent=3%>Added mining contracts to Polaris Orbital Refineries.</indent></size>
+  <size=85%>•<indent=3%>Added new holographic advertisements and a new holo screen.</indent></size>
+  <size=85%>•<indent=3%>Misc other changes and fixes.</indent></size>
   <size=85%><#ffff00>Reforged Eden 2 is currently in Beta. You may encounter bugs and other problems while playing. Please leave feedback on the workshop and report any issues you encounter on GitHub.</size>
   
 # To show a certain image at the start of each loading image sequence, specify the respective file name

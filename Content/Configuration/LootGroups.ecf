@@ -410,9 +410,16 @@
   Item_0: AlienOrganism, param1: "1", param2: 0.5
   Item_1: MutatedSubstance, param1: "1", param2: 0.4
   Item_2: AlphaVirus, param1: "1", param2: 0.3
-  Item_3: AlienParts01, param1: "10,15", param2: 0.2
-  Item_4: AlienParts03, param1: "10,15", param2: 0.2
+  Item_3: CrystalsPyramidOrangeStage1, param1: "3,5", param2: 0.2
+  Item_4: CrystalStraightStage1, param1: "3,5", param2: 0.15
   Item_5: QuantumProcessor, param1: "1", param2: 0.1
+}
+{ +LootGroup Name: OptronicsUltra
+  Count: "1"
+  Item_0: SmallOptronicBridge, param1: "4,12", param2: 0.5
+  Item_1: SmallOptronicMatrix, param1: "4,9", param2: 0.4
+  Item_2: LargeOptronicBridge, param1: "4,10", param2: 0.35
+  Item_3: LargeOptronicMatrix, param1: "5,8", param2: 0.3
 }
 # ====================================================================
 # Not used
@@ -618,6 +625,8 @@
   Item_19: Token, param1: "meta=69", param2: 0.1
   Item_20: Token, param1: "meta=70", param2: 0.1
   Item_21: Token, param1: "meta=71", param2: 0.1
+  Item_22: Token, param1: "meta=81", param2: 0.1
+  Item_23: Token, param1: "meta=82", param2: 0.1
 }
 # Unique/Tool Upgrades
 { +LootGroup Name: WeaponUpgradesTool
@@ -635,6 +644,7 @@
   Item_10: Token, param1: "meta=33", param2: 0.1
   Item_11: Token, param1: "meta=34", param2: 0.1
   Item_12: Token, param1: "meta=35", param2: 0.1
+  Item_13: Token, param1: "meta=82", param2: 0.1
 }
 # ==================================================================
 # ==================== Trading Card Tokens =======================
@@ -723,8 +733,6 @@
   Item_3: Token, param1: "meta=162", param2: 0.05
   Item_4: Token, param1: "meta=168", param2: 0.05
 }
-
-
 
 
 # ============================================================================================================================================================================

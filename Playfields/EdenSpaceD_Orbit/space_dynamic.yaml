@@ -1237,7 +1237,7 @@ POIs:
 
 # Refinery
     - Type: BA_Alien
-      GroupName: Eden_TSOPolRefinery
+      GroupName: RE2_TSOPolRefinery
       Faction: Polaris
       Mode: Survival
       CountMinMax: [ 1, 1 ]
@@ -1402,9 +1402,9 @@ POIs:
       InitPower: True
       Properties:
         - Key: HudDistance
-          Value: 2500
+          Value: 3000
         - Key: MapDistance
-          Value: 2500
+          Value: 3000
         - Key: RegenAfter
           Value: 720
 
@@ -1422,15 +1422,15 @@ POIs:
       InitPower: True
       Properties:
         - Key: HudDistance
-          Value: 2500
+          Value: 3000
         - Key: MapDistance
-          Value: 2500
+          Value: 3000
         - Key: RegenAfter
           Value: 720
 
 # ================================================================================================================================================================================= Trader
     - Type: BA_Alien
-      GroupName: TSOTraderRG
+      GroupName: R2TraderSpaceTrade
       # DisplayName: Trading Station
       Faction: Trader
       Mode: Survival
@@ -2021,9 +2021,9 @@ POIs:
       InitPower: True
       Properties:
         - Key: HudDistance
-          Value: 2500
+          Value: 3000
         - Key: MapDistance
-          Value: 2500
+          Value: 3000
         - Key: RegenAfter
           Value: 720
 
@@ -2102,9 +2102,9 @@ POIs:
       InitPower: True
       Properties:
         - Key: HudDistance
-          Value: 2500
+          Value: 3000
         - Key: MapDistance
-          Value: 2500
+          Value: 3000
         - Key: RegenAfter
           Value: 720
 
@@ -2490,9 +2490,9 @@ POIs:
       InitPower: True
       Properties:
         - Key: HudDistance
-          Value: 2500
+          Value: 3000
         - Key: MapDistance
-          Value: 2500
+          Value: 3000
         - Key: RegenAfter
           Value: 720
 
@@ -2510,9 +2510,9 @@ POIs:
       InitPower: True
       Properties:
         - Key: HudDistance
-          Value: 2500
+          Value: 3000
         - Key: MapDistance
-          Value: 2500
+          Value: 3000
         - Key: RegenAfter
           Value: 720
 

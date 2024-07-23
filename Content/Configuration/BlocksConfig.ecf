@@ -3265,7 +3265,7 @@
   EnergyIn: 300, type: int, display: true, formatter: Watt
   HitPoints: 40000, type: int, display: true
   RotSpeed: 45, type: int, display: true
-  CPUIn: 20000, type: int, display: true
+  CPUIn: 17500, type: int, display: true
   SoundRotate: Weapons/Turret/TurretRotateSlow
   # BlastParticleName: @rg_projectiles/RG_BlastCruise
   BlastParticleName: @reforged2/TurretExplosionLargeRocketT2RG
@@ -5296,7 +5296,8 @@
   WeaponItem: MinigunSSWeapon
   ##Model: @models/Blocks/WeaponsShip/WeaponSSMinigunRetractPrefab
   # Model: @models/Blocks/WeaponsShip/WeaponSSMinigunPrefab
-  Model: @reforged2/LightGatlingSmall
+  # Model: @reforged2/LightGatlingSmall
+  Model: @reforged2/LightGatlingSmallV2
   Mesh-Damage-1: D0
   Mesh-Damage-2: D1
   Mesh-Damage-3: D2
@@ -6524,7 +6525,7 @@
 
   UnlockCost: 17, display: true
   UnlockLevel: 10, display: true
-  TechTreeParent: WeaponSVRocketLauncherT1Blocks
+  TechTreeParent: WeaponSVChaff
   TechTreeNames: Small Vessel
 }
 # Sprout
@@ -7639,7 +7640,7 @@
   BlastRadius: 5
   BlastDamage: 1500
   EnergyIn: 95, type: int, display: true, formatter: Watt
-  CPUIn: 20000, type: int, display: true
+  CPUIn: 17500, type: int, display: true
   Volume: 2880, type: float, display: true, formatter: Liter
   Mass: 23520, type: float, display: true, formatter: Kilogram
   HitPoints: 35000, type: int, display: true
@@ -7685,7 +7686,7 @@
   BlastRadius: 6
   BlastDamage: 2500
   EnergyIn: 175, type: int, display: true, formatter: Watt
-  CPUIn: 20000, type: int, display: true
+  CPUIn: 17500, type: int, display: true
   HitPoints: 35000, type: int, display: true
   OccupySizeInBlocks: true
   RepairToTemplate: false, display: true
@@ -7740,7 +7741,7 @@
   
   RotSpeed: 70, type: int, display: true  
   Zoom: 5, type: float
-  CPUIn: 20000, type: int, display: true 
+  CPUIn: 17500, type: int, display: true 
 }
 
 { +Block Id: 553, Name: StationConsole, Ref: DecoTemplate
@@ -7851,7 +7852,7 @@
   HitPoints: 50000, type: int, display: true
   RotSpeed: 90, type: int, display: true
   EnergyIn: 130, type: int, display: true, formatter: Watt
-  CPUIn: 20000, type: int, display: true
+  CPUIn: 17500, type: int, display: true
   Mass: 25500, type: float, display: true, formatter: Kilogram
   XpFactor: 2
   AboveTerrainCheck: false
@@ -12588,7 +12589,7 @@
   Volume: 7700, type: float, display: true, formatter: Liter
   HitPoints: 45000, type: int, display: true
   Mass: 35000, type: float, display: true, formatter: Kilogram
-  CPUIn: 20000, type: int, display: true
+  CPUIn: 17500, type: int, display: true
   TechTreeNames: Hidden
   
   ShowUser: No 
@@ -17956,7 +17957,7 @@
   BlastRadius: 6
   BlastDamage: 6000
   EnergyIn: 300, type: int, display: true, formatter: Watt
-  CPUIn: 20000, type: int, display: true
+  CPUIn: 17500, type: int, display: true
   Mass: 35000, type: float, display: true, formatter: Kilogram
   HitPoints: 45000, type: int, display: true
 
@@ -22404,7 +22405,7 @@
   PickupTarget: BrokenTurretAlien
   TemplateRoot: BrokenTurretAlien
   RotSpeed: 150, type: int, display: true
-  CPUIn: 20000, type: int, display: true
+  CPUIn: 10000, type: int, display: true
   HitPoints: 25000, type: int, display: true
   AboveTerrainCheck: false
   # BlastParticleIndex: 1
@@ -23872,7 +23873,7 @@
   DropMeshfile: Entities/Misc/DropContainerNewPrefab
   BlockColor: "110,110,110"
   Category: Weapons/Items
-  ChildBlocks: "TurretMSTool, TurretMSToolRetract" # TurretMSDrill, TurretMSDrillRetract merged into tool turret
+  ChildBlocks: "TurretMSTool, TurretMSToolRetract, TurretMSDrill, TurretMSDrillRetract"
   MaxCount: 12, type: int, display: true
   ForceMaxCount: true
   StackSize: 500
@@ -23913,7 +23914,7 @@
   IsOxygenTight: varies, display: true        # not all child blocks are the same
   Mass: 35000, type: float, display: true, formatter: Kilogram
   Volume: 7700, type: float, display: true, formatter: Liter
-  CPUIn: 20000, type: int, display: true
+  CPUIn: 17500, type: int, display: true
 
   UnlockCost: 30, display: true
   UnlockLevel: 20, display: true
@@ -24086,7 +24087,7 @@
   StackSize: 250  
   AllowPlacingAt: Base, display: true
   Volume: 7700, type: float, display: true, formatter: Liter
-  CPUIn: 20000, type: int, display: true  
+  CPUIn: 17500, type: int, display: true  
   Mass: 35000, type: float, display: true, formatter: Kilogram
   Info: bkiGroupArtillery, display: true 
   IsOxygenTight: varies, display: true        # not all child blocks are the same
@@ -24348,7 +24349,7 @@
   DropMeshfile: Entities/Misc/DropContainerNewPrefab
   BlockColor: "110,110,110"
   Category: Weapons/Items
-  ChildBlocks: "TurretGVTool, TurretGVToolRetract" # TurretGVDrill, TurretGVDrillRetract merged into tool turret
+  ChildBlocks: "TurretGVTool, TurretGVToolRetract, TurretGVDrill, TurretGVDrillRetract"
   MaxCount: 4, type: int, display: true
   ForceMaxCount: true
   StackSize: 1000
@@ -28604,7 +28605,7 @@
   HitPoints: 35000, type: int, display: true
   RotSpeed: 60, type: int, display: true
   EnergyIn: 15000, type: int, display: true, formatter: Watt
-  CPUIn: 20000, type: int, display: true
+  CPUIn: 17500, type: int, display: true
   XpFactor: 2
   RepFac: 20 # RepFacTurret
   AboveTerrainCheck: false
@@ -28783,6 +28784,7 @@
   IsAccessible: false, type: bool
   CropYield: 3, display: true
   GrowthTimeInfo: 150, type: int, display: true, formatter: Minutes
+  MarketPrice: 11280, display: true
   Collide: "bullet,rocket,melee,sight"
   { Child PlantGrowing
     Next: CrystalsPyramidOrangeStage2
@@ -28852,6 +28854,7 @@
   IsAccessible: false, type: bool
   Collide: "bullet,rocket,melee,sight"
   CropYield: 4, display: true
+  MarketPrice: 19737, display: true
   GrowthTimeInfo: 210, type: int, display: true, formatter: Minutes
   { Child PlantGrowing
     Next: CrystalStraightStage2
@@ -35305,7 +35308,7 @@
   DropMeshfile: Entities/Misc/BagSmallPrefab
   Place: Free
   Info: bkiPlasmaTurbineT2, display: true
-  MarketPrice: 137980, display: true     # Contains non-craftable/purchasable parts. 2x actual market value
+  MarketPrice: 86238, display: true     # Contains non-craftable/purchasable parts. 1.25x actual market value
   IsAccessible: true, type: bool
   BlockColor: "110,110,110"
   AllowPlacingAt: "Base,MS", display: true
@@ -35565,7 +35568,8 @@
   ShowBlockName: true
   MarketPrice: 28404, display: true
   WeaponItem: GatlingSVWeaponT2
-  Model: @reforged2/MediumGatlingSmall
+  # Model: @reforged2/MediumGatlingSmall
+  Model: @reforged2/MediumGatlingSmallV2
   Mesh-Damage-1: D0
   Mesh-Damage-2: D1
   Mesh-Damage-3: D2
@@ -35595,7 +35599,7 @@
   BlastRadius: 4
   BlastDamage: 500
   EnergyIn: 150, type: int, display: true, formatter: Watt
-  CPUIn: 2000, type: int, display: true
+  CPUIn: 1750, type: int, display: true
   HitPoints: 6000, type: int, display: true
   OccupySizeInBlocks: true
   Voxelize: false
@@ -35644,7 +35648,7 @@
   BlastRadius: 5
   BlastDamage: 1000
   EnergyIn: 150, type: int, display: true, formatter: Watt
-  CPUIn: 2000, type: int, display: true
+  CPUIn: 1750, type: int, display: true
   HitPoints: 6000, type: int, display: true
   OccupySizeInBlocks: true
   AboveTerrainCheck: true
@@ -35691,7 +35695,7 @@
   BlastRadius: 5
   BlastDamage: 1200
   EnergyIn: 150, type: int, display: true, formatter: Watt
-  CPUIn: 2000, type: int, display: true
+  CPUIn: 1750, type: int, display: true
   HitPoints: 6000, type: int, display: true
   OccupySizeInBlocks: true
   Voxelize: false
@@ -35740,7 +35744,7 @@
   BlastRadius: 6
   BlastDamage: 1400
   EnergyIn: 150, type: int, display: true, formatter: Watt
-  CPUIn: 2000, type: int, display: true
+  CPUIn: 1750, type: int, display: true
   HitPoints: 4000, type: int, display: true
   OccupySizeInBlocks: true
   Voxelize: false
@@ -35784,7 +35788,7 @@
   BlastRadius: 9
   BlastDamage: 250
   EnergyIn: 150, type: int, display: true, formatter: Watt
-  CPUIn: 2000, type: int, display: true
+  CPUIn: 1750, type: int, display: true
   HitPoints: 4000, type: int, display: true
   OccupySizeInBlocks: true
   Voxelize: false
@@ -35830,7 +35834,7 @@
   BlastRadius: 5
   BlastDamage: 600
   EnergyIn: 150, type: int, display: true, formatter: Watt
-  CPUIn: 2000, type: int, display: true
+  CPUIn: 1750, type: int, display: true
   HitPoints: 6000, type: int, display: true
   OccupySizeInBlocks: true
   Voxelize: false
@@ -35880,7 +35884,7 @@
   BlastRadius: 6
   BlastDamage: 675
   EnergyIn: 150, type: int, display: true, formatter: Watt
-  CPUIn: 2000, type: int, display: true
+  CPUIn: 1750, type: int, display: true
   HitPoints: 6000, type: int, display: true
   OccupySizeInBlocks: true
   Voxelize: false
@@ -35930,7 +35934,7 @@
   BlastRadius: 5
   BlastDamage: 450
   EnergyIn: 150, type: int, display: true, formatter: Watt
-  CPUIn: 2000, type: int, display: true
+  CPUIn: 1750, type: int, display: true
   HitPoints: 6000, type: int, display: true
   OccupySizeInBlocks: true
   Voxelize: false
@@ -35980,7 +35984,7 @@
   BlastRadius: 4
   BlastDamage: 750
   EnergyIn: 150, type: int, display: true, formatter: Watt
-  CPUIn: 2000, type: int, display: true
+  CPUIn: 1750, type: int, display: true
   HitPoints: 6000, type: int, display: true
   OccupySizeInBlocks: true
   Voxelize: false
@@ -36030,7 +36034,7 @@
   BlastRadius: 5
   BlastDamage: 900
   EnergyIn: 150, type: int, display: true, formatter: Watt
-  CPUIn: 2000, type: int, display: true
+  CPUIn: 1750, type: int, display: true
   HitPoints: 6000, type: int, display: true
   OccupySizeInBlocks: true
   Voxelize: false
@@ -36053,7 +36057,8 @@
   MarketPrice: 65414, display: true
   WeaponItem: GatlingSVWeaponT3
   # Model: @reforged2/HeavyVulcanSmall
-  Model: @reforged2/HeavyGatlingSmall
+  # Model: @reforged2/HeavyGatlingSmall
+  Model: @reforged2/HeavyGatlingSmallV2
   Mesh-Damage-1: D0
   Mesh-Damage-2: D1
   Mesh-Damage-3: D2
@@ -36083,7 +36088,7 @@
   BlastRadius: 5
   BlastDamage: 900
   EnergyIn: 300, type: int, display: true, formatter: Watt
-  CPUIn: 4000, type: int, display: true
+  CPUIn: 3250, type: int, display: true
   HitPoints: 8000, type: int, display: true
   OccupySizeInBlocks: true
   Voxelize: false
@@ -36134,7 +36139,7 @@
   BlastRadius: 12
   BlastDamage: 2500
   EnergyIn: 300, type: int, display: true, formatter: Watt
-  CPUIn: 4000, type: int, display: true
+  CPUIn: 3250, type: int, display: true
   HitPoints: 8000, type: int, display: true
   OccupySizeInBlocks: true
   Voxelize: false
@@ -36184,7 +36189,7 @@
   BlastRadius: 5
   BlastDamage: 750
   EnergyIn: 300, type: int, display: true, formatter: Watt
-  CPUIn: 4000, type: int, display: true
+  CPUIn: 3250, type: int, display: true
   HitPoints: 8000, type: int, display: true
   OccupySizeInBlocks: true
   Voxelize: false
@@ -36234,7 +36239,7 @@
   BlastRadius: 8
   BlastDamage: 1250
   EnergyIn: 300, type: int, display: true, formatter: Watt
-  CPUIn: 4000, type: int, display: true
+  CPUIn: 3250, type: int, display: true
   HitPoints: 8000, type: int, display: true
   OccupySizeInBlocks: true
   Voxelize: false
@@ -36283,7 +36288,7 @@
   BlastRadius: 6
   BlastDamage: 900
   EnergyIn: 300, type: int, display: true, formatter: Watt
-  CPUIn: 4000, type: int, display: true
+  CPUIn: 3250, type: int, display: true
   HitPoints: 8000, type: int, display: true
   OccupySizeInBlocks: true
   Voxelize: false
@@ -36333,7 +36338,7 @@
   BlastRadius: 5
   BlastDamage: 1500
   EnergyIn: 150, type: int, display: true, formatter: Watt
-  CPUIn: 4000, type: int, display: true
+  CPUIn: 3250, type: int, display: true
   HitPoints: 8000, type: int, display: true
   OccupySizeInBlocks: true
   AboveTerrainCheck: true
@@ -36384,7 +36389,7 @@
   BlastRadius: 6
   BlastDamage: 1100
   EnergyIn: 300, type: int, display: true, formatter: Watt
-  CPUIn: 4000, type: int, display: true
+  CPUIn: 3250, type: int, display: true
   HitPoints: 8000, type: int, display: true
   OccupySizeInBlocks: true
   Voxelize: false
@@ -36563,7 +36568,7 @@
   BlastRadius: 4
   BlastDamage: 500
   EnergyIn: 200, type: int, display: true, formatter: Watt
-  CPUIn: 2000, type: int, display: true
+  CPUIn: 1750, type: int, display: true
   HitPoints: 7500, type: int, display: true
   RotSpeed: 120, type: int, display: true
   Zoom: 5, type: float
@@ -36604,7 +36609,7 @@
   StackSize: 1000  
   AllowPlacingAt: "SS,GV", display: true
   Volume: 281.25, type: float, display: true, formatter: Liter
-  CPUIn: 2000, type: int, display: true
+  CPUIn: 1750, type: int, display: true
   Mass: 2000, type: float, display: true, formatter: Kilogram
   Info: bkiTurretHVMinigunT2, display: true
   IsOxygenTight: varies, display: true        # not all child blocks are the same
@@ -36643,7 +36648,7 @@
   BlastRadius: 5
   BlastDamage: 1200
   EnergyIn: 200, type: int, display: true, formatter: Watt
-  CPUIn: 2000, type: int, display: true
+  CPUIn: 1750, type: int, display: true
   HitPoints: 7500, type: int, display: true
 
   RotSpeed: 90, type: int, display: true
@@ -36685,7 +36690,7 @@
   StackSize: 1000 
   AllowPlacingAt: GV, display: true
   Volume: 281.25, type: float, display: true, formatter: Liter
-  CPUIn: 2000, type: int, display: true
+  CPUIn: 1750, type: int, display: true
   Mass: 2000, type: float, display: true, formatter: Kilogram
   Info: bkiTurretHVRocketT2, display: true
   IsOxygenTight: varies, display: true        # not all child blocks are the same
@@ -36725,7 +36730,7 @@
   BlastRadius: 6
   BlastDamage: 675
   EnergyIn: 200, type: int, display: true, formatter: Watt
-  CPUIn: 2000, type: int, display: true
+  CPUIn: 1750, type: int, display: true
   HitPoints: 7500, type: int, display: true
 
   RotSpeed: 60, type: int, display: true
@@ -36770,7 +36775,7 @@
   IsOxygenTight: varies, display: true        # not all child blocks are the same
   Mass: 4000, type: float, display: true, formatter: Kilogram
   Volume: 281.25, type: float, display: true, formatter: Liter
-  CPUIn: 2000, type: int, display: true
+  CPUIn: 1750, type: int, display: true
 
   UnlockCost: 15, display: true
   UnlockLevel: 15, display: true
@@ -36807,7 +36812,7 @@
   BlastRadius: 4
   BlastDamage: 525
   EnergyIn: 200, type: int, display: true, formatter: Watt
-  CPUIn: 2000, type: int, display: true
+  CPUIn: 1750, type: int, display: true
   HitPoints: 7500, type: int, display: true
   RotSpeed: 100, type: int, display: true
   Zoom: 5, type: float
@@ -36849,7 +36854,7 @@
   StackSize: 1000  
   AllowPlacingAt: "GV", display: true
   Volume: 281.25, type: float, display: true, formatter: Liter
-  CPUIn: 2000, type: int, display: true
+  CPUIn: 1750, type: int, display: true
   Mass: 2000, type: float, display: true, formatter: Kilogram
   Info: bkiTurretHVCannonT2, display: true
   IsOxygenTight: varies, display: true        # not all child blocks are the same
@@ -36890,7 +36895,7 @@
   BlastRadius: 5
   BlastDamage: 600
   EnergyIn: 200, type: int, display: true, formatter: Watt
-  CPUIn: 2000, type: int, display: true
+  CPUIn: 1750, type: int, display: true
   HitPoints: 7500, type: int, display: true
   RotSpeed: 90, type: int, display: true
   Zoom: 5, type: float
@@ -36933,7 +36938,7 @@
   StackSize: 1000  
   AllowPlacingAt: "SS,GV", display: true
   Volume: 281.25, type: float, display: true, formatter: Liter
-  CPUIn: 2000, type: int, display: true
+  CPUIn: 1750, type: int, display: true
   Mass: 4000, type: float, display: true, formatter: Kilogram
   Info: bkiTurretSVLaserT2, display: true 
   IsOxygenTight: varies, display: true        # not all child blocks are the same
@@ -36977,7 +36982,7 @@
   PickupTarget: TurretMSProjectileBlocksT2
   TemplateRoot: TurretMSProjectileBlocksT2
   EnergyIn: 300, type: int, display: true, formatter: Watt
-  CPUIn: 20000, type: int, display: true
+  CPUIn: 17500, type: int, display: true
   Mass: 20000, type: float, display: true, formatter: Kilogram
   HitPoints: 37500, type: int, display: true
 
@@ -37035,7 +37040,7 @@
   BlastRadius: 4
   BlastDamage: 1000
   EnergyIn: 300, type: int, display: true, formatter: Watt
-  CPUIn: 20000, type: int, display: true
+  CPUIn: 17500, type: int, display: true
   Mass: 20000, type: float, display: true, formatter: Kilogram
   HitPoints: 37500, type: int, display: true
   
@@ -37093,7 +37098,7 @@
   BlastRadius: 4
   BlastDamage: 1150
   EnergyIn: 500, type: int, display: true, formatter: Watt
-  CPUIn: 20000, type: int, display: true
+  CPUIn: 17500, type: int, display: true
   Mass: 25000, type: float, display: true, formatter: Kilogram
   HitPoints: 37500, type: int, display: true
   
@@ -37151,7 +37156,7 @@
   PickupTarget: TurretMSLaserBlocksT2
   TemplateRoot: TurretMSLaserBlocksT2
   EnergyIn: 500, type: int, display: true, formatter: Watt
-  CPUIn: 20000, type: int, display: true
+  CPUIn: 17500, type: int, display: true
   HitPoints: 37500, type: int, display: true
   
   RotSpeed: 45, type: int, display: true
@@ -37209,7 +37214,7 @@
   BlastRadius: 5
   BlastDamage: 6000
   EnergyIn: 300, type: int, display: true, formatter: Watt
-  CPUIn: 20000, type: int, display: true
+  CPUIn: 17500, type: int, display: true
   Mass: 20000, type: float, display: true, formatter: Kilogram
   HitPoints: 37500, type: int, display: true
 
@@ -37265,7 +37270,7 @@
   BlastRadius: 5
   BlastDamage: 1200
   EnergyIn: 300, type: int, display: true, formatter: Watt
-  CPUIn: 20000, type: int, display: true
+  CPUIn: 17500, type: int, display: true
   Mass: 20000, type: float, display: true, formatter: Kilogram
   HitPoints: 37500, type: int, display: true
 
@@ -37323,7 +37328,7 @@
   BlastRadius: 6
   BlastDamage: 10000
   EnergyIn: 600, type: int, display: true, formatter: Watt
-  CPUIn: 20000, type: int, display: true
+  CPUIn: 17500, type: int, display: true
   Mass: 35000, type: float, display: true, formatter: Kilogram
   HitPoints: 37500, type: int, display: true
 
@@ -37381,7 +37386,7 @@
   BlastRadius: 6
   BlastDamage: 10000
   EnergyIn: 600, type: int, display: true, formatter: Watt
-  CPUIn: 20000, type: int, display: true
+  CPUIn: 17500, type: int, display: true
   Mass: 35000, type: float, display: true, formatter: Kilogram
   HitPoints: 37500, type: int, display: true
 
@@ -37431,7 +37436,7 @@
   IsOxygenTight: varies, display: true        # not all child blocks are the same
   Mass: 20000, type: float, display: true, formatter: Kilogram
   Volume: 2880, type: float, display: true, formatter: Liter
-  CPUIn: 20000, type: int, display: true
+  CPUIn: 17500, type: int, display: true
 
   UnlockCost: 30, display: true
   UnlockLevel: 20, display: true
@@ -37461,7 +37466,7 @@
   IsOxygenTight: varies, display: true        # not all child blocks are the same
   Mass: 20000, type: float, display: true, formatter: Kilogram
   Volume: 2880, type: float, display: true, formatter: Liter
-  CPUIn: 20000, type: int, display: true
+  CPUIn: 17500, type: int, display: true
 
   UnlockCost: 30, display: true
   UnlockLevel: 20, display: true
@@ -37491,7 +37496,7 @@
   IsOxygenTight: varies, display: true        # not all child blocks are the same
   Mass: 25000, type: float, display: true, formatter: Kilogram
   Volume: 2880, type: float, display: true, formatter: Liter
-  CPUIn: 20000, type: int, display: true
+  CPUIn: 17500, type: int, display: true
 
   UnlockCost: 30, display: true
   UnlockLevel: 20, display: true
@@ -37532,7 +37537,7 @@
   BlastRadius: 4
   BlastDamage: 1000
   EnergyIn: 300, type: int, display: true, formatter: Watt
-  CPUIn: 20000, type: int, display: true
+  CPUIn: 17500, type: int, display: true
   Mass: 20000, type: float, display: true, formatter: Kilogram
   HitPoints: 37500, type: int, display: true
 
@@ -37590,7 +37595,7 @@
   BlastRadius: 4
   BlastDamage: 1000
   EnergyIn: 300, type: int, display: true, formatter: Watt
-  CPUIn: 20000, type: int, display: true
+  CPUIn: 17500, type: int, display: true
   Mass: 20000, type: float, display: true, formatter: Kilogram
   HitPoints: 37500, type: int, display: true
   
@@ -37647,7 +37652,7 @@
   BlastRadius: 4
   BlastDamage: 1150
   EnergyIn: 500, type: int, display: true, formatter: Watt
-  CPUIn: 20000, type: int, display: true
+  CPUIn: 17500, type: int, display: true
   Mass: 25000, type: float, display: true, formatter: Kilogram
   HitPoints: 37500, type: int, display: true
   
@@ -37705,7 +37710,7 @@
   BlastRadius: 5
   BlastDamage: 2750
   EnergyIn: 500, type: int, display: true, formatter: Watt
-  CPUIn: 20000, type: int, display: true
+  CPUIn: 17500, type: int, display: true
   HitPoints: 37500, type: int, display: true
   
   RotSpeed: 45, type: int, display: true
@@ -37763,7 +37768,7 @@
   BlastRadius: 5
   BlastDamage: 6000
   EnergyIn: 300, type: int, display: true, formatter: Watt
-  CPUIn: 20000, type: int, display: true
+  CPUIn: 17500, type: int, display: true
   Mass: 20000, type: float, display: true, formatter: Kilogram
   HitPoints: 37500, type: int, display: true
 
@@ -37819,7 +37824,7 @@
   BlastRadius: 6
   BlastDamage: 1200
   EnergyIn: 300, type: int, display: true, formatter: Watt
-  CPUIn: 20000, type: int, display: true
+  CPUIn: 17500, type: int, display: true
   Mass: 20000, type: float, display: true, formatter: Kilogram
   HitPoints: 37500, type: int, display: true
 
@@ -37869,7 +37874,7 @@
   IsOxygenTight: varies, display: true        # not all child blocks are the same
   Mass: 20000, type: float, display: true, formatter: Kilogram
   Volume: 2880, type: float, display: true, formatter: Liter
-  CPUIn: 20000, type: int, display: true
+  CPUIn: 17500, type: int, display: true
 
   UnlockCost: 30, display: true
   UnlockLevel: 15, display: true
@@ -37899,7 +37904,7 @@
   IsOxygenTight: varies, display: true        # not all child blocks are the same
   Mass: 20000, type: float, display: true, formatter: Kilogram
   Volume: 2880, type: float, display: true, formatter: Liter
-  CPUIn: 20000, type: int, display: true
+  CPUIn: 17500, type: int, display: true
 
   UnlockCost: 30, display: true
   UnlockLevel: 15, display: true
@@ -37929,7 +37934,7 @@
   IsOxygenTight: varies, display: true        # not all child blocks are the same
   Mass: 25000, type: float, display: true, formatter: Kilogram
   Volume: 2880, type: float, display: true, formatter: Liter
-  CPUIn: 20000, type: int, display: true
+  CPUIn: 17500, type: int, display: true
 
   UnlockCost: 30, display: true
   UnlockLevel: 15, display: true
@@ -37971,7 +37976,7 @@
   BlastRadius: 8
   BlastDamage: 10000
   EnergyIn: 1000, type: int, display: true, formatter: Watt
-  CPUIn: 40000, type: int, display: true
+  CPUIn: 32500, type: int, display: true
   Mass: 109700, type: float, display: true, formatter: Kilogram
   HitPoints: 45000, type: int, display: true
 
@@ -38011,7 +38016,7 @@
   AllowPlacingAt: Base, display: true
   CustomIcon: TurretBAPlasmaT3
   Volume: 7700, type: float, display: true, formatter: Liter
-  CPUIn: 40000, type: int, display: true  
+  CPUIn: 32500, type: int, display: true  
   Mass: 109700, type: float, display: true, formatter: Kilogram
   Info: bkiBaseHeavyTurrets, display: true 
   IsOxygenTight: false, display: true
@@ -38078,7 +38083,7 @@
   Class: Thruster
   IndexName: Thruster
   Group: cpgThruster
-  MarketPrice: 32548, display: true
+  MarketPrice: 22548, display: true
   EssentialCategory: cpgThruster
   Place: Free
   Material: Thruster
@@ -38128,7 +38133,7 @@
   Group: cpgThruster
   EssentialCategory: cpgThruster
   Place: Free
-  MarketPrice: 54660, display: true
+  MarketPrice: 44660, display: true
   Material: Thruster
   Shape: ModelEntity
   ShowBlockName: true
@@ -38227,7 +38232,7 @@
 }
 { Block Name: ThrusterMSMediumT2Blocks
   IndexName: Thruster
-  MarketPrice: 57404, display: true
+  MarketPrice: 47404, display: true
   Material: Thruster
   Shape: Invisible
   Place: Free
@@ -38316,7 +38321,7 @@
   Material: Thruster
   Shape: Invisible
   Place: Free
-  MarketPrice: 125868, display: true
+  MarketPrice: 105868, display: true
   DropMeshfile: Entities/Misc/DropContainerNewPrefab
   StackSize: 250
   BlockColor: "26,50,89"
@@ -38404,7 +38409,7 @@
   Material: Thruster
   Shape: Invisible
   Place: Free
-  MarketPrice: 341958, display: true     # Contains non-craftable/purchasable parts. 1.5x actual market value
+  MarketPrice: 247465, display: true     # Contains non-craftable/purchasable parts. 1.25x actual market value
   DropMeshfile: Entities/Misc/DropContainerNewPrefab
   StackSize: 250
   BlockColor: "26,50,89"
@@ -38441,7 +38446,7 @@
   Class: Thruster
   IndexName: Thruster
   Group: cpgThruster
-  MarketPrice: 178720, display: true     # Contains non-craftable/purchasable parts. 2x actual market value
+  MarketPrice: 80450, display: true     # Contains non-craftable/purchasable parts. 1.25x actual market value
   EssentialCategory: cpgThruster
   Place: Free
   Material: Thruster
@@ -38491,7 +38496,7 @@
   Group: cpgThruster
   EssentialCategory: cpgThruster
   Place: Free
-  MarketPrice: 239084, display: true     # Contains non-craftable/purchasable parts. 2x actual market value
+  MarketPrice: 118177, display: true     # Contains non-craftable/purchasable parts. 1.25x actual market value
   Material: Thruster
   Shape: ModelEntity
   ShowBlockName: true
@@ -38587,7 +38592,7 @@
 }
 { Block Name: ThrusterMSMediumT3Blocks
   IndexName: Thruster
-  MarketPrice: 241800, display: true     # Contains non-craftable/purchasable parts. 2x actual market value
+  MarketPrice: 119875, display: true     # Contains non-craftable/purchasable parts. 1.25x actual market value
   Material: Thruster
   Shape: Invisible
   Place: Free
@@ -38675,7 +38680,7 @@
   Material: Thruster
   Shape: Invisible
   Place: Free
-  MarketPrice: 278720, display: true
+  MarketPrice: 228720, display: true
   DropMeshfile: Entities/Misc/DropContainerNewPrefab
   StackSize: 250
   BlockColor: "10,10,10"
@@ -38761,7 +38766,7 @@
   Material: Thruster
   Shape: Invisible
   Place: Free
-  MarketPrice: 528960, display: true
+  MarketPrice: 453960, display: true
   DropMeshfile: Entities/Misc/DropContainerNewPrefab
   StackSize: 250
   BlockColor: "10,10,10"
@@ -38797,7 +38802,7 @@
   Class: Thruster
   IndexName: Thruster
   Group: cpgThruster
-  MarketPrice: 11534, display: true
+  MarketPrice: 6534, display: true
   EssentialCategory: cpgThruster
   Place: Free
   Material: Thruster
@@ -38843,7 +38848,7 @@
   Material: Thruster
   Shape: Invisible
   Place: Free
-  MarketPrice: 12748, display: true
+  MarketPrice: 7748, display: true
   CustomIcon: ThrusterSVRoundNormalT2
   DropMeshfile: Entities/Misc/BagSmallPrefab
   StackSize: 1000
@@ -38883,7 +38888,7 @@
   Class: Thruster
   IndexName: Thruster
   Group: cpgThruster
-  MarketPrice: 58746, display: true     # Contains non-craftable/purchasable parts. 2x actual market value
+  MarketPrice: 16873, display: true
   EssentialCategory: cpgThruster
   Place: Free
   Material: Thruster
@@ -38976,7 +38981,7 @@
   Material: Thruster
   Shape: Invisible
   Place: Free
-  MarketPrice: 65628, display: true     # Contains non-craftable/purchasable parts. 2x actual market value
+  MarketPrice: 20314, display: true
   CustomIcon: ThrusterSVMediumT3
   DropMeshfile: Entities/Misc/BagSmallPrefab
   StackSize: 1000
@@ -39007,7 +39012,7 @@
   Group: cpgThruster
   EssentialCategory: cpgThruster
   Place: Free
-  # MarketPrice: 37765, display: true     # Contains non-craftable/purchasable parts. 2x actual market value
+  MarketPrice: 25265, display: true
   Material: Thruster
   Shape: ModelEntity
   ShowBlockName: true
@@ -39052,7 +39057,7 @@
   Group: cpgThruster
   EssentialCategory: cpgThruster
   Place: Free
-  MarketPrice: 20706, display: true
+  MarketPrice: 15706, display: true
   Material: Thruster
   Shape: ModelEntity
   ShowBlockName: true
@@ -39098,7 +39103,7 @@
   Group: cpgThruster
   EssentialCategory: cpgThruster
   Place: Free
-  MarketPrice: 96512, display: true     # Contains non-craftable/purchasable parts. 2x actual market value
+  MarketPrice: 35756, display: true
   Material: Thruster
   Shape: ModelEntity
   ShowBlockName: true
@@ -39144,7 +39149,7 @@
   Group: cpgThruster
   EssentialCategory: cpgThruster
   Place: Free
-  MarketPrice: 48844, display: true
+  MarketPrice: 38844, display: true
   Material: Thruster
   Shape: ModelEntity
   ShowBlockName: true
@@ -39191,7 +39196,7 @@
   Group: cpgThruster
   EssentialCategory: cpgThruster
   Place: Free
-  MarketPrice: 193696, display: true     # Contains non-craftable/purchasable parts. 2x actual market value
+  MarketPrice: 89810, display: true     # Contains non-craftable/purchasable parts. 1.25x actual market value
   Material: Thruster
   Shape: ModelEntity
   ShowBlockName: true
@@ -39238,7 +39243,7 @@
   Group: cpgThruster
   EssentialCategory: cpgThruster
   Place: Free
-  MarketPrice: 71660, display: true
+  MarketPrice: 56660, display: true
   Material: Thruster
   Shape: ModelEntity
   ShowBlockName: true
@@ -39285,7 +39290,7 @@
   Group: cpgThruster
   EssentialCategory: cpgThruster
   Place: Free
-  MarketPrice: 268064, display: true     # Contains non-craftable/purchasable parts. 2x actual market value
+  MarketPrice: 120665, display: true     # Contains non-craftable/purchasable parts. 1.25x actual market value
   Material: Thruster
   Shape: ModelEntity
   ShowBlockName: true
@@ -39332,7 +39337,7 @@
   Group: cpgThruster
   EssentialCategory: cpgThruster
   Place: Free
-  MarketPrice: 82346, display: true
+  MarketPrice: 67346, display: true
   Material: Thruster
   Shape: ModelEntity
   ShowBlockName: true
@@ -39379,7 +39384,7 @@
   Group: cpgThruster
   EssentialCategory: cpgThruster
   Place: Free
-  MarketPrice: 332700, display: true     # Contains non-craftable/purchasable parts. 2x actual market value
+  MarketPrice: 161062, display: true     # Contains non-craftable/purchasable parts. 1.25x actual market value
   Material: Thruster
   Shape: ModelEntity
   ShowBlockName: true
@@ -39426,7 +39431,7 @@
   Group: cpgThruster
   EssentialCategory: cpgThruster
   Place: Free
-  MarketPrice: 96572, display: true
+  MarketPrice: 81572, display: true
   Material: Thruster
   Shape: ModelEntity
   ShowBlockName: true
@@ -39473,7 +39478,7 @@
   Group: cpgThruster
   EssentialCategory: cpgThruster
   Place: Free
-  MarketPrice: 384098, display: true     # Contains non-craftable/purchasable parts. 2x actual market value
+  MarketPrice: 193186, display: true     # Contains non-craftable/purchasable parts. 1.25x actual market value
   Material: Thruster
   Shape: ModelEntity
   ShowBlockName: true
@@ -39612,7 +39617,7 @@
   Class: Thruster
   IndexName: Thruster
   Group: cpgThruster
-  MarketPrice: 11534, display: true
+  MarketPrice: 6534, display: true
   EssentialCategory: cpgThruster
   Place: Free
   Material: Thruster
@@ -39659,7 +39664,7 @@
   Material: Thruster
   Shape: Invisible
   Place: Free
-  MarketPrice: 12748, display: true
+  MarketPrice: 7748, display: true
   CustomIcon: ThrusterGVRoundNormalT2
   DropMeshfile: Entities/Misc/BagSmallPrefab
   StackSize: 1000
@@ -39696,7 +39701,7 @@
   Class: Thruster
   IndexName: Thruster
   Group: cpgThruster
-  MarketPrice: 58746, display: true     # Contains non-craftable/purchasable parts. 2x actual market value
+  MarketPrice: 16873, display: true
   EssentialCategory: cpgThruster
   Place: Free
   Material: Thruster
@@ -39788,7 +39793,7 @@
   Material: Thruster
   Shape: Invisible
   Place: Free
-  MarketPrice: 65628, display: true     # Contains non-craftable/purchasable parts. 2x actual market value
+  MarketPrice: 20314, display: true
   CustomIcon: ThrusterGVMediumT3
   DropMeshfile: Entities/Misc/BagSmallPrefab
   StackSize: 1000
@@ -39819,7 +39824,7 @@
   Group: cpgThruster
   EssentialCategory: cpgThruster
   Place: Free
-  MarketPrice: 75530, display: true     # Contains non-craftable/purchasable parts. 2x actual market value
+  MarketPrice: 25265, display: true
   Material: Thruster
   Shape: ModelEntity
   ShowBlockName: true
@@ -39864,7 +39869,7 @@
   Group: cpgThruster
   EssentialCategory: cpgThruster
   Place: Free
-  MarketPrice: 20706, display: true
+  MarketPrice: 15706, display: true
   Material: Thruster
   Shape: ModelEntity
   ShowBlockName: true
@@ -39910,7 +39915,7 @@
   Group: cpgThruster
   EssentialCategory: cpgThruster
   Place: Free
-  MarketPrice: 96512, display: true     # Contains non-craftable/purchasable parts. 2x actual market value
+  MarketPrice: 35756, display: true
   Material: Thruster
   Shape: ModelEntity
   ShowBlockName: true
@@ -40004,7 +40009,7 @@
   Group: cpgThruster
   EssentialCategory: cpgThruster
   Place: Free
-  MarketPrice: 48844, display: true
+  MarketPrice: 38844, display: true
   Material: Thruster
   Shape: ModelEntity
   ShowBlockName: true
@@ -40051,7 +40056,7 @@
   Group: cpgThruster
   EssentialCategory: cpgThruster
   Place: Free
-  MarketPrice: 193696, display: true     # Contains non-craftable/purchasable parts. 2x actual market value
+  MarketPrice: 71848, display: true
   Material: Thruster
   Shape: ModelEntity
   ShowBlockName: true
@@ -40241,7 +40246,7 @@
   BlastRadius: 6
   BlastDamage: 8000
   EnergyIn: 400, type: int, display: true, formatter: Watt
-  CPUIn: 20000, type: int, display: true
+  CPUIn: 17500, type: int, display: true
   HitPoints: 40000, type: int, display: true
   ShieldDamagePenFac: 0.1, display: true
 }
@@ -40288,7 +40293,7 @@
   BlastRadius: 6
   BlastDamage: 8000
   EnergyIn: 400, type: int, display: true, formatter: Watt
-  CPUIn: 20000, type: int, display: true
+  CPUIn: 17500, type: int, display: true
   HitPoints: 30000, type: int, display: true
   ShieldDamagePenFac: 0.1, display: true
 }
@@ -40335,7 +40340,7 @@
   BlastRadius: 4
   BlastDamage: 2500
   EnergyIn: 800, type: int, display: true, formatter: Watt
-  CPUIn: 20000, type: int, display: true
+  CPUIn: 17500, type: int, display: true
   HitPoints: 40000, type: int, display: true
 }
 { Block Name: WeaponCVLaserCannonT2V2
@@ -40381,7 +40386,7 @@
   BlastRadius: 4
   BlastDamage: 4000
   EnergyIn: 800, type: int, display: true, formatter: Watt
-  CPUIn: 20000, type: int, display: true
+  CPUIn: 17500, type: int, display: true
   HitPoints: 30000, type: int, display: true
 }
 { Block Name: WeaponCVPlasmaT2
@@ -40427,7 +40432,7 @@
   BlastRadius: 6
   BlastDamage: 4000
   EnergyIn: 800, type: int, display: true, formatter: Watt
-  CPUIn: 20000, type: int, display: true
+  CPUIn: 17500, type: int, display: true
   HitPoints: 40000, type: int, display: true
 }
 { Block Name: WeaponCVPlasmaT2V2
@@ -40473,7 +40478,7 @@
   BlastRadius: 6
   BlastDamage: 4000
   EnergyIn: 800, type: int, display: true, formatter: Watt
-  CPUIn: 20000, type: int, display: true
+  CPUIn: 17500, type: int, display: true
   HitPoints: 30000, type: int, display: true
 }
 { Block Name: WeaponCVRailgunT2
@@ -40519,7 +40524,7 @@
   BlastRadius: 5
   BlastDamage: 4000
   EnergyIn: 800, type: int, display: true, formatter: Watt
-  CPUIn: 20000, type: int, display: true
+  CPUIn: 17500, type: int, display: true
   HitPoints: 40000, type: int, display: true
   ShieldDamagePenFac: 0.1, display: true
 }
@@ -40566,7 +40571,7 @@
   BlastRadius: 5
   BlastDamage: 4000
   EnergyIn: 800, type: int, display: true, formatter: Watt
-  CPUIn: 20000, type: int, display: true
+  CPUIn: 17500, type: int, display: true
   HitPoints: 30000, type: int, display: true
   ShieldDamagePenFac: 0.1, display: true
 }
@@ -40593,6 +40598,7 @@
   SoundOpen: UseActions/WeaponOpenClose
   SoundClose: UseActions/WeaponOpenClose
   IsActivateable: true
+  IsRetractable: true, display: true
   
   Place: WeaponDir
   AllowPlacingAt: MS, display: true
@@ -40611,7 +40617,7 @@
   BlastRadius: 6
   BlastDamage: 8000
   EnergyIn: 400, type: int, display: true, formatter: Watt
-  CPUIn: 20000, type: int, display: true
+  CPUIn: 17500, type: int, display: true
   HitPoints: 40000, type: int, display: true
   ShieldDamagePenFac: 0.25, display: true
 
@@ -40665,7 +40671,7 @@
   BlastRadius: 7
   BlastDamage: 10000
   EnergyIn: 800, type: int, display: true, formatter: Watt
-  CPUIn: 40000, type: int, display: true
+  CPUIn: 32500, type: int, display: true
   HitPoints: 60000, type: int, display: true
   ShieldDamagePenFac: 0.1, display: true
 }
@@ -40712,7 +40718,7 @@
   BlastRadius: 7
   BlastDamage: 10000
   EnergyIn: 800, type: int, display: true, formatter: Watt
-  CPUIn: 40000, type: int, display: true
+  CPUIn: 32500, type: int, display: true
   HitPoints: 45000, type: int, display: true
   ShieldDamagePenFac: 0.1, display: true
 }
@@ -40759,7 +40765,7 @@
   BlastRadius: 5
   BlastDamage: 2500
   EnergyIn: 1600, type: int, display: true, formatter: Watt
-  CPUIn: 40000, type: int, display: true
+  CPUIn: 32500, type: int, display: true
   HitPoints: 60000, type: int, display: true
 }
 { Block Name: WeaponCVLaserCannonT3V2
@@ -40806,7 +40812,7 @@
   BlastRadius: 5
   BlastDamage: 2500
   EnergyIn: 1600, type: int, display: true, formatter: Watt
-  CPUIn: 40000, type: int, display: true
+  CPUIn: 32500, type: int, display: true
   HitPoints: 45000, type: int, display: true
 }
 { Block Name: WeaponCVRailgunT3
@@ -40852,7 +40858,7 @@
   BlastRadius: 6
   BlastDamage: 6000
   EnergyIn: 1600, type: int, display: true, formatter: Watt
-  CPUIn: 40000, type: int, display: true
+  CPUIn: 32500, type: int, display: true
   HitPoints: 60000, type: int, display: true
   ShieldDamagePenFac: 0.1, display: true
 }
@@ -40900,7 +40906,7 @@
   BlastRadius: 6
   BlastDamage: 6000
   EnergyIn: 1600, type: int, display: true, formatter: Watt
-  CPUIn: 40000, type: int, display: true
+  CPUIn: 32500, type: int, display: true
   HitPoints: 45000, type: int, display: true
   ShieldDamagePenFac: 0.1, display: true
 }
@@ -40947,7 +40953,7 @@
   BlastRadius: 8
   BlastDamage: 6000
   EnergyIn: 1600, type: int, display: true, formatter: Watt
-  CPUIn: 40000, type: int, display: true
+  CPUIn: 32500, type: int, display: true
   HitPoints: 60000, type: int, display: true
 }
 { Block Name: WeaponCVPlasmaT3V2
@@ -40994,7 +41000,7 @@
   BlastRadius: 8
   BlastDamage: 6000
   EnergyIn: 1600, type: int, display: true, formatter: Watt
-  CPUIn: 40000, type: int, display: true
+  CPUIn: 32500, type: int, display: true
   HitPoints: 45000, type: int, display: true
 }
 { Block Name: WeaponCVRocketLauncherT3
@@ -41038,7 +41044,7 @@
   BlastRadius: 7
   BlastDamage: 12000
   EnergyIn: 800, type: int, display: true, formatter: Watt
-  CPUIn: 40000, type: int, display: true
+  CPUIn: 32500, type: int, display: true
   HitPoints: 50000, type: int, display: true
   ShieldDamagePenFac: 0.25, display: true
 
@@ -41088,7 +41094,7 @@
   BlastRadius: 7
   BlastDamage: 10000
   EnergyIn: 1600, type: int, display: true, formatter: Watt
-  CPUIn: 40000, type: int, display: true
+  CPUIn: 32500, type: int, display: true
   HitPoints: 45000, type: int, display: true
   ShieldDamagePenFac: 0.25, display: true
 
@@ -41122,7 +41128,7 @@
   IsOxygenTight: false, display: true
   Mass: 35000, type: float, display: true, formatter: Kilogram
   Volume: 2880, type: float, display: true, formatter: Liter
-  CPUIn: 20000, type: int, display: true
+  CPUIn: 17500, type: int, display: true
   Damage: 134, display: true
   BlastDamage: 875, display: true
   AmmoCapacity: 15, display: true
@@ -41214,7 +41220,7 @@
   IsOxygenTight: false, display: true
   Mass: 80000, type: float, display: true, formatter: Kilogram
   Volume: 5760, type: float, display: true, formatter: Liter
-  CPUIn: 40000, type: int, display: true
+  CPUIn: 32500, type: int, display: true
   ROF: 2.0, type: float, display: true, formatter: ROF
   Damage: 400, display: true
   BlastDamage: 1750, display: true
@@ -41343,7 +41349,7 @@
   IsOxygenTight: false, display: true
   Mass: 910, type: float, display: true, formatter: Kilogram
   Volume: 62.5, type: float, display: true, formatter: Liter
-  CPUIn: 2000, type: int, display: true
+  CPUIn: 1750, type: int, display: true
   BlastShieldDamagePenFac: 0.1, display: true
 
   UnlockCost: 10, display: true
@@ -42018,7 +42024,7 @@
   Mass: 2000, type: float, display: true, formatter: Kilogram
   Volume: 16, type: float, display: true, formatter: Liter
   StackSize: 1000
-  VolumeCapacity: 20000, type: float, display: true, formatter: Liter
+  VolumeCapacity: 24000, type: float, display: true, formatter: Liter
   Info: bkiContainerQuantum, display: true
   ShowBlockName: true
   IsActivateableInCP: true
@@ -42027,8 +42033,8 @@
   #IsDuplicateable: false
   Category: Devices
   RepairToTemplate: false, display: true
-  EnergyIn: 10, type: int, display: true, formatter: Watt
-  CPUIn: 50, type: int, display: true
+  EnergyIn: 5, type: int, display: true, formatter: Watt
+  CPUIn: 20, type: int, display: true
   HitPoints: 4000, type: int, display: true
   DowngradeTo: ContainerExtensionLarge, display: false
   BlastParticleIndex: 13
@@ -42048,10 +42054,10 @@
   Volume: 4, type: float, display: true, formatter: Liter
   CustomIcon: QuantumContainerExtensionLarge
   StackSize: 2000
-  VolumeCapacity: 320, type: float, display: true, formatter: Liter
+  VolumeCapacity: 375, type: float, display: true, formatter: Liter
   DowngradeTo: ContainerExtensionSmall, display: false
   CPUIn: 5, type: int, display: true  
-  EnergyIn: 5, type: int, display: true, formatter: Watt
+  EnergyIn: 3, type: int, display: true, formatter: Watt
   AllowPlacingAt: "SS,GV", display: true
   ChildShapes: "Cube, CutCornerE, CutCornerB, SlicedCornerA1, CornerHalfB, CornerSmallC, CornerC, CornerHalfA3, RampCMedium, RampA, RampC, CornerRoundB, CornerRoundADouble, RoundCornerA, CubeRoundConnectorA, EdgeRound, Cylinder, SphereHalf, Cone, ConeB, CutCornerC, Cylinder6Way, CornerRoundATriple, CornerA, CornerHalfA1, CornerDoubleA3, CornerSmallB, PyramidA, CubeHalf, RampBMedium, RampD, CutCornerEMedium"
   
@@ -42270,7 +42276,7 @@
   WeaponItem: DetectorCVT3Weapon
   WeaponItemRotation: false
   TurretTargetIgnore: true
-  MarketPrice: 190851, display: true     # Contains non-craftable/purchasable parts. 1.5x actual market value
+  MarketPrice: 159042, display: true     # Contains non-craftable/purchasable parts. 1.25x actual market value
   IndexName: WeaponShip
   Group: cpgDetector
   Material: WeaponLarge
@@ -43048,7 +43054,7 @@
   TechTreeNames: Hidden
 }
 { +Block Name: RepairBayCVT3, Ref: RepairBayCVT2
-  Model: @reforged2/RepairPlatformRG
+  Model: @reforged2/RepairPlatformRGV2
   SizeInBlocks: "5,1,5", display: true
   MarketPrice: 654560, display: true
   
@@ -43066,7 +43072,7 @@
   UpgradeTo: null, display: false
   CPUIn: 40000, type: int, display: true
   Repairs: "MS,SS,GV", display: true
-  IsOxygenTight: false, display: true
+  IsOxygenTight: true, display: true
   RepairToTemplate: false, display: true
 }
 # ===================================================================
@@ -43578,6 +43584,53 @@
   TechTreeParent: ShieldGeneratorBA
   TechTreeNames: "Base"
 }
+# Chaff Launcher
+{ Block Name: WeaponSVChaff
+  Class: Weapon
+  IndexName: WeaponShip
+  Group: cpgWeapon
+  Material: WeaponSmall
+  MarketPrice: 884, display: true
+  Shape: ModelEntity
+  ShowBlockName: true
+  WeaponItem: ChaffSVWeapon
+  Model: @reforged2/ChaffLauncherSVT1
+  Mesh-Damage-1: D0
+  Mesh-Damage-2: D1
+  Mesh-Damage-3: D2
+  Mesh-Damage-4: D3
+  DropMeshfile: Entities/Misc/DropContainerNewPrefab
+  IsTextureable: true
+  IsGPUInstance: false
+  Texture: 50 
+  SoundOpen: UseActions/WeaponOpenClose
+  SoundClose: UseActions/WeaponOpenClose
+  IsActivateable: true
+  #IsRetractable: true, display: true
+  
+  Place: WeaponDir
+  AllowPlacingAt: "SS", display: true
+  SizeInBlocks: "1,3,3", display: true
+  Volume: 125, type: float, display: true, formatter: Liter
+  Mass: 200, type: float, display: true, formatter: Kilogram
+  Info: bkiWeaponSVChaffT1, display: true
+  Category: Weapons/Items
+  BlockColor: "110,110,110"
+  StackSize: 500
+  MaxCount: 4, type: int, display: true
+  BlastParticleIndex: 5
+  BlastRadius: 2
+  BlastDamage: 100
+  EnergyIn: 10, type: int, display: true, formatter: Watt
+  CPUIn: 300, type: int, display: true
+  HitPoints: 750, type: int, display: true
+  OccupySizeInBlocks: true
+
+  UnlockCost: 3, display: true
+  UnlockLevel: 7, display: true
+  TechTreeParent: WeaponSVRocketLauncherT1Blocks
+  TechTreeNames: Small Vessel
+}
 # =========================================
 # Large Shield Boosters
 # =========================================
@@ -43927,7 +43980,7 @@
 { Block Name: ShieldBoosterLargeT3Blocks
   IndexName: ShieldBooster
   Group: cpgShield
-  MarketPrice: 407508, display: true     # Contains non-craftable/purchasable parts. 1.5x actual market value
+  MarketPrice: 339590, display: true     # Contains non-craftable/purchasable parts. 1.25x actual market value
   Material: Device
   Shape: Invisible
   Place: Free
@@ -44266,7 +44319,7 @@
 { Block Name: ShieldBoosterSmallT3Blocks
   IndexName: ShieldBooster
   Group: cpgShield
-  MarketPrice: 103431, display: true     # Contains non-craftable/purchasable parts. 1.5x actual market value
+  MarketPrice: 86192, display: true     # Contains non-craftable/purchasable parts. 1.25x actual market value
   Material: Device
   Shape: Invisible
   Place: Free
@@ -44349,7 +44402,7 @@
   TemplateRoot: BrokenTurretDome
   PickupTarget: BrokenTurretDome
   RotSpeed: 135, type: int, display: true
-  CPUIn: 20000, type: int, display: true
+  CPUIn: 17500, type: int, display: true
   HitPoints: 50000, type: int, display: true
 }
 { Block Name: TurretPOIFlakT1, Ref: TurretPOIGatlingT1
@@ -44372,7 +44425,7 @@
   TemplateRoot: BrokenTurretDome
   PickupTarget: BrokenTurretDome
   RotSpeed: 135, type: int, display: true
-  CPUIn: 20000, type: int, display: true
+  CPUIn: 17500, type: int, display: true
   HitPoints: 50000, type: int, display: true
   # BlastParticleName: @rg_projectiles/RG_BlastFlakMultiL
   BlastParticleName: @reforged2/TurretExplosionLargeRocketRG
@@ -44390,7 +44443,7 @@
   TemplateRoot: BrokenTurretDome
   PickupTarget: BrokenTurretDome
   RotSpeed: 90, type: int, display: true
-  CPUIn: 20000, type: int, display: true
+  CPUIn: 17500, type: int, display: true
   HitPoints: 50000, type: int, display: true
   # BlastParticleName: @rg_projectiles/RG_BlastTorpedoL
   BlastParticleName: @reforged2/TurretExplosionLargeRocketT2RG
@@ -44408,7 +44461,7 @@
   TemplateRoot: BrokenTurretDome
   PickupTarget: BrokenTurretDome
   RotSpeed: 180, type: int, display: true
-  CPUIn: 20000, type: int, display: true
+  CPUIn: 17500, type: int, display: true
   HitPoints: 50000, type: int, display: true
   # BlastParticleName: @rg_projectiles/RG_BlastEMP2
   BlastParticleName: @reforged2/TurretExplosionLargeLaserRG
@@ -44516,7 +44569,7 @@
   TemplateRoot: BrokenTurretDome
   PickupTarget: BrokenTurretDome
   RotSpeed: 135, type: int, display: true
-  CPUIn: 20000, type: int, display: true
+  CPUIn: 17500, type: int, display: true
   HitPoints: 50000, type: int, display: true
 }
 { Block Name: TurretPlanetFlakT1, Ref: TurretPlanetGatlingT1
@@ -44539,7 +44592,7 @@
   TemplateRoot: BrokenTurretDome
   PickupTarget: BrokenTurretDome
   RotSpeed: 135, type: int, display: true
-  CPUIn: 20000, type: int, display: true
+  CPUIn: 17500, type: int, display: true
   HitPoints: 50000, type: int, display: true
   # BlastParticleName: @rg_projectiles/RG_BlastFlakMultiL
   BlastParticleName: @reforged2/TurretExplosionLargeRocketRG
@@ -44566,7 +44619,7 @@
   TemplateRoot: BrokenTurretDome
   PickupTarget: BrokenTurretDome
   RotSpeed: 90, type: int, display: true
-  CPUIn: 20000, type: int, display: true
+  CPUIn: 17500, type: int, display: true
   HitPoints: 50000, type: int, display: true
   # BlastParticleName: @rg_projectiles/RG_BlastTorpedoL
   BlastParticleName: @reforged2/TurretExplosionLargeRocketT2RG
@@ -44593,7 +44646,7 @@
   TemplateRoot: BrokenTurretDome
   PickupTarget: BrokenTurretDome
   RotSpeed: 135, type: int, display: true
-  CPUIn: 20000, type: int, display: true
+  CPUIn: 17500, type: int, display: true
   HitPoints: 50000, type: int, display: true
   # BlastParticleName: @rg_projectiles/RG_BlastPlasmaRedL3
   BlastParticleName: @reforged2/TurretExplosionLargeLaserRedRG
@@ -44619,7 +44672,7 @@
   TemplateRoot: BrokenTurretDome
   PickupTarget: BrokenTurretDome
   RotSpeed: 135, type: int, display: true
-  CPUIn: 20000, type: int, display: true
+  CPUIn: 17500, type: int, display: true
   HitPoints: 50000, type: int, display: true
   # BlastParticleName: @reforged2/PlasmaBlastHeavyRedRG
   BlastParticleName: @reforged2/TurretExplosionLargePlasmaRedRG
@@ -44646,7 +44699,7 @@
   TemplateRoot: BrokenTurretDome
   PickupTarget: BrokenTurretDome
   RotSpeed: 90, type: int, display: true
-  CPUIn: 20000, type: int, display: true
+  CPUIn: 17500, type: int, display: true
   HitPoints: 50000, type: int, display: true
   # BlastParticleName: @rg_projectiles/RG_BlastCruise2
   BlastParticleName: @reforged2/TurretExplosionLargeRocketRG
@@ -46390,7 +46443,7 @@
   BlastRadius: 3
   BlastDamage: 0
   EnergyIn: 1, type: int, display: false, formatter: Watt
-  ChildBlocks: "Eden_WarningLight, Eden_WarningLightSilent, Eden_ButtonPanel, Eden_ControlPanel, Eden_ConsoleWallBlueThin, Eden_ConsoleWallBlue1x1, Eden_ConsoleWallOrangeSmall, Eden_ConsoleHoloBlue1x1, Eden_ConsoleWallBlue1x1Double, Eden_ConsoleWallBlue1x1Quad"
+  ChildBlocks: "Eden_WarningLight, Eden_WarningLightSilent, Eden_ButtonPanel, Eden_ControlPanel, Eden_ConsoleWallBlueThin, Eden_ConsoleWallBlue1x1, Eden_ConsoleWallOrangeSmall, Eden_ConsoleHoloBlue1x1, Eden_ConsoleWallBlue1x1Double, Eden_ConsoleWallBlue1x1Quad, Eden_ConsoleNews1x2"
 
   UnlockCost: 0
   UnlockLevel: 1 
@@ -46528,6 +46581,12 @@
 # Inset Wall Console (Blue 1x1 Quad)
 { +Block Name: Eden_ConsoleWallBlue1x1Quad, Ref: Eden_ConsoleWallBlueThin
   Model: @eden_blockmodels/Eden_ConsoleWallBlue1x1Quad
+}
+
+# Inset News Console (2x1)
+{ +Block Name: Eden_ConsoleNews1x2, Ref: Eden_ConsoleWallBlueThin
+  Model: @eden_blockmodels/Eden_ConsoleNews1x2
+  SizeInBlocks: "2,1,1", display: true
 }
 # ----------------------------------------- Block group for Effect Projectors
 # Effect Projectors
@@ -46869,6 +46928,18 @@
   SizeInBlocks: "1,1,1", display: true
 }
 
+# Corporation Advertisment (6x2)
+{ +Block Name: Eden_PosterCorp6x2, Ref: Eden_PosterCorp1x1
+  Model: @eden_blockmodels/Eden_PosterCorp6x2
+  SizeInBlocks: "2,1,1", display: true
+}
+
+# Corporation Advertisment (9x3)
+{ +Block Name: Eden_PosterCorp9x3, Ref: Eden_PosterCorp1x1
+  Model: @eden_blockmodels/Eden_PosterCorp9x3
+  SizeInBlocks: "1,1,1", display: true
+}
+
 # Wall posters
 
 # Holo Poster (Cosmic Sea)
@@ -46922,7 +46993,7 @@
   Material: Foundation
   # ExecuteOnCollide: InsertKillDialogueHere
   Class: Damage
-  Damage: 225
+  Damage: 400
   Shape: ModelEntity
   Place: Free
   Group: cpgEffects
@@ -46948,13 +47019,13 @@
 # Laser Fence (3x1)
 { +Block Name: Eden_LaserFence3x1, Ref: Eden_LaserFence1x1
   Model: @eden_blockmodels/Eden_LaserFence3x1
-  Damage: 200
+  Damage: 350
 }
 
 # Laser Fence (3x1 Half)
 { +Block Name: Eden_LaserFence3x1Half, Ref: Eden_LaserFence1x1
   Model: @eden_blockmodels/Eden_LaserFence3x1Half
-  Damage: 200
+  Damage: 350
 }
 
 # Poison Gas Cloud
@@ -47018,7 +47089,7 @@
 
   BlastParticleName: @reforged2/BarrelExplosionFire
   BlastParticleIndex: 0
-  BlastRadius: 4, display: Radius 
+  BlastRadius: 6, display: Radius 
   BlastDamage: 650 
 }
 { +Block Name: ExplosiveBarrelCoolant, Ref: ExplosiveBarrelFuel
@@ -48601,7 +48672,7 @@
   EnergyIn: 0, type: int, display: true, formatter: Watt
   CPUIn: 150, type: int, display: true
   StackSize: 4000
-  Info: Eden_WindTurbineIdleinfo, display: true
+  Info: Eden_WindTurbineIdleinfoTest, display: true
   Category: Devices
   XpFactor: 1
   PickupTarget: Eden_WindTurbineIdle
@@ -49006,7 +49077,7 @@
   IsOxygenTight: false, display: true
   Volume: 187.5, type: float, display: true, formatter: Liter
   Mass: 2250, type: float, display: true, formatter: Kilogram
-  CPUIn: 2000, type: int, display: true
+  CPUIn: 1750, type: int, display: true
 
   UnlockCost: 75, display: true
   UnlockLevel: 20, display: true
@@ -49050,7 +49121,7 @@
   BlastRadius: 5
   BlastDamage: 600
   EnergyIn: 225, type: int, display: true, formatter: Watt
-  CPUIn: 2000, type: int, display: true
+  CPUIn: 1750, type: int, display: true
   HitPoints: 6000, type: int, display: true
 
   PickupTarget: Eden_ModularLaserBlocksSV
@@ -49112,7 +49183,7 @@
   BlastRadius: 4
   BlastDamage: 500
   EnergyIn: 200, type: int, display: true, formatter: Watt
-  CPUIn: 2000, type: int, display: true
+  CPUIn: 1750, type: int, display: true
   HitPoints: 7500, type: int, display: true
   RotSpeed: 140, type: int, display: true
   Zoom: 5, type: float
@@ -49400,7 +49471,7 @@
   StackSize: 500
   MaxCount: 12, type: int, display: true
   ForceMaxCount: true
-  BlastParticleName: @rg_projectiles/RG_BlastEMPM2
+  BlastParticleName: @reforged2/TurretExplosionLargeLaserRG
   BlastParticleIndex: 0
   BlastRadius: 5
   BlastDamage: 1000
@@ -49450,7 +49521,7 @@
   StackSize: 500
   MaxCount: 12, type: int, display: true
   ForceMaxCount: true
-  BlastParticleName: @rg_projectiles/RG_BlastEMPM2
+  BlastParticleName: @reforged2/TurretExplosionLargeLaserRG
   BlastParticleIndex: 0
   BlastRadius: 5
   BlastDamage: 1000
@@ -49500,14 +49571,14 @@
   StackSize: 500
   MaxCount: 6, type: int, display: true
   ForceMaxCount: true
-  BlastParticleName: @rg_projectiles/RG_BlastEMPM2
+  BlastParticleName: @reforged2/TurretExplosionLargeLaserT2RG
   BlastParticleIndex: 0
   BlastRadius: 5
   BlastDamage: 2500
   EnergyDynamicGroup: DrillTurret
   EnergyIn: 23320, type: int, display: true, formatter: Watt  
   EnergyInIdle: 200, type: int, display: true, formatter: Watt
-  CPUIn: 40000, type: int, display: true
+  CPUIn: 32500, type: int, display: true
   Mass: 100000, type: float, display: true, formatter: Kilogram
   HitPoints: 50000, type: int, display: true
   MarketPrice: 1233879, display: true
@@ -49551,7 +49622,7 @@
   MaxCount: 8, type: int, display: true
   ForceMaxCount: true
   BlastParticleIndex: 5
-  HitPoints: 100, type: int, display: true
+  HitPoints: 500, type: int, display: true
   EnergyIn: 10, type: int, display: true, formatter: Watt
   CPUIn: 100, type: int, display: true
   RotSpeed: 600, type: int, display: false
@@ -49649,7 +49720,7 @@
   StackSize: 500
   MaxCount: 24, type: int, display: true
   ForceMaxCount: true
-  BlastParticleName: @rg_projectiles/RG_BlastFlakMulti
+  BlastParticleName: @reforged2/TurretExplosionLargeRG
   BlastParticleIndex: 0
   BlastRadius: 4
   BlastDamage: 750
@@ -49691,7 +49762,8 @@
   StackSize: 500
   MaxCount: 24, type: int, display: true
   ForceMaxCount: true
-  BlastParticleIndex: 1
+  BlastParticleName: @reforged2/TurretExplosionLargeRocketRG
+  BlastParticleIndex: 0
   BlastRadius: 4
   BlastDamage: 1875
   EnergyIn: 350, type: int, display: true, formatter: Watt
@@ -49766,7 +49838,7 @@
   StackSize: 500
   MaxCount: 24, type: int, display: true
   ForceMaxCount: true
-  BlastParticleName: @rg_projectiles/RG_BlastPlasmaBlueL3
+  BlastParticleName: @reforged2/TurretExplosionLargeLaserRG
   BlastParticleIndex: 0
   BlastRadius: 4
   BlastDamage: 850
@@ -49860,7 +49932,7 @@
   BlastRadius: 6
   BlastDamage: 4000
   EnergyIn: 900, type: int, display: true, formatter: Watt
-  CPUIn: 30000, type: int, display: true
+  CPUIn: 26250, type: int, display: true
   HitPoints: 45000, type: int, display: true
   ShieldCapacityBonus: -2500, type: int, display: true
 
@@ -49897,12 +49969,12 @@
   StackSize: 500
   MaxCount: 12, type: int, display: true
   ForceMaxCount: true
-  BlastParticleName: @rg_projectiles/RG_BlastFlakMulti
+  BlastParticleName: @reforged2/TurretExplosionLargeRG
   BlastParticleIndex: 0
   BlastRadius: 4
   BlastDamage: 1000
   EnergyIn: 700, type: int, display: true, formatter: Watt
-  CPUIn: 15000, type: int, display: true
+  CPUIn: 13125, type: int, display: true
   Mass: 15000, type: float, display: true, formatter: Kilogram
   Volume: 8230, type: float, display: true, formatter: Liter
   HitPoints: 28125, type: int, display: true 
@@ -49923,11 +49995,12 @@
   Info: Eden_TurretMissileLightT2info, display: true
   MaxCount: 12, type: int, display: true
   ForceMaxCount: true
-  BlastParticleIndex: 1
+  BlastParticleName: @reforged2/TurretExplosionLargeRocketRG
+  BlastParticleIndex: 0
   BlastRadius: 4
   BlastDamage: 4500
   EnergyIn: 700, type: int, display: true, formatter: Watt
-  CPUIn: 15000, type: int, display: true
+  CPUIn: 13125, type: int, display: true
   Mass: 15000, type: float, display: true, formatter: Kilogram
   HitPoints: 28125, type: int, display: true
   MarketPrice: 25714, display: true
@@ -49962,11 +50035,12 @@
   Texture: 50
   WeaponItem: Eden_TurretFlakClose_Weapon #Weapon
   Homing: true, display: true
-  BlastParticleIndex: 8
+  BlastParticleName: @reforged2/TurretExplosionLargeRocketRG
+  BlastParticleIndex: 0
   BlastRadius: 5
   BlastDamage: 1200
   EnergyIn: 700, type: int, display: true, formatter: Watt
-  CPUIn: 20000, type: int, display: true
+  CPUIn: 17500, type: int, display: true
   Volume: 2880, type: float, display: true, formatter: Liter
   Mass: 20000, type: float, display: true, formatter: Kilogram
   HitPoints: 37500, type: int, display: true
@@ -50008,12 +50082,12 @@
   StackSize: 500
   MaxCount: 12, type: int, display: true
   ForceMaxCount: true
-  BlastParticleName: @rg_projectiles/RG_BlastFlakMulti
+  BlastParticleName: @reforged2/TurretExplosionLargeRG
   BlastParticleIndex: 0
   BlastRadius: 4
   BlastDamage: 1000
   EnergyIn: 875, type: int, display: true, formatter: Watt
-  CPUIn: 25000, type: int, display: true
+  CPUIn: 21875, type: int, display: true
   Mass: 25000, type: float, display: true, formatter: Kilogram
   HitPoints: 46875, type: int, display: true
   MarketPrice: 16794, display: true
@@ -50056,12 +50130,12 @@
   StackSize: 500
   MaxCount: 12, type: int, display: true
   ForceMaxCount: true
-  BlastParticleName: @rg_projectiles/RG_BlastFlakMulti
+  BlastParticleName: @reforged2/TurretExplosionLargePlasmaRG
   BlastParticleIndex: 0
   BlastRadius: 4
   BlastDamage: 1000
   EnergyIn: 1750, type: int, display: true, formatter: Watt
-  CPUIn: 25000, type: int, display: true
+  CPUIn: 21875, type: int, display: true
   Mass: 25000, type: float, display: true, formatter: Kilogram
   HitPoints: 28125, type: int, display: true
   MarketPrice: 80268, display: true
@@ -50099,12 +50173,12 @@
   StackSize: 500
   MaxCount: 12, type: int, display: true
   ForceMaxCount: true
-  BlastParticleName: @rg_projectiles/RG_BlastPlasmaBlueL1
+  BlastParticleName: @reforged2/TurretExplosionLargePlasmaRG
   BlastParticleIndex: 0
   BlastRadius: 5
   BlastDamage: 2750
   EnergyIn: 2000, type: int, display: true, formatter: Watt
-  CPUIn: 20000, type: int, display: true
+  CPUIn: 17500, type: int, display: true
   Volume: 2880, type: float, display: true, formatter: Liter
   Mass: 20000, type: float, display: true, formatter: Kilogram
   HitPoints: 37500, type: int, display: true
@@ -50145,7 +50219,7 @@
   IsOxygenTight: false, display: true
   Mass: 30000, type: float, display: true, formatter: Kilogram
   Volume: 2880, type: float, display: true, formatter: Liter
-  CPUIn: 20000, type: int, display: true
+  CPUIn: 17500, type: int, display: true
   HitPoints: 37500, type: int, display: true
   
   UnlockCost: 100, display: true
@@ -50181,12 +50255,12 @@
   StackSize: 500
   MaxCount: 12, type: int, display: true
   ForceMaxCount: true
-  BlastParticleName: @rg_projectiles/RG_BlastPlasmaBlueL3
+  BlastParticleName: @reforged2/TurretExplosionLargeLaserT2RG
   BlastParticleIndex: 0
   BlastRadius: 4
   BlastDamage: 1150
   EnergyIn: 4000, type: int, display: true, formatter: Watt
-  CPUIn: 20000, type: int, display: true
+  CPUIn: 17500, type: int, display: true
   Mass: 25000, type: float, display: true, formatter: Kilogram
   HitPoints: 37500, type: int, display: true
   RepairToTemplate: false, display: true
@@ -50270,7 +50344,7 @@
   BlastDamage: 6000
   EnergyIn: 7200, type: int, display: true, formatter: Watt
   EnergyInIdle: 7200, type: int, display: true, formatter: Watt
-  CPUIn: 100000, type: int, display: true
+  CPUIn: 81250, type: int, display: true
   HitPoints: 50000, type: int, display: true
   Zoom: 2, type: float
 
@@ -50357,12 +50431,12 @@
   StackSize: 250
   MaxCount: 6, type: int, display: true
   ForceMaxCount: true
-  BlastParticleName: @rg_projectiles/RG_BlastPlasmaBlueL1
+  BlastParticleName: @reforged2/TurretExplosionLargePlasmaT2RG
   BlastParticleIndex: 0
   BlastRadius: 5
   BlastDamage: 5000
   EnergyIn: 3000, type: int, display: true, formatter: Watt
-  CPUIn: 30000, type: int, display: true
+  CPUIn: 24375, type: int, display: true
   Volume: 4320, type: float, display: true, formatter: Liter
   Mass: 30000, type: float, display: true, formatter: Kilogram
   HitPoints: 56250, type: int, display: true
@@ -50458,7 +50532,7 @@
   AllowPlacingAt: "Base,MS", display: true
   Info: Eden_TurretMissileCruiseBlocksinfo, display: true 
   IsOxygenTight: false, display: true
-  CPUIn: 30000, type: int, display: true
+  CPUIn: 24375, type: int, display: true
   Volume: 4320, type: float, display: true, formatter: Liter
   Mass: 30000, type: float, display: true, formatter: Kilogram
   HitPoints: 56250, type: int, display: true
@@ -50494,11 +50568,12 @@
   StackSize: 500
   MaxCount: 6, type: int, display: true
   ForceMaxCount: true
-  BlastParticleIndex: 1
+  BlastParticleName: @reforged2/TurretExplosionLargeRocketT2RG
+  BlastParticleIndex: 0
   BlastRadius: 5
   BlastDamage: 6000
   EnergyIn: 1050, type: int, display: true, formatter: Watt
-  CPUIn: 30000, type: int, display: true
+  CPUIn: 24375, type: int, display: true
   Volume: 4320, type: float, display: true, formatter: Liter
   Mass: 30000, type: float, display: true, formatter: Kilogram
   HitPoints: 56250, type: int, display: true
@@ -50521,11 +50596,12 @@
 
   Info: Eden_TurretMissileCruiseEMPCVinfo, display: true
   MaxCount: 6, type: int, display: true
-  BlastParticleIndex: 1
+  BlastParticleName: @reforged2/TurretExplosionLargePlasmaT2RG
+  BlastParticleIndex: 0
   BlastRadius: 4
   BlastDamage: 4500
   EnergyIn: 1400, type: int, display: true, formatter: Watt
-  CPUIn: 30000, type: int, display: true
+  CPUIn: 24375, type: int, display: true
   Volume: 4320, type: float, display: true, formatter: Liter
   Mass: 30000, type: float, display: true, formatter: Kilogram
   HitPoints: 56250, type: int, display: true
@@ -51759,7 +51835,8 @@
   MaxCount: 16, type: int, display: true
   IsActivateable: true
   Category: Weapons/Items
-  BlastParticleIndex: 8
+  BlastParticleName: @reforged2/TurretExplosionLargeLaserRG
+  BlastParticleIndex: 0
   BlastRadius: 4
   BlastDamage: 750
   HitPoints: 15000, type: int, display: true
@@ -51799,7 +51876,7 @@
   StackSize: 500
   MaxCount: 4, type: int, display: true
   ForceMaxCount: true
-  BlastParticleName: @rg_projectiles/RG_BlastEMPM2
+  BlastParticleName: @reforged2/TurretExplosionLargeLaserRG
   BlastParticleIndex: 0
   BlastRadius: 5
   BlastDamage: 1000
@@ -51847,7 +51924,7 @@
   StackSize: 500
   MaxCount: 4, type: int, display: true
   ForceMaxCount: true
-  BlastParticleName: @rg_projectiles/RG_BlastEMPM2
+  BlastParticleName: @reforged2/TurretExplosionLargeLaserRG
   BlastParticleIndex: 0
   BlastRadius: 5
   BlastDamage: 1000
@@ -52129,7 +52206,8 @@
   MaxCount: 4, type: int, display: true
   ForceMaxCount: true
   Category: Weapons/Items
-  BlastParticleIndex: 1
+  BlastParticleName: @reforged2/TurretExplosionLargeRocketT2RG
+  BlastParticleIndex: 0
   BlastRadius: 5
   BlastDamage: 6000
   Info: Eden_TurretAlienMissileSwarminfo, display: true
@@ -52176,7 +52254,7 @@
   ForceMaxCount: true
   IsActivateable: true
   Category: Weapons/Items
-  BlastParticleName: @rg_projectiles/RG_BlastDroneMissile
+  BlastParticleName: @reforged2/TurretExplosionLargePlasmaRedRG
   BlastParticleIndex: 0
   BlastRadius: 4
   BlastDamage: 40000
@@ -52229,6 +52307,8 @@
   AboveTerrainCheck: false
   HitPoints: 25000, type: int, display: true
   MarketPrice: 50000, display: true
+  BlastParticleName: @reforged2/TurretExplosionLargePlasmaGreenRG
+  BlastParticleIndex: 0
 }
 
 # Heavy Blaster Turret (POI)
@@ -52246,6 +52326,8 @@
   AboveTerrainCheck: false
   HitPoints: 50000, type: int, display: true
   MarketPrice: 100000, display: true
+  BlastParticleName: @reforged2/TurretExplosionLargePlasmaGreenRG
+  BlastParticleIndex: 0
 }
 
 # Light Modulated POI Laser Turret (Infrared)
@@ -52275,7 +52357,7 @@
   IsActivateableInCP: true
   StackSize: 500
   MaxCount: 0, type: int, display: false
-  BlastParticleName: @rg_projectiles/RG_BlastPlasmaBlueL3
+  BlastParticleName: @reforged2/TurretExplosionLargeLaserRedRG
   BlastParticleIndex: 0
   BlastRadius: 4
   BlastDamage: 850
@@ -52356,7 +52438,7 @@
   IsActivateableInCP: true
   StackSize: 500
   MaxCount: 0, type: int, display: false
-  BlastParticleName: @rg_projectiles/RG_BlastPlasmaBlueL3
+  BlastParticleName: @reforged2/TurretExplosionLargeLaserRedRG
   BlastParticleIndex: 0
   BlastRadius: 4
   BlastDamage: 1150
@@ -52464,7 +52546,8 @@
   BlockColor: "110,110,110"
   StackSize: 500
   MaxCount: 0, type: int, display: false
-  BlastParticleIndex: 1
+  BlastParticleName: @reforged2/TurretExplosionLargeRocketT2RG
+  BlastParticleIndex: 0
   BlastRadius: 5
   BlastDamage: 6000
   EnergyIn: 1050, type: int, display: true, formatter: Watt
@@ -52486,7 +52569,9 @@
 # Cruise Missile Launcher EMP (POI)
 { +Block Name: Eden_TurretMissileCruisePOIT2, Ref: Eden_TurretMissileCruisePOI
   WeaponItem: Eden_TurretMissileCruisePOIT2_Weapon
-
+  BlastParticleName: @reforged2/TurretExplosionLargePlasmaT2RG
+  BlastParticleIndex: 0
+  
   RotSpeed: 50, type: int, display: true
   Zoom: 5, type: float
 }
@@ -52520,7 +52605,8 @@
   BlockColor: "110,110,110"
   StackSize: 500
   MaxCount: 0, type: int, display: false
-  BlastParticleIndex: 1
+  BlastParticleName: @reforged2/TurretExplosionLargeRocketT2RG
+  BlastParticleIndex: 0
   BlastRadius: 3
   BlastDamage: 3000
   EnergyIn: 1050, type: int, display: true, formatter: Watt

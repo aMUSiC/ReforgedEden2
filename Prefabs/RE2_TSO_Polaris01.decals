@@ -34,3 +34,21 @@
 -ColliderMode=NoCollision
 -Asset=@eden_decalmodels/Eden_HoloGun
 
+[Advertisement]
+-Mode=Opaque
+-Pos=-13.99154,144.4985,-5.502756
+-Rot=0,180,0
+-Size=1,1,1
+-Color=1,1,1,1
+-ColliderMode=NoCollision
+-Asset=@eden_decalmodels/Eden_SignIceMining
+
+[Advertisement]
+-Mode=Opaque
+-Pos=-14.00672,144.5034,0.5026871
+-Rot=-3.415095E-06,8.039208E-09,0
+-Size=1,1,1
+-Color=1,1,1,1
+-ColliderMode=NoCollision
+-Asset=@eden_decalmodels/Eden_SignMACorp
+

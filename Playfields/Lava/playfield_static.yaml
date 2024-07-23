@@ -786,7 +786,9 @@ POIs:
           TroopTransport: False
           SpawnPOINear: [R2AbandonedPOI]
           SpawnPOINearRange: [150, 250]
-          Properties: 
+          Properties:
+            - Key: MapMarker
+              Value: Neutral
             - Key: RegenAfter
               Value: 720
 

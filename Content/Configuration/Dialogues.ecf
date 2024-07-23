@@ -1,4 +1,4 @@
-/*  Created with eWCCT 3.57.0 | 17.7.2024 - 16:27:17  */
+/*  Created with eWCCT 3.57.0 | 23.7.2024 - 5:51:30  */
 /*  Made by Hayawen & RexXxuS  */
 /*  You can do with your exported files from this tool what you want (obviously do NOT harm players with horrible dialogue gameplay!)  */
 /*  But this tool itself is licenced under https://creativecommons.org/licenses/by-nc-nd/4.0/ (CC BY-NC-ND 4.0)  */
@@ -11998,7 +11998,7 @@
   Option_1: dialogue_aqq40a8
   OptionIf_1: "HasItem('ThrusterSV1x3JetT2', 5)"
   OptionNext_1: TD_SpaceportSmall_MissionComplete
-  OptionExecute_1: "RemoveItem('ThrusterSVRoundLargeT2', 5); CanTrade = CanTrade + 1; SpaceportMission = 0; AddReputation(Faction.Trader, 150); Player.Credit += 250000; RepCounter = 250; MoneyCounter = 250000; if (GetFaction(LocalStructure.Entity.Id) == 'Colonists') AddReputation(Faction.Colonists, 250); if (GetFaction(LocalStructure.Entity.Id) == 'Polaris') AddReputation(Faction.Polaris, 250); if (GetFaction(LocalStructure.Entity.Id) == 'Pirates') AddReputation(Faction.Pirates, 250); if (GetFaction(LocalStructure.Entity.Id) == 'Trader') AddReputation(Faction.Trader, 250)"
+  OptionExecute_1: "RemoveItem('ThrusterSV1x3JetT2', 5); CanTrade = CanTrade + 1; SpaceportMission = 0; AddReputation(Faction.Trader, 150); Player.Credit += 250000; RepCounter = 250; MoneyCounter = 250000; if (GetFaction(LocalStructure.Entity.Id) == 'Colonists') AddReputation(Faction.Colonists, 250); if (GetFaction(LocalStructure.Entity.Id) == 'Polaris') AddReputation(Faction.Polaris, 250); if (GetFaction(LocalStructure.Entity.Id) == 'Pirates') AddReputation(Faction.Pirates, 250); if (GetFaction(LocalStructure.Entity.Id) == 'Trader') AddReputation(Faction.Trader, 250)"
   Option_2: dialogue_oe4m8Ce
   OptionNext_2: End
 }
@@ -18441,7 +18441,7 @@
   OptionNext_6: GS_WeaponBench_SMGT2, param1: GotoAndReset
   Option_7: dialogue_84OYiqP
   OptionIf_7: "HasItem('Eden_Uzi', 1)"
-  OptionNext_7: GS_WeaponBench_Uzi, param1: GotoAndReset
+  OptionNext_7: GS_WeaponBench_EdenUzi, param1: GotoAndReset
   Option_8: dialogue_IOe4mGq
   OptionIf_8: "HasItem('SubmachineGunT3', 1)"
   OptionNext_8: GS_WeaponBench_SMGT3, param1: GotoAndReset
@@ -18897,60 +18897,60 @@
   Variable_6: "SMGT3GripStat", param1: dbplayer_string
   Variable_7: "SMGT3FrameStat", param1: dbplayer_string
 }
-{ +Dialogue Name: GS_WeaponBench_Uzi
-  Output: dialogue_4ui0u4O
-  Option_1: dialogue_iOuKuqm
+{ +Dialogue Name: GS_WeaponBench_EdenUzi
+  Output: dialogue_t0KS40O
+  Option_1: dialogue_OKGiG44
   OptionIf_1: "HasItem('Token', 1, 20)"
   OptionNext_1: GS_WeaponBench_Replace
   OptionExecute_1: "Player.Skills['EdenUziBarrelDamageUp'] = 0; Player.Skills['EdenUziBarrelSpreadUp'] = 0; Player.Skills['EdenUziBarrelRecoilUp'] = 7; Player.Skills['EdenUziBarrelReloadUp'] = 0; Player.Skills['EdenUziBarrelDamageDown'] = 0; Player.Skills['EdenUziBarrelSpreadDown'] = 0; Player.Skills['EdenUziBarrelRecoilDown'] = 0; Player.Skills['EdenUziBarrelReloadDown'] = 0; RemoveItem('Token', 1, 20); EdenUziBarrel = 'Short Heavy Barrel'; ModSelection = 'Short Heavy Barrel'; EdenUziBarrelStat = 'Recoil -10%'"
-  Option_2: dialogue_eaNCe4e
+  Option_2: dialogue_WCq84S8
   OptionIf_2: "HasItem('Token', 1, 23)"
   OptionNext_2: GS_WeaponBench_Replace
   OptionExecute_2: "Player.Skills['EdenUziBarrelDamageUp'] = 0; Player.Skills['EdenUziBarrelSpreadUp'] = 55; Player.Skills['EdenUziBarrelRecoilUp'] = 0; Player.Skills['EdenUziBarrelReloadUp'] = 0; Player.Skills['EdenUziBarrelDamageDown'] = 0; Player.Skills['EdenUziBarrelSpreadDown'] = 0; Player.Skills['EdenUziBarrelRecoilDown'] = 0; Player.Skills['EdenUziBarrelReloadDown'] = 0; RemoveItem('Token', 1, 23); EdenUziBarrel = 'Short Ultralight Barrel'; ModSelection = 'Short Ultralight Barrel'; EdenUziBarrelStat = 'Accuracy +10%'"
-  Option_3: dialogue_S0q4iqS
+  Option_3: dialogue_Oa38e8p
   OptionIf_3: "HasItem('Token', 1, 26)"
   OptionNext_3: GS_WeaponBench_Replace
   OptionExecute_3: "Player.Skills['EdenUziBarrelDamageUp'] = 7; Player.Skills['EdenUziBarrelSpreadUp'] = 0; Player.Skills['EdenUziBarrelRecoilUp'] = 0; Player.Skills['EdenUziBarrelReloadUp'] = 0; Player.Skills['EdenUziBarrelDamageDown'] = 0; Player.Skills['EdenUziBarrelSpreadDown'] = 0; Player.Skills['EdenUziBarrelRecoilDown'] = 4; Player.Skills['EdenUziBarrelReloadDown'] = 0; RemoveItem('Token', 1, 26); EdenUziBarrel = 'Short High-Velocity Barrel'; ModSelection = 'Short High-Velocity Barrel'; EdenUziBarrelStat = 'Damage +10% / Recoil +5%'"
-  Option_4: dialogue_CWaO8Ke
+  Option_4: dialogue_mGCOSl4
   OptionIf_4: "HasItem('Token', 1, 36)"
   OptionNext_4: GS_WeaponBench_Replace
-  OptionExecute_4: "Player.Skills['EdenUziGripDamageUp'] = 0; Player.Skills['EdenUziGripSpreadUp'] = 24; Player.Skills['EdenUziGripRecoilUp'] = 0; Player.Skills['EdenUziGripReloadUp'] = 0; Player.Skills['EdenUziGripDamageDown'] = 0; Player.Skills['EdenUziGripSpreadDown'] = 0; Player.Skills['EdenUziGripRecoilDown'] = 4; Player.Skills['EdenUziGripReloadDown'] = 0; RemoveItem('Token', 1, 36); EdenUziGrip = 'Polymer Pistol Grip'; ModSelection = 'Polymer Pistol Grip'; EdenUziGripStat = 'Accuracy +10% / Recoil +5%'"
-  Option_5: dialogue_e0meKQS
+  OptionExecute_4: "Player.Skills['EdenUziGripDamageUp'] = 0; Player.Skills['EdenUziGripSpreadUp'] = 55; Player.Skills['EdenUziGripRecoilUp'] = 0; Player.Skills['EdenUziGripReloadUp'] = 0; Player.Skills['EdenUziGripDamageDown'] = 0; Player.Skills['EdenUziGripSpreadDown'] = 0; Player.Skills['EdenUziGripRecoilDown'] = 4; Player.Skills['EdenUziGripReloadDown'] = 0; RemoveItem('Token', 1, 36); EdenUziGrip = 'Polymer Pistol Grip'; ModSelection = 'Polymer Pistol Grip'; EdenUziGripStat = 'Accuracy +10% / Recoil +5%'"
+  Option_5: dialogue_emVW0aW
   OptionIf_5: "HasItem('Token', 1, 37)"
   OptionNext_5: GS_WeaponBench_Replace
-  OptionExecute_5: "Player.Skills['EdenUziGripDamageUp'] = 0; Player.Skills['EdenUziGripSpreadUp'] = 0; Player.Skills['EdenUziGripRecoilUp'] = 7; Player.Skills['EdenUziGripReloadUp'] = 0; Player.Skills['EdenUziGripDamageDown'] = 0; Player.Skills['EdenUziGripSpreadDown'] = 28; Player.Skills['EdenUziGripRecoilDown'] = 0; Player.Skills['EdenUziGripReloadDown'] = 0; RemoveItem('Token', 1, 37); EdenUziGrip = 'Weighted Pistol Grip'; ModSelection = 'Weighted Pistol Grip'; EdenUziGripStat = 'Recoil -10% / Accuracy -5%'"
-  Option_6: dialogue_qiqGG8i
+  OptionExecute_5: "Player.Skills['EdenUziGripDamageUp'] = 0; Player.Skills['EdenUziGripSpreadUp'] = 0; Player.Skills['EdenUziGripRecoilUp'] = 4; Player.Skills['EdenUziGripReloadUp'] = 0; Player.Skills['EdenUziGripDamageDown'] = 0; Player.Skills['EdenUziGripSpreadDown'] = 12; Player.Skills['EdenUziGripRecoilDown'] = 0; Player.Skills['EdenUziGripReloadDown'] = 0; RemoveItem('Token', 1, 37); EdenUziGrip = 'Weighted Pistol Grip'; ModSelection = 'Weighted Pistol Grip'; EdenUziGripStat = 'Recoil -10% / Accuracy -5%'"
+  Option_6: dialogue_mO4OaIC
   OptionIf_6: "HasItem('Token', 1, 38)"
   OptionNext_6: GS_WeaponBench_Replace
   OptionExecute_6: "Player.Skills['EdenUziGripDamageUp'] = 0; Player.Skills['EdenUziGripSpreadUp'] = 0; Player.Skills['EdenUziGripRecoilUp'] = 0; Player.Skills['EdenUziGripReloadUp'] = 45; Player.Skills['EdenUziGripDamageDown'] = 0; Player.Skills['EdenUziGripSpreadDown'] = 55; Player.Skills['EdenUziGripRecoilDown'] = 7; Player.Skills['EdenUziGripReloadDown'] = 0; RemoveItem('Token', 1, 38); EdenUziGrip = 'Powertool Grip'; ModSelection = 'Powertool Grip'; EdenUziGripStat = 'Reload Speed + 20% / Recoil +10% / Accuracy -10%'"
-  Option_7: dialogue_S8OGqSO
+  Option_7: dialogue_mqWOqOe
   OptionIf_7: "HasItem('Token', 1, 43)"
   OptionNext_7: GS_WeaponBench_Replace
   OptionExecute_7: "Player.Skills['EdenUziGripDamageUp'] = 0; Player.Skills['EdenUziGripSpreadUp'] = 0; Player.Skills['EdenUziGripRecoilUp'] = 11; Player.Skills['EdenUziGripReloadUp'] = 35; Player.Skills['EdenUziGripDamageDown'] = 0; Player.Skills['EdenUziGripSpreadDown'] = 0; Player.Skills['EdenUziGripRecoilDown'] = 0; Player.Skills['EdenUziGripReloadDown'] = 0; RemoveItem('Token', 1, 43); EdenUziGrip = 'Tactical Pistol Grip'; ModSelection = 'Tactical Pistol Grip'; EdenUziGripStat = 'Recoil -15% / Reload Speed +15%'"
-  Option_8: dialogue_S0iqiKq
+  Option_8: dialogue_KGTC8e8
   OptionIf_8: "HasItem('Token', 1, 45)"
   OptionNext_8: GS_WeaponBench_Replace
-  OptionExecute_8: "Player.Skills['EdenUziGripDamageUp'] = 0; Player.Skills['EdenUziGripSpreadUp'] = 110; Player.Skills['EdenUziGripRecoilUp'] = 14; Player.Skills['EdenUziGripReloadUp'] = 0; Player.Skills['EdenUziGripDamageDown'] = 0; Player.Skills['EdenUziGripSpreadDown'] = 0; Player.Skills['EdenUziGripRecoilDown'] = 0; Player.Skills['EdenUziGripReloadDown'] = 0; RemoveItem('Token', 1, 45); EdenUziGrip = 'Sharpshooters Pistol Grip'; ModSelection = 'Sharpshooters Pistol Grip'; EdenUziGripStat = 'Accuracy +20% / Recoil -20%'"
-  Option_9: dialogue_emC8Cq4
+  OptionExecute_8: "Player.Skills['EdenUziGripDamageUp'] = 0; Player.Skills['EdenUziGripSpreadUp'] = 110; Player.Skills['EdenUziGripRecoilUp'] = 15; Player.Skills['EdenUziGripReloadUp'] = 0; Player.Skills['EdenUziGripDamageDown'] = 0; Player.Skills['EdenUziGripSpreadDown'] = 0; Player.Skills['EdenUziGripRecoilDown'] = 0; Player.Skills['EdenUziGripReloadDown'] = 0; RemoveItem('Token', 1, 45); EdenUziGrip = 'Sharpshooters Pistol Grip'; ModSelection = 'Sharpshooters Pistol Grip'; EdenUziGripStat = 'Accuracy +20% / Recoil -20%'"
+  Option_9: dialogue_WSuamGO
   OptionIf_9: "HasItem('Token', 1, 49)"
   OptionNext_9: GS_WeaponBench_Replace
-  OptionExecute_9: "Player.Skills['EdenUziGripDamageUp'] = 0; Player.Skills['EdenUziGripSpreadUp'] = 0; Player.Skills['EdenUziGripRecoilUp'] = 21; Player.Skills['EdenUziGripReloadUp'] = 0; Player.Skills['EdenUziGripDamageDown'] = 0; Player.Skills['EdenUziGripSpreadDown'] = 0; Player.Skills['EdenUziGripRecoilDown'] = 0; Player.Skills['EdenUziGripReloadDown'] = 0; RemoveItem('Token', 1, 49); EdenUziGrip = 'Recoil-Compensating Pistol Grip'; ModSelection = 'Recoil-Compensating Pistol Grip'; EdenUziGripStat = 'Recoil -30%'"
-  Option_10: dialogue_eOESAWG
+  OptionExecute_9: "Player.Skills['EdenUziGripDamageUp'] = 0; Player.Skills['EdenUziGripSpreadUp'] = 0; Player.Skills['EdenUziGripRecoilUp'] = 22; Player.Skills['EdenUziGripReloadUp'] = 0; Player.Skills['EdenUziGripDamageDown'] = 0; Player.Skills['EdenUziGripSpreadDown'] = 0; Player.Skills['EdenUziGripRecoilDown'] = 0; Player.Skills['EdenUziGripReloadDown'] = 0; RemoveItem('Token', 1, 49); EdenUziGrip = 'Recoil-Compensating Pistol Grip'; ModSelection = 'Recoil-Compensating Pistol Grip'; EdenUziGripStat = 'Recoil -30%'"
+  Option_10: dialogue_eqSuK4C
   OptionIf_10: "HasItem('Token', 1, 51)"
   OptionNext_10: GS_WeaponBench_Replace
   OptionExecute_10: "Player.Skills['EdenUziFrameDamageUp'] = 0; Player.Skills['EdenUziFrameSpreadUp'] = 55; Player.Skills['EdenUziFrameRecoilUp'] = 0; Player.Skills['EdenUziFrameReloadUp'] = 0; Player.Skills['EdenUziFrameDamageDown'] = 0; Player.Skills['EdenUziFrameSpreadDown'] = 0; Player.Skills['EdenUziFrameRecoilDown'] = 4; Player.Skills['EdenUziFrameReloadDown'] = 0; RemoveItem('Token', 1, 51); EdenUziFrame = 'Light Pistol Receiver'; ModSelection = 'Light Pistol Receiver'; EdenUziFrameStat = 'Accuracy +10% / Recoil +5%'"
-  Option_11: dialogue_GmeqawC
+  Option_11: dialogue_8iWOWm8
   OptionIf_11: "HasItem('Token', 1, 55)"
   OptionNext_11: GS_WeaponBench_Replace
-  OptionExecute_11: "Player.Skills['EdenUziFrameDamageUp'] = 0; Player.Skills['EdenUziFrameSpreadUp'] = 0; Player.Skills['EdenUziFrameRecoilUp'] = 7; Player.Skills['EdenUziFrameReloadUp'] = 0; Player.Skills['EdenUziFrameDamageDown'] = 0; Player.Skills['EdenUziFrameSpreadDown'] = 0; Player.Skills['EdenUziFrameRecoilDown'] = 0; Player.Skills['EdenUziFrameReloadDown'] = 0; RemoveItem('Token', 1, 55); EdenUziFrame = 'Heavy Pistol Receiver'; ModSelection = 'Heavy Pistol Receiver'; EdenUziFrameStat = 'Recoil -10%'"
-  Option_12: dialogue_4GSqeEG
+  OptionExecute_11: "Player.Skills['EdenUziFrameDamageUp'] = 0; Player.Skills['EdenUziFrameSpreadUp'] = 0; Player.Skills['EdenUziFrameRecoilUp'] = 8; Player.Skills['EdenUziFrameReloadUp'] = 0; Player.Skills['EdenUziFrameDamageDown'] = 0; Player.Skills['EdenUziFrameSpreadDown'] = 0; Player.Skills['EdenUziFrameRecoilDown'] = 0; Player.Skills['EdenUziFrameReloadDown'] = 0; RemoveItem('Token', 1, 55); EdenUziFrame = 'Heavy Pistol Receiver'; ModSelection = 'Heavy Pistol Receiver'; EdenUziFrameStat = 'Recoil -10%'"
+  Option_12: dialogue_iWKS0mi
   OptionIf_12: "HasItem('Token', 1, 61)"
   OptionNext_12: GS_WeaponBench_Replace
-  OptionExecute_12: "Player.Skills['EdenUziFrameDamageUp'] = 13; Player.Skills['EdenUziFrameSpreadUp'] = 0; Player.Skills['EdenUziFrameRecoilUp'] = 0; Player.Skills['EdenUziFrameReloadUp'] = 0; Player.Skills['EdenUziFrameDamageDown'] = 0; Player.Skills['EdenUziFrameSpreadDown'] = 0; Player.Skills['EdenUziFrameRecoilDown'] = 7; Player.Skills['EdenUziFrameReloadDown'] = 0; RemoveItem('Token', 1, 61); EdenUziFrame = 'Electromagnetic Pistol Receiver'; ModSelection = 'Electromagnetic Pistol Receiver'; EdenUziFrameStat = 'Damage +20% / Recoil +10%'"
-  Option_13: dialogue_WuOuSSC
+  OptionExecute_12: "Player.Skills['EdenUziFrameDamageUp'] = 14; Player.Skills['EdenUziFrameSpreadUp'] = 0; Player.Skills['EdenUziFrameRecoilUp'] = 0; Player.Skills['EdenUziFrameReloadUp'] = 0; Player.Skills['EdenUziFrameDamageDown'] = 0; Player.Skills['EdenUziFrameSpreadDown'] = 0; Player.Skills['EdenUziFrameRecoilDown'] = 7; Player.Skills['EdenUziFrameReloadDown'] = 0; RemoveItem('Token', 1, 61); EdenUziFrame = 'Electromagnetic Pistol Receiver'; ModSelection = 'Electromagnetic Pistol Receiver'; EdenUziFrameStat = 'Damage +20% / Recoil +10%'"
+  Option_13: dialogue_hGGOi8a
   OptionNext_13: GS_WeaponBench_Restore
   OptionExecute_13: "Player.Skills['EdenUziBarrelDamageUp'] = 0; Player.Skills['EdenUziBarrelSpreadUp'] = 0; Player.Skills['EdenUziBarrelRecoilUp'] = 0; Player.Skills['EdenUziBarrelReloadUp'] = 0; Player.Skills['EdenUziBarrelDamageDown'] = 0; Player.Skills['EdenUziBarrelSpreadDown'] = 0; Player.Skills['EdenUziBarrelRecoilDown'] = 0; Player.Skills['EdenUziBarrelReloadDown'] = 0; Player.Skills['EdenUziGripDamageUp'] = 0; Player.Skills['EdenUziGripSpreadUp'] = 0; Player.Skills['EdenUziGripRecoilUp'] = 0; Player.Skills['EdenUziGripReloadUp'] = 0; Player.Skills['EdenUziGripDamageDown'] = 0; Player.Skills['EdenUziGripSpreadDown'] = 0; Player.Skills['EdenUziGripRecoilDown'] = 0; Player.Skills['EdenUziGripReloadDown'] = 0; Player.Skills['EdenUziFrameDamageUp'] = 0; Player.Skills['EdenUziFrameSpreadUp'] = 0; Player.Skills['EdenUziFrameRecoilUp'] = 0; Player.Skills['EdenUziFrameReloadUp'] = 0; Player.Skills['EdenUziFrameDamageDown'] = 0; Player.Skills['EdenUziFrameSpreadDown'] = 0; Player.Skills['EdenUziFrameRecoilDown'] = 0; Player.Skills['EdenUziFrameReloadDown'] = 0; EdenUziBarrel = 'Default'; EdenUziGrip = 'Default'; EdenUziFrame = 'Default'; EdenUziBarrelStat = 'None'; EdenUziGripStat = 'None'; EdenUziFrameStat = 'None'"
-  Option_14: dialogue_OiMiOuK
+  Option_14: dialogue_GmmC8gu
   OptionNext_14: GS_WeaponBench_Pistols
   Variable_1: "EdenUziBarrel", param1: dbplayer_string
   Variable_2: "EdenUziGrip", param1: dbplayer_string
@@ -18979,7 +18979,7 @@
   OptionNext_5: GS_WeaponBench_ShotgunPolaris, param1: GotoAndReset
   Option_6: dialogue_GaWG48g
   OptionIf_6: "HasItem('Eden_ShotgunGauss', 1)"
-  OptionNext_6: GS_WeaponBench_ShotgunGauss, param1: GotoAndReset
+  OptionNext_6: GS_WeaponBench_ShotgunGaussv2, param1: GotoAndReset
   Option_7: dialogue_uWm0a4u
   OptionNext_7: GS_WeaponBench_Init
 }
@@ -18997,47 +18997,51 @@
   OptionIf_3: "HasItem('Token', 1, 27)"
   OptionNext_3: GS_WeaponBench_Replace
   OptionExecute_3: "Player.Skills['ShotgunT1BarrelDamageUp'] = 5; Player.Skills['ShotgunT1BarrelSpreadUp'] = 0; Player.Skills['ShotgunT1BarrelRecoilUp'] = 0; Player.Skills['ShotgunT1BarrelReloadUp'] = 0; Player.Skills['ShotgunT1BarrelDamageDown'] = 0; Player.Skills['ShotgunT1BarrelSpreadDown'] = 0; Player.Skills['ShotgunT1BarrelRecoilDown'] = 15; Player.Skills['ShotgunT1BarrelReloadDown'] = 0; RemoveItem('Token', 1, 27); ShotgunT1Barrel = 'Medium High-Velocity Barrel'; ModSelection = 'Medium High-Velocity Barrel'; ShotgunT1BarrelStat = 'Damage +10% / Recoil +5%'"
-  Option_4: dialogue_GgCWqi8
-  OptionIf_4: "HasItem('Token', 1, 39)"
+  Option_4: dialogue_4Ou0Gqq
+  OptionIf_4: "HasItem('Token', 1, 81)"
   OptionNext_4: GS_WeaponBench_Replace
-  OptionExecute_4: "Player.Skills['ShotgunT1GripDamageUp'] = 0; Player.Skills['ShotgunT1GripSpreadUp'] = 0; Player.Skills['ShotgunT1GripRecoilUp'] = 15; Player.Skills['ShotgunT1GripReloadUp'] = 0; Player.Skills['ShotgunT1GripDamageDown'] = 0; Player.Skills['ShotgunT1GripSpreadDown'] = 0; Player.Skills['ShotgunT1GripRecoilDown'] = 0; Player.Skills['ShotgunT1GripReloadDown'] = 0; RemoveItem('Token', 1, 39); ShotgunT1Grip = 'Wooden Stock'; ModSelection = 'Wooden Stock'; ShotgunT1GripStat = 'Recoil -5%'"
-  Option_5: dialogue_SqC0Q88
-  OptionIf_5: "HasItem('Token', 1, 40)"
+  OptionExecute_4: "Player.Skills['ShotgunT1BarrelDamageUp'] = 0; Player.Skills['ShotgunT1BarrelSpreadUp'] = 150; Player.Skills['ShotgunT1BarrelRecoilUp'] = 0; Player.Skills['ShotgunT1BarrelReloadUp'] = 0; Player.Skills['ShotgunT1BarrelDamageDown'] = 0; Player.Skills['ShotgunT1BarrelSpreadDown'] = 0; Player.Skills['ShotgunT1BarrelRecoilDown'] = 30; Player.Skills['ShotgunT1BarrelReloadDown'] = 0; RemoveItem('Token', 1, 81); ShotgunT1Barrel = 'Adjustable Choke Barrel'; ModSelection = 'Adjustable Choke Barrel'; ShotgunT1BarrelStat = 'Accuracy +25% / Recoil +10%'"
+  Option_5: dialogue_GgCWqi8
+  OptionIf_5: "HasItem('Token', 1, 39)"
   OptionNext_5: GS_WeaponBench_Replace
-  OptionExecute_5: "Player.Skills['ShotgunT1GripDamageUp'] = 0; Player.Skills['ShotgunT1GripSpreadUp'] = 20; Player.Skills['ShotgunT1GripRecoilUp'] = 45; Player.Skills['ShotgunT1GripReloadUp'] = 0; Player.Skills['ShotgunT1GripDamageDown'] = 0; Player.Skills['ShotgunT1GripSpreadDown'] = 0; Player.Skills['ShotgunT1GripRecoilDown'] = 0; Player.Skills['ShotgunT1GripReloadDown'] = 45; RemoveItem('Token', 1, 40); ShotgunT1Grip = 'Folding Stock'; ModSelection = 'Folding Stock'; ShotgunT1GripStat = 'Accuracy +10% / Recoil -5% / Reload Speed -10%'"
-  Option_6: dialogue_uqeSqOu
-  OptionIf_6: "HasItem('Token', 1, 41)"
+  OptionExecute_5: "Player.Skills['ShotgunT1GripDamageUp'] = 0; Player.Skills['ShotgunT1GripSpreadUp'] = 0; Player.Skills['ShotgunT1GripRecoilUp'] = 15; Player.Skills['ShotgunT1GripReloadUp'] = 0; Player.Skills['ShotgunT1GripDamageDown'] = 0; Player.Skills['ShotgunT1GripSpreadDown'] = 0; Player.Skills['ShotgunT1GripRecoilDown'] = 0; Player.Skills['ShotgunT1GripReloadDown'] = 0; RemoveItem('Token', 1, 39); ShotgunT1Grip = 'Wooden Stock'; ModSelection = 'Wooden Stock'; ShotgunT1GripStat = 'Recoil -5%'"
+  Option_6: dialogue_SqC0Q88
+  OptionIf_6: "HasItem('Token', 1, 40)"
   OptionNext_6: GS_WeaponBench_Replace
-  OptionExecute_6: "Player.Skills['ShotgunT1GripDamageUp'] = 0; Player.Skills['ShotgunT1GripSpreadUp'] = 0; Player.Skills['ShotgunT1GripRecoilUp'] = 30; Player.Skills['ShotgunT1GripReloadUp'] = 0; Player.Skills['ShotgunT1GripDamageDown'] = 0; Player.Skills['ShotgunT1GripSpreadDown'] = 0; Player.Skills['ShotgunT1GripRecoilDown'] = 0; Player.Skills['ShotgunT1GripReloadDown'] = 0; RemoveItem('Token', 1, 41); ShotgunT1Grip = 'Short Stock'; ModSelection = 'Short Stock'; ShotgunT1GripStat = 'Recoil -10%'"
-  Option_7: dialogue_SOeSMWq
-  OptionIf_7: "HasItem('Token', 1, 42)"
+  OptionExecute_6: "Player.Skills['ShotgunT1GripDamageUp'] = 0; Player.Skills['ShotgunT1GripSpreadUp'] = 20; Player.Skills['ShotgunT1GripRecoilUp'] = 45; Player.Skills['ShotgunT1GripReloadUp'] = 0; Player.Skills['ShotgunT1GripDamageDown'] = 0; Player.Skills['ShotgunT1GripSpreadDown'] = 0; Player.Skills['ShotgunT1GripRecoilDown'] = 0; Player.Skills['ShotgunT1GripReloadDown'] = 45; RemoveItem('Token', 1, 40); ShotgunT1Grip = 'Folding Stock'; ModSelection = 'Folding Stock'; ShotgunT1GripStat = 'Accuracy +10% / Recoil -5% / Reload Speed -10%'"
+  Option_7: dialogue_uqeSqOu
+  OptionIf_7: "HasItem('Token', 1, 41)"
   OptionNext_7: GS_WeaponBench_Replace
-  OptionExecute_7: "Player.Skills['ShotgunT1GripDamageUp'] = 5; Player.Skills['ShotgunT1GripSpreadUp'] = 60; Player.Skills['ShotgunT1GripRecoilUp'] = 0; Player.Skills['ShotgunT1GripReloadUp'] = 0; Player.Skills['ShotgunT1GripDamageDown'] = 0; Player.Skills['ShotgunT1GripSpreadDown'] = 0; Player.Skills['ShotgunT1GripRecoilDown'] = 0; Player.Skills['ShotgunT1GripReloadDown'] = 45; RemoveItem('Token', 1, 42); ShotgunT1Grip = 'Full Stock'; ModSelection = 'Full Stock'; ShotgunT1GripStat = 'Damage + 10% / Accuracy +10% / Reload Speed -10%'"
-  Option_8: dialogue_CqK8WKK
-  OptionIf_8: "HasItem('Token', 1, 46)"
+  OptionExecute_7: "Player.Skills['ShotgunT1GripDamageUp'] = 0; Player.Skills['ShotgunT1GripSpreadUp'] = 0; Player.Skills['ShotgunT1GripRecoilUp'] = 30; Player.Skills['ShotgunT1GripReloadUp'] = 0; Player.Skills['ShotgunT1GripDamageDown'] = 0; Player.Skills['ShotgunT1GripSpreadDown'] = 0; Player.Skills['ShotgunT1GripRecoilDown'] = 0; Player.Skills['ShotgunT1GripReloadDown'] = 0; RemoveItem('Token', 1, 41); ShotgunT1Grip = 'Short Stock'; ModSelection = 'Short Stock'; ShotgunT1GripStat = 'Recoil -10%'"
+  Option_8: dialogue_SOeSMWq
+  OptionIf_8: "HasItem('Token', 1, 42)"
   OptionNext_8: GS_WeaponBench_Replace
-  OptionExecute_8: "Player.Skills['ShotgunT1GripDamageUp'] = 0; Player.Skills['ShotgunT1GripSpreadUp'] = 0; Player.Skills['ShotgunT1GripRecoilUp'] = 60; Player.Skills['ShotgunT1GripReloadUp'] = 67; Player.Skills['ShotgunT1GripDamageDown'] = 0; Player.Skills['ShotgunT1GripSpreadDown'] = 0; Player.Skills['ShotgunT1GripRecoilDown'] = 0; Player.Skills['ShotgunT1GripReloadDown'] = 0; RemoveItem('Token', 1, 46); ShotgunT1Grip = 'Tactical Stock'; ModSelection = 'Tactical Stock'; ShotgunT1GripStat = 'Recoil +20% / Reload Speed +15%'"
-  Option_9: dialogue_Ks0O0OW
-  OptionIf_9: "HasItem('Token', 1, 48)"
+  OptionExecute_8: "Player.Skills['ShotgunT1GripDamageUp'] = 5; Player.Skills['ShotgunT1GripSpreadUp'] = 60; Player.Skills['ShotgunT1GripRecoilUp'] = 0; Player.Skills['ShotgunT1GripReloadUp'] = 0; Player.Skills['ShotgunT1GripDamageDown'] = 0; Player.Skills['ShotgunT1GripSpreadDown'] = 0; Player.Skills['ShotgunT1GripRecoilDown'] = 0; Player.Skills['ShotgunT1GripReloadDown'] = 45; RemoveItem('Token', 1, 42); ShotgunT1Grip = 'Full Stock'; ModSelection = 'Full Stock'; ShotgunT1GripStat = 'Damage + 10% / Accuracy +10% / Reload Speed -10%'"
+  Option_9: dialogue_CqK8WKK
+  OptionIf_9: "HasItem('Token', 1, 46)"
   OptionNext_9: GS_WeaponBench_Replace
-  OptionExecute_9: "Player.Skills['ShotgunT1GripDamageUp'] = 0; Player.Skills['ShotgunT1GripSpreadUp'] = 0; Player.Skills['ShotgunT1GripRecoilUp'] = 90; Player.Skills['ShotgunT1GripReloadUp'] = 0; Player.Skills['ShotgunT1GripDamageDown'] = 0; Player.Skills['ShotgunT1GripSpreadDown'] = 0; Player.Skills['ShotgunT1GripRecoilDown'] = 0; Player.Skills['ShotgunT1GripReloadDown'] = 0; RemoveItem('Token', 1, 48); ShotgunT1Grip = 'Recoil-Compensating Stock'; ModSelection = 'Recoil-Compensating Stock'; ShotgunT1GripStat = 'Recoil -30%'"
-  Option_10: dialogue_u40K88u
-  OptionIf_10: "HasItem('Token', 1, 53)"
+  OptionExecute_9: "Player.Skills['ShotgunT1GripDamageUp'] = 0; Player.Skills['ShotgunT1GripSpreadUp'] = 0; Player.Skills['ShotgunT1GripRecoilUp'] = 60; Player.Skills['ShotgunT1GripReloadUp'] = 67; Player.Skills['ShotgunT1GripDamageDown'] = 0; Player.Skills['ShotgunT1GripSpreadDown'] = 0; Player.Skills['ShotgunT1GripRecoilDown'] = 0; Player.Skills['ShotgunT1GripReloadDown'] = 0; RemoveItem('Token', 1, 46); ShotgunT1Grip = 'Tactical Stock'; ModSelection = 'Tactical Stock'; ShotgunT1GripStat = 'Recoil +20% / Reload Speed +15%'"
+  Option_10: dialogue_Ks0O0OW
+  OptionIf_10: "HasItem('Token', 1, 48)"
   OptionNext_10: GS_WeaponBench_Replace
-  OptionExecute_10: "Player.Skills['ShotgunT1FrameDamageUp'] = 0; Player.Skills['ShotgunT1FrameSpreadUp'] = 60; Player.Skills['ShotgunT1FrameRecoilUp'] = 0; Player.Skills['ShotgunT1FrameReloadUp'] = 0; Player.Skills['ShotgunT1FrameDamageDown'] = 0; Player.Skills['ShotgunT1FrameSpreadDown'] = 0; Player.Skills['ShotgunT1FrameRecoilDown'] = 15; Player.Skills['ShotgunT1FrameReloadDown'] = 0; RemoveItem('Token', 1, 53); ShotgunT1Frame = 'Light Shotgun Receiver'; ModSelection = 'Light Shotgun Receiver'; ShotgunT1FrameStat = 'Accuracy +20% / Recoil +20%'"
-  Option_11: dialogue_e8q4iGG
-  OptionIf_11: "HasItem('Token', 1, 57)"
+  OptionExecute_10: "Player.Skills['ShotgunT1GripDamageUp'] = 0; Player.Skills['ShotgunT1GripSpreadUp'] = 0; Player.Skills['ShotgunT1GripRecoilUp'] = 90; Player.Skills['ShotgunT1GripReloadUp'] = 0; Player.Skills['ShotgunT1GripDamageDown'] = 0; Player.Skills['ShotgunT1GripSpreadDown'] = 0; Player.Skills['ShotgunT1GripRecoilDown'] = 0; Player.Skills['ShotgunT1GripReloadDown'] = 0; RemoveItem('Token', 1, 48); ShotgunT1Grip = 'Recoil-Compensating Stock'; ModSelection = 'Recoil-Compensating Stock'; ShotgunT1GripStat = 'Recoil -30%'"
+  Option_11: dialogue_u40K88u
+  OptionIf_11: "HasItem('Token', 1, 53)"
   OptionNext_11: GS_WeaponBench_Replace
-  OptionExecute_11: "Player.Skills['ShotgunT1FrameDamageUp'] = 0; Player.Skills['ShotgunT1FrameSpreadUp'] = 0; Player.Skills['ShotgunT1FrameRecoilUp'] = 30; Player.Skills['ShotgunT1FrameReloadUp'] = 0; Player.Skills['ShotgunT1FrameDamageDown'] = 0; Player.Skills['ShotgunT1FrameSpreadDown'] = 60; Player.Skills['ShotgunT1FrameRecoilDown'] = 0; Player.Skills['ShotgunT1FrameReloadDown'] = 0; RemoveItem('Token', 1, 57); ShotgunT1Frame = 'Heavy Shotgun Receiver'; ModSelection = 'Heavy Shotgun Receiver'; ShotgunT1FrameStat = 'Recoil -10%'"
-  Option_12: dialogue_qq88SO8
-  OptionIf_12: "HasItem('Token', 1, 63)"
+  OptionExecute_11: "Player.Skills['ShotgunT1FrameDamageUp'] = 0; Player.Skills['ShotgunT1FrameSpreadUp'] = 60; Player.Skills['ShotgunT1FrameRecoilUp'] = 0; Player.Skills['ShotgunT1FrameReloadUp'] = 0; Player.Skills['ShotgunT1FrameDamageDown'] = 0; Player.Skills['ShotgunT1FrameSpreadDown'] = 0; Player.Skills['ShotgunT1FrameRecoilDown'] = 15; Player.Skills['ShotgunT1FrameReloadDown'] = 0; RemoveItem('Token', 1, 53); ShotgunT1Frame = 'Light Shotgun Receiver'; ModSelection = 'Light Shotgun Receiver'; ShotgunT1FrameStat = 'Accuracy +20% / Recoil +20%'"
+  Option_12: dialogue_e8q4iGG
+  OptionIf_12: "HasItem('Token', 1, 57)"
   OptionNext_12: GS_WeaponBench_Replace
-  OptionExecute_12: "Player.Skills['ShotgunT1FrameDamageUp'] = 0; Player.Skills['ShotgunT1FrameSpreadUp'] = 0; Player.Skills['ShotgunT1FrameRecoilUp'] = 0; Player.Skills['ShotgunT1FrameReloadUp'] = 90; Player.Skills['ShotgunT1FrameDamageDown'] = 0; Player.Skills['ShotgunT1FrameSpreadDown'] = 0; Player.Skills['ShotgunT1FrameRecoilDown'] = 0; Player.Skills['ShotgunT1FrameReloadDown'] = 0; RemoveItem('Token', 1, 63); ShotgunT1Frame = 'Automatic Shotgun Receiver'; ModSelection = 'Automatic Shotgun Receiver'; ShotgunT1FrameStat = 'Reload Speed +20%'"
-  Option_13: dialogue_0O06GKY
-  OptionNext_13: GS_WeaponBench_Restore
-  OptionExecute_13: "Player.Skills['ShotgunT1BarrelDamageUp'] = 0; Player.Skills['ShotgunT1BarrelSpreadUp'] = 0; Player.Skills['ShotgunT1BarrelRecoilUp'] = 0; Player.Skills['ShotgunT1BarrelReloadUp'] = 0; Player.Skills['ShotgunT1BarrelDamageDown'] = 0; Player.Skills['ShotgunT1BarrelSpreadDown'] = 0; Player.Skills['ShotgunT1BarrelRecoilDown'] = 0; Player.Skills['ShotgunT1BarrelReloadDown'] = 0; Player.Skills['ShotgunT1GripDamageUp'] = 0; Player.Skills['ShotgunT1GripSpreadUp'] = 0; Player.Skills['ShotgunT1GripRecoilUp'] = 0; Player.Skills['ShotgunT1GripReloadUp'] = 0; Player.Skills['ShotgunT1GripDamageDown'] = 0; Player.Skills['ShotgunT1GripSpreadDown'] = 0; Player.Skills['ShotgunT1GripRecoilDown'] = 0; Player.Skills['ShotgunT1GripReloadDown'] = 0; Player.Skills['ShotgunT1FrameDamageUp'] = 0; Player.Skills['ShotgunT1FrameSpreadUp'] = 0; Player.Skills['ShotgunT1FrameRecoilUp'] = 0; Player.Skills['ShotgunT1FrameReloadUp'] = 0; Player.Skills['ShotgunT1FrameDamageDown'] = 0; Player.Skills['ShotgunT1FrameSpreadDown'] = 0; Player.Skills['ShotgunT1FrameRecoilDown'] = 0; Player.Skills['ShotgunT1FrameReloadDown'] = 0; ShotgunT1Barrel = 'Default'; ShotgunT1Grip = 'Default'; ShotgunT1Frame = 'Default'; ShotgunT1BarrelStat = 'None'; ShotgunT1GripStat = 'None'; ShotgunT1FrameStat = 'None'"
-  Option_14: dialogue_MhSq6me
-  OptionNext_14: GS_WeaponBench_Shotguns
+  OptionExecute_12: "Player.Skills['ShotgunT1FrameDamageUp'] = 0; Player.Skills['ShotgunT1FrameSpreadUp'] = 0; Player.Skills['ShotgunT1FrameRecoilUp'] = 30; Player.Skills['ShotgunT1FrameReloadUp'] = 0; Player.Skills['ShotgunT1FrameDamageDown'] = 0; Player.Skills['ShotgunT1FrameSpreadDown'] = 60; Player.Skills['ShotgunT1FrameRecoilDown'] = 0; Player.Skills['ShotgunT1FrameReloadDown'] = 0; RemoveItem('Token', 1, 57); ShotgunT1Frame = 'Heavy Shotgun Receiver'; ModSelection = 'Heavy Shotgun Receiver'; ShotgunT1FrameStat = 'Recoil -10%'"
+  Option_13: dialogue_qq88SO8
+  OptionIf_13: "HasItem('Token', 1, 63)"
+  OptionNext_13: GS_WeaponBench_Replace
+  OptionExecute_13: "Player.Skills['ShotgunT1FrameDamageUp'] = 0; Player.Skills['ShotgunT1FrameSpreadUp'] = 0; Player.Skills['ShotgunT1FrameRecoilUp'] = 0; Player.Skills['ShotgunT1FrameReloadUp'] = 90; Player.Skills['ShotgunT1FrameDamageDown'] = 0; Player.Skills['ShotgunT1FrameSpreadDown'] = 0; Player.Skills['ShotgunT1FrameRecoilDown'] = 0; Player.Skills['ShotgunT1FrameReloadDown'] = 0; RemoveItem('Token', 1, 63); ShotgunT1Frame = 'Automatic Shotgun Receiver'; ModSelection = 'Automatic Shotgun Receiver'; ShotgunT1FrameStat = 'Reload Speed +20%'"
+  Option_14: dialogue_0O06GKY
+  OptionNext_14: GS_WeaponBench_Restore
+  OptionExecute_14: "Player.Skills['ShotgunT1BarrelDamageUp'] = 0; Player.Skills['ShotgunT1BarrelSpreadUp'] = 0; Player.Skills['ShotgunT1BarrelRecoilUp'] = 0; Player.Skills['ShotgunT1BarrelReloadUp'] = 0; Player.Skills['ShotgunT1BarrelDamageDown'] = 0; Player.Skills['ShotgunT1BarrelSpreadDown'] = 0; Player.Skills['ShotgunT1BarrelRecoilDown'] = 0; Player.Skills['ShotgunT1BarrelReloadDown'] = 0; Player.Skills['ShotgunT1GripDamageUp'] = 0; Player.Skills['ShotgunT1GripSpreadUp'] = 0; Player.Skills['ShotgunT1GripRecoilUp'] = 0; Player.Skills['ShotgunT1GripReloadUp'] = 0; Player.Skills['ShotgunT1GripDamageDown'] = 0; Player.Skills['ShotgunT1GripSpreadDown'] = 0; Player.Skills['ShotgunT1GripRecoilDown'] = 0; Player.Skills['ShotgunT1GripReloadDown'] = 0; Player.Skills['ShotgunT1FrameDamageUp'] = 0; Player.Skills['ShotgunT1FrameSpreadUp'] = 0; Player.Skills['ShotgunT1FrameRecoilUp'] = 0; Player.Skills['ShotgunT1FrameReloadUp'] = 0; Player.Skills['ShotgunT1FrameDamageDown'] = 0; Player.Skills['ShotgunT1FrameSpreadDown'] = 0; Player.Skills['ShotgunT1FrameRecoilDown'] = 0; Player.Skills['ShotgunT1FrameReloadDown'] = 0; ShotgunT1Barrel = 'Default'; ShotgunT1Grip = 'Default'; ShotgunT1Frame = 'Default'; ShotgunT1BarrelStat = 'None'; ShotgunT1GripStat = 'None'; ShotgunT1FrameStat = 'None'"
+  Option_15: dialogue_MhSq6me
+  OptionNext_15: GS_WeaponBench_Shotguns
   Variable_1: "ShotgunT1Barrel", param1: dbplayer_string
   Variable_2: "ShotgunT1Grip", param1: dbplayer_string
   Variable_3: "ShotgunT1Frame", param1: dbplayer_string
@@ -19060,47 +19064,51 @@
   OptionIf_3: "HasItem('Token', 1, 27)"
   OptionNext_3: GS_WeaponBench_Replace
   OptionExecute_3: "Player.Skills['ShotgunT2BarrelDamageUp'] = 6; Player.Skills['ShotgunT2BarrelSpreadUp'] = 0; Player.Skills['ShotgunT2BarrelRecoilUp'] = 0; Player.Skills['ShotgunT2BarrelReloadUp'] = 0; Player.Skills['ShotgunT2BarrelDamageDown'] = 0; Player.Skills['ShotgunT2BarrelSpreadDown'] = 0; Player.Skills['ShotgunT2BarrelRecoilDown'] = 14; Player.Skills['ShotgunT2BarrelReloadDown'] = 0; RemoveItem('Token', 1, 27); ShotgunT2Barrel = 'Medium High-Velocity Barrel'; ModSelection = 'Medium High-Velocity Barrel'; ShotgunT2BarrelStat = 'Damage +10% / Recoil +5%'"
-  Option_4: dialogue_0u9WeiW
-  OptionIf_4: "HasItem('Token', 1, 39)"
+  Option_4: dialogue_8OK1q4S
+  OptionIf_4: "HasItem('Token', 1, 81)"
   OptionNext_4: GS_WeaponBench_Replace
-  OptionExecute_4: "Player.Skills['ShotgunT2GripDamageUp'] = 0; Player.Skills['ShotgunT2GripSpreadUp'] = 0; Player.Skills['ShotgunT2GripRecoilUp'] = 14; Player.Skills['ShotgunT2GripReloadUp'] = 0; Player.Skills['ShotgunT2GripDamageDown'] = 0; Player.Skills['ShotgunT2GripSpreadDown'] = 0; Player.Skills['ShotgunT2GripRecoilDown'] = 0; Player.Skills['ShotgunT2GripReloadDown'] = 0; RemoveItem('Token', 1, 39); ShotgunT2Grip = 'Wooden Stock'; ModSelection = 'Wooden Stock'; ShotgunT2GripStat = 'Recoil -5%'"
-  Option_5: dialogue_Oaq8Zq4
-  OptionIf_5: "HasItem('Token', 1, 40)"
+  OptionExecute_4: "Player.Skills['ShotgunT2BarrelDamageUp'] = 0; Player.Skills['ShotgunT2BarrelSpreadUp'] = 138; Player.Skills['ShotgunT2BarrelRecoilUp'] = 0; Player.Skills['ShotgunT2BarrelReloadUp'] = 0; Player.Skills['ShotgunT2BarrelDamageDown'] = 0; Player.Skills['ShotgunT2BarrelSpreadDown'] = 0; Player.Skills['ShotgunT2BarrelRecoilDown'] = 28; Player.Skills['ShotgunT2BarrelReloadDown'] = 0; RemoveItem('Token', 1, 81); ShotgunT2Barrel = 'Adjustable Choke Barrel'; ModSelection = 'Adjustable Choke Barrel'; ShotgunT2BarrelStat = 'Accuracy +25% / Recoil +10%'"
+  Option_5: dialogue_0u9WeiW
+  OptionIf_5: "HasItem('Token', 1, 39)"
   OptionNext_5: GS_WeaponBench_Replace
-  OptionExecute_5: "Player.Skills['ShotgunT2GripDamageUp'] = 0; Player.Skills['ShotgunT2GripSpreadUp'] = 55; Player.Skills['ShotgunT2GripRecoilUp'] = 14; Player.Skills['ShotgunT2GripReloadUp'] = 0; Player.Skills['ShotgunT2GripDamageDown'] = 0; Player.Skills['ShotgunT2GripSpreadDown'] = 0; Player.Skills['ShotgunT2GripRecoilDown'] = 0; Player.Skills['ShotgunT2GripReloadDown'] = 45; RemoveItem('Token', 1, 40); ShotgunT2Grip = 'Folding Stock'; ModSelection = 'Folding Stock'; ShotgunT2GripStat = 'Accuracy +10% / Recoil -5% / Reload Speed -10%'"
-  Option_6: dialogue_88CeRee
-  OptionIf_6: "HasItem('Token', 1, 41)"
+  OptionExecute_5: "Player.Skills['ShotgunT2GripDamageUp'] = 0; Player.Skills['ShotgunT2GripSpreadUp'] = 0; Player.Skills['ShotgunT2GripRecoilUp'] = 14; Player.Skills['ShotgunT2GripReloadUp'] = 0; Player.Skills['ShotgunT2GripDamageDown'] = 0; Player.Skills['ShotgunT2GripSpreadDown'] = 0; Player.Skills['ShotgunT2GripRecoilDown'] = 0; Player.Skills['ShotgunT2GripReloadDown'] = 0; RemoveItem('Token', 1, 39); ShotgunT2Grip = 'Wooden Stock'; ModSelection = 'Wooden Stock'; ShotgunT2GripStat = 'Recoil -5%'"
+  Option_6: dialogue_Oaq8Zq4
+  OptionIf_6: "HasItem('Token', 1, 40)"
   OptionNext_6: GS_WeaponBench_Replace
-  OptionExecute_6: "Player.Skills['ShotgunT2GripDamageUp'] = 0; Player.Skills['ShotgunT2GripSpreadUp'] = 0; Player.Skills['ShotgunT2GripRecoilUp'] = 26; Player.Skills['ShotgunT2GripReloadUp'] = 0; Player.Skills['ShotgunT2GripDamageDown'] = 0; Player.Skills['ShotgunT2GripSpreadDown'] = 0; Player.Skills['ShotgunT2GripRecoilDown'] = 0; Player.Skills['ShotgunT2GripReloadDown'] = 0; RemoveItem('Token', 1, 41); ShotgunT2Grip = 'Short Stock'; ModSelection = 'Short Stock'; ShotgunT2GripStat = 'Recoil -10%'"
-  Option_7: dialogue_E4CCiau
-  OptionIf_7: "HasItem('Token', 1, 42)"
+  OptionExecute_6: "Player.Skills['ShotgunT2GripDamageUp'] = 0; Player.Skills['ShotgunT2GripSpreadUp'] = 55; Player.Skills['ShotgunT2GripRecoilUp'] = 14; Player.Skills['ShotgunT2GripReloadUp'] = 0; Player.Skills['ShotgunT2GripDamageDown'] = 0; Player.Skills['ShotgunT2GripSpreadDown'] = 0; Player.Skills['ShotgunT2GripRecoilDown'] = 0; Player.Skills['ShotgunT2GripReloadDown'] = 45; RemoveItem('Token', 1, 40); ShotgunT2Grip = 'Folding Stock'; ModSelection = 'Folding Stock'; ShotgunT2GripStat = 'Accuracy +10% / Recoil -5% / Reload Speed -10%'"
+  Option_7: dialogue_88CeRee
+  OptionIf_7: "HasItem('Token', 1, 41)"
   OptionNext_7: GS_WeaponBench_Replace
-  OptionExecute_7: "Player.Skills['ShotgunT2GripDamageUp'] = 6; Player.Skills['ShotgunT2GripSpreadUp'] = 55; Player.Skills['ShotgunT2GripRecoilUp'] = 0; Player.Skills['ShotgunT2GripReloadUp'] = 0; Player.Skills['ShotgunT2GripDamageDown'] = 0; Player.Skills['ShotgunT2GripSpreadDown'] = 0; Player.Skills['ShotgunT2GripRecoilDown'] = 0; Player.Skills['ShotgunT2GripReloadDown'] = 45; RemoveItem('Token', 1, 42); ShotgunT2Grip = 'Full Stock'; ModSelection = 'Full Stock'; ShotgunT2GripStat = 'Damage +10% / Accuracy +10% / Reload Speed -10%'"
-  Option_8: dialogue_0qiuaI8
-  OptionIf_8: "HasItem('Token', 1, 46)"
+  OptionExecute_7: "Player.Skills['ShotgunT2GripDamageUp'] = 0; Player.Skills['ShotgunT2GripSpreadUp'] = 0; Player.Skills['ShotgunT2GripRecoilUp'] = 26; Player.Skills['ShotgunT2GripReloadUp'] = 0; Player.Skills['ShotgunT2GripDamageDown'] = 0; Player.Skills['ShotgunT2GripSpreadDown'] = 0; Player.Skills['ShotgunT2GripRecoilDown'] = 0; Player.Skills['ShotgunT2GripReloadDown'] = 0; RemoveItem('Token', 1, 41); ShotgunT2Grip = 'Short Stock'; ModSelection = 'Short Stock'; ShotgunT2GripStat = 'Recoil -10%'"
+  Option_8: dialogue_E4CCiau
+  OptionIf_8: "HasItem('Token', 1, 42)"
   OptionNext_8: GS_WeaponBench_Replace
-  OptionExecute_8: "Player.Skills['ShotgunT2GripDamageUp'] = 0; Player.Skills['ShotgunT2GripSpreadUp'] = 0; Player.Skills['ShotgunT2GripRecoilUp'] = 52; Player.Skills['ShotgunT2GripReloadUp'] = 67; Player.Skills['ShotgunT2GripDamageDown'] = 0; Player.Skills['ShotgunT2GripSpreadDown'] = 0; Player.Skills['ShotgunT2GripRecoilDown'] = 0; Player.Skills['ShotgunT2GripReloadDown'] = 0; RemoveItem('Token', 1, 46); ShotgunT2Grip = 'Tactical Stock'; ModSelection = 'Tactical Stock'; ShotgunT2GripStat = 'Recoil -20% / Reload Speed +15%'"
-  Option_9: dialogue_0u4O4GO
-  OptionIf_9: "HasItem('Token', 1, 48)"
+  OptionExecute_8: "Player.Skills['ShotgunT2GripDamageUp'] = 6; Player.Skills['ShotgunT2GripSpreadUp'] = 55; Player.Skills['ShotgunT2GripRecoilUp'] = 0; Player.Skills['ShotgunT2GripReloadUp'] = 0; Player.Skills['ShotgunT2GripDamageDown'] = 0; Player.Skills['ShotgunT2GripSpreadDown'] = 0; Player.Skills['ShotgunT2GripRecoilDown'] = 0; Player.Skills['ShotgunT2GripReloadDown'] = 45; RemoveItem('Token', 1, 42); ShotgunT2Grip = 'Full Stock'; ModSelection = 'Full Stock'; ShotgunT2GripStat = 'Damage +10% / Accuracy +10% / Reload Speed -10%'"
+  Option_9: dialogue_0qiuaI8
+  OptionIf_9: "HasItem('Token', 1, 46)"
   OptionNext_9: GS_WeaponBench_Replace
-  OptionExecute_9: "Player.Skills['ShotgunT2GripDamageUp'] = 0; Player.Skills['ShotgunT2GripSpreadUp'] = 0; Player.Skills['ShotgunT2GripRecoilUp'] = 79; Player.Skills['ShotgunT2GripReloadUp'] = 0; Player.Skills['ShotgunT2GripDamageDown'] = 0; Player.Skills['ShotgunT2GripSpreadDown'] = 0; Player.Skills['ShotgunT2GripRecoilDown'] = 0; Player.Skills['ShotgunT2GripReloadDown'] = 0; RemoveItem('Token', 1, 48); ShotgunT2Grip = 'Recoil-Compensating Stock'; ModSelection = 'Recoil-Compensating Stock'; ShotgunT2GripStat = 'Recoil -30%'"
-  Option_10: dialogue_0aeWK8G
-  OptionIf_10: "HasItem('Token', 1, 53)"
+  OptionExecute_9: "Player.Skills['ShotgunT2GripDamageUp'] = 0; Player.Skills['ShotgunT2GripSpreadUp'] = 0; Player.Skills['ShotgunT2GripRecoilUp'] = 52; Player.Skills['ShotgunT2GripReloadUp'] = 67; Player.Skills['ShotgunT2GripDamageDown'] = 0; Player.Skills['ShotgunT2GripSpreadDown'] = 0; Player.Skills['ShotgunT2GripRecoilDown'] = 0; Player.Skills['ShotgunT2GripReloadDown'] = 0; RemoveItem('Token', 1, 46); ShotgunT2Grip = 'Tactical Stock'; ModSelection = 'Tactical Stock'; ShotgunT2GripStat = 'Recoil -20% / Reload Speed +15%'"
+  Option_10: dialogue_0u4O4GO
+  OptionIf_10: "HasItem('Token', 1, 48)"
   OptionNext_10: GS_WeaponBench_Replace
-  OptionExecute_10: "Player.Skills['ShotgunT2FrameDamageUp'] = 0; Player.Skills['ShotgunT2FrameSpreadUp'] = 55; Player.Skills['ShotgunT2FrameRecoilUp'] = 0; Player.Skills['ShotgunT2FrameReloadUp'] = 0; Player.Skills['ShotgunT2FrameDamageDown'] = 0; Player.Skills['ShotgunT2FrameSpreadDown'] = 0; Player.Skills['ShotgunT2FrameRecoilDown'] = 14; Player.Skills['ShotgunT2FrameReloadDown'] = 0; RemoveItem('Token', 1, 53); ShotgunT2Frame = 'Light Shotgun Receiver'; ModSelection = 'Light Shotgun Receiver'; ShotgunT2FrameStat = 'Accuracy +10% / Recoil +5%'"
-  Option_11: dialogue_NK0mui8
-  OptionIf_11: "HasItem('Token', 1, 57)"
+  OptionExecute_10: "Player.Skills['ShotgunT2GripDamageUp'] = 0; Player.Skills['ShotgunT2GripSpreadUp'] = 0; Player.Skills['ShotgunT2GripRecoilUp'] = 79; Player.Skills['ShotgunT2GripReloadUp'] = 0; Player.Skills['ShotgunT2GripDamageDown'] = 0; Player.Skills['ShotgunT2GripSpreadDown'] = 0; Player.Skills['ShotgunT2GripRecoilDown'] = 0; Player.Skills['ShotgunT2GripReloadDown'] = 0; RemoveItem('Token', 1, 48); ShotgunT2Grip = 'Recoil-Compensating Stock'; ModSelection = 'Recoil-Compensating Stock'; ShotgunT2GripStat = 'Recoil -30%'"
+  Option_11: dialogue_0aeWK8G
+  OptionIf_11: "HasItem('Token', 1, 53)"
   OptionNext_11: GS_WeaponBench_Replace
-  OptionExecute_11: "Player.Skills['ShotgunT2FrameDamageUp'] = 0; Player.Skills['ShotgunT2FrameSpreadUp'] = 0; Player.Skills['ShotgunT2FrameRecoilUp'] = 26; Player.Skills['ShotgunT2FrameReloadUp'] = 0; Player.Skills['ShotgunT2FrameDamageDown'] = 0; Player.Skills['ShotgunT2FrameSpreadDown'] = 0; Player.Skills['ShotgunT2FrameRecoilDown'] = 0; Player.Skills['ShotgunT2FrameReloadDown'] = 0; RemoveItem('Token', 1, 57); ShotgunT2Frame = 'Heavy Shotgun Receiver'; ModSelection = 'Heavy Shotgun Receiver'; ShotgunT2FrameStat = 'Recoil -10%'"
-  Option_12: dialogue_uK04mmu
-  OptionIf_12: "HasItem('Token', 1, 63)"
+  OptionExecute_11: "Player.Skills['ShotgunT2FrameDamageUp'] = 0; Player.Skills['ShotgunT2FrameSpreadUp'] = 55; Player.Skills['ShotgunT2FrameRecoilUp'] = 0; Player.Skills['ShotgunT2FrameReloadUp'] = 0; Player.Skills['ShotgunT2FrameDamageDown'] = 0; Player.Skills['ShotgunT2FrameSpreadDown'] = 0; Player.Skills['ShotgunT2FrameRecoilDown'] = 14; Player.Skills['ShotgunT2FrameReloadDown'] = 0; RemoveItem('Token', 1, 53); ShotgunT2Frame = 'Light Shotgun Receiver'; ModSelection = 'Light Shotgun Receiver'; ShotgunT2FrameStat = 'Accuracy +10% / Recoil +5%'"
+  Option_12: dialogue_NK0mui8
+  OptionIf_12: "HasItem('Token', 1, 57)"
   OptionNext_12: GS_WeaponBench_Replace
-  OptionExecute_12: "Player.Skills['ShotgunT2FrameDamageUp'] = 0; Player.Skills['ShotgunT2FrameSpreadUp'] = 0; Player.Skills['ShotgunT2FrameRecoilUp'] = 0; Player.Skills['ShotgunT2FrameReloadUp'] = 90; Player.Skills['ShotgunT2FrameDamageDown'] = 0; Player.Skills['ShotgunT2FrameSpreadDown'] = 0; Player.Skills['ShotgunT2FrameRecoilDown'] = 0; Player.Skills['ShotgunT2FrameReloadDown'] = 0; RemoveItem('Token', 1, 63); ShotgunT2Frame = 'Automatic Shotgun Receiver'; ModSelection = 'Automatic Shotgun Receiver'; ShotgunT2FrameStat = 'Reload Speed +20%'"
-  Option_13: dialogue_Mi2mO0q
-  OptionNext_13: GS_WeaponBench_Restore
-  OptionExecute_13: "Player.Skills['ShotgunT2BarrelDamageUp'] = 0; Player.Skills['ShotgunT2BarrelSpreadUp'] = 0; Player.Skills['ShotgunT2BarrelRecoilUp'] = 0; Player.Skills['ShotgunT2BarrelReloadUp'] = 0; Player.Skills['ShotgunT2BarrelDamageDown'] = 0; Player.Skills['ShotgunT2BarrelSpreadDown'] = 0; Player.Skills['ShotgunT2BarrelRecoilDown'] = 0; Player.Skills['ShotgunT2BarrelReloadDown'] = 0; Player.Skills['ShotgunT2GripDamageUp'] = 0; Player.Skills['ShotgunT2GripSpreadUp'] = 0; Player.Skills['ShotgunT2GripRecoilUp'] = 0; Player.Skills['ShotgunT2GripReloadUp'] = 0; Player.Skills['ShotgunT2GripDamageDown'] = 0; Player.Skills['ShotgunT2GripSpreadDown'] = 0; Player.Skills['ShotgunT2GripRecoilDown'] = 0; Player.Skills['ShotgunT2GripReloadDown'] = 0; Player.Skills['ShotgunT2FrameDamageUp'] = 0; Player.Skills['ShotgunT2FrameSpreadUp'] = 0; Player.Skills['ShotgunT2FrameRecoilUp'] = 0; Player.Skills['ShotgunT2FrameReloadUp'] = 0; Player.Skills['ShotgunT2FrameDamageDown'] = 0; Player.Skills['ShotgunT2FrameSpreadDown'] = 0; Player.Skills['ShotgunT2FrameRecoilDown'] = 0; Player.Skills['ShotgunT2FrameReloadDown'] = 0; ShotgunT2Barrel = 'Default'; ShotgunT2Grip = 'Default'; ShotgunT2Frame = 'Default'; ShotgunT2BarrelStat = 'None'; ShotgunT2GripStat = 'None'; ShotgunT2FrameStat = 'None'"
-  Option_14: dialogue_CW08Lmq
-  OptionNext_14: GS_WeaponBench_Shotguns
+  OptionExecute_12: "Player.Skills['ShotgunT2FrameDamageUp'] = 0; Player.Skills['ShotgunT2FrameSpreadUp'] = 0; Player.Skills['ShotgunT2FrameRecoilUp'] = 26; Player.Skills['ShotgunT2FrameReloadUp'] = 0; Player.Skills['ShotgunT2FrameDamageDown'] = 0; Player.Skills['ShotgunT2FrameSpreadDown'] = 0; Player.Skills['ShotgunT2FrameRecoilDown'] = 0; Player.Skills['ShotgunT2FrameReloadDown'] = 0; RemoveItem('Token', 1, 57); ShotgunT2Frame = 'Heavy Shotgun Receiver'; ModSelection = 'Heavy Shotgun Receiver'; ShotgunT2FrameStat = 'Recoil -10%'"
+  Option_13: dialogue_uK04mmu
+  OptionIf_13: "HasItem('Token', 1, 63)"
+  OptionNext_13: GS_WeaponBench_Replace
+  OptionExecute_13: "Player.Skills['ShotgunT2FrameDamageUp'] = 0; Player.Skills['ShotgunT2FrameSpreadUp'] = 0; Player.Skills['ShotgunT2FrameRecoilUp'] = 0; Player.Skills['ShotgunT2FrameReloadUp'] = 90; Player.Skills['ShotgunT2FrameDamageDown'] = 0; Player.Skills['ShotgunT2FrameSpreadDown'] = 0; Player.Skills['ShotgunT2FrameRecoilDown'] = 0; Player.Skills['ShotgunT2FrameReloadDown'] = 0; RemoveItem('Token', 1, 63); ShotgunT2Frame = 'Automatic Shotgun Receiver'; ModSelection = 'Automatic Shotgun Receiver'; ShotgunT2FrameStat = 'Reload Speed +20%'"
+  Option_14: dialogue_Mi2mO0q
+  OptionNext_14: GS_WeaponBench_Restore
+  OptionExecute_14: "Player.Skills['ShotgunT2BarrelDamageUp'] = 0; Player.Skills['ShotgunT2BarrelSpreadUp'] = 0; Player.Skills['ShotgunT2BarrelRecoilUp'] = 0; Player.Skills['ShotgunT2BarrelReloadUp'] = 0; Player.Skills['ShotgunT2BarrelDamageDown'] = 0; Player.Skills['ShotgunT2BarrelSpreadDown'] = 0; Player.Skills['ShotgunT2BarrelRecoilDown'] = 0; Player.Skills['ShotgunT2BarrelReloadDown'] = 0; Player.Skills['ShotgunT2GripDamageUp'] = 0; Player.Skills['ShotgunT2GripSpreadUp'] = 0; Player.Skills['ShotgunT2GripRecoilUp'] = 0; Player.Skills['ShotgunT2GripReloadUp'] = 0; Player.Skills['ShotgunT2GripDamageDown'] = 0; Player.Skills['ShotgunT2GripSpreadDown'] = 0; Player.Skills['ShotgunT2GripRecoilDown'] = 0; Player.Skills['ShotgunT2GripReloadDown'] = 0; Player.Skills['ShotgunT2FrameDamageUp'] = 0; Player.Skills['ShotgunT2FrameSpreadUp'] = 0; Player.Skills['ShotgunT2FrameRecoilUp'] = 0; Player.Skills['ShotgunT2FrameReloadUp'] = 0; Player.Skills['ShotgunT2FrameDamageDown'] = 0; Player.Skills['ShotgunT2FrameSpreadDown'] = 0; Player.Skills['ShotgunT2FrameRecoilDown'] = 0; Player.Skills['ShotgunT2FrameReloadDown'] = 0; ShotgunT2Barrel = 'Default'; ShotgunT2Grip = 'Default'; ShotgunT2Frame = 'Default'; ShotgunT2BarrelStat = 'None'; ShotgunT2GripStat = 'None'; ShotgunT2FrameStat = 'None'"
+  Option_15: dialogue_CW08Lmq
+  OptionNext_15: GS_WeaponBench_Shotguns
   Variable_1: "ShotgunT2Barrel", param1: dbplayer_string
   Variable_2: "ShotgunT2Grip", param1: dbplayer_string
   Variable_3: "ShotgunT2Frame", param1: dbplayer_string
@@ -19123,47 +19131,51 @@
   OptionIf_3: "HasItem('Token', 1, 27)"
   OptionNext_3: GS_WeaponBench_Replace
   OptionExecute_3: "Player.Skills['ShotgunT3BarrelDamageUp'] = 7; Player.Skills['ShotgunT3BarrelSpreadUp'] = 0; Player.Skills['ShotgunT3BarrelRecoilUp'] = 0; Player.Skills['ShotgunT3BarrelReloadUp'] = 0; Player.Skills['ShotgunT3BarrelDamageDown'] = 0; Player.Skills['ShotgunT3BarrelSpreadDown'] = 0; Player.Skills['ShotgunT3BarrelRecoilDown'] = 9; Player.Skills['ShotgunT3BarrelReloadDown'] = 0; RemoveItem('Token', 1, 27); ShotgunT3Barrel = 'Medium High-Velocity Barrel'; ModSelection = 'Medium High-Velocity Barrel'; ShotgunT3BarrelStat = 'Damage +10% / Recoil +5%'"
-  Option_4: dialogue_Wq0eaK5
-  OptionIf_4: "HasItem('Token', 1, 39)"
+  Option_4: dialogue_qVmOmim
+  OptionIf_4: "HasItem('Token', 1, 81)"
   OptionNext_4: GS_WeaponBench_Replace
-  OptionExecute_4: "Player.Skills['ShotgunT3GripDamageUp'] = 0; Player.Skills['ShotgunT3GripSpreadUp'] = 0; Player.Skills['ShotgunT3GripRecoilUp'] = 9; Player.Skills['ShotgunT3GripReloadUp'] = 0; Player.Skills['ShotgunT3GripDamageDown'] = 0; Player.Skills['ShotgunT3GripSpreadDown'] = 0; Player.Skills['ShotgunT3GripRecoilDown'] = 0; Player.Skills['ShotgunT3GripReloadDown'] = 0; RemoveItem('Token', 1, 39); ShotgunT3Grip = 'Wooden Stock'; ModSelection = 'Wooden Stock'; ShotgunT3GripStat = 'Recoil -5%'"
-  Option_5: dialogue_i0e44qO
-  OptionIf_5: "HasItem('Token', 1, 40)"
+  OptionExecute_4: "Player.Skills['ShotgunT3BarrelDamageUp'] = 0; Player.Skills['ShotgunT3BarrelSpreadUp'] = 125; Player.Skills['ShotgunT3BarrelRecoilUp'] = 0; Player.Skills['ShotgunT3BarrelReloadUp'] = 0; Player.Skills['ShotgunT3BarrelDamageDown'] = 0; Player.Skills['ShotgunT3BarrelSpreadDown'] = 0; Player.Skills['ShotgunT3BarrelRecoilDown'] = 19; Player.Skills['ShotgunT3BarrelReloadDown'] = 0; RemoveItem('Token', 1, 81); ShotgunT3Barrel = 'Adjustable Choke Barrel'; ModSelection = 'Adjustable Choke Barrel'; ShotgunT3BarrelStat = 'Accuracy +25% / Recoil +10%'"
+  Option_5: dialogue_Wq0eaK5
+  OptionIf_5: "HasItem('Token', 1, 39)"
   OptionNext_5: GS_WeaponBench_Replace
-  OptionExecute_5: "Player.Skills['ShotgunT3GripDamageUp'] = 0; Player.Skills['ShotgunT3GripSpreadUp'] = 50; Player.Skills['ShotgunT3GripRecoilUp'] = 9; Player.Skills['ShotgunT3GripReloadUp'] = 0; Player.Skills['ShotgunT3GripDamageDown'] = 0; Player.Skills['ShotgunT3GripSpreadDown'] = 0; Player.Skills['ShotgunT3GripRecoilDown'] = 0; Player.Skills['ShotgunT3GripReloadDown'] = 24; RemoveItem('Token', 1, 40); ShotgunT3Grip = 'Folding Stock'; ModSelection = 'Folding Stock'; ShotgunT3GripStat = 'Accuracy +10% / Recoil -5% / Reload Speed -10%'"
-  Option_6: dialogue_mSG04KG
-  OptionIf_6: "HasItem('Token', 1, 41)"
+  OptionExecute_5: "Player.Skills['ShotgunT3GripDamageUp'] = 0; Player.Skills['ShotgunT3GripSpreadUp'] = 0; Player.Skills['ShotgunT3GripRecoilUp'] = 9; Player.Skills['ShotgunT3GripReloadUp'] = 0; Player.Skills['ShotgunT3GripDamageDown'] = 0; Player.Skills['ShotgunT3GripSpreadDown'] = 0; Player.Skills['ShotgunT3GripRecoilDown'] = 0; Player.Skills['ShotgunT3GripReloadDown'] = 0; RemoveItem('Token', 1, 39); ShotgunT3Grip = 'Wooden Stock'; ModSelection = 'Wooden Stock'; ShotgunT3GripStat = 'Recoil -5%'"
+  Option_6: dialogue_i0e44qO
+  OptionIf_6: "HasItem('Token', 1, 40)"
   OptionNext_6: GS_WeaponBench_Replace
-  OptionExecute_6: "Player.Skills['ShotgunT3GripDamageUp'] = 0; Player.Skills['ShotgunT3GripSpreadUp'] = 0; Player.Skills['ShotgunT3GripRecoilUp'] = 16; Player.Skills['ShotgunT3GripReloadUp'] = 0; Player.Skills['ShotgunT3GripDamageDown'] = 0; Player.Skills['ShotgunT3GripSpreadDown'] = 0; Player.Skills['ShotgunT3GripRecoilDown'] = 0; Player.Skills['ShotgunT3GripReloadDown'] = 0; RemoveItem('Token', 1, 41); ShotgunT3Grip = 'Short Stock'; ModSelection = 'Short Stock'; ShotgunT3GripStat = 'Recoil -10%'"
-  Option_7: dialogue_0iSG47i
-  OptionIf_7: "HasItem('Token', 1, 42)"
+  OptionExecute_6: "Player.Skills['ShotgunT3GripDamageUp'] = 0; Player.Skills['ShotgunT3GripSpreadUp'] = 50; Player.Skills['ShotgunT3GripRecoilUp'] = 9; Player.Skills['ShotgunT3GripReloadUp'] = 0; Player.Skills['ShotgunT3GripDamageDown'] = 0; Player.Skills['ShotgunT3GripSpreadDown'] = 0; Player.Skills['ShotgunT3GripRecoilDown'] = 0; Player.Skills['ShotgunT3GripReloadDown'] = 24; RemoveItem('Token', 1, 40); ShotgunT3Grip = 'Folding Stock'; ModSelection = 'Folding Stock'; ShotgunT3GripStat = 'Accuracy +10% / Recoil -5% / Reload Speed -10%'"
+  Option_7: dialogue_mSG04KG
+  OptionIf_7: "HasItem('Token', 1, 41)"
   OptionNext_7: GS_WeaponBench_Replace
-  OptionExecute_7: "Player.Skills['ShotgunT3GripDamageUp'] = 7; Player.Skills['ShotgunT3GripSpreadUp'] = 50; Player.Skills['ShotgunT3GripRecoilUp'] = 0; Player.Skills['ShotgunT3GripReloadUp'] = 0; Player.Skills['ShotgunT3GripDamageDown'] = 0; Player.Skills['ShotgunT3GripSpreadDown'] = 0; Player.Skills['ShotgunT3GripRecoilDown'] = 0; Player.Skills['ShotgunT3GripReloadDown'] = 45; RemoveItem('Token', 1, 42); ShotgunT3Grip = 'Full Stock'; ModSelection = 'Full Stock'; ShotgunT3GripStat = 'Damage +10% / Accuracy + 10% / Reload Speed -10%'"
-  Option_8: dialogue_WGmKSqe
-  OptionIf_8: "HasItem('Token', 1, 46)"
+  OptionExecute_7: "Player.Skills['ShotgunT3GripDamageUp'] = 0; Player.Skills['ShotgunT3GripSpreadUp'] = 0; Player.Skills['ShotgunT3GripRecoilUp'] = 16; Player.Skills['ShotgunT3GripReloadUp'] = 0; Player.Skills['ShotgunT3GripDamageDown'] = 0; Player.Skills['ShotgunT3GripSpreadDown'] = 0; Player.Skills['ShotgunT3GripRecoilDown'] = 0; Player.Skills['ShotgunT3GripReloadDown'] = 0; RemoveItem('Token', 1, 41); ShotgunT3Grip = 'Short Stock'; ModSelection = 'Short Stock'; ShotgunT3GripStat = 'Recoil -10%'"
+  Option_8: dialogue_0iSG47i
+  OptionIf_8: "HasItem('Token', 1, 42)"
   OptionNext_8: GS_WeaponBench_Replace
-  OptionExecute_8: "Player.Skills['ShotgunT3GripDamageUp'] = 0; Player.Skills['ShotgunT3GripSpreadUp'] = 0; Player.Skills['ShotgunT3GripRecoilUp'] = 34; Player.Skills['ShotgunT3GripReloadUp'] = 67; Player.Skills['ShotgunT3GripDamageDown'] = 0; Player.Skills['ShotgunT3GripSpreadDown'] = 0; Player.Skills['ShotgunT3GripRecoilDown'] = 0; Player.Skills['ShotgunT3GripReloadDown'] = 0; RemoveItem('Token', 1, 46); ShotgunT3Grip = 'Tactical Stock'; ModSelection = 'Tactical Stock'; ShotgunT3GripStat = 'Recoil -20% / Reload Speed +15%'"
-  Option_9: dialogue_CceGm4q
-  OptionIf_9: "HasItem('Token', 1, 48)"
+  OptionExecute_8: "Player.Skills['ShotgunT3GripDamageUp'] = 7; Player.Skills['ShotgunT3GripSpreadUp'] = 50; Player.Skills['ShotgunT3GripRecoilUp'] = 0; Player.Skills['ShotgunT3GripReloadUp'] = 0; Player.Skills['ShotgunT3GripDamageDown'] = 0; Player.Skills['ShotgunT3GripSpreadDown'] = 0; Player.Skills['ShotgunT3GripRecoilDown'] = 0; Player.Skills['ShotgunT3GripReloadDown'] = 45; RemoveItem('Token', 1, 42); ShotgunT3Grip = 'Full Stock'; ModSelection = 'Full Stock'; ShotgunT3GripStat = 'Damage +10% / Accuracy + 10% / Reload Speed -10%'"
+  Option_9: dialogue_WGmKSqe
+  OptionIf_9: "HasItem('Token', 1, 46)"
   OptionNext_9: GS_WeaponBench_Replace
-  OptionExecute_9: "Player.Skills['ShotgunT3GripDamageUp'] = 0; Player.Skills['ShotgunT3GripSpreadUp'] = 0; Player.Skills['ShotgunT3GripRecoilUp'] = 50; Player.Skills['ShotgunT3GripReloadUp'] = 0; Player.Skills['ShotgunT3GripDamageDown'] = 0; Player.Skills['ShotgunT3GripSpreadDown'] = 0; Player.Skills['ShotgunT3GripRecoilDown'] = 0; Player.Skills['ShotgunT3GripReloadDown'] = 0; RemoveItem('Token', 1, 48); ShotgunT3Grip = 'Recoil-Compensating Stock'; ModSelection = 'Recoil-Compensating Stock'; ShotgunT3GripStat = 'Recoil -30%'"
-  Option_10: dialogue_GKiOqS8
-  OptionIf_10: "HasItem('Token', 1, 53)"
+  OptionExecute_9: "Player.Skills['ShotgunT3GripDamageUp'] = 0; Player.Skills['ShotgunT3GripSpreadUp'] = 0; Player.Skills['ShotgunT3GripRecoilUp'] = 34; Player.Skills['ShotgunT3GripReloadUp'] = 67; Player.Skills['ShotgunT3GripDamageDown'] = 0; Player.Skills['ShotgunT3GripSpreadDown'] = 0; Player.Skills['ShotgunT3GripRecoilDown'] = 0; Player.Skills['ShotgunT3GripReloadDown'] = 0; RemoveItem('Token', 1, 46); ShotgunT3Grip = 'Tactical Stock'; ModSelection = 'Tactical Stock'; ShotgunT3GripStat = 'Recoil -20% / Reload Speed +15%'"
+  Option_10: dialogue_CceGm4q
+  OptionIf_10: "HasItem('Token', 1, 48)"
   OptionNext_10: GS_WeaponBench_Replace
-  OptionExecute_10: "Player.Skills['ShotgunT3FrameDamageUp'] = 0; Player.Skills['ShotgunT3FrameSpreadUp'] = 50; Player.Skills['ShotgunT3FrameRecoilUp'] = 0; Player.Skills['ShotgunT3FrameReloadUp'] = 0; Player.Skills['ShotgunT3FrameDamageDown'] = 0; Player.Skills['ShotgunT3FrameSpreadDown'] = 0; Player.Skills['ShotgunT3FrameRecoilDown'] = 9; Player.Skills['ShotgunT3FrameReloadDown'] = 0; RemoveItem('Token', 1, 53); ShotgunT3Frame = 'Light Shotgun Receiver'; ModSelection = 'Light Shotgun Receiver'; ShotgunT3FrameStat = 'Accuracy +10% / Recoil +5%'"
-  Option_11: dialogue_4mmmuKO
-  OptionIf_11: "HasItem('Token', 1, 57)"
+  OptionExecute_10: "Player.Skills['ShotgunT3GripDamageUp'] = 0; Player.Skills['ShotgunT3GripSpreadUp'] = 0; Player.Skills['ShotgunT3GripRecoilUp'] = 50; Player.Skills['ShotgunT3GripReloadUp'] = 0; Player.Skills['ShotgunT3GripDamageDown'] = 0; Player.Skills['ShotgunT3GripSpreadDown'] = 0; Player.Skills['ShotgunT3GripRecoilDown'] = 0; Player.Skills['ShotgunT3GripReloadDown'] = 0; RemoveItem('Token', 1, 48); ShotgunT3Grip = 'Recoil-Compensating Stock'; ModSelection = 'Recoil-Compensating Stock'; ShotgunT3GripStat = 'Recoil -30%'"
+  Option_11: dialogue_GKiOqS8
+  OptionIf_11: "HasItem('Token', 1, 53)"
   OptionNext_11: GS_WeaponBench_Replace
-  OptionExecute_11: "Player.Skills['ShotgunT3FrameDamageUp'] = 0; Player.Skills['ShotgunT3FrameSpreadUp'] = 0; Player.Skills['ShotgunT3FrameRecoilUp'] = 17; Player.Skills['ShotgunT3FrameReloadUp'] = 0; Player.Skills['ShotgunT3FrameDamageDown'] = 0; Player.Skills['ShotgunT3FrameSpreadDown'] = 0; Player.Skills['ShotgunT3FrameRecoilDown'] = 0; Player.Skills['ShotgunT3FrameReloadDown'] = 0; RemoveItem('Token', 1, 57); ShotgunT3Frame = 'Heavy Shotgun Receiver'; ModSelection = 'Heavy Shotgun Receiver'; ShotgunT3FrameStat = 'Recoil -10%'"
-  Option_12: dialogue_K4aiG48
-  OptionIf_12: "HasItem('Token', 1, 63)"
+  OptionExecute_11: "Player.Skills['ShotgunT3FrameDamageUp'] = 0; Player.Skills['ShotgunT3FrameSpreadUp'] = 50; Player.Skills['ShotgunT3FrameRecoilUp'] = 0; Player.Skills['ShotgunT3FrameReloadUp'] = 0; Player.Skills['ShotgunT3FrameDamageDown'] = 0; Player.Skills['ShotgunT3FrameSpreadDown'] = 0; Player.Skills['ShotgunT3FrameRecoilDown'] = 9; Player.Skills['ShotgunT3FrameReloadDown'] = 0; RemoveItem('Token', 1, 53); ShotgunT3Frame = 'Light Shotgun Receiver'; ModSelection = 'Light Shotgun Receiver'; ShotgunT3FrameStat = 'Accuracy +10% / Recoil +5%'"
+  Option_12: dialogue_4mmmuKO
+  OptionIf_12: "HasItem('Token', 1, 57)"
   OptionNext_12: GS_WeaponBench_Replace
-  OptionExecute_12: "Player.Skills['ShotgunT3FrameDamageUp'] = 0; Player.Skills['ShotgunT3FrameSpreadUp'] = 0; Player.Skills['ShotgunT3FrameRecoilUp'] = 0; Player.Skills['ShotgunT3FrameReloadUp'] = 90; Player.Skills['ShotgunT3FrameDamageDown'] = 0; Player.Skills['ShotgunT3FrameSpreadDown'] = 0; Player.Skills['ShotgunT3FrameRecoilDown'] = 0; Player.Skills['ShotgunT3FrameReloadDown'] = 0; RemoveItem('Token', 1, 63); ShotgunT3Frame = 'Automatic Shotgun Receiver'; ModSelection = 'Automatic Shotgun Receiver'; ShotgunT3FrameStat = 'Reload Speed +20%'"
-  Option_13: dialogue_0WGOm4q
-  OptionNext_13: GS_WeaponBench_Restore
-  OptionExecute_13: "Player.Skills['ShotgunT3BarrelDamageUp'] = 0; Player.Skills['ShotgunT3BarrelSpreadUp'] = 0; Player.Skills['ShotgunT3BarrelRecoilUp'] = 0; Player.Skills['ShotgunT3BarrelReloadUp'] = 0; Player.Skills['ShotgunT3BarrelDamageDown'] = 0; Player.Skills['ShotgunT3BarrelSpreadDown'] = 0; Player.Skills['ShotgunT3BarrelRecoilDown'] = 0; Player.Skills['ShotgunT3BarrelReloadDown'] = 0; Player.Skills['ShotgunT3GripDamageUp'] = 0; Player.Skills['ShotgunT3GripSpreadUp'] = 0; Player.Skills['ShotgunT3GripRecoilUp'] = 0; Player.Skills['ShotgunT3GripReloadUp'] = 0; Player.Skills['ShotgunT3GripDamageDown'] = 0; Player.Skills['ShotgunT3GripSpreadDown'] = 0; Player.Skills['ShotgunT3GripRecoilDown'] = 0; Player.Skills['ShotgunT3GripReloadDown'] = 0; Player.Skills['ShotgunT3FrameDamageUp'] = 0; Player.Skills['ShotgunT3FrameSpreadUp'] = 0; Player.Skills['ShotgunT3FrameRecoilUp'] = 0; Player.Skills['ShotgunT3FrameReloadUp'] = 0; Player.Skills['ShotgunT3FrameDamageDown'] = 0; Player.Skills['ShotgunT3FrameSpreadDown'] = 0; Player.Skills['ShotgunT3FrameRecoilDown'] = 0; Player.Skills['ShotgunT3FrameReloadDown'] = 0; ShotgunT3Barrel = 'Default'; ShotgunT3Grip = 'Default'; ShotgunT3Frame = 'Default'; ShotgunT3BarrelStat = 'None'; ShotgunT3GripStat = 'None'; ShotgunT3FrameStat = 'None'"
-  Option_14: dialogue_G4Km4Rm
-  OptionNext_14: GS_WeaponBench_Shotguns
+  OptionExecute_12: "Player.Skills['ShotgunT3FrameDamageUp'] = 0; Player.Skills['ShotgunT3FrameSpreadUp'] = 0; Player.Skills['ShotgunT3FrameRecoilUp'] = 17; Player.Skills['ShotgunT3FrameReloadUp'] = 0; Player.Skills['ShotgunT3FrameDamageDown'] = 0; Player.Skills['ShotgunT3FrameSpreadDown'] = 0; Player.Skills['ShotgunT3FrameRecoilDown'] = 0; Player.Skills['ShotgunT3FrameReloadDown'] = 0; RemoveItem('Token', 1, 57); ShotgunT3Frame = 'Heavy Shotgun Receiver'; ModSelection = 'Heavy Shotgun Receiver'; ShotgunT3FrameStat = 'Recoil -10%'"
+  Option_13: dialogue_K4aiG48
+  OptionIf_13: "HasItem('Token', 1, 63)"
+  OptionNext_13: GS_WeaponBench_Replace
+  OptionExecute_13: "Player.Skills['ShotgunT3FrameDamageUp'] = 0; Player.Skills['ShotgunT3FrameSpreadUp'] = 0; Player.Skills['ShotgunT3FrameRecoilUp'] = 0; Player.Skills['ShotgunT3FrameReloadUp'] = 90; Player.Skills['ShotgunT3FrameDamageDown'] = 0; Player.Skills['ShotgunT3FrameSpreadDown'] = 0; Player.Skills['ShotgunT3FrameRecoilDown'] = 0; Player.Skills['ShotgunT3FrameReloadDown'] = 0; RemoveItem('Token', 1, 63); ShotgunT3Frame = 'Automatic Shotgun Receiver'; ModSelection = 'Automatic Shotgun Receiver'; ShotgunT3FrameStat = 'Reload Speed +20%'"
+  Option_14: dialogue_0WGOm4q
+  OptionNext_14: GS_WeaponBench_Restore
+  OptionExecute_14: "Player.Skills['ShotgunT3BarrelDamageUp'] = 0; Player.Skills['ShotgunT3BarrelSpreadUp'] = 0; Player.Skills['ShotgunT3BarrelRecoilUp'] = 0; Player.Skills['ShotgunT3BarrelReloadUp'] = 0; Player.Skills['ShotgunT3BarrelDamageDown'] = 0; Player.Skills['ShotgunT3BarrelSpreadDown'] = 0; Player.Skills['ShotgunT3BarrelRecoilDown'] = 0; Player.Skills['ShotgunT3BarrelReloadDown'] = 0; Player.Skills['ShotgunT3GripDamageUp'] = 0; Player.Skills['ShotgunT3GripSpreadUp'] = 0; Player.Skills['ShotgunT3GripRecoilUp'] = 0; Player.Skills['ShotgunT3GripReloadUp'] = 0; Player.Skills['ShotgunT3GripDamageDown'] = 0; Player.Skills['ShotgunT3GripSpreadDown'] = 0; Player.Skills['ShotgunT3GripRecoilDown'] = 0; Player.Skills['ShotgunT3GripReloadDown'] = 0; Player.Skills['ShotgunT3FrameDamageUp'] = 0; Player.Skills['ShotgunT3FrameSpreadUp'] = 0; Player.Skills['ShotgunT3FrameRecoilUp'] = 0; Player.Skills['ShotgunT3FrameReloadUp'] = 0; Player.Skills['ShotgunT3FrameDamageDown'] = 0; Player.Skills['ShotgunT3FrameSpreadDown'] = 0; Player.Skills['ShotgunT3FrameRecoilDown'] = 0; Player.Skills['ShotgunT3FrameReloadDown'] = 0; ShotgunT3Barrel = 'Default'; ShotgunT3Grip = 'Default'; ShotgunT3Frame = 'Default'; ShotgunT3BarrelStat = 'None'; ShotgunT3GripStat = 'None'; ShotgunT3FrameStat = 'None'"
+  Option_15: dialogue_G4Km4Rm
+  OptionNext_15: GS_WeaponBench_Shotguns
   Variable_1: "ShotgunT3Barrel", param1: dbplayer_string
   Variable_2: "ShotgunT3Grip", param1: dbplayer_string
   Variable_3: "ShotgunT3Frame", param1: dbplayer_string
@@ -19186,47 +19198,51 @@
   OptionIf_3: "HasItem('Token', 1, 27)"
   OptionNext_3: GS_WeaponBench_Replace
   OptionExecute_3: "Player.Skills['ShotgunZiraxBarrelDamageUp'] = 8; Player.Skills['ShotgunZiraxBarrelSpreadUp'] = 0; Player.Skills['ShotgunZiraxBarrelRecoilUp'] = 0; Player.Skills['ShotgunZiraxBarrelReloadUp'] = 0; Player.Skills['ShotgunZiraxBarrelDamageDown'] = 0; Player.Skills['ShotgunZiraxBarrelSpreadDown'] = 0; Player.Skills['ShotgunZiraxBarrelRecoilDown'] = 14; Player.Skills['ShotgunZiraxBarrelReloadDown'] = 0; RemoveItem('Token', 1, 27); ShotgunZiraxBarrel = 'Medium High-Velocity Barrel'; ModSelection = 'Medium High-Velocity Barrel'; ShotgunZiraxBarrelStat = 'Damage +10% / Recoil +5%'"
-  Option_4: dialogue_CuKKK0q
-  OptionIf_4: "HasItem('Token', 1, 39)"
+  Option_4: dialogue_SCmKCGu
+  OptionIf_4: "HasItem('Token', 1, 81)"
   OptionNext_4: GS_WeaponBench_Replace
-  OptionExecute_4: "Player.Skills['ShotgunZiraxGripDamageUp'] = 0; Player.Skills['ShotgunZiraxGripSpreadUp'] = 0; Player.Skills['ShotgunZiraxGripRecoilUp'] = 14; Player.Skills['ShotgunZiraxGripReloadUp'] = 0; Player.Skills['ShotgunZiraxGripDamageDown'] = 0; Player.Skills['ShotgunZiraxGripSpreadDown'] = 0; Player.Skills['ShotgunZiraxGripRecoilDown'] = 0; Player.Skills['ShotgunZiraxGripReloadDown'] = 0; RemoveItem('Token', 1, 39); ShotgunZiraxGrip = 'Wooden Stock'; ModSelection = 'Wooden Stock'; ShotgunZiraxGripStat = 'Recoil -5%'"
-  Option_5: dialogue_4e04iE4
-  OptionIf_5: "HasItem('Token', 1, 40)"
+  OptionExecute_4: "Player.Skills['ShotgunZiraxBarrelDamageUp'] = 0; Player.Skills['ShotgunZiraxBarrelSpreadUp'] = 150; Player.Skills['ShotgunZiraxBarrelRecoilUp'] = 0; Player.Skills['ShotgunZiraxBarrelReloadUp'] = 0; Player.Skills['ShotgunZiraxBarrelDamageDown'] = 0; Player.Skills['ShotgunZiraxBarrelSpreadDown'] = 0; Player.Skills['ShotgunZiraxBarrelRecoilDown'] = 28; Player.Skills['ShotgunZiraxBarrelReloadDown'] = 0; RemoveItem('Token', 1, 81); ShotgunZiraxBarrel = 'Adjustable Choke Barrel'; ModSelection = 'Adjustable Choke Barrel'; ShotgunZiraxBarrelStat = 'Accuracy +25% / Recoil +10%'"
+  Option_5: dialogue_CuKKK0q
+  OptionIf_5: "HasItem('Token', 1, 39)"
   OptionNext_5: GS_WeaponBench_Replace
-  OptionExecute_5: "Player.Skills['ShotgunZiraxGripDamageUp'] = 0; Player.Skills['ShotgunZiraxGripSpreadUp'] = 60; Player.Skills['ShotgunZiraxGripRecoilUp'] = 14; Player.Skills['ShotgunZiraxGripReloadUp'] = 0; Player.Skills['ShotgunZiraxGripDamageDown'] = 0; Player.Skills['ShotgunZiraxGripSpreadDown'] = 0; Player.Skills['ShotgunZiraxGripRecoilDown'] = 0; Player.Skills['ShotgunZiraxGripReloadDown'] = 50; RemoveItem('Token', 1, 40); ShotgunZiraxGrip = 'Folding Stock'; ModSelection = 'Folding Stock'; ShotgunZiraxGripStat = 'Accuracy +10% / Recoil -5% / Reload Speed -10%'"
-  Option_6: dialogue_a0qY4iq
-  OptionIf_6: "HasItem('Token', 1, 41)"
+  OptionExecute_5: "Player.Skills['ShotgunZiraxGripDamageUp'] = 0; Player.Skills['ShotgunZiraxGripSpreadUp'] = 0; Player.Skills['ShotgunZiraxGripRecoilUp'] = 14; Player.Skills['ShotgunZiraxGripReloadUp'] = 0; Player.Skills['ShotgunZiraxGripDamageDown'] = 0; Player.Skills['ShotgunZiraxGripSpreadDown'] = 0; Player.Skills['ShotgunZiraxGripRecoilDown'] = 0; Player.Skills['ShotgunZiraxGripReloadDown'] = 0; RemoveItem('Token', 1, 39); ShotgunZiraxGrip = 'Wooden Stock'; ModSelection = 'Wooden Stock'; ShotgunZiraxGripStat = 'Recoil -5%'"
+  Option_6: dialogue_4e04iE4
+  OptionIf_6: "HasItem('Token', 1, 40)"
   OptionNext_6: GS_WeaponBench_Replace
-  OptionExecute_6: "Player.Skills['ShotgunZiraxGripDamageUp'] = 0; Player.Skills['ShotgunZiraxGripSpreadUp'] = 0; Player.Skills['ShotgunZiraxGripRecoilUp'] = 26; Player.Skills['ShotgunZiraxGripReloadUp'] = 0; Player.Skills['ShotgunZiraxGripDamageDown'] = 0; Player.Skills['ShotgunZiraxGripSpreadDown'] = 0; Player.Skills['ShotgunZiraxGripRecoilDown'] = 0; Player.Skills['ShotgunZiraxGripReloadDown'] = 0; RemoveItem('Token', 1, 41); ShotgunZiraxGrip = 'Short Stock'; ModSelection = 'Short Stock'; ShotgunZiraxGripStat = 'Recoil -10%'"
-  Option_7: dialogue_0emOi4O
-  OptionIf_7: "HasItem('Token', 1, 42)"
+  OptionExecute_6: "Player.Skills['ShotgunZiraxGripDamageUp'] = 0; Player.Skills['ShotgunZiraxGripSpreadUp'] = 60; Player.Skills['ShotgunZiraxGripRecoilUp'] = 14; Player.Skills['ShotgunZiraxGripReloadUp'] = 0; Player.Skills['ShotgunZiraxGripDamageDown'] = 0; Player.Skills['ShotgunZiraxGripSpreadDown'] = 0; Player.Skills['ShotgunZiraxGripRecoilDown'] = 0; Player.Skills['ShotgunZiraxGripReloadDown'] = 50; RemoveItem('Token', 1, 40); ShotgunZiraxGrip = 'Folding Stock'; ModSelection = 'Folding Stock'; ShotgunZiraxGripStat = 'Accuracy +10% / Recoil -5% / Reload Speed -10%'"
+  Option_7: dialogue_a0qY4iq
+  OptionIf_7: "HasItem('Token', 1, 41)"
   OptionNext_7: GS_WeaponBench_Replace
-  OptionExecute_7: "Player.Skills['ShotgunZiraxGripDamageUp'] = 8; Player.Skills['ShotgunZiraxGripSpreadUp'] = 60; Player.Skills['ShotgunZiraxGripRecoilUp'] = 0; Player.Skills['ShotgunZiraxGripReloadUp'] = 0; Player.Skills['ShotgunZiraxGripDamageDown'] = 0; Player.Skills['ShotgunZiraxGripSpreadDown'] = 0; Player.Skills['ShotgunZiraxGripRecoilDown'] = 0; Player.Skills['ShotgunZiraxGripReloadDown'] = 45; RemoveItem('Token', 1, 42); ShotgunZiraxGrip = 'Full Stock'; ModSelection = 'Full Stock'; ShotgunZiraxGripStat = 'Damage +10% / Accuracy +10% / Reload Speed -10%'"
-  Option_8: dialogue_8OqGmUO
-  OptionIf_8: "HasItem('Token', 1, 46)"
+  OptionExecute_7: "Player.Skills['ShotgunZiraxGripDamageUp'] = 0; Player.Skills['ShotgunZiraxGripSpreadUp'] = 0; Player.Skills['ShotgunZiraxGripRecoilUp'] = 26; Player.Skills['ShotgunZiraxGripReloadUp'] = 0; Player.Skills['ShotgunZiraxGripDamageDown'] = 0; Player.Skills['ShotgunZiraxGripSpreadDown'] = 0; Player.Skills['ShotgunZiraxGripRecoilDown'] = 0; Player.Skills['ShotgunZiraxGripReloadDown'] = 0; RemoveItem('Token', 1, 41); ShotgunZiraxGrip = 'Short Stock'; ModSelection = 'Short Stock'; ShotgunZiraxGripStat = 'Recoil -10%'"
+  Option_8: dialogue_0emOi4O
+  OptionIf_8: "HasItem('Token', 1, 42)"
   OptionNext_8: GS_WeaponBench_Replace
-  OptionExecute_8: "Player.Skills['ShotgunZiraxGripDamageUp'] = 0; Player.Skills['ShotgunZiraxGripSpreadUp'] = 0; Player.Skills['ShotgunZiraxGripRecoilUp'] = 54; Player.Skills['ShotgunZiraxGripReloadUp'] = 67; Player.Skills['ShotgunZiraxGripDamageDown'] = 0; Player.Skills['ShotgunZiraxGripSpreadDown'] = 0; Player.Skills['ShotgunZiraxGripRecoilDown'] = 0; Player.Skills['ShotgunZiraxGripReloadDown'] = 0; RemoveItem('Token', 1, 46); ShotgunZiraxGrip = 'Tactical Stock'; ModSelection = 'Tactical Stock'; ShotgunZiraxGripStat = 'Recoil -20% / Reload Speed +15%'"
-  Option_9: dialogue_kmiCJei
-  OptionIf_9: "HasItem('Token', 1, 48)"
+  OptionExecute_8: "Player.Skills['ShotgunZiraxGripDamageUp'] = 8; Player.Skills['ShotgunZiraxGripSpreadUp'] = 60; Player.Skills['ShotgunZiraxGripRecoilUp'] = 0; Player.Skills['ShotgunZiraxGripReloadUp'] = 0; Player.Skills['ShotgunZiraxGripDamageDown'] = 0; Player.Skills['ShotgunZiraxGripSpreadDown'] = 0; Player.Skills['ShotgunZiraxGripRecoilDown'] = 0; Player.Skills['ShotgunZiraxGripReloadDown'] = 45; RemoveItem('Token', 1, 42); ShotgunZiraxGrip = 'Full Stock'; ModSelection = 'Full Stock'; ShotgunZiraxGripStat = 'Damage +10% / Accuracy +10% / Reload Speed -10%'"
+  Option_9: dialogue_8OqGmUO
+  OptionIf_9: "HasItem('Token', 1, 46)"
   OptionNext_9: GS_WeaponBench_Replace
-  OptionExecute_9: "Player.Skills['ShotgunZiraxGripDamageUp'] = 0; Player.Skills['ShotgunZiraxGripSpreadUp'] = 0; Player.Skills['ShotgunZiraxGripRecoilUp'] = 80; Player.Skills['ShotgunZiraxGripReloadUp'] = 0; Player.Skills['ShotgunZiraxGripDamageDown'] = 0; Player.Skills['ShotgunZiraxGripSpreadDown'] = 0; Player.Skills['ShotgunZiraxGripRecoilDown'] = 0; Player.Skills['ShotgunZiraxGripReloadDown'] = 0; RemoveItem('Token', 1, 48); ShotgunZiraxGrip = 'Recoil-Compensating Stock'; ModSelection = 'Recoil-Compensating Stock'; ShotgunZiraxGripStat = 'Recoil -30%'"
-  Option_10: dialogue_C900kCt
-  OptionIf_10: "HasItem('Token', 1, 53)"
+  OptionExecute_9: "Player.Skills['ShotgunZiraxGripDamageUp'] = 0; Player.Skills['ShotgunZiraxGripSpreadUp'] = 0; Player.Skills['ShotgunZiraxGripRecoilUp'] = 54; Player.Skills['ShotgunZiraxGripReloadUp'] = 67; Player.Skills['ShotgunZiraxGripDamageDown'] = 0; Player.Skills['ShotgunZiraxGripSpreadDown'] = 0; Player.Skills['ShotgunZiraxGripRecoilDown'] = 0; Player.Skills['ShotgunZiraxGripReloadDown'] = 0; RemoveItem('Token', 1, 46); ShotgunZiraxGrip = 'Tactical Stock'; ModSelection = 'Tactical Stock'; ShotgunZiraxGripStat = 'Recoil -20% / Reload Speed +15%'"
+  Option_10: dialogue_kmiCJei
+  OptionIf_10: "HasItem('Token', 1, 48)"
   OptionNext_10: GS_WeaponBench_Replace
-  OptionExecute_10: "Player.Skills['ShotgunZiraxFrameDamageUp'] = 0; Player.Skills['ShotgunZiraxFrameSpreadUp'] = 60; Player.Skills['ShotgunZiraxFrameRecoilUp'] = 0; Player.Skills['ShotgunZiraxFrameReloadUp'] = 0; Player.Skills['ShotgunZiraxFrameDamageDown'] = 0; Player.Skills['ShotgunZiraxFrameSpreadDown'] = 0; Player.Skills['ShotgunZiraxFrameRecoilDown'] = 14; Player.Skills['ShotgunZiraxFrameReloadDown'] = 0; RemoveItem('Token', 1, 53); ShotgunZiraxFrame = 'Light Shotgun Receiver'; ModSelection = 'Light Shotgun Receiver'; ShotgunZiraxFrameStat = 'Accuracy +10% / Recoil +5%'"
-  Option_11: dialogue_iuW4SOh
-  OptionIf_11: "HasItem('Token', 1, 57)"
+  OptionExecute_10: "Player.Skills['ShotgunZiraxGripDamageUp'] = 0; Player.Skills['ShotgunZiraxGripSpreadUp'] = 0; Player.Skills['ShotgunZiraxGripRecoilUp'] = 80; Player.Skills['ShotgunZiraxGripReloadUp'] = 0; Player.Skills['ShotgunZiraxGripDamageDown'] = 0; Player.Skills['ShotgunZiraxGripSpreadDown'] = 0; Player.Skills['ShotgunZiraxGripRecoilDown'] = 0; Player.Skills['ShotgunZiraxGripReloadDown'] = 0; RemoveItem('Token', 1, 48); ShotgunZiraxGrip = 'Recoil-Compensating Stock'; ModSelection = 'Recoil-Compensating Stock'; ShotgunZiraxGripStat = 'Recoil -30%'"
+  Option_11: dialogue_C900kCt
+  OptionIf_11: "HasItem('Token', 1, 53)"
   OptionNext_11: GS_WeaponBench_Replace
-  OptionExecute_11: "Player.Skills['ShotgunZiraxFrameDamageUp'] = 0; Player.Skills['ShotgunZiraxFrameSpreadUp'] = 0; Player.Skills['ShotgunZiraxFrameRecoilUp'] = 27; Player.Skills['ShotgunZiraxFrameReloadUp'] = 0; Player.Skills['ShotgunZiraxFrameDamageDown'] = 0; Player.Skills['ShotgunZiraxFrameSpreadDown'] = 0; Player.Skills['ShotgunZiraxFrameRecoilDown'] = 0; Player.Skills['ShotgunZiraxFrameReloadDown'] = 0; RemoveItem('Token', 1, 57); ShotgunZiraxFrame = 'Heavy Shotgun Receiver'; ModSelection = 'Heavy Shotgun Receiver'; ShotgunZiraxFrameStat = 'Recoil -10%'"
-  Option_12: dialogue_SOiZGSi
-  OptionIf_12: "HasItem('Token', 1, 63)"
+  OptionExecute_11: "Player.Skills['ShotgunZiraxFrameDamageUp'] = 0; Player.Skills['ShotgunZiraxFrameSpreadUp'] = 60; Player.Skills['ShotgunZiraxFrameRecoilUp'] = 0; Player.Skills['ShotgunZiraxFrameReloadUp'] = 0; Player.Skills['ShotgunZiraxFrameDamageDown'] = 0; Player.Skills['ShotgunZiraxFrameSpreadDown'] = 0; Player.Skills['ShotgunZiraxFrameRecoilDown'] = 14; Player.Skills['ShotgunZiraxFrameReloadDown'] = 0; RemoveItem('Token', 1, 53); ShotgunZiraxFrame = 'Light Shotgun Receiver'; ModSelection = 'Light Shotgun Receiver'; ShotgunZiraxFrameStat = 'Accuracy +10% / Recoil +5%'"
+  Option_12: dialogue_iuW4SOh
+  OptionIf_12: "HasItem('Token', 1, 57)"
   OptionNext_12: GS_WeaponBench_Replace
-  OptionExecute_12: "Player.Skills['ShotgunZiraxFrameDamageUp'] = 0; Player.Skills['ShotgunZiraxFrameSpreadUp'] = 0; Player.Skills['ShotgunZiraxFrameRecoilUp'] = 0; Player.Skills['ShotgunZiraxFrameReloadUp'] = 90; Player.Skills['ShotgunZiraxFrameDamageDown'] = 0; Player.Skills['ShotgunZiraxFrameSpreadDown'] = 0; Player.Skills['ShotgunZiraxFrameRecoilDown'] = 0; Player.Skills['ShotgunZiraxFrameReloadDown'] = 0; RemoveItem('Token', 1, 63); ShotgunZiraxFrame = 'Automatic Shotgun Receiver'; ModSelection = 'Automatic Shotgun Receiver'; ShotgunZiraxFrameStat = 'Reload Speed +20%'"
-  Option_13: dialogue_Co8KqmK
-  OptionNext_13: GS_WeaponBench_Restore
-  OptionExecute_13: "Player.Skills['ShotgunZiraxBarrelDamageUp'] = 0; Player.Skills['ShotgunZiraxBarrelSpreadUp'] = 0; Player.Skills['ShotgunZiraxBarrelRecoilUp'] = 0; Player.Skills['ShotgunZiraxBarrelReloadUp'] = 0; Player.Skills['ShotgunZiraxBarrelDamageDown'] = 0; Player.Skills['ShotgunZiraxBarrelSpreadDown'] = 0; Player.Skills['ShotgunZiraxBarrelRecoilDown'] = 0; Player.Skills['ShotgunZiraxBarrelReloadDown'] = 0; Player.Skills['ShotgunZiraxGripDamageUp'] = 0; Player.Skills['ShotgunZiraxGripSpreadUp'] = 0; Player.Skills['ShotgunZiraxGripRecoilUp'] = 0; Player.Skills['ShotgunZiraxGripReloadUp'] = 0; Player.Skills['ShotgunZiraxGripDamageDown'] = 0; Player.Skills['ShotgunZiraxGripSpreadDown'] = 0; Player.Skills['ShotgunZiraxGripRecoilDown'] = 0; Player.Skills['ShotgunZiraxGripReloadDown'] = 0; Player.Skills['ShotgunZiraxFrameDamageUp'] = 0; Player.Skills['ShotgunZiraxFrameSpreadUp'] = 0; Player.Skills['ShotgunZiraxFrameRecoilUp'] = 0; Player.Skills['ShotgunZiraxFrameReloadUp'] = 0; Player.Skills['ShotgunZiraxFrameDamageDown'] = 0; Player.Skills['ShotgunZiraxFrameSpreadDown'] = 0; Player.Skills['ShotgunZiraxFrameRecoilDown'] = 0; Player.Skills['ShotgunZiraxFrameReloadDown'] = 0; ShotgunZiraxBarrel = 'Default'; ShotgunZiraxGrip = 'Default'; ShotgunZiraxFrame = 'Default'; ShotgunZiraxBarrelStat = 'None'; ShotgunZiraxGripStat = 'None'; ShotgunZiraxFrameStat = 'None'"
-  Option_14: dialogue_u8i4SSm
-  OptionNext_14: Return
+  OptionExecute_12: "Player.Skills['ShotgunZiraxFrameDamageUp'] = 0; Player.Skills['ShotgunZiraxFrameSpreadUp'] = 0; Player.Skills['ShotgunZiraxFrameRecoilUp'] = 27; Player.Skills['ShotgunZiraxFrameReloadUp'] = 0; Player.Skills['ShotgunZiraxFrameDamageDown'] = 0; Player.Skills['ShotgunZiraxFrameSpreadDown'] = 0; Player.Skills['ShotgunZiraxFrameRecoilDown'] = 0; Player.Skills['ShotgunZiraxFrameReloadDown'] = 0; RemoveItem('Token', 1, 57); ShotgunZiraxFrame = 'Heavy Shotgun Receiver'; ModSelection = 'Heavy Shotgun Receiver'; ShotgunZiraxFrameStat = 'Recoil -10%'"
+  Option_13: dialogue_SOiZGSi
+  OptionIf_13: "HasItem('Token', 1, 63)"
+  OptionNext_13: GS_WeaponBench_Replace
+  OptionExecute_13: "Player.Skills['ShotgunZiraxFrameDamageUp'] = 0; Player.Skills['ShotgunZiraxFrameSpreadUp'] = 0; Player.Skills['ShotgunZiraxFrameRecoilUp'] = 0; Player.Skills['ShotgunZiraxFrameReloadUp'] = 90; Player.Skills['ShotgunZiraxFrameDamageDown'] = 0; Player.Skills['ShotgunZiraxFrameSpreadDown'] = 0; Player.Skills['ShotgunZiraxFrameRecoilDown'] = 0; Player.Skills['ShotgunZiraxFrameReloadDown'] = 0; RemoveItem('Token', 1, 63); ShotgunZiraxFrame = 'Automatic Shotgun Receiver'; ModSelection = 'Automatic Shotgun Receiver'; ShotgunZiraxFrameStat = 'Reload Speed +20%'"
+  Option_14: dialogue_Co8KqmK
+  OptionNext_14: GS_WeaponBench_Restore
+  OptionExecute_14: "Player.Skills['ShotgunZiraxBarrelDamageUp'] = 0; Player.Skills['ShotgunZiraxBarrelSpreadUp'] = 0; Player.Skills['ShotgunZiraxBarrelRecoilUp'] = 0; Player.Skills['ShotgunZiraxBarrelReloadUp'] = 0; Player.Skills['ShotgunZiraxBarrelDamageDown'] = 0; Player.Skills['ShotgunZiraxBarrelSpreadDown'] = 0; Player.Skills['ShotgunZiraxBarrelRecoilDown'] = 0; Player.Skills['ShotgunZiraxBarrelReloadDown'] = 0; Player.Skills['ShotgunZiraxGripDamageUp'] = 0; Player.Skills['ShotgunZiraxGripSpreadUp'] = 0; Player.Skills['ShotgunZiraxGripRecoilUp'] = 0; Player.Skills['ShotgunZiraxGripReloadUp'] = 0; Player.Skills['ShotgunZiraxGripDamageDown'] = 0; Player.Skills['ShotgunZiraxGripSpreadDown'] = 0; Player.Skills['ShotgunZiraxGripRecoilDown'] = 0; Player.Skills['ShotgunZiraxGripReloadDown'] = 0; Player.Skills['ShotgunZiraxFrameDamageUp'] = 0; Player.Skills['ShotgunZiraxFrameSpreadUp'] = 0; Player.Skills['ShotgunZiraxFrameRecoilUp'] = 0; Player.Skills['ShotgunZiraxFrameReloadUp'] = 0; Player.Skills['ShotgunZiraxFrameDamageDown'] = 0; Player.Skills['ShotgunZiraxFrameSpreadDown'] = 0; Player.Skills['ShotgunZiraxFrameRecoilDown'] = 0; Player.Skills['ShotgunZiraxFrameReloadDown'] = 0; ShotgunZiraxBarrel = 'Default'; ShotgunZiraxGrip = 'Default'; ShotgunZiraxFrame = 'Default'; ShotgunZiraxBarrelStat = 'None'; ShotgunZiraxGripStat = 'None'; ShotgunZiraxFrameStat = 'None'"
+  Option_15: dialogue_u8i4SSm
+  OptionNext_15: GS_WeaponBench_Shotguns
   Variable_1: "ShotgunZiraxBarrel", param1: dbplayer_string
   Variable_2: "ShotgunZiraxGrip", param1: dbplayer_string
   Variable_3: "ShotgunZiraxFrame", param1: dbplayer_string
@@ -19249,47 +19265,51 @@
   OptionIf_3: "HasItem('Token', 1, 27)"
   OptionNext_3: GS_WeaponBench_Replace
   OptionExecute_3: "Player.Skills['ShotgunPolarisBarrelDamageUp'] = 6; Player.Skills['ShotgunPolarisBarrelSpreadUp'] = 0; Player.Skills['ShotgunPolarisBarrelRecoilUp'] = 0; Player.Skills['ShotgunPolarisBarrelReloadUp'] = 0; Player.Skills['ShotgunPolarisBarrelDamageDown'] = 0; Player.Skills['ShotgunPolarisBarrelSpreadDown'] = 0; Player.Skills['ShotgunPolarisBarrelRecoilDown'] = 15; Player.Skills['ShotgunPolarisBarrelReloadDown'] = 0; RemoveItem('Token', 1, 27); ShotgunPolarisBarrel = 'Medium High-Velocity Barrel'; ModSelection = 'Medium High-Velocity Barrel'; ShotgunPolarisBarrelStat = 'Damage +10% / Recoil +5%'"
-  Option_4: dialogue_aWga8W8
-  OptionIf_4: "HasItem('Token', 1, 39)"
+  Option_4: dialogue_eOEWGiO
+  OptionIf_4: "HasItem('Token', 1, 81)"
   OptionNext_4: GS_WeaponBench_Replace
-  OptionExecute_4: "Player.Skills['ShotgunPolarisGripDamageUp'] = 0; Player.Skills['ShotgunPolarisGripSpreadUp'] = 0; Player.Skills['ShotgunPolarisGripRecoilUp'] = 15; Player.Skills['ShotgunPolarisGripReloadUp'] = 0; Player.Skills['ShotgunPolarisGripDamageDown'] = 0; Player.Skills['ShotgunPolarisGripSpreadDown'] = 0; Player.Skills['ShotgunPolarisGripRecoilDown'] = 0; Player.Skills['ShotgunPolarisGripReloadDown'] = 0; RemoveItem('Token', 1, 39); ShotgunPolarisGrip = 'Wooden Stock'; ModSelection = 'Wooden Stock'; ShotgunPolarisGripStat = 'Recoil -5%'"
-  Option_5: dialogue_iiaTW8G
-  OptionIf_5: "HasItem('Token', 1, 40)"
+  OptionExecute_4: "Player.Skills['ShotgunPolarisBarrelDamageUp'] = 0; Player.Skills['ShotgunPolarisBarrelSpreadUp'] = 125; Player.Skills['ShotgunPolarisBarrelRecoilUp'] = 0; Player.Skills['ShotgunPolarisBarrelReloadUp'] = 0; Player.Skills['ShotgunPolarisBarrelDamageDown'] = 0; Player.Skills['ShotgunPolarisBarrelSpreadDown'] = 0; Player.Skills['ShotgunPolarisBarrelRecoilDown'] = 30; Player.Skills['ShotgunPolarisBarrelReloadDown'] = 0; RemoveItem('Token', 1, 81); ShotgunPolarisBarrel = 'Adjustable Choke Barrel'; ModSelection = 'Adjustable Choke Barrel'; ShotgunPolarisBarrelStat = 'Accuracy +25% / Recoil +10%'"
+  Option_5: dialogue_aWga8W8
+  OptionIf_5: "HasItem('Token', 1, 39)"
   OptionNext_5: GS_WeaponBench_Replace
-  OptionExecute_5: "Player.Skills['ShotgunPolarisGripDamageUp'] = 0; Player.Skills['ShotgunPolarisGripSpreadUp'] = 50; Player.Skills['ShotgunPolarisGripRecoilUp'] = 15; Player.Skills['ShotgunPolarisGripReloadUp'] = 0; Player.Skills['ShotgunPolarisGripDamageDown'] = 0; Player.Skills['ShotgunPolarisGripSpreadDown'] = 0; Player.Skills['ShotgunPolarisGripRecoilDown'] = 0; Player.Skills['ShotgunPolarisGripReloadDown'] = 27; RemoveItem('Token', 1, 40); ShotgunPolarisGrip = 'Folding Stock'; ModSelection = 'Folding Stock'; ShotgunPolarisGripStat = 'Accuracy +10% / Recoil -5% / Reload Speed -10%'"
-  Option_6: dialogue_mneYW40
-  OptionIf_6: "HasItem('Token', 1, 41)"
+  OptionExecute_5: "Player.Skills['ShotgunPolarisGripDamageUp'] = 0; Player.Skills['ShotgunPolarisGripSpreadUp'] = 0; Player.Skills['ShotgunPolarisGripRecoilUp'] = 15; Player.Skills['ShotgunPolarisGripReloadUp'] = 0; Player.Skills['ShotgunPolarisGripDamageDown'] = 0; Player.Skills['ShotgunPolarisGripSpreadDown'] = 0; Player.Skills['ShotgunPolarisGripRecoilDown'] = 0; Player.Skills['ShotgunPolarisGripReloadDown'] = 0; RemoveItem('Token', 1, 39); ShotgunPolarisGrip = 'Wooden Stock'; ModSelection = 'Wooden Stock'; ShotgunPolarisGripStat = 'Recoil -5%'"
+  Option_6: dialogue_iiaTW8G
+  OptionIf_6: "HasItem('Token', 1, 40)"
   OptionNext_6: GS_WeaponBench_Replace
-  OptionExecute_6: "Player.Skills['ShotgunPolarisGripDamageUp'] = 0; Player.Skills['ShotgunPolarisGripSpreadUp'] = 0; Player.Skills['ShotgunPolarisGripRecoilUp'] = 30; Player.Skills['ShotgunPolarisGripReloadUp'] = 0; Player.Skills['ShotgunPolarisGripDamageDown'] = 0; Player.Skills['ShotgunPolarisGripSpreadDown'] = 0; Player.Skills['ShotgunPolarisGripRecoilDown'] = 0; Player.Skills['ShotgunPolarisGripReloadDown'] = 0; RemoveItem('Token', 1, 41); ShotgunPolarisGrip = 'Short Stock'; ModSelection = 'Short Stock'; ShotgunPolarisGripStat = 'Recoil -10%'"
-  Option_7: dialogue_i4qeSGF
-  OptionIf_7: "HasItem('Token', 1, 42)"
+  OptionExecute_6: "Player.Skills['ShotgunPolarisGripDamageUp'] = 0; Player.Skills['ShotgunPolarisGripSpreadUp'] = 50; Player.Skills['ShotgunPolarisGripRecoilUp'] = 15; Player.Skills['ShotgunPolarisGripReloadUp'] = 0; Player.Skills['ShotgunPolarisGripDamageDown'] = 0; Player.Skills['ShotgunPolarisGripSpreadDown'] = 0; Player.Skills['ShotgunPolarisGripRecoilDown'] = 0; Player.Skills['ShotgunPolarisGripReloadDown'] = 27; RemoveItem('Token', 1, 40); ShotgunPolarisGrip = 'Folding Stock'; ModSelection = 'Folding Stock'; ShotgunPolarisGripStat = 'Accuracy +10% / Recoil -5% / Reload Speed -10%'"
+  Option_7: dialogue_mneYW40
+  OptionIf_7: "HasItem('Token', 1, 41)"
   OptionNext_7: GS_WeaponBench_Replace
-  OptionExecute_7: "Player.Skills['ShotgunPolarisGripDamageUp'] = 6; Player.Skills['ShotgunPolarisGripSpreadUp'] = 50; Player.Skills['ShotgunPolarisGripRecoilUp'] = 0; Player.Skills['ShotgunPolarisGripReloadUp'] = 0; Player.Skills['ShotgunPolarisGripDamageDown'] = 0; Player.Skills['ShotgunPolarisGripSpreadDown'] = 0; Player.Skills['ShotgunPolarisGripRecoilDown'] = 0; Player.Skills['ShotgunPolarisGripReloadDown'] = 35; RemoveItem('Token', 1, 42); ShotgunPolarisGrip = 'Full Stock'; ModSelection = 'Full Stock'; ShotgunPolarisGripStat = 'Damage +10% / Accuracy +10% / Reload Speed -10%'"
-  Option_8: dialogue_CGW8uYq
-  OptionIf_8: "HasItem('Token', 1, 46)"
+  OptionExecute_7: "Player.Skills['ShotgunPolarisGripDamageUp'] = 0; Player.Skills['ShotgunPolarisGripSpreadUp'] = 0; Player.Skills['ShotgunPolarisGripRecoilUp'] = 30; Player.Skills['ShotgunPolarisGripReloadUp'] = 0; Player.Skills['ShotgunPolarisGripDamageDown'] = 0; Player.Skills['ShotgunPolarisGripSpreadDown'] = 0; Player.Skills['ShotgunPolarisGripRecoilDown'] = 0; Player.Skills['ShotgunPolarisGripReloadDown'] = 0; RemoveItem('Token', 1, 41); ShotgunPolarisGrip = 'Short Stock'; ModSelection = 'Short Stock'; ShotgunPolarisGripStat = 'Recoil -10%'"
+  Option_8: dialogue_i4qeSGF
+  OptionIf_8: "HasItem('Token', 1, 42)"
   OptionNext_8: GS_WeaponBench_Replace
-  OptionExecute_8: "Player.Skills['ShotgunPolarisGripDamageUp'] = 0; Player.Skills['ShotgunPolarisGripSpreadUp'] = 0; Player.Skills['ShotgunPolarisGripRecoilUp'] = 60; Player.Skills['ShotgunPolarisGripReloadUp'] = 53; Player.Skills['ShotgunPolarisGripDamageDown'] = 0; Player.Skills['ShotgunPolarisGripSpreadDown'] = 0; Player.Skills['ShotgunPolarisGripRecoilDown'] = 0; Player.Skills['ShotgunPolarisGripReloadDown'] = 0; RemoveItem('Token', 1, 46); ShotgunPolarisGrip = 'Tactical Stock'; ModSelection = 'Tactical Stock'; ShotgunPolarisGripStat = 'Recoil -20% / Reload Speed +15%'"
-  Option_9: dialogue_aaG8Kae
-  OptionIf_9: "HasItem('Token', 1, 48)"
+  OptionExecute_8: "Player.Skills['ShotgunPolarisGripDamageUp'] = 6; Player.Skills['ShotgunPolarisGripSpreadUp'] = 50; Player.Skills['ShotgunPolarisGripRecoilUp'] = 0; Player.Skills['ShotgunPolarisGripReloadUp'] = 0; Player.Skills['ShotgunPolarisGripDamageDown'] = 0; Player.Skills['ShotgunPolarisGripSpreadDown'] = 0; Player.Skills['ShotgunPolarisGripRecoilDown'] = 0; Player.Skills['ShotgunPolarisGripReloadDown'] = 35; RemoveItem('Token', 1, 42); ShotgunPolarisGrip = 'Full Stock'; ModSelection = 'Full Stock'; ShotgunPolarisGripStat = 'Damage +10% / Accuracy +10% / Reload Speed -10%'"
+  Option_9: dialogue_CGW8uYq
+  OptionIf_9: "HasItem('Token', 1, 46)"
   OptionNext_9: GS_WeaponBench_Replace
-  OptionExecute_9: "Player.Skills['ShotgunPolarisGripDamageUp'] = 0; Player.Skills['ShotgunPolarisGripSpreadUp'] = 0; Player.Skills['ShotgunPolarisGripRecoilUp'] = 90; Player.Skills['ShotgunPolarisGripReloadUp'] = 0; Player.Skills['ShotgunPolarisGripDamageDown'] = 0; Player.Skills['ShotgunPolarisGripSpreadDown'] = 0; Player.Skills['ShotgunPolarisGripRecoilDown'] = 0; Player.Skills['ShotgunPolarisGripReloadDown'] = 0; RemoveItem('Token', 1, 48); ShotgunPolarisGrip = 'Recoil-Compensating Stock'; ModSelection = 'Recoil-Compensating Stock'; ShotgunPolarisGripStat = 'Recoil -30%'"
-  Option_10: dialogue_Ki0VOGa
-  OptionIf_10: "HasItem('Token', 1, 53)"
+  OptionExecute_9: "Player.Skills['ShotgunPolarisGripDamageUp'] = 0; Player.Skills['ShotgunPolarisGripSpreadUp'] = 0; Player.Skills['ShotgunPolarisGripRecoilUp'] = 60; Player.Skills['ShotgunPolarisGripReloadUp'] = 53; Player.Skills['ShotgunPolarisGripDamageDown'] = 0; Player.Skills['ShotgunPolarisGripSpreadDown'] = 0; Player.Skills['ShotgunPolarisGripRecoilDown'] = 0; Player.Skills['ShotgunPolarisGripReloadDown'] = 0; RemoveItem('Token', 1, 46); ShotgunPolarisGrip = 'Tactical Stock'; ModSelection = 'Tactical Stock'; ShotgunPolarisGripStat = 'Recoil -20% / Reload Speed +15%'"
+  Option_10: dialogue_aaG8Kae
+  OptionIf_10: "HasItem('Token', 1, 48)"
   OptionNext_10: GS_WeaponBench_Replace
-  OptionExecute_10: "Player.Skills['ShotgunPolarisFrameDamageUp'] = 0; Player.Skills['ShotgunPolarisFrameSpreadUp'] = 50; Player.Skills['ShotgunPolarisFrameRecoilUp'] = 0; Player.Skills['ShotgunPolarisFrameReloadUp'] = 0; Player.Skills['ShotgunPolarisFrameDamageDown'] = 0; Player.Skills['ShotgunPolarisFrameSpreadDown'] = 0; Player.Skills['ShotgunPolarisFrameRecoilDown'] = 15; Player.Skills['ShotgunPolarisFrameReloadDown'] = 0; RemoveItem('Token', 1, 53); ShotgunPolarisFrame = 'Light Shotgun Receiver'; ModSelection = 'Light Shotgun Receiver'; ShotgunPolarisFrameStat = 'Accuracy +10% / Recoil +5%'"
-  Option_11: dialogue_i0jm88S
-  OptionIf_11: "HasItem('Token', 1, 57)"
+  OptionExecute_10: "Player.Skills['ShotgunPolarisGripDamageUp'] = 0; Player.Skills['ShotgunPolarisGripSpreadUp'] = 0; Player.Skills['ShotgunPolarisGripRecoilUp'] = 90; Player.Skills['ShotgunPolarisGripReloadUp'] = 0; Player.Skills['ShotgunPolarisGripDamageDown'] = 0; Player.Skills['ShotgunPolarisGripSpreadDown'] = 0; Player.Skills['ShotgunPolarisGripRecoilDown'] = 0; Player.Skills['ShotgunPolarisGripReloadDown'] = 0; RemoveItem('Token', 1, 48); ShotgunPolarisGrip = 'Recoil-Compensating Stock'; ModSelection = 'Recoil-Compensating Stock'; ShotgunPolarisGripStat = 'Recoil -30%'"
+  Option_11: dialogue_Ki0VOGa
+  OptionIf_11: "HasItem('Token', 1, 53)"
   OptionNext_11: GS_WeaponBench_Replace
-  OptionExecute_11: "Player.Skills['ShotgunPolarisFrameDamageUp'] = 0; Player.Skills['ShotgunPolarisFrameSpreadUp'] = 0; Player.Skills['ShotgunPolarisFrameRecoilUp'] = 30; Player.Skills['ShotgunPolarisFrameReloadUp'] = 0; Player.Skills['ShotgunPolarisFrameDamageDown'] = 0; Player.Skills['ShotgunPolarisFrameSpreadDown'] = 0; Player.Skills['ShotgunPolarisFrameRecoilDown'] = 0; Player.Skills['ShotgunPolarisFrameReloadDown'] = 0; RemoveItem('Token', 1, 57); ShotgunPolarisFrame = 'Heavy Shotgun Receiver'; ModSelection = 'Heavy Shotgun Receiver'; ShotgunPolarisFrameStat = 'Recoil -10%'"
-  Option_12: dialogue_iGG82XG
-  OptionIf_12: "HasItem('Token', 1, 63)"
+  OptionExecute_11: "Player.Skills['ShotgunPolarisFrameDamageUp'] = 0; Player.Skills['ShotgunPolarisFrameSpreadUp'] = 50; Player.Skills['ShotgunPolarisFrameRecoilUp'] = 0; Player.Skills['ShotgunPolarisFrameReloadUp'] = 0; Player.Skills['ShotgunPolarisFrameDamageDown'] = 0; Player.Skills['ShotgunPolarisFrameSpreadDown'] = 0; Player.Skills['ShotgunPolarisFrameRecoilDown'] = 15; Player.Skills['ShotgunPolarisFrameReloadDown'] = 0; RemoveItem('Token', 1, 53); ShotgunPolarisFrame = 'Light Shotgun Receiver'; ModSelection = 'Light Shotgun Receiver'; ShotgunPolarisFrameStat = 'Accuracy +10% / Recoil +5%'"
+  Option_12: dialogue_i0jm88S
+  OptionIf_12: "HasItem('Token', 1, 57)"
   OptionNext_12: GS_WeaponBench_Replace
-  OptionExecute_12: "Player.Skills['ShotgunPolarisFrameDamageUp'] = 0; Player.Skills['ShotgunPolarisFrameSpreadUp'] = 0; Player.Skills['ShotgunPolarisFrameRecoilUp'] = 0; Player.Skills['ShotgunPolarisFrameReloadUp'] = 70; Player.Skills['ShotgunPolarisFrameDamageDown'] = 0; Player.Skills['ShotgunPolarisFrameSpreadDown'] = 0; Player.Skills['ShotgunPolarisFrameRecoilDown'] = 0; Player.Skills['ShotgunPolarisFrameReloadDown'] = 0; RemoveItem('Token', 1, 63); ShotgunPolarisFrame = 'Automatic Shotgun Receiver'; ModSelection = 'Automatic Shotgun Receiver'; ShotgunPolarisFrameStat = 'Reload Speed +20%'"
-  Option_13: dialogue_8uCaC8S
-  OptionNext_13: GS_WeaponBench_Restore
-  OptionExecute_13: "Player.Skills['ShotgunPolarisBarrelDamageUp'] = 0; Player.Skills['ShotgunPolarisBarrelSpreadUp'] = 0; Player.Skills['ShotgunPolarisBarrelRecoilUp'] = 0; Player.Skills['ShotgunPolarisBarrelReloadUp'] = 0; Player.Skills['ShotgunPolarisBarrelDamageDown'] = 0; Player.Skills['ShotgunPolarisBarrelSpreadDown'] = 0; Player.Skills['ShotgunPolarisBarrelRecoilDown'] = 0; Player.Skills['ShotgunPolarisBarrelReloadDown'] = 0; Player.Skills['ShotgunPolarisGripDamageUp'] = 0; Player.Skills['ShotgunPolarisGripSpreadUp'] = 0; Player.Skills['ShotgunPolarisGripRecoilUp'] = 0; Player.Skills['ShotgunPolarisGripReloadUp'] = 0; Player.Skills['ShotgunPolarisGripDamageDown'] = 0; Player.Skills['ShotgunPolarisGripSpreadDown'] = 0; Player.Skills['ShotgunPolarisGripRecoilDown'] = 0; Player.Skills['ShotgunPolarisGripReloadDown'] = 0; Player.Skills['ShotgunPolarisFrameDamageUp'] = 0; Player.Skills['ShotgunPolarisFrameSpreadUp'] = 0; Player.Skills['ShotgunPolarisFrameRecoilUp'] = 0; Player.Skills['ShotgunPolarisFrameReloadUp'] = 0; Player.Skills['ShotgunPolarisFrameDamageDown'] = 0; Player.Skills['ShotgunPolarisFrameSpreadDown'] = 0; Player.Skills['ShotgunPolarisFrameRecoilDown'] = 0; Player.Skills['ShotgunPolarisFrameReloadDown'] = 0; ShotgunPolarisBarrel = 'Default'; ShotgunPolarisGrip = 'Default'; ShotgunPolarisFrame = 'Default'; ShotgunPolarisBarrelStat = 'None'; ShotgunPolarisGripStat = 'None'; ShotgunPolarisFrameStat = 'None'"
-  Option_14: dialogue_aKS0mOm
-  OptionNext_14: GS_WeaponBench_Shotguns
+  OptionExecute_12: "Player.Skills['ShotgunPolarisFrameDamageUp'] = 0; Player.Skills['ShotgunPolarisFrameSpreadUp'] = 0; Player.Skills['ShotgunPolarisFrameRecoilUp'] = 30; Player.Skills['ShotgunPolarisFrameReloadUp'] = 0; Player.Skills['ShotgunPolarisFrameDamageDown'] = 0; Player.Skills['ShotgunPolarisFrameSpreadDown'] = 0; Player.Skills['ShotgunPolarisFrameRecoilDown'] = 0; Player.Skills['ShotgunPolarisFrameReloadDown'] = 0; RemoveItem('Token', 1, 57); ShotgunPolarisFrame = 'Heavy Shotgun Receiver'; ModSelection = 'Heavy Shotgun Receiver'; ShotgunPolarisFrameStat = 'Recoil -10%'"
+  Option_13: dialogue_iGG82XG
+  OptionIf_13: "HasItem('Token', 1, 63)"
+  OptionNext_13: GS_WeaponBench_Replace
+  OptionExecute_13: "Player.Skills['ShotgunPolarisFrameDamageUp'] = 0; Player.Skills['ShotgunPolarisFrameSpreadUp'] = 0; Player.Skills['ShotgunPolarisFrameRecoilUp'] = 0; Player.Skills['ShotgunPolarisFrameReloadUp'] = 70; Player.Skills['ShotgunPolarisFrameDamageDown'] = 0; Player.Skills['ShotgunPolarisFrameSpreadDown'] = 0; Player.Skills['ShotgunPolarisFrameRecoilDown'] = 0; Player.Skills['ShotgunPolarisFrameReloadDown'] = 0; RemoveItem('Token', 1, 63); ShotgunPolarisFrame = 'Automatic Shotgun Receiver'; ModSelection = 'Automatic Shotgun Receiver'; ShotgunPolarisFrameStat = 'Reload Speed +20%'"
+  Option_14: dialogue_8uCaC8S
+  OptionNext_14: GS_WeaponBench_Restore
+  OptionExecute_14: "Player.Skills['ShotgunPolarisBarrelDamageUp'] = 0; Player.Skills['ShotgunPolarisBarrelSpreadUp'] = 0; Player.Skills['ShotgunPolarisBarrelRecoilUp'] = 0; Player.Skills['ShotgunPolarisBarrelReloadUp'] = 0; Player.Skills['ShotgunPolarisBarrelDamageDown'] = 0; Player.Skills['ShotgunPolarisBarrelSpreadDown'] = 0; Player.Skills['ShotgunPolarisBarrelRecoilDown'] = 0; Player.Skills['ShotgunPolarisBarrelReloadDown'] = 0; Player.Skills['ShotgunPolarisGripDamageUp'] = 0; Player.Skills['ShotgunPolarisGripSpreadUp'] = 0; Player.Skills['ShotgunPolarisGripRecoilUp'] = 0; Player.Skills['ShotgunPolarisGripReloadUp'] = 0; Player.Skills['ShotgunPolarisGripDamageDown'] = 0; Player.Skills['ShotgunPolarisGripSpreadDown'] = 0; Player.Skills['ShotgunPolarisGripRecoilDown'] = 0; Player.Skills['ShotgunPolarisGripReloadDown'] = 0; Player.Skills['ShotgunPolarisFrameDamageUp'] = 0; Player.Skills['ShotgunPolarisFrameSpreadUp'] = 0; Player.Skills['ShotgunPolarisFrameRecoilUp'] = 0; Player.Skills['ShotgunPolarisFrameReloadUp'] = 0; Player.Skills['ShotgunPolarisFrameDamageDown'] = 0; Player.Skills['ShotgunPolarisFrameSpreadDown'] = 0; Player.Skills['ShotgunPolarisFrameRecoilDown'] = 0; Player.Skills['ShotgunPolarisFrameReloadDown'] = 0; ShotgunPolarisBarrel = 'Default'; ShotgunPolarisGrip = 'Default'; ShotgunPolarisFrame = 'Default'; ShotgunPolarisBarrelStat = 'None'; ShotgunPolarisGripStat = 'None'; ShotgunPolarisFrameStat = 'None'"
+  Option_15: dialogue_aKS0mOm
+  OptionNext_15: GS_WeaponBench_Shotguns
   Variable_1: "ShotgunPolarisBarrel", param1: dbplayer_string
   Variable_2: "ShotgunPolarisGrip", param1: dbplayer_string
   Variable_3: "ShotgunPolarisFrame", param1: dbplayer_string
@@ -19298,61 +19318,65 @@
   Variable_6: "ShotgunPolarisGripStat", param1: dbplayer_string
   Variable_7: "ShotgunPolarisFrameStat", param1: dbplayer_string
 }
-{ +Dialogue Name: GS_WeaponBench_ShotgunGauss
-  Output: dialogue_Y88GeKS
-  Option_1: dialogue_3SaeaOO
+{ +Dialogue Name: GS_WeaponBench_ShotgunGaussv2
+  Output: dialogue_WGKWkeu
+  Option_1: dialogue_LYeCeuo
   OptionIf_1: "HasItem('Token', 1, 21)"
   OptionNext_1: GS_WeaponBench_Replace
   OptionExecute_1: "Player.Skills['ShotgunGaussBarrelDamageUp'] = 0; Player.Skills['ShotgunGaussBarrelSpreadUp'] = 0; Player.Skills['ShotgunGaussBarrelRecoilUp'] = 13; Player.Skills['ShotgunGaussBarrelReloadUp'] = 0; Player.Skills['ShotgunGaussBarrelDamageDown'] = 0; Player.Skills['ShotgunGaussBarrelSpreadDown'] = 0; Player.Skills['ShotgunGaussBarrelRecoilDown'] = 0; Player.Skills['ShotgunGaussBarrelReloadDown'] = 0; RemoveItem('Token', 1, 21); ShotgunGaussBarrel = 'Medium Heavy Barrel'; ModSelection = 'Medium Heavy Barrel'; ShotgunGaussBarrelStat = 'Recoil -10%'"
-  Option_2: dialogue_mueSW8S
+  Option_2: dialogue_OaGGWeW
   OptionIf_2: "HasItem('Token', 1, 24)"
   OptionNext_2: GS_WeaponBench_Replace
   OptionExecute_2: "Player.Skills['ShotgunGaussBarrelDamageUp'] = 0; Player.Skills['ShotgunGaussBarrelSpreadUp'] = 28; Player.Skills['ShotgunGaussBarrelRecoilUp'] = 0; Player.Skills['ShotgunGaussBarrelReloadUp'] = 0; Player.Skills['ShotgunGaussBarrelDamageDown'] = 0; Player.Skills['ShotgunGaussBarrelSpreadDown'] = 0; Player.Skills['ShotgunGaussBarrelRecoilDown'] = 0; Player.Skills['ShotgunGaussBarrelReloadDown'] = 0; RemoveItem('Token', 1, 24); ShotgunGaussBarrel = 'Medium Ultralight Barrel'; ModSelection = 'Medium Ultralight Barrel'; ShotgunGaussBarrelStat = 'Accuracy +10%'"
-  Option_3: dialogue_qi8uSOm
+  Option_3: dialogue_0mesWOS
   OptionIf_3: "HasItem('Token', 1, 27)"
   OptionNext_3: GS_WeaponBench_Replace
   OptionExecute_3: "Player.Skills['ShotgunGaussBarrelDamageUp'] = 8; Player.Skills['ShotgunGaussBarrelSpreadUp'] = 0; Player.Skills['ShotgunGaussBarrelRecoilUp'] = 0; Player.Skills['ShotgunGaussBarrelReloadUp'] = 0; Player.Skills['ShotgunGaussBarrelDamageDown'] = 0; Player.Skills['ShotgunGaussBarrelSpreadDown'] = 0; Player.Skills['ShotgunGaussBarrelRecoilDown'] = 7; Player.Skills['ShotgunGaussBarrelReloadDown'] = 0; RemoveItem('Token', 1, 27); ShotgunGaussBarrel = 'Medium High-Velocity Barrel'; ModSelection = 'Medium High-Velocity Barrel'; ShotgunGaussBarrelStat = 'Damage +10% / Recoil +5%'"
-  Option_4: dialogue_Smu0GiG
-  OptionIf_4: "HasItem('Token', 1, 39)"
+  Option_4: dialogue_q8SS0qi
+  OptionIf_4: "HasItem('Token', 1, 81)"
   OptionNext_4: GS_WeaponBench_Replace
-  OptionExecute_4: "Player.Skills['ShotgunGaussGripDamageUp'] = 0; Player.Skills['ShotgunGaussGripSpreadUp'] = 0; Player.Skills['ShotgunGaussGripRecoilUp'] = 7; Player.Skills['ShotgunGaussGripReloadUp'] = 0; Player.Skills['ShotgunGaussGripDamageDown'] = 0; Player.Skills['ShotgunGaussGripSpreadDown'] = 0; Player.Skills['ShotgunGaussGripRecoilDown'] = 0; Player.Skills['ShotgunGaussGripReloadDown'] = 0; RemoveItem('Token', 1, 39); ShotgunGaussGrip = 'Wooden Stock'; ModSelection = 'Wooden Stock'; ShotgunGaussGripStat = 'Recoil -5%'"
-  Option_5: dialogue_qq6CeeC
-  OptionIf_5: "HasItem('Token', 1, 40)"
+  OptionExecute_4: "Player.Skills['ShotgunGaussBarrelDamageUp'] = 0; Player.Skills['ShotgunGaussBarrelSpreadUp'] = 70; Player.Skills['ShotgunGaussBarrelRecoilUp'] = 0; Player.Skills['ShotgunGaussBarrelReloadUp'] = 0; Player.Skills['ShotgunGaussBarrelDamageDown'] = 0; Player.Skills['ShotgunGaussBarrelSpreadDown'] = 0; Player.Skills['ShotgunGaussBarrelRecoilDown'] = 13; Player.Skills['ShotgunGaussBarrelReloadDown'] = 0; RemoveItem('Token', 1, 81); ShotgunGaussBarrel = 'Adjustable Choke Barrel'; ModSelection = 'Adjustable Choke Barrel'; ShotgunGaussBarrelStat = 'Accuracy +25% / Recoil +10%'"
+  Option_5: dialogue_0wuC08S
+  OptionIf_5: "HasItem('Token', 1, 39)"
   OptionNext_5: GS_WeaponBench_Replace
-  OptionExecute_5: "Player.Skills['ShotgunGaussGripDamageUp'] = 0; Player.Skills['ShotgunGaussGripSpreadUp'] = 28; Player.Skills['ShotgunGaussGripRecoilUp'] = 7; Player.Skills['ShotgunGaussGripReloadUp'] = 0; Player.Skills['ShotgunGaussGripDamageDown'] = 0; Player.Skills['ShotgunGaussGripSpreadDown'] = 0; Player.Skills['ShotgunGaussGripRecoilDown'] = 0; Player.Skills['ShotgunGaussGripReloadDown'] = 24; RemoveItem('Token', 1, 40); ShotgunGaussGrip = 'Folding Stock'; ModSelection = 'Folding Stock'; ShotgunGaussGripStat = 'Accuracy +10% / Recoil -5% / Reload Speed -10%'"
-  Option_6: dialogue_ui9O8O4
-  OptionIf_6: "HasItem('Token', 1, 41)"
+  OptionExecute_5: "Player.Skills['ShotgunGaussGripDamageUp'] = 0; Player.Skills['ShotgunGaussGripSpreadUp'] = 0; Player.Skills['ShotgunGaussGripRecoilUp'] = 7; Player.Skills['ShotgunGaussGripReloadUp'] = 0; Player.Skills['ShotgunGaussGripDamageDown'] = 0; Player.Skills['ShotgunGaussGripSpreadDown'] = 0; Player.Skills['ShotgunGaussGripRecoilDown'] = 0; Player.Skills['ShotgunGaussGripReloadDown'] = 0; RemoveItem('Token', 1, 39); ShotgunGaussGrip = 'Wooden Stock'; ModSelection = 'Wooden Stock'; ShotgunGaussGripStat = 'Recoil -5%'"
+  Option_6: dialogue_akOOaq4
+  OptionIf_6: "HasItem('Token', 1, 40)"
   OptionNext_6: GS_WeaponBench_Replace
-  OptionExecute_6: "Player.Skills['ShotgunGaussGripDamageUp'] = 0; Player.Skills['ShotgunGaussGripSpreadUp'] = 0; Player.Skills['ShotgunGaussGripRecoilUp'] = 13; Player.Skills['ShotgunGaussGripReloadUp'] = 0; Player.Skills['ShotgunGaussGripDamageDown'] = 0; Player.Skills['ShotgunGaussGripSpreadDown'] = 0; Player.Skills['ShotgunGaussGripRecoilDown'] = 0; Player.Skills['ShotgunGaussGripReloadDown'] = 0; RemoveItem('Token', 1, 41); ShotgunGaussGrip = 'Short Stock'; ModSelection = 'Short Stock'; ShotgunGaussGripStat = 'Recoil -10%'"
-  Option_7: dialogue_SSiW404
-  OptionIf_7: "HasItem('Token', 1, 42)"
+  OptionExecute_6: "Player.Skills['ShotgunGaussGripDamageUp'] = 0; Player.Skills['ShotgunGaussGripSpreadUp'] = 28; Player.Skills['ShotgunGaussGripRecoilUp'] = 7; Player.Skills['ShotgunGaussGripReloadUp'] = 0; Player.Skills['ShotgunGaussGripDamageDown'] = 0; Player.Skills['ShotgunGaussGripSpreadDown'] = 0; Player.Skills['ShotgunGaussGripRecoilDown'] = 0; Player.Skills['ShotgunGaussGripReloadDown'] = 24; RemoveItem('Token', 1, 40); ShotgunGaussGrip = 'Folding Stock'; ModSelection = 'Folding Stock'; ShotgunGaussGripStat = 'Accuracy +10% / Recoil -5% / Reload Speed -10%'"
+  Option_7: dialogue_Cm8eW4C
+  OptionIf_7: "HasItem('Token', 1, 41)"
   OptionNext_7: GS_WeaponBench_Replace
-  OptionExecute_7: "Player.Skills['ShotgunGaussGripDamageUp'] = 8; Player.Skills['ShotgunGaussGripSpreadUp'] = 28; Player.Skills['ShotgunGaussGripRecoilUp'] = 0; Player.Skills['ShotgunGaussGripReloadUp'] = 0; Player.Skills['ShotgunGaussGripDamageDown'] = 0; Player.Skills['ShotgunGaussGripSpreadDown'] = 0; Player.Skills['ShotgunGaussGripRecoilDown'] = 0; Player.Skills['ShotgunGaussGripReloadDown'] = 45; RemoveItem('Token', 1, 42); ShotgunGaussGrip = 'Full Stock'; ModSelection = 'Full Stock'; ShotgunGaussGripStat = 'Damage +10% / Accuracy + 10% / Reload Speed -10%'"
-  Option_8: dialogue_maGaaWe
-  OptionIf_8: "HasItem('Token', 1, 46)"
+  OptionExecute_7: "Player.Skills['ShotgunGaussGripDamageUp'] = 0; Player.Skills['ShotgunGaussGripSpreadUp'] = 0; Player.Skills['ShotgunGaussGripRecoilUp'] = 13; Player.Skills['ShotgunGaussGripReloadUp'] = 0; Player.Skills['ShotgunGaussGripDamageDown'] = 0; Player.Skills['ShotgunGaussGripSpreadDown'] = 0; Player.Skills['ShotgunGaussGripRecoilDown'] = 0; Player.Skills['ShotgunGaussGripReloadDown'] = 0; RemoveItem('Token', 1, 41); ShotgunGaussGrip = 'Short Stock'; ModSelection = 'Short Stock'; ShotgunGaussGripStat = 'Recoil -10%'"
+  Option_8: dialogue_mmYW0WC
+  OptionIf_8: "HasItem('Token', 1, 42)"
   OptionNext_8: GS_WeaponBench_Replace
-  OptionExecute_8: "Player.Skills['ShotgunGaussGripDamageUp'] = 0; Player.Skills['ShotgunGaussGripSpreadUp'] = 0; Player.Skills['ShotgunGaussGripRecoilUp'] = 26; Player.Skills['ShotgunGaussGripReloadUp'] = 67; Player.Skills['ShotgunGaussGripDamageDown'] = 0; Player.Skills['ShotgunGaussGripSpreadDown'] = 0; Player.Skills['ShotgunGaussGripRecoilDown'] = 0; Player.Skills['ShotgunGaussGripReloadDown'] = 0; RemoveItem('Token', 1, 46); ShotgunGaussGrip = 'Tactical Stock'; ModSelection = 'Tactical Stock'; ShotgunGaussGripStat = 'Recoil -20% / Reload Speed +15%'"
-  Option_9: dialogue_aauuGma
-  OptionIf_9: "HasItem('Token', 1, 48)"
+  OptionExecute_8: "Player.Skills['ShotgunGaussGripDamageUp'] = 8; Player.Skills['ShotgunGaussGripSpreadUp'] = 28; Player.Skills['ShotgunGaussGripRecoilUp'] = 0; Player.Skills['ShotgunGaussGripReloadUp'] = 0; Player.Skills['ShotgunGaussGripDamageDown'] = 0; Player.Skills['ShotgunGaussGripSpreadDown'] = 0; Player.Skills['ShotgunGaussGripRecoilDown'] = 0; Player.Skills['ShotgunGaussGripReloadDown'] = 45; RemoveItem('Token', 1, 42); ShotgunGaussGrip = 'Full Stock'; ModSelection = 'Full Stock'; ShotgunGaussGripStat = 'Damage +10% / Accuracy + 10% / Reload Speed -10%'"
+  Option_9: dialogue_OO8OK0i
+  OptionIf_9: "HasItem('Token', 1, 46)"
   OptionNext_9: GS_WeaponBench_Replace
-  OptionExecute_9: "Player.Skills['ShotgunGaussGripDamageUp'] = 0; Player.Skills['ShotgunGaussGripSpreadUp'] = 0; Player.Skills['ShotgunGaussGripRecoilUp'] = 38; Player.Skills['ShotgunGaussGripReloadUp'] = 0; Player.Skills['ShotgunGaussGripDamageDown'] = 0; Player.Skills['ShotgunGaussGripSpreadDown'] = 0; Player.Skills['ShotgunGaussGripRecoilDown'] = 0; Player.Skills['ShotgunGaussGripReloadDown'] = 0; RemoveItem('Token', 1, 48); ShotgunGaussGrip = 'Recoil-Compensating Stock'; ModSelection = 'Recoil-Compensating Stock'; ShotgunGaussGripStat = 'Recoil -30%'"
-  Option_10: dialogue_KuWemGS
-  OptionIf_10: "HasItem('Token', 1, 53)"
+  OptionExecute_9: "Player.Skills['ShotgunGaussGripDamageUp'] = 0; Player.Skills['ShotgunGaussGripSpreadUp'] = 0; Player.Skills['ShotgunGaussGripRecoilUp'] = 26; Player.Skills['ShotgunGaussGripReloadUp'] = 67; Player.Skills['ShotgunGaussGripDamageDown'] = 0; Player.Skills['ShotgunGaussGripSpreadDown'] = 0; Player.Skills['ShotgunGaussGripRecoilDown'] = 0; Player.Skills['ShotgunGaussGripReloadDown'] = 0; RemoveItem('Token', 1, 46); ShotgunGaussGrip = 'Tactical Stock'; ModSelection = 'Tactical Stock'; ShotgunGaussGripStat = 'Recoil -20% / Reload Speed +15%'"
+  Option_10: dialogue_q7lCOGi
+  OptionIf_10: "HasItem('Token', 1, 48)"
   OptionNext_10: GS_WeaponBench_Replace
-  OptionExecute_10: "Player.Skills['ShotgunGaussFrameDamageUp'] = 0; Player.Skills['ShotgunGaussFrameSpreadUp'] = 28; Player.Skills['ShotgunGaussFrameRecoilUp'] = 0; Player.Skills['ShotgunGaussFrameReloadUp'] = 0; Player.Skills['ShotgunGaussFrameDamageDown'] = 0; Player.Skills['ShotgunGaussFrameSpreadDown'] = 0; Player.Skills['ShotgunGaussFrameRecoilDown'] = 7; Player.Skills['ShotgunGaussFrameReloadDown'] = 0; RemoveItem('Token', 1, 53); ShotgunGaussFrame = 'Light Shotgun Receiver'; ModSelection = 'Light Shotgun Receiver'; ShotgunGaussFrameStat = 'Accuracy +10% / Recoil +5%'"
-  Option_11: dialogue_40ieqOW
-  OptionIf_11: "HasItem('Token', 1, 57)"
+  OptionExecute_10: "Player.Skills['ShotgunGaussGripDamageUp'] = 0; Player.Skills['ShotgunGaussGripSpreadUp'] = 0; Player.Skills['ShotgunGaussGripRecoilUp'] = 40; Player.Skills['ShotgunGaussGripReloadUp'] = 0; Player.Skills['ShotgunGaussGripDamageDown'] = 0; Player.Skills['ShotgunGaussGripSpreadDown'] = 0; Player.Skills['ShotgunGaussGripRecoilDown'] = 0; Player.Skills['ShotgunGaussGripReloadDown'] = 0; RemoveItem('Token', 1, 48); ShotgunGaussGrip = 'Recoil-Compensating Stock'; ModSelection = 'Recoil-Compensating Stock'; ShotgunGaussGripStat = 'Recoil -30%'"
+  Option_11: dialogue_OWCKGCO
+  OptionIf_11: "HasItem('Token', 1, 53)"
   OptionNext_11: GS_WeaponBench_Replace
-  OptionExecute_11: "Player.Skills['ShotgunGaussFrameDamageUp'] = 0; Player.Skills['ShotgunGaussFrameSpreadUp'] = 0; Player.Skills['ShotgunGaussFrameRecoilUp'] = 13; Player.Skills['ShotgunGaussFrameReloadUp'] = 0; Player.Skills['ShotgunGaussFrameDamageDown'] = 0; Player.Skills['ShotgunGaussFrameSpreadDown'] = 0; Player.Skills['ShotgunGaussFrameRecoilDown'] = 0; Player.Skills['ShotgunGaussFrameReloadDown'] = 0; RemoveItem('Token', 1, 57); ShotgunGaussFrame = 'Heavy Shotgun Receiver'; ModSelection = 'Heavy Shotgun Receiver'; ShotgunGaussFrameStat = 'Recoil -10%'"
-  Option_12: dialogue_020G8mS
-  OptionIf_12: "HasItem('Token', 1, 63)"
+  OptionExecute_11: "Player.Skills['ShotgunGaussFrameDamageUp'] = 0; Player.Skills['ShotgunGaussFrameSpreadUp'] = 28; Player.Skills['ShotgunGaussFrameRecoilUp'] = 0; Player.Skills['ShotgunGaussFrameReloadUp'] = 0; Player.Skills['ShotgunGaussFrameDamageDown'] = 0; Player.Skills['ShotgunGaussFrameSpreadDown'] = 0; Player.Skills['ShotgunGaussFrameRecoilDown'] = 7; Player.Skills['ShotgunGaussFrameReloadDown'] = 0; RemoveItem('Token', 1, 53); ShotgunGaussFrame = 'Light Shotgun Receiver'; ModSelection = 'Light Shotgun Receiver'; ShotgunGaussFrameStat = 'Accuracy +10% / Recoil +5%'"
+  Option_12: dialogue_Wmuv4Gq
+  OptionIf_12: "HasItem('Token', 1, 57)"
   OptionNext_12: GS_WeaponBench_Replace
-  OptionExecute_12: "Player.Skills['ShotgunGaussFrameDamageUp'] = 0; Player.Skills['ShotgunGaussFrameSpreadUp'] = 0; Player.Skills['ShotgunGaussFrameRecoilUp'] = 0; Player.Skills['ShotgunGaussFrameReloadUp'] = 90; Player.Skills['ShotgunGaussFrameDamageDown'] = 0; Player.Skills['ShotgunGaussFrameSpreadDown'] = 0; Player.Skills['ShotgunGaussFrameRecoilDown'] = 0; Player.Skills['ShotgunGaussFrameReloadDown'] = 0; RemoveItem('Token', 1, 63); ShotgunGaussFrame = 'Automatic Shotgun Receiver'; ModSelection = 'Automatic Shotgun Receiver'; ShotgunGaussFrameStat = 'Reload Speed +20%'"
-  Option_13: dialogue_6umOga8
-  OptionNext_13: GS_WeaponBench_Restore
-  OptionExecute_13: "Player.Skills['ShotgunGaussBarrelDamageUp'] = 0; Player.Skills['ShotgunGaussBarrelSpreadUp'] = 0; Player.Skills['ShotgunGaussBarrelRecoilUp'] = 0; Player.Skills['ShotgunGaussBarrelReloadUp'] = 0; Player.Skills['ShotgunGaussBarrelDamageDown'] = 0; Player.Skills['ShotgunGaussBarrelSpreadDown'] = 0; Player.Skills['ShotgunGaussBarrelRecoilDown'] = 0; Player.Skills['ShotgunGaussBarrelReloadDown'] = 0; Player.Skills['ShotgunGaussGripDamageUp'] = 0; Player.Skills['ShotgunGaussGripSpreadUp'] = 0; Player.Skills['ShotgunGaussGripRecoilUp'] = 0; Player.Skills['ShotgunGaussGripReloadUp'] = 0; Player.Skills['ShotgunGaussGripDamageDown'] = 0; Player.Skills['ShotgunGaussGripSpreadDown'] = 0; Player.Skills['ShotgunGaussGripRecoilDown'] = 0; Player.Skills['ShotgunGaussGripReloadDown'] = 0; Player.Skills['ShotgunGaussFrameDamageUp'] = 0; Player.Skills['ShotgunGaussFrameSpreadUp'] = 0; Player.Skills['ShotgunGaussFrameRecoilUp'] = 0; Player.Skills['ShotgunGaussFrameReloadUp'] = 0; Player.Skills['ShotgunGaussFrameDamageDown'] = 0; Player.Skills['ShotgunGaussFrameSpreadDown'] = 0; Player.Skills['ShotgunGaussFrameRecoilDown'] = 0; Player.Skills['ShotgunGaussFrameReloadDown'] = 0; ShotgunGaussBarrel = 'Default'; ShotgunGaussGrip = 'Default'; ShotgunGaussFrame = 'Default'; ShotgunGaussBarrelStat = 'None'; ShotgunGaussGripStat = 'None'; ShotgunGaussFrameStat = 'None'"
-  Option_14: dialogue_GSCOOm8
-  OptionNext_14: GS_WeaponBench_Shotguns
+  OptionExecute_12: "Player.Skills['ShotgunGaussFrameDamageUp'] = 0; Player.Skills['ShotgunGaussFrameSpreadUp'] = 0; Player.Skills['ShotgunGaussFrameRecoilUp'] = 14; Player.Skills['ShotgunGaussFrameReloadUp'] = 0; Player.Skills['ShotgunGaussFrameDamageDown'] = 0; Player.Skills['ShotgunGaussFrameSpreadDown'] = 0; Player.Skills['ShotgunGaussFrameRecoilDown'] = 0; Player.Skills['ShotgunGaussFrameReloadDown'] = 0; RemoveItem('Token', 1, 57); ShotgunGaussFrame = 'Heavy Shotgun Receiver'; ModSelection = 'Heavy Shotgun Receiver'; ShotgunGaussFrameStat = 'Recoil -10%'"
+  Option_13: dialogue_eWWDSCW
+  OptionIf_13: "HasItem('Token', 1, 63)"
+  OptionNext_13: GS_WeaponBench_Replace
+  OptionExecute_13: "Player.Skills['ShotgunGaussFrameDamageUp'] = 0; Player.Skills['ShotgunGaussFrameSpreadUp'] = 0; Player.Skills['ShotgunGaussFrameRecoilUp'] = 0; Player.Skills['ShotgunGaussFrameReloadUp'] = 90; Player.Skills['ShotgunGaussFrameDamageDown'] = 0; Player.Skills['ShotgunGaussFrameSpreadDown'] = 0; Player.Skills['ShotgunGaussFrameRecoilDown'] = 0; Player.Skills['ShotgunGaussFrameReloadDown'] = 0; RemoveItem('Token', 1, 63); ShotgunGaussFrame = 'Automatic Shotgun Receiver'; ModSelection = 'Automatic Shotgun Receiver'; ShotgunGaussFrameStat = 'Reload Speed +20%'"
+  Option_14: dialogue_qu80aGa
+  OptionNext_14: GS_WeaponBench_Restore
+  OptionExecute_14: "Player.Skills['ShotgunGaussBarrelDamageUp'] = 0; Player.Skills['ShotgunGaussBarrelSpreadUp'] = 0; Player.Skills['ShotgunGaussBarrelRecoilUp'] = 0; Player.Skills['ShotgunGaussBarrelReloadUp'] = 0; Player.Skills['ShotgunGaussBarrelDamageDown'] = 0; Player.Skills['ShotgunGaussBarrelSpreadDown'] = 0; Player.Skills['ShotgunGaussBarrelRecoilDown'] = 0; Player.Skills['ShotgunGaussBarrelReloadDown'] = 0; Player.Skills['ShotgunGaussGripDamageUp'] = 0; Player.Skills['ShotgunGaussGripSpreadUp'] = 0; Player.Skills['ShotgunGaussGripRecoilUp'] = 0; Player.Skills['ShotgunGaussGripReloadUp'] = 0; Player.Skills['ShotgunGaussGripDamageDown'] = 0; Player.Skills['ShotgunGaussGripSpreadDown'] = 0; Player.Skills['ShotgunGaussGripRecoilDown'] = 0; Player.Skills['ShotgunGaussGripReloadDown'] = 0; Player.Skills['ShotgunGaussFrameDamageUp'] = 0; Player.Skills['ShotgunGaussFrameSpreadUp'] = 0; Player.Skills['ShotgunGaussFrameRecoilUp'] = 0; Player.Skills['ShotgunGaussFrameReloadUp'] = 0; Player.Skills['ShotgunGaussFrameDamageDown'] = 0; Player.Skills['ShotgunGaussFrameSpreadDown'] = 0; Player.Skills['ShotgunGaussFrameRecoilDown'] = 0; Player.Skills['ShotgunGaussFrameReloadDown'] = 0; ShotgunGaussBarrel = 'Default'; ShotgunGaussGrip = 'Default'; ShotgunGaussFrame = 'Default'; ShotgunGaussBarrelStat = 'None'; ShotgunGaussGripStat = 'None'; ShotgunGaussFrameStat = 'None'"
+  Option_15: dialogue_ChW4y0O
+  OptionNext_15: GS_WeaponBench_Shotguns
   Variable_1: "ShotgunGaussBarrel", param1: dbplayer_string
   Variable_2: "ShotgunGaussGrip", param1: dbplayer_string
   Variable_3: "ShotgunGaussFrame", param1: dbplayer_string
@@ -19788,7 +19812,7 @@
   OptionNext_3: GS_WeaponBench_SniperRifleT3, param1: GotoAndReset
   Option_4: dialogue_COumO0u
   OptionIf_4: "HasItem('Eden_ScoutRifle', 1)"
-  OptionNext_4: GS_WeaponBench_ScoutRifle, param1: GotoAndReset
+  OptionNext_4: GS_WeaponBench_ScoutRiflev2, param1: GotoAndReset
   Option_5: dialogue_aQus0qa
   OptionNext_5: GS_WeaponBench_Init
 }
@@ -19969,56 +19993,56 @@
   Variable_6: "SniperRifleT3GripStat", param1: dbplayer_string
   Variable_7: "SniperRifleT3FrameStat", param1: dbplayer_string
 }
-{ +Dialogue Name: GS_WeaponBench_ScoutRifle
-  Output: dialogue_a4Se0WG
-  Option_1: dialogue_OOCauha
+{ +Dialogue Name: GS_WeaponBench_ScoutRiflev2
+  Output: dialogue_0WWuGVg
+  Option_1: dialogue_Siueu40
   OptionIf_1: "HasItem('Token', 1, 22)"
   OptionNext_1: GS_WeaponBench_Replace
   OptionExecute_1: "Player.Skills['ScoutRifleBarrelDamageUp'] = 0; Player.Skills['ScoutRifleBarrelSpreadUp'] = 0; Player.Skills['ScoutRifleBarrelRecoilUp'] = 42; Player.Skills['ScoutRifleBarrelReloadUp'] = 0; Player.Skills['ScoutRifleBarrelDamageDown'] = 0; Player.Skills['ScoutRifleBarrelSpreadDown'] = 0; Player.Skills['ScoutRifleBarrelRecoilDown'] = 0; Player.Skills['ScoutRifleBarrelReloadDown'] = 0; RemoveItem('Token', 1, 22); ScoutRifleBarrel = 'Long Heavy Barrel'; ModSelection = 'Long Heavy Barrel'; ScoutRifleBarrelStat = 'Recoil -10%'"
-  Option_2: dialogue_uemOSmq
+  Option_2: dialogue_00Oq8qG
   OptionIf_2: "HasItem('Token', 1, 25)"
   OptionNext_2: GS_WeaponBench_Replace
   OptionExecute_2: "Player.Skills['ScoutRifleBarrelDamageUp'] = 0; Player.Skills['ScoutRifleBarrelSpreadUp'] = 8; Player.Skills['ScoutRifleBarrelRecoilUp'] = 0; Player.Skills['ScoutRifleBarrelReloadUp'] = 0; Player.Skills['ScoutRifleBarrelDamageDown'] = 0; Player.Skills['ScoutRifleBarrelSpreadDown'] = 0; Player.Skills['ScoutRifleBarrelRecoilDown'] = 0; Player.Skills['ScoutRifleBarrelReloadDown'] = 0; RemoveItem('Token', 1, 25); ScoutRifleBarrel = 'Long Ultralight Barrel'; ModSelection = 'Long Ultralight Barrel'; ScoutRifleBarrelStat = 'Accuracy +10%'"
-  Option_3: dialogue_S8KeO4m
+  Option_3: dialogue_eaeOKuq
   OptionIf_3: "HasItem('Token', 1, 28)"
   OptionNext_3: GS_WeaponBench_Replace
-  OptionExecute_3: "Player.Skills['ScoutRifleBarrelDamageUp'] = 12; Player.Skills['ScoutRifleBarrelSpreadUp'] = 0; Player.Skills['ScoutRifleBarrelRecoilUp'] = 0; Player.Skills['ScoutRifleBarrelReloadUp'] = 0; Player.Skills['ScoutRifleBarrelDamageDown'] = 0; Player.Skills['ScoutRifleBarrelSpreadDown'] = 0; Player.Skills['ScoutRifleBarrelRecoilDown'] = 21; Player.Skills['ScoutRifleBarrelReloadDown'] = 0; RemoveItem('Token', 1, 28); ScoutRifleBarrel = 'Long High-Velocity Barrel'; ModSelection = 'Long High-Velocity Barrel'; ScoutRifleBarrelStat = 'Damage +10% / Recoil +5%'"
-  Option_4: dialogue_uSW2780
+  OptionExecute_3: "Player.Skills['ScoutRifleBarrelDamageUp'] = 12; Player.Skills['ScoutRifleBarrelSpreadUp'] = 0; Player.Skills['ScoutRifleBarrelRecoilUp'] = 0; Player.Skills['ScoutRifleBarrelReloadUp'] = 0; Player.Skills['ScoutRifleBarrelDamageDown'] = 0; Player.Skills['ScoutRifleBarrelSpreadDown'] = 0; Player.Skills['ScoutRifleBarrelRecoilDown'] = 9; Player.Skills['ScoutRifleBarrelReloadDown'] = 0; RemoveItem('Token', 1, 28); ScoutRifleBarrel = 'Long High-Velocity Barrel'; ModSelection = 'Long High-Velocity Barrel'; ScoutRifleBarrelStat = 'Damage +10% / Recoil +5%'"
+  Option_4: dialogue_A8lKSiO
   OptionIf_4: "HasItem('Token', 1, 39)"
   OptionNext_4: GS_WeaponBench_Replace
   OptionExecute_4: "Player.Skills['ScoutRifleGripDamageUp'] = 0; Player.Skills['ScoutRifleGripSpreadUp'] = 0; Player.Skills['ScoutRifleGripRecoilUp'] = 21; Player.Skills['ScoutRifleGripReloadUp'] = 0; Player.Skills['ScoutRifleGripDamageDown'] = 0; Player.Skills['ScoutRifleGripSpreadDown'] = 0; Player.Skills['ScoutRifleGripRecoilDown'] = 0; Player.Skills['ScoutRifleGripReloadDown'] = 0; RemoveItem('Token', 1, 39); ScoutRifleGrip = 'Wooden Stock'; ModSelection = 'Wooden Stock'; ScoutRifleGripStat = 'Recoil -5%'"
-  Option_5: dialogue_u6OCiSF
+  Option_5: dialogue_SiOGaWC
   OptionIf_5: "HasItem('Token', 1, 42)"
   OptionNext_5: GS_WeaponBench_Replace
   OptionExecute_5: "Player.Skills['ScoutRifleGripDamageUp'] = 12; Player.Skills['ScoutRifleGripSpreadUp'] = 8; Player.Skills['ScoutRifleGripRecoilUp'] = 0; Player.Skills['ScoutRifleGripReloadUp'] = 0; Player.Skills['ScoutRifleGripDamageDown'] = 0; Player.Skills['ScoutRifleGripSpreadDown'] = 0; Player.Skills['ScoutRifleGripRecoilDown'] = 0; Player.Skills['ScoutRifleGripReloadDown'] = 33; RemoveItem('Token', 1, 42); ScoutRifleGrip = 'Full Stock'; ModSelection = 'Full Stock'; ScoutRifleGripStat = 'Damage +10% / Accuracy +10% / Reload Speed -10%'"
-  Option_6: dialogue_aKGqkS4
+  Option_6: dialogue_q4a4Coe
   OptionIf_6: "HasItem('Token', 1, 46)"
   OptionNext_6: GS_WeaponBench_Replace
-  OptionExecute_6: "Player.Skills['ScoutRifleGripDamageUp'] = 0; Player.Skills['ScoutRifleGripSpreadUp'] = 0; Player.Skills['ScoutRifleGripRecoilUp'] = 42; Player.Skills['ScoutRifleGripReloadUp'] = 49; Player.Skills['ScoutRifleGripDamageDown'] = 0; Player.Skills['ScoutRifleGripSpreadDown'] = 0; Player.Skills['ScoutRifleGripRecoilDown'] = 0; Player.Skills['ScoutRifleGripReloadDown'] = 0; RemoveItem('Token', 1, 46); ScoutRifleGrip = 'Tactical Stock'; ModSelection = 'Tactical Stock'; ScoutRifleGripStat = 'Recoil -20% / Reload Speed +15%'"
-  Option_7: dialogue_WmOCa4U
+  OptionExecute_6: "Player.Skills['ScoutRifleGripDamageUp'] = 0; Player.Skills['ScoutRifleGripSpreadUp'] = 0; Player.Skills['ScoutRifleGripRecoilUp'] = 84; Player.Skills['ScoutRifleGripReloadUp'] = 48; Player.Skills['ScoutRifleGripDamageDown'] = 0; Player.Skills['ScoutRifleGripSpreadDown'] = 0; Player.Skills['ScoutRifleGripRecoilDown'] = 0; Player.Skills['ScoutRifleGripReloadDown'] = 0; RemoveItem('Token', 1, 46); ScoutRifleGrip = 'Tactical Stock'; ModSelection = 'Tactical Stock'; ScoutRifleGripStat = 'Recoil -20% / Reload Speed +15%'"
+  Option_7: dialogue_Cqmea8i
   OptionIf_7: "HasItem('Token', 1, 47)"
   OptionNext_7: GS_WeaponBench_Replace
-  OptionExecute_7: "Player.Skills['ScoutRifleGripDamageUp'] = 12; Player.Skills['ScoutRifleGripSpreadUp'] = 8; Player.Skills['ScoutRifleGripRecoilUp'] = 21; Player.Skills['ScoutRifleGripReloadUp'] = 0; Player.Skills['ScoutRifleGripDamageDown'] = 0; Player.Skills['ScoutRifleGripSpreadDown'] = 0; Player.Skills['ScoutRifleGripRecoilDown'] = 0; Player.Skills['ScoutRifleGripReloadDown'] = 33; RemoveItem('Token', 1, 47); ScoutRifleGrip = 'Marksmans Stock'; ModSelection = 'Marksmans Stock'; ScoutRifleGripStat = 'Damage +10% / Accuracy +10% / Recoil -10% / Reload Speed -10%'"
-  Option_8: dialogue_pSKuG47
+  OptionExecute_7: "Player.Skills['ScoutRifleGripDamageUp'] = 12; Player.Skills['ScoutRifleGripSpreadUp'] = 8; Player.Skills['ScoutRifleGripRecoilUp'] = 42; Player.Skills['ScoutRifleGripReloadUp'] = 0; Player.Skills['ScoutRifleGripDamageDown'] = 0; Player.Skills['ScoutRifleGripSpreadDown'] = 0; Player.Skills['ScoutRifleGripRecoilDown'] = 0; Player.Skills['ScoutRifleGripReloadDown'] = 33; RemoveItem('Token', 1, 47); ScoutRifleGrip = 'Marksmans Stock'; ModSelection = 'Marksmans Stock'; ScoutRifleGripStat = 'Damage +10% / Accuracy +10% / Recoil -10% / Reload Speed -10%'"
+  Option_8: dialogue_ua4OCC0
   OptionIf_8: "HasItem('Token', 1, 48)"
   OptionNext_8: GS_WeaponBench_Replace
-  OptionExecute_8: "Player.Skills['ScoutRifleGripDamageUp'] = 0; Player.Skills['ScoutRifleGripSpreadUp'] = 0; Player.Skills['ScoutRifleGripRecoilUp'] = 63; Player.Skills['ScoutRifleGripReloadUp'] = 0; Player.Skills['ScoutRifleGripDamageDown'] = 0; Player.Skills['ScoutRifleGripSpreadDown'] = 0; Player.Skills['ScoutRifleGripRecoilDown'] = 0; Player.Skills['ScoutRifleGripReloadDown'] = 0; RemoveItem('Token', 1, 48); ScoutRifleGrip = 'Recoil-Compensating Stock'; ModSelection = 'Recoil-Compensating Stock'; ScoutRifleGripStat = 'Recoil -30%'"
-  Option_9: dialogue_a0lmeeu
+  OptionExecute_8: "Player.Skills['ScoutRifleGripDamageUp'] = 0; Player.Skills['ScoutRifleGripSpreadUp'] = 0; Player.Skills['ScoutRifleGripRecoilUp'] = 126; Player.Skills['ScoutRifleGripReloadUp'] = 0; Player.Skills['ScoutRifleGripDamageDown'] = 0; Player.Skills['ScoutRifleGripSpreadDown'] = 0; Player.Skills['ScoutRifleGripRecoilDown'] = 0; Player.Skills['ScoutRifleGripReloadDown'] = 0; RemoveItem('Token', 1, 48); ScoutRifleGrip = 'Recoil-Compensating Stock'; ModSelection = 'Recoil-Compensating Stock'; ScoutRifleGripStat = 'Recoil -30%'"
+  Option_9: dialogue_CGeESCC
   OptionIf_9: "HasItem('Token', 1, 52)"
   OptionNext_9: GS_WeaponBench_Replace
-  OptionExecute_9: "Player.Skills['ScoutRifleFrameDamageUp'] = 0; Player.Skills['ScoutRifleFrameSpreadUp'] = 8; Player.Skills['ScoutRifleFrameRecoilUp'] = 0; Player.Skills['ScoutRifleFrameReloadUp'] = 0; Player.Skills['ScoutRifleFrameDamageDown'] = 0; Player.Skills['ScoutRifleFrameSpreadDown'] = 0; Player.Skills['ScoutRifleFrameRecoilDown'] = 11; Player.Skills['ScoutRifleFrameReloadDown'] = 0; RemoveItem('Token', 1, 52); ScoutRifleFrame = 'Light Rifle Receiver'; ModSelection = 'Light Rifle Receiver'; ScoutRifleFrameStat = 'Accuracy +10% / Recoil +5%'"
-  Option_10: dialogue_GKmUqW8
+  OptionExecute_9: "Player.Skills['ScoutRifleFrameDamageUp'] = 0; Player.Skills['ScoutRifleFrameSpreadUp'] = 8; Player.Skills['ScoutRifleFrameRecoilUp'] = 0; Player.Skills['ScoutRifleFrameReloadUp'] = 0; Player.Skills['ScoutRifleFrameDamageDown'] = 0; Player.Skills['ScoutRifleFrameSpreadDown'] = 0; Player.Skills['ScoutRifleFrameRecoilDown'] = 21; Player.Skills['ScoutRifleFrameReloadDown'] = 0; RemoveItem('Token', 1, 52); ScoutRifleFrame = 'Light Rifle Receiver'; ModSelection = 'Light Rifle Receiver'; ScoutRifleFrameStat = 'Accuracy +10% / Recoil +5%'"
+  Option_10: dialogue_0C484ee
   OptionIf_10: "HasItem('Token', 1, 56)"
   OptionNext_10: GS_WeaponBench_Replace
-  OptionExecute_10: "Player.Skills['ScoutRifleFrameDamageUp'] = 0; Player.Skills['ScoutRifleFrameSpreadUp'] = 0; Player.Skills['ScoutRifleFrameRecoilUp'] = 21; Player.Skills['ScoutRifleFrameReloadUp'] = 0; Player.Skills['ScoutRifleFrameDamageDown'] = 0; Player.Skills['ScoutRifleFrameSpreadDown'] = 0; Player.Skills['ScoutRifleFrameRecoilDown'] = 0; Player.Skills['ScoutRifleFrameReloadDown'] = 0; RemoveItem('Token', 1, 56); ScoutRifleFrame = 'Heavy Rifle Receiver'; ModSelection = 'Heavy Rifle Receiver'; ScoutRifleFrameStat = 'Recoil -10%'"
-  Option_11: dialogue_uSSqOSq
+  OptionExecute_10: "Player.Skills['ScoutRifleFrameDamageUp'] = 0; Player.Skills['ScoutRifleFrameSpreadUp'] = 0; Player.Skills['ScoutRifleFrameRecoilUp'] = 42; Player.Skills['ScoutRifleFrameReloadUp'] = 0; Player.Skills['ScoutRifleFrameDamageDown'] = 0; Player.Skills['ScoutRifleFrameSpreadDown'] = 0; Player.Skills['ScoutRifleFrameRecoilDown'] = 0; Player.Skills['ScoutRifleFrameReloadDown'] = 0; RemoveItem('Token', 1, 56); ScoutRifleFrame = 'Heavy Rifle Receiver'; ModSelection = 'Heavy Rifle Receiver'; ScoutRifleFrameStat = 'Recoil -10%'"
+  Option_11: dialogue_SKiOimc
   OptionIf_11: "HasItem('Token', 1, 62)"
   OptionNext_11: GS_WeaponBench_Replace
-  OptionExecute_11: "Player.Skills['ScoutRifleFrameDamageUp'] = 12; Player.Skills['ScoutRifleFrameSpreadUp'] = 8; Player.Skills['ScoutRifleFrameRecoilUp'] = 21; Player.Skills['ScoutRifleFrameReloadUp'] = 0; Player.Skills['ScoutRifleFrameDamageDown'] = 0; Player.Skills['ScoutRifleFrameSpreadDown'] = 0; Player.Skills['ScoutRifleFrameRecoilDown'] = 0; Player.Skills['ScoutRifleFrameReloadDown'] = 33; RemoveItem('Token', 1, 62); ScoutRifleFrame = 'Calibrated Receiver'; ModSelection = 'Calibrated Receiver'; ScoutRifleFrameStat = 'Damage +10% / Accuracy +10% / Recoil -10% / Reload Speed -10%'"
-  Option_12: dialogue_48ewm4K
+  OptionExecute_11: "Player.Skills['ScoutRifleFrameDamageUp'] = 12; Player.Skills['ScoutRifleFrameSpreadUp'] = 8; Player.Skills['ScoutRifleFrameRecoilUp'] = 42; Player.Skills['ScoutRifleFrameReloadUp'] = 0; Player.Skills['ScoutRifleFrameDamageDown'] = 0; Player.Skills['ScoutRifleFrameSpreadDown'] = 0; Player.Skills['ScoutRifleFrameRecoilDown'] = 0; Player.Skills['ScoutRifleFrameReloadDown'] = 33; RemoveItem('Token', 1, 62); ScoutRifleFrame = 'Calibrated Receiver'; ModSelection = 'Calibrated Receiver'; ScoutRifleFrameStat = 'Damage +10% / Accuracy +10% / Recoil -10% / Reload Speed -10%'"
+  Option_12: dialogue_C0iMa0m
   OptionNext_12: GS_WeaponBench_Restore
   OptionExecute_12: "Player.Skills['ScoutRifleBarrelDamageUp'] = 0; Player.Skills['ScoutRifleBarrelSpreadUp'] = 0; Player.Skills['ScoutRifleBarrelRecoilUp'] = 0; Player.Skills['ScoutRifleBarrelReloadUp'] = 0; Player.Skills['ScoutRifleBarrelDamageDown'] = 0; Player.Skills['ScoutRifleBarrelSpreadDown'] = 0; Player.Skills['ScoutRifleBarrelRecoilDown'] = 0; Player.Skills['ScoutRifleBarrelReloadDown'] = 0; Player.Skills['ScoutRifleGripDamageUp'] = 0; Player.Skills['ScoutRifleGripSpreadUp'] = 0; Player.Skills['ScoutRifleGripRecoilUp'] = 0; Player.Skills['ScoutRifleGripReloadUp'] = 0; Player.Skills['ScoutRifleGripDamageDown'] = 0; Player.Skills['ScoutRifleGripSpreadDown'] = 0; Player.Skills['ScoutRifleGripRecoilDown'] = 0; Player.Skills['ScoutRifleGripReloadDown'] = 0; Player.Skills['ScoutRifleFrameDamageUp'] = 0; Player.Skills['ScoutRifleFrameSpreadUp'] = 0; Player.Skills['ScoutRifleFrameRecoilUp'] = 0; Player.Skills['ScoutRifleFrameReloadUp'] = 0; Player.Skills['ScoutRifleFrameDamageDown'] = 0; Player.Skills['ScoutRifleFrameSpreadDown'] = 0; Player.Skills['ScoutRifleFrameRecoilDown'] = 0; Player.Skills['ScoutRifleFrameReloadDown'] = 0; ScoutRifleBarrel = 'Default'; ScoutRifleGrip = 'Default'; ScoutRifleFrame = 'Default'; ScoutRifleBarrelStat = 'None'; ScoutRifleGripStat = 'None'; ScoutRifleFrameStat = 'None'"
-  Option_13: dialogue_r4WWOEO
+  Option_13: dialogue_d88Wiou
   OptionNext_13: GS_WeaponBench_SniperRifles
   Variable_1: "ScoutRifleBarrel", param1: dbplayer_string
   Variable_2: "ScoutRifleGrip", param1: dbplayer_string
@@ -20675,11 +20699,15 @@
   OptionIf_7: "HasItem('Token', 1, 64)"
   OptionNext_7: GS_WeaponBench_Replace
   OptionExecute_7: "Player.Skills['MinigunT1FrameDamageUp'] = 0; Player.Skills['MinigunT1FrameSpreadUp'] = 72; Player.Skills['MinigunT1FrameRecoilUp'] = 13; Player.Skills['MinigunT1FrameReloadUp'] = 0; Player.Skills['MinigunT1FrameDamageDown'] = 0; Player.Skills['MinigunT1FrameSpreadDown'] = 0; Player.Skills['MinigunT1FrameRecoilDown'] = 0; Player.Skills['MinigunT1FrameReloadDown'] = 0; RemoveItem('Token', 1, 64); MinigunT1Frame = 'Gyro-stabilized Frame'; ModSelection = 'Gyro-stabilized Frame'; MinigunT1FrameStat = 'Accuracy +15% / Recoil -15%'"
-  Option_8: dialogue_408quO8
-  OptionNext_8: GS_WeaponBench_Restore
-  OptionExecute_8: "Player.Skills['MinigunT1BarrelDamageUp'] = 0; Player.Skills['MinigunT1BarrelSpreadUp'] = 0; Player.Skills['MinigunT1BarrelRecoilUp'] = 0; Player.Skills['MinigunT1BarrelReloadUp'] = 0; Player.Skills['MinigunT1BarrelDamageDown'] = 0; Player.Skills['MinigunT1BarrelSpreadDown'] = 0; Player.Skills['MinigunT1BarrelRecoilDown'] = 0; Player.Skills['MinigunT1BarrelReloadDown'] = 0; Player.Skills['MinigunT1GripDamageUp'] = 0; Player.Skills['MinigunT1GripSpreadUp'] = 0; Player.Skills['MinigunT1GripRecoilUp'] = 0; Player.Skills['MinigunT1GripReloadUp'] = 0; Player.Skills['MinigunT1GripDamageDown'] = 0; Player.Skills['MinigunT1GripSpreadDown'] = 0; Player.Skills['MinigunT1GripRecoilDown'] = 0; Player.Skills['MinigunT1GripReloadDown'] = 0; Player.Skills['MinigunT1FrameDamageUp'] = 0; Player.Skills['MinigunT1FrameSpreadUp'] = 0; Player.Skills['MinigunT1FrameRecoilUp'] = 0; Player.Skills['MinigunT1FrameReloadUp'] = 0; Player.Skills['MinigunT1FrameDamageDown'] = 0; Player.Skills['MinigunT1FrameSpreadDown'] = 0; Player.Skills['MinigunT1FrameRecoilDown'] = 0; Player.Skills['MinigunT1FrameReloadDown'] = 0; MinigunT1Barrel = 'Default'; MinigunT1Grip = 'Default'; MinigunT1Frame = 'Default'; MinigunT1BarrelStat = 'None'; MinigunT1GripStat = 'None'; MinigunT1FrameStat = 'None'"
-  Option_9: dialogue_uKCmemq
-  OptionNext_9: GS_WeaponBench_Heavy
+  Option_8: dialogue_0CG4iEC
+  OptionIf_8: "HasItem('Token', 1, 82)"
+  OptionNext_8: GS_WeaponBench_Replace
+  OptionExecute_8: "Player.Skills['MinigunT1FrameDamageUp'] = 0; Player.Skills['MinigunT1FrameSpreadUp'] = 0; Player.Skills['MinigunT1FrameRecoilUp'] = 0; Player.Skills['MinigunT1FrameReloadUp'] = 650; Player.Skills['MinigunT1FrameDamageDown'] = 12; Player.Skills['MinigunT1FrameSpreadDown'] = 0; Player.Skills['MinigunT1FrameRecoilDown'] = 0; Player.Skills['MinigunT1FrameReloadDown'] = 0; RemoveItem('Token', 1, 82); MinigunT1Frame = 'Mechanized Autoloader'; ModSelection = 'Mechanized Autoloader'; MinigunT1FrameStat = 'Reload Speed +100% / Damage -20%'"
+  Option_9: dialogue_408quO8
+  OptionNext_9: GS_WeaponBench_Restore
+  OptionExecute_9: "Player.Skills['MinigunT1BarrelDamageUp'] = 0; Player.Skills['MinigunT1BarrelSpreadUp'] = 0; Player.Skills['MinigunT1BarrelRecoilUp'] = 0; Player.Skills['MinigunT1BarrelReloadUp'] = 0; Player.Skills['MinigunT1BarrelDamageDown'] = 0; Player.Skills['MinigunT1BarrelSpreadDown'] = 0; Player.Skills['MinigunT1BarrelRecoilDown'] = 0; Player.Skills['MinigunT1BarrelReloadDown'] = 0; Player.Skills['MinigunT1GripDamageUp'] = 0; Player.Skills['MinigunT1GripSpreadUp'] = 0; Player.Skills['MinigunT1GripRecoilUp'] = 0; Player.Skills['MinigunT1GripReloadUp'] = 0; Player.Skills['MinigunT1GripDamageDown'] = 0; Player.Skills['MinigunT1GripSpreadDown'] = 0; Player.Skills['MinigunT1GripRecoilDown'] = 0; Player.Skills['MinigunT1GripReloadDown'] = 0; Player.Skills['MinigunT1FrameDamageUp'] = 0; Player.Skills['MinigunT1FrameSpreadUp'] = 0; Player.Skills['MinigunT1FrameRecoilUp'] = 0; Player.Skills['MinigunT1FrameReloadUp'] = 0; Player.Skills['MinigunT1FrameDamageDown'] = 0; Player.Skills['MinigunT1FrameSpreadDown'] = 0; Player.Skills['MinigunT1FrameRecoilDown'] = 0; Player.Skills['MinigunT1FrameReloadDown'] = 0; MinigunT1Barrel = 'Default'; MinigunT1Grip = 'Default'; MinigunT1Frame = 'Default'; MinigunT1BarrelStat = 'None'; MinigunT1GripStat = 'None'; MinigunT1FrameStat = 'None'"
+  Option_10: dialogue_uKCmemq
+  OptionNext_10: GS_WeaponBench_Heavy
   Variable_1: "MinigunT1Barrel", param1: dbplayer_string
   Variable_2: "MinigunT1Grip", param1: dbplayer_string
   Variable_3: "MinigunT1Frame", param1: dbplayer_string
@@ -20760,20 +20788,24 @@
   Option_4: dialogue_Ha8S8oi
   OptionIf_4: "HasItem('Token', 1, 59)"
   OptionNext_4: GS_WeaponBench_Replace
-  OptionExecute_4: "Player.Skills['PlasmaT1FrameRecoilUp'] = 0; Player.Skills['PlasmaT1FrameReloadUp'] = 68; Player.Skills['PlasmaT1FrameRecoilDown'] = 0; Player.Skills['PlasmaT1FrameReloadDown'] = 0; RemoveItem('Token', 1, 59); PlasmaT1Frame = 'Heat Sink Frame'; ModSelection = 'Heat Sink Frame'; PlasmaT1FrameStat = 'Reload Speed +15%'"
+  OptionExecute_4: "Player.Skills['PlasmaT1FrameRecoilUp'] = 0; Player.Skills['PlasmaT1FrameReloadUp'] = 68; Player.Skills['PlasmaT1FrameRecoilDown'] = 0; Player.Skills['PlasmaT1FrameReloadDown'] = 0; Player.Skills['PlasmaT1AmmoDamageDown'] = 0; RemoveItem('Token', 1, 59); PlasmaT1Frame = 'Heat Sink Frame'; ModSelection = 'Heat Sink Frame'; PlasmaT1FrameStat = 'Reload Speed +15%'"
   Option_5: dialogue_uY08RGa
   OptionIf_5: "HasItem('Token', 1, 58)"
   OptionNext_5: GS_WeaponBench_Replace
-  OptionExecute_5: "Player.Skills['PlasmaT1FrameRecoilUp'] = 80; Player.Skills['PlasmaT1FrameReloadUp'] = 0; Player.Skills['PlasmaT1FrameRecoilDown'] = 0; Player.Skills['PlasmaT1FrameReloadDown'] = 90; RemoveItem('Token', 1, 58); PlasmaT1Frame = 'Heavy Cannon Frame'; ModSelection = 'Heavy Cannon Frame'; PlasmaT1FrameStat = 'Recoil -20% / Reload Speed -20%'"
+  OptionExecute_5: "Player.Skills['PlasmaT1FrameRecoilUp'] = 80; Player.Skills['PlasmaT1FrameReloadUp'] = 0; Player.Skills['PlasmaT1FrameRecoilDown'] = 0; Player.Skills['PlasmaT1FrameReloadDown'] = 90; Player.Skills['PlasmaT1AmmoDamageDown'] = 0; RemoveItem('Token', 1, 58); PlasmaT1Frame = 'Heavy Cannon Frame'; ModSelection = 'Heavy Cannon Frame'; PlasmaT1FrameStat = 'Recoil -20% / Reload Speed -20%'"
   Option_6: dialogue_8KiC40m
   OptionIf_6: "HasItem('Token', 1, 64)"
   OptionNext_6: GS_WeaponBench_Replace
-  OptionExecute_6: "Player.Skills['PlasmaT1FrameRecoilUp'] = 60; Player.Skills['PlasmaT1FrameReloadUp'] = 0; Player.Skills['PlasmaT1FrameRecoilDown'] = 0; Player.Skills['PlasmaT1FrameReloadDown'] = 0; RemoveItem('Token', 1, 64); PlasmaT1Frame = 'Gyro-stabilized Frame'; ModSelection = 'Gyro-stabilized Frame'; PlasmaT1FrameStat = 'Recoil -15%'"
-  Option_7: dialogue_e48SS84
-  OptionNext_7: GS_WeaponBench_Restore
-  OptionExecute_7: "Player.Skills['PlasmaT1BarrelRecoilUp'] = 0; Player.Skills['PlasmaT1BarrelReloadUp'] = 0; Player.Skills['PlasmaT1BarrelRecoilDown'] = 0; Player.Skills['PlasmaT1BarrelReloadDown'] = 0; Player.Skills['PlasmaT1GripRecoilUp'] = 0; Player.Skills['PlasmaT1GripReloadUp'] = 0; Player.Skills['PlasmaT1GripRecoilDown'] = 0; Player.Skills['PlasmaT1GripReloadDown'] = 0; Player.Skills['PlasmaT1FrameRecoilUp'] = 0; Player.Skills['PlasmaT1FrameReloadUp'] = 0; Player.Skills['PlasmaT1FrameRecoilDown'] = 0; Player.Skills['PlasmaT1FrameReloadDown'] = 0; PlasmaT1Barrel = 'Default'; PlasmaT1Grip = 'Default'; PlasmaT1Frame = 'Default'; PlasmaT1BarrelStat = 'None'; PlasmaT1GripStat = 'None'; PlasmaT1FrameStat = 'None'"
-  Option_8: dialogue_mmoSGOO
-  OptionNext_8: GS_WeaponBench_Heavy
+  OptionExecute_6: "Player.Skills['PlasmaT1FrameRecoilUp'] = 60; Player.Skills['PlasmaT1FrameReloadUp'] = 0; Player.Skills['PlasmaT1FrameRecoilDown'] = 0; Player.Skills['PlasmaT1FrameReloadDown'] = 0; Player.Skills['PlasmaT1AmmoDamageDown'] = 0; RemoveItem('Token', 1, 64); PlasmaT1Frame = 'Gyro-stabilized Frame'; ModSelection = 'Gyro-stabilized Frame'; PlasmaT1FrameStat = 'Recoil -15%'"
+  Option_7: dialogue_0aOmkaW
+  OptionIf_7: "HasItem('Token', 1, 82)"
+  OptionNext_7: GS_WeaponBench_Replace
+  OptionExecute_7: "Player.Skills['PlasmaT1FrameRecoilUp'] = 0; Player.Skills['PlasmaT1FrameReloadUp'] = 450; Player.Skills['PlasmaT1FrameRecoilDown'] = 0; Player.Skills['PlasmaT1FrameReloadDown'] = 0; Player.Skills['PlasmaT1AmmoDamageDown'] = 100; RemoveItem('Token', 1, 82); PlasmaT1Frame = 'Mechanized Autoloader'; ModSelection = 'Mechanized Autoloader'; PlasmaT1FrameStat = 'Reload Speed +100% / Damage -20%'"
+  Option_8: dialogue_e48SS84
+  OptionNext_8: GS_WeaponBench_Restore
+  OptionExecute_8: "Player.Skills['PlasmaT1BarrelRecoilUp'] = 0; Player.Skills['PlasmaT1BarrelReloadUp'] = 0; Player.Skills['PlasmaT1BarrelRecoilDown'] = 0; Player.Skills['PlasmaT1BarrelReloadDown'] = 0; Player.Skills['PlasmaT1GripRecoilUp'] = 0; Player.Skills['PlasmaT1GripReloadUp'] = 0; Player.Skills['PlasmaT1GripRecoilDown'] = 0; Player.Skills['PlasmaT1GripReloadDown'] = 0; Player.Skills['PlasmaT1FrameRecoilUp'] = 0; Player.Skills['PlasmaT1FrameReloadUp'] = 0; Player.Skills['PlasmaT1FrameRecoilDown'] = 0; Player.Skills['PlasmaT1FrameReloadDown'] = 0; Player.Skills['PlasmaT1AmmoDamageDown'] = 0; PlasmaT1Barrel = 'Default'; PlasmaT1Grip = 'Default'; PlasmaT1Frame = 'Default'; PlasmaT1BarrelStat = 'None'; PlasmaT1GripStat = 'None'; PlasmaT1FrameStat = 'None'"
+  Option_9: dialogue_mmoSGOO
+  OptionNext_9: GS_WeaponBench_Heavy
   Variable_1: "PlasmaT1Barrel", param1: dbplayer_string
   Variable_2: "PlasmaT1Grip", param1: dbplayer_string
   Variable_3: "PlasmaT1Frame", param1: dbplayer_string
@@ -20799,20 +20831,24 @@
   Option_4: dialogue_giO8uCS
   OptionIf_4: "HasItem('Token', 1, 59)"
   OptionNext_4: GS_WeaponBench_Replace
-  OptionExecute_4: "Player.Skills['PlasmaT2FrameRecoilUp'] = 0; Player.Skills['PlasmaT2FrameReloadUp'] = 68; Player.Skills['PlasmaT2FrameRecoilDown'] = 0; Player.Skills['PlasmaT2FrameReloadDown'] = 0; RemoveItem('Token', 1, 59); PlasmaT2Frame = 'Heat Sink Frame'; ModSelection = 'Heat Sink Frame'; PlasmaT2FrameStat = 'Reload Speed +15%'"
+  OptionExecute_4: "Player.Skills['PlasmaT2FrameRecoilUp'] = 0; Player.Skills['PlasmaT2FrameReloadUp'] = 68; Player.Skills['PlasmaT2FrameRecoilDown'] = 0; Player.Skills['PlasmaT2FrameReloadDown'] = 0; Player.Skills['PlasmaT1AmmoDamageDown'] = 0; RemoveItem('Token', 1, 59); PlasmaT2Frame = 'Heat Sink Frame'; ModSelection = 'Heat Sink Frame'; PlasmaT2FrameStat = 'Reload Speed +15%'"
   Option_5: dialogue_OOO8ISe
   OptionIf_5: "HasItem('Token', 1, 58)"
   OptionNext_5: GS_WeaponBench_Replace
-  OptionExecute_5: "Player.Skills['PlasmaT2FrameRecoilUp'] = 40; Player.Skills['PlasmaT2FrameReloadUp'] = 0; Player.Skills['PlasmaT2FrameRecoilDown'] = 0; Player.Skills['PlasmaT2FrameReloadDown'] = 90; RemoveItem('Token', 1, 58); PlasmaT2Frame = 'Heavy Cannon Frame'; ModSelection = 'Heavy Cannon Frame'; PlasmaT2FrameStat = 'Recoil -20% / Reload Speed -20%'"
+  OptionExecute_5: "Player.Skills['PlasmaT2FrameRecoilUp'] = 40; Player.Skills['PlasmaT2FrameReloadUp'] = 0; Player.Skills['PlasmaT2FrameRecoilDown'] = 0; Player.Skills['PlasmaT2FrameReloadDown'] = 90; Player.Skills['PlasmaT1AmmoDamageDown'] = 0; RemoveItem('Token', 1, 58); PlasmaT2Frame = 'Heavy Cannon Frame'; ModSelection = 'Heavy Cannon Frame'; PlasmaT2FrameStat = 'Recoil -20% / Reload Speed -20%'"
   Option_6: dialogue_YKSqO8m
   OptionIf_6: "HasItem('Token', 1, 64)"
   OptionNext_6: GS_WeaponBench_Replace
-  OptionExecute_6: "Player.Skills['PlasmaT2FrameRecoilUp'] = 30; Player.Skills['PlasmaT2FrameReloadUp'] = 0; Player.Skills['PlasmaT2FrameRecoilDown'] = 0; Player.Skills['PlasmaT2FrameReloadDown'] = 0; RemoveItem('Token', 1, 64); PlasmaT2Frame = 'Gyro-stabilized Frame'; ModSelection = 'Gyro-stabilized Frame'; PlasmaT2FrameStat = 'Recoil -15%'"
-  Option_7: dialogue_mWQ80ou
-  OptionNext_7: GS_WeaponBench_Restore
-  OptionExecute_7: "Player.Skills['PlasmaT2BarrelRecoilUp'] = 0; Player.Skills['PlasmaT2BarrelReloadUp'] = 0; Player.Skills['PlasmaT2BarrelRecoilDown'] = 0; Player.Skills['PlasmaT2BarrelReloadDown'] = 0; Player.Skills['PlasmaT2GripRecoilUp'] = 0; Player.Skills['PlasmaT2GripReloadUp'] = 0; Player.Skills['PlasmaT2GripRecoilDown'] = 0; Player.Skills['PlasmaT2GripReloadDown'] = 0; Player.Skills['PlasmaT2FrameRecoilUp'] = 0; Player.Skills['PlasmaT2FrameReloadUp'] = 0; Player.Skills['PlasmaT2FrameRecoilDown'] = 0; Player.Skills['PlasmaT2FrameReloadDown'] = 0; PlasmaT2Barrel = 'Default'; PlasmaT2Grip = 'Default'; PlasmaT2Frame = 'Default'; PlasmaT2BarrelStat = 'None'; PlasmaT2GripStat = 'None'; PlasmaT2FrameStat = 'None'"
-  Option_8: dialogue_quOau6q
-  OptionNext_8: GS_WeaponBench_Heavy
+  OptionExecute_6: "Player.Skills['PlasmaT2FrameRecoilUp'] = 30; Player.Skills['PlasmaT2FrameReloadUp'] = 0; Player.Skills['PlasmaT2FrameRecoilDown'] = 0; Player.Skills['PlasmaT2FrameReloadDown'] = 0; Player.Skills['PlasmaT1AmmoDamageDown'] = 0; RemoveItem('Token', 1, 64); PlasmaT2Frame = 'Gyro-stabilized Frame'; ModSelection = 'Gyro-stabilized Frame'; PlasmaT2FrameStat = 'Recoil -15%'"
+  Option_7: dialogue_eCiqSau
+  OptionIf_7: "HasItem('Token', 1, 82)"
+  OptionNext_7: GS_WeaponBench_Replace
+  OptionExecute_7: "Player.Skills['PlasmaT2FrameRecoilUp'] = 0; Player.Skills['PlasmaT2FrameReloadUp'] = 450; Player.Skills['PlasmaT2FrameRecoilDown'] = 0; Player.Skills['PlasmaT2FrameReloadDown'] = 0; Player.Skills['PlasmaT1AmmoDamageDown'] = 100; RemoveItem('Token', 1, 82); PlasmaT2Frame = 'Mechanized Autoloader'; ModSelection = 'Mechanized Autoloader'; PlasmaT2FrameStat = 'Reload Speed +100% / Damage -20%'"
+  Option_8: dialogue_mWQ80ou
+  OptionNext_8: GS_WeaponBench_Restore
+  OptionExecute_8: "Player.Skills['PlasmaT2BarrelRecoilUp'] = 0; Player.Skills['PlasmaT2BarrelReloadUp'] = 0; Player.Skills['PlasmaT2BarrelRecoilDown'] = 0; Player.Skills['PlasmaT2BarrelReloadDown'] = 0; Player.Skills['PlasmaT2GripRecoilUp'] = 0; Player.Skills['PlasmaT2GripReloadUp'] = 0; Player.Skills['PlasmaT2GripRecoilDown'] = 0; Player.Skills['PlasmaT2GripReloadDown'] = 0; Player.Skills['PlasmaT2FrameRecoilUp'] = 0; Player.Skills['PlasmaT2FrameReloadUp'] = 0; Player.Skills['PlasmaT2FrameRecoilDown'] = 0; Player.Skills['PlasmaT2FrameReloadDown'] = 0; Player.Skills['PlasmaT1AmmoDamageDown'] = 0; PlasmaT2Barrel = 'Default'; PlasmaT2Grip = 'Default'; PlasmaT2Frame = 'Default'; PlasmaT2BarrelStat = 'None'; PlasmaT2GripStat = 'None'; PlasmaT2FrameStat = 'None'"
+  Option_9: dialogue_quOau6q
+  OptionNext_9: GS_WeaponBench_Heavy
   Variable_1: "PlasmaT2Barrel", param1: dbplayer_string
   Variable_2: "PlasmaT2Grip", param1: dbplayer_string
   Variable_3: "PlasmaT2Frame", param1: dbplayer_string
@@ -20905,16 +20941,20 @@
   Option_7: dialogue_WeeqOaa
   OptionIf_7: "HasItem('Token', 1, 58)"
   OptionNext_7: GS_WeaponBench_Replace
-  OptionExecute_7: "Player.Skills['RocketT1FrameRecoilUp'] = 172; Player.Skills['RocketT1FrameReloadUp'] = 0; Player.Skills['RocketT1FrameRecoilDown'] = 0; Player.Skills['RocketT1FrameReloadDown'] = 120; RemoveItem('Token', 1, 58); RocketT1Frame = 'Heavy Cannon Frame'; ModSelection = 'Heavy Cannon Frame'; RocketT1FrameStat = 'Recoil -20% / Reload Speed -20%'"
+  OptionExecute_7: "Player.Skills['RocketT1FrameRecoilUp'] = 172; Player.Skills['RocketT1FrameReloadUp'] = 0; Player.Skills['RocketT1FrameRecoilDown'] = 0; Player.Skills['RocketT1FrameReloadDown'] = 120; Player.Skills['RocketT1AmmoDamageDown'] = 0; RemoveItem('Token', 1, 58); RocketT1Frame = 'Heavy Cannon Frame'; ModSelection = 'Heavy Cannon Frame'; RocketT1FrameStat = 'Recoil -20% / Reload Speed -20%'"
   Option_8: dialogue_KgOKqwC
   OptionIf_8: "HasItem('Token', 1, 64)"
   OptionNext_8: GS_WeaponBench_Replace
-  OptionExecute_8: "Player.Skills['RocketT1FrameRecoilUp'] = 129; Player.Skills['RocketT1FrameReloadUp'] = 0; Player.Skills['RocketT1FrameRecoilDown'] = 0; Player.Skills['RocketT1FrameReloadDown'] = 0; RemoveItem('Token', 1, 64); RocketT1Frame = 'Gyro-stabilized Frame'; ModSelection = 'Gyro-stabilized Frame'; RocketT1FrameStat = 'Recoil -15%'"
-  Option_9: dialogue_OQK0KmK
-  OptionNext_9: GS_WeaponBench_Restore
-  OptionExecute_9: "Player.Skills['RocketT1BarrelRecoilUp'] = 0; Player.Skills['RocketT1BarrelReloadUp'] = 0; Player.Skills['RocketT1BarrelRecoilDown'] = 0; Player.Skills['RocketT1BarrelReloadDown'] = 0; Player.Skills['RocketT1GripRecoilUp'] = 0; Player.Skills['RocketT1GripReloadUp'] = 0; Player.Skills['RocketT1GripRecoilDown'] = 0; Player.Skills['RocketT1GripReloadDown'] = 0; Player.Skills['RocketT1FrameRecoilUp'] = 0; Player.Skills['RocketT1FrameReloadUp'] = 0; Player.Skills['RocketT1FrameRecoilDown'] = 0; Player.Skills['RocketT1FrameReloadDown'] = 0; RocketT1Barrel = 'Default'; RocketT1Grip = 'Default'; RocketT1Frame = 'Default'; RocketT1BarrelStat = 'None'; RocketT1GripStat = 'None'; RocketT1FrameStat = 'None'"
-  Option_10: dialogue_Wmk4GW2
-  OptionNext_10: GS_WeaponBench_Heavy
+  OptionExecute_8: "Player.Skills['RocketT1FrameRecoilUp'] = 129; Player.Skills['RocketT1FrameReloadUp'] = 0; Player.Skills['RocketT1FrameRecoilDown'] = 0; Player.Skills['RocketT1FrameReloadDown'] = 0; Player.Skills['RocketT1AmmoDamageDown'] = 0; RemoveItem('Token', 1, 64); RocketT1Frame = 'Gyro-stabilized Frame'; ModSelection = 'Gyro-stabilized Frame'; RocketT1FrameStat = 'Recoil -15%'"
+  Option_9: dialogue_WaW0CsC
+  OptionIf_9: "HasItem('Token', 1, 82)"
+  OptionNext_9: GS_WeaponBench_Replace
+  OptionExecute_9: "Player.Skills['RocketT1FrameRecoilUp'] = 0; Player.Skills['RocketT1FrameReloadUp'] = 600; Player.Skills['RocketT1FrameRecoilDown'] = 0; Player.Skills['RocketT1FrameReloadDown'] = 0; Player.Skills['RocketT1AmmoDamageDown'] = 100; RemoveItem('Token', 1, 82); RocketT1Frame = 'Mechanized Autoloader'; ModSelection = 'Mechanized Autoloader'; RocketT1FrameStat = 'Reload Speed +100% / Damage -20%'"
+  Option_10: dialogue_OQK0KmK
+  OptionNext_10: GS_WeaponBench_Restore
+  OptionExecute_10: "Player.Skills['RocketT1BarrelRecoilUp'] = 0; Player.Skills['RocketT1BarrelReloadUp'] = 0; Player.Skills['RocketT1BarrelRecoilDown'] = 0; Player.Skills['RocketT1BarrelReloadDown'] = 0; Player.Skills['RocketT1GripRecoilUp'] = 0; Player.Skills['RocketT1GripReloadUp'] = 0; Player.Skills['RocketT1GripRecoilDown'] = 0; Player.Skills['RocketT1GripReloadDown'] = 0; Player.Skills['RocketT1FrameRecoilUp'] = 0; Player.Skills['RocketT1FrameReloadUp'] = 0; Player.Skills['RocketT1FrameRecoilDown'] = 0; Player.Skills['RocketT1FrameReloadDown'] = 0; Player.Skills['RocketT1AmmoDamageDown'] = 0; RocketT1Barrel = 'Default'; RocketT1Grip = 'Default'; RocketT1Frame = 'Default'; RocketT1BarrelStat = 'None'; RocketT1GripStat = 'None'; RocketT1FrameStat = 'None'"
+  Option_11: dialogue_Wmk4GW2
+  OptionNext_11: GS_WeaponBench_Heavy
   Variable_1: "RocketT1Barrel", param1: dbplayer_string
   Variable_2: "RocketT1Grip", param1: dbplayer_string
   Variable_3: "RocketT1Frame", param1: dbplayer_string
@@ -20952,16 +20992,20 @@
   Option_7: dialogue_8aaAKmW
   OptionIf_7: "HasItem('Token', 1, 58)"
   OptionNext_7: GS_WeaponBench_Replace
-  OptionExecute_7: "Player.Skills['RocketT2FrameRecoilUp'] = 138; Player.Skills['RocketT2FrameReloadUp'] = 0; Player.Skills['RocketT2FrameRecoilDown'] = 0; Player.Skills['RocketT2FrameReloadDown'] = 130; RemoveItem('Token', 1, 58); RocketT2Frame = 'Heavy Cannon Frame'; ModSelection = 'Heavy Cannon Frame'; RocketT2FrameStat = 'Recoil -20% / Reload Speed -20%'"
+  OptionExecute_7: "Player.Skills['RocketT2FrameRecoilUp'] = 138; Player.Skills['RocketT2FrameReloadUp'] = 0; Player.Skills['RocketT2FrameRecoilDown'] = 0; Player.Skills['RocketT2FrameReloadDown'] = 130; Player.Skills['RocketT2AmmoDamageDown'] = 0; RemoveItem('Token', 1, 58); RocketT2Frame = 'Heavy Cannon Frame'; ModSelection = 'Heavy Cannon Frame'; RocketT2FrameStat = 'Recoil -20% / Reload Speed -20%'"
   Option_8: dialogue_a8q0484
   OptionIf_8: "HasItem('Token', 1, 64)"
   OptionNext_8: GS_WeaponBench_Replace
-  OptionExecute_8: "Player.Skills['RocketT2FrameRecoilUp'] = 104; Player.Skills['RocketT2FrameReloadUp'] = 0; Player.Skills['RocketT2FrameRecoilDown'] = 0; Player.Skills['RocketT2FrameReloadDown'] = 0; RemoveItem('Token', 1, 64); RocketT2Frame = 'Gyro-stabilized Frame'; ModSelection = 'Gyro-stabilized Frame'; RocketT2FrameStat = 'Recoil -15%'"
-  Option_9: dialogue_i9OuVGW
-  OptionNext_9: GS_WeaponBench_Restore
-  OptionExecute_9: "Player.Skills['RocketT2BarrelRecoilUp'] = 0; Player.Skills['RocketT2BarrelReloadUp'] = 0; Player.Skills['RocketT2BarrelRecoilDown'] = 0; Player.Skills['RocketT2BarrelReloadDown'] = 0; Player.Skills['RocketT2GripRecoilUp'] = 0; Player.Skills['RocketT2GripReloadUp'] = 0; Player.Skills['RocketT2GripRecoilDown'] = 0; Player.Skills['RocketT2GripReloadDown'] = 0; Player.Skills['RocketT2FrameRecoilUp'] = 0; Player.Skills['RocketT2FrameReloadUp'] = 0; Player.Skills['RocketT2FrameRecoilDown'] = 0; Player.Skills['RocketT2FrameReloadDown'] = 0; RocketT2Barrel = 'Default'; RocketT2Grip = 'Default'; RocketT2Frame = 'Default'; RocketT2BarrelStat = 'None'; RocketT2GripStat = 'None'; RocketT2FrameStat = 'None'"
-  Option_10: dialogue_GiWaKee
-  OptionNext_10: GS_WeaponBench_Heavy
+  OptionExecute_8: "Player.Skills['RocketT2FrameRecoilUp'] = 104; Player.Skills['RocketT2FrameReloadUp'] = 0; Player.Skills['RocketT2FrameRecoilDown'] = 0; Player.Skills['RocketT2FrameReloadDown'] = 0; Player.Skills['RocketT2AmmoDamageDown'] = 0; RemoveItem('Token', 1, 64); RocketT2Frame = 'Gyro-stabilized Frame'; ModSelection = 'Gyro-stabilized Frame'; RocketT2FrameStat = 'Recoil -15%'"
+  Option_9: dialogue_WOW4KO4
+  OptionIf_9: "HasItem('Token', 1, 82)"
+  OptionNext_9: GS_WeaponBench_Replace
+  OptionExecute_9: "Player.Skills['RocketT2FrameRecoilUp'] = 0; Player.Skills['RocketT2FrameReloadUp'] = 650; Player.Skills['RocketT2FrameRecoilDown'] = 0; Player.Skills['RocketT2FrameReloadDown'] = 0; Player.Skills['RocketT2AmmoDamageDown'] = 100; RemoveItem('Token', 1, 82); RocketT2Frame = 'Mechanized Autoloader'; ModSelection = 'Mechanized Autoloader'; RocketT2FrameStat = 'Reload Speed +100% / Damage -20%'"
+  Option_10: dialogue_i9OuVGW
+  OptionNext_10: GS_WeaponBench_Restore
+  OptionExecute_10: "Player.Skills['RocketT2BarrelRecoilUp'] = 0; Player.Skills['RocketT2BarrelReloadUp'] = 0; Player.Skills['RocketT2BarrelRecoilDown'] = 0; Player.Skills['RocketT2BarrelReloadDown'] = 0; Player.Skills['RocketT2GripRecoilUp'] = 0; Player.Skills['RocketT2GripReloadUp'] = 0; Player.Skills['RocketT2GripRecoilDown'] = 0; Player.Skills['RocketT2GripReloadDown'] = 0; Player.Skills['RocketT2FrameRecoilUp'] = 0; Player.Skills['RocketT2FrameReloadUp'] = 0; Player.Skills['RocketT2FrameRecoilDown'] = 0; Player.Skills['RocketT2FrameReloadDown'] = 0; Player.Skills['RocketT2AmmoDamageDown'] = 0; RocketT2Barrel = 'Default'; RocketT2Grip = 'Default'; RocketT2Frame = 'Default'; RocketT2BarrelStat = 'None'; RocketT2GripStat = 'None'; RocketT2FrameStat = 'None'"
+  Option_11: dialogue_GiWaKee
+  OptionNext_11: GS_WeaponBench_Heavy
   Variable_1: "RocketT2Barrel", param1: dbplayer_string
   Variable_2: "RocketT2Grip", param1: dbplayer_string
   Variable_3: "RocketT2Frame", param1: dbplayer_string
@@ -20999,16 +21043,20 @@
   Option_7: dialogue_GO0GKSs
   OptionIf_7: "HasItem('Token', 1, 58)"
   OptionNext_7: GS_WeaponBench_Replace
-  OptionExecute_7: "Player.Skills['RocketT3FrameRecoilUp'] = 91; Player.Skills['RocketT3FrameReloadUp'] = 0; Player.Skills['RocketT3FrameRecoilDown'] = 0; Player.Skills['RocketT3FrameReloadDown'] = 90; RemoveItem('Token', 1, 58); RocketT3Frame = 'Heavy Cannon Frame'; ModSelection = 'Heavy Cannon Frame'; RocketT3FrameStat = 'Recoil -20% / Reload Speed -20%'"
+  OptionExecute_7: "Player.Skills['RocketT3FrameRecoilUp'] = 91; Player.Skills['RocketT3FrameReloadUp'] = 0; Player.Skills['RocketT3FrameRecoilDown'] = 0; Player.Skills['RocketT3FrameReloadDown'] = 90; Player.Skills['RocketT2AmmoDamageDown'] = 0; RemoveItem('Token', 1, 58); RocketT3Frame = 'Heavy Cannon Frame'; ModSelection = 'Heavy Cannon Frame'; RocketT3FrameStat = 'Recoil -20% / Reload Speed -20%'"
   Option_8: dialogue_umOiO0C
   OptionIf_8: "HasItem('Token', 1, 64)"
   OptionNext_8: GS_WeaponBench_Replace
-  OptionExecute_8: "Player.Skills['RocketT3FrameRecoilUp'] = 68; Player.Skills['RocketT3FrameReloadUp'] = 0; Player.Skills['RocketT3FrameRecoilDown'] = 0; Player.Skills['RocketT3FrameReloadDown'] = 0; RemoveItem('Token', 1, 64); RocketT3Frame = 'Gyro-stabilized Frame'; ModSelection = 'Gyro-stabilized Frame'; RocketT3FrameStat = 'Recoil -15%'"
-  Option_9: dialogue_KKWveSK
-  OptionNext_9: GS_WeaponBench_Restore
-  OptionExecute_9: "Player.Skills['RocketT3BarrelRecoilUp'] = 0; Player.Skills['RocketT3BarrelReloadUp'] = 0; Player.Skills['RocketT3BarrelRecoilDown'] = 0; Player.Skills['RocketT3BarrelReloadDown'] = 0; Player.Skills['RocketT3GripRecoilUp'] = 0; Player.Skills['RocketT3GripReloadUp'] = 0; Player.Skills['RocketT3GripRecoilDown'] = 0; Player.Skills['RocketT3GripReloadDown'] = 0; Player.Skills['RocketT3FrameRecoilUp'] = 0; Player.Skills['RocketT3FrameReloadUp'] = 0; Player.Skills['RocketT3FrameRecoilDown'] = 0; Player.Skills['RocketT3FrameReloadDown'] = 0; RocketT3Barrel = 'Default'; RocketT3Grip = 'Default'; RocketT3Frame = 'Default'; RocketT3BarrelStat = 'None'; RocketT3GripStat = 'None'; RocketT3FrameStat = 'None'"
-  Option_10: dialogue_MW8maKG
-  OptionNext_10: GS_WeaponBench_Heavy
+  OptionExecute_8: "Player.Skills['RocketT3FrameRecoilUp'] = 68; Player.Skills['RocketT3FrameReloadUp'] = 0; Player.Skills['RocketT3FrameRecoilDown'] = 0; Player.Skills['RocketT3FrameReloadDown'] = 0; Player.Skills['RocketT2AmmoDamageDown'] = 0; RemoveItem('Token', 1, 64); RocketT3Frame = 'Gyro-stabilized Frame'; ModSelection = 'Gyro-stabilized Frame'; RocketT3FrameStat = 'Recoil -15%'"
+  Option_9: dialogue_aCamaKa
+  OptionIf_9: "HasItem('Token', 1, 82)"
+  OptionNext_9: GS_WeaponBench_Replace
+  OptionExecute_9: "Player.Skills['RocketT3FrameRecoilUp'] = 0; Player.Skills['RocketT3FrameReloadUp'] = 450; Player.Skills['RocketT3FrameRecoilDown'] = 0; Player.Skills['RocketT3FrameReloadDown'] = 0; Player.Skills['RocketT2AmmoDamageDown'] = 100; RemoveItem('Token', 1, 58); RocketT3Frame = 'Mechanized Autoloader'; ModSelection = 'Mechanized Autoloader'; RocketT3FrameStat = 'Reload Speed +100% / Damage -20%'"
+  Option_10: dialogue_KKWveSK
+  OptionNext_10: GS_WeaponBench_Restore
+  OptionExecute_10: "Player.Skills['RocketT3BarrelRecoilUp'] = 0; Player.Skills['RocketT3BarrelReloadUp'] = 0; Player.Skills['RocketT3BarrelRecoilDown'] = 0; Player.Skills['RocketT3BarrelReloadDown'] = 0; Player.Skills['RocketT3GripRecoilUp'] = 0; Player.Skills['RocketT3GripReloadUp'] = 0; Player.Skills['RocketT3GripRecoilDown'] = 0; Player.Skills['RocketT3GripReloadDown'] = 0; Player.Skills['RocketT3FrameRecoilUp'] = 0; Player.Skills['RocketT3FrameReloadUp'] = 0; Player.Skills['RocketT3FrameRecoilDown'] = 0; Player.Skills['RocketT3FrameReloadDown'] = 0; Player.Skills['RocketT2AmmoDamageDown'] = 0; RocketT3Barrel = 'Default'; RocketT3Grip = 'Default'; RocketT3Frame = 'Default'; RocketT3BarrelStat = 'None'; RocketT3GripStat = 'None'; RocketT3FrameStat = 'None'"
+  Option_11: dialogue_MW8maKG
+  OptionNext_11: GS_WeaponBench_Heavy
   Variable_1: "RocketT3Barrel", param1: dbplayer_string
   Variable_2: "RocketT3Grip", param1: dbplayer_string
   Variable_3: "RocketT3Frame", param1: dbplayer_string
@@ -21046,16 +21094,20 @@
   Option_7: dialogue_iNa848i
   OptionIf_7: "HasItem('Token', 1, 58)"
   OptionNext_7: GS_WeaponBench_Replace
-  OptionExecute_7: "Player.Skills['RocketZiraxFrameRecoilUp'] = 62; Player.Skills['RocketZiraxFrameReloadUp'] = 0; Player.Skills['RocketZiraxFrameRecoilDown'] = 0; Player.Skills['RocketZiraxFrameReloadDown'] = 80; RemoveItem('Token', 1, 58); RocketZiraxFrame = 'Heavy Cannon Frame'; ModSelection = 'Heavy Cannon Frame'; RocketZiraxFrameStat = 'Recoil -20% / Reload Speed -20%'"
+  OptionExecute_7: "Player.Skills['RocketZiraxFrameRecoilUp'] = 62; Player.Skills['RocketZiraxFrameReloadUp'] = 0; Player.Skills['RocketZiraxFrameRecoilDown'] = 0; Player.Skills['RocketZiraxFrameReloadDown'] = 80; Player.Skills['RocketT1AmmoDamageDown'] = 0; RemoveItem('Token', 1, 58); RocketZiraxFrame = 'Heavy Cannon Frame'; ModSelection = 'Heavy Cannon Frame'; RocketZiraxFrameStat = 'Recoil -20% / Reload Speed -20%'"
   Option_8: dialogue_8Ki4eSG
   OptionIf_8: "HasItem('Token', 1, 64)"
   OptionNext_8: GS_WeaponBench_Replace
-  OptionExecute_8: "Player.Skills['RocketZiraxFrameRecoilUp'] = 47; Player.Skills['RocketZiraxFrameReloadUp'] = 0; Player.Skills['RocketZiraxFrameRecoilDown'] = 0; Player.Skills['RocketZiraxFrameReloadDown'] = 0; RemoveItem('Token', 1, 64); RocketZiraxFrame = 'Gyro-stabilized Frame'; ModSelection = 'Gyro-stabilized Frame'; RocketZiraxFrameStat = 'Recoil -15%'"
-  Option_9: dialogue_Cm8amGq
-  OptionNext_9: GS_WeaponBench_Restore
-  OptionExecute_9: "Player.Skills['RocketZiraxBarrelRecoilUp'] = 0; Player.Skills['RocketZiraxBarrelReloadUp'] = 0; Player.Skills['RocketZiraxBarrelRecoilDown'] = 0; Player.Skills['RocketZiraxBarrelReloadDown'] = 0; Player.Skills['RocketZiraxGripRecoilUp'] = 0; Player.Skills['RocketZiraxGripReloadUp'] = 0; Player.Skills['RocketZiraxGripRecoilDown'] = 0; Player.Skills['RocketZiraxGripReloadDown'] = 0; Player.Skills['RocketZiraxFrameRecoilUp'] = 0; Player.Skills['RocketZiraxFrameReloadUp'] = 0; Player.Skills['RocketZiraxFrameRecoilDown'] = 0; Player.Skills['RocketZiraxFrameReloadDown'] = 0; RocketZiraxBarrel = 'Default'; RocketZiraxGrip = 'Default'; RocketZiraxFrame = 'Default'; RocketZiraxBarrelStat = 'None'; RocketZiraxGripStat = 'None'; RocketZiraxFrameStat = 'None'"
-  Option_10: dialogue_i8CKOIC
-  OptionNext_10: GS_WeaponBench_Heavy
+  OptionExecute_8: "Player.Skills['RocketZiraxFrameRecoilUp'] = 47; Player.Skills['RocketZiraxFrameReloadUp'] = 0; Player.Skills['RocketZiraxFrameRecoilDown'] = 0; Player.Skills['RocketZiraxFrameReloadDown'] = 0; Player.Skills['RocketT1AmmoDamageDown'] = 0; RemoveItem('Token', 1, 64); RocketZiraxFrame = 'Gyro-stabilized Frame'; ModSelection = 'Gyro-stabilized Frame'; RocketZiraxFrameStat = 'Recoil -15%'"
+  Option_9: dialogue_OGiqWKq
+  OptionIf_9: "HasItem('Token', 1, 82)"
+  OptionNext_9: GS_WeaponBench_Replace
+  OptionExecute_9: "Player.Skills['RocketZiraxFrameRecoilUp'] = 0; Player.Skills['RocketZiraxFrameReloadUp'] = 400; Player.Skills['RocketZiraxFrameRecoilDown'] = 0; Player.Skills['RocketZiraxFrameReloadDown'] = 0; Player.Skills['RocketT1AmmoDamageDown'] = 100; RemoveItem('Token', 1, 82); RocketZiraxFrame = 'Mechanized Autoloader'; ModSelection = 'Mechanized Autoloader'; RocketZiraxFrameStat = 'Reload Speed +100% / Damage -20%'"
+  Option_10: dialogue_Cm8amGq
+  OptionNext_10: GS_WeaponBench_Restore
+  OptionExecute_10: "Player.Skills['RocketZiraxBarrelRecoilUp'] = 0; Player.Skills['RocketZiraxBarrelReloadUp'] = 0; Player.Skills['RocketZiraxBarrelRecoilDown'] = 0; Player.Skills['RocketZiraxBarrelReloadDown'] = 0; Player.Skills['RocketZiraxGripRecoilUp'] = 0; Player.Skills['RocketZiraxGripReloadUp'] = 0; Player.Skills['RocketZiraxGripRecoilDown'] = 0; Player.Skills['RocketZiraxGripReloadDown'] = 0; Player.Skills['RocketZiraxFrameRecoilUp'] = 0; Player.Skills['RocketZiraxFrameReloadUp'] = 0; Player.Skills['RocketZiraxFrameRecoilDown'] = 0; Player.Skills['RocketZiraxFrameReloadDown'] = 0; Player.Skills['RocketT1AmmoDamageDown'] = 0; RocketZiraxBarrel = 'Default'; RocketZiraxGrip = 'Default'; RocketZiraxFrame = 'Default'; RocketZiraxBarrelStat = 'None'; RocketZiraxGripStat = 'None'; RocketZiraxFrameStat = 'None'"
+  Option_11: dialogue_i8CKOIC
+  OptionNext_11: GS_WeaponBench_Heavy
   Variable_1: "RocketZiraxBarrel", param1: dbplayer_string
   Variable_2: "RocketZiraxGrip", param1: dbplayer_string
   Variable_3: "RocketZiraxFrame", param1: dbplayer_string
@@ -21093,16 +21145,20 @@
   Option_7: dialogue_mWma40K
   OptionIf_7: "HasItem('Token', 1, 76)"
   OptionNext_7: GS_WeaponBench_Replace
-  OptionExecute_7: "Player.Skills['FlamethrowerT1FrameRecoilUp'] = 0; Player.Skills['FlamethrowerT1FrameReloadUp'] = 125; Player.Skills['FlamethrowerT1FrameRecoilDown'] = 0; Player.Skills['FlamethrowerT1FrameReloadDown'] = 0; RemoveItem('Token', 1, 76); FlameT1Frame = 'Industrial Frame'; ModSelection = 'Industrial Frame'; FlameT1FrameStat = 'Reload Speed +25%'"
+  OptionExecute_7: "Player.Skills['FlamethrowerT1FrameRecoilUp'] = 0; Player.Skills['FlamethrowerT1FrameReloadUp'] = 125; Player.Skills['FlamethrowerT1FrameRecoilDown'] = 0; Player.Skills['FlamethrowerT1FrameReloadDown'] = 0; Player.Skills['FlamethrowerT1AmmoDamageDown'] = 0; RemoveItem('Token', 1, 76); FlameT1Frame = 'Industrial Frame'; ModSelection = 'Industrial Frame'; FlameT1FrameStat = 'Reload Speed +25%'"
   Option_8: dialogue_0SWmSeq
   OptionIf_8: "HasItem('Token', 1, 77)"
   OptionNext_8: GS_WeaponBench_Replace
-  OptionExecute_8: "Player.Skills['FlamethrowerT1FrameRecoilUp'] = 0; Player.Skills['FlamethrowerT1FrameReloadUp'] = 75; Player.Skills['FlamethrowerT1FrameRecoilDown'] = 0; Player.Skills['FlamethrowerT1FrameReloadDown'] = 0; RemoveItem('Token', 1, 77); FlameT1Frame = 'Commercial Frame'; ModSelection = 'Commercial Frame'; FlameT1FrameStat = 'Reload Speed +15%'"
-  Option_9: dialogue_uuO40uK
-  OptionNext_9: GS_WeaponBench_Restore
-  OptionExecute_9: "Player.Skills['FlamethrowerT1BarrelRecoilUp'] = 0; Player.Skills['FlamethrowerT1BarrelReloadUp'] = 0; Player.Skills['FlamethrowerT1BarrelRecoilDown'] = 0; Player.Skills['FlamethrowerT1BarrelReloadDown'] = 0; Player.Skills['FlamethrowerT1GripRecoilUp'] = 0; Player.Skills['FlamethrowerT1GripReloadUp'] = 0; Player.Skills['FlamethrowerT1GripRecoilDown'] = 0; Player.Skills['FlamethrowerT1GripReloadDown'] = 0; Player.Skills['FlamethrowerT1FrameRecoilUp'] = 0; Player.Skills['FlamethrowerT1FrameReloadUp'] = 0; Player.Skills['FlamethrowerT1FrameRecoilDown'] = 0; Player.Skills['FlamethrowerT1FrameReloadDown'] = 0; Player.Skills['FlamethrowerT1AmmoDamage'] = 0; Player.Skills['FlamethrowerT1AmmoBlastDamage'] = 0; FlameT1Barrel = 'Default'; FlameT1Grip = 'Default'; FlameT1Frame = 'Default'; FlameT1BarrelStat = 'None'; FlameT1GripStat = 'None'; FlameT1FrameStat = 'None'"
-  Option_10: dialogue_im8qCGq
-  OptionNext_10: GS_WeaponBench_Heavy
+  OptionExecute_8: "Player.Skills['FlamethrowerT1FrameRecoilUp'] = 0; Player.Skills['FlamethrowerT1FrameReloadUp'] = 75; Player.Skills['FlamethrowerT1FrameRecoilDown'] = 0; Player.Skills['FlamethrowerT1FrameReloadDown'] = 0; Player.Skills['FlamethrowerT1AmmoDamageDown'] = 0; RemoveItem('Token', 1, 77); FlameT1Frame = 'Commercial Frame'; ModSelection = 'Commercial Frame'; FlameT1FrameStat = 'Reload Speed +15%'"
+  Option_9: dialogue_CqGGK8q
+  OptionIf_9: "HasItem('Token', 1, 82)"
+  OptionNext_9: GS_WeaponBench_Replace
+  OptionExecute_9: "Player.Skills['FlamethrowerT1FrameRecoilUp'] = 0; Player.Skills['FlamethrowerT1FrameReloadUp'] = 0; Player.Skills['FlamethrowerT1FrameRecoilDown'] = 0; Player.Skills['FlamethrowerT1FrameReloadDown'] = 500; Player.Skills['FlamethrowerT1AmmoDamageDown'] = 24; RemoveItem('Token', 1, 82); FlameT1Frame = 'Commercial Frame'; ModSelection = 'Commercial Frame'; FlameT1FrameStat = 'Reload Speed +15%'"
+  Option_10: dialogue_uuO40uK
+  OptionNext_10: GS_WeaponBench_Restore
+  OptionExecute_10: "Player.Skills['FlamethrowerT1BarrelRecoilUp'] = 0; Player.Skills['FlamethrowerT1BarrelReloadUp'] = 0; Player.Skills['FlamethrowerT1BarrelRecoilDown'] = 0; Player.Skills['FlamethrowerT1BarrelReloadDown'] = 0; Player.Skills['FlamethrowerT1GripRecoilUp'] = 0; Player.Skills['FlamethrowerT1GripReloadUp'] = 0; Player.Skills['FlamethrowerT1GripRecoilDown'] = 0; Player.Skills['FlamethrowerT1GripReloadDown'] = 0; Player.Skills['FlamethrowerT1FrameRecoilUp'] = 0; Player.Skills['FlamethrowerT1FrameReloadUp'] = 0; Player.Skills['FlamethrowerT1FrameRecoilDown'] = 0; Player.Skills['FlamethrowerT1FrameReloadDown'] = 0; Player.Skills['FlamethrowerT1AmmoDamage'] = 0; Player.Skills['FlamethrowerT1AmmoBlastDamage'] = 0; Player.Skills['FlamethrowerT1AmmoDamageDown'] = 0; FlameT1Barrel = 'Default'; FlameT1Grip = 'Default'; FlameT1Frame = 'Default'; FlameT1BarrelStat = 'None'; FlameT1GripStat = 'None'; FlameT1FrameStat = 'None'"
+  Option_11: dialogue_im8qCGq
+  OptionNext_11: GS_WeaponBench_Heavy
   Variable_1: "FlameT1Barrel", param1: dbplayer_string
   Variable_2: "FlameT1Grip", param1: dbplayer_string
   Variable_3: "FlameT1Frame", param1: dbplayer_string
@@ -21635,12 +21691,219 @@
   Option_1: dialogue_5eOOuSG
   OptionNext_1: End
 }
-/*  Created with eWCCT 3.57.0 | 17.7.2024 - 16:59:59  */
-/*  Made by Hayawen & RexXxuS  */
-/*  You can do with your exported files from this tool what you want (obviously do NOT harm players with horrible dialogue gameplay!)  */
-/*  But this tool itself is licenced under https://creativecommons.org/licenses/by-nc-nd/4.0/ (CC BY-NC-ND 4.0)  */
-/*  Provided by HWS  */
-/*  Website: https://empyrion-homeworld.net/tools/ewcct  */
+{ +Dialogue Name: POI_Abandoned_Radinfo
+  Output: dialogue_qq4EO0G
+  Option_1: dialogue_x8SOu04
+  OptionNext_1: Return
+  Option_2: dialogue_WWKu548
+  OptionNext_2: End
+}
+{ +Dialogue Name: POI_AbandonedPad_Init
+  NPCName: dialogue_a4UHuuG
+  Output: dialogue_uqCROKq
+  Option_1: dialogue_G8CMima
+  OptionNext_1: POI_AbandonedPad_Info, param1: POI_AbandonedPad_Init
+  Option_2: dialogue_GuSmom0
+  OptionNext_2: POI_Abandoned_Radinfo, param1: POI_AbandonedPad_Init
+  Option_3: dialogue_4CfCOmO
+  OptionNext_3: POI_AbandonedPad_Lore, param1: POI_AbandonedPad_Init
+  Option_4: dialogue_0HqCMmG
+  OptionNext_4: End
+}
+{ +Dialogue Name: POI_AbandonedPad_Lore
+  Output: dialogue_sg4Xuqa
+  Option_1: dialogue_ai4CuCS
+  OptionNext_1: Return
+  Option_2: dialogue_Gaa8OKe
+  OptionNext_2: End
+}
+{ +Dialogue Name: POI_AbandonedPad_Info
+  Output: dialogue_K4qqGWm
+  Option_1: dialogue_8048Q0i
+  OptionNext_1: Return
+  Option_2: dialogue_eu4Wiei
+  OptionNext_2: End
+}
+{ +Dialogue Name: POI_AbandonedWorkshop_Init
+  NPCName: dialogue_SbmCHSm
+  Output: dialogue_KJ4CiK8
+  Option_1: dialogue_Soi0K8i
+  OptionNext_1: POI_AbandonedWorkshop_Info, param1: POI_AbandonedWorkshop_Init
+  Option_2: dialogue_CiSaOie
+  OptionNext_2: POI_Abandoned_Radinfo, param1: POI_AbandonedWorkshop_Init
+  Option_3: dialogue_iqaieiu
+  OptionNext_3: POI_AbandonedWorkshop_Lore, param1: POI_AbandonedWorkshop_Init
+  Option_4: dialogue_8GSOum4
+  OptionNext_4: End
+}
+{ +Dialogue Name: POI_AbandonedWorkshop_Info
+  Output: dialogue_F82qiOa
+  Option_1: dialogue_uOKQKiu
+  OptionNext_1: Return
+  Option_2: dialogue_Ke07GOW
+  OptionNext_2: End
+}
+{ +Dialogue Name: POI_AbandonedWorkshop_Lore
+  Output: dialogue_GqK4Gie
+  Option_1: dialogue_iqimOeW
+  OptionNext_1: Return
+  Option_2: dialogue_C04ieKq
+  OptionNext_2: End
+}
+{ +Dialogue Name: POI_AbandonedFactory_Init
+  NPCName: dialogue_KeGmPCq
+  Output: dialogue_WaaOiqu
+  Option_1: dialogue_SSO4GOO
+  OptionNext_1: POI_AbandonedFactory_Info, param1: POI_AbandonedFactory_Init
+  Option_2: dialogue_Y8WSi88
+  OptionNext_2: POI_Abandoned_Radinfo, param1: POI_AbandonedFactory_Init
+  Option_3: dialogue_SOeamuu
+  OptionNext_3: POI_AbandonedFactory_Lore, param1: POI_AbandonedFactory_Init
+  Option_4: dialogue_K4uKWu4
+  OptionNext_4: End
+}
+{ +Dialogue Name: POI_AbandonedFactory_Info
+  Output: dialogue_8iqKKCO
+  Option_1: dialogue_S0OiiaY
+  OptionNext_1: Return
+  Option_2: dialogue_E2q05SW
+  OptionNext_2: End
+}
+{ +Dialogue Name: POI_AbandonedFactory_Lore
+  Output: dialogue_uSuea6e
+  Option_1: dialogue_Z4O0S8m
+  OptionNext_1: Return
+  Option_2: dialogue_umCm8mS
+  OptionNext_2: End
+}
+{ +Dialogue Name: POI_AbandonedBunker_Init
+  NPCName: dialogue_OOC8eOq
+  Output: dialogue_O8CJu8G
+  Option_1: dialogue_O4Oe0W0
+  OptionNext_1: POI_AbandonedBunker_Info, param1: POI_AbandonedBunker_Init
+  Option_2: dialogue_O4GuMuS
+  OptionNext_2: POI_Abandoned_Radinfo, param1: POI_AbandonedBunker_Init
+  Option_3: dialogue_Fi8KiuK
+  OptionNext_3: POI_AbandonedBunker_Lore, param1: POI_AbandonedBunker_Init
+  Option_4: dialogue_0uia0Ci
+  OptionNext_4: End
+}
+{ +Dialogue Name: POI_AbandonedBunker_Info
+  Output: dialogue_Wmm0OHu
+  Option_1: dialogue_KCO8il8
+  OptionNext_1: Return
+  Option_2: dialogue_0qo0mGq
+  OptionNext_2: End
+}
+{ +Dialogue Name: POI_AbandonedBunker_Lore
+  Output: dialogue_SSOGKHu
+  Option_1: dialogue_qW0ZOaq
+  OptionNext_1: Return
+  Option_2: dialogue_K8GiaO4
+  OptionNext_2: End
+}
+{ +Dialogue Name: POI_AbandonedDroneBase_Init
+  NPCName: dialogue_4qiOKGo
+  Output: dialogue_0OKieC4
+  Option_1: dialogue_W4YKSDK
+  OptionNext_1: POI_AbandonedDroneBase_Info, param1: POI_AbandonedDroneBase_Init
+  Option_2: dialogue_0hKq8GS
+  OptionNext_2: POI_Abandoned_Radinfo, param1: POI_AbandonedDroneBase_Init
+  Option_3: dialogue_mqoaKuK
+  OptionNext_3: POI_AbandonedDroneBase_Lore, param1: POI_AbandonedDroneBase_Init
+  Option_4: dialogue_40G07Cq
+  OptionNext_4: End
+}
+{ +Dialogue Name: POI_AbandonedDroneBase_Info
+  Output: dialogue_iqGieKC
+  Option_1: dialogue_G4CSOC4
+  OptionNext_1: Return
+  Option_2: dialogue_CqC0OWW
+  OptionNext_2: End
+}
+{ +Dialogue Name: POI_AbandonedDroneBase_Lore
+  Output: dialogue_mqq8WWC
+  Option_1: dialogue_4qG80aK
+  OptionNext_1: Return
+  Option_2: dialogue_48ame4i
+  OptionNext_2: End
+}
+{ +Dialogue Name: POI_AbandonedMine_Init
+  NPCName: dialogue_eWW400i
+  Output: dialogue_4WCWaCQ
+  Option_1: dialogue_Km88qeW
+  OptionNext_1: POI_AbandonedMine_Info, param1: POI_AbandonedMine_Init
+  Option_2: dialogue_gCi0uCS
+  OptionNext_2: POI_AbandonedMine_Lore, param1: POI_AbandonedMine_Init
+  Option_3: dialogue_CC8wmai
+  OptionNext_3: End
+}
+{ +Dialogue Name: POI_AbandonedMine_Info
+  Output: dialogue_iiG8eqm
+  Option_1: dialogue_KqI8KV4
+  OptionNext_1: Return
+  Option_2: dialogue_mG0GSW0
+  OptionNext_2: End
+}
+{ +Dialogue Name: POI_AbandonedMine_Lore
+  Output: dialogue_GqW8auK
+  Option_1: dialogue_e84WW2S
+  OptionNext_1: Return
+  Option_2: dialogue_aeOpwiS
+  OptionNext_2: End
+}
+{ +Dialogue Name: POI_AbandonedReactor_Init
+  NPCName: dialogue_uareOAa
+  Output: dialogue_C8QuKu8
+  Option_1: dialogue_aiSCCUq
+  OptionNext_1: POI_AbandonedReactor_Info, param1: POI_AbandonedReactor_Init
+  Option_2: dialogue_eC4YnmU
+  OptionNext_2: POI_Abandoned_Radinfo, param1: POI_AbandonedReactor_Init
+  Option_3: dialogue_CCKCUqm
+  OptionNext_3: POI_AbandonedReactor_Lore, param1: POI_AbandonedReactor_Init
+  Option_4: dialogue_ueKT4i8
+  OptionNext_4: End
+}
+{ +Dialogue Name: POI_AbandonedReactor_Info
+  Output: dialogue_8uaaqO4
+  Option_1: dialogue_C8u8Sqa
+  OptionNext_1: Return
+  Option_2: dialogue_iCMqOGY
+  OptionNext_2: End
+}
+{ +Dialogue Name: POI_AbandonedReactor_Lore
+  Output: dialogue_m4a0iKm
+  Option_1: dialogue_C0ieCee
+  OptionNext_1: Return
+  Option_2: dialogue_K0KihuW
+  OptionNext_2: End
+}
+{ +Dialogue Name: POI_AbandonedDepot_Init
+  NPCName: dialogue_8FQSCCq
+  Output: dialogue_K4WiOqe
+  Option_1: dialogue_ueueGai
+  OptionNext_1: POI_AbandonedDepot_Info, param1: POI_AbandonedDepot_Init
+  Option_2: dialogue_KWIqsmu
+  OptionNext_2: POI_Abandoned_Radinfo, param1: POI_AbandonedDepot_Init
+  Option_3: dialogue_WW3Su0G
+  OptionNext_3: POI_AbandonedDepot_Lore, param1: POI_AbandonedDepot_Init
+  Option_4: dialogue_diGuSGC
+  OptionNext_4: End
+}
+{ +Dialogue Name: POI_AbandonedDepot_Info
+  Output: dialogue_eKCeuYe
+  Option_1: dialogue_CeqSWeG
+  OptionNext_1: Return
+  Option_2: dialogue_WqWiiqi
+  OptionNext_2: End
+}
+{ +Dialogue Name: POI_AbandonedDepot_Lore
+  Output: dialogue_aOCOUaa
+  Option_1: dialogue_OqWaaCm
+  OptionNext_1: Return
+  Option_2: dialogue_e88GaO0
+  OptionNext_2: End
+}
 { +Dialogue Name: Eden_GlobalVariables
   Globals: "int Eden_G_DataChipT1R = 1; int Eden_G_DataChipT1C = 10000; int Eden_G_DataChipT1UP = 10; int Eden_G_DataChipT2R = 5; int Eden_G_DataChipT2C = 50000; int Eden_G_DataChipT2UP = 50; int Eden_G_DataChipT3R = 10; int Eden_G_DataChipT3C = 100000; int Eden_G_DataChipT3UP = 100;<nl>int Eden_G_BanditRewardT1 = 20000; int Eden_G_BanditRewardT2 = 40000; int Eden_G_BanditRewardT3 = 80000; int Eden_G_BountyRewardT1 = 100000; int Eden_G_BountyRewardT2 = 250000; int Eden_G_BountyRewardT3 = 500000;<nl>int Eden_G_BanditRepT1 = 50; int Eden_G_BanditRepT2 = 100; int Eden_G_BanditRepT3 = 200; int Eden_G_BountyRepT1 = 200; int Eden_G_BountyRepT2 = 400; int Eden_G_BountyRepT3 = 800;<nl>int Eden_Global_DataPad = 50; int Eden_G_RansomMin = 100000; int Eden_G_RansomMax = 150000;<nl>int Eden_Global_ContractMineTimer = 3600; int Eden_GlobalContractMineCredit = 60000; int Eden_GlobalContractMineRep = 200; int Eden_GlobalSchematicToken = 6417;<nl>int Eden_Global_WaterGenSpeed = 24; int Eden_Global_WaterGenFuelMax = 22500; int Eden_Global_WaterGenFuelRate = 10; int Eden_Global_WaterGenCargo = 10000; int Eden_Global_WaterGenStack = 10000; int Eden_Global_WaterMax = 8;"
 }
@@ -21808,8 +22071,13 @@
   BarkingState: Eden_BarkCivilian_Init
   Variable_1: "BarkString", param1: string
 }
+{ +Dialogue Name: Eden_BarkPolarisCivilian_Init
+  BarkingState: Eden_BarkPolarisCivilian_Bark
+}
 { +Dialogue Name: Eden_BarkPolarisCivilian
-  BarkingState: Eden_BarkPolarisCivilian
+  BarkingState: Eden_BarkPolarisCivilian_Bark
+}
+{ +Dialogue Name: Eden_BarkPolarisCivilian_Bark
   Output: eden_dialogue_kiS0CS4
   Execute: "if (GetReputation(Faction.Polaris) > Reputation.NeutralMin) BarkString = ('Eden_BarkPolarisCivilian' + Random(1,30));<nl>if (GetReputation(Faction.Polaris) <= Reputation.NeutralMin) BarkString = ('')"
   Variable_1: "BarkString", param1: string
@@ -21818,6 +22086,14 @@
   BarkingState: Eden_BarkPolarisCivilian
   Output: eden_dialogue_WjWSGkS
   Execute: "if (GetReputation(Faction.Polaris) > Reputation.NeutralMin) BarkString = ('Eden_BarkPolarisCivilianTSO' + Random(1,30));<nl>if (GetReputation(Faction.Polaris) <= Reputation.NeutralMin) BarkString = ('')"
+  Variable_1: "BarkString", param1: string
+}
+{ +Dialogue Name: Eden_BarkTraderCivilian_Init
+  BarkingState: Eden_BarkTraderCivilian_Bark
+}
+{ +Dialogue Name: Eden_BarkTraderCivilian_Bark
+  Output: eden_dialogue_qaeemum
+  Execute: "if (GetReputation(Faction.Trader) > Reputation.NeutralMin) BarkString = ('Eden_BarkTraderCivilian' + Random(1,1));<nl>if (GetReputation(Faction.Trader) <= Reputation.NeutralMin) BarkString = ('')"
   Variable_1: "BarkString", param1: string
 }
 { +Dialogue Name: Eden_BarkColonistCivilian
@@ -23099,9 +23375,49 @@
   Option_1: eden_dialogue_0CSe8Cu
   OptionNext_1: End
 }
+{ +Dialogue Name: Eden_PolRefinery_Init
+  Variable_1: "Eden_Timer", param1: dbplayerpoipos_int
+  Variable_2: "Randomize", param1: int
+  Next_1: Eden_PolRefinery_Greet
+}
+{ +Dialogue Name: Eden_PolRefinery_Greet
+  Output: eden_dialogue_iSmO20W
+  Option_1: eden_dialogue_4YaWeGe
+  OptionNext_1: End
+  OptionExecute_1: "OpenTraderWindow()"
+  Option_2: eden_dialogue_4mq00mG
+  OptionNext_2: Eden_PolRefinery_Check
+  Option_3: eden_dialogue_4Sc6Kmg
+  OptionNext_3: End
+}
+{ +Dialogue Name: Eden_PolRefinery_Check
+  Next_1: Eden_PolRefinery_Deny
+  NextIf_1: "(GetGameTimeInSec() - Eden_Timer) <= (Eden_Global_ContractMineTimer * 3)"
+  Next_2: Eden_PolRefinery_Contract
+}
+{ +Dialogue Name: Eden_PolRefinery_Deny
+  Output: eden_dialogue_44aGqgW
+  Option_1: eden_dialogue_aKGGOOS
+  OptionNext_1: Eden_PolRefinery_Greet
+}
+{ +Dialogue Name: Eden_PolRefinery_Contract
+  Output: eden_dialogue_Wo8OSWi
+  Option_1: eden_dialogue_G0q88W0
+  OptionNext_1: Eden_PolRefinery_Contract2
+  Option_2: eden_dialogue_8uu8OqS
+  OptionNext_2: Eden_PolRefinery_Greet
+}
+{ +Dialogue Name: Eden_PolRefinery_Contract2
+  Execute: "Randomize = Random(6821,6824); AddItem('Token', 1, Randomize); Eden_Timer = GetGameTimeInSec()"
+  Output: eden_dialogue_iW8uaqQ
+  Option_1: eden_dialogue_i8imJ4V
+  OptionNext_1: Eden_PolRefinery_Greet
+  Option_2: eden_dialogue_W1WqG8S
+  OptionNext_2: End
+}
 { +Dialogue Name: Eden_UIM_Init
   Next_1: Eden_UIM_Greet
-  Variable_1: "Eden_Timer", param1: dbplayerpoi_int
+  Variable_1: "Eden_Timer", param1: dbplayerpoipos_int
   Variable_2: "Randomize", param1: int
   NPCName: eden_dialogue_08KaWPm
 }
@@ -27534,13 +27850,10 @@
 }
 { +Dialogue Name: Eden_ColScrapyard_Greet
   Output: eden_dialogue_iKWSK0m
-  Option_1: eden_dialogue_0CiKi0q
-  OptionIf_1: "HasItem('Token', 1, 6505) || HasItem('Token', 1, 6506) || HasItem('Token', 1, 6507)"
-  OptionNext_1: Eden_ColScrapyard_RewardSelect
-  Option_2: eden_dialogue_a4qSKOe
-  OptionNext_2: Eden_ColScrapyard_Info
-  Option_3: eden_dialogue_4mUSS8S
-  OptionNext_3: End
+  Option_1: eden_dialogue_a4qSKOe
+  OptionNext_1: Eden_ColScrapyard_Info
+  Option_2: eden_dialogue_4mUSS8S
+  OptionNext_2: End
 }
 { +Dialogue Name: Eden_ColScrapyard_RewardRep
   Execute: "RemoveItem('Token', 1, 6505); AddReputation(Faction.Colonists, -30000); AddReputation(Faction.Colonists, 12500)"
@@ -27821,8 +28134,9 @@
   Variable_4: "RansomType", param1: int
   Variable_5: "RewardAmount", param1: int
   Variable_6: "Eden_RansomTimer", param1: dbplayer_int
+  Variable_7: "SuccessChance", param1: int
   NPCName: eden_dialogue_OaiW80p
-  Execute: "RandomChance = (Random(1,1000) + (Math.Clamp((GetReputation(Faction.Pirates) - 18000), 1, 30000) / 30)); RepPirate = GetReputation(Faction.Pirates)"
+  Execute: "RandomChance = (Random(1,1000) + (Math.Clamp((GetReputation(Faction.Pirates) - 18000), 1, 30000) / 30)); RepPirate = GetReputation(Faction.Pirates);<nl>SuccessChance = (500 + (Math.Clamp((GetReputation(Faction.Pirates) - 18000), 1, 30000) / 30)) / 10"
 }
 { +Dialogue Name: Eden_FreightRansom_Deny
   Output: eden_dialogue_qWieeoG
@@ -27878,9 +28192,6 @@
   OptionExecute_3: "RansomType = 3"
   Option_4: eden_dialogue_WSmG8CC
   OptionNext_4: End
-  Option_5: eden_dialogue_qa68GS4
-  OptionIf_5: "HasItem('Token', 1, 6000)"
-  OptionNext_5: Eden_FreightRansom_Ransom
 }
 { +Dialogue Name: Eden_FreightRansom_Select
   Next_1: Eden_FreightRansom_Payment
@@ -27904,7 +28215,7 @@
   Execute: "Eden_Complete = 1; SetBlockActive('Core NPC', false); SetBlockActive('Core1', false); SetBlockActive('Core2', false); SetBlockActive('Core3', false);<nl>if (Random(1,100) >= 75) AddItem('Token', 1, 6530); if (Random(1,100) >= 50) AddItemsFromContainer(677, 16);<nl>AddItem('Token', 1, 6529); AddItem('Token', 1, 6528); AddItemsFromContainer(684, 16); AddReputation(Faction.Pirates, 250)"
 }
 { +Dialogue Name: Eden_FreightRansom_Crew
-  Execute: "Eden_Complete = 1; SetBlockActive('Core NPC', false); SetBlockActive('Core1', false); SetBlockActive('Core2', false); SetBlockActive('Core3', false);<nl>RandomChance = Random(1,100); if (RandomChance >= 75) AddItemsFromContainer(400, 1); if (RandomChance < 75) AddItem('AlienNPCBlocks', 1); AddReputation(Faction.Pirates, 250)"
+  Execute: "Eden_Complete = 1; SetBlockActive('Core NPC', false); SetBlockActive('Core1', false); SetBlockActive('Core2', false); SetBlockActive('Core3', false);<nl>RandomChance = Random(1,100); if (RandomChance >= 66) AddItemsFromContainer(400, 1); if (RandomChance < 66) AddItem('AlienNPCBlocks', 1); AddReputation(Faction.Pirates, 250)"
   Option_1: eden_dialogue_Wqqle4a
   OptionNext_1: End
   Output: eden_dialogue_a4OG0m4
@@ -36387,6 +36698,62 @@
   Output: eden_dialogue_u4aeeua
   Option_1: eden_dialogue_SaBa8m8
   OptionNext_1: End
+}
+{ +Dialogue Name: Eden_Gavlactica_Guard1_Init
+  NPCName: dialogue_OKkSeq8
+  Output: dialogue_0m0w8uD
+  Option_1: dialogue_O8NKQg4
+  OptionNext_1: Eden_Gavlactica_Guard1_Step1
+  Option_2: dialogue_kWaOG0C
+  OptionNext_2: End
+}
+{ +Dialogue Name: Eden_Gavlactica_Guard1_Step1
+  Output: dialogue_qGO7CeW
+  Option_1: dialogue_C8KAu0G
+  OptionNext_1: End
+  Option_2: dialogue_KfGuKSm
+  OptionNext_2: End
+  Option_3: dialogue_aSGe7u4
+  OptionNext_3: Eden_Gavlactica_Guard1_Step_Ship
+  Option_4: dialogue_CwWe4Wf
+  OptionNext_4: End
+}
+{ +Dialogue Name: Eden_Gavlactica_Guard1_Step_Pussy
+  Output: dialogue_fimiK0i
+  Option_1: dialogue_SuC4OOG
+  OptionNext_1: End
+  Option_2: dialogue_4K4MCeC
+  OptionNext_2: End
+  Option_3: dialogue_SKD6qem
+  OptionNext_3: End
+}
+{ +Dialogue Name: Eden_Gavlactica_Guard1_Step_Ship
+  Output: dialogue_WqKOiOa
+  Option_1: dialogue_GWme4Er
+  OptionNext_1: Eden_Gavlactica_Guard1_Step_Ship2
+  Option_2: dialogue_KZs84um
+  OptionNext_2: Eden_Gavlactica_Guard1_Step_Ship3
+  Option_3: dialogue_qWiOSgo
+  OptionNext_3: End
+}
+{ +Dialogue Name: Eden_Gavlactica_Guard1_Step_Ship2
+  Output: dialogue_mOC8Oke
+  Option_1: dialogue_Cmiua0e
+  OptionNext_1: End
+}
+{ +Dialogue Name: Eden_Gavlactica_Guard1_Step_Ship3
+  Output: dialogue_0mO0qq0
+  Option_1: dialogue_usai7Wu
+  OptionNext_1: End
+}
+{ +Dialogue Name: Eden_Gavlactica_Guard1_Step_Greek
+  Output: dialogue_Cequiuu
+  Option_1: dialogue_SkuG0Ci
+  OptionNext_1: End
+  Option_2: dialogue_bu8i4bW
+  OptionNext_2: End
+  Option_3: dialogue_KC6q88e
+  OptionNext_3: End
 }
 { +Dialogue Name: Quest_Fishing_Init
   Variable_1: "QuestFishText", param1: string
