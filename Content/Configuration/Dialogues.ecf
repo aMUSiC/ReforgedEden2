@@ -36700,17 +36700,20 @@
   OptionNext_1: End
 }
 { +Dialogue Name: Eden_Gavlactica_Guard1_Init
+  Execute: "OpenHtmlWindow('','%SHARED_DATA%/Content/Images/Portraits_Eden/Sandurz.jpg',0.09f,-0.011f,0.1162f,0.272f,_bShowNavButtons:false,_bBlockBG:false,_bgColor: new Color(0.0f,0.0f,0.0f,0.75f));<nl>SetNPCName('Colonel Sandurz')"
   NPCName: dialogue_OKkSeq8
   Output: dialogue_0m0w8uD
   Option_1: dialogue_O8NKQg4
   OptionNext_1: Eden_Gavlactica_Guard1_Step1
   Option_2: dialogue_kWaOG0C
   OptionNext_2: End
+  OptionExecute_2: "CloseHtmlWindow()"
   Variable_1: "talk_greek", param1: bool
   Variable_2: "talk_pussy", param1: bool
   Execute: "talk_greek=false;talk_pussy=false;"
 }
 { +Dialogue Name: Eden_Gavlactica_Guard1_Step1
+  Execute: "OpenHtmlWindow('','%SHARED_DATA%/Content/Images/Portraits_Eden/Sandurz.jpg',0.09f,-0.011f,0.1162f,0.272f,_bShowNavButtons:false,_bBlockBG:false,_bgColor: new Color(0.0f,0.0f,0.0f,0.75f));<nl>SetNPCName('Colonel Sandurz')"
   Output: dialogue_qGO7CeW
   Option_1: dialogue_C8KAu0G
   OptionNext_1: Eden_Gavlactica_Guard1_Step_Greek
@@ -36720,8 +36723,10 @@
   OptionNext_3: Eden_Gavlactica_Guard1_Step_Ship
   Option_4: dialogue_CwWe4Wf
   OptionNext_4: End
+  OptionExecute_4: "CloseHtmlWindow()"  
 }
 { +Dialogue Name: Eden_Gavlactica_Guard1_Step_Pussy
+  Execute: "OpenHtmlWindow('','%SHARED_DATA%/Content/Images/Portraits_Eden/Sandurz_Pussy.jpg',0.09f,-0.011f,0.1162f,0.272f,_bShowNavButtons:false,_bBlockBG:false,_bgColor: new Color(0.0f,0.0f,0.0f,0.75f));<nl>SetNPCName('Colonel Sandurz')"
   Output: dialogue_fimiK0i
   Option_1: dialogue_SuC4OOG
   OptionIf_1: "talk_greek==false"
@@ -36730,9 +36735,11 @@
   OptionNext_2: Eden_Gavlactica_Guard1_Step_Ship
   Option_3: dialogue_SKD6qem
   OptionNext_3: End
+  OptionExecute_3: "CloseHtmlWindow()"  
   Execute: "talk_pussy=true;"
 }
 { +Dialogue Name: Eden_Gavlactica_Guard1_Step_Ship
+  Execute: "OpenHtmlWindow('','%SHARED_DATA%/Content/Images/Portraits_Eden/Sandurz_Ship1.jpg',0.09f,-0.011f,0.1162f,0.272f,_bShowNavButtons:false,_bBlockBG:false,_bgColor: new Color(0.0f,0.0f,0.0f,0.75f));<nl>SetNPCName('Colonel Sandurz')"
   Output: dialogue_WqKOiOa
   Option_1: dialogue_GWme4Er
   OptionNext_1: Eden_Gavlactica_Guard1_Step_Ship2
@@ -36740,18 +36747,24 @@
   OptionNext_2: Eden_Gavlactica_Guard1_Step_Ship3
   Option_3: dialogue_qWiOSgo
   OptionNext_3: End
+  OptionExecute_3: "CloseHtmlWindow()"  
 }
 { +Dialogue Name: Eden_Gavlactica_Guard1_Step_Ship2
+  Execute: "OpenHtmlWindow('','%SHARED_DATA%/Content/Images/Portraits_Eden/Sandurz_Ship2.jpg',0.09f,-0.011f,0.1162f,0.272f,_bShowNavButtons:false,_bBlockBG:false,_bgColor: new Color(0.0f,0.0f,0.0f,0.75f));<nl>SetNPCName('Colonel Sandurz')"
   Output: dialogue_mOC8Oke
   Option_1: dialogue_Cmiua0e
   OptionNext_1: End
+  OptionExecute_1: "CloseHtmlWindow()"    
 }
 { +Dialogue Name: Eden_Gavlactica_Guard1_Step_Ship3
+  Execute: "OpenHtmlWindow('','%SHARED_DATA%/Content/Images/Portraits_Eden/Sandurz_Ship3.jpg',0.09f,-0.011f,0.1162f,0.272f,_bShowNavButtons:false,_bBlockBG:false,_bgColor: new Color(0.0f,0.0f,0.0f,0.75f));<nl>SetNPCName('Colonel Sandurz')"
   Output: dialogue_0mO0qq0
   Option_1: dialogue_usai7Wu
   OptionNext_1: End
+  OptionExecute_1: "CloseHtmlWindow()"    
 }
 { +Dialogue Name: Eden_Gavlactica_Guard1_Step_Greek
+  Execute: "OpenHtmlWindow('','%SHARED_DATA%/Content/Images/Portraits_Eden/Sandurz_Greek.jpg',0.09f,-0.011f,0.1162f,0.272f,_bShowNavButtons:false,_bBlockBG:false,_bgColor: new Color(0.0f,0.0f,0.0f,0.75f));<nl>SetNPCName('Colonel Sandurz')"
   Output: dialogue_Cequiuu
   Option_1: dialogue_SkuG0Ci
   OptionIf_1: "talk_pussy==false"
@@ -36761,6 +36774,7 @@
   Option_3: dialogue_KC6q88e
   OptionNext_3: End
   Execute: "talk_greek=true;"
+  OptionExecute_3: "CloseHtmlWindow()"    
 }
 { +Dialogue Name: Quest_Fishing_Init
   Variable_1: "QuestFishText", param1: string
