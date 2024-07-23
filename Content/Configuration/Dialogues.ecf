@@ -1,4 +1,4 @@
-/*  Created with eWCCT 3.57.0 | 23.7.2024 - 6:16:45  */
+/*  Created with eWCCT 3.57.0 | 23.7.2024 - 6:49:42  */
 /*  Made by Hayawen & RexXxuS  */
 /*  You can do with your exported files from this tool what you want (obviously do NOT harm players with horrible dialogue gameplay!)  */
 /*  But this tool itself is licenced under https://creativecommons.org/licenses/by-nc-nd/4.0/ (CC BY-NC-ND 4.0)  */
@@ -36710,9 +36710,9 @@
 { +Dialogue Name: Eden_Gavlactica_Guard1_Step1
   Output: dialogue_qGO7CeW
   Option_1: dialogue_C8KAu0G
-  OptionNext_1: End
+  OptionNext_1: Eden_Gavlactica_Guard1_Step_Greek
   Option_2: dialogue_KfGuKSm
-  OptionNext_2: End
+  OptionNext_2: Eden_Gavlactica_Guard1_Step_Pussy
   Option_3: dialogue_aSGe7u4
   OptionNext_3: Eden_Gavlactica_Guard1_Step_Ship
   Option_4: dialogue_CwWe4Wf
@@ -36721,9 +36721,9 @@
 { +Dialogue Name: Eden_Gavlactica_Guard1_Step_Pussy
   Output: dialogue_fimiK0i
   Option_1: dialogue_SuC4OOG
-  OptionNext_1: End
+  OptionNext_1: Eden_Gavlactica_Guard1_Step_Greek
   Option_2: dialogue_4K4MCeC
-  OptionNext_2: End
+  OptionNext_2: Eden_Gavlactica_Guard1_Step_Ship
   Option_3: dialogue_SKD6qem
   OptionNext_3: End
 }
@@ -36749,9 +36749,9 @@
 { +Dialogue Name: Eden_Gavlactica_Guard1_Step_Greek
   Output: dialogue_Cequiuu
   Option_1: dialogue_SkuG0Ci
-  OptionNext_1: End
+  OptionNext_1: Eden_Gavlactica_Guard1_Step_Pussy
   Option_2: dialogue_bu8i4bW
-  OptionNext_2: End
+  OptionNext_2: Eden_Gavlactica_Guard1_Step_Ship
   Option_3: dialogue_KC6q88e
   OptionNext_3: End
 }
