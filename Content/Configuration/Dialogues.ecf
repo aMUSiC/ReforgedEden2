@@ -1,4 +1,4 @@
-/*  Created with eWCCT 3.57.0 | 23.7.2024 - 8:3:5  */
+/*  Created with eWCCT 3.57.0 | 23.7.2024 - 8:8:6  */
 /*  Made by Hayawen & RexXxuS  */
 /*  You can do with your exported files from this tool what you want (obviously do NOT harm players with horrible dialogue gameplay!)  */
 /*  But this tool itself is licenced under https://creativecommons.org/licenses/by-nc-nd/4.0/ (CC BY-NC-ND 4.0)  */
@@ -36700,7 +36700,7 @@
   OptionNext_1: End
 }
 { +Dialogue Name: Eden_Gavlactica_Guard1_Init
-  Execute: "talk_greek=false;talk_pussy=false;"
+  Execute: "talk_greek = 0; talk_pussy = 0;"
   NPCName: dialogue_OKkSeq8
   Output: dialogue_0m0w8uD
   Option_1: dialogue_O8NKQg4
@@ -36708,18 +36708,18 @@
   Option_2: dialogue_kWaOG0C
   OptionNext_2: End
   OptionExecute_2: "CloseHtmlWindow()"
-  Variable_1: "talk_greek", param1: bool
-  Variable_2: "talk_pussy", param1: bool
+  Variable_1: "talk_greek", param1: int
+  Variable_2: "talk_pussy", param1: int
 }
 { +Dialogue Name: Eden_Gavlactica_Guard1_Step1
   Execute: "OpenHtmlWindow('','%SHARED_DATA%/Content/Images/Portraits_Eden/Sandurz.jpg',0.09f,-0.011f,0.1162f,0.272f,_bShowNavButtons:false,_bBlockBG:false,_bgColor: new Color(0.0f,0.0f,0.0f,0.75f));<nl>SetNPCName('Colonel Sandurz')"
   Output: dialogue_qGO7CeW
   Option_1: dialogue_C8KAu0G
   OptionNext_1: Eden_Gavlactica_Guard1_Step_Greek
-  OptionExecute_1: "talk_greek = true"
+  OptionExecute_1: "talk_greek = 1"
   Option_2: dialogue_KfGuKSm
   OptionNext_2: Eden_Gavlactica_Guard1_Step_Pussy
-  OptionExecute_2: "talk_pussy = true"
+  OptionExecute_2: "talk_pussy = 1"
   Option_3: dialogue_aSGe7u4
   OptionNext_3: Eden_Gavlactica_Guard1_Step_Ship
   Option_4: dialogue_CwWe4Wf
@@ -36729,7 +36729,7 @@
 { +Dialogue Name: Eden_Gavlactica_Guard1_Step_Pussy
   Output: dialogue_fimiK0i
   Option_1: dialogue_SuC4OOG
-  OptionIf_1: "talk_greek == false"
+  OptionIf_1: "talk_greek == 0"
   OptionNext_1: Eden_Gavlactica_Guard1_Step_Greek
   OptionExecute_1: "talk_greek = 1"
   Option_2: dialogue_4K4MCeC
@@ -36766,9 +36766,9 @@
 { +Dialogue Name: Eden_Gavlactica_Guard1_Step_Greek
   Output: dialogue_Cequiuu
   Option_1: dialogue_SkuG0Ci
-  OptionIf_1: "talk_pussy == false"
+  OptionIf_1: "talk_pussy == 0"
   OptionNext_1: Eden_Gavlactica_Guard1_Step_Pussy
-  OptionExecute_1: "talk_pussy = true"
+  OptionExecute_1: "talk_pussy = 1"
   Option_2: dialogue_bu8i4bW
   OptionNext_2: Eden_Gavlactica_Guard1_Step_Ship
   Option_3: dialogue_KC6q88e
